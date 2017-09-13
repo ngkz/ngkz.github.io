@@ -10,23 +10,5 @@
 	<atom:link href="https://ngkz.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>Category</title>
-      <link>https://ngkz.github.io/categories/category/</link>
-      <pubDate>Wed, 13 Sep 2017 14:17:08 +0900</pubDate>
-      
-      <guid>https://ngkz.github.io/categories/category/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Subcategory</title>
-      <link>https://ngkz.github.io/categories/subcategory/</link>
-      <pubDate>Wed, 13 Sep 2017 14:17:08 +0900</pubDate>
-      
-      <guid>https://ngkz.github.io/categories/subcategory/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>
