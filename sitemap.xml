@@ -3,6 +3,15 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://ngkz.github.io/2017/09/test/</loc>
+    <lastmod>2017-09-13T14:17:08+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ngkz.github.io/page/profile/</loc>
+  </url>
+  
+  <url>
     <loc>https://ngkz.github.io/archives/</loc>
     <priority>0</priority>
   </url>
@@ -13,12 +22,49 @@
   </url>
   
   <url>
+    <loc>https://ngkz.github.io/categories/category/</loc>
+    <lastmod>2017-09-13T14:17:08+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ngkz.github.io/page/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ngkz.github.io/post/</loc>
+    <lastmod>2017-09-13T14:17:08+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ngkz.github.io/categories/subcategory/</loc>
+    <lastmod>2017-09-13T14:17:08+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ngkz.github.io/tags/tag1/</loc>
+    <lastmod>2017-09-13T14:17:08+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ngkz.github.io/tags/tag2/</loc>
+    <lastmod>2017-09-13T14:17:08+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://ngkz.github.io/tags/</loc>
+    <lastmod>2017-09-13T14:17:08+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ngkz.github.io/</loc>
+    <lastmod>2017-09-13T14:17:08+09:00</lastmod>
     <priority>0</priority>
   </url>
   
