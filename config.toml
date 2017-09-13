@@ -75,7 +75,7 @@ canonifyurls = true
   identifier = "about"
   name = "About"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-question\"></i>"
-  url = "/page/aboutme/"
+  url = "/page/profile/"
 
 [[menu.links]]
   weight = 1
@@ -188,11 +188,11 @@ canonifyurls = true
   [params.header.rightLink]
     class = ""
     icon = ""
-    url = "/page/aboutme/"
+    url = "/page/profile/"
 
   # Customize like of athor avatar in sidebar
   [params.sidebar.profile]
-    url = "/page/aboutme/"
+    url = "/page/profile/"
 
   # Customize copyright value "© 2016 <CUSTOMIZATION>. All Rights Reserved"
   # [params.footer]
