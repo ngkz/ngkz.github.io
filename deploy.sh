@@ -9,6 +9,7 @@ NORMAL="\033[0m"
 echo "${BOLD_CYAN}Cleaning public directory${NORMAL}"
 cd public
 git reset --hard HEAD
+git checkout master
 git read-tree "$TEMPLATE_COMMIT"
 git clean -fdx
 cd ..
