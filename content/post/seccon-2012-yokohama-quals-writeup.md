@@ -16,11 +16,11 @@ tags:
 
 score: たぶん8120
 
-{{<image classes="fancybox" src="/assets/seccon-yokohama-2012-writeup/514d338eaff15827c0309966508eddbb.png" title="終了数分前の問題一覧">}}
+{{<image classes="fancybox" src="/assets/seccon-2012-yokohama-quals-writeup/514d338eaff15827c0309966508eddbb.png" title="終了数分前の問題一覧">}}
 
 \
 
-{{<image classes="fancybox" src="/assets/seccon-yokohama-2012-writeup/seccon-yokohama.jpg" title="賞状 第三位" thumbnail-width="295px" thumbnail-height="400px">}}
+{{<image classes="fancybox" src="/assets/seccon-2012-yokohama-quals-writeup/seccon-yokohama.jpg" title="賞状 第三位" thumbnail-width="295px" thumbnail-height="400px">}}
 
 \
 ✌('ω')
@@ -105,9 +105,9 @@ USB通信のキャプチャからkeyを取り出す問題。
 
 \
 
-{{<image classes="fancybox" src="/assets/seccon-yokohama-2012-writeup/87f4d2e05067c8c23a2419bf46322187.png" title="ブートセクタのRead要求" thumbnail-width="400px" thumbnail-height="206px">}}
+{{<image classes="fancybox" src="/assets/seccon-2012-yokohama-quals-writeup/87f4d2e05067c8c23a2419bf46322187.png" title="ブートセクタのRead要求" thumbnail-width="400px" thumbnail-height="206px">}}
 
-{{<image classes="fancybox" src="/assets/seccon-yokohama-2012-writeup/c4d4b2e05f2f9403e258c05cae650b05.png" title="Read 結果" thumbnail-width="400px" thumbnail-height="390px">}}
+{{<image classes="fancybox" src="/assets/seccon-2012-yokohama-quals-writeup/c4d4b2e05f2f9403e258c05cae650b05.png" title="Read 結果" thumbnail-width="400px" thumbnail-height="390px">}}
 
 \
 
@@ -192,16 +192,16 @@ mnt$ cat key.txt\
 Haiyore! Yuzuharatan!\
 
 mnt$ xdg-open dame.bmp\
-{{<image classes="fancybox" src="/assets/seccon-yokohama-2012-writeup/dame.jpg" thumbnail-width="400px" thumbnail-height="163px">}}
+{{<image classes="fancybox" src="/assets/seccon-2012-yokohama-quals-writeup/dame.jpg" thumbnail-width="400px" thumbnail-height="163px">}}
 
 mnt$ xdg-open やる夫.png\
-{{<image classes="fancybox" src="/assets/seccon-yokohama-2012-writeup/%E3%82%84%E3%82%8B%E5%A4%AB.png">}}
+{{<image classes="fancybox" src="/assets/seccon-2012-yokohama-quals-writeup/%E3%82%84%E3%82%8B%E5%A4%AB.png">}}
 
 \
 
 #### 別解
 
-{{<image classes="fancybox" src="/assets/seccon-yokohama-2012-writeup/e2d9182e72d7cd282da395b00e3b2bfd.png" title="Haiyore! Yuzuharatan!">}}
+{{<image classes="fancybox" src="/assets/seccon-2012-yokohama-quals-writeup/e2d9182e72d7cd282da395b00e3b2bfd.png" title="Haiyore! Yuzuharatan!">}}
 
 \
 
