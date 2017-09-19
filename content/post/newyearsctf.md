@@ -8,8 +8,10 @@ tags:
 ---
 
 {{<image classes="fancybox" src="/assets/newyearsctf/0734e47f8886a005a11bedd17955a0c6.png" title="Scoreboard">}}
-\
+
 優勝して賞金2500円を手に入れました。
-\
+
+<!--more-->
+
 主催者によるwriteup:
 [https://x86-64.jp/blog/new-years-ctf](https://x86-64.jp/blog/new-years-ctf)

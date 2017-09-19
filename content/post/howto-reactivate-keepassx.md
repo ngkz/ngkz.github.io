@@ -9,3 +9,5 @@ categories:
 Ubuntu 12.10-14.04で確認済み
 
     echo "keepassx=1" >> /etc/xdg/sni-qt.conf
+
+<!--more-->

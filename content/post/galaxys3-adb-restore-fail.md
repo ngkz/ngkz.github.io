@@ -15,6 +15,8 @@ galaxy S3 リカバリモードの入り方:
 
 ## バックアップを展開
 
+<!--more-->
+
 [Android backup extractor](https://github.com/nelenkov/android-backup-extractor)
 でバックアップを展開\
 
