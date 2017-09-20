@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Howto on ngkz.log</title>
+    <link>https://ngkz.github.io/categories/howto/</link>
+    <description>Recent content in Howto on ngkz.log</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 12 Sep 2013 13:29:56 +0900</lastBuildDate>
+    
+	<atom:link href="https://ngkz.github.io/categories/howto/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Galaxy S3(SC-06D)がadbバックアップを戻した後再起動を繰り返すようになったときの対処方法</title>
+      <link>https://ngkz.github.io/2013/09/galaxys3-adb-restore-fail/</link>
+      <pubDate>Thu, 12 Sep 2013 13:29:56 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2013/09/galaxys3-adb-restore-fail/</guid>
+      <description>&lt;h2 id=&#34;リカバリモードに入ってファクトリーリセットする&#34;&gt;リカバリモードに入ってファクトリーリセットする&lt;/h2&gt;
+
+&lt;p&gt;galaxy S3 リカバリモードの入り方:&lt;/p&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/QVa3yfxP0Zs&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h2 id=&#34;バックアップを展開&#34;&gt;バックアップを展開&lt;/h2&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>トレイに格納したKeePassXを復元できるようにする方法</title>
+      <link>https://ngkz.github.io/2013/03/howto-reactivate-keepassx/</link>
+      <pubDate>Thu, 14 Mar 2013 17:21:07 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2013/03/howto-reactivate-keepassx/</guid>
+      <description>&lt;p&gt;Ubuntu 12.10-14.04で確認済み&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;echo &amp;quot;keepassx=1&amp;quot; &amp;gt;&amp;gt; /etc/xdg/sni-qt.conf
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

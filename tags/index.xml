@@ -6,9 +6,37 @@
     <description>Recent content in Tags on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
+    <lastBuildDate>Wed, 29 Jan 2014 14:04:07 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>C3ctf</title>
+      <link>https://ngkz.github.io/tags/c3ctf/</link>
+      <pubDate>Wed, 29 Jan 2014 14:04:07 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/tags/c3ctf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Seccon</title>
+      <link>https://ngkz.github.io/tags/seccon/</link>
+      <pubDate>Wed, 23 Jul 2014 19:57:23 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/tags/seccon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tkbctf</title>
+      <link>https://ngkz.github.io/tags/tkbctf/</link>
+      <pubDate>Wed, 29 Jan 2014 13:06:30 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/tags/tkbctf/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

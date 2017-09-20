@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on ngkz.log</title>
+    <link>https://ngkz.github.io/post/</link>
+    <description>Recent content in Posts on ngkz.log</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 23 Jul 2014 19:57:23 +0900</lastBuildDate>
+    
+	<atom:link href="https://ngkz.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SECCON 2014 オンライン予選 (日本語) writeup</title>
+      <link>https://ngkz.github.io/2014/07/seccon-2014-online-japanese-quals-writeup/</link>
+      <pubDate>Wed, 23 Jul 2014 19:57:23 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2014/07/seccon-2014-online-japanese-quals-writeup/</guid>
+      <description>&lt;p&gt;0x0として参加しました。&lt;br /&gt;
+予選2位通過&lt;/p&gt;
+
+&lt;p&gt;
+
+ 
+  
+  
+  
+  
+    
+  
+
+&lt;div class=&#34;figure &#34; &gt;
+  
+    &lt;a class=&#34;fancybox&#34; href=&#34;https://ngkz.github.io/assets/seccon-2014-online-japanese-quals-writeup/457b016a7d87f547798e78390869ca63.png&#34; title=&#34;問題一覧&#34; data-fancybox-group=&#34;&#34;&gt;
+  
+    &lt;img class=&#34;fig-img&#34; src=&#34;https://ngkz.github.io/assets/seccon-2014-online-japanese-quals-writeup/457b016a7d87f547798e78390869ca63.png&#34;  alt=&#34;問題一覧&#34;&gt;
+  
+    &lt;/a&gt;
+  
+   
+    &lt;span class=&#34;caption&#34;&gt;問題一覧&lt;/span&gt;
+  
+&lt;/div&gt;
+&lt;br /&gt;
+※上のスクリーンショットを撮った後に@nolzeがPrint it!を解いている&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SECCON 二連覇しました。(SECCON 2013 決勝 writeup)</title>
+      <link>https://ngkz.github.io/2014/03/seccon-2013-finals-writeup/</link>
+      <pubDate>Tue, 04 Mar 2014 06:45:08 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2014/03/seccon-2013-finals-writeup/</guid>
+      <description>&lt;h2 id=&#34;結果&#34;&gt;結果&lt;/h2&gt;
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+&lt;div class=&#34;figure &#34; &gt;
+  
+    &lt;a class=&#34;fancybox&#34; href=&#34;https://ngkz.github.io/assets/seccon-2013-finals-writeup/seccon2013-score-mod.jpg&#34; title=&#34;スコアの推移&#34; data-fancybox-group=&#34;&#34;&gt;
+  
+    &lt;img class=&#34;fig-img&#34; src=&#34;https://ngkz.github.io/assets/seccon-2013-finals-writeup/seccon2013-score-mod.jpg&#34;  alt=&#34;スコアの推移&#34;&gt;
+  
+    &lt;/a&gt;
+  
+   
+    &lt;span class=&#34;caption&#34;&gt;スコアの推移&lt;/span&gt;
+  
+&lt;/div&gt;
+
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+&lt;div class=&#34;figure &#34; &gt;
+  
+    &lt;a class=&#34;fancybox&#34; href=&#34;https://ngkz.github.io/assets/seccon-2013-finals-writeup/07a99802f28b64656dd4f4187644d1d8.png&#34; title=&#34;問題一覧&#34; data-fancybox-group=&#34;&#34;&gt;
+  
+    &lt;img class=&#34;fig-img&#34; src=&#34;https://ngkz.github.io/assets/seccon-2013-finals-writeup/07a99802f28b64656dd4f4187644d1d8.png&#34;  alt=&#34;問題一覧&#34;&gt;
+  
+    &lt;/a&gt;
+  
+   
+    &lt;span class=&#34;caption&#34;&gt;問題一覧&lt;/span&gt;
+  
+&lt;/div&gt;
+
+
+&lt;p&gt;問題一覧の画像とCSSを保存し忘れた。 &lt;/p&gt;
+
+&lt;p&gt;チーム0x0としてSECCON 2013 全国大会に参加しました。&lt;/p&gt;
+
+&lt;p&gt;今回のメンバーはwasao, waidotto, nolzeと私です。&lt;br /&gt;
+4139ptで優勝しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SECCON 2013 オンライン予選 writeup</title>
+      <link>https://ngkz.github.io/2014/01/seccon-2013-online-quals-writeup/</link>
+      <pubDate>Thu, 30 Jan 2014 11:40:33 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2014/01/seccon-2013-online-quals-writeup/</guid>
+      <description>&lt;p&gt;SECCON オンライン予選にチーム0x0のメンバーとして参加しました。&lt;/p&gt;
+
+&lt;p&gt;3700点で7位でした。&lt;/p&gt;
+
+&lt;p&gt;bin500に時間をかけ過ぎた結果、練習問題とbin200しか解けなかった。&lt;/p&gt;
+
+&lt;p&gt;バイナリ問題以外も見ておけばよかった&lt;/p&gt;
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+&lt;div class=&#34;figure &#34; &gt;
+  
+    &lt;a class=&#34;fancybox&#34; href=&#34;https://ngkz.github.io/assets/seccon-2013-online-quals-writeup/90b303d7e1e753a918811d598aa91f83.png&#34; title=&#34;スコアの推移&#34; data-fancybox-group=&#34;&#34;&gt;
+  
+    &lt;img class=&#34;fig-img&#34; src=&#34;https://ngkz.github.io/assets/seccon-2013-online-quals-writeup/90b303d7e1e753a918811d598aa91f83.png&#34;  alt=&#34;スコアの推移&#34;&gt;
+  
+    &lt;/a&gt;
+  
+   
+    &lt;span class=&#34;caption&#34;&gt;スコアの推移&lt;/span&gt;
+  
+&lt;/div&gt;
+
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>30c3 ctf writeup</title>
+      <link>https://ngkz.github.io/2014/01/30c3ctf-writeup/</link>
+      <pubDate>Wed, 29 Jan 2014 14:04:07 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2014/01/30c3ctf-writeup/</guid>
+      <description>&lt;p&gt;2013/12/28-30 の30c3 ctfにチーム0x0として参加しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://archive.aachen.ccc.de/30c3ctf.aachen.ccc.de/scoreboard/&#34;&gt;2100点で19位でした。&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SECCON CTF 2012 全国大会で優勝しました。</title>
+      <link>https://ngkz.github.io/2014/01/seccon-2012-finals/</link>
+      <pubDate>Wed, 29 Jan 2014 13:07:13 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2014/01/seccon-2012-finals/</guid>
+      <description>&lt;p&gt;書きかけのwriteupがあったのでアップロードしておく&lt;/p&gt;
+
+&lt;p&gt;2013/2/23 - 2/24の SECCON CTF 全国大会に チーム 0x0として参加しました。&lt;/p&gt;
+
+&lt;p&gt;チームメンバーは nash氏、wasao氏、waidotto氏、nullmineral氏と私です。&lt;/p&gt;
+
+&lt;p&gt;スコアは 1684ptでした。&lt;/p&gt;
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+&lt;div class=&#34;figure &#34; &gt;
+  
+    &lt;a class=&#34;fancybox&#34; href=&#34;https://ngkz.github.io/assets/seccon-2012-finals/8350e0f576a0bb0ad3cbe70355ba0061.png&#34; title=&#34;問題一覧&#34; data-fancybox-group=&#34;&#34;&gt;
+  
+    &lt;img class=&#34;fig-img&#34; src=&#34;https://ngkz.github.io/assets/seccon-2012-finals/8350e0f576a0bb0ad3cbe70355ba0061.png&#34;  alt=&#34;問題一覧&#34;&gt;
+  
+    &lt;/a&gt;
+  
+   
+    &lt;span class=&#34;caption&#34;&gt;問題一覧&lt;/span&gt;
+  
+&lt;/div&gt;
+
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>tkbctf1 writeup</title>
+      <link>https://ngkz.github.io/2014/01/tkbctf1-writeup/</link>
+      <pubDate>Wed, 29 Jan 2014 13:06:30 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2014/01/tkbctf1-writeup/</guid>
+      <description>&lt;p&gt;2013/5/4〜5/5の&lt;a href=&#34;http://tkbctf.info/tkbctf1&#34;&gt;tkbctf1&lt;/a&gt;に参加しました。&lt;/p&gt;
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+&lt;div class=&#34;figure &#34; &gt;
+  
+    &lt;a class=&#34;fancybox&#34; href=&#34;https://ngkz.github.io/assets/tkbctf1-writeup/fa296654d5c0a34f2c78631fe4577d70.png&#34; title=&#34;Scoreboard&#34; data-fancybox-group=&#34;&#34;&gt;
+  
+    &lt;img class=&#34;fig-img&#34; src=&#34;https://ngkz.github.io/assets/tkbctf1-writeup/fa296654d5c0a34f2c78631fe4577d70.png&#34;  alt=&#34;Scoreboard&#34;&gt;
+  
+    &lt;/a&gt;
+  
+   
+    &lt;span class=&#34;caption&#34;&gt;Scoreboard&lt;/span&gt;
+  
+&lt;/div&gt;
+
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+&lt;div class=&#34;figure &#34; &gt;
+  
+    &lt;a class=&#34;fancybox&#34; href=&#34;https://ngkz.github.io/assets/tkbctf1-writeup/6007d2ae22af0d2db3a312c9ba731253.png&#34; title=&#34;Challenges&#34; data-fancybox-group=&#34;&#34;&gt;
+  
+    &lt;img class=&#34;fig-img&#34; src=&#34;https://ngkz.github.io/assets/tkbctf1-writeup/6007d2ae22af0d2db3a312c9ba731253.png&#34;  alt=&#34;Challenges&#34;&gt;
+  
+    &lt;/a&gt;
+  
+   
+    &lt;span class=&#34;caption&#34;&gt;Challenges&lt;/span&gt;
+  
+&lt;/div&gt;
+
+
+&lt;p&gt;個人ランキングで1位でした。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>年越しCTF x86-64.jp大会 2014で優勝しました。</title>
+      <link>https://ngkz.github.io/2014/01/newyearsctf/</link>
+      <pubDate>Wed, 01 Jan 2014 15:45:15 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2014/01/newyearsctf/</guid>
+      <description>&lt;div class=&#34;figure &#34; &gt;
+  
+    &lt;a class=&#34;fancybox&#34; href=&#34;https://ngkz.github.io/assets/newyearsctf/0734e47f8886a005a11bedd17955a0c6.png&#34; title=&#34;Scoreboard&#34; data-fancybox-group=&#34;&#34;&gt;
+  
+    &lt;img class=&#34;fig-img&#34; src=&#34;https://ngkz.github.io/assets/newyearsctf/0734e47f8886a005a11bedd17955a0c6.png&#34;  alt=&#34;Scoreboard&#34;&gt;
+  
+    &lt;/a&gt;
+  
+   
+    &lt;span class=&#34;caption&#34;&gt;Scoreboard&lt;/span&gt;
+  
+&lt;/div&gt;
+
+
+&lt;p&gt;優勝して賞金2500円を手に入れました。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Galaxy S3(SC-06D)がadbバックアップを戻した後再起動を繰り返すようになったときの対処方法</title>
+      <link>https://ngkz.github.io/2013/09/galaxys3-adb-restore-fail/</link>
+      <pubDate>Thu, 12 Sep 2013 13:29:56 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2013/09/galaxys3-adb-restore-fail/</guid>
+      <description>&lt;h2 id=&#34;リカバリモードに入ってファクトリーリセットする&#34;&gt;リカバリモードに入ってファクトリーリセットする&lt;/h2&gt;
+
+&lt;p&gt;galaxy S3 リカバリモードの入り方:&lt;/p&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/QVa3yfxP0Zs&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h2 id=&#34;バックアップを展開&#34;&gt;バックアップを展開&lt;/h2&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>トレイに格納したKeePassXを復元できるようにする方法</title>
+      <link>https://ngkz.github.io/2013/03/howto-reactivate-keepassx/</link>
+      <pubDate>Thu, 14 Mar 2013 17:21:07 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2013/03/howto-reactivate-keepassx/</guid>
+      <description>&lt;p&gt;Ubuntu 12.10-14.04で確認済み&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;echo &amp;quot;keepassx=1&amp;quot; &amp;gt;&amp;gt; /etc/xdg/sni-qt.conf
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SECCON CTF 横浜大会 (SECCON 2012 予選) writeup</title>
+      <link>https://ngkz.github.io/2012/12/seccon-2012-yokohama-quals-writeup/</link>
+      <pubDate>Mon, 24 Dec 2012 05:03:22 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2012/12/seccon-2012-yokohama-quals-writeup/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.seccon.jp/&#34;&gt;SECCON CTF 横浜大会&lt;/a&gt;にチーム 0x0として参加しました。&lt;br /&gt;
+チームメンバーは nash氏、wasao氏、waidotto氏、nullmineral氏と私です。&lt;/p&gt;
+
+&lt;h2 id=&#34;成績&#34;&gt;成績&lt;/h2&gt;
+
+&lt;p&gt;score: たぶん8120&lt;/p&gt;
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+&lt;div class=&#34;figure &#34; &gt;
+  
+    &lt;a class=&#34;fancybox&#34; href=&#34;https://ngkz.github.io/assets/seccon-2012-yokohama-quals-writeup/514d338eaff15827c0309966508eddbb.png&#34; title=&#34;終了数分前の問題一覧&#34; data-fancybox-group=&#34;&#34;&gt;
+  
+    &lt;img class=&#34;fig-img&#34; src=&#34;https://ngkz.github.io/assets/seccon-2012-yokohama-quals-writeup/514d338eaff15827c0309966508eddbb.png&#34;  alt=&#34;終了数分前の問題一覧&#34;&gt;
+  
+    &lt;/a&gt;
+  
+   
+    &lt;span class=&#34;caption&#34;&gt;終了数分前の問題一覧&lt;/span&gt;
+  
+&lt;/div&gt;
+
+
+&lt;p&gt;&lt;/p&gt;
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+&lt;div class=&#34;figure &#34; &gt;
+  
+    &lt;a class=&#34;fancybox&#34; href=&#34;https://ngkz.github.io/assets/seccon-2012-yokohama-quals-writeup/seccon-yokohama.jpg&#34; title=&#34;賞状 第三位&#34; data-fancybox-group=&#34;&#34;&gt;
+  
+    &lt;img class=&#34;fig-img&#34; src=&#34;https://ngkz.github.io/assets/seccon-2012-yokohama-quals-writeup/seccon-yokohama.jpg&#34; style=&#34;width: 295px;height: 400px;&#34; alt=&#34;賞状 第三位&#34;&gt;
+  
+    &lt;/a&gt;
+  
+   
+    &lt;span class=&#34;caption&#34;&gt;賞状 第三位&lt;/span&gt;
+  
+&lt;/div&gt;
+
+
+&lt;p&gt;&lt;br /&gt;
+✌(&amp;lsquo;ω&amp;rsquo;)&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
