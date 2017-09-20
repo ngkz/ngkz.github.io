@@ -16,6 +16,6 @@ tags:
 
 スコアは 1684ptでした。
 
-{{<image classes="fancybox" src="/assets/seccon-2012-finals/8350e0f576a0bb0ad3cbe70355ba0061.png">}}
+{{<image classes="fancybox" src="/assets/seccon-2012-finals/8350e0f576a0bb0ad3cbe70355ba0061.png" title="問題一覧">}}
 
 <!--more-->
