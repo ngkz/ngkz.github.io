@@ -166,7 +166,7 @@ exploit:
 
 5命令でファイルを表示するのは難しいので、freadでシェルコードを末尾に追加する。
 
-[オンライン予選のbin500と同じように](/2014/01/seccon-2013-online-quals-writeup/#hack-this-site-bin500)
+[オンライン予選のbin500と同じように]({{< ref "seccon-2013-online-quals-writeup.md#hack-this-site-bin500" >}})
 プレフィックスを付けて命令長を調整した。
 
 stdin 変数は 0x08049184にあるが、 push dword
