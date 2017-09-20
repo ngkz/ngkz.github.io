@@ -192,10 +192,10 @@ mnt$ cat key.txt\
 Haiyore! Yuzuharatan!\
 
 mnt$ xdg-open dame.bmp\
-{{<image classes="fancybox" src="/assets/seccon-2012-yokohama-quals-writeup/dame.jpg" thumbnail-width="400px" thumbnail-height="163px">}}
+{{<image classes="fancybox" src="/assets/seccon-2012-yokohama-quals-writeup/dame.jpg" thumbnail-width="400px" thumbnail-height="163px" title="dame.bmp">}}
 
 mnt$ xdg-open やる夫.png\
-{{<image classes="fancybox" src="/assets/seccon-2012-yokohama-quals-writeup/%E3%82%84%E3%82%8B%E5%A4%AB.png">}}
+{{<image classes="fancybox" src="/assets/seccon-2012-yokohama-quals-writeup/%E3%82%84%E3%82%8B%E5%A4%AB.png" title="やる夫.png">}}
 
 \
 
