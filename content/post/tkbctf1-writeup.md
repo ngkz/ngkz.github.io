@@ -125,28 +125,19 @@ Flagは「DIR\_TR@VERS@L」
 \
 
     [INTERMEDIATE]
-
     http://**/82C9DC2D2D3DF1635483D84B7A53FF0B8A80C37C
 
-
     正しいフラグは32文字です。 手違いで長すぎる物も通る状態で出してしまいました。もし32文字以下で正しい回答を得られた場合、**@**までフラグを連絡して下さい。 
-
     strlen(RIGHT_FLAG) = 32. If you got right answer with input less than 32 characters long, please send email to **@** with your flag.
 
 \
 
     9 (57) : 87li  8*7+1   = 57
-
     3 (51) : u6s   57-6    = 51
-
     e (101): u2le  51*2-1  = 101
-
     n (110): u9a   101+9   = 110
-
     2 (50) : u2d5s 110/2-5 = 50
-
     a (97) : u2l3s 50*2-3  = 97
-
     h (104): u7a   97 + 7  = 104
 
 \
@@ -175,12 +166,9 @@ Flagは「DIR\_TR@VERS@L」
 \
 
     This fragged disk image contains emotional message. Do you know my favorite? It's answer.
-
     http://**/56e6a4288ba1196b98824564fe4b98d3a5d17984
 
-
     Hint1: Tanks are dummy, some images are duplicated.
-
     Hint2: Shake!
 
 \
@@ -219,11 +207,8 @@ Flagは「DIR\_TR@VERS@L」
 \
 
     [ADVANCED]
-
     I need the "Message" to continue my game but I forgot the secret command!!!
-
     Can you get the "Message"? I remember that the "Message" was alphanumeric characters.
-
     http://**/cb0c3d0f55b9b627b831f4fbbc153846
 
 \
@@ -303,33 +288,20 @@ SQLインジェクションの問題
 \
 
     こんにちは。博麗大学のS.Iと申します。
-
     春休みに入り成績が付いたのですが、どうも線形代数Iの成績が芳しくないのです。これを落とすとたいへんなことになってしまいます。
-
     線形代数にF(落第点)が付いているのですが、これをD(及第点ギリギリ)に書き換えてくださいませんか?
-
     わたしのログイン情報は 13413983:f.scarlet495 なので、ご参考まで。
-
     どうかお力添えをお願いします。
 
-
     Greetings. I'm S.I at University of Hakurei.
-
     I'm very anxious about my grades, especially Linear Algebra I.
-
     It's about time for professors to grade us on their Online Grading System, however, I've failed the Linear Algebra I class which is a big trouble.
-
     Can you hack into it and grade me "D" for Linear Algebra I instead of an "F"?
-
     Here's my login information: 13413983:f.scarlet495
-
     I appreciate your help.
 
-
     --- このCTFミッションは、WIDEプロジェクト (http://www.wide.ad.jp) 提供のネットワークにて公開しております。所在地: 筑波大学3F棟230号室 産学間連携推進室 ---
-
     --- This CTF Mission is provided via Tsukuba WIDE (http://www.wide.ad.jp), at 3F230, University of Tsukuba. ---
-
     http://**/
 
 邪道な方法で解いた。
@@ -382,17 +354,13 @@ FLAG: 忘れた
 ### fairy (Misc 200)
 
     We need to access a thin client to get trade secret of rival company.
-
     However the client needs to be unlocked at boot sequence. Can you unlock?
-
     This file may help you.
-
     http://**/250d3a31dee7f62d57ea3d17f544b5e4750e8039
 
 \
 
     $ file 250d3a31dee7f62d57ea3d17f544b5e4750e8039 
-
     250d3a31dee7f62d57ea3d17f544b5e4750e8039: tcpdump capture file (little-endian) - version 2.4 (Ethernet, capture length 65535)
 
 {{<image classes="fancybox" src="/assets/tkbctf1-writeup/ae5200b836564e01fc6b87f382440418.png" title="TFTP packets">}}
