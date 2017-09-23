@@ -3,12 +3,69 @@ title: "Profile"
 keywords:
 - tech
 - CTF
-comments:       true
+comments:       false
 showDate:       false
-showSocial:     true
+showSocial:     false
 showTags:       false
 showPagination: false
 ---
+
+名前
+: 野口和敏
+
+メール
+: <a href="http://www.google.com/recaptcha/mailhide/d?k=01JsH-feJNrYzf5ays5MSYog==&amp;c=cKBqCrwDa5AkgUOfUC7BKsULlv_TewmK1Rdi6hluW0p8JBXMYL8MfFavtXMp0XOk" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\x3d01JsH-feJNrYzf5ays5MSYog\x3d\x3d\x26c\x3dcKBqCrwDa5AkgUOfUC7BKsULlv_TewmK1Rdi6hluW0p8JBXMYL8MfFavtXMp0XOk', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">メールアドレスを表示</a>
+
+PGP
+: [BC6D CFE0 3513 A9FA 4F55  D702 06B8 1066 65DD 36F3](http://keys.gnupg.net/pks/lookup?op=get&search=0x06B8106665DD36F3)
+
+github
+: [ngkz](https://github.com/ngkz)
+
+\
+
+ * 場面緘黙症
+ * 精神障害者保健福祉手帳 (3級)
+
+
+## 資格
+ * 第一種運転免許 (準中型, 普通自動二輪小型AT限定)
+ * 第二種電気工事士
+ * ITパスポート
+ * 基本情報技術者
+ * 応用情報技術者
+ * 情報セキュリティスペシャリスト
+
+## スキル
+プログラミング言語
+: C, Python, C++, x86 Assembly, x86-64 Assembly, PIC(14bit) Assembly, ARM Assembly, JavaScript, CoffeeScript, Shell script(POSIX, bash), HTML, PHP, CSS, Rust, VBA, make, CMake, IBM PC/AT Compatible System Programming
+
+フレームワーク
+: Django, Flask, Express, Electron, nw.js
+
+インフラ
+: Linux, AppArmor, Docker, Apache, Nginx, Node.js, Ansible, Chef, AIDE, git, OpenSSH, OpenVPN, munin, logwatch, logrotate, swatch
+
+ハッキング
+: Pwning, Reverse Engineering, Web Hacking, Forensics
+
+ハードウェア
+: 簡単な電気工事, デジタル回路, Verilog HDL, 低周波回路, 簡単な工作
+
+## 主な経歴
+| 年   | 月  |                                                                                               |
+| ---: | --: | --------------------------------------------------------------------------------------------- |
+| 2012 | 8   | セキュリティ・キャンプ中央大会2012 ソフトウェアセキュリティクラス 卒業                        |
+| 2013 | 2   | [SECCON CTF 全国大会 (2012年度) 優勝](http://2012.seccon.jp/2013/02/blog-post_26.html)        |
+| 2013 | 5   | tkbctf1 優勝                                                                                  |
+| 2014 | 3   | [SECCON 2013 全国大会 2連覇](http://2013.seccon.jp/blog/2014/03/seccon2013zenkoku-kekka.html) |
+| 2014 | 3   | backdoorCTF 2014 3位入賞                                                                      |
+| 2014 | 8   | DEFCON 22 CTFに出場  (binjaのメンバーとして)                                                  |
+| 2014 | 8   | HITCON CTF 2014で優勝 (fuzzi3のメンバーとして)                                                |
+| 2016 | 1   | SECCON 2015 全国大会 (Intercollege) 準優勝                                                    |
+| 2016 | 3   | 小山工業高等専門学校 電気情報工学科卒業                                                       |
+| 2016 | 11  | 株式会社 渡辺製作所 入社                                                                      |
+| 2017 | 9   | 株式会社 渡辺製作所 退社                                                                      |
 
 ## 戦績
 | <span style="white-space: nowrap">開催日</span> | <span style="white-space: nowrap">順位</span> | <span style="white-space: nowrap">順位(国内)</span> | <span style="white-space: nowrap">イベント</span> | <span style="white-space: nowrap">チーム</span> |
