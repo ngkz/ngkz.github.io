@@ -38,7 +38,7 @@ github
 
 ## スキル
 プログラミング言語
-: C, Python, C++, x86 Assembly, x86-64 Assembly, PIC(14bit) Assembly, ARM Assembly, JavaScript, CoffeeScript, Shell script(POSIX, bash), HTML, PHP, CSS, Rust, VBA, make, CMake, IBM PC/AT Compatible System Programming
+: C, Python, C++, x86 Assembly, x86-64 Assembly, PIC(14bit) Assembly, ARM Assembly, JavaScript, CoffeeScript, Shell script(POSIX, bash), HTML, PHP, CSS, Rust, VBA, make, CMake
 
 フレームワーク
 : Django, Flask, Express, Electron, nw.js
@@ -51,6 +51,9 @@ github
 
 ハードウェア
 : 簡単な電気工事, デジタル回路, Verilog HDL, 低周波回路, 簡単な工作
+
+その他
+: IBM PC互換機のOS開発
 
 ## 主な経歴
 | 年   | 月  |                                                                                               |
