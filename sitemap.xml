@@ -53,10 +53,6 @@
   </url>
   
   <url>
-    <loc>https://ngkz.github.io/page/profile/</loc>
-  </url>
-  
-  <url>
     <loc>https://ngkz.github.io/archives/</loc>
     <priority>0</priority>
   </url>
@@ -93,6 +89,10 @@
     <loc>https://ngkz.github.io/post/</loc>
     <lastmod>2014-07-23T19:57:23+09:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ngkz.github.io/page/profile/</loc>
   </url>
   
   <url>
