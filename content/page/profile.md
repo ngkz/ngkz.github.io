@@ -3,7 +3,7 @@ title: "Profile"
 keywords:
 - tech
 - CTF
-comments:       false
+comments:       true
 showDate:       false
 showSocial:     false
 showTags:       false
@@ -21,6 +21,10 @@ PGP
 
 github
 : [ngkz](https://github.com/ngkz)
+
+bitcoin
+: [![1FzRWZsT9sL6G5iaKpEHRuJmRsKniFNW6c](https://img.shields.io/badge/donate-bitcoin-green.svg)](bitcoin:1FzRWZsT9sL6G5iaKpEHRuJmRsKniFNW6c)
+  ![bitcoin address QR code](/bitcoin.png)
 
 \
 
