@@ -27,6 +27,9 @@ bitcoin
   [![donate bitcoin](https://img.shields.io/badge/donate-bitcoin-green.svg)](bitcoin:1FzRWZsT9sL6G5iaKpEHRuJmRsKniFNW6c)
   ![bitcoin address QR code](/bitcoin.png)
 
+AUR
+: [ngkz](https://aur.archlinux.org/account/ngkz/)
+
 \
 
  * 場面緘黙症
