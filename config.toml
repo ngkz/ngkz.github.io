@@ -100,6 +100,10 @@ canonifyurls = true
 
   # Global keywords configuration. Following keywords will be add to every pages
   # keywords = ["development", "next-gen"]
+  #
+  # Syntax highlighter, possible choice between: "highligth.js" (recommanded) and "prism.js" (experimental)
+  # You can comment it to disable syntax highligthing
+  syntaxHighlighter = "highligth.js"
 
   # Hide sidebar on all article page to let article take full width to improve reading, and enjoy wide images and cover images. (true: enable, false: disable)
   clearReading = false
@@ -160,11 +164,17 @@ canonifyurls = true
 
   # Custom CSS. Put here your custom CSS files. They are loaded after the theme CSS;
   # they have to be referred from static root. Example
-  # customCSS = ["css/foo.css"]
+  # [[params.customCSS]]
+  #   href = "css/mystyle.css"
 
   # Custom JS. Put here your custom JS files. They are loaded after the theme JS;
   # they have to be referred from static root. Example
-  # customJS = ["js/foo.js"]
+  # [[params.customJS]]
+  #   src = "js/myscript.js"
+
+  # Display `Next` on left side of the pagination, and `Prev` on right side one.
+  # If you set this value to `true`, these positions swap.
+  # swapPaginator = true
 
   # Sharing options
   # Comment and uncomment to enable or disable sharing options
@@ -194,6 +204,6 @@ canonifyurls = true
   [params.sidebar.profile]
     url = "/page/profile/"
 
-  # Customize copyright value "© 2016 <CUSTOMIZATION>. All Rights Reserved"
+  # Customize copyright value "© 2017 <CUSTOMIZATION>. All Rights Reserved"
   # [params.footer]
   #   copyright = "<a href=\"https://github.com/kakawait\">kakawait</a>"
