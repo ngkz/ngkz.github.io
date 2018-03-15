@@ -46,7 +46,7 @@ AUR
 
 ## スキル
 プログラミング言語
-: C, Python, C++, x86 Assembly, x86-64 Assembly, PIC(14bit) Assembly, ARM Assembly, JavaScript, CoffeeScript, Shell script(POSIX, bash), HTML, PHP, CSS, Rust, VBA, make, CMake
+: C, Python, C++11, x86 Assembly, x86-64 Assembly, PIC(14bit) Assembly, ARM Assembly, JavaScript, CoffeeScript, Shell script(POSIX, bash), HTML, PHP, CSS, Rust, VBA, make, CMake
 
 フレームワーク
 : Django, Flask, Express, Electron, nw.js
@@ -75,8 +75,14 @@ AUR
 | 2014 | 8   | HITCON CTF 2014で優勝 (fuzzi3のメンバーとして)                                                |
 | 2016 | 1   | SECCON 2015 全国大会 (Intercollege) 準優勝                                                    |
 | 2016 | 3   | 小山工業高等専門学校 電気情報工学科卒業                                                       |
-| 2016 | 11  | 株式会社 渡辺製作所 入社                                                                      |
-| 2017 | 9   | 株式会社 渡辺製作所 退社                                                                      |
+
+## 職歴
+| 期間              | 会社                                | 雇用形態 | 仕事内容                     | 給料                          | 休日                    | 社食                  | 所感                                                             |
+| ----------------- | ----------------------------------- | -------- | ---------------------------- | ----------------------------- | ----------------------- | --------------------- | ---------------------------------------------------------------- |
+| 2016/06〜2016/07  | 株式会社 渡辺製作所                 | -        | データ入力, 雑用             | 0 (研修)                      | 基本的に祝日も出勤      | まずい弁当か麺        |                                                                  |
+| 2016/11〜2017/09  |                                     | パート   |                              | 時給780円 8:00-17:00          |                         |                       | クソつまらん                                                    |
+| 2017/10〜2017/11  | 社会福祉法人自立奉仕会茨城福祉工場  | -        | プログラミング, サーバー構築 | 0 (研修)                      | 基本的に祝日も出勤      | そこそこ              |                                                                  |
+| 2017/12〜現在     |                                     | パート   |                              | 時給855円 9:00-16:10          |                         |                       | 距離が遠いため、実質フルタイム(そして労働時間が短いので残業しても割増賃金にはならない)、車の燃料代とメンテナンス代が嵩むので月によっては赤字になる。<br>1日の残業時間は端数切り捨て (違法)<br>仕事内容も前よりはマシだがつまらない<br>全体的には±0 つまりクソ |
 
 ## 戦績
 | <span style="white-space: nowrap">開催日</span> | <span style="white-space: nowrap">順位</span> | <span style="white-space: nowrap">順位(国内)</span> | <span style="white-space: nowrap">イベント</span> | <span style="white-space: nowrap">チーム</span> |
