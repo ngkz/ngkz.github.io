@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://ngkz.github.io/2017/12/wake-luggage-room-hook/</loc>
+    <lastmod>2017-12-05T17:34:45+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ngkz.github.io/2014/07/seccon-2014-online-japanese-quals-writeup/</loc>
     <lastmod>2014-07-23T19:57:23+09:00</lastmod>
   </url>
@@ -76,6 +81,12 @@
   <url>
     <loc>https://ngkz.github.io/categories/ctf/</loc>
     <lastmod>2014-07-23T19:57:23+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ngkz.github.io/tags/diy/</loc>
+    <lastmod>2017-12-05T17:34:45+09:00</lastmod>
     <priority>0</priority>
   </url>
   
