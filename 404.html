@@ -15,12 +15,14 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="Hugo 0.42.2 with theme Tranquilpeak 0.4.3-BETA">
+    <meta name="generator" content="Hugo 0.20.7 with theme Tranquilpeak 0.4.3-BETA">
     <title>404 Page not found</title>
     <meta name="author" content="Kazutoshi Noguchi">
     <meta name="keywords" content="">
 
     <link rel="icon" href="https://ngkz.github.io/favicon.png">
+    
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://ngkz.github.io/index.xml">
     
 
     
@@ -62,16 +64,13 @@
     
       
 <script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-106134104-1', 'auto');
-	
-	ga('send', 'pageview');
-}
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-106134104-1', 'auto');
+ga('send', 'pageview');
 </script>
 
     
@@ -133,6 +132,25 @@ if (!doNotTrack) {
       <div class="no-result text-color-light text-center"></div>
       <div class="results">
         
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2018/08/cargo-run-test-with-sudo/">
+                <h3 class="media-heading">テストをrootとして動かす方法 (Rust)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Aug 8, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p><a href="https://github.com/rust-lang/cargo/issues/1924">https://github.com/rust-lang/cargo/issues/1924</a> によると、<code>cargo test --no-run --message-format=json | jq -r &quot;select(.profile.test == true) | .filenames[]&quot;</code> でテストバイナリの一覧が取得できる。これをsudoで実行するスクリプトを作ればOK</p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
         
           <div class="media">
             
@@ -220,7 +238,7 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
 </div>
 
 
-<p>リアの窓と換気扇だけでは車内の換気能力が足りないので、ボーンバー<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>を作った。</p>
+<p>リアの窓と換気扇だけでは車内の換気能力が足りないので、ボーンバー<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>を作った。</p>
 
 <p></p></div>
             </div>
@@ -499,75 +517,6 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
             <hr>
           </div>
         
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://ngkz.github.io/2014/01/tkbctf1-writeup/">
-                <h3 class="media-heading">tkbctf1 writeup</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jan 1, 2014
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>2013/5/4〜5/5の<a href="http://tkbctf.info/tkbctf1">tkbctf1</a>に参加しました。</p>
-
-
-
- 
-  
-  
-  
-  
-    
-  
-
-<div class="figure " >
-  
-    <a class="fancybox" href="https://ngkz.github.io/assets/tkbctf1-writeup/fa296654d5c0a34f2c78631fe4577d70.png" title="Scoreboard" data-fancybox-group="">
-  
-    <img class="fig-img" src="https://ngkz.github.io/assets/tkbctf1-writeup/fa296654d5c0a34f2c78631fe4577d70.png"  alt="Scoreboard">
-  
-    </a>
-  
-   
-    <span class="caption">Scoreboard</span>
-  
-</div>
-
-
-
-
- 
-  
-  
-  
-  
-    
-  
-
-<div class="figure " >
-  
-    <a class="fancybox" href="https://ngkz.github.io/assets/tkbctf1-writeup/6007d2ae22af0d2db3a312c9ba731253.png" title="Challenges" data-fancybox-group="">
-  
-    <img class="fig-img" src="https://ngkz.github.io/assets/tkbctf1-writeup/6007d2ae22af0d2db3a312c9ba731253.png"  alt="Challenges">
-  
-    </a>
-  
-   
-    <span class="caption">Challenges</span>
-  
-</div>
-
-
-<p>個人ランキングで1位でした。</p>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
       </div>
     </div>
     <div class="modal-footer">
@@ -575,7 +524,7 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
          data-message-zero=""
          data-message-one=""
          data-message-other="">
-         14 posts found
+         15 posts found
       </p>
     </div>
   </div>

@@ -1,5 +1,9 @@
 
 
+  
+    
+  
+
 
   
 
@@ -16,25 +20,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.20.7 with theme Tranquilpeak 0.4.3-BETA">
-    <title>車</title>
+    <title>テストをrootとして動かす方法 (Rust)</title>
     <meta name="author" content="Kazutoshi Noguchi">
     <meta name="keywords" content="">
 
     <link rel="icon" href="https://ngkz.github.io/favicon.png">
     
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://ngkz.github.io/categories/%E8%BB%8A/index.xml">
-    
 
     
-    <meta name="description" content="Kazutoshi Noguchi&#39;s blog">
-    <meta property="og:description" content="Kazutoshi Noguchi&#39;s blog">
+    <meta name="description" content="https://github.com/rust-lang/cargo/issues/1924 によると、cargo test --no-run --message-format=json | jq -r &quot;select(.profile.test == true) | .filenames[]&quot; でテストバイナリの一覧が取得できる。これをsudoで実行するスクリプトを作ればOK
+
+">
+    <meta property="og:description" content="https://github.com/rust-lang/cargo/issues/1924 によると、cargo test --no-run --message-format=json | jq -r &quot;select(.profile.test == true) | .filenames[]&quot; でテストバイナリの一覧が取得できる。これをsudoで実行するスクリプトを作ればOK
+
+">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="車">
-    <meta property="og:url" content="/categories/%E8%BB%8A/">
+    <meta property="og:title" content="テストをrootとして動かす方法 (Rust)">
+    <meta property="og:url" content="/2018/08/cargo-run-test-with-sudo/">
     <meta property="og:site_name" content="ngkz.log">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="ngkz.log">
-    <meta name="twitter:description" content="Kazutoshi Noguchi&#39;s blog">
+    <meta name="twitter:description" content="https://github.com/rust-lang/cargo/issues/1924 によると、cargo test --no-run --message-format=json | jq -r &quot;select(.profile.test == true) | .filenames[]&quot; でテストバイナリの一覧が取得できる。これをsudoで実行するスクリプトを作ればOK
+
+">
     
     
 
@@ -198,48 +206,30 @@ ga('send', 'pageview');
 </nav>
 
       
-        
 
-      
       <div id="main" data-behavior="1"
         class="
                hasCoverMetaIn
                ">
-        
-          <section class="postShorten-group main-content-wrap">
-            
-            
-              
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
   
-    
-      
-        
-      
-    
+    <h1 class="post-title" itemprop="headline">
+      テストをrootとして動かす方法 (Rust)
+    </h1>
   
-
-
   
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://ngkz.github.io/2018/07/oil-change/">
-          オイル交換メモ
-        </a>
-      </h1>
-      
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-07-01T11:57:18&#43;09:00">
+      <time itemprop="datePublished" datetime="2018-08-01T17:37:33&#43;09:00">
         
   
   
   
   
-    2018-07-01
+    2018-08-01
   
 
       </time>
@@ -249,204 +239,121 @@ ga('send', 'pageview');
   
     <span>カテゴリー</span>
     
-      <a class="category-link" href="https://ngkz.github.io/categories/%e8%bb%8a">車</a>
+      <a class="category-link" href="https://ngkz.github.io/categories/howto">howto</a>
     
   
 
   </div>
 
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <h2 id="必要な物">必要な物</h2>
-
-<p>たまに忘れるので</p>
-
-<ul>
-<li>オイル (消耗品)</li>
-<li>オイル処理箱 (消耗品)</li>
-<li>オイルフィルター (フィルター交換の場合, 消耗品)</li>
-<li>ウエス (消耗品)</li>
-<li>パーツクリーナー (消耗品)</li>
-<li>ドレンパッキン (消耗品)</li>
-<li>手袋 (消耗品)</li>
-<li>ゴミ袋 (消耗品)</li>
-<li>スロープ</li>
-<li>新聞紙</li>
-<li>メガネレンチ</li>
-<li>オイルジョッキ</li>
-<li>オイルフィルターレンチ (フィルター交換の場合)</li>
-<li>エクステンションバー (フィルター交換の場合)</li>
-<li>ラチェットハンドル (フィルター交換の場合)</li>
-<li>ウマ (タイヤローテーションもする場合)</li>
-<li>ジャッキ (タイヤローテーションもする場合)</li>
-<li>トルクレンチ (タイヤローテーションもする場合)</li>
-</ul>
-
-<p></p>
-      <p>
-        <a href="https://ngkz.github.io/2018/07/oil-change/" class="postShorten-excerpt_link link">続きを読む</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://ngkz.github.io/2018/05/bonebar/">
-          自作ボーンバー
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2018-05-13T23:58:19&#43;09:00">
-        
-  
-  
-  
-  
-    2018-05-13
-  
-
-      </time>
-    
-    
-  
-  
-    <span>カテゴリー</span>
-    
-      <a class="category-link" href="https://ngkz.github.io/categories/%e8%bb%8a">車</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <div class="figure center" >
-  
-    <a class="fancybox" href="https://ngkz.github.io/assets/bonebar/bonebar.jpg" title="ボーンバー" data-fancybox-group="">
-  
-    <img class="fig-img" src="https://ngkz.github.io/assets/bonebar/bonebar.jpg" style="width: 33%;" alt="ボーンバー">
-  
-    </a>
-  
-   
-    <span class="caption">ボーンバー</span>
-  
 </div>
-
-
-<p>リアの窓と換気扇だけでは車内の換気能力が足りないので、ボーンバー<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>を作った。</p>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p><a href="https://github.com/rust-lang/cargo/issues/1924">https://github.com/rust-lang/cargo/issues/1924</a> によると、<code>cargo test --no-run --message-format=json | jq -r &quot;select(.profile.test == true) | .filenames[]&quot;</code> でテストバイナリの一覧が取得できる。これをsudoで実行するスクリプトを作ればOK</p>
 
 <p></p>
-      <p>
-        <a href="https://ngkz.github.io/2018/05/bonebar/" class="postShorten-excerpt_link link">続きを読む</a>
+
+<pre><code class="language-sh">#!/bin/sh
+#Public Domain
+cargo test --no-run --message-format=json | jq -r &quot;select(.profile.test == true) | .filenames[]&quot; | while read -r bin; do
+    sudo -- &quot;$bin&quot;
+done
+</code></pre>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">タグ</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://ngkz.github.io/tags/rust/">rust</a>
+
+                  </div>
+                
+              
+            
+            
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">次</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2018/07/audit-cargo-crate/" data-tooltip="依存しているパッケージ(crate)の中身を実行せずに調べる方法 (Rust)">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">前</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
         
-      </p>
-    </div>
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2018/08/cargo-run-test-with-sudo/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2018/08/cargo-run-test-with-sudo/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2018/08/cargo-run-test-with-sudo/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
   </div>
-  
-</article>
+
 
             
               
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://ngkz.github.io/2017/12/wake-luggage-room-hook/">
-          ウェイク ラゲッジフック自作
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-12-05T17:34:45&#43;09:00">
-        
-  
-  
-  
-  
-    2017-12-05
-  
-
-      </time>
-    
-    
-  
-  
-    <span>カテゴリー</span>
-    
-      <a class="category-link" href="https://ngkz.github.io/categories/%e8%bb%8a">車</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <div class="figure center" >
-  
-    <a class="fancybox" href="https://ngkz.github.io/assets/wake-luggage-room-hook/hook.jpg" title="ラゲッジフック" data-fancybox-group="">
-  
-    <img class="fig-img" src="https://ngkz.github.io/assets/wake-luggage-room-hook/hook.jpg" style="width: 33%;" alt="ラゲッジフック">
-  
-    </a>
-  
-   
-    <span class="caption">ラゲッジフック</span>
-  
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-
-
-<p>リアゲートを開けたときに荷物が落ちるので、荷物ベルトを通すフックをつけてみた</p>
-
-<p></p>
-      <p>
-        <a href="https://ngkz.github.io/2017/12/wake-luggage-room-hook/" class="postShorten-excerpt_link link">続きを読む</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
+              
             
-            
-
-          </section>
-        
+          </div>
+        </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">ngkz.log</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://ngkz.github.io/" property="cc:attributionName" rel="cc:attributionURL">Kazutoshi Noguchi</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
@@ -454,6 +361,102 @@ ga('send', 'pageview');
 </footer>
 
       </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="1">
+        
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">次</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2018/07/audit-cargo-crate/" data-tooltip="依存しているパッケージ(crate)の中身を実行せずに調べる方法 (Rust)">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">前</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2018/08/cargo-run-test-with-sudo/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2018/08/cargo-run-test-with-sudo/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2018/08/cargo-run-test-with-sudo/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="1">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fngkz.github.io%2F2018%2F08%2Fcargo-run-test-with-sudo%2F">
+          <i class="fa fa-facebook-official"></i><span>Facebookで共有</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fngkz.github.io%2F2018%2F08%2Fcargo-run-test-with-sudo%2F">
+          <i class="fa fa-twitter"></i><span>Twitterで共有</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fngkz.github.io%2F2018%2F08%2Fcargo-run-test-with-sudo%2F">
+          <i class="fa fa-google-plus"></i><span>Google&#43;で共有</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
     </div>
     
     <div id="about">
@@ -931,6 +934,32 @@ $(document).ready(function() {
 });
 </script>
 
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/ngkz.github.io\/2018\/08\/cargo-run-test-with-sudo\/';
+          
+            this.page.identifier = '\/2018\/08\/cargo-run-test-with-sudo\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'ngkz-log';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
 
 
 
