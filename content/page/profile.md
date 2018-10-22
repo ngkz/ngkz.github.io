@@ -14,9 +14,10 @@ showPagination: false
 : 野口和敏
 
 メール
-: <a href="http://www.google.com/recaptcha/mailhide/d?k=01JsH-feJNrYzf5ays5MSYog==&amp;c=cKBqCrwDa5AkgUOfUC7BKsULlv_TewmK1Rdi6hluW0p8JBXMYL8MfFavtXMp0XOk" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\x3d01JsH-feJNrYzf5ays5MSYog\x3d\x3d\x26c\x3dcKBqCrwDa5AkgUOfUC7BKsULlv_TewmK1Rdi6hluW0p8JBXMYL8MfFavtXMp0XOk', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">メールアドレスを表示</a>
+: `nたoたgたuたcたhたiた.たkたaたzたuたtたoたsたiた+た7た4たcた7たeたvたLたxた@たgたmたaたiたlた.たcたoたmた`
+↑ たぬき
 
-PGP
+PGP 公開鍵
 : [BC6D CFE0 3513 A9FA 4F55 D702 06B8 1066 65DD 36F3](http://keys.gnupg.net/pks/lookup?op=get&search=0x06B8106665DD36F3)
 
 github
@@ -42,27 +43,28 @@ AUR
 - IT パスポート
 - 基本情報技術者
 - 応用情報技術者
-- 情報セキュリティスペシャリスト
+- 情報処理安全確保支援士
+  {{<figure src="/assets/profile/riss-logo.png" title="第010448号" alt="情報処理安全確保支援士 ロゴマーク" width="94" height="107">}}
 
 ## スキル
 
 プログラミング言語
-: C, Python, C++11, x86 Assembly, x86-64 Assembly, PIC(14bit) Assembly, ARM Assembly, JavaScript, CoffeeScript, Shell script(POSIX, bash), HTML, PHP, CSS, Rust, VBA, make, CMake
+: C, Python, C++, Assembly(x86, x86-64, PIC, ARM, etc.), Rust, Go, JavaScript, CoffeeScript, Shell script(POSIX, bash), Java, HTML, PHP, CSS, VBA
 
-フレームワーク
+触ったことのあるフレームワーク
 : Django, Flask, Express, Electron, nw.js
 
 インフラ
-: Linux, AppArmor, Docker, Apache, Nginx, Node.js, Ansible, Chef, AIDE, git, OpenSSH, OpenVPN, munin, logwatch, logrotate, swatch
+: Linux, AppArmor, Docker, Apache, Nginx, Postfix, Node.js, Ansible, Zabbix, Chef, SNMP, OpenSSH, OpenVPN, systemd, AIDE, munin, logwatch, logrotate, swatch
 
 ハッキング
-: Pwning, Reverse Engineering, Web Hacking, Forensics
+: Pwning, Reverse Engineering, Web hacking, Forensics
 
 ハードウェア
-: 簡単な電気工事, デジタル回路, Verilog HDL, 低周波回路, 簡単な工作
+: 電気工事, 電子工作, Verilog HDL, 日曜大工
 
 その他
-: IBM PC互換機のOS開発
+: IBM PC 互換機の OS 開発
 
 ## 主な経歴
 
@@ -77,18 +79,21 @@ AUR
 | 2014 |   8 | HITCON CTF 2014 で優勝 (fuzzi3 のメンバーとして)                                               |
 | 2016 |   1 | SECCON 2015 全国大会 (Intercollege) 準優勝                                                     |
 | 2016 |   3 | 小山工業高等専門学校 電気情報工学科卒業                                                        |
+| 2016 |  11 | 株式会社 渡辺製作所 入社                                                                       |
+| 2017 |   9 | 株式会社 渡辺製作所 退職                                                                       |
+| 2017 |  12 | 社会福祉法人自立奉仕会茨城福祉工場 入社                                                        |
 
 ## 職歴
 
-| 期間             | 会社                               | 雇用形態 | 仕事内容                     | 給料                   | 休日               | 社食           | 所感                                                                                                                                                                                                |
-| ---------------- | ---------------------------------- | -------- | ---------------------------- | ---------------------- | ------------------ | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2016/06〜2016/07 | 株式会社 渡辺製作所                | -        | データ入力, 雑用             | 0 (研修)               | 基本的に祝日も出勤 | まずい弁当か麺 |                                                                                                                                                                                                     |
-| 2016/11〜2017/09 |                                    | パート   |                              | 時給 780 円 8:00-17:00 |                    |                | クソつまらん                                                                                                                                                                                        |
-| 2017/10〜2017/11 | 社会福祉法人自立奉仕会茨城福祉工場 | -        | プログラミング, サーバー構築 | 0 (研修)               | 基本的に祝日も出勤 | そこそこ       |                                                                                                                                                                                                     |
-| 2017/12〜2018/06 |                                    | パート   |                              | 時給 855 円 9:00-16:10 |                    |                | 距離が遠いため、実質フルタイム(そして労働時間が短いので残業しても割増賃金にはならない)、車の燃料代とメンテナンス代が嵩むので月によっては赤字になる。<!-- <br>1日の残業時間は端数切り捨て (違法) --> |
-| 2018/06〜現在    |                                    | パート   |                              | 時給 885 円 9:00-16:10 |                    |                |                                                                                                                                                                                                     |
+| 期間             | 会社                               | 雇用形態 | 仕事内容                                                                                                                  | 給料                   | 休日               | 社食     | 所感       |
+| ---------------- | ---------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------- | ---------------------- | ------------------ | -------- | ---------- |
+| 2016/06〜2016/07 | 株式会社 渡辺製作所                | -        | データ入力, 雑用                                                                                                          | 0 (研修)               | 基本的に祝日も出勤 | まずい   | つまらない |
+| 2016/11〜2017/09 |                                    | パート   |                                                                                                                           | 時給 780 円 8:00-17:00 |                    |          |            |
+| 2017/10〜2017/11 | 社会福祉法人自立奉仕会茨城福祉工場 | -        | プログラミング,<br> Linux サーバー構築,<br>Nutanix クラスタ構築,<br>クライアント PC のデプロイ,<br>ネットワーク機器の設定 | 0 (研修)               | 基本的に祝日も出勤 | そこそこ | 遠い       |
+| 2017/12〜2018/06 |                                    | パート   |                                                                                                                           | 時給 855 円 9:00-16:10 |                    |          |            |
+| 2018/06〜現在    |                                    | パート   |                                                                                                                           | 時給 885 円 9:00-16:10 |                    |          |            |
 
-## 戦績
+## CTF 戦績
 
 | <span style="white-space: nowrap">開催日</span> | <span style="white-space: nowrap">順位</span> | <span style="white-space: nowrap">順位(国内)</span> | <span style="white-space: nowrap">イベント</span>                                                              | <span style="white-space: nowrap">チーム</span> |
 | ----------------------------------------------- | --------------------------------------------: | --------------------------------------------------: | -------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
