@@ -1,5 +1,5 @@
 ---
-title: "DOOM Emacsの導入方法"
+title: "DOOM Emacsの導入方法 & 設定例"
 date: 2018-10-20T10:50:27+09:00
 categories:
   - howto
