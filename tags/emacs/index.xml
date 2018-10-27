@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Emacs on ngkz.log</title>
+    <link>https://ngkz.github.io/tags/emacs/</link>
+    <description>Recent content in Emacs on ngkz.log</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 20 Oct 2018 10:50:27 +0900</lastBuildDate>
+    
+	<atom:link href="https://ngkz.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>DOOM Emacsの導入方法</title>
+      <link>https://ngkz.github.io/2018/10/doom-emacs-develop-setup/</link>
+      <pubDate>Sat, 20 Oct 2018 10:50:27 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2018/10/doom-emacs-develop-setup/</guid>
+      <description>&lt;h2 id=&#34;動機&#34;&gt;動機&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;収録ソフトウェアがかなり古くなってきている Ubuntu 14.04 から Linux From Scratch に移行しよう&lt;/li&gt;
+&lt;li&gt;この機会に neovim に移行して、vim の設定を一から書き直そう&lt;/li&gt;
+&lt;li&gt;エディタ部分は大量に設定を書かないと使い勝手が悪いし、プラグインの導入と設定も面倒だ&lt;/li&gt;
+&lt;li&gt;vim 風のキーバインディングで、よりすぐれた操作性を持つ &lt;a href=&#34;http://kakoune.org/why-kakoune/why-kakoune.html&#34;&gt;Kakoune というエディタがあるらしい&lt;/a&gt;。&lt;a href=&#34;https://github.com/ngkz/kakrc&#34;&gt;試してみよう&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;たしかに、設計・デフォルト設定や操作性は vim より良いが、プラグインが足りない&lt;/li&gt;
+&lt;li&gt;じゃあプラグインが充実している Emacs だ。素の Emacs は設定が大変らしいから、&lt;a href=&#34;http://spacemacs.org/&#34;&gt;spacemacs&lt;/a&gt;も試してみよう。&lt;/li&gt;
+&lt;li&gt;起動が遅い&lt;/li&gt;
+&lt;li&gt;Spacemacs より軽い DOOM Emacs というのがあるらしい。これにしよう&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

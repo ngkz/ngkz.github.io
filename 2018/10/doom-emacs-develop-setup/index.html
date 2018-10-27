@@ -20,7 +20,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.42.2 with theme Tranquilpeak 0.4.3-BETA">
-    <title>オイル交換メモ</title>
+    <title>DOOM Emacsの導入方法</title>
     <meta name="author" content="Kazutoshi Noguchi">
     <meta name="keywords" content="">
 
@@ -28,87 +28,51 @@
     
 
     
-    <meta name="description" content="必要な物
-
-たまに忘れるので
+    <meta name="description" content="動機
 
 
-オイル (消耗品)
-オイル処理箱 (消耗品)
-オイルフィルター (フィルター交換の場合, 消耗品)
-ウエス (消耗品)
-パーツクリーナー (消耗品)
-ドレンパッキン (消耗品)
-手袋 (消耗品)
-ゴミ袋 (消耗品)
-スロープ
-新聞紙
-メガネレンチ
-オイルジョッキ
-オイルフィルターレンチ (フィルター交換の場合)
-エクステンションバー (フィルター交換の場合)
-ラチェットハンドル (フィルター交換の場合)
-ウマ (タイヤローテーションもする場合)
-ジャッキ (タイヤローテーションもする場合)
-トルクレンチ (タイヤローテーションもする場合)
+収録ソフトウェアがかなり古くなってきている Ubuntu 14.04 から Linux From Scratch に移行しよう
+この機会に neovim に移行して、vim の設定を一から書き直そう
+エディタ部分は大量に設定を書かないと使い勝手が悪いし、プラグインの導入と設定も面倒だ
+vim 風のキーバインディングで、よりすぐれた操作性を持つ Kakoune というエディタがあるらしい。試してみよう
+たしかに、設計・デフォルト設定や操作性は vim より良いが、プラグインが足りない
+じゃあプラグインが充実している Emacs だ。素の Emacs は設定が大変らしいから、spacemacsも試してみよう。
+起動が遅い
+Spacemacs より軽い DOOM Emacs というのがあるらしい。これにしよう
 
 
 ">
-    <meta property="og:description" content="必要な物
-
-たまに忘れるので
+    <meta property="og:description" content="動機
 
 
-オイル (消耗品)
-オイル処理箱 (消耗品)
-オイルフィルター (フィルター交換の場合, 消耗品)
-ウエス (消耗品)
-パーツクリーナー (消耗品)
-ドレンパッキン (消耗品)
-手袋 (消耗品)
-ゴミ袋 (消耗品)
-スロープ
-新聞紙
-メガネレンチ
-オイルジョッキ
-オイルフィルターレンチ (フィルター交換の場合)
-エクステンションバー (フィルター交換の場合)
-ラチェットハンドル (フィルター交換の場合)
-ウマ (タイヤローテーションもする場合)
-ジャッキ (タイヤローテーションもする場合)
-トルクレンチ (タイヤローテーションもする場合)
+収録ソフトウェアがかなり古くなってきている Ubuntu 14.04 から Linux From Scratch に移行しよう
+この機会に neovim に移行して、vim の設定を一から書き直そう
+エディタ部分は大量に設定を書かないと使い勝手が悪いし、プラグインの導入と設定も面倒だ
+vim 風のキーバインディングで、よりすぐれた操作性を持つ Kakoune というエディタがあるらしい。試してみよう
+たしかに、設計・デフォルト設定や操作性は vim より良いが、プラグインが足りない
+じゃあプラグインが充実している Emacs だ。素の Emacs は設定が大変らしいから、spacemacsも試してみよう。
+起動が遅い
+Spacemacs より軽い DOOM Emacs というのがあるらしい。これにしよう
 
 
 ">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="オイル交換メモ">
-    <meta property="og:url" content="/2018/07/oil-change/">
+    <meta property="og:title" content="DOOM Emacsの導入方法">
+    <meta property="og:url" content="/2018/10/doom-emacs-develop-setup/">
     <meta property="og:site_name" content="ngkz.log">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="ngkz.log">
-    <meta name="twitter:description" content="必要な物
-
-たまに忘れるので
+    <meta name="twitter:description" content="動機
 
 
-オイル (消耗品)
-オイル処理箱 (消耗品)
-オイルフィルター (フィルター交換の場合, 消耗品)
-ウエス (消耗品)
-パーツクリーナー (消耗品)
-ドレンパッキン (消耗品)
-手袋 (消耗品)
-ゴミ袋 (消耗品)
-スロープ
-新聞紙
-メガネレンチ
-オイルジョッキ
-オイルフィルターレンチ (フィルター交換の場合)
-エクステンションバー (フィルター交換の場合)
-ラチェットハンドル (フィルター交換の場合)
-ウマ (タイヤローテーションもする場合)
-ジャッキ (タイヤローテーションもする場合)
-トルクレンチ (タイヤローテーションもする場合)
+収録ソフトウェアがかなり古くなってきている Ubuntu 14.04 から Linux From Scratch に移行しよう
+この機会に neovim に移行して、vim の設定を一から書き直そう
+エディタ部分は大量に設定を書かないと使い勝手が悪いし、プラグインの導入と設定も面倒だ
+vim 風のキーバインディングで、よりすぐれた操作性を持つ Kakoune というエディタがあるらしい。試してみよう
+たしかに、設計・デフォルト設定や操作性は vim より良いが、プラグインが足りない
+じゃあプラグインが充実している Emacs だ。素の Emacs は設定が大変らしいから、spacemacsも試してみよう。
+起動が遅い
+Spacemacs より軽い DOOM Emacs というのがあるらしい。これにしよう
 
 
 ">
@@ -276,19 +240,19 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      オイル交換メモ
+      DOOM Emacsの導入方法
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-07-01T11:57:18&#43;09:00">
+      <time itemprop="datePublished" datetime="2018-10-20T10:50:27&#43;09:00">
         
   
   
   
   
-    2018-07-01
+    2018-10-20
   
 
       </time>
@@ -298,7 +262,7 @@
   
     <span>カテゴリー</span>
     
-      <a class="category-link" href="https://ngkz.github.io/categories/%e8%bb%8a">車</a>
+      <a class="category-link" href="https://ngkz.github.io/categories/howto">howto</a>
     
   
 
@@ -308,110 +272,515 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <h2 id="必要な物">必要な物</h2>
+              <h2 id="動機">動機</h2>
 
-<p>たまに忘れるので</p>
-
-<ul>
-<li>オイル (消耗品)</li>
-<li>オイル処理箱 (消耗品)</li>
-<li>オイルフィルター (フィルター交換の場合, 消耗品)</li>
-<li>ウエス (消耗品)</li>
-<li>パーツクリーナー (消耗品)</li>
-<li>ドレンパッキン (消耗品)</li>
-<li>手袋 (消耗品)</li>
-<li>ゴミ袋 (消耗品)</li>
-<li>スロープ</li>
-<li>新聞紙</li>
-<li>メガネレンチ</li>
-<li>オイルジョッキ</li>
-<li>オイルフィルターレンチ (フィルター交換の場合)</li>
-<li>エクステンションバー (フィルター交換の場合)</li>
-<li>ラチェットハンドル (フィルター交換の場合)</li>
-<li>ウマ (タイヤローテーションもする場合)</li>
-<li>ジャッキ (タイヤローテーションもする場合)</li>
-<li>トルクレンチ (タイヤローテーションもする場合)</li>
-</ul>
+<ol>
+<li>収録ソフトウェアがかなり古くなってきている Ubuntu 14.04 から Linux From Scratch に移行しよう</li>
+<li>この機会に neovim に移行して、vim の設定を一から書き直そう</li>
+<li>エディタ部分は大量に設定を書かないと使い勝手が悪いし、プラグインの導入と設定も面倒だ</li>
+<li>vim 風のキーバインディングで、よりすぐれた操作性を持つ <a href="http://kakoune.org/why-kakoune/why-kakoune.html">Kakoune というエディタがあるらしい</a>。<a href="https://github.com/ngkz/kakrc">試してみよう</a></li>
+<li>たしかに、設計・デフォルト設定や操作性は vim より良いが、プラグインが足りない</li>
+<li>じゃあプラグインが充実している Emacs だ。素の Emacs は設定が大変らしいから、<a href="http://spacemacs.org/">spacemacs</a>も試してみよう。</li>
+<li>起動が遅い</li>
+<li>Spacemacs より軽い DOOM Emacs というのがあるらしい。これにしよう</li>
+</ol>
 
 <p></p>
 
-<h2 id="メモ">メモ</h2>
+<h2 id="インストール">インストール</h2>
+
+<p>現在、<a href="https://github.com/hlissner/doom-emacs/issues/739">master ブランチは動作しない</a> 状態なので、<a href="https://github.com/hlissner/doom-emacs/tree/develop">develop ブランチ</a>をインストールする。</p>
+
+<pre><code class="language-sh">~$ rm -rf ~/.emacs.d
+~$ git clone https://github.com/hlissner/doom-emacs ~/.emacs.d
+~$ cd .emacs.d
+~$ git checkout develop
+#設定を~/.doom.dに置く場合
+~/.emacs.d$ bin/doom quickstart
+#設定を~/.config/doomに置く場合
+~/.emacs.d$ bin/doom -p ~/.config/doom quickstart
+</code></pre>
+
+<p>master ブランチの README と Wiki の情報は古くなっているので、develop ブランチの README と DOOM Emacs のコードを参考に設定する。</p>
+
+<h3 id="doom-emacs-の一部をバイトコンパイルして起動を高速化">DOOM Emacs の一部をバイトコンパイルして起動を高速化</h3>
+
+<p>私の環境ではほとんど効果がなかった。</p>
+
+<pre><code class="language-sh">~/.emacs.d $ bin/doom compile :core
+</code></pre>
+
+<h2 id="使い方">使い方</h2>
 
 <ul>
-<li>ウェイクのドレンボルトは14mm</li>
-<li>ドレンボルトを外す前にフィラーキャップを開ける</li>
-<li>ドレンパッキンはトヨタ用のやつも使える</li>
-<li>オイルフィルターのパッキンにはしっかりとオイルを塗る</li>
-<li>ドレンボルトをしめる時は指でしまらなくなった後1/8回転とちょっとくらい</li>
-<li>車が傾いているのでオイルを入れるときはゲージの半分くらいまでにしておく</li>
-<li>オイルを入れおわったらエンジンを動かした後ゲージをチェックしなおす</li>
-<li>作業後トリップメータとナビの通知機能をリセット</li>
-<li>1日後にオイルが漏れていないか確認</li>
-<li>オイルをこぼしたら猫砂で吸いとる</li>
-<li>コンクリートについたオイルの染みは 溶剤 + 猫砂で吸いとり、食器用洗剤で洗う。時間がたてば残った染みも目立たなくなる</li>
+<li>キーバインドは各モジュールの<code>config.el</code>や<code>+binding.el</code>で定義されている。
+
+<ul>
+<li>基本的なキーバインドは<a href="https://github.com/hlissner/doom-emacs/blob/develop/modules/config/default/%2Bbindings.el">config/default モジュールで定義されている</a></li>
+</ul></li>
+<li>Space, g, C-x などのプレフィックスキーを押した後、2 秒くらい何もしないでいると、キーの一覧と短い説明が自動で出てくる。</li>
+<li><code>SPC :</code>または<code>M-x</code>で emacs コマンドの検索と実行ができる。キーバインドも表示される(ただし複数のキーにマップされている場合 1 つだけしか表示されない)。<br />
+キーバインドを覚えていない機能を使うときに便利</li>
+<li><code>SPC h</code> で現在使用中のモード・選択したシンボル・指定した関数などのヘルプが出せる。</li>
+<li><code>doom update</code> でプラグインをアップデート</li>
+<li><code>doom upgrade</code> で DOOM Emacs をアップデート</li>
+<li><code>doom doctor</code> を実行すると、DOOM Emacs が正しくインストールされているか、依存プログラムがインストールされているかをチェックしてくれる</li>
 </ul>
 
-<h2 id="記録">記録</h2>
+<h2 id="カスタマイズ方法">カスタマイズ方法</h2>
+
+<ol>
+<li><p><code>.doom.d</code> ディレクトリ内の以下のファイルを編集する。</p>
 
 <table>
 <thead>
 <tr>
-<th>日付</th>
-<th>走行距離[km]</th>
-<th>備考</th>
+<th>ファイル名</th>
+<th>役割</th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
-<td>2018-01-21</td>
-<td>?</td>
-<td></td>
+<td>init.el</td>
+<td>DOOM のコアが初期化された後、モジュールがロードされる前に実行される。ここで使用するモジュールを指定する</td>
 </tr>
 
 <tr>
-<td>2018-02-27</td>
-<td>?</td>
-<td>フィルターも交換 オイルをこぼして大変なことになった</td>
+<td>packages.el</td>
+<td>ここに追加でインストールするパッケージを書く</td>
 </tr>
 
 <tr>
-<td>2018-04-01</td>
-<td>?</td>
-<td></td>
+<td>config.el</td>
+<td>依存パッケージのロード後に実行される。ここにキーバインドやパッケージの設定を書く</td>
+</tr>
+</tbody>
+</table></li>
+
+<li><p><code>init.el</code>か<code>packages.el</code>を編集した場合、<code>doom refresh</code>を叩き、プラグインのインストール、不要なプラグインの削除と autoload ファイルの更新 を行う。</p>
+
+<pre><code class="language-sh">~/.emacs.d$ bin/doom refresh
+</code></pre></li>
+
+<li><p><code>SPC q r</code> で再起動</p></li>
+</ol>
+
+<h3 id="機能を有効にする">機能を有効にする</h3>
+
+<p>デフォルト状態では基本的な機能以外は無効になっている。</p>
+
+<p><code>init.el</code>を開き、コメントアウトを外し、<code>doom refresh</code>すると使えるようになる。モジュールによっては <code>(format +onsave)</code>にように、モジュール名を括弧で囲み、<code>+</code>でオプション名を付けるとオプション機能を有効にできる。</p>
+
+<p>機能の使い方、必要な外部プログラム、使えるオプションはモジュールの README やソースコードで調べられる。</p>
+
+<h3 id="キーバインドの追加">キーバインドの追加</h3>
+
+<h4 id="キーに関数をマップ">キーに関数をマップ</h4>
+
+<pre><code class="language-elisp">;(map! :&lt;モード&gt; &quot;&lt;キー&gt;&quot; &lt;キーが押されたとき実行する関数&gt;)
+;複数のキーを同時にマップできる
+(map! :nvi &quot;C-h&quot; #'evil-window-left ;#'&lt;関数名&gt;
+      :nvi &quot;C-j&quot; #'evil-window-down)
+</code></pre>
+
+<p>モードには以下の値が使える</p>
+
+<table>
+<thead>
+<tr>
+<th>文字</th>
+<th>対応するモード</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>n</td>
+<td>ノーマル</td>
 </tr>
 
 <tr>
-<td>2018-04-22</td>
-<td>20518?</td>
-<td>フィルターも交換</td>
+<td>v</td>
+<td>ビジュアル</td>
 </tr>
 
 <tr>
-<td>2018-05-26</td>
-<td>?</td>
-<td>ディーラーで</td>
+<td>i</td>
+<td>インサート</td>
 </tr>
 
 <tr>
-<td>2018-07-01</td>
-<td>24321</td>
-<td>フィルターも交換 タイヤローテーションも</td>
+<td>e</td>
+<td>emacs</td>
 </tr>
 
 <tr>
-<td>2018-08-11</td>
-<td>27074</td>
-<td></td>
+<td>o</td>
+<td>オペレータ</td>
 </tr>
 
 <tr>
-<td>2018-09-22</td>
-<td>29473</td>
-<td>フィルターも交換 タイヤローテーションも</td>
+<td>m</td>
+<td>モーション</td>
+</tr>
+
+<tr>
+<td>r</td>
+<td>replace</td>
+</tr>
+
+<tr>
+<td>g</td>
+<td>global</td>
 </tr>
 </tbody>
 </table>
+
+<h4 id="vim-の-map-と同等のことをする">vim の:map と同等のことをする</h4>
+
+<pre><code class="language-elisp">(map! :n &quot;C-;&quot; (kbd &quot;itest&quot;))
+</code></pre>
+
+<h2 id="カスタマイズ例">カスタマイズ例</h2>
+
+<p><a href="https://github.com/ngkz/doom.d">https://github.com/ngkz/doom.d</a></p>
+
+<h3 id="フォントの変更">フォントの変更</h3>
+
+<p><a href="https://github.com/hlissner/doom-emacs/tree/develop/modules/ui/doom#changing-fonts">https://github.com/hlissner/doom-emacs/tree/develop/modules/ui/doom#changing-fonts</a></p>
+
+<p><strong>config.el</strong> に以下のコードを追加</p>
+
+<pre><code class="language-elisp">(setq doom-font (font-spec :family &quot;NasuM&quot; :size 14)
+      doom-variable-pitch-font (font-spec :family &quot;Nasu&quot;)
+      doom-unicode-font (font-spec :family &quot;NasuM&quot;)
+      doom-big-font (font-spec :family &quot;NasuM&quot; :size 22))
+</code></pre>
+
+<h3 id="コメントを見やすくする">コメントを見やすくする</h3>
+
+<p><code>&lt;テーマ名&gt;-brighter-comments</code> を真にするとコメントの文字色と背景色が明るくなる。背景が白っぽいと見栄えが悪いので、<code>&lt;テーマ名&gt;-comment-bg</code>で戻す。テーマによっては使えないので注意 (<a href="https://github.com/hlissner/emacs-doom-themes">テーマのソースコード</a> 参照)</p>
+
+<p><strong>config.el</strong></p>
+
+<pre><code class="language-elisp">(setq doom-one-brighter-comments t)
+;; don't lighten the background of the comment
+(setq doom-one-comment-bg nil)
+</code></pre>
+
+<h3 id="保存時に自動フォーマット">保存時に自動フォーマット</h3>
+
+<p><strong>init.el</strong></p>
+
+<pre><code class="language-elisp">       :editor
+       (format +onsave)  ; automated prettiness
+</code></pre>
+
+<h3 id="デフォルトのコメント開始文字を-に設定">デフォルトのコメント開始文字を#に設定</h3>
+
+<p><strong>config.el</strong></p>
+
+<pre><code class="language-elisp">(setq-default comment-start &quot;# &quot;)
+</code></pre>
+
+<h3 id="行末の空白文字をハイライト">行末の空白文字をハイライト</h3>
+
+<p>terminal では無効にする</p>
+
+<p><strong>config.el</strong></p>
+
+<pre><code class="language-elisp">;; Highlight trailing whitespace
+(setq-default show-trailing-whitespace t)
+
+;; Disable trailing whitespace highlighting when in some modes
+;; https://qiita.com/tadsan/items/df73c711f921708facdc
+(defun my/disable-trailing-mode-hook ()
+  &quot;Disable show tail whitespace.&quot;
+  (setq show-trailing-whitespace nil))
+
+(defvar my/disable-trailing-modes
+  '(comint-mode
+    eshell-mode
+    eww-mode
+    term-mode
+    twittering-mode))
+
+(mapc
+ (lambda (mode)
+   (add-hook (intern (concat (symbol-name mode) &quot;-hook&quot;))
+             'my/disable-trailing-mode-hook))
+ my/disable-trailing-modes)
+</code></pre>
+
+<h3 id="タブ-全角スペース-ハードスペースを記号に変換して表示">タブ・全角スペース・ハードスペースを記号に変換して表示</h3>
+
+<p><code>␣</code>は曖昧幅なので、<code>␣</code>が半角になるフォントを使用している場合は、<code>□</code>などの全角文字に変更しないと表示がおかしくなる。</p>
+
+<p><strong>config.el</strong></p>
+
+<pre><code class="language-elisp">; highlight tab, hard space, and full-width space
+(require 'whitespace)
+(setq whitespace-style '(
+    face
+    tabs
+    spaces
+    space-mark
+    tab-mark
+))
+(setq whitespace-display-mappings '(
+    (space-mark ?\u3000 [?␣])       ;full-width space AMBIGUOUS WIDTH!
+    (space-mark ?\u00A0 [?\uFF65])   ;hard space
+    (tab-mark   ?\t     [?» ?\t])    ;tab
+))
+(setq whitespace-space-regexp &quot;\\([\u3000]+\\)&quot;) ; highlight only full-width space
+(global-whitespace-mode t)
+</code></pre>
+
+<h3 id="markdown-モードの-auto-fill-を切る">Markdown モードの auto-fill を切る</h3>
+
+<p>Markdown モードの Auto-Fill (行が長くなったら自動で改行を入れる機能) が鬱陶しいのでオフにする。</p>
+
+<p><strong>config.el</strong></p>
+
+<pre><code class="language-elisp">;turn off auto-fill
+(add-hook 'markdown-mode-hook (lambda () (auto-fill-mode -1)))
+</code></pre>
+
+<h3 id="画面端で行を折り返す-soft-wrap">画面端で行を折り返す (soft wrap)</h3>
+
+<p><strong>config.el</strong></p>
+
+<pre><code class="language-elisp">;soft wrapping
+(global-visual-line-mode t)
+</code></pre>
+
+<h3 id="ウィンドウをリサイズしやすくする">ウィンドウをリサイズしやすくする</h3>
+
+<p><a href="http://d.hatena.ne.jp/khiker/20100119/window_resize">Re: 分割したウィンドウの大きさをインタラクティヴに変更する</a> の改変</p>
+
+<p><code>Ctrl-W SPC</code> を押すと、HJKL でウィンドウのサイズが変更できるようになる。(HJKL で大まかに調整、Shift+HJKL で微調整)。他のキーを押すとノーマルモードに戻る。</p>
+
+<p><strong>config.el</strong></p>
+
+<pre><code class="language-elisp">;resize window quickly
+;http://d.hatena.ne.jp/khiker/20100119/window_resize
+(defun my-window-resizer ()
+  &quot;Control window size and position.&quot;
+  (interactive)
+  (let ((window-obj (selected-window))
+        (current-width (window-width))
+        (current-height (window-height))
+        (dx (if (= (nth 0 (window-edges)) 0) 1
+              -1))
+        (dy (if (= (nth 1 (window-edges)) 0) 1
+              -1))
+        action c)
+    (catch 'end-flag
+      (while t
+        (setq action
+              (read-key-sequence-vector (format &quot;size[%dx%d]&quot;
+                                                (window-width)
+                                                (window-height))))
+        (setq c (aref action 0))
+        (cond ((= c ?l)
+               (enlarge-window-horizontally (* dx 5)))
+              ((= c ?L)
+               (enlarge-window-horizontally dx))
+              ((= c ?h)
+               (shrink-window-horizontally (* dx 5)))
+              ((= c ?H)
+               (shrink-window-horizontally dx))
+              ((= c ?j)
+               (enlarge-window (* dy 2)))
+              ((= c ?J)
+               (enlarge-window dy))
+              ((= c ?k)
+               (shrink-window (* dy 2)))
+              ((= c ?K)
+               (shrink-window dy))
+              ;; otherwise
+              (t
+               (let ((last-command-char (aref action 0))
+                     (command (key-binding action)))
+                 (when command
+                   (call-interactively command)))
+               (message &quot;Quit&quot;)
+               (throw 'end-flag t)))))))
+
+(map! :map evil-window-map
+      &quot;SPC&quot; #'my-window-resizer) ; CTRL-w SPC or SPC w SPC
+</code></pre>
+
+<h3 id="ctrl-hjkl-でウィンドウを切り替え">Ctrl-hjkl でウィンドウを切り替え</h3>
+
+<p><strong>config.el</strong></p>
+
+<pre><code class="language-elisp">;; switch between window with C-hjkl
+(map! :nvi &quot;C-h&quot; #'evil-window-left
+      :nvi &quot;C-j&quot; #'evil-window-down
+      :nvi &quot;C-k&quot; #'evil-window-up
+      :nvi &quot;C-l&quot; #'evil-window-right)
+</code></pre>
+
+<h3 id="ctrl-shift-hjkl-でウィンドウを移動">Ctrl-Shift-hjkl でウィンドウを移動</h3>
+
+<p><strong>config.el</strong></p>
+
+<pre><code class="language-elisp">;; move the window with C-S-hjkl
+(map! :nvi &quot;C-S-h&quot; #'+evil/window-move-left
+      :nvi &quot;C-S-j&quot; #'+evil/window-move-down
+      :nvi &quot;C-S-k&quot; #'+evil/window-move-up
+      :nvi &quot;C-S-l&quot; #'+evil/window-move-right)
+</code></pre>
+
+<h3 id="画面の上下左右に余裕を持たせてスクロール-scrolloff-sidescrolloff">画面の上下左右に余裕を持たせてスクロール (scrolloff, sidescrolloff)</h3>
+
+<p><strong>config.el</strong></p>
+
+<pre><code class="language-elisp">;; minimal number of screen lines to keep above and below the cursor
+(setq-default scroll-margin 3)
+;; minimal number of screen columns to keep to the left and to the right of the cursor
+(setq-default hscroll-margin 5)
+</code></pre>
+
+<h3 id="x-で文字を削除するとき-yank-しない">x で文字を削除するとき yank しない</h3>
+
+<p><strong>config.el</strong></p>
+
+<pre><code class="language-elisp">;; delete character without yanking
+(map! :n &quot;x&quot; #'delete-char)
+</code></pre>
+
+<h3 id="テキストファイルを編集するとき-角括弧の内側に自動でスペースを挿入-削除しない">テキストファイルを編集するとき 角括弧の内側に自動でスペースを挿入・削除しない</h3>
+
+<p>角括弧でチェックボックスを作るときに鬱陶しいので</p>
+
+<p><strong>config.el</strong></p>
+
+<pre><code class="language-elisp">;; Don't do square-bracket space-expansion where it doesn't make sense to
+(after! smartparens-text
+  (sp-local-pair 'text-mode
+                 &quot;[&quot; nil :post-handlers '(:rem (&quot;| &quot; &quot;SPC&quot;))))
+</code></pre>
+
+<h3 id="インサートモードで-c-d-が使えるようにする">インサートモードで C-d が使えるようにする</h3>
+
+<p><strong>config.el</strong></p>
+
+<pre><code class="language-elisp">;; Make C-d usable in insert mode
+(map! :i &quot;C-d&quot; #'delete-char)
+</code></pre>
+
+<h3 id="org-mode-の-todo-アイテムの完了時刻を記録する">org-mode の TODO アイテムの完了時刻を記録する</h3>
+
+<p><strong>config.el</strong></p>
+
+<pre><code class="language-elisp">;; log when a certain todo item was finished
+(setq org-log-done t)
+</code></pre>
+
+<h3 id="org-mode-の日付の曜日を英語にする">org-mode の日付の曜日を英語にする</h3>
+
+<p><strong>config.el</strong></p>
+
+<pre><code class="language-elisp">; Make sure that the weekdays in the time stamps of your Org mode files and in the agenda appear in English.
+(setq system-time-locale &quot;C&quot;)
+</code></pre>
+
+<h3 id="端末を有効化">端末を有効化</h3>
+
+<p><code>SPC o t</code>, <code>SPC o T</code> で端末を開けるようにする</p>
+
+<p><strong>init.el</strong></p>
+
+<pre><code class="language-elisp">       term              ; terminals in Emacs
+</code></pre>
+
+<h2 id="ansible-サポートを有効化">ansible サポートを有効化</h2>
+
+<p><strong>init.el</strong></p>
+
+<pre><code class="language-elisp">       ansible
+</code></pre>
+
+<h2 id="docker-サポートを有効化">docker サポートを有効化</h2>
+
+<p>Docker の操作と Dockerfile の編集のサポートを有効にする</p>
+
+<p><strong>init.el</strong></p>
+
+<pre><code class="language-elisp">       docker
+</code></pre>
+
+<h2 id="magit-を有効化">magit を有効化</h2>
+
+<p>便利な git のフロントエンドを使えるようにする</p>
+
+<p><strong>init.el</strong></p>
+
+<pre><code class="language-elisp">       magit             ; a git porcelain for Emacs
+</code></pre>
+
+<h2 id="その他の言語のサポートを有効化">その他の言語のサポートを有効化</h2>
+
+<p>:lang セクションの使うやつをアンコメントしたりオプションをつけたりする</p>
+
+<p><strong>init.el</strong></p>
+
+<pre><code class="language-elisp">       :lang
+       assembly          ; assembly for fun or debugging
+       (cc +irony +rtags); C/C++/Obj-C madness
+       ;;clojure           ; java with a lisp
+       ;;common-lisp       ; if you've seen one lisp, you've seen them all
+       ;;coq               ; proofs-as-programs
+       ;;crystal           ; ruby at the speed of c
+       ;;csharp            ; unity, .NET, and mono shenanigans
+       data              ; config/data formats
+       ;;erlang            ; an elegant language for a more civilized age
+       ;;elixir            ; erlang done right
+       ;;elm               ; care for a cup of TEA?
+       emacs-lisp        ; drown in parentheses
+       ;;ess               ; emacs speaks statistics
+       go                ; the hipster dialect
+       ;;(haskell +intero) ; a language that's lazier than I am
+       ;;hy                ; readability of scheme w/ speed of python
+       ;;idris             ;
+       ;;(java +meghanada) ; the poster child for carpal tunnel syndrome
+       javascript        ; all(hope(abandon(ye(who(enter(here))))))
+       ;;julia             ; a better, faster MATLAB
+       ;;latex             ; writing papers in Emacs has never been so fun
+       ;;ledger            ; an accounting system in Emacs
+       ;;lua               ; one-based indices? one-based indices
+       markdown          ; writing docs for people to ignore
+       ;;nim               ; python + lisp at the speed of c
+       ;;nix               ; I hereby declare &quot;nix geht mehr!&quot;
+       ;;ocaml             ; an objective camel
+       (org              ; organize your plain life in plain text
+        +attach          ; custom attachment system
+        +babel           ; running code in org
+        +capture         ; org-capture in and outside of Emacs
+        +export          ; Exporting org to whatever you want
+        +present)        ; Emacs for presentations
+       ;;perl              ; write code no one else can comprehend
+       ;;php               ; perl's insecure younger brother
+       ;;plantuml          ; diagrams for confusing people more
+       ;;purescript        ; javascript, but functional
+       (python            ; beautiful is better than ugly
+        +pyenv
+        +pyvenv)
+       ;;qt                ; the 'cutest' gui framework ever
+       ;;racket            ; a DSL for DSLs
+       ;;rest              ; Emacs as a REST client
+       ruby              ; 1.step do {|i| p &quot;Ruby is #{i.even? ? 'love' : 'life'}&quot;}
+       rust              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
+       ;;scala             ; java, but good
+       (sh +fish)        ; she sells (ba|z|fi)sh shells on the C xor
+       ;;solidity          ; do you need a blockchain? No.
+       ;;swift             ; who asked for emoji variables?
+       web               ; the tubes
+       ;;vala              ; GObjective-C
+</code></pre>
               
             </div>
           </div>
@@ -423,7 +792,7 @@
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">タグ</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://ngkz.github.io/tags/%E6%95%B4%E5%82%99%E8%A8%98%E9%8C%B2/">整備記録</a>
+  <a class="tag tag--primary tag--small" href="https://ngkz.github.io/tags/emacs/">Emacs</a>
 
                   </div>
                 
@@ -436,7 +805,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2018/07/audit-cargo-crate/" data-tooltip="依存しているパッケージ(crate)の中身を実行せずに調べる方法 (Rust)">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">次</span>
@@ -444,7 +813,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2018/05/bonebar/" data-tooltip="自作ボーンバー">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2018/09/change-differential-oil/" data-tooltip="デフオイルを交換した">
               
                   <span class="hide-xs hide-sm text-small icon-mr">前</span>
                   <i class="fa fa-angle-right"></i>
@@ -462,19 +831,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2018/07/oil-change/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2018/10/doom-emacs-develop-setup/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2018/07/oil-change/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2018/10/doom-emacs-develop-setup/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2018/07/oil-change/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2018/10/doom-emacs-develop-setup/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -522,7 +891,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2018/07/audit-cargo-crate/" data-tooltip="依存しているパッケージ(crate)の中身を実行せずに調べる方法 (Rust)">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">次</span>
@@ -530,7 +899,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2018/05/bonebar/" data-tooltip="自作ボーンバー">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2018/09/change-differential-oil/" data-tooltip="デフオイルを交換した">
               
                   <span class="hide-xs hide-sm text-small icon-mr">前</span>
                   <i class="fa fa-angle-right"></i>
@@ -548,19 +917,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2018/07/oil-change/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2018/10/doom-emacs-develop-setup/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2018/07/oil-change/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2018/10/doom-emacs-develop-setup/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2018/07/oil-change/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2018/10/doom-emacs-develop-setup/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -590,19 +959,19 @@
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fngkz.github.io%2F2018%2F07%2Foil-change%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fngkz.github.io%2F2018%2F10%2Fdoom-emacs-develop-setup%2F">
           <i class="fa fa-facebook-official"></i><span>Facebookで共有</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fngkz.github.io%2F2018%2F07%2Foil-change%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fngkz.github.io%2F2018%2F10%2Fdoom-emacs-develop-setup%2F">
           <i class="fa fa-twitter"></i><span>Twitterで共有</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fngkz.github.io%2F2018%2F07%2Foil-change%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fngkz.github.io%2F2018%2F10%2Fdoom-emacs-develop-setup%2F">
           <i class="fa fa-google-plus"></i><span>Google&#43;で共有</span>
         </a>
       </li>
@@ -1069,9 +1438,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/ngkz.github.io\/2018\/07\/oil-change\/';
+          this.page.url = 'https:\/\/ngkz.github.io\/2018\/10\/doom-emacs-develop-setup\/';
           
-            this.page.identifier = '\/2018\/07\/oil-change\/'
+            this.page.identifier = '\/2018\/10\/doom-emacs-develop-setup\/'
           
         };
         (function() {

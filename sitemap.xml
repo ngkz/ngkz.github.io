@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://ngkz.github.io/2018/10/doom-emacs-develop-setup/</loc>
+    <lastmod>2018-10-20T10:50:27+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ngkz.github.io/2018/09/change-differential-oil/</loc>
     <lastmod>2018-09-30T20:19:53+09:00</lastmod>
   </url>
@@ -111,8 +116,14 @@
   </url>
   
   <url>
+    <loc>https://ngkz.github.io/tags/emacs/</loc>
+    <lastmod>2018-10-20T10:50:27+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://ngkz.github.io/categories/howto/</loc>
-    <lastmod>2018-08-01T17:37:33+09:00</lastmod>
+    <lastmod>2018-10-20T10:50:27+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -123,7 +134,7 @@
   
   <url>
     <loc>https://ngkz.github.io/post/</loc>
-    <lastmod>2018-09-30T20:19:53+09:00</lastmod>
+    <lastmod>2018-10-20T10:50:27+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -163,7 +174,7 @@
   
   <url>
     <loc>https://ngkz.github.io/</loc>
-    <lastmod>2018-09-30T20:19:53+09:00</lastmod>
+    <lastmod>2018-10-20T10:50:27+09:00</lastmod>
     <priority>0</priority>
   </url>
   
