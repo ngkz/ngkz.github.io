@@ -18,7 +18,7 @@ defaultContentLanguage = "ja"
 title = "ngkz.log"
 theme = "tranquilpeak"
 disqusShortname = "ngkz-log"
-googleAnalytics = "UA-106134104-1"
+#googleAnalytics = "UA-106134104-1"
 paginate = 7
 canonifyurls = true
 
