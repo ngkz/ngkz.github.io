@@ -1,141 +1,184 @@
-
-
-  
-    
-  
-
-
-  
-
-
-
-
-
-  
-
 <!DOCTYPE html>
 <html lang="ja">
   <head>
     
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="Hugo 0.42.2 with theme Tranquilpeak 0.4.3-BETA">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.50 with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="author" content="Kazutoshi Noguchi">
+<meta name="keywords" content="">
+<meta name="description" content="0x0として参加しました。
+予選2位通過
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+
+  
+    
+  
+    
+  
+    
+  
+   
+    問題一覧
+  
+
+
+※上のスクリーンショットを撮った後に@nolzeがPrint it!を解いている
+
+">
+
+
+<meta property="og:description" content="0x0として参加しました。
+予選2位通過
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+
+  
+    
+  
+    
+  
+    
+  
+   
+    問題一覧
+  
+
+
+※上のスクリーンショットを撮った後に@nolzeがPrint it!を解いている
+
+">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SECCON 2014 オンライン予選 (日本語) writeup">
+<meta name="twitter:title" content="SECCON 2014 オンライン予選 (日本語) writeup">
+<meta property="og:url" content="https://ngkz.github.io/2014/07/seccon-2014-online-japanese-quals-writeup/">
+<meta property="twitter:url" content="https://ngkz.github.io/2014/07/seccon-2014-online-japanese-quals-writeup/">
+<meta property="og:site_name" content="ngkz.log">
+<meta property="og:description" content="0x0として参加しました。
+予選2位通過
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+
+  
+    
+  
+    
+  
+    
+  
+   
+    問題一覧
+  
+
+
+※上のスクリーンショットを撮った後に@nolzeがPrint it!を解いている
+
+">
+<meta name="twitter:description" content="0x0として参加しました。
+予選2位通過
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+
+
+  
+    
+  
+    
+  
+    
+  
+   
+    問題一覧
+  
+
+
+※上のスクリーンショットを撮った後に@nolzeがPrint it!を解いている
+
+">
+<meta property="og:locale" content="ja">
+
+  
+    <meta property="article:published_time" content="2014-07-23T19:57:23">
+  
+  
+    <meta property="article:modified_time" content="2014-07-23T19:57:23">
+  
+  
+  
+    
+      <meta property="article:section" content="CTF">
+    
+      <meta property="article:section" content="writeup">
+    
+  
+  
+    
+      <meta property="article:tag" content="SECCON">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://ngkz.github.io/mypicture.jpg">
+  <meta property="twitter:image" content="https://ngkz.github.io/mypicture.jpg">
+
+
     <title>SECCON 2014 オンライン予選 (日本語) writeup</title>
-    <meta name="author" content="Kazutoshi Noguchi">
-    <meta name="keywords" content="">
 
     <link rel="icon" href="https://ngkz.github.io/favicon.png">
     
 
     
-    <meta name="description" content="0x0として参加しました。
-予選2位通過
 
-
-
- 
-  
-  
-  
-  
-    
-  
-
-
-  
-    
-  
-    
-  
-    
-  
-   
-    問題一覧
-  
-
-
-※上のスクリーンショットを撮った後に@nolzeがPrint it!を解いている
-
-">
-    <meta property="og:description" content="0x0として参加しました。
-予選2位通過
-
-
-
- 
-  
-  
-  
-  
-    
-  
-
-
-  
-    
-  
-    
-  
-    
-  
-   
-    問題一覧
-  
-
-
-※上のスクリーンショットを撮った後に@nolzeがPrint it!を解いている
-
-">
-    <meta property="og:type" content="blog">
-    <meta property="og:title" content="SECCON 2014 オンライン予選 (日本語) writeup">
-    <meta property="og:url" content="/2014/07/seccon-2014-online-japanese-quals-writeup/">
-    <meta property="og:site_name" content="ngkz.log">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="ngkz.log">
-    <meta name="twitter:description" content="0x0として参加しました。
-予選2位通過
-
-
-
- 
-  
-  
-  
-  
-    
-  
-
-
-  
-    
-  
-    
-  
-    
-  
-   
-    問題一覧
-  
-
-
-※上のスクリーンショットを撮った後に@nolzeがPrint it!を解いている
-
-">
-    
-    
-
-    
-    
-
-    
-      <meta property="og:image" content="https://ngkz.github.io/mypicture.jpg">
-    
-
-    
-    
-    
-
-    
+    <link rel="canonical" href="https://ngkz.github.io/2014/07/seccon-2014-online-japanese-quals-writeup/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -143,7 +186,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
     
     
-    <link rel="stylesheet" href="https://ngkz.github.io/css/style-jsjn0006wyhpyzivf6yceb31gvpjatbcs3qzjvlumobfnugccvobqwxnnaj8.min.css" />
+    <link rel="stylesheet" href="https://ngkz.github.io/css/style-nnm2spxvve8onlujjlegkkytaehyadd4ksxc1hyzzq9a2wvtrgbljqyulomn.min.css" />
     
     
 
@@ -592,8 +635,8 @@ EJMk6��tory850}��������������������
                 
               
             
-            
-  <div class="post-actions-wrap">
+            <div class="post-actions-wrap">
+  
       <nav >
         <ul class="post-actions post-action-nav">
           
@@ -658,8 +701,8 @@ EJMk6��tory850}��������������������
         </a>
       </li>
     </ul>
-  </div>
-
+  
+</div>
 
             
               
@@ -678,8 +721,8 @@ EJMk6��tory850}��������������������
 
       </div>
       <div id="bottom-bar" class="post-bottom-bar" data-behavior="1">
-        
-  <div class="post-actions-wrap">
+        <div class="post-actions-wrap">
+  
       <nav >
         <ul class="post-actions post-action-nav">
           
@@ -744,8 +787,8 @@ EJMk6��tory850}��������������������
         </a>
       </li>
     </ul>
-  </div>
-
+  
+</div>
 
       </div>
       <div id="share-options-bar" class="share-options-bar" data-behavior="1">
@@ -822,6 +865,26 @@ EJMk6��tory850}��������������������
       <div class="no-result text-color-light text-center"></div>
       <div class="results">
         
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2018/11/wake-1yr-maintenance/">
+                <h3 class="media-heading">ウェイク12ヶ月点検</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Nov 11, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">走行距離 32587km
+整備パックで法定12ヶ月点検・オイル交換・オイルフィルター交換・ワイパーゴム交換
+¥4002 (部品 ¥3564 + 工賃 ¥648 - 値引き ¥210) でエアコンフィルターの交換もしてもらった。
+エアコンフィルターは簡単に交換できるようなので、次からは自分でやることにする。</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
         
           <div class="media">
             
@@ -1135,55 +1198,6 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
             <hr>
           </div>
         
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://ngkz.github.io/2014/01/seccon-2013-online-quals-writeup/">
-                <h3 class="media-heading">SECCON 2013 オンライン予選 writeup</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jan 1, 2014
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>SECCON オンライン予選にチーム0x0のメンバーとして参加しました。</p>
-
-<p>3700点で7位でした。</p>
-
-<p>bin500に時間をかけ過ぎた結果、練習問題とbin200しか解けなかった。</p>
-
-<p>バイナリ問題以外も見ておけばよかった</p>
-
-
-
- 
-  
-  
-  
-  
-    
-  
-
-<div class="figure " >
-  
-    <a class="fancybox" href="https://ngkz.github.io/assets/seccon-2013-online-quals-writeup/90b303d7e1e753a918811d598aa91f83.png" title="スコアの推移" data-fancybox-group="">
-  
-    <img class="fig-img" src="https://ngkz.github.io/assets/seccon-2013-online-quals-writeup/90b303d7e1e753a918811d598aa91f83.png"  alt="スコアの推移">
-  
-    </a>
-  
-   
-    <span class="caption">スコアの推移</span>
-  
-</div>
-
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
       </div>
     </div>
     <div class="modal-footer">
@@ -1191,7 +1205,7 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
          data-message-zero=""
          data-message-one=""
          data-message-other="">
-         17 posts found
+         18 posts found
       </p>
     </div>
   </div>
@@ -1214,6 +1228,20 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
 <script src="https://ngkz.github.io/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
 
 
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
 
 <script>
 $(document).ready(function() {
@@ -1253,6 +1281,7 @@ $(document).ready(function() {
       </script>
     
   
+
 
 
 

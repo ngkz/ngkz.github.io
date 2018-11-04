@@ -1,24 +1,45 @@
-
-
-
-  
-
-
-
-
-
-  
-
 <!DOCTYPE html>
 <html lang="ja">
   <head>
     
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="Hugo 0.42.2 with theme Tranquilpeak 0.4.3-BETA">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.50 with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="author" content="Kazutoshi Noguchi">
+<meta name="keywords" content="">
+<meta name="description" content="Kazutoshi Noguchi&#39;s blog">
+
+
+<meta property="og:description" content="Kazutoshi Noguchi&#39;s blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Howto">
+<meta name="twitter:title" content="Howto">
+<meta property="og:url" content="https://ngkz.github.io/categories/howto/">
+<meta property="twitter:url" content="https://ngkz.github.io/categories/howto/">
+<meta property="og:site_name" content="ngkz.log">
+<meta property="og:description" content="Kazutoshi Noguchi&#39;s blog">
+<meta name="twitter:description" content="Kazutoshi Noguchi&#39;s blog">
+<meta property="og:locale" content="ja">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://ngkz.github.io/mypicture.jpg">
+  <meta property="twitter:image" content="https://ngkz.github.io/mypicture.jpg">
+
+
     <title>Howto</title>
-    <meta name="author" content="Kazutoshi Noguchi">
-    <meta name="keywords" content="">
 
     <link rel="icon" href="https://ngkz.github.io/favicon.png">
     
@@ -26,30 +47,8 @@
     
 
     
-    <meta name="description" content="Kazutoshi Noguchi&#39;s blog">
-    <meta property="og:description" content="Kazutoshi Noguchi&#39;s blog">
-    <meta property="og:type" content="blog">
-    <meta property="og:title" content="Howto">
-    <meta property="og:url" content="/categories/howto/">
-    <meta property="og:site_name" content="ngkz.log">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="ngkz.log">
-    <meta name="twitter:description" content="Kazutoshi Noguchi&#39;s blog">
-    
-    
 
-    
-    
-
-    
-      <meta property="og:image" content="https://ngkz.github.io/mypicture.jpg">
-    
-
-    
-    
-    
-
-    
+    <link rel="canonical" href="https://ngkz.github.io/categories/howto/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -57,7 +56,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
     
     
-    <link rel="stylesheet" href="https://ngkz.github.io/css/style-jsjn0006wyhpyzivf6yceb31gvpjatbcs3qzjvlumobfnugccvobqwxnnaj8.min.css" />
+    <link rel="stylesheet" href="https://ngkz.github.io/css/style-nnm2spxvve8onlujjlegkkytaehyadd4ksxc1hyzzq9a2wvtrgbljqyulomn.min.css" />
     
     
 
@@ -247,7 +246,8 @@
 
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
-      <h2 id="動機">動機</h2>
+      
+        <h2 id="動機">動機</h2>
 
 <ol>
 <li>収録ソフトウェアがかなり古くなってきている Ubuntu 14.04 から Linux From Scratch に移行しよう</li>
@@ -261,6 +261,7 @@
 </ol>
 
 <p></p>
+      
       <p>
         <a href="https://ngkz.github.io/2018/10/doom-emacs-develop-setup/" class="postShorten-excerpt_link link">続きを読む</a>
         
@@ -319,9 +320,11 @@
 
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://github.com/rust-lang/cargo/issues/1924">https://github.com/rust-lang/cargo/issues/1924</a> によると、<code>cargo test --no-run --message-format=json | jq -r &quot;select(.profile.test == true) | .filenames[]&quot;</code> でテストバイナリの一覧が取得できる。これをsudoで実行するスクリプトを作ればOK</p>
+      
+        <p><a href="https://github.com/rust-lang/cargo/issues/1924">https://github.com/rust-lang/cargo/issues/1924</a> によると、<code>cargo test --no-run --message-format=json | jq -r &quot;select(.profile.test == true) | .filenames[]&quot;</code> でテストバイナリの一覧が取得できる。これをsudoで実行するスクリプトを作ればOK</p>
 
 <p></p>
+      
       <p>
         <a href="https://ngkz.github.io/2018/08/cargo-run-test-with-sudo/" class="postShorten-excerpt_link link">続きを読む</a>
         
@@ -380,9 +383,11 @@
 
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
-      cargo fetch1 でパッケージを取得すると、~/.cargo/registry/src/github.com-1ecc6299db9ec823/(パッケージ名)-(バージョン) にパッケージのソースコードが展開される。
+      
+        cargo fetch1 でパッケージを取得すると、~/.cargo/registry/src/github.com-1ecc6299db9ec823/(パッケージ名)-(バージョン) にパッケージのソースコードが展開される。
 Cargo.lockにすべての依存クレートの名前とバージョンが記録されているので、これを見てコードに問題がないか調べることができる。
  cargo buildはビルドスクリプトを実行してしまうのでダメ [return]   
+      
       <p>
         <a href="https://ngkz.github.io/2018/07/audit-cargo-crate/" class="postShorten-excerpt_link link">続きを読む</a>
         
@@ -441,7 +446,8 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
 
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
-      <h2 id="リカバリモードに入ってファクトリーリセットする">リカバリモードに入ってファクトリーリセットする</h2>
+      
+        <h2 id="リカバリモードに入ってファクトリーリセットする">リカバリモードに入ってファクトリーリセットする</h2>
 
 <p>galaxy S3 リカバリモードの入り方:</p>
 
@@ -450,6 +456,7 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
 <h2 id="バックアップを展開">バックアップを展開</h2>
 
 <p></p>
+      
       <p>
         <a href="https://ngkz.github.io/2013/09/galaxys3-adb-restore-fail/" class="postShorten-excerpt_link link">続きを読む</a>
         
@@ -508,12 +515,14 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
 
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
-      <p>Ubuntu 12.10-14.04で確認済み</p>
+      
+        <p>Ubuntu 12.10-14.04で確認済み</p>
 
 <pre><code>echo &quot;keepassx=1&quot; &gt;&gt; /etc/xdg/sni-qt.conf
 </code></pre>
 
 <p></p>
+      
       <p>
         <a href="https://ngkz.github.io/2013/03/howto-reactivate-keepassx/" class="postShorten-excerpt_link link">続きを読む</a>
         
@@ -584,6 +593,26 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
       <div class="no-result text-color-light text-center"></div>
       <div class="results">
         
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2018/11/wake-1yr-maintenance/">
+                <h3 class="media-heading">ウェイク12ヶ月点検</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Nov 11, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">走行距離 32587km
+整備パックで法定12ヶ月点検・オイル交換・オイルフィルター交換・ワイパーゴム交換
+¥4002 (部品 ¥3564 + 工賃 ¥648 - 値引き ¥210) でエアコンフィルターの交換もしてもらった。
+エアコンフィルターは簡単に交換できるようなので、次からは自分でやることにする。</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
         
           <div class="media">
             
@@ -897,55 +926,6 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
             <hr>
           </div>
         
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://ngkz.github.io/2014/01/seccon-2013-online-quals-writeup/">
-                <h3 class="media-heading">SECCON 2013 オンライン予選 writeup</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jan 1, 2014
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>SECCON オンライン予選にチーム0x0のメンバーとして参加しました。</p>
-
-<p>3700点で7位でした。</p>
-
-<p>bin500に時間をかけ過ぎた結果、練習問題とbin200しか解けなかった。</p>
-
-<p>バイナリ問題以外も見ておけばよかった</p>
-
-
-
- 
-  
-  
-  
-  
-    
-  
-
-<div class="figure " >
-  
-    <a class="fancybox" href="https://ngkz.github.io/assets/seccon-2013-online-quals-writeup/90b303d7e1e753a918811d598aa91f83.png" title="スコアの推移" data-fancybox-group="">
-  
-    <img class="fig-img" src="https://ngkz.github.io/assets/seccon-2013-online-quals-writeup/90b303d7e1e753a918811d598aa91f83.png"  alt="スコアの推移">
-  
-    </a>
-  
-   
-    <span class="caption">スコアの推移</span>
-  
-</div>
-
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
       </div>
     </div>
     <div class="modal-footer">
@@ -953,7 +933,7 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
          data-message-zero=""
          data-message-one=""
          data-message-other="">
-         17 posts found
+         18 posts found
       </p>
     </div>
   </div>
@@ -976,6 +956,20 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
 <script src="https://ngkz.github.io/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
 
 
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
 
 <script>
 $(document).ready(function() {
@@ -988,6 +982,7 @@ $(document).ready(function() {
   });
 });
 </script>
+
 
 
 

@@ -6,10 +6,22 @@
     <description>Recent content on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 20 Oct 2018 10:50:27 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 04 Nov 2018 16:35:49 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ウェイク12ヶ月点検</title>
+      <link>https://ngkz.github.io/2018/11/wake-1yr-maintenance/</link>
+      <pubDate>Sun, 04 Nov 2018 16:35:49 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2018/11/wake-1yr-maintenance/</guid>
+      <description>走行距離 32587km
+整備パックで法定12ヶ月点検・オイル交換・オイルフィルター交換・ワイパーゴム交換
+¥4002 (部品 ¥3564 + 工賃 ¥648 - 値引き ¥210) でエアコンフィルターの交換もしてもらった。
+エアコンフィルターは簡単に交換できるようなので、次からは自分でやることにする。</description>
+    </item>
     
     <item>
       <title>DOOM Emacsの導入方法 &amp; 設定例</title>
