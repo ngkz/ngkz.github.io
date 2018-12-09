@@ -6,10 +6,44 @@
     <description>Recent content on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 04 Nov 2018 16:35:49 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 09 Dec 2018 11:57:12 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>オイル交換メモ</title>
+      <link>https://ngkz.github.io/2018/12/oil-change/</link>
+      <pubDate>Sun, 09 Dec 2018 11:57:12 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2018/12/oil-change/</guid>
+      <description>&lt;h2 id=&#34;必要な物&#34;&gt;必要な物&lt;/h2&gt;
+
+&lt;p&gt;たまに忘れるので&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;オイル (消耗品)&lt;/li&gt;
+&lt;li&gt;オイル処理箱 (消耗品)&lt;/li&gt;
+&lt;li&gt;オイルフィルター (フィルター交換の場合, 消耗品)&lt;/li&gt;
+&lt;li&gt;ウエス (消耗品)&lt;/li&gt;
+&lt;li&gt;パーツクリーナー (消耗品)&lt;/li&gt;
+&lt;li&gt;ドレンパッキン (消耗品)&lt;/li&gt;
+&lt;li&gt;手袋 (消耗品)&lt;/li&gt;
+&lt;li&gt;ゴミ袋 (消耗品)&lt;/li&gt;
+&lt;li&gt;スロープ&lt;/li&gt;
+&lt;li&gt;新聞紙&lt;/li&gt;
+&lt;li&gt;メガネレンチ&lt;/li&gt;
+&lt;li&gt;オイルジョッキ&lt;/li&gt;
+&lt;li&gt;オイルフィルターレンチ (フィルター交換の場合)&lt;/li&gt;
+&lt;li&gt;エクステンションバー (フィルター交換の場合)&lt;/li&gt;
+&lt;li&gt;ラチェットハンドル (フィルター交換の場合)&lt;/li&gt;
+&lt;li&gt;ウマ (タイヤローテーションもする場合)&lt;/li&gt;
+&lt;li&gt;ジャッキ (タイヤローテーションもする場合)&lt;/li&gt;
+&lt;li&gt;トルクレンチ (タイヤローテーションもする場合)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>ウェイク12ヶ月点検</title>
@@ -74,40 +108,6 @@
       <description>cargo fetch1 でパッケージを取得すると、~/.cargo/registry/src/github.com-1ecc6299db9ec823/(パッケージ名)-(バージョン) にパッケージのソースコードが展開される。
 Cargo.lockにすべての依存クレートの名前とバージョンが記録されているので、これを見てコードに問題がないか調べることができる。
  cargo buildはビルドスクリプトを実行してしまうのでダメ [return]   </description>
-    </item>
-    
-    <item>
-      <title>オイル交換メモ</title>
-      <link>https://ngkz.github.io/2018/07/oil-change/</link>
-      <pubDate>Sun, 01 Jul 2018 11:57:18 +0900</pubDate>
-      
-      <guid>https://ngkz.github.io/2018/07/oil-change/</guid>
-      <description>&lt;h2 id=&#34;必要な物&#34;&gt;必要な物&lt;/h2&gt;
-
-&lt;p&gt;たまに忘れるので&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;オイル (消耗品)&lt;/li&gt;
-&lt;li&gt;オイル処理箱 (消耗品)&lt;/li&gt;
-&lt;li&gt;オイルフィルター (フィルター交換の場合, 消耗品)&lt;/li&gt;
-&lt;li&gt;ウエス (消耗品)&lt;/li&gt;
-&lt;li&gt;パーツクリーナー (消耗品)&lt;/li&gt;
-&lt;li&gt;ドレンパッキン (消耗品)&lt;/li&gt;
-&lt;li&gt;手袋 (消耗品)&lt;/li&gt;
-&lt;li&gt;ゴミ袋 (消耗品)&lt;/li&gt;
-&lt;li&gt;スロープ&lt;/li&gt;
-&lt;li&gt;新聞紙&lt;/li&gt;
-&lt;li&gt;メガネレンチ&lt;/li&gt;
-&lt;li&gt;オイルジョッキ&lt;/li&gt;
-&lt;li&gt;オイルフィルターレンチ (フィルター交換の場合)&lt;/li&gt;
-&lt;li&gt;エクステンションバー (フィルター交換の場合)&lt;/li&gt;
-&lt;li&gt;ラチェットハンドル (フィルター交換の場合)&lt;/li&gt;
-&lt;li&gt;ウマ (タイヤローテーションもする場合)&lt;/li&gt;
-&lt;li&gt;ジャッキ (タイヤローテーションもする場合)&lt;/li&gt;
-&lt;li&gt;トルクレンチ (タイヤローテーションもする場合)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
