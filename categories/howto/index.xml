@@ -6,10 +6,34 @@
     <description>Recent content in Howto on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 20 Oct 2018 10:50:27 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 06 Jan 2019 17:19:12 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/categories/howto/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>EDIDが壊れて認識しないモニターの修理</title>
+      <link>https://ngkz.github.io/2019/01/edid-repair/</link>
+      <pubDate>Sun, 06 Jan 2019 17:19:12 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/01/edid-repair/</guid>
+      <description>&lt;p&gt;Acer H243HをDVIで接続すると認識しない。VGA接続とHDMI接続では正常に動作するが、DVIで接続するとsyslogに以下のエラーが出る。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Jan  5 23:48:32 haramaki kernel: [97894.621687] amdgpu 0000:01:00.0: DVI-D-1: EDID is invalid:
+Jan  5 23:48:32 haramaki kernel: [97894.621694]         [00] BAD  00 ff ff ff ff ff ff 00 ff ff ff ff ff ff ff ff
+Jan  5 23:48:32 haramaki kernel: [97894.621696]         [00] BAD  2b 13 01 03 80 35 1d 78 ea 60 85 a6 56 4a 9c 25
+Jan  5 23:48:32 haramaki kernel: [97894.621697]         [00] BAD  12 50 54 af cf 00 81 80 71 4f 95 00 95 0f a9 40
+Jan  5 23:48:32 haramaki kernel: [97894.621698]         [00] BAD  b3 00 01 01 01 01 1a 36 80 a0 70 38 1f 40 30 20
+Jan  5 23:48:32 haramaki kernel: [97894.621699]         [00] BAD  35 00 13 2a 21 00 00 1a 00 00 00 fc 00 48 32 34
+Jan  5 23:48:32 haramaki kernel: [97894.621700]         [00] BAD  33 48 0a 20 20 20 20 20 20 20 00 00 00 fd 00 38
+Jan  5 23:48:32 haramaki kernel: [97894.621701]         [00] BAD  4c 1f 53 12 00 0a 20 20 20 20 20 20 00 00 00 ff
+Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30 43 30 31 34 34 30 31 31 0a 00 33
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;どうやらEDIDが壊れているようだ。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>DOOM Emacsの導入方法 &amp; 設定例</title>

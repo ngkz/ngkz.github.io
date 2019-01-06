@@ -123,6 +123,38 @@
           <div class="media">
             
             <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2019/01/edid-repair/">
+                <h3 class="media-heading">EDIDが壊れて認識しないモニターの修理</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Acer H243HをDVIで接続すると認識しない。VGA接続とHDMI接続では正常に動作するが、DVIで接続するとsyslogに以下のエラーが出る。</p>
+
+<pre><code>Jan  5 23:48:32 haramaki kernel: [97894.621687] amdgpu 0000:01:00.0: DVI-D-1: EDID is invalid:
+Jan  5 23:48:32 haramaki kernel: [97894.621694]         [00] BAD  00 ff ff ff ff ff ff 00 ff ff ff ff ff ff ff ff
+Jan  5 23:48:32 haramaki kernel: [97894.621696]         [00] BAD  2b 13 01 03 80 35 1d 78 ea 60 85 a6 56 4a 9c 25
+Jan  5 23:48:32 haramaki kernel: [97894.621697]         [00] BAD  12 50 54 af cf 00 81 80 71 4f 95 00 95 0f a9 40
+Jan  5 23:48:32 haramaki kernel: [97894.621698]         [00] BAD  b3 00 01 01 01 01 1a 36 80 a0 70 38 1f 40 30 20
+Jan  5 23:48:32 haramaki kernel: [97894.621699]         [00] BAD  35 00 13 2a 21 00 00 1a 00 00 00 fc 00 48 32 34
+Jan  5 23:48:32 haramaki kernel: [97894.621700]         [00] BAD  33 48 0a 20 20 20 20 20 20 20 00 00 00 fd 00 38
+Jan  5 23:48:32 haramaki kernel: [97894.621701]         [00] BAD  4c 1f 53 12 00 0a 20 20 20 20 20 20 00 00 00 ff
+Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30 43 30 31 34 34 30 31 31 0a 00 33
+</code></pre>
+
+<p>どうやらEDIDが壊れているようだ。</p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
               <a class="link-unstyled" href="https://ngkz.github.io/2018/12/wake-windshield-washer-tank-repair/">
                 <h3 class="media-heading">ウェイクのウィンドウウォッシャータンクの漏れを修理する</h3>
               </a>
@@ -338,39 +370,6 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
             <hr>
           </div>
         
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://ngkz.github.io/2017/12/wake-luggage-room-hook/">
-                <h3 class="media-heading">ウェイク ラゲッジフック自作</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Dec 12, 2017
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><div class="figure center" >
-  
-    <a class="fancybox" href="https://ngkz.github.io/assets/wake-luggage-room-hook/hook.jpg" title="ラゲッジフック" data-fancybox-group="">
-  
-    <img class="fig-img" src="https://ngkz.github.io/assets/wake-luggage-room-hook/hook.jpg" style="width: 33%;" alt="ラゲッジフック">
-  
-    </a>
-  
-   
-    <span class="caption">ラゲッジフック</span>
-  
-</div>
-
-
-<p>リアゲートを開けたときに荷物が落ちるので、荷物ベルトを通すフックをつけてみた</p>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
       </div>
     </div>
     <div class="modal-footer">
@@ -378,7 +377,7 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
          data-message-zero=""
          data-message-one=""
          data-message-other="">
-         20 posts found
+         21 posts found
       </p>
     </div>
   </div>
