@@ -8,19 +8,65 @@
 <meta name="generator" content="Hugo 0.42.2 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
-<meta name="description" content="Kazutoshi Noguchi&#39;s blog">
+<meta name="description" content="AFWall&#43;を有効にしていると、Bluetoothテザリングで接続したクライアントが通信できなくなるのをなんとかする。
+
+原因
+
+ログと検索エンジンで調べたところ、AFWall&#43;がBluetoothテザリングに対応していないため、クライアントにDHCPとDNS Proxyを提供しているdnsmasqからのDNS通信がブロックされてしまっていることが分かった。
+
+解決策1: DNSを手動設定する
+
+">
 
 
-<meta property="og:description" content="Kazutoshi Noguchi&#39;s blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tkbctf">
-<meta name="twitter:title" content="Tkbctf">
-<meta property="og:url" content="https://ngkz.github.io/tags/tkbctf/">
-<meta property="twitter:url" content="https://ngkz.github.io/tags/tkbctf/">
+<meta property="og:description" content="AFWall&#43;を有効にしていると、Bluetoothテザリングで接続したクライアントが通信できなくなるのをなんとかする。
+
+原因
+
+ログと検索エンジンで調べたところ、AFWall&#43;がBluetoothテザリングに対応していないため、クライアントにDHCPとDNS Proxyを提供しているdnsmasqからのDNS通信がブロックされてしまっていることが分かった。
+
+解決策1: DNSを手動設定する
+
+">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AFWall&#43; を有効にするとBluetoothテザリングで通信できなくなるのをなおす">
+<meta name="twitter:title" content="AFWall&#43; を有効にするとBluetoothテザリングで通信できなくなるのをなおす">
+<meta property="og:url" content="https://ngkz.github.io/2019/01/afwall-bt-tethering/">
+<meta property="twitter:url" content="https://ngkz.github.io/2019/01/afwall-bt-tethering/">
 <meta property="og:site_name" content="ngkz.log">
-<meta property="og:description" content="Kazutoshi Noguchi&#39;s blog">
-<meta name="twitter:description" content="Kazutoshi Noguchi&#39;s blog">
+<meta property="og:description" content="AFWall&#43;を有効にしていると、Bluetoothテザリングで接続したクライアントが通信できなくなるのをなんとかする。
+
+原因
+
+ログと検索エンジンで調べたところ、AFWall&#43;がBluetoothテザリングに対応していないため、クライアントにDHCPとDNS Proxyを提供しているdnsmasqからのDNS通信がブロックされてしまっていることが分かった。
+
+解決策1: DNSを手動設定する
+
+">
+<meta name="twitter:description" content="AFWall&#43;を有効にしていると、Bluetoothテザリングで接続したクライアントが通信できなくなるのをなんとかする。
+
+原因
+
+ログと検索エンジンで調べたところ、AFWall&#43;がBluetoothテザリングに対応していないため、クライアントにDHCPとDNS Proxyを提供しているdnsmasqからのDNS通信がブロックされてしまっていることが分かった。
+
+解決策1: DNSを手動設定する
+
+">
 <meta property="og:locale" content="ja">
+
+  
+    <meta property="article:published_time" content="2019-01-13T20:20:09">
+  
+  
+    <meta property="article:modified_time" content="2019-01-13T20:20:09">
+  
+  
+  
+    
+      <meta property="article:section" content="howto">
+    
+  
+  
 
 
 <meta name="twitter:card" content="summary">
@@ -39,16 +85,14 @@
   <meta property="twitter:image" content="https://ngkz.github.io/mypicture.jpg">
 
 
-    <title>Tkbctf</title>
+    <title>AFWall&#43; を有効にするとBluetoothテザリングで通信できなくなるのをなおす</title>
 
     <link rel="icon" href="https://ngkz.github.io/favicon.png">
     
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://ngkz.github.io/tags/tkbctf/index.xml">
-    
 
     
 
-    <link rel="canonical" href="https://ngkz.github.io/tags/tkbctf/">
+    <link rel="canonical" href="https://ngkz.github.io/2019/01/afwall-bt-tethering/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -187,48 +231,30 @@
 </nav>
 
       
-        
 
-      
       <div id="main" data-behavior="1"
         class="
                hasCoverMetaIn
                ">
-        
-          <section class="postShorten-group main-content-wrap">
-            
-            
-              
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
   
-    
-      
-        
-      
-    
+    <h1 class="post-title" itemprop="headline">
+      AFWall&#43; を有効にするとBluetoothテザリングで通信できなくなるのをなおす
+    </h1>
   
-
-
   
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://ngkz.github.io/2014/01/tkbctf1-writeup/">
-          tkbctf1 writeup
-        </a>
-      </h1>
-      
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2014-01-29T13:06:30&#43;09:00">
+      <time itemprop="datePublished" datetime="2019-01-13T20:20:09&#43;09:00">
         
   
   
   
   
-    2014-01-29
+    2019-01-13
   
 
       </time>
@@ -238,85 +264,146 @@
   
     <span>カテゴリー</span>
     
-      <a class="category-link" href="https://ngkz.github.io/categories/ctf">CTF</a>, 
-    
-      <a class="category-link" href="https://ngkz.github.io/categories/writeup">writeup</a>
+      <a class="category-link" href="https://ngkz.github.io/categories/howto">howto</a>
     
   
 
   </div>
 
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <p>2013/5/4〜5/5の<a href="http://tkbctf.info/tkbctf1">tkbctf1</a>に参加しました。</p>
-
-
-
- 
-  
-  
-  
-  
-    
-  
-
-<div class="figure " >
-  
-    <a class="fancybox" href="https://ngkz.github.io/assets/tkbctf1-writeup/fa296654d5c0a34f2c78631fe4577d70.png" title="Scoreboard" data-fancybox-group="">
-  
-    <img class="fig-img" src="https://ngkz.github.io/assets/tkbctf1-writeup/fa296654d5c0a34f2c78631fe4577d70.png"  alt="Scoreboard">
-  
-    </a>
-  
-   
-    <span class="caption">Scoreboard</span>
-  
 </div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>AFWall+を有効にしていると、Bluetoothテザリングで接続したクライアントが通信できなくなるのをなんとかする。</p>
 
+<h2 id="原因">原因</h2>
 
+<p>ログと検索エンジンで調べたところ、AFWall+がBluetoothテザリングに対応していないため、クライアントにDHCPとDNS Proxyを提供しているdnsmasqからのDNS通信がブロックされてしまっていることが分かった。</p>
 
-
- 
-  
-  
-  
-  
-    
-  
-
-<div class="figure " >
-  
-    <a class="fancybox" href="https://ngkz.github.io/assets/tkbctf1-writeup/6007d2ae22af0d2db3a312c9ba731253.png" title="Challenges" data-fancybox-group="">
-  
-    <img class="fig-img" src="https://ngkz.github.io/assets/tkbctf1-writeup/6007d2ae22af0d2db3a312c9ba731253.png"  alt="Challenges">
-  
-    </a>
-  
-   
-    <span class="caption">Challenges</span>
-  
-</div>
-
-
-<p>個人ランキングで1位でした。</p>
+<h2 id="解決策1-dnsを手動設定する">解決策1: DNSを手動設定する</h2>
 
 <p></p>
-      
-      <p>
-        <a href="https://ngkz.github.io/2014/01/tkbctf1-writeup/" class="postShorten-excerpt_link link">続きを読む</a>
-        
-      </p>
-    </div>
-  </div>
+
+<p>AFWall+はFORWARDチェインを素通し状態にしているので、DNSを手動設定してdnsmasqを通さずに名前解決すれば通信できるようになる。</p>
+
+<p>クライアント機器がDNSを手動設定できない仕様なので、今回この方法は使えない。</p>
+
+<h2 id="解決策2-カスタムスクリプトを使う">解決策2: カスタムスクリプトを使う</h2>
+
+<p>AFWall+には、ファイアウォールの起動時と停止時にスクリプトを実行する機能がある。これを使ってiptablesにルールを追加し、dnsmasqからのDNS通信を許可すれば、クライアントが名前解決できるようになる。</p>
+
+<p>iptablesは、対応カーネルならばownerモジュールの<code>--pid-owner</code>, <code>--sid-owner</code>, <code>--cmd-owner</code> で特定プロセスからの通信のみを許可することができるようだが、Androidのiptablesバイナリはこれらのオプションに対応していない。代わりに、AFWall+がテザリング時に設定するルールと同じように、<code>--uid-owner</code>でdnsmasqの動作ユーザー(UID 9999)からのDNS通信を許可する。</p>
+
+<p>AFWall+がわざわざテザリング時に限定している通信を常に許可することになるのでセキュリティは落ちることになるが、
+ざっと見たかぎり、UID 9999は特定のシステムプロセスしか使用していないようなので問題はないだろう。</p>
+
+<p>心配な場合は、Bluetoothテザリングの開始・終了を検知してiptablesのルールを追加・削除するアプリを作れば解決できる。</p>
+
+<p>以下のコマンドで、<code>/data/local/afwall_bluetooth.sh</code> にカスタムスクリプトを作成する。</p>
+
+<pre><code class="language-plain">host $ adb shell
+device $ su
+device # cat &lt;&lt;'EOS' &gt;/data/local/afwall_bluetooth.sh
+#!/system/bin/sh
+IPTABLES=/system/bin/iptables
+
+# 追加済みのルールは自動で削除されない上 、カスタムスクリプトはルールの適用中に複数回実行されるので、最初にこれから追加するルールを削除しておかないとルールがどんどん増殖していく。
+$IPTABLES -D OUTPUT -m owner --uid-owner 9999 -p udp --dport 53 -j ACCEPT
+# UID 9999から UDP/53への通信を許可
+$IPTABLES -I OUTPUT -m owner --uid-owner 9999 -p udp --dport 53 -j ACCEPT
+EOS
+device # chmod 700 /data/local/afwall_bluetooth.sh #root権限で実行されるので、絶対に他のユーザーが書き込めるパーミッションにしないこと
+#ファイアウォール停止時に残っていても実害はないので、停止スクリプトは作成しない。
+</code></pre>
+
+<p>AFWall+のメニューで <code>カスタムスクリプト設定</code> を開き、「<strong>下記にカスタムスクリプトを記入してください。</strong>」 の入力欄を <code>/data/local/afwall_bluetooth.sh</code>に設定する。</p>
+
+<p>これでBluetoothテザリングで通信できるようになる。</p>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+            
+            <div class="post-actions-wrap">
   
-</article>
-
-            
-            
-
-          </section>
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">次</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/01/edid-repair/" data-tooltip="EDIDが壊れて認識しないモニターの修理">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">前</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
         
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2019/01/afwall-bt-tethering/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2019/01/afwall-bt-tethering/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2019/01/afwall-bt-tethering/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">ngkz.log</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://ngkz.github.io/" property="cc:attributionName" rel="cc:attributionURL">Kazutoshi Noguchi</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
@@ -324,6 +411,102 @@
 </footer>
 
       </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="1">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">次</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/01/edid-repair/" data-tooltip="EDIDが壊れて認識しないモニターの修理">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">前</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2019/01/afwall-bt-tethering/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2019/01/afwall-bt-tethering/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2019/01/afwall-bt-tethering/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="1">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fngkz.github.io%2F2019%2F01%2Fafwall-bt-tethering%2F">
+          <i class="fa fa-facebook-official"></i><span>Facebookで共有</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fngkz.github.io%2F2019%2F01%2Fafwall-bt-tethering%2F">
+          <i class="fa fa-twitter"></i><span>Twitterで共有</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fngkz.github.io%2F2019%2F01%2Fafwall-bt-tethering%2F">
+          <i class="fa fa-google-plus"></i><span>Google&#43;で共有</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
     </div>
     
     <div id="about">
@@ -673,6 +856,32 @@ $(document).ready(function() {
 });
 </script>
 
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/ngkz.github.io\/2019\/01\/afwall-bt-tethering\/';
+          
+            this.page.identifier = '\/2019\/01\/afwall-bt-tethering\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'ngkz-log';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
 
 
 

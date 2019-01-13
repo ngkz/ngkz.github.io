@@ -6,10 +6,27 @@
     <description>Recent content in Posts on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 06 Jan 2019 17:19:12 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 13 Jan 2019 20:20:09 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AFWall&#43; を有効にするとBluetoothテザリングで通信できなくなるのをなおす</title>
+      <link>https://ngkz.github.io/2019/01/afwall-bt-tethering/</link>
+      <pubDate>Sun, 13 Jan 2019 20:20:09 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/01/afwall-bt-tethering/</guid>
+      <description>&lt;p&gt;AFWall+を有効にしていると、Bluetoothテザリングで接続したクライアントが通信できなくなるのをなんとかする。&lt;/p&gt;
+
+&lt;h2 id=&#34;原因&#34;&gt;原因&lt;/h2&gt;
+
+&lt;p&gt;ログと検索エンジンで調べたところ、AFWall+がBluetoothテザリングに対応していないため、クライアントにDHCPとDNS Proxyを提供しているdnsmasqからのDNS通信がブロックされてしまっていることが分かった。&lt;/p&gt;
+
+&lt;h2 id=&#34;解決策1-dnsを手動設定する&#34;&gt;解決策1: DNSを手動設定する&lt;/h2&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>EDIDが壊れて認識しないモニターの修理</title>
