@@ -6,10 +6,29 @@
     <description>Recent content on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 20 Jan 2019 23:08:46 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 20 Jan 2019 23:50:07 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>日記 (2019/01/21)</title>
+      <link>https://ngkz.github.io/2019/01/diary-20190121/</link>
+      <pubDate>Sun, 20 Jan 2019 23:50:07 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/01/diary-20190121/</guid>
+      <description>&lt;h2 id=&#34;新潟県警のクラックの件&#34;&gt;新潟県警のクラックの件&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www3.nhk.or.jp/news/html/20190120/k10011784571000.html&#34;&gt;新潟県警のサーバー不正操作 掲示板に爆破予告書き込みか&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://archive.vn/https://www.police.pref.niigata.jp/*&#34;&gt;攻撃の痕跡が魚拓に残っている。&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;メールフォーム(&lt;a href=&#34;http://archive.vn/LPTbJ&#34;&gt;http://archive.vn/LPTbJ&lt;/a&gt;) の画像添付機能にあった初歩的なOSコマンドインジェクション脆弱性(&lt;a href=&#34;https://archive.is/whWsu&#34;&gt;https://archive.is/whWsu&lt;/a&gt;) を突かれた模様。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://archive.vn/DhvA7&#34;&gt;某弁護士の画像がアップロードされていた。&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;3gモデムカードとsimカードの接続方法&#34;&gt;3GモデムカードとSIMカードの接続方法&lt;/h2&gt;</description>
+    </item>
     
     <item>
       <title>日記 (2019/01/20)</title>
