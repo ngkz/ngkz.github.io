@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>日記 on ngkz.log</title>
-    <link>https://ngkz.github.io/categories/%E6%97%A5%E8%A8%98/</link>
-    <description>Recent content in 日記 on ngkz.log</description>
+    <title>Lfs on ngkz.log</title>
+    <link>https://ngkz.github.io/tags/lfs/</link>
+    <description>Recent content in Lfs on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Thu, 24 Jan 2019 23:58:27 +0900</lastBuildDate>
     
-	<atom:link href="https://ngkz.github.io/categories/%E6%97%A5%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ngkz.github.io/tags/lfs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -34,76 +34,6 @@
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>日記 (2019/01/23)</title>
-      <link>https://ngkz.github.io/2019/01/diary-20190123/</link>
-      <pubDate>Wed, 23 Jan 2019 20:21:33 +0900</pubDate>
-      
-      <guid>https://ngkz.github.io/2019/01/diary-20190123/</guid>
-      <description>&lt;h2 id=&#34;lfs&#34;&gt;LFS&lt;/h2&gt;
-
-&lt;p&gt;進捗ほとんどなし&lt;/p&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
-&lt;p&gt;上半身プル&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;ハーフデッドリフト         3セット 25kg x 2
-ワンハンドローイング   左右2セット 10kg
-ダンベルシュラッグ         2セット 25kg x 2
-ダンベルカール             3セット 7.5kg
-変形バックエクステンション 2セット 2.5kg
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>日記 (2019/01/22)</title>
-      <link>https://ngkz.github.io/2019/01/diary-20190122/</link>
-      <pubDate>Tue, 22 Jan 2019 19:28:01 +0900</pubDate>
-      
-      <guid>https://ngkz.github.io/2019/01/diary-20190122/</guid>
-      <description>&lt;h2 id=&#34;lfs&#34;&gt;LFS&lt;/h2&gt;
-
-&lt;p&gt;進捗なし&lt;/p&gt;
-
-&lt;p&gt;いろいろやってたら時間がなくなった&lt;/p&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
-&lt;p&gt;上半身プッシュ + 腹筋&lt;/p&gt;
-
-&lt;p&gt;プッシュアップ 3セット, ダンベルショルダープレス 2セット 10kgx2, ダンベルフレンチプレス 2セット 10kg, ダンベルフライ 2セット 7.5kg x 2, クランチ 1セット, ツイストクランチ 2セット&lt;/p&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;スキーでジャンプしたらなぜか腹筋が筋肉痛になった&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>日記 (2019/01/21)</title>
-      <link>https://ngkz.github.io/2019/01/diary-20190121/</link>
-      <pubDate>Sun, 20 Jan 2019 23:50:07 +0900</pubDate>
-      
-      <guid>https://ngkz.github.io/2019/01/diary-20190121/</guid>
-      <description>&lt;h2 id=&#34;新潟県警のクラックの件&#34;&gt;新潟県警のクラックの件&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www3.nhk.or.jp/news/html/20190120/k10011784571000.html&#34;&gt;新潟県警のサーバー不正操作 掲示板に爆破予告書き込みか&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://archive.vn/https://www.police.pref.niigata.jp/*&#34;&gt;攻撃の痕跡が魚拓に残っている。&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;メールフォーム(&lt;a href=&#34;http://archive.vn/LPTbJ&#34;&gt;http://archive.vn/LPTbJ&lt;/a&gt;) の画像添付機能にあった初歩的なOSコマンドインジェクション脆弱性(&lt;a href=&#34;https://archive.is/whWsu&#34;&gt;https://archive.is/whWsu&lt;/a&gt;) を突かれた模様。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://archive.vn/DhvA7&#34;&gt;某弁護士の画像がアップロードされていた。&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;3gモデムカードとsimカードの接続方法&#34;&gt;3GモデムカードとSIMカードの接続方法&lt;/h2&gt;</description>
     </item>
     
     <item>

@@ -6,10 +6,35 @@
     <description>Recent content in Posts on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 23 Jan 2019 20:21:33 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 24 Jan 2019 23:58:27 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>日記 (2019/01/24)</title>
+      <link>https://ngkz.github.io/2019/01/diary-20190124/</link>
+      <pubDate>Thu, 24 Jan 2019 23:58:27 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/01/diary-20190124/</guid>
+      <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
+
+&lt;p&gt;ファイルシステムのディレクトリ構造と/etc/passwdに登録するシステムユーザーを決めた。システムグループの役割と使用箇所を調べている途中。&lt;/p&gt;
+
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
+
+&lt;p&gt;下半身 + 腹筋&lt;/p&gt;
+
+&lt;p&gt;LFSの構築をやりすぎたせいで途中までしかできなかった。
+下半身が一番時間がかかるからか、時間切れで中断することが多くなってきていてまずい&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ブルガリアンスクワット       3セット 15kgx2 + 自重 左10回 右9回 左7回 右7回 左6回+自重で何回か 右5回+自重で8回
+レッグエクステンション       2セット 20kg          12回 12回+10kgで16回
+ツイストクランチ             3セット 自重          5秒維持 13回 -&amp;gt; 1秒維持 18回 18回
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>日記 (2019/01/23)</title>
