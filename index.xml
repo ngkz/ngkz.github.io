@@ -6,10 +6,44 @@
     <description>Recent content on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 26 Jan 2019 23:17:24 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 27 Jan 2019 19:25:00 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>オイル交換メモ</title>
+      <link>https://ngkz.github.io/2019/01/oil-change/</link>
+      <pubDate>Sun, 27 Jan 2019 19:25:00 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/01/oil-change/</guid>
+      <description>&lt;h2 id=&#34;必要な物&#34;&gt;必要な物&lt;/h2&gt;
+
+&lt;p&gt;たまに忘れるので&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;オイル (消耗品)&lt;/li&gt;
+&lt;li&gt;オイル処理箱 (消耗品)&lt;/li&gt;
+&lt;li&gt;オイルフィルター (フィルター交換の場合, 消耗品)&lt;/li&gt;
+&lt;li&gt;ウエス (消耗品)&lt;/li&gt;
+&lt;li&gt;パーツクリーナー (消耗品)&lt;/li&gt;
+&lt;li&gt;ドレンパッキン (消耗品)&lt;/li&gt;
+&lt;li&gt;手袋 (消耗品)&lt;/li&gt;
+&lt;li&gt;ゴミ袋 (消耗品)&lt;/li&gt;
+&lt;li&gt;スロープ&lt;/li&gt;
+&lt;li&gt;新聞紙&lt;/li&gt;
+&lt;li&gt;メガネレンチ&lt;/li&gt;
+&lt;li&gt;オイルジョッキ&lt;/li&gt;
+&lt;li&gt;オイルフィルターレンチ (フィルター交換の場合)&lt;/li&gt;
+&lt;li&gt;エクステンションバー (フィルター交換の場合)&lt;/li&gt;
+&lt;li&gt;ラチェットハンドル (フィルター交換の場合)&lt;/li&gt;
+&lt;li&gt;ウマ (タイヤローテーションもする場合)&lt;/li&gt;
+&lt;li&gt;ジャッキ (タイヤローテーションもする場合)&lt;/li&gt;
+&lt;li&gt;トルクレンチ (タイヤローテーションもする場合)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>日記 (2019/01/26)</title>
@@ -311,40 +345,6 @@ Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30
       
       <guid>https://ngkz.github.io/2018/12/coleman-508/</guid>
       <description>&lt;p&gt;父から1990年製造のColeman 508をもらったので、試しに使ってみた。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>オイル交換メモ</title>
-      <link>https://ngkz.github.io/2018/12/oil-change/</link>
-      <pubDate>Sun, 09 Dec 2018 11:57:12 +0900</pubDate>
-      
-      <guid>https://ngkz.github.io/2018/12/oil-change/</guid>
-      <description>&lt;h2 id=&#34;必要な物&#34;&gt;必要な物&lt;/h2&gt;
-
-&lt;p&gt;たまに忘れるので&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;オイル (消耗品)&lt;/li&gt;
-&lt;li&gt;オイル処理箱 (消耗品)&lt;/li&gt;
-&lt;li&gt;オイルフィルター (フィルター交換の場合, 消耗品)&lt;/li&gt;
-&lt;li&gt;ウエス (消耗品)&lt;/li&gt;
-&lt;li&gt;パーツクリーナー (消耗品)&lt;/li&gt;
-&lt;li&gt;ドレンパッキン (消耗品)&lt;/li&gt;
-&lt;li&gt;手袋 (消耗品)&lt;/li&gt;
-&lt;li&gt;ゴミ袋 (消耗品)&lt;/li&gt;
-&lt;li&gt;スロープ&lt;/li&gt;
-&lt;li&gt;新聞紙&lt;/li&gt;
-&lt;li&gt;メガネレンチ&lt;/li&gt;
-&lt;li&gt;オイルジョッキ&lt;/li&gt;
-&lt;li&gt;オイルフィルターレンチ (フィルター交換の場合)&lt;/li&gt;
-&lt;li&gt;エクステンションバー (フィルター交換の場合)&lt;/li&gt;
-&lt;li&gt;ラチェットハンドル (フィルター交換の場合)&lt;/li&gt;
-&lt;li&gt;ウマ (タイヤローテーションもする場合)&lt;/li&gt;
-&lt;li&gt;ジャッキ (タイヤローテーションもする場合)&lt;/li&gt;
-&lt;li&gt;トルクレンチ (タイヤローテーションもする場合)&lt;/li&gt;
-&lt;/ul&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
