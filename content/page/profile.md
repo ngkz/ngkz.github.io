@@ -23,6 +23,9 @@ PGP 公開鍵
 github
 : [ngkz](https://github.com/ngkz)
 
+discord (非推奨, いいオープンソースの代替品があったら教えてください)
+: ngkz#6110
+
 bitcoin
 : 1FzRWZsT9sL6G5iaKpEHRuJmRsKniFNW6c
 [![donate bitcoin](https://img.shields.io/badge/donate-bitcoin-green.svg)](bitcoin:1FzRWZsT9sL6G5iaKpEHRuJmRsKniFNW6c)
