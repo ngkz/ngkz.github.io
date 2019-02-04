@@ -6,10 +6,92 @@
     <description>Recent content on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 03 Feb 2019 21:07:36 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 04 Feb 2019 21:52:28 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>日記 (2019/02/04)</title>
+      <link>https://ngkz.github.io/2019/02/diary-20190204/</link>
+      <pubDate>Mon, 04 Feb 2019 21:52:28 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/02/diary-20190204/</guid>
+      <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
+
+&lt;p&gt;/etc/passwdと/etc/groupが完成した。Linuxの/etc/passwdと/etc/groupにあるシステムユーザー/システムグループはディストリビュージョンによって異なり、名前やUID/GIDが違う、過去に使われていたが今は未使用のユーザー/グループがある、システムグループに属するシステムユーザーが違う、などの違いがある。&lt;/p&gt;
+
+&lt;p&gt;LFS Bookに/etc/groupの詳しい解説がなかったので、いろいろなディストロに/etc/groupを見てみたり、システムグループの使用目的を調べたり、いらないグループを削ったりしていたら時間がかかってしまった。&lt;/p&gt;
+
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
+
+&lt;p&gt;上半身プッシュ + 腹筋&lt;/p&gt;
+
+&lt;p&gt;プッシュアップのフォームを修正したら大胸筋によく効くようになった。筋力の伸びが停滞してる気がする&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;種目&lt;/th&gt;
+&lt;th&gt;重量&amp;amp;目標回数&lt;/th&gt;
+&lt;th&gt;回数&lt;/th&gt;
+&lt;th&gt;備考&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ローテーターカフのウォームアップ&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;プッシュアップ&lt;/td&gt;
+&lt;td&gt;3セット 自重 12回以上 + 膝つき&lt;/td&gt;
+&lt;td&gt;↓8+5 6+3 7+3&lt;/td&gt;
+&lt;td&gt;今までフォームが間違ってたのが原因&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ダンベルショルダープレス&lt;/td&gt;
+&lt;td&gt;2セット 10kgx2 15回以上 → ドロップ&lt;/td&gt;
+&lt;td&gt;↓13 10+5kgx2で10+2.5kgx2で14+1.25kgx2で11&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ダンベルフレンチプレス&lt;/td&gt;
+&lt;td&gt;2セット 10kg 11回以上 → ドロップ&lt;/td&gt;
+&lt;td&gt;↑12 10+2.5kgx2で6+2.5kgで38+1.25kgで?&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ダンベルフライ&lt;/td&gt;
+&lt;td&gt;2セット 7.5kg x 2 17回以上 → ドロップ&lt;/td&gt;
+&lt;td&gt;→16 10+5kgx2で17&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ツイストクランチ&lt;/td&gt;
+&lt;td&gt;3セット 自重 5秒維持 14回以上 → 1秒維持 20回以上&lt;/td&gt;
+&lt;td&gt;↓5秒維持 12 → 1秒維持 16 18&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;LeechBlock効果でインターネットで無駄にした時間がだいぶ減った&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>日記 (2019/02/03)</title>
