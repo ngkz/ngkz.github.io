@@ -6,10 +6,169 @@
     <description>Recent content on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 04 Feb 2019 21:52:28 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 06 Feb 2019 20:57:51 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>日記 (2019/02/06)</title>
+      <link>https://ngkz.github.io/2019/02/diary-20190206/</link>
+      <pubDate>Wed, 06 Feb 2019 20:57:51 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/02/diary-20190206/</guid>
+      <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;*FLAGS&lt;/code&gt; の解説が完成した。Temporary Systemにchrootにする処理を書いている。&lt;/p&gt;
+
+&lt;h2 id=&#34;スキーのトップシートの修理&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
+
+&lt;p&gt;接着後にトップシートに残った欠けをホットボンドで埋めた。修理完了&lt;/p&gt;
+
+&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
+
+&lt;p&gt;ステーを2本同じ方法で加工した。日曜に買った荒目のヤスリを使ったら加工時間が半分になった。&lt;/p&gt;
+
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
+
+&lt;p&gt;下半身 + 腹筋&lt;/p&gt;
+
+&lt;p&gt;うまくいかなかった&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;種目&lt;/th&gt;
+&lt;th&gt;重量&amp;amp;目標回数&lt;/th&gt;
+&lt;th&gt;回数&lt;/th&gt;
+&lt;th&gt;備考&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ブルガリアンスクワット&lt;/td&gt;
+&lt;td&gt;3セット 15kg+シャフト x 2 左右14回以上 → 自重&lt;/td&gt;
+&lt;td&gt;↓左10 右10 左8 右9 左5,自重で11 右7,自重で11&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;レッグエクステンション&lt;/td&gt;
+&lt;td&gt;2セット 20kg+シャフト 20回以上 →10kg&lt;/td&gt;
+&lt;td&gt;↓13 12 10 13,10kg+シャフトで14回&lt;/td&gt;
+&lt;td&gt;ダンベルが足から転がりおちてしまって追いこめない。別の種目に置き換えたほうがよさそう&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ヒップスラスト&lt;/td&gt;
+&lt;td&gt;2セット 27.5kg+シャフト 22回以上 →15kg&lt;/td&gt;
+&lt;td&gt;↑23 20,15kg+シャフトで15回&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;レッグカール&lt;/td&gt;
+&lt;td&gt;2セット 20kg+シャフト 15回以上 →10kg&lt;/td&gt;
+&lt;td&gt;↓10 7.5,10kg+シャフトで19.5&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;片足スタンディングカーフレイズ&lt;/td&gt;
+&lt;td&gt;3セット 自重 左右25回以上&lt;/td&gt;
+&lt;td&gt;↓左22 右25 左26 右22 左27 右20&lt;/td&gt;
+&lt;td&gt;1セット目途中からふくらはぎの筋肉の付け根が痛くなってくる。ウォームアップが必要かも&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ツイストクランチ&lt;/td&gt;
+&lt;td&gt;3セット 自重 5秒維持 13回以上 → 1秒維持 17回以上&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;時間切れ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;茨城県庁で茨城県警が超小型のArduino Leonardo互換機でBadUSBのデモをやってた&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>日記 (2019/02/05)</title>
+      <link>https://ngkz.github.io/2019/02/diary-20190205/</link>
+      <pubDate>Tue, 05 Feb 2019 22:25:23 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/02/diary-20190205/</guid>
+      <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
+
+&lt;p&gt;chrootに入る処理と *FLAGSの解説を書いている。&lt;/p&gt;
+
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
+
+&lt;p&gt;上半身プル&lt;/p&gt;
+
+&lt;p&gt;今までダンベルシャフトの重量を計算に入れるのを忘れていた。&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;種目&lt;/th&gt;
+&lt;th&gt;重量&amp;amp;目標回数 (シャフト込み)&lt;/th&gt;
+&lt;th&gt;回数&lt;/th&gt;
+&lt;th&gt;備考&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ハーフデッドリフト&lt;/td&gt;
+&lt;td&gt;3セット 30kg x 2 20回以上 重量↑&lt;/td&gt;
+&lt;td&gt;↑20 13 14&lt;/td&gt;
+&lt;td&gt;力が出しきれなかった&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ワンハンドローイング&lt;/td&gt;
+&lt;td&gt;左右&lt;del&gt;2&lt;/del&gt;3セット &lt;del&gt;17.5kg 12回以上&lt;/del&gt; 12.5kg 22回以上 →ドロップ&lt;/td&gt;
+&lt;td&gt;↓左12 (17.5kg) 右15 左13 右16 左15+5kgで13+2.5kgで18+1.25kgで18 右12+5kgで13+2.5kgで12+1.25kgで12&lt;/td&gt;
+&lt;td&gt;フォームを確認しながら 広背筋にうまく効かない&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ダンベルシュラッグ&lt;/td&gt;
+&lt;td&gt;2セット 30kg x 2 17回以上 →ドロップ&lt;/td&gt;
+&lt;td&gt;↑18 12+22.5kgで15+12.5kgで31+7.5kgで62&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ダンベルカール&lt;/td&gt;
+&lt;td&gt;3セット 10kg    13回以上 →ドロップ&lt;/td&gt;
+&lt;td&gt;↓8.5 7+5kgx2で12+2.5kgx2で26&lt;/td&gt;
+&lt;td&gt;ネガティブ動作をゆっくりにしてみた&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;変形バックエクステンション&lt;/td&gt;
+&lt;td&gt;2セット 自重+5kg →ドロップ&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;時間切れ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;スキーのトップシートの修理&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
+
+&lt;p&gt;別の箇所を接着した。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>日記 (2019/02/04)</title>
