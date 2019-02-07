@@ -6,10 +6,84 @@
     <description>Recent content on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 06 Feb 2019 20:57:51 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 07 Feb 2019 23:34:09 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>日記 (2019/02/07)</title>
+      <link>https://ngkz.github.io/2019/02/diary-20190207/</link>
+      <pubDate>Thu, 07 Feb 2019 23:34:09 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/02/diary-20190207/</guid>
+      <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
+
+&lt;p&gt;Temporary Systemにchrootする処理を書き、chrootしてカーネルヘッダとmanページをインストールした。&lt;/p&gt;
+
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
+
+&lt;p&gt;上半身 + 腹筋&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;種目&lt;/th&gt;
+&lt;th&gt;重量&amp;amp;目標回数&lt;/th&gt;
+&lt;th&gt;回数&lt;/th&gt;
+&lt;th&gt;備考&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ローテーターカフのウォームアップ&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;プッシュアップ&lt;/td&gt;
+&lt;td&gt;3セット 自重 9回以上 → 膝つき&lt;/td&gt;
+&lt;td&gt;→ 8→6 7→2 5→4&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ダンベルショルダープレス&lt;/td&gt;
+&lt;td&gt;2セット 10kgx2+シャフト 14回以上 → ドロップ&lt;/td&gt;
+&lt;td&gt;→ 13 9→5kgx2で12→2.5kgx2で18→1.25kgx2で20&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ダンベルフレンチプレス&lt;/td&gt;
+&lt;td&gt;2セット 10kg+シャフト 13回以上 → ドロップ&lt;/td&gt;
+&lt;td&gt;↓10 6+5kgで21+2.5kgで39+1.25kgで21&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ダンベルフライ&lt;/td&gt;
+&lt;td&gt;2セット 7.5kgx2+シャフト 17回以上 → ドロップ&lt;/td&gt;
+&lt;td&gt;↓13 16+5kgx2で20+2.5kgx2で46&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ツイストクランチ&lt;/td&gt;
+&lt;td&gt;3セット 自重 5秒維持 13回以上 → 1秒維持 17回以上&lt;/td&gt;
+&lt;td&gt;↑13? 20 20&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;ほとんどの種目のトレーニングボリュームが現状維持か低下している。疲れが回復しきっていないのが原因だと思う&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>日記 (2019/02/06)</title>
