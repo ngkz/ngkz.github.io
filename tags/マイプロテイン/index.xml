@@ -6,10 +6,91 @@
     <description>Recent content in マイプロテイン on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 10 Feb 2019 14:36:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 11 Feb 2019 21:10:30 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/tags/%E3%83%9E%E3%82%A4%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>日記 (2019/02/11)</title>
+      <link>https://ngkz.github.io/2019/02/diary-20190211/</link>
+      <pubDate>Mon, 11 Feb 2019 21:10:30 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/02/diary-20190211/</guid>
+      <description>&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;THE プレワークアウトを多めの水(400ml)に溶かしてみたら、ちょうどいい味の濃さになりケミカル感も軽減されておいしかった。&lt;/li&gt;
+&lt;li&gt;ノンフレーバーHMB + Impact ホエイ ソルティッドキャラメル味は相性が悪く、HMBのワキガ臭と苦みを打ち消しきれない。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;上半身プッシュ+腹筋&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;徹夜の悪影響が残っているからかトレーニングボリュームが落ちている。&lt;/p&gt;
+
+&lt;p&gt;プッシュアップの注意: 手の幅は肩より少し広く, 脇を開けない, 頂点まで行ったらさらに持ちあげる, 大胸筋を意識する&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;種目&lt;/th&gt;
+&lt;th&gt;重量&amp;amp;目標回数&lt;/th&gt;
+&lt;th&gt;回数&lt;/th&gt;
+&lt;th&gt;備考&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ローテーターカフのウォームアップ&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;プッシュアップ&lt;/td&gt;
+&lt;td&gt;3セット 自重 9回以上 → 膝つき&lt;/td&gt;
+&lt;td&gt;↓7→4 8+4 7+5&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ダンベルショルダープレス&lt;/td&gt;
+&lt;td&gt;2セット 10kgx2+シャフト 14回以上 &lt;del&gt;→ ドロップ&lt;/del&gt;&lt;/td&gt;
+&lt;td&gt;↑14 12&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ダンベルフレンチプレス&lt;/td&gt;
+&lt;td&gt;2セット 10kg+シャフト 11回以上 &lt;del&gt;→ ドロップ&lt;/del&gt;&lt;/td&gt;
+&lt;td&gt;→10 11&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ダンベルフライ&lt;/td&gt;
+&lt;td&gt;2セット 7.5kgx2+シャフト 14回以上 &lt;del&gt;→ ドロップ&lt;/del&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;時間がないので省略&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ツイストクランチ&lt;/td&gt;
+&lt;td&gt;3セット 自重 5秒維持 16回以上 → 1秒維持 23回以上&lt;/td&gt;
+&lt;td&gt;→15 → 22 22&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
+
+&lt;p&gt;LFS BookとArch LinuxのPKGBUILDを参考にglibcをビルドしている。64bitライブラリのビルドはできたが、テストが通らない。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>日記 (2019/02/10)</title>
