@@ -6,10 +6,107 @@
     <description>Recent content in 筋トレ on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 11 Feb 2019 21:10:30 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 12 Feb 2019 23:59:59 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/tags/%E7%AD%8B%E3%83%88%E3%83%AC/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>日記 (2019/02/12)</title>
+      <link>https://ngkz.github.io/2019/02/diary-20190212/</link>
+      <pubDate>Tue, 12 Feb 2019 23:59:59 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/02/diary-20190212/</guid>
+      <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;glibcのビルドをしている&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;*FLAGS&lt;/code&gt;を空にした状態でビルドしてみたらテストが通ったので、フラグを変えながらビルドとテストを繰り返してどれが失敗の原因か調べている&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://clfs.org&#34;&gt;Cross Linux from Scratch&lt;/a&gt; のサイトが消滅してた&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;THE プレワークアウトを30分前に1スクープ摂取&lt;/li&gt;
+&lt;li&gt;HMBを昼に1g, トレーニング1時間前に1g摂取, 夜に1g摂取&lt;/li&gt;
+&lt;li&gt;前日の睡眠 7:23 (0:09 → 7:33)&lt;/li&gt;
+&lt;li&gt;食事前に筋トレ&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;上半身プル&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;種目&lt;/th&gt;
+&lt;th&gt;重量&amp;amp;目標回数&lt;/th&gt;
+&lt;th&gt;回数&lt;/th&gt;
+&lt;th&gt;備考&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ハーフデッドリフト&lt;/td&gt;
+&lt;td&gt;3セット 27.5kgx2+シャフト 13回以上&lt;/td&gt;
+&lt;td&gt;↑23 16 16&lt;/td&gt;
+&lt;td&gt;キツい 追いこみきれてない 1/30くらいのトレーニングボリュームに回復した&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ワンハンドローイング&lt;/td&gt;
+&lt;td&gt;左右2セット 10kg+シャフト 12回以上 →ドロップ&lt;/td&gt;
+&lt;td&gt;↑右14 左16 右14→5kg+シャフトで13 左15→5kg+シャフトで17&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ダンベルシュラッグ&lt;/td&gt;
+&lt;td&gt;2セット 27.5kgx2+シャフト 23回以上 →ドロップ&lt;/td&gt;
+&lt;td&gt;↑23 17→15kg+シャフトで34&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ダンベルカール&lt;/td&gt;
+&lt;td&gt;3セット 7.5kg+シャフト 12回以上 →ドロップ&lt;/td&gt;
+&lt;td&gt;↑12 8.5 6&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;変形バックエクステンション&lt;/td&gt;
+&lt;td&gt;2セット 自重+5kg 16回以上 →ドロップ&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;時間切れ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
+
+&lt;p&gt;立バンドに塗料を塗り重ねた&lt;/p&gt;
+
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;スキーに行くとき車中泊する予定なので電気毛布を注文した&lt;/li&gt;
+&lt;li&gt;ついでにいろいろと注文した
+
+&lt;ul&gt;
+&lt;li&gt;カードの保護のための防磁・防RFのカードスリーブ&lt;/li&gt;
+&lt;li&gt;セキュリティコードを隠すための剥がすと跡が残るシール&lt;/li&gt;
+&lt;li&gt;まともな名刺ケース&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>日記 (2019/02/11)</title>
