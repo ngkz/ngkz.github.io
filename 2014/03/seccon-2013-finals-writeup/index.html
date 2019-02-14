@@ -1243,6 +1243,103 @@ sys.stdout.write(p.payload(BUFIDX))
           <div class="media">
             
             <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2019/02/diary-20190214/">
+                <h3 class="media-heading">日記 (2019/02/14)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Feb 2, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><h2 id="linux-from-scratch">Linux from Scratch</h2>
+
+<ul>
+<li>glibcのビルドはまだ成功していない。再ビルドに時間がかかるのでテストの実行を一部だけにしても1周数十分かかる。嫌になってきた
+
+<ul>
+<li>ライブラリのビルド・バイナリのビルド・テストの各段階で使えないフラグが違うっぽい</li>
+</ul></li>
+<li>デバッグ情報を分離して <code>/usr/lib/debug/.build-id/...</code> に置きたいので、LDFLAGSに <code>-Wl,--build-id</code>を追加してBuild IDを生成するようにした</li>
+<li>必要なさそうなので <code>CFLAGS</code>から <code>-grecord-gcc-switches</code>を削除</li>
+</ul>
+
+<h2 id="ラックの修理">ラックの修理</h2>
+
+<ul>
+<li>ステーと立バンドの裏に塗料を重ね塗りした。今週末には完成しそう</li>
+</ul>
+
+<h2 id="筋トレ">筋トレ</h2>
+
+<ul>
+<li>THE プレワークアウトを筋トレ30分前に1スクープ摂取</li>
+<li>HMBを昼, 夕食前, 就寝前に1g摂取</li>
+<li>前日の睡眠 7:38 (0:00 → 7:43)
+
+<ul>
+<li>途中トイレに行きたくなって起きてしまったものの、全体的にはアラームに気付かないくらい熟睡した</li>
+</ul></li>
+</ul>
+
+<p><strong>上半身プッシュ</strong></p>
+
+<table>
+<thead>
+<tr>
+<th>種目</th>
+<th>重量&amp;目標回数</th>
+<th>回数</th>
+<th>備考</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>ローテーターカフのウォームアップ</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>プッシュアップ</td>
+<td>3セット 自重 8回以上 → 膝つき</td>
+<td>↑9→5 9→6 6→3</td>
+<td></td>
+</tr>
+
+<tr>
+<td>ダンベルショルダープレス</td>
+<td>2セット 25kg(10kgx2+シャフト) 15回以上 → ドロップ</td>
+<td>↑15 13→5kgx2で21→2.5kgx2で23</td>
+<td></td>
+</tr>
+
+<tr>
+<td>ダンベルフレンチプレス</td>
+<td>2セット 10kg+シャフト 11回以上 → ドロップ</td>
+<td>↑12? 9+14</td>
+<td></td>
+</tr>
+
+<tr>
+<td>ダンベルフライ</td>
+<td>2セット 7.5kgx2+シャフト 14回以上 <del>→ ドロップ</del></td>
+<td>↑18? 13</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
               <a class="link-unstyled" href="https://ngkz.github.io/2019/02/diary-20190213/">
                 <h3 class="media-heading">日記 (2019/02/13)</h3>
               </a>
@@ -1940,100 +2037,6 @@ sys.stdout.write(p.payload(BUFIDX))
             <hr>
           </div>
         
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://ngkz.github.io/2019/02/diary-20190204/">
-                <h3 class="media-heading">日記 (2019/02/04)</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Feb 2, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="linux-from-scratch">Linux from Scratch</h2>
-
-<p>/etc/passwdと/etc/groupが完成した。Linuxの/etc/passwdと/etc/groupにあるシステムユーザー/システムグループはディストリビュージョンによって異なり、名前やUID/GIDが違う、過去に使われていたが今は未使用のユーザー/グループがある、システムグループに属するシステムユーザーが違う、などの違いがある。</p>
-
-<p>LFS Bookに/etc/groupの詳しい解説がなかったので、いろいろなディストロに/etc/groupを見てみたり、システムグループの使用目的を調べたり、いらないグループを削ったりしていたら時間がかかってしまった。</p>
-
-<h2 id="筋トレ">筋トレ</h2>
-
-<p>上半身プッシュ + 腹筋</p>
-
-<p>プッシュアップのフォームを修正したら大胸筋によく効くようになった。筋力の伸びが停滞してる気がする</p>
-
-<table>
-<thead>
-<tr>
-<th>種目</th>
-<th>重量&amp;目標回数</th>
-<th>回数</th>
-<th>備考</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>ローテーターカフのウォームアップ</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td>プッシュアップ</td>
-<td>3セット 自重 12回以上 + 膝つき</td>
-<td>↓8+5 6+3 7+3</td>
-<td>今までフォームが間違ってたのが原因</td>
-</tr>
-
-<tr>
-<td>ダンベルショルダープレス</td>
-<td>2セット 10kgx2 15回以上 → ドロップ</td>
-<td>↓13 10+5kgx2で10+2.5kgx2で14+1.25kgx2で11</td>
-<td></td>
-</tr>
-
-<tr>
-<td>ダンベルフレンチプレス</td>
-<td>2セット 10kg 11回以上 → ドロップ</td>
-<td>↑12 10+2.5kgx2で6+2.5kgで38+1.25kgで?</td>
-<td></td>
-</tr>
-
-<tr>
-<td>ダンベルフライ</td>
-<td>2セット 7.5kg x 2 17回以上 → ドロップ</td>
-<td>→16 10+5kgx2で17</td>
-<td></td>
-</tr>
-
-<tr>
-<td>ツイストクランチ</td>
-<td>3セット 自重 5秒維持 14回以上 → 1秒維持 20回以上</td>
-<td>↓5秒維持 12 → 1秒維持 16 18</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-<h2 id="スキーのトップシートの修理">スキーのトップシートの修理</h2>
-
-<p>別の箇所を接着した。トップシートが欠けている箇所をホットボンドで埋め、固まる前にシリコンオイルを塗った定規で形を整えた。定規に油を塗ればホットボンドがくっつくのを避けられると思っていたが、あまり効果はなかった。</p>
-
-<h2 id="その他">その他</h2>
-
-<ul>
-<li>LeechBlock効果でインターネットで無駄にした時間がだいぶ減った</li>
-</ul>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
       </div>
     </div>
     <div class="modal-footer">
@@ -2041,7 +2044,7 @@ sys.stdout.write(p.payload(BUFIDX))
          data-message-zero=""
          data-message-one=""
          data-message-other="">
-         47 posts found
+         48 posts found
       </p>
     </div>
   </div>

@@ -6,10 +6,99 @@
     <description>Recent content in Lfs on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 13 Feb 2019 19:39:07 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 14 Feb 2019 19:43:25 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/tags/lfs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>日記 (2019/02/14)</title>
+      <link>https://ngkz.github.io/2019/02/diary-20190214/</link>
+      <pubDate>Thu, 14 Feb 2019 19:43:25 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/02/diary-20190214/</guid>
+      <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;glibcのビルドはまだ成功していない。再ビルドに時間がかかるのでテストの実行を一部だけにしても1周数十分かかる。嫌になってきた
+
+&lt;ul&gt;
+&lt;li&gt;ライブラリのビルド・バイナリのビルド・テストの各段階で使えないフラグが違うっぽい&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;デバッグ情報を分離して &lt;code&gt;/usr/lib/debug/.build-id/...&lt;/code&gt; に置きたいので、LDFLAGSに &lt;code&gt;-Wl,--build-id&lt;/code&gt;を追加してBuild IDを生成するようにした&lt;/li&gt;
+&lt;li&gt;必要なさそうなので &lt;code&gt;CFLAGS&lt;/code&gt;から &lt;code&gt;-grecord-gcc-switches&lt;/code&gt;を削除&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ステーと立バンドの裏に塗料を重ね塗りした。今週末には完成しそう&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;THE プレワークアウトを筋トレ30分前に1スクープ摂取&lt;/li&gt;
+&lt;li&gt;HMBを昼, 夕食前, 就寝前に1g摂取&lt;/li&gt;
+&lt;li&gt;前日の睡眠 7:38 (0:00 → 7:43)
+
+&lt;ul&gt;
+&lt;li&gt;途中トイレに行きたくなって起きてしまったものの、全体的にはアラームに気付かないくらい熟睡した&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;上半身プッシュ&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;種目&lt;/th&gt;
+&lt;th&gt;重量&amp;amp;目標回数&lt;/th&gt;
+&lt;th&gt;回数&lt;/th&gt;
+&lt;th&gt;備考&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ローテーターカフのウォームアップ&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;プッシュアップ&lt;/td&gt;
+&lt;td&gt;3セット 自重 8回以上 → 膝つき&lt;/td&gt;
+&lt;td&gt;↑9→5 9→6 6→3&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ダンベルショルダープレス&lt;/td&gt;
+&lt;td&gt;2セット 25kg(10kgx2+シャフト) 15回以上 → ドロップ&lt;/td&gt;
+&lt;td&gt;↑15 13→5kgx2で21→2.5kgx2で23&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ダンベルフレンチプレス&lt;/td&gt;
+&lt;td&gt;2セット 10kg+シャフト 11回以上 → ドロップ&lt;/td&gt;
+&lt;td&gt;↑12? 9+14&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ダンベルフライ&lt;/td&gt;
+&lt;td&gt;2セット 7.5kgx2+シャフト 14回以上 &lt;del&gt;→ ドロップ&lt;/del&gt;&lt;/td&gt;
+&lt;td&gt;↑18? 13&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>日記 (2019/02/13)</title>
