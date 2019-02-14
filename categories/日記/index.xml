@@ -6,10 +6,95 @@
     <description>Recent content in 日記 on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 12 Feb 2019 23:59:59 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 13 Feb 2019 19:39:07 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/categories/%E6%97%A5%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>日記 (2019/02/13)</title>
+      <link>https://ngkz.github.io/2019/02/diary-20190213/</link>
+      <pubDate>Wed, 13 Feb 2019 19:39:07 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/02/diary-20190213/</guid>
+      <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;glibcのテストが失敗するのは LDFLAGSで &lt;code&gt;-z now&lt;/code&gt;を渡すとダイナミックリンカが壊れるのが原因だった。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;THE プレワークアウトを筋トレ30分前に1スクープ摂取&lt;/li&gt;
+&lt;li&gt;HMBを昼, 筋トレ1時間前, 就寝前に1g摂取&lt;/li&gt;
+&lt;li&gt;前日の睡眠 6:59 (0:28 → 7:37)&lt;/li&gt;
+&lt;li&gt;シシースクワットでレッグエクステンションを置き換え&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;下半身+腹筋&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;種目&lt;/th&gt;
+&lt;th&gt;重量&amp;amp;目標回数&lt;/th&gt;
+&lt;th&gt;回数&lt;/th&gt;
+&lt;th&gt;備考&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ブルガリアンスクワット&lt;/td&gt;
+&lt;td&gt;3セット 自重+35kg(15kg+シャフト x 2) 左右11回以上 → 自重&lt;/td&gt;
+&lt;td&gt;↑左13 右12 左9 右10 左10→自重で12 右8→自重で14&lt;/td&gt;
+&lt;td&gt;プレワークアウトのカフェインの副作用のせいかかなりつらい&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;シシースクワット&lt;/td&gt;
+&lt;td&gt;2セット 自重&lt;/td&gt;
+&lt;td&gt;21 20 25&lt;/td&gt;
+&lt;td&gt;難しい, 中断してフォームを確認しながら&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ヒップスラスト&lt;/td&gt;
+&lt;td&gt;2セット 30kg(27.5kg+シャフト) 24回以上 →ドロップ&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;時間がないので省略&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;レッグカール&lt;/td&gt;
+&lt;td&gt;2セット 22.5kg(20kg+シャフト) 11回以上 →ドロップ&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;片足スタンディングカーフレイズ&lt;/td&gt;
+&lt;td&gt;3セット 自重 左右23回以上&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ツイストクランチ&lt;/td&gt;
+&lt;td&gt;3セット 自重 5秒維持 16回以上 → 1秒維持 23回以上&lt;/td&gt;
+&lt;td&gt;↓13 → ?&lt;/td&gt;
+&lt;td&gt;時間切れで中断&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
+
+&lt;p&gt;立バンドの裏を塗装し、ステーのめっきが剥げた箇所にサビ止めを塗った。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>日記 (2019/02/12)</title>
