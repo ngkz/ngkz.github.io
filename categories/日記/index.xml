@@ -6,10 +6,21 @@
     <description>Recent content in 日記 on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 14 Feb 2019 23:19:25 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 15 Feb 2019 23:59:59 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/categories/%E6%97%A5%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>日記 (2019/02/15)</title>
+      <link>https://ngkz.github.io/2019/02/diary-20190215/</link>
+      <pubDate>Fri, 15 Feb 2019 23:59:59 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/02/diary-20190215/</guid>
+      <description>Linux from Scratch  64bit glibcのテストが通るようになった。  -fno-plt -fexceptionsのどれかがCFLAGSに入っているとテストコードが、-z nowがLDFLAGSに入っているとダイナミックリンカが壊れることが分かった。 前者は、 一度しか実行せず攻撃を受けることもないテストコードには最適化もHardeningも不要なので、テスト時にすべてのフラグを削除することで対処した。 後者はライブラリのビルド時に一時的に -z now をLDFLAGSから削除することで対処した。  manページの圧縮処理とデバッグ情報の分離処理を書いている途中  筋トレ  THE プレワークアウトを筋トレ30分前に1スクープ摂取 HMBを昼, 夕食前, 就寝前に1g摂取 前日の睡眠 6:57 (0:26→7:28)  上半身プル+腹筋
+集中できなかった
+   種目 重量&amp;amp;目標回数 回数 備考     ハーフデッドリフト 3セット 30kg(27.5kgx2+シャフト) 24回以上 ↑25 16 13 12? 3セット目途中で邪魔が入った。力が出しきれなかった   ワンハンドローイング 左右2セット 12.5kg(10kg+シャフト) 15回以上 →ドロップ →右14 左16 右12→7.5kg(2.5kgx2+シャフト)で15→5kgで13→2.5kgで15→1.25kgで13 左17→7.5kg(2.5kgx2+シャフト)で14→5kgで21→2.5kgで20→1.25kgで22    ダンベルシュラッグ 2セット 30kg(27.5kgx2+シャフト) 24回以上 →ドロップ ↑24 16→15kg+シャフトで25    ダンベルカール 3セット 10kg(7.</description>
+    </item>
     
     <item>
       <title>日記 (2019/02/14)</title>

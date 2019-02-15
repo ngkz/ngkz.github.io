@@ -8,19 +8,47 @@
 <meta name="generator" content="Hugo 0.42.2 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
-<meta name="description" content="Kazutoshi Noguchi&#39;s blog">
+<meta name="description" content="Linux from Scratch  64bit glibcのテストが通るようになった。  -fno-plt -fexceptionsのどれかがCFLAGSに入っているとテストコードが、-z nowがLDFLAGSに入っているとダイナミックリンカが壊れることが分かった。 前者は、 一度しか実行せず攻撃を受けることもないテストコードには最適化もHardeningも不要なので、テスト時にすべてのフラグを削除することで対処した。 後者はライブラリのビルド時に一時的に -z now をLDFLAGSから削除することで対処した。  manページの圧縮処理とデバッグ情報の分離処理を書いている途中  筋トレ  THE プレワークアウトを筋トレ30分前に1スクープ摂取 HMBを昼, 夕食前, 就寝前に1g摂取 前日の睡眠 6:57 (0:26→7:28)  上半身プル&#43;腹筋
+集中できなかった
+   種目 重量&amp;目標回数 回数 備考     ハーフデッドリフト 3セット 30kg(27.5kgx2&#43;シャフト) 24回以上 ↑25 16 13 12? 3セット目途中で邪魔が入った。力が出しきれなかった   ワンハンドローイング 左右2セット 12.5kg(10kg&#43;シャフト) 15回以上 →ドロップ →右14 左16 右12→7.5kg(2.5kgx2&#43;シャフト)で15→5kgで13→2.5kgで15→1.25kgで13 左17→7.5kg(2.5kgx2&#43;シャフト)で14→5kgで21→2.5kgで20→1.25kgで22    ダンベルシュラッグ 2セット 30kg(27.5kgx2&#43;シャフト) 24回以上 →ドロップ ↑24 16→15kg&#43;シャフトで25    ダンベルカール 3セット 10kg(7.">
 
 
-<meta property="og:description" content="Kazutoshi Noguchi&#39;s blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="日記">
-<meta name="twitter:title" content="日記">
-<meta property="og:url" content="https://ngkz.github.io/categories/%E6%97%A5%E8%A8%98/">
-<meta property="twitter:url" content="https://ngkz.github.io/categories/%E6%97%A5%E8%A8%98/">
+<meta property="og:description" content="Linux from Scratch  64bit glibcのテストが通るようになった。  -fno-plt -fexceptionsのどれかがCFLAGSに入っているとテストコードが、-z nowがLDFLAGSに入っているとダイナミックリンカが壊れることが分かった。 前者は、 一度しか実行せず攻撃を受けることもないテストコードには最適化もHardeningも不要なので、テスト時にすべてのフラグを削除することで対処した。 後者はライブラリのビルド時に一時的に -z now をLDFLAGSから削除することで対処した。  manページの圧縮処理とデバッグ情報の分離処理を書いている途中  筋トレ  THE プレワークアウトを筋トレ30分前に1スクープ摂取 HMBを昼, 夕食前, 就寝前に1g摂取 前日の睡眠 6:57 (0:26→7:28)  上半身プル&#43;腹筋
+集中できなかった
+   種目 重量&amp;目標回数 回数 備考     ハーフデッドリフト 3セット 30kg(27.5kgx2&#43;シャフト) 24回以上 ↑25 16 13 12? 3セット目途中で邪魔が入った。力が出しきれなかった   ワンハンドローイング 左右2セット 12.5kg(10kg&#43;シャフト) 15回以上 →ドロップ →右14 左16 右12→7.5kg(2.5kgx2&#43;シャフト)で15→5kgで13→2.5kgで15→1.25kgで13 左17→7.5kg(2.5kgx2&#43;シャフト)で14→5kgで21→2.5kgで20→1.25kgで22    ダンベルシュラッグ 2セット 30kg(27.5kgx2&#43;シャフト) 24回以上 →ドロップ ↑24 16→15kg&#43;シャフトで25    ダンベルカール 3セット 10kg(7.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="日記 (2019/02/15)">
+<meta name="twitter:title" content="日記 (2019/02/15)">
+<meta property="og:url" content="https://ngkz.github.io/2019/02/diary-20190215/">
+<meta property="twitter:url" content="https://ngkz.github.io/2019/02/diary-20190215/">
 <meta property="og:site_name" content="ngkz.log">
-<meta property="og:description" content="Kazutoshi Noguchi&#39;s blog">
-<meta name="twitter:description" content="Kazutoshi Noguchi&#39;s blog">
+<meta property="og:description" content="Linux from Scratch  64bit glibcのテストが通るようになった。  -fno-plt -fexceptionsのどれかがCFLAGSに入っているとテストコードが、-z nowがLDFLAGSに入っているとダイナミックリンカが壊れることが分かった。 前者は、 一度しか実行せず攻撃を受けることもないテストコードには最適化もHardeningも不要なので、テスト時にすべてのフラグを削除することで対処した。 後者はライブラリのビルド時に一時的に -z now をLDFLAGSから削除することで対処した。  manページの圧縮処理とデバッグ情報の分離処理を書いている途中  筋トレ  THE プレワークアウトを筋トレ30分前に1スクープ摂取 HMBを昼, 夕食前, 就寝前に1g摂取 前日の睡眠 6:57 (0:26→7:28)  上半身プル&#43;腹筋
+集中できなかった
+   種目 重量&amp;目標回数 回数 備考     ハーフデッドリフト 3セット 30kg(27.5kgx2&#43;シャフト) 24回以上 ↑25 16 13 12? 3セット目途中で邪魔が入った。力が出しきれなかった   ワンハンドローイング 左右2セット 12.5kg(10kg&#43;シャフト) 15回以上 →ドロップ →右14 左16 右12→7.5kg(2.5kgx2&#43;シャフト)で15→5kgで13→2.5kgで15→1.25kgで13 左17→7.5kg(2.5kgx2&#43;シャフト)で14→5kgで21→2.5kgで20→1.25kgで22    ダンベルシュラッグ 2セット 30kg(27.5kgx2&#43;シャフト) 24回以上 →ドロップ ↑24 16→15kg&#43;シャフトで25    ダンベルカール 3セット 10kg(7.">
+<meta name="twitter:description" content="Linux from Scratch  64bit glibcのテストが通るようになった。  -fno-plt -fexceptionsのどれかがCFLAGSに入っているとテストコードが、-z nowがLDFLAGSに入っているとダイナミックリンカが壊れることが分かった。 前者は、 一度しか実行せず攻撃を受けることもないテストコードには最適化もHardeningも不要なので、テスト時にすべてのフラグを削除することで対処した。 後者はライブラリのビルド時に一時的に -z now をLDFLAGSから削除することで対処した。  manページの圧縮処理とデバッグ情報の分離処理を書いている途中  筋トレ  THE プレワークアウトを筋トレ30分前に1スクープ摂取 HMBを昼, 夕食前, 就寝前に1g摂取 前日の睡眠 6:57 (0:26→7:28)  上半身プル&#43;腹筋
+集中できなかった
+   種目 重量&amp;目標回数 回数 備考     ハーフデッドリフト 3セット 30kg(27.5kgx2&#43;シャフト) 24回以上 ↑25 16 13 12? 3セット目途中で邪魔が入った。力が出しきれなかった   ワンハンドローイング 左右2セット 12.5kg(10kg&#43;シャフト) 15回以上 →ドロップ →右14 左16 右12→7.5kg(2.5kgx2&#43;シャフト)で15→5kgで13→2.5kgで15→1.25kgで13 左17→7.5kg(2.5kgx2&#43;シャフト)で14→5kgで21→2.5kgで20→1.25kgで22    ダンベルシュラッグ 2セット 30kg(27.5kgx2&#43;シャフト) 24回以上 →ドロップ ↑24 16→15kg&#43;シャフトで25    ダンベルカール 3セット 10kg(7.">
 <meta property="og:locale" content="ja">
+
+  
+    <meta property="article:published_time" content="2019-02-15T23:59:59">
+  
+  
+    <meta property="article:modified_time" content="2019-02-15T23:59:59">
+  
+  
+  
+    
+      <meta property="article:section" content="日記">
+    
+  
+  
+    
+      <meta property="article:tag" content="LFS">
+    
+      <meta property="article:tag" content="筋トレ">
+    
+  
 
 
 <meta name="twitter:card" content="summary">
@@ -39,16 +67,14 @@
   <meta property="twitter:image" content="https://ngkz.github.io/mypicture.jpg">
 
 
-    <title>日記</title>
+    <title>日記 (2019/02/15)</title>
 
     <link rel="icon" href="https://ngkz.github.io/favicon.png">
     
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://ngkz.github.io/categories/%E6%97%A5%E8%A8%98/index.xml">
-    
 
     
 
-    <link rel="canonical" href="https://ngkz.github.io/categories/%E6%97%A5%E8%A8%98/">
+    <link rel="canonical" href="https://ngkz.github.io/2019/02/diary-20190215/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -187,48 +213,30 @@
 </nav>
 
       
-        
 
-      
       <div id="main" data-behavior="1"
         class="
                hasCoverMetaIn
                ">
-        
-          <section class="postShorten-group main-content-wrap">
-            
-            
-              
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
   
-    
-      
-        
-      
-    
+    <h1 class="post-title" itemprop="headline">
+      日記 (2019/02/15)
+    </h1>
   
-
-
   
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://ngkz.github.io/2019/02/diary-20190201/">
-          日記 (2019/02/01)
-        </a>
-      </h1>
-      
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2019-02-01T23:05:49&#43;09:00">
+      <time itemprop="datePublished" datetime="2019-02-15T23:59:59&#43;09:00">
         
   
   
   
   
-    2019-02-01
+    2019-02-15
   
 
       </time>
@@ -244,262 +252,36 @@
 
   </div>
 
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <h2 id="linux-from-scratch">Linux from Scratch</h2>
-
-<p>/etc/group</p>
-
-<h2 id="プロテインの調達">プロテインの調達</h2>
-
-<p>ゾロ目セール(40%割引)が始まったので、プロテイン、保存容器とプレワークサプリを注文した。明日の21時あたりまで待てばフラッシュセールでさらに5%安くなると思うが、以下の理由で早めに注文した。</p>
-
-<ol>
-<li>マイプロテインは配達に時間がかかる</li>
-<li>人気商品はフラッシュセールまでに在庫が無くなることがあるが、 まだどれが人気商品なのか把握していない</li>
-<li>プロテインの在庫がなくなってきた</li>
-</ol>
-
-<h2 id="その他">その他</h2>
-
-<p>眠い、疲れた</p>
-
-<p></p>
-      
-      <p>
-        <a href="https://ngkz.github.io/2019/02/diary-20190201/" class="postShorten-excerpt_link link">続きを読む</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
               
-  
-    
-      
-        
-      
-    
-  
 
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://ngkz.github.io/2019/01/diary-20190131/">
-          日記 (2019/01/31)
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2019-01-31T21:59:24&#43;09:00">
-        
-  
-  
-  
-  
-    2019-01-31
-  
-
-      </time>
-    
-    
-  
-  
-    <span>カテゴリー</span>
-    
-      <a class="category-link" href="https://ngkz.github.io/categories/%e6%97%a5%e8%a8%98">日記</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <h2 id="linux-from-scratch">Linux from Scratch</h2>
-
-<p>ほとんど作業できなかった</p>
-
-<h2 id="スキーのトップシートの修理">スキーのトップシートの修理</h2>
-
-<p>GPクリヤーは貼り合わせる前に接着剤を5-10分乾かす必要があるので、すき間ができるほどシートがめくれている部分しか接着できない。エポキシじゃないとダメだ</p>
-
-<h2 id="筋トレ">筋トレ</h2>
-
-<p>下半身</p>
-
-<p>😩</p>
-
-<table>
-<thead>
-<tr>
-<th>種目</th>
-<th>重量&amp;目標回数</th>
-<th>回数</th>
-<th>備考</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>ブルガリアンスクワット</td>
-<td>3セット 15kg x 2 左右12回以上 + 自重</td>
-<td>↓ 左8 右9 左8 右8 左5+21 右8+5</td>
-<td></td>
-</tr>
-
-<tr>
-<td>レッグエクステンション</td>
-<td>2セット 20kg 13回以上</td>
-<td></td>
-<td>時間切れ</td>
-</tr>
-
-<tr>
-<td>ヒップスラスト</td>
-<td>2セット 30kg 18回以上</td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td>ワイドスクワット</td>
-<td>1セット 15kg</td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td>レッグカール</td>
-<td>2セット 20kg 12回以上</td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td>片足スタンディングカーフレイズ</td>
-<td>3セット 自重 左右15回以上</td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td>ツイストクランチ</td>
-<td>3セット 5秒維持 10回以上 -&gt; 1秒維持 17回以上</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-<h2 id="プロテインの調達">プロテインの調達</h2>
-
-<p>プロテインは大容量のパッケージを買うと単価が安くなるが、</p>
+<h2 id="linux-from-scratch">Linux from Scratch</h2>
 
 <ul>
-<li>同じ味のものを5kgも飲むと途中で飽きそう</li>
-<li>複数の味の大容量パッケージを買って同時に封を切ると、邪魔だし飲みきる前に湿気るかダニが侵入しそう
+<li>64bit glibcのテストが通るようになった。
 
 <ul>
-<li>密閉できるボトルに移しかえるともっと邪魔になる</li>
+<li><code>-fno-plt</code> <code>-fexceptions</code>のどれかがCFLAGSに入っているとテストコードが、<code>-z now</code>がLDFLAGSに入っているとダイナミックリンカが壊れることが分かった。</li>
+<li>前者は、 一度しか実行せず攻撃を受けることもないテストコードには最適化もHardeningも不要なので、テスト時にすべてのフラグを削除することで対処した。</li>
+<li>後者はライブラリのビルド時に一時的に <code>-z now</code> をLDFLAGSから削除することで対処した。</li>
 </ul></li>
-</ul>
-
-<p>という問題があるので、味つきのプロテインを買うかわりに、大容量のノンフレーバーのプロテインを買って味付けをして飲むことにした。</p>
-
-<h2 id="その他">その他</h2>
-
-<p>マイプロテインの決済はクレジットカードが必須だが、クレジットカードの審査が通らなかったし、Vプリカは手数料が高いので困っている。
-楽天銀行の無料VISAデビットが復活していたので塩漬けにしていた口座で発行してみた。</p>
-
-<p>楽天銀行は、金利は高いがATM手数料が高くwebサイトのUXもいまいちなので、使い勝手のいい銀行に口座を開設したほうがいいかもしれない。</p>
-
-<p></p>
-      
-      <p>
-        <a href="https://ngkz.github.io/2019/01/diary-20190131/" class="postShorten-excerpt_link link">続きを読む</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://ngkz.github.io/2019/01/diary-20190130/">
-          日記 (2019/01/30)
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2019-01-30T22:01:35&#43;09:00">
-        
-  
-  
-  
-  
-    2019-01-30
-  
-
-      </time>
-    
-    
-  
-  
-    <span>カテゴリー</span>
-    
-      <a class="category-link" href="https://ngkz.github.io/categories/%e6%97%a5%e8%a8%98">日記</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <h2 id="lfs">LFS</h2>
-
-<p>進捗なし、まったく集中できていない。何時間かLFS構築に使える時間があったのに数十分しか作業できていない。</p>
-
-<h2 id="プロテイン調達">プロテイン調達</h2>
-
-<ul>
-<li>プロテインの在庫が無くなってきたので、マイプロテインの2/2のゾロ目セールに備えて商品をカゴに入れた。</li>
-<li>味が何十種類もあってどれを買えばいいかかなり迷う。当たり外れがあるので適当に買うと失敗するし、1食分(25g)のお試しサイズは\210なので大量に買うとかなりの金額になる。</li>
-<li>ついでに買うサプリメントを選んだり、お試しサイズで買うフレーバーをネットで調べて厳選していたら2時間たってしまった。</li>
+<li>manページの圧縮処理とデバッグ情報の分離処理を書いている途中</li>
 </ul>
 
 <h2 id="筋トレ">筋トレ</h2>
 
-<p>上半身プル</p>
+<ul>
+<li>THE プレワークアウトを筋トレ30分前に1スクープ摂取</li>
+<li>HMBを昼, 夕食前, 就寝前に1g摂取</li>
+<li>前日の睡眠 6:57 (0:26→7:28)</li>
+</ul>
+
+<p><strong>上半身プル+腹筋</strong></p>
+
+<p>集中できなかった</p>
 
 <table>
 <thead>
@@ -514,467 +296,169 @@
 <tbody>
 <tr>
 <td>ハーフデッドリフト</td>
-<td>3セット 25kg x 2 17回以上</td>
-<td>↑22 19 16</td>
-<td></td>
+<td>3セット 30kg(27.5kgx2+シャフト) 24回以上</td>
+<td>↑25 16 13 12?</td>
+<td>3セット目途中で邪魔が入った。力が出しきれなかった</td>
 </tr>
 
 <tr>
 <td>ワンハンドローイング</td>
-<td>左右2セット 10kg 17回以上</td>
-<td>↑左21 右21 左19+5kgで何回か 右16+5kgで何回か</td>
-<td>右側の2セット目で負荷が肩に逃げてしまった。たぶんフォームが間違ってる</td>
+<td>左右2セット 12.5kg(10kg+シャフト) 15回以上 →ドロップ</td>
+<td>→右14 左16 右12→7.5kg(2.5kgx2+シャフト)で15→5kgで13→2.5kgで15→1.25kgで13 左17→7.5kg(2.5kgx2+シャフト)で14→5kgで21→2.5kgで20→1.25kgで22</td>
+<td></td>
 </tr>
 
 <tr>
 <td>ダンベルシュラッグ</td>
-<td>2セット 30kg x 2 17回以上</td>
+<td>2セット 30kg(27.5kgx2+シャフト) 24回以上 →ドロップ</td>
+<td>↑24 16→15kg+シャフトで25</td>
 <td></td>
-<td>時間がない</td>
 </tr>
 
 <tr>
 <td>ダンベルカール</td>
-<td>3セット 7.5kg    13回以上</td>
-<td></td>
-<td>時間がない</td>
+<td>3セット 10kg(7.5kg+シャフト) 13回以上 <del>→ドロップ</del></td>
+<td>12.5kgで3回 8.5 8.5</td>
+<td>重量間違えた</td>
 </tr>
 
 <tr>
 <td>変形バックエクステンション</td>
-<td>2セット 5kg</td>
+<td>2セット 自重+5kg 16回以上 →ドロップ</td>
 <td></td>
-<td>時間がない</td>
+<td>時間切れ</td>
+</tr>
+
+<tr>
+<td>ツイストクランチ</td>
+<td>3セット 自重 5秒維持 16回以上 → 1秒維持 23回以上</td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
 
-<p>プロテインの調達、英語ライティングの参考書探しとチャットをしてたら途中で時間切れ :(</p>
-
 <h2 id="その他">その他</h2>
 
 <ul>
-<li>英語のライティングがほとんどできないのをどうにかしたい。とりあえず英語ライティングの本を何冊か買ってみた。</li>
-</ul>
-
-<p></p>
-      
-      <p>
-        <a href="https://ngkz.github.io/2019/01/diary-20190130/" class="postShorten-excerpt_link link">続きを読む</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://ngkz.github.io/2019/01/diary-20190129/">
-          日記 (2019/1/29)
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2019-01-29T20:34:30&#43;09:00">
-        
-  
-  
-  
-  
-    2019-01-29
-  
-
-      </time>
-    
-    
-  
-  
-    <span>カテゴリー</span>
-    
-      <a class="category-link" href="https://ngkz.github.io/categories/%e6%97%a5%e8%a8%98">日記</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <h2 id="筋トレ">筋トレ</h2>
-
-<p>上半身プッシュ + 腹筋</p>
-
-<pre><code>プッシュアップ               3セット 自重              12回以上 + 膝つき             ↑12+4回 8+4回 11+6回
-ダンベルショルダープレス     2セット 10kgx2            14回以上+5kgで何回か          →13回 10+15回
-ダンベルフレンチプレス       2セット 10kg              12回以上+5kgで何回か          ↑12回 11+5回
-ダンベルフライ               2セット 7.5kg x 2         14回以上+5kgで何回か          ↓12回 12回+?回
-ツイストクランチ             3セット                   5秒維持 13回以上 -&gt; 1秒維持   ↓9回 -&gt; 16回 20回
-</code></pre>
-
-<p>土曜に片足スタンディングカーフレイズした結果起きたヒラメ筋の付け根の痛みがまだ収まらない。負荷が強すぎたようだ。しばらく下半身の筋トレはできなさそう</p>
-
-<h2 id="linux-from-scratch">Linux from Scratch</h2>
-
-<p><code>*FLAGS</code>のカスタマイズ</p>
-
-<p>作業に集中できていない。</p>
-
-<h2 id="その他">その他</h2>
+<li>明日が休日だとつい夜更ししてしまう。健康によくないし、休日でないとできないことができなくなるし、筋肉や神経系に悪影響が出るので、23時になったらPCを強制サスペンドするようにcronを設定した。</li>
+<li>電気毛布とカードスリーブと名刺入れが届いた。
 
 <ul>
-<li>リフト券の引換券が当たった。ラックとスキー板を直したらスキーしに行こう</li>
-<li>DOOM Emacs たまに使いづらい、vimに戻りたくなってきた。でもvimでDOOM Emacsっぽいことをしようとすると面倒くさい</li>
+<li>磁気カードと非接触ICカードを防磁防RFカードスリーブに入れた。</li>
+<li>スリーブを付けるとカードが財布のカード入れに入らない。
+
+<ul>
+<li>カードスリーブをつけるとサイズが大きくなるのを忘れていた。</li>
+<li>スリーブよりシールド付きの財布を買った方がよかったかもしれない。</li>
+</ul></li>
+<li>スリーブに入れるとスマホで読みとれなくなるので、防RF効果はちゃんとあるようだ。
+
+<ul>
+<li>防磁は試す勇気がない</li>
+</ul></li>
+<li>名刺入れは金属部分に大きく深い切り傷があったので、販売者に交換してもらうことにした。</li>
+<li>電気毛布はちゃんと動いた。明日車の中でどれくらいの効果があるかテストしてみる予定</li>
+</ul></li>
 </ul>
 
-<p></p>
-      
-      <p>
-        <a href="https://ngkz.github.io/2019/01/diary-20190129/" class="postShorten-excerpt_link link">続きを読む</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
             
               
-  
-    
-      
-        
-      
-    
-  
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">タグ</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://ngkz.github.io/tags/lfs/">LFS</a>
 
+  <a class="tag tag--primary tag--small" href="https://ngkz.github.io/tags/%E7%AD%8B%E3%83%88%E3%83%AC/">筋トレ</a>
 
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://ngkz.github.io/2019/01/diary-20190128/">
-          日記 (2019/01/28)
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2019-01-29T04:29:41&#43;09:00">
-        
-  
-  
-  
-  
-    2019-01-29
-  
-
-      </time>
-    
-    
-  
-  
-    <span>カテゴリー</span>
-    
-      <a class="category-link" href="https://ngkz.github.io/categories/%e6%97%a5%e8%a8%98">日記</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <p>頭痛がしたので帰ってきた後すぐ寝たら中途半端な時間に目がさめた。</p>
-
-<h2 id="lfs">LFS</h2>
-
-<p>進捗なし</p>
-
-<h2 id="スキーのトップシートの修理">スキーのトップシートの修理</h2>
-
-<p>他の部分を接着した。</p>
-
-<h2 id="筋トレ">筋トレ</h2>
-
-<p>食後に消化を待つと家を出る時間の直前になってしまうので延期</p>
-
-<p></p>
-      
-      <p>
-        <a href="https://ngkz.github.io/2019/01/diary-20190128/" class="postShorten-excerpt_link link">続きを読む</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
+                  </div>
+                
               
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://ngkz.github.io/2019/01/diary-20190127/">
-          日記 (2019/01/27)
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2019-01-27T22:21:54&#43;09:00">
-        
-  
-  
-  
-  
-    2019-01-27
-  
-
-      </time>
-    
-    
-  
-  
-    <span>カテゴリー</span>
-    
-      <a class="category-link" href="https://ngkz.github.io/categories/%e6%97%a5%e8%a8%98">日記</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <h2 id="車のメンテ">車のメンテ</h2>
-
-<p>オイルとフィルターを交換してタイヤローテーションもした。先週スキーに行ったので、車の足回りを高圧洗浄機で掃除した。</p>
-
-<h2 id="ラックの修理">ラックの修理</h2>
-
-<p>試しに立バンドのボルトが入るようにステーを削って前席の左右に取り付けてみたが、立バンド間の幅が小さくてラックが入らなかった。立バンドの取り付け位置を変えてもだめだったら、叩いてステーの角度を変えるか、ステーを切断して短くする必要がありそう</p>
-
-
-
- 
-  
-  
-  
-  
-    
-  
-    
-      
-    
-  
-
-<div class="figure center" >
-  
-    <a class="fancybox" href="https://ngkz.github.io/assets/diary-20190127/clamp.jpg" title="取り付けた立バンドとステー" data-fancybox-group="">
-  
-    <img class="fig-img" src="https://ngkz.github.io/assets/diary-20190127/clamp.jpg" style="width: 512px;height: 384px;" alt="取り付けた立バンドとステー">
-  
-    </a>
-  
-   
-    <span class="caption">取り付けた立バンドとステー</span>
-  
-</div>
-
-
-<h2 id="スキーのトップシートの修理">スキーのトップシートの修理</h2>
-
-<p>昨日の接着面がムラがあるものの十分な強度で接着されていたので、他の部分も接着した。</p>
-
-<p></p>
-      
-      <p>
-        <a href="https://ngkz.github.io/2019/01/diary-20190127/" class="postShorten-excerpt_link link">続きを読む</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
             
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
               
-  
-    
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">次</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/02/diary-20190214/" data-tooltip="日記 (2019/02/14)">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">前</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
       
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
         
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://ngkz.github.io/2019/01/diary-20190126/">
-          日記 (2019/01/26)
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2019-01-26T23:17:24&#43;09:00">
-        
-  
-  
-  
-  
-    2019-01-26
-  
-
-      </time>
-    
-    
-  
-  
-    <span>カテゴリー</span>
-    
-      <a class="category-link" href="https://ngkz.github.io/categories/%e6%97%a5%e8%a8%98">日記</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <h2 id="ラックの修理">ラックの修理</h2>
-
-<p>簡単な加工で使えそうなステーと立バンド各8個と、サビ止めを調達した。</p>
-
-<h2 id="スキーのトップシートの修理">スキーのトップシートの修理</h2>
-
-<p>無色で弾力性のあるエポキシ接着剤が売っていないので、かわりにGPクリヤーを購入した。接着面全体を圧着するために5x100x100のゴム板も買った。</p>
-
-<p>接着力が不安なので、試しに完全に接着されなくても問題なさそうな場所を接着してみた。</p>
-
-
-
- 
-  
-  
-  
-  
-    
-  
-    
-      
-    
-  
-
-<div class="figure center" >
-  
-    <a class="fancybox" href="https://ngkz.github.io/assets/diary-20190126/ski.jpg" title="ゴム板とクランプで圧着" data-fancybox-group="">
-  
-    <img class="fig-img" src="https://ngkz.github.io/assets/diary-20190126/ski.jpg" style="width: 512px;height: 384px;" alt="ゴム板とクランプで圧着">
-  
-    </a>
-  
-   
-    <span class="caption">ゴム板とクランプで圧着</span>
-  
-</div>
-
-
-<p>完全な接着に24時間かかるので、修理には数週間かかりそう。</p>
-
-<h2 id="筋トレ">筋トレ</h2>
-
-<p>全身</p>
-
-<p>集中できなかった</p>
-
-<pre><code>ブルガリアンスクワット       3セット 15kgx2 + 自重     11回以上                     右11回 左10回 右8回 左8回 右7回+自重で何回か 左6回+自重で何回か
-プッシュアップ               3セット 自重              12回以上 + 膝つき            9回+膝つき9回 7回+膝つき4回 6回+膝つき5回
-ハーフデッドリフト           3セット 25kg x 2          15回以上                     16回 力が出しきれてない 27.5kgx2 13回 13回
-スタンディングカーフレイズ   3セット 自重,片足づつ                                  右25回 左20回 右17回 左22回 右16回 左16回
-ダンベルカール               3セット 7.5kg             12回以上                     12.5回 7.5回 8回
-ツイストクランチ             3セット 5秒維持           14回以上 -&gt; 1秒維持 19回以上 5秒維持 12回 -&gt; 1秒維持 17回 18回
-</code></pre>
-
-<p></p>
-      
-      <p>
-        <a href="https://ngkz.github.io/2019/01/diary-20190126/" class="postShorten-excerpt_link link">続きを読む</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-            
-  <div class="pagination-bar">
-    <ul class="pagination">
-      
-        
-          <li class="pagination-prev">
-            <a class="btn btn--default btn--small" href="https://ngkz.github.io/categories/%E6%97%A5%E8%A8%98/page/2/">
-              <i class="fa fa-angle-left text-base icon-mr"></i>
-              <span>新しい投稿</span>
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2019/02/diary-20190215/">
+              <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2019/02/diary-20190215/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
         
-          <li class="pagination-next">
-            <a class="btn btn--default btn--small" href="https://ngkz.github.io/categories/%E6%97%A5%E8%A8%98/page/4/">
-              <span>古い投稿</span>
-              <i class="fa fa-angle-right text-base icon-ml"></i>
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2019/02/diary-20190215/">
+              <i class="fa fa-google-plus"></i>
             </a>
           </li>
         
       
-      <li class="pagination-number">page 3 of 4</li>
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
     </ul>
-  </div>
+  
+</div>
 
-
-          </section>
-        
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">ngkz.log</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://ngkz.github.io/" property="cc:attributionName" rel="cc:attributionURL">Kazutoshi Noguchi</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
@@ -982,6 +466,102 @@
 </footer>
 
       </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="1">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">次</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/02/diary-20190214/" data-tooltip="日記 (2019/02/14)">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">前</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2019/02/diary-20190215/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2019/02/diary-20190215/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2019/02/diary-20190215/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="1">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fngkz.github.io%2F2019%2F02%2Fdiary-20190215%2F">
+          <i class="fa fa-facebook-official"></i><span>Facebookで共有</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fngkz.github.io%2F2019%2F02%2Fdiary-20190215%2F">
+          <i class="fa fa-twitter"></i><span>Twitterで共有</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fngkz.github.io%2F2019%2F02%2Fdiary-20190215%2F">
+          <i class="fa fa-google-plus"></i><span>Google&#43;で共有</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
     </div>
     
     <div id="about">
@@ -1826,6 +1406,32 @@ $(document).ready(function() {
 });
 </script>
 
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/ngkz.github.io\/2019\/02\/diary-20190215\/';
+          
+            this.page.identifier = '\/2019\/02\/diary-20190215\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'ngkz-log';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
 
 
 
