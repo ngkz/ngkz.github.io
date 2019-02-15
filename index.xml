@@ -17,9 +17,116 @@
       <pubDate>Fri, 15 Feb 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/02/diary-20190215/</guid>
-      <description>Linux from Scratch  64bit glibcのテストが通るようになった。  -fno-plt -fexceptionsのどれかがCFLAGSに入っているとテストコードが、-z nowがLDFLAGSに入っているとダイナミックリンカが壊れることが分かった。 前者は、 一度しか実行せず攻撃を受けることもないテストコードには最適化もHardeningも不要なので、テスト時にすべてのフラグを削除することで対処した。 後者はライブラリのビルド時に一時的に -z now をLDFLAGSから削除することで対処した。  manページの圧縮処理とデバッグ情報の分離処理を書いている途中  筋トレ  THE プレワークアウトを筋トレ30分前に1スクープ摂取 HMBを昼, 夕食前, 就寝前に1g摂取 前日の睡眠 6:57 (0:26→7:28) 食事前に筋トレ  上半身プル+腹筋
-集中できなかった
-   種目 重量&amp;amp;目標回数 回数 備考     ハーフデッドリフト 3セット 30kg(27.5kgx2+シャフト) 24回以上 ↑25 16 13 12? 3セット目途中で邪魔が入った。力が出しきれなかった   ワンハンドローイング 左右2セット 12.5kg(10kg+シャフト) 15回以上 →ドロップ →右14 左16 右12→7.5kg(2.5kgx2+シャフト)で15→5kgで13→2.5kgで15→1.25kgで13 左17→7.5kg(2.5kgx2+シャフト)で14→5kgで21→2.5kgで20→1.25kgで22    ダンベルシュラッグ 2セット 30kg(27.</description>
+      <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;64bit glibcのテストが通るようになった。
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-fno-plt&lt;/code&gt; &lt;code&gt;-fexceptions&lt;/code&gt;のどれかがCFLAGSに入っているとテストコードが、&lt;code&gt;-z now&lt;/code&gt;がLDFLAGSに入っているとダイナミックリンカが壊れることが分かった。&lt;/li&gt;
+&lt;li&gt;前者は、 一度しか実行せず攻撃を受けることもないテストコードには最適化もHardeningも不要なので、テスト時にすべてのフラグを削除することで対処した。&lt;/li&gt;
+&lt;li&gt;後者はプログラムのビルド時以外は &lt;code&gt;-z now&lt;/code&gt; をLDFLAGSから削除することで対処した。
+
+&lt;ul&gt;
+&lt;li&gt;プログラムをビルドするときに削除すると一部のバイナリがFull RELROにならない&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;manページの圧縮処理とデバッグ情報の分離処理を書いている途中&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;THE プレワークアウトを筋トレ30分前に1スクープ摂取&lt;/li&gt;
+&lt;li&gt;HMBを昼, 夕食前, 就寝前に1g摂取&lt;/li&gt;
+&lt;li&gt;前日の睡眠 6:57 (0:26→7:28)&lt;/li&gt;
+&lt;li&gt;食事前に筋トレ&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;上半身プル+腹筋&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;集中できなかった&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;種目&lt;/th&gt;
+&lt;th&gt;重量&amp;amp;目標回数&lt;/th&gt;
+&lt;th&gt;回数&lt;/th&gt;
+&lt;th&gt;備考&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ハーフデッドリフト&lt;/td&gt;
+&lt;td&gt;3セット 30kg(27.5kgx2+シャフト) 24回以上&lt;/td&gt;
+&lt;td&gt;↑25 16 13 12?&lt;/td&gt;
+&lt;td&gt;3セット目途中で邪魔が入った。力が出しきれなかった&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ワンハンドローイング&lt;/td&gt;
+&lt;td&gt;左右2セット 12.5kg(10kg+シャフト) 15回以上 →ドロップ&lt;/td&gt;
+&lt;td&gt;→右14 左16 右12→7.5kg(2.5kgx2+シャフト)で15→5kgで13→2.5kgで15→1.25kgで13 左17→7.5kg(2.5kgx2+シャフト)で14→5kgで21→2.5kgで20→1.25kgで22&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ダンベルシュラッグ&lt;/td&gt;
+&lt;td&gt;2セット 30kg(27.5kgx2+シャフト) 24回以上 →ドロップ&lt;/td&gt;
+&lt;td&gt;↑24 16→15kg+シャフトで25&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ダンベルカール&lt;/td&gt;
+&lt;td&gt;3セット 10kg(7.5kg+シャフト) 13回以上 &lt;del&gt;→ドロップ&lt;/del&gt;&lt;/td&gt;
+&lt;td&gt;12.5kgで3回 8.5 8.5&lt;/td&gt;
+&lt;td&gt;重量間違えた&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;変形バックエクステンション&lt;/td&gt;
+&lt;td&gt;2セット 自重+5kg 16回以上 →ドロップ&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;時間切れ&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ツイストクランチ&lt;/td&gt;
+&lt;td&gt;3セット 自重 5秒維持 16回以上 → 1秒維持 23回以上&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;明日が休日だとつい夜更ししてしまう。健康によくないし、休日でないとできないことができなくなるし、筋肉や神経系に悪影響が出るので、23時になったらPCを強制サスペンドするようにcronを設定した。&lt;/li&gt;
+&lt;li&gt;電気毛布とカードスリーブと名刺入れが届いた。
+
+&lt;ul&gt;
+&lt;li&gt;磁気カードと非接触ICカードを防磁防RFカードスリーブに入れた。&lt;/li&gt;
+&lt;li&gt;スリーブを付けるとカードが財布のカード入れに入らない。
+
+&lt;ul&gt;
+&lt;li&gt;カードスリーブをつけるとサイズが大きくなるのを忘れていた。&lt;/li&gt;
+&lt;li&gt;スリーブよりシールド付きの財布を買った方がよかったかもしれない。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;スリーブに入れるとスマホで読みとれなくなるので、防RF効果はちゃんとあるようだ。
+
+&lt;ul&gt;
+&lt;li&gt;防磁は試す勇気がない&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;名刺入れは金属部分に大きく深い切り傷があったので、販売者に交換してもらうことにした。&lt;/li&gt;
+&lt;li&gt;電気毛布はちゃんと動いた。明日車の中でどれくらいの効果があるかテストしてみる予定&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
