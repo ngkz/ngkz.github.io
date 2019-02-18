@@ -25,11 +25,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;-fno-plt&lt;/code&gt; &lt;code&gt;-fexceptions&lt;/code&gt;のどれかがCFLAGSに入っているとテストコードが、&lt;code&gt;-z now&lt;/code&gt;がLDFLAGSに入っているとダイナミックリンカが壊れることが分かった。&lt;/li&gt;
 &lt;li&gt;前者は、 一度しか実行せず攻撃を受けることもないテストコードには最適化もHardeningも不要なので、テスト時にすべてのフラグを削除することで対処した。&lt;/li&gt;
-&lt;li&gt;後者はプログラムのビルド時以外は &lt;code&gt;-z now&lt;/code&gt; をLDFLAGSから削除することで対処した。
-
-&lt;ul&gt;
-&lt;li&gt;プログラムをビルドするときに削除すると一部のバイナリがFull RELROにならない&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;後者はライブラリのビルド時に一時的に &lt;code&gt;-z now&lt;/code&gt; をLDFLAGSから削除することで対処した。&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;manページの圧縮処理とデバッグ情報の分離処理を書いている途中&lt;/li&gt;
 &lt;/ul&gt;
@@ -106,7 +102,7 @@
 
 &lt;ul&gt;
 &lt;li&gt;明日が休日だとつい夜更ししてしまう。健康によくないし、休日でないとできないことができなくなるし、筋肉や神経系に悪影響が出るので、23時になったらPCを強制サスペンドするようにcronを設定した。&lt;/li&gt;
-&lt;li&gt;電気毛布とカードスリーブと名刺入れが届いた。
+&lt;li&gt;&lt;a href=&#34;https://www.amazon.co.jp/gp/product/B01LW43RYZ&#34;&gt;電気毛布&lt;/a&gt;と&lt;a href=&#34;https://www.amazon.co.jp/gp/product/B073TDGH3M&#34;&gt;カードスリーブ&lt;/a&gt;と&lt;a href=&#34;https://www.amazon.co.jp/gp/product/B07D26LM4K&#34;&gt;名刺入れ&lt;/a&gt;が届いた。
 
 &lt;ul&gt;
 &lt;li&gt;磁気カードと非接触ICカードを防磁防RFカードスリーブに入れた。&lt;/li&gt;
@@ -122,6 +118,7 @@
 &lt;li&gt;防磁は試す勇気がない&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;名刺入れは金属部分に大きく深い切り傷があったので、販売者に交換してもらうことにした。&lt;/li&gt;
+&lt;li&gt;その後、業者が交換品を送り、不良品はこっちで破棄することになった。 &lt;a href=&#34;https://ngkz.github.io/2019/02/diary-20190217/&#34;&gt;2日後に交換品が届いた&lt;/a&gt;。&lt;/li&gt;
 &lt;li&gt;電気毛布はちゃんと動いた。明日車の中でどれくらいの効果があるかテストしてみる予定&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
