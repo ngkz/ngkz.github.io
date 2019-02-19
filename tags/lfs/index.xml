@@ -6,10 +6,113 @@
     <description>Recent content in Lfs on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 18 Feb 2019 23:40:00 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 19 Feb 2019 22:40:35 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/tags/lfs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>日記 2019/02/19(火)</title>
+      <link>https://ngkz.github.io/2019/02/diary-20190219/</link>
+      <pubDate>Tue, 19 Feb 2019 22:40:35 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/02/diary-20190219/</guid>
+      <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;一時システムのGCC (Pass 2)を間違えてmultilib無効していたので直して再ビルドした。ついでにPIE・Stack Smashing Protector・Build ID出力をデフォルトで有効にした。
+
+&lt;ul&gt;
+&lt;li&gt;32bit glibcのビルドが通るようになった。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;ついでにBinutils (Pass 2)もRELROをデフォルトにし、不要なライブラリ検索パスも除去して再ビルドした。&lt;/li&gt;
+&lt;li&gt;一時システムにホストの環境をマウントする処理と環境のアンマウント処理に不備があったので直した。&lt;/li&gt;
+&lt;li&gt;デバッグ情報を分離するスクリプトを書いている。&lt;/li&gt;
+&lt;li&gt;もうglibcをビルドしはじめてから12日もたっている。システムをmultiarch化しようとしたり&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;、libcを強引にmultilib化したmusl libcに置き換えたとき&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;は数日間苦戦したあと諦めることになったし、システムの基礎部分をいじるとかなり苦労する。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;THE プレワークアウトを筋トレ30分前に1スクープ摂取&lt;/li&gt;
+&lt;li&gt;HMBを朝, トレーニング一時間前, 就寝前に1g摂取&lt;/li&gt;
+&lt;li&gt;前日の睡眠 6:45 (0:29→7:19)
+
+&lt;ul&gt;
+&lt;li&gt;短すぎる&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;食事前に筋トレ&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;上半身プッシュ+腹筋&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;種目&lt;/th&gt;
+&lt;th&gt;重量&amp;amp;目標回数&lt;/th&gt;
+&lt;th&gt;回数&lt;/th&gt;
+&lt;th&gt;備考&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ローテーターカフのウォームアップ&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;プッシュアップ&lt;/td&gt;
+&lt;td&gt;3セット 自重 10回以上 → 膝つき&lt;/td&gt;
+&lt;td&gt;↑11→3 7.5→3 5.5→5&lt;/td&gt;
+&lt;td&gt;肩甲骨を寄せるのを忘れたせいか大胸筋にあまり効いている感じがしない&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ダンベルショルダープレス&lt;/td&gt;
+&lt;td&gt;2セット 25kg(10kg+シャフトx2) 16回以上 → ドロップ&lt;/td&gt;
+&lt;td&gt;↓14 12→5kgx2で20→2.5kgx2で16&lt;/td&gt;
+&lt;td&gt;直前にスキーのケバ取りをしたのが原因かも&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ダンベルフレンチプレス&lt;/td&gt;
+&lt;td&gt;2セット 12.5kg(10kg+シャフト) 13回以上 → ドロップ&lt;/td&gt;
+&lt;td&gt;↓10 9→7.5kg(2.5x2+シャフト)で11&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ダンベルフライ&lt;/td&gt;
+&lt;td&gt;2セット 20kg(7.5kg+シャフトx2) 19回以上 → ドロップ&lt;/td&gt;
+&lt;td&gt;↓16 11→5kgx2で30&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ツイストクランチ&lt;/td&gt;
+&lt;td&gt;3セット 自重 5秒維持 16回以上 → 1秒維持 23回以上&lt;/td&gt;
+&lt;td&gt;? → 30 29&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;スキーのケバ取りを途中までやった。
+
+&lt;ul&gt;
+&lt;li&gt;真鍮ブラシで擦っても落ちない傷があったし、滑走面に何箇所かへこみがあるのでシーズンが終わったらメンテナンスに出したほうがよさそう&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>日記 2019/02/18(月)</title>

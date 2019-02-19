@@ -8,43 +8,415 @@
 <meta name="generator" content="Hugo 0.42.2 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
-<meta name="description" content="cargo fetch1 でパッケージを取得すると、~/.cargo/registry/src/github.com-1ecc6299db9ec823/(パッケージ名)-(バージョン) にパッケージのソースコードが展開される。
-Cargo.lockにすべての依存クレートの名前とバージョンが記録されているので、これを見てコードに問題がないか調べることができる。
- cargo buildはビルドスクリプトを実行してしまうのでダメ [return]   ">
+<meta name="description" content="Linux from Scratch
 
 
-<meta property="og:description" content="cargo fetch1 でパッケージを取得すると、~/.cargo/registry/src/github.com-1ecc6299db9ec823/(パッケージ名)-(バージョン) にパッケージのソースコードが展開される。
-Cargo.lockにすべての依存クレートの名前とバージョンが記録されているので、これを見てコードに問題がないか調べることができる。
- cargo buildはビルドスクリプトを実行してしまうのでダメ [return]   ">
+一時システムのGCC (Pass 2)を間違えてmultilib無効していたので直して再ビルドした。ついでにPIE・Stack Smashing Protector・Build ID出力をデフォルトで有効にした。
+
+
+32bit glibcのビルドが通るようになった。
+
+ついでにBinutils (Pass 2)もRELROをデフォルトにし、不要なライブラリ検索パスも除去して再ビルドした。
+一時システムにホストの環境をマウントする処理と環境のアンマウント処理に不備があったので直した。
+デバッグ情報を分離するスクリプトを書いている。
+もうglibcをビルドしはじめてから12日もたっている。システムをmultiarch化しようとしたり1、libcを強引にmultilib化したmusl libcに置き換えたとき2は数日間苦戦したあと諦めることになったし、システムの基礎部分をいじるとかなり苦労する。
+
+
+筋トレ
+
+
+THE プレワークアウトを筋トレ30分前に1スクープ摂取
+HMBを朝, トレーニング一時間前, 就寝前に1g摂取
+前日の睡眠 6:45 (0:29→7:19)
+
+
+短すぎる
+
+食事前に筋トレ
+
+
+上半身プッシュ&#43;腹筋
+
+
+
+
+種目
+重量&amp;目標回数
+回数
+備考
+
+
+
+
+
+ローテーターカフのウォームアップ
+
+
+
+
+
+
+プッシュアップ
+3セット 自重 10回以上 → 膝つき
+↑11→3 7.5→3 5.5→5
+肩甲骨を寄せるのを忘れたせいか大胸筋にあまり効いている感じがしない
+
+
+
+ダンベルショルダープレス
+2セット 25kg(10kg&#43;シャフトx2) 16回以上 → ドロップ
+↓14 12→5kgx2で20→2.5kgx2で16
+直前にスキーのケバ取りをしたのが原因かも
+
+
+
+ダンベルフレンチプレス
+2セット 12.5kg(10kg&#43;シャフト) 13回以上 → ドロップ
+↓10 9→7.5kg(2.5x2&#43;シャフト)で11
+
+
+
+
+ダンベルフライ
+2セット 20kg(7.5kg&#43;シャフトx2) 19回以上 → ドロップ
+↓16 11→5kgx2で30
+
+
+
+
+ツイストクランチ
+3セット 自重 5秒維持 16回以上 → 1秒維持 23回以上
+? → 30 29
+
+
+
+
+
+その他
+
+
+スキーのケバ取りを途中までやった。
+
+
+真鍮ブラシで擦っても落ちない傷があったし、滑走面に何箇所かへこみがあるのでシーズンが終わったらメンテナンスに出したほうがよさそう
+
+
+
+">
+
+
+<meta property="og:description" content="Linux from Scratch
+
+
+一時システムのGCC (Pass 2)を間違えてmultilib無効していたので直して再ビルドした。ついでにPIE・Stack Smashing Protector・Build ID出力をデフォルトで有効にした。
+
+
+32bit glibcのビルドが通るようになった。
+
+ついでにBinutils (Pass 2)もRELROをデフォルトにし、不要なライブラリ検索パスも除去して再ビルドした。
+一時システムにホストの環境をマウントする処理と環境のアンマウント処理に不備があったので直した。
+デバッグ情報を分離するスクリプトを書いている。
+もうglibcをビルドしはじめてから12日もたっている。システムをmultiarch化しようとしたり1、libcを強引にmultilib化したmusl libcに置き換えたとき2は数日間苦戦したあと諦めることになったし、システムの基礎部分をいじるとかなり苦労する。
+
+
+筋トレ
+
+
+THE プレワークアウトを筋トレ30分前に1スクープ摂取
+HMBを朝, トレーニング一時間前, 就寝前に1g摂取
+前日の睡眠 6:45 (0:29→7:19)
+
+
+短すぎる
+
+食事前に筋トレ
+
+
+上半身プッシュ&#43;腹筋
+
+
+
+
+種目
+重量&amp;目標回数
+回数
+備考
+
+
+
+
+
+ローテーターカフのウォームアップ
+
+
+
+
+
+
+プッシュアップ
+3セット 自重 10回以上 → 膝つき
+↑11→3 7.5→3 5.5→5
+肩甲骨を寄せるのを忘れたせいか大胸筋にあまり効いている感じがしない
+
+
+
+ダンベルショルダープレス
+2セット 25kg(10kg&#43;シャフトx2) 16回以上 → ドロップ
+↓14 12→5kgx2で20→2.5kgx2で16
+直前にスキーのケバ取りをしたのが原因かも
+
+
+
+ダンベルフレンチプレス
+2セット 12.5kg(10kg&#43;シャフト) 13回以上 → ドロップ
+↓10 9→7.5kg(2.5x2&#43;シャフト)で11
+
+
+
+
+ダンベルフライ
+2セット 20kg(7.5kg&#43;シャフトx2) 19回以上 → ドロップ
+↓16 11→5kgx2で30
+
+
+
+
+ツイストクランチ
+3セット 自重 5秒維持 16回以上 → 1秒維持 23回以上
+? → 30 29
+
+
+
+
+
+その他
+
+
+スキーのケバ取りを途中までやった。
+
+
+真鍮ブラシで擦っても落ちない傷があったし、滑走面に何箇所かへこみがあるのでシーズンが終わったらメンテナンスに出したほうがよさそう
+
+
+
+">
 <meta property="og:type" content="article">
-<meta property="og:title" content="依存しているパッケージ(crate)の中身を実行せずに調べる方法 (Rust)">
-<meta name="twitter:title" content="依存しているパッケージ(crate)の中身を実行せずに調べる方法 (Rust)">
-<meta property="og:url" content="https://ngkz.github.io/2018/07/audit-cargo-crate/">
-<meta property="twitter:url" content="https://ngkz.github.io/2018/07/audit-cargo-crate/">
+<meta property="og:title" content="日記 2019/02/19(火)">
+<meta name="twitter:title" content="日記 2019/02/19(火)">
+<meta property="og:url" content="https://ngkz.github.io/2019/02/diary-20190219/">
+<meta property="twitter:url" content="https://ngkz.github.io/2019/02/diary-20190219/">
 <meta property="og:site_name" content="ngkz.log">
-<meta property="og:description" content="cargo fetch1 でパッケージを取得すると、~/.cargo/registry/src/github.com-1ecc6299db9ec823/(パッケージ名)-(バージョン) にパッケージのソースコードが展開される。
-Cargo.lockにすべての依存クレートの名前とバージョンが記録されているので、これを見てコードに問題がないか調べることができる。
- cargo buildはビルドスクリプトを実行してしまうのでダメ [return]   ">
-<meta name="twitter:description" content="cargo fetch1 でパッケージを取得すると、~/.cargo/registry/src/github.com-1ecc6299db9ec823/(パッケージ名)-(バージョン) にパッケージのソースコードが展開される。
-Cargo.lockにすべての依存クレートの名前とバージョンが記録されているので、これを見てコードに問題がないか調べることができる。
- cargo buildはビルドスクリプトを実行してしまうのでダメ [return]   ">
+<meta property="og:description" content="Linux from Scratch
+
+
+一時システムのGCC (Pass 2)を間違えてmultilib無効していたので直して再ビルドした。ついでにPIE・Stack Smashing Protector・Build ID出力をデフォルトで有効にした。
+
+
+32bit glibcのビルドが通るようになった。
+
+ついでにBinutils (Pass 2)もRELROをデフォルトにし、不要なライブラリ検索パスも除去して再ビルドした。
+一時システムにホストの環境をマウントする処理と環境のアンマウント処理に不備があったので直した。
+デバッグ情報を分離するスクリプトを書いている。
+もうglibcをビルドしはじめてから12日もたっている。システムをmultiarch化しようとしたり1、libcを強引にmultilib化したmusl libcに置き換えたとき2は数日間苦戦したあと諦めることになったし、システムの基礎部分をいじるとかなり苦労する。
+
+
+筋トレ
+
+
+THE プレワークアウトを筋トレ30分前に1スクープ摂取
+HMBを朝, トレーニング一時間前, 就寝前に1g摂取
+前日の睡眠 6:45 (0:29→7:19)
+
+
+短すぎる
+
+食事前に筋トレ
+
+
+上半身プッシュ&#43;腹筋
+
+
+
+
+種目
+重量&amp;目標回数
+回数
+備考
+
+
+
+
+
+ローテーターカフのウォームアップ
+
+
+
+
+
+
+プッシュアップ
+3セット 自重 10回以上 → 膝つき
+↑11→3 7.5→3 5.5→5
+肩甲骨を寄せるのを忘れたせいか大胸筋にあまり効いている感じがしない
+
+
+
+ダンベルショルダープレス
+2セット 25kg(10kg&#43;シャフトx2) 16回以上 → ドロップ
+↓14 12→5kgx2で20→2.5kgx2で16
+直前にスキーのケバ取りをしたのが原因かも
+
+
+
+ダンベルフレンチプレス
+2セット 12.5kg(10kg&#43;シャフト) 13回以上 → ドロップ
+↓10 9→7.5kg(2.5x2&#43;シャフト)で11
+
+
+
+
+ダンベルフライ
+2セット 20kg(7.5kg&#43;シャフトx2) 19回以上 → ドロップ
+↓16 11→5kgx2で30
+
+
+
+
+ツイストクランチ
+3セット 自重 5秒維持 16回以上 → 1秒維持 23回以上
+? → 30 29
+
+
+
+
+
+その他
+
+
+スキーのケバ取りを途中までやった。
+
+
+真鍮ブラシで擦っても落ちない傷があったし、滑走面に何箇所かへこみがあるのでシーズンが終わったらメンテナンスに出したほうがよさそう
+
+
+
+">
+<meta name="twitter:description" content="Linux from Scratch
+
+
+一時システムのGCC (Pass 2)を間違えてmultilib無効していたので直して再ビルドした。ついでにPIE・Stack Smashing Protector・Build ID出力をデフォルトで有効にした。
+
+
+32bit glibcのビルドが通るようになった。
+
+ついでにBinutils (Pass 2)もRELROをデフォルトにし、不要なライブラリ検索パスも除去して再ビルドした。
+一時システムにホストの環境をマウントする処理と環境のアンマウント処理に不備があったので直した。
+デバッグ情報を分離するスクリプトを書いている。
+もうglibcをビルドしはじめてから12日もたっている。システムをmultiarch化しようとしたり1、libcを強引にmultilib化したmusl libcに置き換えたとき2は数日間苦戦したあと諦めることになったし、システムの基礎部分をいじるとかなり苦労する。
+
+
+筋トレ
+
+
+THE プレワークアウトを筋トレ30分前に1スクープ摂取
+HMBを朝, トレーニング一時間前, 就寝前に1g摂取
+前日の睡眠 6:45 (0:29→7:19)
+
+
+短すぎる
+
+食事前に筋トレ
+
+
+上半身プッシュ&#43;腹筋
+
+
+
+
+種目
+重量&amp;目標回数
+回数
+備考
+
+
+
+
+
+ローテーターカフのウォームアップ
+
+
+
+
+
+
+プッシュアップ
+3セット 自重 10回以上 → 膝つき
+↑11→3 7.5→3 5.5→5
+肩甲骨を寄せるのを忘れたせいか大胸筋にあまり効いている感じがしない
+
+
+
+ダンベルショルダープレス
+2セット 25kg(10kg&#43;シャフトx2) 16回以上 → ドロップ
+↓14 12→5kgx2で20→2.5kgx2で16
+直前にスキーのケバ取りをしたのが原因かも
+
+
+
+ダンベルフレンチプレス
+2セット 12.5kg(10kg&#43;シャフト) 13回以上 → ドロップ
+↓10 9→7.5kg(2.5x2&#43;シャフト)で11
+
+
+
+
+ダンベルフライ
+2セット 20kg(7.5kg&#43;シャフトx2) 19回以上 → ドロップ
+↓16 11→5kgx2で30
+
+
+
+
+ツイストクランチ
+3セット 自重 5秒維持 16回以上 → 1秒維持 23回以上
+? → 30 29
+
+
+
+
+
+その他
+
+
+スキーのケバ取りを途中までやった。
+
+
+真鍮ブラシで擦っても落ちない傷があったし、滑走面に何箇所かへこみがあるのでシーズンが終わったらメンテナンスに出したほうがよさそう
+
+
+
+">
 <meta property="og:locale" content="ja">
 
   
-    <meta property="article:published_time" content="2018-07-25T22:24:30">
+    <meta property="article:published_time" content="2019-02-19T22:40:35">
   
   
-    <meta property="article:modified_time" content="2018-07-25T22:24:30">
+    <meta property="article:modified_time" content="2019-02-19T22:40:35">
   
-  
-  
-    
-      <meta property="article:section" content="howto">
-    
   
   
     
-      <meta property="article:tag" content="rust">
+      <meta property="article:section" content="日記">
+    
+  
+  
+    
+      <meta property="article:tag" content="LFS">
+    
+      <meta property="article:tag" content="筋トレ">
+    
+      <meta property="article:tag" content="スキー">
     
   
 
@@ -65,14 +437,14 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
   <meta property="twitter:image" content="https://ngkz.github.io/mypicture.jpg">
 
 
-    <title>依存しているパッケージ(crate)の中身を実行せずに調べる方法 (Rust)</title>
+    <title>日記 2019/02/19(火)</title>
 
     <link rel="icon" href="https://ngkz.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://ngkz.github.io/2018/07/audit-cargo-crate/">
+    <link rel="canonical" href="https://ngkz.github.io/2019/02/diary-20190219/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -222,19 +594,19 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      依存しているパッケージ(crate)の中身を実行せずに調べる方法 (Rust)
+      日記 2019/02/19(火)
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-07-25T22:24:30&#43;09:00">
+      <time itemprop="datePublished" datetime="2019-02-19T22:40:35&#43;09:00">
         
   
   
   
   
-    2018-07-25
+    2019-02-19
   
 
       </time>
@@ -244,7 +616,7 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
   
     <span>カテゴリー</span>
     
-      <a class="category-link" href="https://ngkz.github.io/categories/howto">howto</a>
+      <a class="category-link" href="https://ngkz.github.io/categories/%e6%97%a5%e8%a8%98">日記</a>
     
   
 
@@ -254,20 +626,112 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p><code>cargo fetch</code><sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup> でパッケージを取得すると、<code>~/.cargo/registry/src/github.com-1ecc6299db9ec823/(パッケージ名)-(バージョン)</code>
-にパッケージのソースコードが展開される。</p>
+              <h2 id="linux-from-scratch">Linux from Scratch</h2>
 
-<p>Cargo.lockにすべての依存クレートの名前とバージョンが記録されているので、これを見てコードに問題がないか調べることができる。</p>
+<ul>
+<li>一時システムのGCC (Pass 2)を間違えてmultilib無効していたので直して再ビルドした。ついでにPIE・Stack Smashing Protector・Build ID出力をデフォルトで有効にした。
+
+<ul>
+<li>32bit glibcのビルドが通るようになった。</li>
+</ul></li>
+<li>ついでにBinutils (Pass 2)もRELROをデフォルトにし、不要なライブラリ検索パスも除去して再ビルドした。</li>
+<li>一時システムにホストの環境をマウントする処理と環境のアンマウント処理に不備があったので直した。</li>
+<li>デバッグ情報を分離するスクリプトを書いている。</li>
+<li>もうglibcをビルドしはじめてから12日もたっている。システムをmultiarch化しようとしたり<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>、libcを強引にmultilib化したmusl libcに置き換えたとき<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup>は数日間苦戦したあと諦めることになったし、システムの基礎部分をいじるとかなり苦労する。</li>
+</ul>
+
+<h2 id="筋トレ">筋トレ</h2>
+
+<ul>
+<li>THE プレワークアウトを筋トレ30分前に1スクープ摂取</li>
+<li>HMBを朝, トレーニング一時間前, 就寝前に1g摂取</li>
+<li>前日の睡眠 6:45 (0:29→7:19)
+
+<ul>
+<li>短すぎる</li>
+</ul></li>
+<li>食事前に筋トレ</li>
+</ul>
+
+<p><strong>上半身プッシュ+腹筋</strong></p>
+
+<table>
+<thead>
+<tr>
+<th>種目</th>
+<th>重量&amp;目標回数</th>
+<th>回数</th>
+<th>備考</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>ローテーターカフのウォームアップ</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>プッシュアップ</td>
+<td>3セット 自重 10回以上 → 膝つき</td>
+<td>↑11→3 7.5→3 5.5→5</td>
+<td>肩甲骨を寄せるのを忘れたせいか大胸筋にあまり効いている感じがしない</td>
+</tr>
+
+<tr>
+<td>ダンベルショルダープレス</td>
+<td>2セット 25kg(10kg+シャフトx2) 16回以上 → ドロップ</td>
+<td>↓14 12→5kgx2で20→2.5kgx2で16</td>
+<td>直前にスキーのケバ取りをしたのが原因かも</td>
+</tr>
+
+<tr>
+<td>ダンベルフレンチプレス</td>
+<td>2セット 12.5kg(10kg+シャフト) 13回以上 → ドロップ</td>
+<td>↓10 9→7.5kg(2.5x2+シャフト)で11</td>
+<td></td>
+</tr>
+
+<tr>
+<td>ダンベルフライ</td>
+<td>2セット 20kg(7.5kg+シャフトx2) 19回以上 → ドロップ</td>
+<td>↓16 11→5kgx2で30</td>
+<td></td>
+</tr>
+
+<tr>
+<td>ツイストクランチ</td>
+<td>3セット 自重 5秒維持 16回以上 → 1秒維持 23回以上</td>
+<td>? → 30 29</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="その他">その他</h2>
+
+<ul>
+<li>スキーのケバ取りを途中までやった。
+
+<ul>
+<li>真鍮ブラシで擦っても落ちない傷があったし、滑走面に何箇所かへこみがあるのでシーズンが終わったらメンテナンスに出したほうがよさそう</li>
+</ul></li>
+</ul>
+
+<p></p>
 <div class="footnotes">
 
 <hr />
 
 <ol>
-<li id="fn:1">cargo buildはビルドスクリプトを実行してしまうのでダメ
+<li id="fn:1">binutilsはdebianのパッチを移植してmultiarch化できたが、gccのmultiarch化に大量のパッチの移植が必要になったのでやめた。
  <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:2">こっちは成功したが、gccのサニタイザがmuslに対応してなかったのでglibcに換えた
+ <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
 </ol>
 </div>
-
               
             </div>
           </div>
@@ -279,7 +743,11 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">タグ</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://ngkz.github.io/tags/rust/">rust</a>
+  <a class="tag tag--primary tag--small" href="https://ngkz.github.io/tags/lfs/">LFS</a>
+
+  <a class="tag tag--primary tag--small" href="https://ngkz.github.io/tags/%E7%AD%8B%E3%83%88%E3%83%AC/">筋トレ</a>
+
+  <a class="tag tag--primary tag--small" href="https://ngkz.github.io/tags/%E3%82%B9%E3%82%AD%E3%83%BC/">スキー</a>
 
                   </div>
                 
@@ -292,7 +760,7 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2018/08/cargo-run-test-with-sudo/" data-tooltip="テストをrootとして動かす方法 (Rust)">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">次</span>
@@ -300,7 +768,7 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2018/05/bonebar/" data-tooltip="自作ボーンバー">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/02/diary-20190218/" data-tooltip="日記 2019/02/18(月)">
               
                   <span class="hide-xs hide-sm text-small icon-mr">前</span>
                   <i class="fa fa-angle-right"></i>
@@ -318,19 +786,19 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2018/07/audit-cargo-crate/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2019/02/diary-20190219/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2018/07/audit-cargo-crate/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2019/02/diary-20190219/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2018/07/audit-cargo-crate/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2019/02/diary-20190219/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -378,7 +846,7 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2018/08/cargo-run-test-with-sudo/" data-tooltip="テストをrootとして動かす方法 (Rust)">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">次</span>
@@ -386,7 +854,7 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2018/05/bonebar/" data-tooltip="自作ボーンバー">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/02/diary-20190218/" data-tooltip="日記 2019/02/18(月)">
               
                   <span class="hide-xs hide-sm text-small icon-mr">前</span>
                   <i class="fa fa-angle-right"></i>
@@ -404,19 +872,19 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2018/07/audit-cargo-crate/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2019/02/diary-20190219/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2018/07/audit-cargo-crate/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2019/02/diary-20190219/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2018/07/audit-cargo-crate/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2019/02/diary-20190219/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -446,19 +914,19 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fngkz.github.io%2F2018%2F07%2Faudit-cargo-crate%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fngkz.github.io%2F2019%2F02%2Fdiary-20190219%2F">
           <i class="fa fa-facebook-official"></i><span>Facebookで共有</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fngkz.github.io%2F2018%2F07%2Faudit-cargo-crate%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fngkz.github.io%2F2019%2F02%2Fdiary-20190219%2F">
           <i class="fa fa-twitter"></i><span>Twitterで共有</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fngkz.github.io%2F2018%2F07%2Faudit-cargo-crate%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fngkz.github.io%2F2019%2F02%2Fdiary-20190219%2F">
           <i class="fa fa-google-plus"></i><span>Google&#43;で共有</span>
         </a>
       </li>
@@ -1465,9 +1933,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/ngkz.github.io\/2018\/07\/audit-cargo-crate\/';
+          this.page.url = 'https:\/\/ngkz.github.io\/2019\/02\/diary-20190219\/';
           
-            this.page.identifier = '\/2018\/07\/audit-cargo-crate\/'
+            this.page.identifier = '\/2019\/02\/diary-20190219\/'
           
         };
         (function() {

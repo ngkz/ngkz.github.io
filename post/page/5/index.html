@@ -212,6 +212,82 @@
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://ngkz.github.io/2019/01/diary-20190123/">
+          日記 (2019/01/23)
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-01-23T20:21:33&#43;09:00">
+        
+  
+  
+  
+  
+    2019-01-23
+  
+
+      </time>
+    
+    
+  
+  
+    <span>カテゴリー</span>
+    
+      <a class="category-link" href="https://ngkz.github.io/categories/%e6%97%a5%e8%a8%98">日記</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        <h2 id="lfs">LFS</h2>
+
+<p>進捗ほとんどなし</p>
+
+<h2 id="筋トレ">筋トレ</h2>
+
+<p>上半身プル</p>
+
+<pre><code>ハーフデッドリフト         3セット 25kg x 2
+ワンハンドローイング   左右2セット 10kg
+ダンベルシュラッグ         2セット 25kg x 2
+ダンベルカール             3セット 7.5kg
+変形バックエクステンション 2セット 2.5kg
+</code></pre>
+
+<p></p>
+      
+      <p>
+        <a href="https://ngkz.github.io/2019/01/diary-20190123/" class="postShorten-excerpt_link link">続きを読む</a>
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
         <a class="link-unstyled" href="https://ngkz.github.io/2019/01/diary-20190122/">
           日記 (2019/01/22)
         </a>
@@ -654,71 +730,6 @@ Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30
 </article>
 
           
-            
-  
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-left" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://ngkz.github.io/2018/12/coleman-508/">
-          28年前製造のガソリンストーブに火を入れてみた
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2018-12-09T12:09:05&#43;09:00">
-        
-  
-  
-  
-  
-    2018-12-09
-  
-
-      </time>
-    
-    
-  
-  
-    <span>カテゴリー</span>
-    
-      <a class="category-link" href="https://ngkz.github.io/categories/%e3%82%ad%e3%83%a3%e3%83%b3%e3%83%97%e7%94%a8%e5%93%81">キャンプ用品</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <p>父から1990年製造のColeman 508をもらったので、試しに使ってみた。</p>
-
-<p></p>
-      
-      <p>
-        <a href="https://ngkz.github.io/2018/12/coleman-508/" class="postShorten-excerpt_link link">続きを読む</a>
-        
-      </p>
-    </div>
-  </div>
-  
-    <a href="https://ngkz.github.io/2018/12/coleman-508/">
-      <div class="postShorten-thumbnailimg">
-        <img alt="" itemprop="image" src="https://ngkz.github.io/assets/coleman-508/burning.jpg"/>
-      </div>
-    </a>
-  
-</article>
-
-          
           
   <div class="pagination-bar">
     <ul class="pagination">
@@ -802,6 +813,117 @@ Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30
       <div class="no-result text-color-light text-center"></div>
       <div class="results">
         
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2019/02/diary-20190219/">
+                <h3 class="media-heading">日記 2019/02/19(火)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Feb 2, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><h2 id="linux-from-scratch">Linux from Scratch</h2>
+
+<ul>
+<li>一時システムのGCC (Pass 2)を間違えてmultilib無効していたので直して再ビルドした。ついでにPIE・Stack Smashing Protector・Build ID出力をデフォルトで有効にした。
+
+<ul>
+<li>32bit glibcのビルドが通るようになった。</li>
+</ul></li>
+<li>ついでにBinutils (Pass 2)もRELROをデフォルトにし、不要なライブラリ検索パスも除去して再ビルドした。</li>
+<li>一時システムにホストの環境をマウントする処理と環境のアンマウント処理に不備があったので直した。</li>
+<li>デバッグ情報を分離するスクリプトを書いている。</li>
+<li>もうglibcをビルドしはじめてから12日もたっている。システムをmultiarch化しようとしたり<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>、libcを強引にmultilib化したmusl libcに置き換えたとき<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup>は数日間苦戦したあと諦めることになったし、システムの基礎部分をいじるとかなり苦労する。</li>
+</ul>
+
+<h2 id="筋トレ">筋トレ</h2>
+
+<ul>
+<li>THE プレワークアウトを筋トレ30分前に1スクープ摂取</li>
+<li>HMBを朝, トレーニング一時間前, 就寝前に1g摂取</li>
+<li>前日の睡眠 6:45 (0:29→7:19)
+
+<ul>
+<li>短すぎる</li>
+</ul></li>
+<li>食事前に筋トレ</li>
+</ul>
+
+<p><strong>上半身プッシュ+腹筋</strong></p>
+
+<table>
+<thead>
+<tr>
+<th>種目</th>
+<th>重量&amp;目標回数</th>
+<th>回数</th>
+<th>備考</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>ローテーターカフのウォームアップ</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>プッシュアップ</td>
+<td>3セット 自重 10回以上 → 膝つき</td>
+<td>↑11→3 7.5→3 5.5→5</td>
+<td>肩甲骨を寄せるのを忘れたせいか大胸筋にあまり効いている感じがしない</td>
+</tr>
+
+<tr>
+<td>ダンベルショルダープレス</td>
+<td>2セット 25kg(10kg+シャフトx2) 16回以上 → ドロップ</td>
+<td>↓14 12→5kgx2で20→2.5kgx2で16</td>
+<td>直前にスキーのケバ取りをしたのが原因かも</td>
+</tr>
+
+<tr>
+<td>ダンベルフレンチプレス</td>
+<td>2セット 12.5kg(10kg+シャフト) 13回以上 → ドロップ</td>
+<td>↓10 9→7.5kg(2.5x2+シャフト)で11</td>
+<td></td>
+</tr>
+
+<tr>
+<td>ダンベルフライ</td>
+<td>2セット 20kg(7.5kg+シャフトx2) 19回以上 → ドロップ</td>
+<td>↓16 11→5kgx2で30</td>
+<td></td>
+</tr>
+
+<tr>
+<td>ツイストクランチ</td>
+<td>3セット 自重 5秒維持 16回以上 → 1秒維持 23回以上</td>
+<td>? → 30 29</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="その他">その他</h2>
+
+<ul>
+<li>スキーのケバ取りを途中までやった。
+
+<ul>
+<li>真鍮ブラシで擦っても落ちない傷があったし、滑走面に何箇所かへこみがあるのでシーズンが終わったらメンテナンスに出したほうがよさそう</li>
+</ul></li>
+</ul>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
         
           <div class="media">
             
@@ -1579,37 +1701,6 @@ Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30
             <hr>
           </div>
         
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://ngkz.github.io/2019/02/diary-20190209/">
-                <h3 class="media-heading">日記 (2019/02/09)</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Feb 2, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="ラックの修理">ラックの修理</h2>
-
-<p>ステーを2本削って曲げ、ラックのリア側も立バンド固定にした。</p>
-
-<h2 id="プロテインが半分届いた">プロテインが半分届いた</h2>
-
-<p>先週マイプロテインに頼んだサプリメントが2分割で発送され、ホエイ5kg、プレワークアウト、HMBとおまけが入った方の箱が届いた。</p>
-
-<p>プレミアム配送が無料になる注文金額だったので、はじめてプレミアム配送を使ってみたが、梱包は通常配送と変わらないようなので、謎の粉まみれになっていたり、サプリメント容器が薄汚れてベコベコになっていたりしたが、<del>破損はなかった。</del> HMBの袋のチャックが壊れかかってた。なんとか密封されているようだが、かなり締めにくい</p>
-
-<p>前回通常配送で頼んだときは、 11/12注文 11/15発送 11/26着で、今回は1週間で半分到着なので、通常配送より速くはなっているようだ。</p>
-
-<p>もう片方の箱はまだ空港から出ていないので、届くのは数日後になりそう。</p>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
       </div>
     </div>
     <div class="modal-footer">
@@ -1617,7 +1708,7 @@ Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30
          data-message-zero=""
          data-message-one=""
          data-message-other="">
-         52 posts found
+         53 posts found
       </p>
     </div>
   </div>
