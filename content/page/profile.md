@@ -55,7 +55,7 @@ bitcoin
 : Django, Flask, Express, Electron, nw.js
 
 インフラ
-: Linux, AppArmor, Docker, Apache, Nginx, Postfix, Node.js, Ansible, Zabbix, Chef, SNMP, OpenSSH, OpenVPN, systemd, AIDE, munin, logwatch, logrotate, swatch
+: Linux, AppArmor, Docker, Apache, Nginx, Postfix, Node.js, Ansible, Zabbix, Chef, SNMP, OpenSSH, OpenVPN, systemd, AIDE, munin, Nutanix (CE, 商用版両方), Microsoft Deployment Toolkit
 
 ハッキング
 : Pwning, Reverse Engineering, Web hacking, Forensics
