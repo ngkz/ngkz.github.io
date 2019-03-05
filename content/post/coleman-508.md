@@ -6,7 +6,6 @@ categories:
 tags:
 - Coleman 508
 thumbnailImage: /assets/coleman-508/burning.jpg
-thumbnailImagePosition: left
 ---
 
 父から1990年製造のColeman 508をもらったので、試しに使ってみた。
