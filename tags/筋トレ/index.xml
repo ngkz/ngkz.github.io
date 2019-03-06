@@ -6,10 +6,158 @@
     <description>Recent content in 筋トレ on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 21 Feb 2019 23:59:59 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 05 Mar 2019 23:59:59 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/tags/%E7%AD%8B%E3%83%88%E3%83%AC/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>日記 2019/03/05(火)</title>
+      <link>https://ngkz.github.io/2019/03/diary-20190305/</link>
+      <pubDate>Tue, 05 Mar 2019 23:59:59 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/03/diary-20190305/</guid>
+      <description>&lt;h2 id=&#34;買い物で失敗&#34;&gt;買い物で失敗&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;昨日
+買ったBus Pirate v3.6aが発送された後に、新バージョンのBus Pirate v4が出ていることに気づいた。
+
+&lt;ul&gt;
+&lt;li&gt;さらに、Bus Pirateより遥かに高速で、Bit Bangモードを使えばほとんどのプロトコルを喋れ、AliExpressで
+ドングルがBus Pirateの半額程度で売っているFT232Hの存在にも気づいた。&lt;/li&gt;
+&lt;li&gt;よく調べずにBus Pirate v3.6aを買ったのは失敗だった。FT232HかFT2232Hのボードを買った方がよかった。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;スキーの滑走面のケバ取りをした&lt;/li&gt;
+&lt;li&gt;ネットで3.5時間くらい無駄にした&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;THE プレワークアウトを筋トレ45分前に1スクープ摂取&lt;/li&gt;
+&lt;li&gt;HMBをトレーニング45分前, 就寝前に1.5g摂取&lt;/li&gt;
+&lt;li&gt;前日の睡眠 6:27 (1:12→7:44)&lt;/li&gt;
+&lt;li&gt;食事前に筋トレ&lt;/li&gt;
+&lt;li&gt;今週は各部位1回しかできないので多めに&lt;/li&gt;
+&lt;li&gt;筋トレ中にいろいろやってたら時間がなくなった&lt;/li&gt;
+&lt;li&gt;しばらく筋トレしてなかったら筋力と筋肉量が落ちた&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;上半身プッシュ+腹筋&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>日記 2019/02/27(水)</title>
+      <link>https://ngkz.github.io/2019/02/diary-20190227/</link>
+      <pubDate>Wed, 27 Feb 2019 21:19:29 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/02/diary-20190227/</guid>
+      <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;glibcの設定を途中までやった&lt;/li&gt;
+&lt;li&gt;LFS構築に使える時間がない&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;THE プレワークアウトを筋トレ30分前に1スクープ摂取&lt;/li&gt;
+&lt;li&gt;HMBを夕, トレーニング一時間前, 就寝前に1g摂取&lt;/li&gt;
+&lt;li&gt;前日の睡眠 2:41 (4:58→7:44)&lt;/li&gt;
+&lt;li&gt;集中してできなかった&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;上半身プル+腹筋&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;種目&lt;/th&gt;
+&lt;th&gt;重量&amp;amp;目標回数&lt;/th&gt;
+&lt;th&gt;回数&lt;/th&gt;
+&lt;th&gt;備考&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ハーフデッドリフト&lt;/td&gt;
+&lt;td&gt;3セット 30kg(27.5kgx2+シャフト) 17回以上&lt;/td&gt;
+&lt;td&gt;↑19 20 8&lt;/td&gt;
+&lt;td&gt;力を出しきれてない&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ワンハンドローイング&lt;/td&gt;
+&lt;td&gt;左右2セット 12.5kg(10kg+シャフト) 17回以上 →ドロップ&lt;/td&gt;
+&lt;td&gt;→左18 右16 左15+7.5kg(2.5kgx2+シャフト)で10 右16+7.5kg(2.5kgx2+シャフト)で18&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ダンベルシュラッグ&lt;/td&gt;
+&lt;td&gt;2セット 30kg(27.5kgx2+シャフト) 22回以上 →ドロップ&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;時間がないので省略&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ダンベルカール&lt;/td&gt;
+&lt;td&gt;3セット 10kg(7.5kg+シャフト) 10回以上 →ドロップ&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;変形バックエクステンション&lt;/td&gt;
+&lt;td&gt;2セット 自重+5kg 16回以上 →ドロップ&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ツイストクランチ&lt;/td&gt;
+&lt;td&gt;3セット 自重 5秒維持 16回以上&lt;/td&gt;
+&lt;td&gt;↑24 23 15&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
+
+&lt;p&gt;最近ついてない。今日は車のミラーを電柱にぶつけ、会社のサーバーのRAIDカードが文鎮化し、プロテインの粉をぶちまけた。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>日記 2019/02/26(火)</title>
+      <link>https://ngkz.github.io/2019/02/diary-20190226/</link>
+      <pubDate>Tue, 26 Feb 2019 23:59:59 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/02/diary-20190226/</guid>
+      <description>&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HMBをトレーニング一時間前と就寝前に1.5g摂取&lt;/li&gt;
+&lt;li&gt;前日の睡眠 8:55 (22:00→7:03)&lt;/li&gt;
+&lt;li&gt;食事前に筋トレ&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;上半身プッシュ+腹筋&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>日記 2019/02/21(木)</title>
@@ -31,13 +179,13 @@
 
 &lt;ul&gt;
 &lt;li&gt;行き先を決めて食料を調達して荷物をパッキングした&lt;/li&gt;
+&lt;li&gt;たかつえスキー場, 南郷スキー場, だいくらスキー場, 高畑スキー場のどれかのリフト券との引き換え券があったので、一日目は一番面白そうなたかつえスキー場に行くことにした&lt;/li&gt;
+&lt;li&gt;那須塩原に近かったので、二日目はハンターマウンテンに行くことにした&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;アルミの天ぷらガードで固形燃料コンロとコールマン508の風防を作った&lt;/li&gt;
+&lt;li&gt;防寒インナーと厚手の靴下を買った。まだ2月なのに、だんだん暖かくなってきているからか、商品が入れかわっていて防寒用の衣類が店頭からほとんど消えてしまっていた&lt;/li&gt;
+&lt;li&gt;食料(紅茶パック, インスタントスープ, パックごはん, グリーンカレーとガパオライスの缶詰)を調達した&lt;/li&gt;
+&lt;li&gt;アルミの天ぷらガードでコンロの風防を作った&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
-&lt;p&gt;スキーに行く準備をしていたらやる時間がなくなったので無し&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -134,7 +282,7 @@
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;一時システムのGCC (Pass 2)を間違えてmultilib無効していたので直して再ビルドした。ついでにPIE・Stack Smashing Protector・Build ID出力をデフォルトで有効にした。
+&lt;li&gt;一時システムのGCC (Pass 2)のmultilibを間違えて無効にしていたので直して再ビルドした。ついでにPIE・Stack Smashing Protector・Build ID出力をデフォルトで有効にした。
 
 &lt;ul&gt;
 &lt;li&gt;32bit glibcのビルドが通るようになった。&lt;/li&gt;

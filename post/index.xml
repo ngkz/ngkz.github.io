@@ -6,10 +6,482 @@
     <description>Recent content in Posts on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 21 Feb 2019 23:59:59 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 06 Mar 2019 23:31:17 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>日記 2019/03/06(水)</title>
+      <link>https://ngkz.github.io/2019/03/diary-20190306/</link>
+      <pubDate>Wed, 06 Mar 2019 23:31:17 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/03/diary-20190306/</guid>
+      <description>&lt;h2 id=&#34;スキー&#34;&gt;スキー&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;スキーに行く準備をした。
+
+&lt;ul&gt;
+&lt;li&gt;ハンターマウンテン塩原とマウントジーンズ那須のリフト引換券があるので、一日目はハンターマウンテン、二日目はマウントジーンズ那須へ行くことにした。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;買い物で失敗-2&#34;&gt;買い物で失敗 #2&lt;/h2&gt;
+
+&lt;p&gt;ヨドバシ.comは商品の発送が非常に早く、月曜の夜に注文した商品がなんと火曜の昼に届いていたが、不在で再配達になっていたので、再配達依頼をして今日受けとった。&lt;/p&gt;
+
+&lt;p&gt;ポンプカップと杏仁霜は取り寄せ品だったので、スマートフォンホルダー EC-176とUSB type-C シガーソケットチャージャー PJ-1819だけが届いた。&lt;/p&gt;
+
+&lt;p&gt;スマートフォンホルダー EC-176を組み立ててNexus 5Xをつけてみたら、ホルダー部分が大きすぎて指紋センサが隠れてしまうし、ホルダを締めると左右のツメが音量調整ボタンに触れてしまうことに気付いた。音量ボタンの干渉はロックを緩めにしたら回避できるが、指紋センサが隠れるのはどうしようもないので困った。&lt;a href=&#34;https://www.amazon.co.jp/gp/product/B00UJ33YAQ/&#34;&gt;前使っていたもの&lt;/a&gt;と同等以下の大きさのホルダーを選べばよかった。アームと吸盤部分は前より頑丈そうでいい感じだ。&lt;/p&gt;
+
+&lt;p&gt;PJ-1819 はNexus 5Xから最大電流が1.5Aの充電器として認識されてしまい、急速充電ができなかった。おそらく、初期不良かプルアップ抵抗の値が間違っている設計ミスなので、返品して別の物を買うことにした。
+コネクタのプルアップ抵抗の値を測ろうとしてみたが、テスター棒は入らないしブレークアウトボードも持っていないのでできなかった。&lt;/p&gt;
+
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
+
+&lt;p&gt;充電器のテストと返品要求とスマホホルダの取り付けで時間がなくなってしまったのでなし&lt;/p&gt;
+
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;3時間を無駄にした。昨日より1時間改善はしたが、3時間あれば筋トレできたのでこの無駄は痛い&lt;/li&gt;
+&lt;li&gt;hugoは画像を貼りつけるのがめんどくさい。画像のリサイズとサムネイルの生成を自動化したい&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>日記 2019/03/05(火)</title>
+      <link>https://ngkz.github.io/2019/03/diary-20190305/</link>
+      <pubDate>Tue, 05 Mar 2019 23:59:59 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/03/diary-20190305/</guid>
+      <description>&lt;h2 id=&#34;買い物で失敗&#34;&gt;買い物で失敗&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;昨日
+買ったBus Pirate v3.6aが発送された後に、新バージョンのBus Pirate v4が出ていることに気づいた。
+
+&lt;ul&gt;
+&lt;li&gt;さらに、Bus Pirateより遥かに高速で、Bit Bangモードを使えばほとんどのプロトコルを喋れ、AliExpressで
+ドングルがBus Pirateの半額程度で売っているFT232Hの存在にも気づいた。&lt;/li&gt;
+&lt;li&gt;よく調べずにBus Pirate v3.6aを買ったのは失敗だった。FT232HかFT2232Hのボードを買った方がよかった。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;スキーの滑走面のケバ取りをした&lt;/li&gt;
+&lt;li&gt;ネットで3.5時間くらい無駄にした&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;THE プレワークアウトを筋トレ45分前に1スクープ摂取&lt;/li&gt;
+&lt;li&gt;HMBをトレーニング45分前, 就寝前に1.5g摂取&lt;/li&gt;
+&lt;li&gt;前日の睡眠 6:27 (1:12→7:44)&lt;/li&gt;
+&lt;li&gt;食事前に筋トレ&lt;/li&gt;
+&lt;li&gt;今週は各部位1回しかできないので多めに&lt;/li&gt;
+&lt;li&gt;筋トレ中にいろいろやってたら時間がなくなった&lt;/li&gt;
+&lt;li&gt;しばらく筋トレしてなかったら筋力と筋肉量が落ちた&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;上半身プッシュ+腹筋&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>日記 2019/03/04 (月)</title>
+      <link>https://ngkz.github.io/2019/03/diary-20190304/</link>
+      <pubDate>Mon, 04 Mar 2019 23:07:34 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/03/diary-20190304/</guid>
+      <description>&lt;h2 id=&#34;いろいろ買った&#34;&gt;いろいろ買った&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ダメになったポンプカップの代わりを注文した&lt;/li&gt;
+&lt;li&gt;ついでに壊れたスマホホルダーの代わりとシガーソケットUSB type-C充電器と杏仁霜も注文&lt;/li&gt;
+&lt;li&gt;USB-UARTすらないとハードウェアをいじる時不便なので、3.3V/5V両用のUSB-UARTを買おうとしていたら、UARTだけでなくI²C, SPIやJTAGなどのプロトコルにも対応した&lt;a href=&#34;https://www.sparkfun.com/products/12942&#34;&gt;Bus Pirate&lt;/a&gt; というツールがあることを思いだしたので、かわりにそれを買った。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
+
+&lt;p&gt;買い物してたら時間がなくなったのでなし&lt;/p&gt;
+
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2-3時間くらいインターネットで時間を無駄にしてしまったので、LeechBlockの設定を厳しくした。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>日記 2019/03/03(日)</title>
+      <link>https://ngkz.github.io/2019/03/diary-20190303/</link>
+      <pubDate>Sun, 03 Mar 2019 21:51:31 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/03/diary-20190303/</guid>
+      <description>&lt;h2 id=&#34;コールマン508の修理&#34;&gt;コールマン508の修理&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://ngkz.github.io/2019/02/diary-20190224/&#34;&gt;先週&lt;/a&gt;ポンプがスカスカで使えなかったコールマン508を調べてみた。
+
+&lt;ul&gt;
+&lt;li&gt;部屋でポンピングしてみたら圧縮できたが、圧縮するとき少し空気が漏れる音がした。&lt;/li&gt;
+&lt;li&gt;
+先週点火しなかったのは、暖かい地上では点火するギリギリのサイズにまで収縮していたポンプカップが温度低下によってポンピングできなくなるサイズまでさらに縮小したのが原因かもしれない&lt;/li&gt;
+&lt;li&gt;ポンプカップに油をさしたら一応点火はしたが、寒いと動かないかもしれないのであとでポンプカップを交換する&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;ついでに落としてしまったときに歪んだ五徳をラジオペンチで修正した。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;雨が降っていたのでミラーのコーティングと擦り傷の修理ができなかった。
+
+&lt;ul&gt;
+&lt;li&gt;天気予報をチェックしてみたら来週末まで雨の予報だった。&lt;/li&gt;
+&lt;li&gt;洗車する前に天気予報を確認するのを忘れていた。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;4時間21分くらいネットで無駄にしてしまっていた。休日なのにほとんど何もできていない&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>日記 2019/03/02(土)</title>
+      <link>https://ngkz.github.io/2019/03/diary-20190302/</link>
+      <pubDate>Sat, 02 Mar 2019 23:59:59 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/03/diary-20190302/</guid>
+      <description>&lt;h2 id=&#34;車のメンテ&#34;&gt;車のメンテ&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;オイルを交換した&lt;/li&gt;
+&lt;li&gt;洗車して塗装の擦り傷とミラーとバックカメラの超撥水コーティングを直そうとしたが、洗車したら日が暮れてしまった。&lt;/li&gt;
+&lt;li&gt;オイル交換しているときに兄弟がむりやり車を出そうとしたせいでパンパーに傷がついた。上側にスリ傷がついて下側は10円玉くらいの面積の塗装が完全に剥げている。手持ちの機材では直せないので、あとで車屋で直して修理費用を請求することにする&lt;/li&gt;
+&lt;li&gt;関係ない箇所に何箇所か謎のスリ傷ができていたが、こっちは家にあるコンパウンドで修正できそう&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+    
+      
+    
+  
+
+&lt;div class=&#34;figure center&#34; &gt;
+  
+    &lt;a class=&#34;fancybox&#34; href=&#34;https://ngkz.github.io/assets/diary-20190302/damaged-bumper.jpg&#34; title=&#34;バンパー&#34; data-fancybox-group=&#34;&#34;&gt;
+  
+    &lt;img class=&#34;fig-img&#34; src=&#34;https://ngkz.github.io/assets/diary-20190302/damaged-bumper.jpg&#34; style=&#34;width: 400px;height: 216px;&#34; alt=&#34;バンパー&#34;&gt;
+  
+    &lt;/a&gt;
+  
+   
+    &lt;span class=&#34;caption&#34;&gt;バンパー&lt;/span&gt;
+  
+&lt;/div&gt;
+
+
+&lt;h1 id=&#34;プロテインを移し替えた&#34;&gt;プロテインを移し替えた&lt;/h1&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>オイル交換メモ</title>
+      <link>https://ngkz.github.io/2019/03/oil-change/</link>
+      <pubDate>Sat, 02 Mar 2019 19:25:00 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/03/oil-change/</guid>
+      <description>&lt;h2 id=&#34;必要な物&#34;&gt;必要な物&lt;/h2&gt;
+
+&lt;p&gt;たまに忘れるので&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;オイル (消耗品)&lt;/li&gt;
+&lt;li&gt;オイル処理箱 (消耗品)&lt;/li&gt;
+&lt;li&gt;オイルフィルター (フィルター交換の場合, 消耗品)&lt;/li&gt;
+&lt;li&gt;ウエス (消耗品)&lt;/li&gt;
+&lt;li&gt;パーツクリーナー (消耗品)&lt;/li&gt;
+&lt;li&gt;ドレンパッキン (消耗品)&lt;/li&gt;
+&lt;li&gt;手袋 (消耗品)&lt;/li&gt;
+&lt;li&gt;ゴミ袋 (消耗品)&lt;/li&gt;
+&lt;li&gt;スロープ&lt;/li&gt;
+&lt;li&gt;新聞紙&lt;/li&gt;
+&lt;li&gt;メガネレンチ&lt;/li&gt;
+&lt;li&gt;オイルジョッキ&lt;/li&gt;
+&lt;li&gt;オイルフィルターレンチ (フィルター交換の場合)&lt;/li&gt;
+&lt;li&gt;エクステンションバー (フィルター交換の場合)&lt;/li&gt;
+&lt;li&gt;ラチェットハンドル (フィルター交換の場合)&lt;/li&gt;
+&lt;li&gt;ウマ (タイヤローテーションもする場合)&lt;/li&gt;
+&lt;li&gt;ジャッキ (タイヤローテーションもする場合)&lt;/li&gt;
+&lt;li&gt;トルクレンチ (タイヤローテーションもする場合)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>日記 2019/03/01 (金)</title>
+      <link>https://ngkz.github.io/2019/03/diary-20190301/</link>
+      <pubDate>Fri, 01 Mar 2019 23:59:59 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/03/diary-20190301/</guid>
+      <description>&lt;h2 id=&#34;疲れた&#34;&gt;疲れた&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;寝不足になる→寝る準備をするのすら億劫になる→さらに寝不足になるの悪循環に入ってしまった
+
+&lt;ul&gt;
+&lt;li&gt;疲れが社会性に影響が出るレベルにまでなってきた&lt;/li&gt;
+&lt;li&gt;筋トレする気になれないし、やるべきことがTODOリストに溜まってきててまずい&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;オーバーナイトリカバリーブレンドがなくなってきたので、5kgのカゼインをボトルに移しかえた。部屋の中でやったら粉が部屋中に舞って大変なことになった。&lt;/li&gt;
+&lt;li&gt;ボトルに貼るプロテインのラベルのSVG画像を作った&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>日記 2019/02/28(木)</title>
+      <link>https://ngkz.github.io/2019/02/diary-20190228/</link>
+      <pubDate>Thu, 28 Feb 2019 23:59:59 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/02/diary-20190228/</guid>
+      <description>&lt;h2 id=&#34;最近ついてない&#34;&gt;最近ついてない&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.amazon.co.jp/gp/product/B00UJ33YAQ/&#34;&gt;スマートフォンホルダー&lt;/a&gt;が崩壊した&lt;/p&gt;
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+    
+      
+    
+  
+
+&lt;div class=&#34;figure center&#34; &gt;
+  
+    &lt;a class=&#34;fancybox&#34; href=&#34;https://ngkz.github.io/assets/diary-20190228/broken-holder.jpg&#34; title=&#34;あちこちボロボロだったホルダーがついに使えないレベルにまで崩壊した&#34; data-fancybox-group=&#34;&#34;&gt;
+  
+    &lt;img class=&#34;fig-img&#34; src=&#34;https://ngkz.github.io/assets/diary-20190228/broken-holder.jpg&#34; style=&#34;width: 399px;height: 469px;&#34; alt=&#34;あちこちボロボロだったホルダーがついに使えないレベルにまで崩壊した&#34;&gt;
+  
+    &lt;/a&gt;
+  
+   
+    &lt;span class=&#34;caption&#34;&gt;あちこちボロボロだったホルダーがついに使えないレベルにまで崩壊した&lt;/span&gt;
+  
+&lt;/div&gt;
+
+
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;</description>
+    </item>
+    
+    <item>
+      <title>日記 2019/02/27(水)</title>
+      <link>https://ngkz.github.io/2019/02/diary-20190227/</link>
+      <pubDate>Wed, 27 Feb 2019 21:19:29 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/02/diary-20190227/</guid>
+      <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;glibcの設定を途中までやった&lt;/li&gt;
+&lt;li&gt;LFS構築に使える時間がない&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;THE プレワークアウトを筋トレ30分前に1スクープ摂取&lt;/li&gt;
+&lt;li&gt;HMBを夕, トレーニング一時間前, 就寝前に1g摂取&lt;/li&gt;
+&lt;li&gt;前日の睡眠 2:41 (4:58→7:44)&lt;/li&gt;
+&lt;li&gt;集中してできなかった&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;上半身プル+腹筋&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;種目&lt;/th&gt;
+&lt;th&gt;重量&amp;amp;目標回数&lt;/th&gt;
+&lt;th&gt;回数&lt;/th&gt;
+&lt;th&gt;備考&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ハーフデッドリフト&lt;/td&gt;
+&lt;td&gt;3セット 30kg(27.5kgx2+シャフト) 17回以上&lt;/td&gt;
+&lt;td&gt;↑19 20 8&lt;/td&gt;
+&lt;td&gt;力を出しきれてない&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ワンハンドローイング&lt;/td&gt;
+&lt;td&gt;左右2セット 12.5kg(10kg+シャフト) 17回以上 →ドロップ&lt;/td&gt;
+&lt;td&gt;→左18 右16 左15+7.5kg(2.5kgx2+シャフト)で10 右16+7.5kg(2.5kgx2+シャフト)で18&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ダンベルシュラッグ&lt;/td&gt;
+&lt;td&gt;2セット 30kg(27.5kgx2+シャフト) 22回以上 →ドロップ&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;時間がないので省略&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ダンベルカール&lt;/td&gt;
+&lt;td&gt;3セット 10kg(7.5kg+シャフト) 10回以上 →ドロップ&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;変形バックエクステンション&lt;/td&gt;
+&lt;td&gt;2セット 自重+5kg 16回以上 →ドロップ&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ツイストクランチ&lt;/td&gt;
+&lt;td&gt;3セット 自重 5秒維持 16回以上&lt;/td&gt;
+&lt;td&gt;↑24 23 15&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
+
+&lt;p&gt;最近ついてない。今日は車のミラーを電柱にぶつけ、会社のサーバーのRAIDカードが文鎮化し、プロテインの粉をぶちまけた。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>日記 2019/02/26(火)</title>
+      <link>https://ngkz.github.io/2019/02/diary-20190226/</link>
+      <pubDate>Tue, 26 Feb 2019 23:59:59 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/02/diary-20190226/</guid>
+      <description>&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HMBをトレーニング一時間前と就寝前に1.5g摂取&lt;/li&gt;
+&lt;li&gt;前日の睡眠 8:55 (22:00→7:03)&lt;/li&gt;
+&lt;li&gt;食事前に筋トレ&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;上半身プッシュ+腹筋&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>日記 2019/02/25(月)</title>
+      <link>https://ngkz.github.io/2019/02/diary-20190225/</link>
+      <pubDate>Mon, 25 Feb 2019 23:59:59 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/02/diary-20190225/</guid>
+      <description>&lt;p&gt;疲れが残っていて筋トレする気になれなかったのではやめに寝た。日曜にしっかりと寝ておくべきだった。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>日記 2019/02/24(日)</title>
+      <link>https://ngkz.github.io/2019/02/diary-20190224/</link>
+      <pubDate>Sun, 24 Feb 2019 23:59:59 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/02/diary-20190224/</guid>
+      <description>&lt;h2 id=&#34;スキー&#34;&gt;スキー&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;朝飯を作るためにパック燃料で水を暖めていたら沸騰する前に燃料が切れた。
+
+&lt;ul&gt;
+&lt;li&gt;火力が低いので冬の朝は火力不足になる。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;仕方がないので車内でコールマン508を使おうとしたら、ポンプがスカスカでまったくポンピングできなかった。&lt;/li&gt;
+&lt;li&gt;中途半端に暖まったお湯にパックごはんとおかずの缶詰を入れておいたらぬるいものの食べられる状態になったが、盛りつけるときにおかずをこぼしてしまった。後始末が面倒だった。&lt;/li&gt;
+&lt;li&gt;朝食がグダグダになって気分が萎えたので、ハンターマウンテンには行かずに温泉に入って帰った。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>日記 2019/02/23(土)</title>
+      <link>https://ngkz.github.io/2019/02/diary-20190223/</link>
+      <pubDate>Sat, 23 Feb 2019 23:59:59 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/02/diary-20190223/</guid>
+      <description>&lt;h2 id=&#34;スキー&#34;&gt;スキー&lt;/h2&gt;
+
+&lt;p&gt;たかつえスキー場で滑った。&lt;/p&gt;
+
+&lt;p&gt;頂上の一人乗り
+リフトがすごかった。幅が狭くて背もたれも申し訳程度のものしかない搬器が高速で向かってくるので、最初に乗ったときに落ちそうになった。&lt;a href=&#34;https://www.youtube.com/watch?v=FZugZkBDQo8&#34;&gt;(参考動画)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;コースの中腹あたりから下は晴れていたが、山の頂上付近は視界が悪くて先がほとんど見えないしコースがガリガリなので大変だった。&lt;/p&gt;
+
+&lt;p&gt;3
+時ごろまで滑った後、会津高原温泉御宿夢の湯に入った。那須塩原や草津より成分が薄めな感じの硫黄泉だった。浴場の大きな窓から大きい山が見えるので、春や夏に行くといい景色が見られそう。&lt;/p&gt;
+
+&lt;p&gt;夕食に鍋を食べて寝た。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>日記 2019/02/22(金)</title>
+      <link>https://ngkz.github.io/2019/02/diary-20190222/</link>
+      <pubDate>Fri, 22 Feb 2019 23:59:59 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/02/diary-20190222/</guid>
+      <description>&lt;h2 id=&#34;スキーの準備をした&#34;&gt;スキーの準備をした&lt;/h2&gt;
+
+&lt;p&gt;荷物を積みこんでシートを両方倒した状態で眠る方法を検討した。&lt;/p&gt;
+
+&lt;p&gt;スキーの道具が入った大きなボストンバッグ以外の荷物をダッシュボードと天井ラックとシートの裏に逃がし、バッグをS字フックでラックにつり下げたらシートの上が完全に開いた。これなら幅広のマットを敷いて眠れそう。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>日記 2019/02/21(木)</title>
@@ -31,13 +503,13 @@
 
 &lt;ul&gt;
 &lt;li&gt;行き先を決めて食料を調達して荷物をパッキングした&lt;/li&gt;
+&lt;li&gt;たかつえスキー場, 南郷スキー場, だいくらスキー場, 高畑スキー場のどれかのリフト券との引き換え券があったので、一日目は一番面白そうなたかつえスキー場に行くことにした&lt;/li&gt;
+&lt;li&gt;那須塩原に近かったので、二日目はハンターマウンテンに行くことにした&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;アルミの天ぷらガードで固形燃料コンロとコールマン508の風防を作った&lt;/li&gt;
+&lt;li&gt;防寒インナーと厚手の靴下を買った。まだ2月なのに、だんだん暖かくなってきているからか、商品が入れかわっていて防寒用の衣類が店頭からほとんど消えてしまっていた&lt;/li&gt;
+&lt;li&gt;食料(紅茶パック, インスタントスープ, パックごはん, グリーンカレーとガパオライスの缶詰)を調達した&lt;/li&gt;
+&lt;li&gt;アルミの天ぷらガードでコンロの風防を作った&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
-&lt;p&gt;スキーに行く準備をしていたらやる時間がなくなったので無し&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -134,7 +606,7 @@
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;一時システムのGCC (Pass 2)を間違えてmultilib無効していたので直して再ビルドした。ついでにPIE・Stack Smashing Protector・Build ID出力をデフォルトで有効にした。
+&lt;li&gt;一時システムのGCC (Pass 2)のmultilibを間違えて無効にしていたので直して再ビルドした。ついでにPIE・Stack Smashing Protector・Build ID出力をデフォルトで有効にした。
 
 &lt;ul&gt;
 &lt;li&gt;32bit glibcのビルドが通るようになった。&lt;/li&gt;
@@ -1834,40 +2306,6 @@
 &lt;h2 id=&#34;スキーのトップシートの修理&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
 
 &lt;p&gt;昨日の接着面がムラがあるものの十分な強度で接着されていたので、他の部分も接着した。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>オイル交換メモ</title>
-      <link>https://ngkz.github.io/2019/01/oil-change/</link>
-      <pubDate>Sun, 27 Jan 2019 19:25:00 +0900</pubDate>
-      
-      <guid>https://ngkz.github.io/2019/01/oil-change/</guid>
-      <description>&lt;h2 id=&#34;必要な物&#34;&gt;必要な物&lt;/h2&gt;
-
-&lt;p&gt;たまに忘れるので&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;オイル (消耗品)&lt;/li&gt;
-&lt;li&gt;オイル処理箱 (消耗品)&lt;/li&gt;
-&lt;li&gt;オイルフィルター (フィルター交換の場合, 消耗品)&lt;/li&gt;
-&lt;li&gt;ウエス (消耗品)&lt;/li&gt;
-&lt;li&gt;パーツクリーナー (消耗品)&lt;/li&gt;
-&lt;li&gt;ドレンパッキン (消耗品)&lt;/li&gt;
-&lt;li&gt;手袋 (消耗品)&lt;/li&gt;
-&lt;li&gt;ゴミ袋 (消耗品)&lt;/li&gt;
-&lt;li&gt;スロープ&lt;/li&gt;
-&lt;li&gt;新聞紙&lt;/li&gt;
-&lt;li&gt;メガネレンチ&lt;/li&gt;
-&lt;li&gt;オイルジョッキ&lt;/li&gt;
-&lt;li&gt;オイルフィルターレンチ (フィルター交換の場合)&lt;/li&gt;
-&lt;li&gt;エクステンションバー (フィルター交換の場合)&lt;/li&gt;
-&lt;li&gt;ラチェットハンドル (フィルター交換の場合)&lt;/li&gt;
-&lt;li&gt;ウマ (タイヤローテーションもする場合)&lt;/li&gt;
-&lt;li&gt;ジャッキ (タイヤローテーションもする場合)&lt;/li&gt;
-&lt;li&gt;トルクレンチ (タイヤローテーションもする場合)&lt;/li&gt;
-&lt;/ul&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
