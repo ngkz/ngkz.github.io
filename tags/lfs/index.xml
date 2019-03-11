@@ -6,10 +6,67 @@
     <description>Recent content in Lfs on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 27 Feb 2019 21:19:29 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 08 Mar 2019 23:59:59 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/tags/lfs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>日記 2019/03/08(金)</title>
+      <link>https://ngkz.github.io/2019/03/diary-20190308/</link>
+      <pubDate>Fri, 08 Mar 2019 23:59:59 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/03/diary-20190308/</guid>
+      <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;glibcの構築手順の説明を更新&lt;/li&gt;
+&lt;li&gt;必要なライブラリ以外はデバッグ情報を残さないように変更 (途中)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;スキー&#34;&gt;スキー&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;荷物をパッキングして積んだ&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;みんなで逮捕されようプロジェクト&#34;&gt;みんなで逮捕されようプロジェクト&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;中学生がalertループへのURLを貼って補導された件で、
+&lt;a href=&#34;https://www.data-max.co.jp/article/28329&#34;&gt;「みんなで逮捕されようプロジェクト」 &lt;/a&gt; っていうのが始まったらしいので、私も兵庫県警に喧嘩を売っておいた
+&lt;a href=&#34;https://ngkz.github.io/lets-get-arrested/&#34;&gt;https://ngkz.github.io/lets-get-arrested/&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;茨城県警のサイバー犯罪対策室はちゃんとしたセキュリティ技術者を雇っていて、技術力も高いようだから逮捕される確率は低そう&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;ドローン&#34;&gt;ドローン&lt;/h2&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>日記 2019/03/07(木)</title>
+      <link>https://ngkz.github.io/2019/03/diary-20190307/</link>
+      <pubDate>Thu, 07 Mar 2019 23:59:59 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/03/diary-20190307/</guid>
+      <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
+
+&lt;p&gt;glibcの設定をしている途中&lt;/p&gt;
+
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;風呂入って戻ってきたらドローンが置いてあった 何これ？&lt;/li&gt;
+&lt;li&gt;4.6時間無駄にした&lt;/li&gt;
+&lt;li&gt;昨日夜更ししたせいで疲れていたので筋トレせずにはやめにねた&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>日記 2019/02/27(水)</title>
