@@ -6,10 +6,28 @@
     <description>Recent content on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 11 Mar 2019 23:37:15 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 12 Mar 2019 23:08:43 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>日記 2019/03/12(火)</title>
+      <link>https://ngkz.github.io/2019/03/diary-20190312/</link>
+      <pubDate>Tue, 12 Mar 2019 23:08:43 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/03/diary-20190312/</guid>
+      <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ロケールのインストール&lt;/li&gt;
+&lt;li&gt;パッケージの後処理(バイナリとライブラリのstrip, manページの圧縮, 不要なファイルを削除) をするスクリプトを改良している途中&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>日記 2019/03/11(月)</title>
