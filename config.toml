@@ -33,7 +33,7 @@ canonifyurls = true
 [author]
   name = "Kazutoshi Noguchi"
   bio = "I'm interested in InfoSec, CTF, Electronics, and DIY."
-  job = "Unemployed"
+  job = "System integrator"
   location = "Japan"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
   # gravatarEmail = "thibaud.lepretre@gmail.com"
