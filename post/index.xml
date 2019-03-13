@@ -6,10 +6,96 @@
     <description>Recent content in Posts on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 12 Mar 2019 23:08:43 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 13 Mar 2019 22:05:10 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>日記 2019/03/13</title>
+      <link>https://ngkz.github.io/2019/03/diary-20190313/</link>
+      <pubDate>Wed, 13 Mar 2019 22:05:10 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/03/diary-20190313/</guid>
+      <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;必要なライブラリ以外はデバッグ情報を残さないように変更 (途中)&lt;/li&gt;
+&lt;li&gt;パッケージの後処理(バイナリとライブラリのstrip, manページの圧縮, 不要なファイルを削除) をするスクリプトを改良している途中&lt;/li&gt;
+&lt;li&gt;数時間作業できたのにほとんど進捗がない。Ubuntu 14.04のサポート切れがせまっているので、迷ったらとりあえず本通りに先に進めるようにしたい。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HMBを昼, トレーニング30分前, 就寝前に1g摂取&lt;/li&gt;
+&lt;li&gt;前日の睡眠 7:09 (0:03→7：19)&lt;/li&gt;
+&lt;li&gt;2/18以降下半身の筋トレができてなかったので大幅に筋力が落ちていた
+
+&lt;ul&gt;
+&lt;li&gt;ヒップスラストは12月の水準まで落ちてしまっている&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;カゼインプロテインにブレンディスティック カフェオレ やすらぎのカフェインレスを混ぜて飲んだ。おいしかった&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;下半身&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;種目&lt;/th&gt;
+&lt;th&gt;重量&amp;amp;目標回数&lt;/th&gt;
+&lt;th&gt;回数&lt;/th&gt;
+&lt;th&gt;備考&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ブルガリアンスクワット&lt;/td&gt;
+&lt;td&gt;3セット 自重+35kg(15kg+シャフト x 2) 左右14回以上 → 自重&lt;/td&gt;
+&lt;td&gt;↓左9 右7 左4→自重で15 右5→自重で8 左3 右 12.5kgx2で6&lt;/td&gt;
+&lt;td&gt;セット数間違えてた&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;シシースクワット&lt;/td&gt;
+&lt;td&gt;2セット 自重&lt;/td&gt;
+&lt;td&gt;13  14&lt;/td&gt;
+&lt;td&gt;やり方調べながら まだ慣れていないので力を出しきれなかった&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ヒップスラスト&lt;/td&gt;
+&lt;td&gt;2セット 30kg(27.5kg+シャフト) 24回以上 →ドロップ&lt;/td&gt;
+&lt;td&gt;↓15 17→15kgで20?&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;レッグカール&lt;/td&gt;
+&lt;td&gt;2セット 22.5kg(20kg+シャフト) 11回以上 →ドロップ&lt;/td&gt;
+&lt;td&gt;↓8 2→12.5kgで21&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;片足スタンディングカーフレイズ&lt;/td&gt;
+&lt;td&gt;3セット 自重 左右23回以上&lt;/td&gt;
+&lt;td&gt;↓左19 右19? 左8? 右17 左21 右16&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ヨドバシからまだ返品要求メールへの返信がこない&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>日記 2019/03/12(火)</title>
