@@ -6,10 +6,51 @@
     <description>Recent content in Posts on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 13 Mar 2019 23:54:10 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 14 Mar 2019 21:30:10 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>日記 2019/03/14(木)</title>
+      <link>https://ngkz.github.io/2019/03/diary-20190314/</link>
+      <pubDate>Thu, 14 Mar 2019 21:30:10 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/03/diary-20190314/</guid>
+      <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;パッケージの後処理スクリプトが完成
+
+&lt;ul&gt;
+&lt;li&gt;パッケージの全バイナリとライブラリをstripするスクリプトが完成
+特定のファイルのデバッグ情報を分離して保持できるようにしてある&lt;/li&gt;
+&lt;li&gt;man圧縮スクリプトの処理内容を出力するようにした&lt;/li&gt;
+&lt;li&gt;後処理スクリプト自体もパッケージ化した&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;全パッケージが新しい後処理スクリプトを使うようにした&lt;/li&gt;
+&lt;li&gt;必要なライブラリ以外はデバッグ情報を残さないようにした&lt;/li&gt;
+&lt;li&gt;glibcのパッケージ化とインストールが完了&lt;/li&gt;
+&lt;li&gt;今までの変更をリポジトリにコミットした&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
+
+&lt;p&gt;休み&lt;/p&gt;
+
+&lt;p&gt;今日は夕飯を食べるのが遅かったので、消化されるのを待っていたら寝る時間になってしまった。最近寝不足気味なので今日は筋トレせずに&lt;del&gt;早く寝ることにする&lt;/del&gt;。&lt;/p&gt;
+
+&lt;p&gt;LFS組んでたら結局寝るのが遅くなってしまった。&lt;/p&gt;
+
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;このサイトのデプロイスクリプトをシンプルにした &lt;a href=&#34;https://github.com/ngkz/ngkz.github.io/blob/src/deploy.sh&#34;&gt;https://github.com/ngkz/ngkz.github.io/blob/src/deploy.sh&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;DOOM Emacsのsmartparensの動作がおかしくてイライラするのでオフにした&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>日記 2019/03/13(水)</title>

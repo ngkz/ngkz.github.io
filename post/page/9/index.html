@@ -198,6 +198,82 @@
             
   
     
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://ngkz.github.io/2019/01/edid-repair/">
+          EDIDが壊れて認識しないモニターの修理
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-01-06T17:19:12&#43;09:00">
+        
+  
+  
+  
+  
+    2019-01-06
+  
+
+      </time>
+    
+    
+  
+  
+    <span>カテゴリー</span>
+    
+      <a class="category-link" href="https://ngkz.github.io/categories/howto">howto</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        <p>Acer H243HをDVIで接続すると認識しない。VGA接続とHDMI接続では正常に動作するが、DVIで接続するとsyslogに以下のエラーが出る。</p>
+
+<pre><code>Jan  5 23:48:32 haramaki kernel: [97894.621687] amdgpu 0000:01:00.0: DVI-D-1: EDID is invalid:
+Jan  5 23:48:32 haramaki kernel: [97894.621694]         [00] BAD  00 ff ff ff ff ff ff 00 ff ff ff ff ff ff ff ff
+Jan  5 23:48:32 haramaki kernel: [97894.621696]         [00] BAD  2b 13 01 03 80 35 1d 78 ea 60 85 a6 56 4a 9c 25
+Jan  5 23:48:32 haramaki kernel: [97894.621697]         [00] BAD  12 50 54 af cf 00 81 80 71 4f 95 00 95 0f a9 40
+Jan  5 23:48:32 haramaki kernel: [97894.621698]         [00] BAD  b3 00 01 01 01 01 1a 36 80 a0 70 38 1f 40 30 20
+Jan  5 23:48:32 haramaki kernel: [97894.621699]         [00] BAD  35 00 13 2a 21 00 00 1a 00 00 00 fc 00 48 32 34
+Jan  5 23:48:32 haramaki kernel: [97894.621700]         [00] BAD  33 48 0a 20 20 20 20 20 20 20 00 00 00 fd 00 38
+Jan  5 23:48:32 haramaki kernel: [97894.621701]         [00] BAD  4c 1f 53 12 00 0a 20 20 20 20 20 20 00 00 00 ff
+Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30 43 30 31 34 34 30 31 31 0a 00 33
+</code></pre>
+
+<p>どうやらEDIDが壊れているようだ。</p>
+
+<p></p>
+      
+      <p>
+        <a href="https://ngkz.github.io/2019/01/edid-repair/" class="postShorten-excerpt_link link">続きを読む</a>
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
   
 
 
@@ -587,69 +663,6 @@
 </article>
 
           
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://ngkz.github.io/2018/07/audit-cargo-crate/">
-          依存しているパッケージ(crate)の中身を実行せずに調べる方法 (Rust)
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2018-07-25T22:24:30&#43;09:00">
-        
-  
-  
-  
-  
-    2018-07-25
-  
-
-      </time>
-    
-    
-  
-  
-    <span>カテゴリー</span>
-    
-      <a class="category-link" href="https://ngkz.github.io/categories/howto">howto</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        cargo fetch1 でパッケージを取得すると、~/.cargo/registry/src/github.com-1ecc6299db9ec823/(パッケージ名)-(バージョン) にパッケージのソースコードが展開される。
-Cargo.lockにすべての依存クレートの名前とバージョンが記録されているので、これを見てコードに問題がないか調べることができる。
- cargo buildはビルドスクリプトを実行してしまうのでダメ [return]   
-      
-      <p>
-        <a href="https://ngkz.github.io/2018/07/audit-cargo-crate/" class="postShorten-excerpt_link link">続きを読む</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
           
   <div class="pagination-bar">
     <ul class="pagination">
@@ -733,6 +746,55 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
       <div class="no-result text-color-light text-center"></div>
       <div class="results">
         
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190314/">
+                <h3 class="media-heading">日記 2019/03/14(木)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Mar 3, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><h2 id="linux-from-scratch">Linux from Scratch</h2>
+
+<ul>
+<li>パッケージの後処理スクリプトが完成
+
+<ul>
+<li>パッケージの全バイナリとライブラリをstripするスクリプトが完成
+特定のファイルのデバッグ情報を分離して保持できるようにしてある</li>
+<li>man圧縮スクリプトの処理内容を出力するようにした</li>
+<li>後処理スクリプト自体もパッケージ化した</li>
+</ul></li>
+<li>全パッケージが新しい後処理スクリプトを使うようにした</li>
+<li>必要なライブラリ以外はデバッグ情報を残さないようにした</li>
+<li>glibcのパッケージ化とインストールが完了</li>
+<li>今までの変更をリポジトリにコミットした</li>
+</ul>
+
+<h2 id="筋トレ">筋トレ</h2>
+
+<p>休み</p>
+
+<p>今日は夕飯を食べるのが遅かったので、消化されるのを待っていたら寝る時間になってしまった。最近寝不足気味なので今日は筋トレせずに<del>早く寝ることにする</del>。</p>
+
+<p>LFS組んでたら結局寝るのが遅くなってしまった。</p>
+
+<h2 id="その他">その他</h2>
+
+<ul>
+<li>このサイトのデプロイスクリプトをシンプルにした <a href="https://github.com/ngkz/ngkz.github.io/blob/src/deploy.sh">https://github.com/ngkz/ngkz.github.io/blob/src/deploy.sh</a></li>
+<li>DOOM Emacsのsmartparensの動作がおかしくてイライラするのでオフにした</li>
+</ul>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
         
           <div class="media">
             
@@ -1272,41 +1334,6 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
             <hr>
           </div>
         
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190304/">
-                <h3 class="media-heading">日記 2019/03/04 (月)</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Mar 3, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="いろいろ買った">いろいろ買った</h2>
-
-<ul>
-<li>ダメになったポンプカップの代わりを注文した</li>
-<li>ついでに壊れたスマホホルダーの代わりとシガーソケットUSB type-C充電器と杏仁霜も注文</li>
-<li>USB-UARTすらないとハードウェアをいじる時不便なので、3.3V/5V両用のUSB-UARTを買おうとしていたら、UARTだけでなくI²C, SPIやJTAGなどのプロトコルにも対応した<a href="https://www.sparkfun.com/products/12942">Bus Pirate</a> というツールがあることを思いだしたので、かわりにそれを買った。</li>
-</ul>
-
-<h2 id="筋トレ">筋トレ</h2>
-
-<p>買い物してたら時間がなくなったのでなし</p>
-
-<h2 id="その他">その他</h2>
-
-<ul>
-<li>2-3時間くらいインターネットで時間を無駄にしてしまったので、LeechBlockの設定を厳しくした。</li>
-</ul>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
       </div>
     </div>
     <div class="modal-footer">
@@ -1314,7 +1341,7 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
          data-message-zero=""
          data-message-one=""
          data-message-other="">
-         75 posts found
+         76 posts found
       </p>
     </div>
   </div>

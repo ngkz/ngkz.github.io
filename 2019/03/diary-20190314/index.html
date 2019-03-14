@@ -8,135 +8,163 @@
 <meta name="generator" content="Hugo 0.42.2 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
-<meta name="description" content="必要な物
-
-たまに忘れるので
+<meta name="description" content="Linux from Scratch
 
 
-オイル (消耗品)
-オイル処理箱 (消耗品)
-オイルフィルター (フィルター交換の場合, 消耗品)
-ウエス (消耗品)
-パーツクリーナー (消耗品)
-ドレンパッキン (消耗品)
-手袋 (消耗品)
-ゴミ袋 (消耗品)
-スロープ
-新聞紙
-メガネレンチ
-オイルジョッキ
-オイルフィルターレンチ (フィルター交換の場合)
-エクステンションバー (フィルター交換の場合)
-ラチェットハンドル (フィルター交換の場合)
-ウマ (タイヤローテーションもする場合)
-ジャッキ (タイヤローテーションもする場合)
-トルクレンチ (タイヤローテーションもする場合)
+パッケージの後処理スクリプトが完成
+
+
+パッケージの全バイナリとライブラリをstripするスクリプトが完成
+特定のファイルのデバッグ情報を分離して保持できるようにしてある
+man圧縮スクリプトの処理内容を出力するようにした
+後処理スクリプト自体もパッケージ化した
+
+全パッケージが新しい後処理スクリプトを使うようにした
+必要なライブラリ以外はデバッグ情報を残さないようにした
+glibcのパッケージ化とインストールが完了
+今までの変更をリポジトリにコミットした
+
+
+筋トレ
+
+休み
+
+今日は夕飯を食べるのが遅かったので、消化されるのを待っていたら寝る時間になってしまった。最近寝不足気味なので今日は筋トレせずに早く寝ることにする。
+
+LFS組んでたら結局寝るのが遅くなってしまった。
+
+その他
+
+
+このサイトのデプロイスクリプトをシンプルにした https://github.com/ngkz/ngkz.github.io/blob/src/deploy.sh
+DOOM Emacsのsmartparensの動作がおかしくてイライラするのでオフにした
 
 
 ">
 
 
-<meta property="og:description" content="必要な物
-
-たまに忘れるので
+<meta property="og:description" content="Linux from Scratch
 
 
-オイル (消耗品)
-オイル処理箱 (消耗品)
-オイルフィルター (フィルター交換の場合, 消耗品)
-ウエス (消耗品)
-パーツクリーナー (消耗品)
-ドレンパッキン (消耗品)
-手袋 (消耗品)
-ゴミ袋 (消耗品)
-スロープ
-新聞紙
-メガネレンチ
-オイルジョッキ
-オイルフィルターレンチ (フィルター交換の場合)
-エクステンションバー (フィルター交換の場合)
-ラチェットハンドル (フィルター交換の場合)
-ウマ (タイヤローテーションもする場合)
-ジャッキ (タイヤローテーションもする場合)
-トルクレンチ (タイヤローテーションもする場合)
+パッケージの後処理スクリプトが完成
+
+
+パッケージの全バイナリとライブラリをstripするスクリプトが完成
+特定のファイルのデバッグ情報を分離して保持できるようにしてある
+man圧縮スクリプトの処理内容を出力するようにした
+後処理スクリプト自体もパッケージ化した
+
+全パッケージが新しい後処理スクリプトを使うようにした
+必要なライブラリ以外はデバッグ情報を残さないようにした
+glibcのパッケージ化とインストールが完了
+今までの変更をリポジトリにコミットした
+
+
+筋トレ
+
+休み
+
+今日は夕飯を食べるのが遅かったので、消化されるのを待っていたら寝る時間になってしまった。最近寝不足気味なので今日は筋トレせずに早く寝ることにする。
+
+LFS組んでたら結局寝るのが遅くなってしまった。
+
+その他
+
+
+このサイトのデプロイスクリプトをシンプルにした https://github.com/ngkz/ngkz.github.io/blob/src/deploy.sh
+DOOM Emacsのsmartparensの動作がおかしくてイライラするのでオフにした
 
 
 ">
 <meta property="og:type" content="article">
-<meta property="og:title" content="オイル交換メモ">
-<meta name="twitter:title" content="オイル交換メモ">
-<meta property="og:url" content="https://ngkz.github.io/2019/03/oil-change/">
-<meta property="twitter:url" content="https://ngkz.github.io/2019/03/oil-change/">
+<meta property="og:title" content="日記 2019/03/14(木)">
+<meta name="twitter:title" content="日記 2019/03/14(木)">
+<meta property="og:url" content="https://ngkz.github.io/2019/03/diary-20190314/">
+<meta property="twitter:url" content="https://ngkz.github.io/2019/03/diary-20190314/">
 <meta property="og:site_name" content="ngkz.log">
-<meta property="og:description" content="必要な物
-
-たまに忘れるので
+<meta property="og:description" content="Linux from Scratch
 
 
-オイル (消耗品)
-オイル処理箱 (消耗品)
-オイルフィルター (フィルター交換の場合, 消耗品)
-ウエス (消耗品)
-パーツクリーナー (消耗品)
-ドレンパッキン (消耗品)
-手袋 (消耗品)
-ゴミ袋 (消耗品)
-スロープ
-新聞紙
-メガネレンチ
-オイルジョッキ
-オイルフィルターレンチ (フィルター交換の場合)
-エクステンションバー (フィルター交換の場合)
-ラチェットハンドル (フィルター交換の場合)
-ウマ (タイヤローテーションもする場合)
-ジャッキ (タイヤローテーションもする場合)
-トルクレンチ (タイヤローテーションもする場合)
+パッケージの後処理スクリプトが完成
+
+
+パッケージの全バイナリとライブラリをstripするスクリプトが完成
+特定のファイルのデバッグ情報を分離して保持できるようにしてある
+man圧縮スクリプトの処理内容を出力するようにした
+後処理スクリプト自体もパッケージ化した
+
+全パッケージが新しい後処理スクリプトを使うようにした
+必要なライブラリ以外はデバッグ情報を残さないようにした
+glibcのパッケージ化とインストールが完了
+今までの変更をリポジトリにコミットした
+
+
+筋トレ
+
+休み
+
+今日は夕飯を食べるのが遅かったので、消化されるのを待っていたら寝る時間になってしまった。最近寝不足気味なので今日は筋トレせずに早く寝ることにする。
+
+LFS組んでたら結局寝るのが遅くなってしまった。
+
+その他
+
+
+このサイトのデプロイスクリプトをシンプルにした https://github.com/ngkz/ngkz.github.io/blob/src/deploy.sh
+DOOM Emacsのsmartparensの動作がおかしくてイライラするのでオフにした
 
 
 ">
-<meta name="twitter:description" content="必要な物
-
-たまに忘れるので
+<meta name="twitter:description" content="Linux from Scratch
 
 
-オイル (消耗品)
-オイル処理箱 (消耗品)
-オイルフィルター (フィルター交換の場合, 消耗品)
-ウエス (消耗品)
-パーツクリーナー (消耗品)
-ドレンパッキン (消耗品)
-手袋 (消耗品)
-ゴミ袋 (消耗品)
-スロープ
-新聞紙
-メガネレンチ
-オイルジョッキ
-オイルフィルターレンチ (フィルター交換の場合)
-エクステンションバー (フィルター交換の場合)
-ラチェットハンドル (フィルター交換の場合)
-ウマ (タイヤローテーションもする場合)
-ジャッキ (タイヤローテーションもする場合)
-トルクレンチ (タイヤローテーションもする場合)
+パッケージの後処理スクリプトが完成
+
+
+パッケージの全バイナリとライブラリをstripするスクリプトが完成
+特定のファイルのデバッグ情報を分離して保持できるようにしてある
+man圧縮スクリプトの処理内容を出力するようにした
+後処理スクリプト自体もパッケージ化した
+
+全パッケージが新しい後処理スクリプトを使うようにした
+必要なライブラリ以外はデバッグ情報を残さないようにした
+glibcのパッケージ化とインストールが完了
+今までの変更をリポジトリにコミットした
+
+
+筋トレ
+
+休み
+
+今日は夕飯を食べるのが遅かったので、消化されるのを待っていたら寝る時間になってしまった。最近寝不足気味なので今日は筋トレせずに早く寝ることにする。
+
+LFS組んでたら結局寝るのが遅くなってしまった。
+
+その他
+
+
+このサイトのデプロイスクリプトをシンプルにした https://github.com/ngkz/ngkz.github.io/blob/src/deploy.sh
+DOOM Emacsのsmartparensの動作がおかしくてイライラするのでオフにした
 
 
 ">
 <meta property="og:locale" content="ja">
 
   
-    <meta property="article:published_time" content="2019-03-02T19:25:00">
+    <meta property="article:published_time" content="2019-03-14T21:30:10">
   
   
-    <meta property="article:modified_time" content="2019-03-02T19:25:00">
+    <meta property="article:modified_time" content="2019-03-14T21:30:10">
   
-  
-  
-    
-      <meta property="article:section" content="車">
-    
   
   
     
-      <meta property="article:tag" content="整備記録">
+      <meta property="article:section" content="日記">
+    
+  
+  
+    
+      <meta property="article:tag" content="LFS">
     
   
 
@@ -157,14 +185,14 @@
   <meta property="twitter:image" content="https://ngkz.github.io/mypicture.jpg">
 
 
-    <title>オイル交換メモ</title>
+    <title>日記 2019/03/14(木)</title>
 
     <link rel="icon" href="https://ngkz.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://ngkz.github.io/2019/03/oil-change/">
+    <link rel="canonical" href="https://ngkz.github.io/2019/03/diary-20190314/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -314,19 +342,19 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      オイル交換メモ
+      日記 2019/03/14(木)
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2019-03-02T19:25:00&#43;09:00">
+      <time itemprop="datePublished" datetime="2019-03-14T21:30:10&#43;09:00">
         
   
   
   
   
-    2019-03-02
+    2019-03-14
   
 
       </time>
@@ -336,7 +364,7 @@
   
     <span>カテゴリー</span>
     
-      <a class="category-link" href="https://ngkz.github.io/categories/%e8%bb%8a">車</a>
+      <a class="category-link" href="https://ngkz.github.io/categories/%e6%97%a5%e8%a8%98">日記</a>
     
   
 
@@ -346,134 +374,39 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <h2 id="必要な物">必要な物</h2>
-
-<p>たまに忘れるので</p>
+              <h2 id="linux-from-scratch">Linux from Scratch</h2>
 
 <ul>
-<li>オイル (消耗品)</li>
-<li>オイル処理箱 (消耗品)</li>
-<li>オイルフィルター (フィルター交換の場合, 消耗品)</li>
-<li>ウエス (消耗品)</li>
-<li>パーツクリーナー (消耗品)</li>
-<li>ドレンパッキン (消耗品)</li>
-<li>手袋 (消耗品)</li>
-<li>ゴミ袋 (消耗品)</li>
-<li>スロープ</li>
-<li>新聞紙</li>
-<li>メガネレンチ</li>
-<li>オイルジョッキ</li>
-<li>オイルフィルターレンチ (フィルター交換の場合)</li>
-<li>エクステンションバー (フィルター交換の場合)</li>
-<li>ラチェットハンドル (フィルター交換の場合)</li>
-<li>ウマ (タイヤローテーションもする場合)</li>
-<li>ジャッキ (タイヤローテーションもする場合)</li>
-<li>トルクレンチ (タイヤローテーションもする場合)</li>
+<li>パッケージの後処理スクリプトが完成
+
+<ul>
+<li>パッケージの全バイナリとライブラリをstripするスクリプトが完成
+特定のファイルのデバッグ情報を分離して保持できるようにしてある</li>
+<li>man圧縮スクリプトの処理内容を出力するようにした</li>
+<li>後処理スクリプト自体もパッケージ化した</li>
+</ul></li>
+<li>全パッケージが新しい後処理スクリプトを使うようにした</li>
+<li>必要なライブラリ以外はデバッグ情報を残さないようにした</li>
+<li>glibcのパッケージ化とインストールが完了</li>
+<li>今までの変更をリポジトリにコミットした</li>
+</ul>
+
+<h2 id="筋トレ">筋トレ</h2>
+
+<p>休み</p>
+
+<p>今日は夕飯を食べるのが遅かったので、消化されるのを待っていたら寝る時間になってしまった。最近寝不足気味なので今日は筋トレせずに<del>早く寝ることにする</del>。</p>
+
+<p>LFS組んでたら結局寝るのが遅くなってしまった。</p>
+
+<h2 id="その他">その他</h2>
+
+<ul>
+<li>このサイトのデプロイスクリプトをシンプルにした <a href="https://github.com/ngkz/ngkz.github.io/blob/src/deploy.sh">https://github.com/ngkz/ngkz.github.io/blob/src/deploy.sh</a></li>
+<li>DOOM Emacsのsmartparensの動作がおかしくてイライラするのでオフにした</li>
 </ul>
 
 <p></p>
-
-<h2 id="メモ">メモ</h2>
-
-<ul>
-<li>ウェイクのドレンボルトの頭は14mm</li>
-<li>ドレンボルトを外す前にフィラーキャップを開ける</li>
-<li>ドレンパッキンはトヨタ用のやつも使える</li>
-<li>オイルフィルターのパッキンにはしっかりとオイルを塗る</li>
-<li>ドレンボルトをしめる時は指でしまらなくなった後1/8回転とちょっとくらい</li>
-<li>車が傾いているのでオイルを入れるときはゲージの半分くらいまでにしておく</li>
-<li>オイルを入れおわったらエンジンを動かした後ゲージをチェックしなおす</li>
-<li>作業後トリップメータとナビの通知機能をリセット</li>
-<li>翌日にオイルが漏れていないか確認</li>
-<li>オイルをこぼしたら猫砂で吸いとる</li>
-<li>コンクリートについたオイルの染みは 溶剤 + 猫砂で吸いとり、食器用洗剤で洗う。時間がたてば残った染みも目立たなくなる</li>
-</ul>
-
-<h2 id="記録">記録</h2>
-
-<table>
-<thead>
-<tr>
-<th>日付</th>
-<th>走行距離[km]</th>
-<th>備考</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>2018-01-21</td>
-<td>?</td>
-<td></td>
-</tr>
-
-<tr>
-<td>2018-02-27</td>
-<td>?</td>
-<td>フィルターも交換 オイルをこぼして大変なことになった</td>
-</tr>
-
-<tr>
-<td>2018-04-01</td>
-<td>?</td>
-<td></td>
-</tr>
-
-<tr>
-<td>2018-04-22</td>
-<td>20518?</td>
-<td>フィルターも交換</td>
-</tr>
-
-<tr>
-<td>2018-05-26</td>
-<td>?</td>
-<td>ディーラーで</td>
-</tr>
-
-<tr>
-<td>2018-07-01</td>
-<td>24321</td>
-<td>フィルターも交換 タイヤローテーションも</td>
-</tr>
-
-<tr>
-<td>2018-08-11</td>
-<td>27074</td>
-<td></td>
-</tr>
-
-<tr>
-<td>2018-09-22</td>
-<td>29473</td>
-<td>フィルターも交換 タイヤローテーションも</td>
-</tr>
-
-<tr>
-<td>2018-11-04</td>
-<td>?</td>
-<td>ディーラーで フィルターも交換</td>
-</tr>
-
-<tr>
-<td>2018-12-09</td>
-<td>35179</td>
-<td></td>
-</tr>
-
-<tr>
-<td>2019-01-27</td>
-<td>38285</td>
-<td>フィルターも交換 タイヤローテーションも</td>
-</tr>
-
-<tr>
-<td>2019-03-02</td>
-<td>40920</td>
-<td></td>
-</tr>
-</tbody>
-</table>
               
             </div>
           </div>
@@ -485,7 +418,7 @@
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">タグ</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://ngkz.github.io/tags/%E6%95%B4%E5%82%99%E8%A8%98%E9%8C%B2/">整備記録</a>
+  <a class="tag tag--primary tag--small" href="https://ngkz.github.io/tags/lfs/">LFS</a>
 
                   </div>
                 
@@ -498,7 +431,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/03/diary-20190302/" data-tooltip="日記 2019/03/02(土)">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">次</span>
@@ -506,7 +439,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/03/diary-20190301/" data-tooltip="日記 2019/03/01 (金)">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/03/diary-20190313/" data-tooltip="日記 2019/03/13(水)">
               
                   <span class="hide-xs hide-sm text-small icon-mr">前</span>
                   <i class="fa fa-angle-right"></i>
@@ -524,19 +457,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2019/03/oil-change/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2019/03/diary-20190314/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2019/03/oil-change/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2019/03/diary-20190314/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2019/03/oil-change/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2019/03/diary-20190314/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -584,7 +517,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/03/diary-20190302/" data-tooltip="日記 2019/03/02(土)">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">次</span>
@@ -592,7 +525,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/03/diary-20190301/" data-tooltip="日記 2019/03/01 (金)">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/03/diary-20190313/" data-tooltip="日記 2019/03/13(水)">
               
                   <span class="hide-xs hide-sm text-small icon-mr">前</span>
                   <i class="fa fa-angle-right"></i>
@@ -610,19 +543,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2019/03/oil-change/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2019/03/diary-20190314/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2019/03/oil-change/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2019/03/diary-20190314/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2019/03/oil-change/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2019/03/diary-20190314/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -652,19 +585,19 @@
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fngkz.github.io%2F2019%2F03%2Foil-change%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fngkz.github.io%2F2019%2F03%2Fdiary-20190314%2F">
           <i class="fa fa-facebook-official"></i><span>Facebookで共有</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fngkz.github.io%2F2019%2F03%2Foil-change%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fngkz.github.io%2F2019%2F03%2Fdiary-20190314%2F">
           <i class="fa fa-twitter"></i><span>Twitterで共有</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fngkz.github.io%2F2019%2F03%2Foil-change%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fngkz.github.io%2F2019%2F03%2Fdiary-20190314%2F">
           <i class="fa fa-google-plus"></i><span>Google&#43;で共有</span>
         </a>
       </li>
@@ -1371,9 +1304,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/ngkz.github.io\/2019\/03\/oil-change\/';
+          this.page.url = 'https:\/\/ngkz.github.io\/2019\/03\/diary-20190314\/';
           
-            this.page.identifier = '\/2019\/03\/oil-change\/'
+            this.page.identifier = '\/2019\/03\/diary-20190314\/'
           
         };
         (function() {
