@@ -8,6 +8,9 @@ NORMAL="\033[0m"
 
 echo -e "${BOLD_CYAN}Cleaning public directory${NORMAL}"
 cd public
+# Ensure that the current branch is master.
+git reset --hard HEAD
+git checkout master
 # Delete all files except .git
 rm -rf !(.git|.|..)
 # Bypassing jekyll
