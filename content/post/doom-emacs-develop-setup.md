@@ -474,3 +474,9 @@ Docker の操作と Dockerfile の編集のサポートを有効にする
        web               ; the tubes
        ;;vala              ; GObjective-C
 ```
+
+## smartparensを無効にする
+```elisp
+;; smartparens is more annoying than useful
+(after! smartparens (smartparens-global-mode -1))
+```
