@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>個紋 on ngkz.log</title>
+    <link>https://ngkz.github.io/tags/%E5%80%8B%E7%B4%8B/</link>
+    <description>Recent content in 個紋 on ngkz.log</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Fri, 15 Mar 2019 23:59:59 +0900</lastBuildDate>
+    
+	<atom:link href="https://ngkz.github.io/tags/%E5%80%8B%E7%B4%8B/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>日記 2019/03/15(土)</title>
+      <link>https://ngkz.github.io/2019/03/diary-20190315/</link>
+      <pubDate>Fri, 15 Mar 2019 23:59:59 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/03/diary-20190315/</guid>
+      <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;tzdataをパッケージ化してインストールした&lt;/li&gt;
+&lt;li&gt;タイムゾーンの設定をした&lt;/li&gt;
+&lt;li&gt;MarkdownでLFS Bookの中身を書き直すかわりに本家のBookをフォークしてそれにこっちの環境特有の変更を入れることにした。git-svnの使い方がまだよくわかっていないのでforkすらできていないが&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;THE プレワークアウトを筋トレ40分前に1スクープ摂取&lt;/li&gt;
+&lt;li&gt;HMBを夕, トレーニング40分前, 就寝前に1g摂取&lt;/li&gt;
+&lt;li&gt;前日の睡眠 7:32 (23:49→7:27)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;上半身プッシュ+腹筋&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;種目&lt;/th&gt;
+&lt;th&gt;重量&amp;amp;目標回数&lt;/th&gt;
+&lt;th&gt;回数&lt;/th&gt;
+&lt;th&gt;備考&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;プッシュアップ&lt;/td&gt;
+&lt;td&gt;3セット 自重 10回以上 → 膝つき&lt;/td&gt;
+&lt;td&gt;↑10→2 9→6 7→4&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ダンベルショルダープレス&lt;/td&gt;
+&lt;td&gt;2セット 25kg(10kg+シャフトx2) 12回以上 → ドロップ&lt;/td&gt;
+&lt;td&gt;↑13 12→10kgで15&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ダンベルフレンチプレス&lt;/td&gt;
+&lt;td&gt;2セット 12.5kg(10kg+シャフト) 11回以上 → ドロップ&lt;/td&gt;
+&lt;td&gt;↑14 4→5kgで25&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ダンベルフライ&lt;/td&gt;
+&lt;td&gt;2セット 20kg(7.5kg+シャフトx2) 15回以上 → ドロップ&lt;/td&gt;
+&lt;td&gt;↑16 10→12&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ツイストクランチ&lt;/td&gt;
+&lt;td&gt;3セット 自重 5秒維持 23回以上&lt;/td&gt;
+&lt;td&gt;↓21 17 14&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://twitter.com/root_ab&#34;&gt;キュバン&lt;/a&gt; の名刺のパーティグッズ研究所ロゴがかっこよかったので、自分もこういうシンボル(個紋?)を持ちたくなった。
+
+&lt;ul&gt;
+&lt;li&gt;名前の&lt;code&gt;和&lt;/code&gt;の左半分の由来が穂先が茎の先端に垂れかかる象形で、&lt;code&gt;敏&lt;/code&gt;の左半分の由来が髪飾りをつけて結髪する婦人の象形なので、髪の長い女性+稲穂紋の半分を太極図のように組み合わせた紋を作って紙に描いてみたらいい感じになった。&lt;/li&gt;
+&lt;li&gt;でも、男のシンボルに女性の図案は合わなさそうなので、&lt;code&gt;敏&lt;/code&gt;の素早いという意味に合っていて、家紋の定番モチーフの鳥でもある 隼との組合せに変更した。&lt;/li&gt;
+&lt;li&gt;他にやらなきゃいけないことがあるので清書は後にする&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;個紋を考えていたら筋トレ開始が遅くなってしまった。&lt;/li&gt;
+&lt;li&gt;ネットで6時間無駄にしてしまった
+
+&lt;ul&gt;
+&lt;li&gt;金曜や休日に、風呂に入るのが億劫で風呂に入らずに寝たくもない状態になってしまうとついネットサーフィンをしてしまう&lt;/li&gt;
+&lt;li&gt;0時で強制サスペンドするようにした&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
