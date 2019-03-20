@@ -27,7 +27,7 @@
 &lt;li&gt;CPPFLAGSに&lt;code&gt;-D_FORTIFY_SOURCE=2&lt;/code&gt;が入っているとlimits.hの存在チェックが壊れてビルドできななかった&lt;/li&gt;
 &lt;li&gt;CFLAGSとCXXFLAGSに&lt;code&gt;_FORTIFY_SOURCE&lt;/code&gt;の定義を移して解決&lt;/li&gt;
 &lt;li&gt;ビルドはできるようになったがテストが通らない&lt;/li&gt;
-&lt;li&gt;CFLAGS, CXXFLAGS, CPPFLAGSを削除したらgold以外のテストは通るようになったので、 Hardening フラグのどれかが原因っぽい&lt;/li&gt;
+&lt;li&gt;CFLAGS, CXXFLAGS, CPPFLAGS, LDFLAGSを削除したらgold以外のテストは通るようになったので、 Hardening フラグのどれかが原因っぽい&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
