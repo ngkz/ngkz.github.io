@@ -6,13 +6,99 @@
     <description>Recent content on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 15 Mar 2019 23:59:59 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 20 Mar 2019 22:17:43 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>日記 2019/03/15(土)</title>
+      <title>日記 2019/03/20(水)</title>
+      <link>https://ngkz.github.io/2019/03/diary-20190320/</link>
+      <pubDate>Wed, 20 Mar 2019 22:17:43 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/03/diary-20190320/</guid>
+      <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Zlib, File, Readline, M4, Bcをインストールした&lt;/li&gt;
+&lt;li&gt;binutilsのビルドの途中
+
+&lt;ul&gt;
+&lt;li&gt;CPPFLAGSに&lt;code&gt;-D_FORTIFY_SOURCE=2&lt;/code&gt;が入っているとlimits.hの存在チェックが壊れてビルドできななかった&lt;/li&gt;
+&lt;li&gt;CFLAGSとCXXFLAGSに&lt;code&gt;_FORTIFY_SOURCE&lt;/code&gt;の定義を移して解決&lt;/li&gt;
+&lt;li&gt;ビルドはできるようになったがテストが通らない&lt;/li&gt;
+&lt;li&gt;CFLAGS, CXXFLAGS, CPPFLAGSを削除したらgold以外のテストは通るようになったので、 Hardening フラグのどれかが原因っぽい&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;THE プレワークアウトを筋トレ30分前に1スクープ摂取&lt;/li&gt;
+&lt;li&gt;HMBを昼, トレーニング1時間前, 就寝前に1g摂取&lt;/li&gt;
+&lt;li&gt;前日の睡眠 7:23 (23:37-7:11)
+
+&lt;ul&gt;
+&lt;li&gt;あまりよく眠れなかった&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;DiscordのJMusicBotをいじってたら時間がなくなってしまった&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;上半身プル&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;種目&lt;/th&gt;
+&lt;th&gt;重量&amp;amp;目標回数&lt;/th&gt;
+&lt;th&gt;回数&lt;/th&gt;
+&lt;th&gt;備考&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ハーフデッドリフト&lt;/td&gt;
+&lt;td&gt;3セット 30kg(27.5kgx2+シャフト) 21回以上&lt;/td&gt;
+&lt;td&gt;↓15 9 12&lt;/td&gt;
+&lt;td&gt;力を出しきれなかった&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ワンハンドローイング&lt;/td&gt;
+&lt;td&gt;左右2セット 12.5kg(10kg+シャフト) 21回以上 →ドロップ&lt;/td&gt;
+&lt;td&gt;↓左15 右16 左17→5kgで12 右16→5kgで20&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ダンベルシュラッグ&lt;/td&gt;
+&lt;td&gt;2セット 30kg(27.5kg+シャフトx2) 23回以上 →ドロップ&lt;/td&gt;
+&lt;td&gt;↓18 19&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ダンベルカール&lt;/td&gt;
+&lt;td&gt;3セット 10kg(7.5kg+シャフト) 11回以上 →ドロップ&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;時間切れ&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;変形バックエクステンション&lt;/td&gt;
+&lt;td&gt;2セット 自重+5kg 16回以上 →ドロップ&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>日記 2019/03/15(金)</title>
       <link>https://ngkz.github.io/2019/03/diary-20190315/</link>
       <pubDate>Fri, 15 Mar 2019 23:59:59 +0900</pubDate>
       
@@ -79,13 +165,6 @@
 &lt;td&gt;ツイストクランチ&lt;/td&gt;
 &lt;td&gt;3セット 自重 5秒維持 23回以上&lt;/td&gt;
 &lt;td&gt;↓21 17 14&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;

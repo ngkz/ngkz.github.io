@@ -8,19 +8,347 @@
 <meta name="generator" content="Hugo 0.42.2 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
-<meta name="description" content="Kazutoshi Noguchi&#39;s blog">
+<meta name="description" content="Linux from Scratch
 
 
-<meta property="og:description" content="Kazutoshi Noguchi&#39;s blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Emacs">
-<meta name="twitter:title" content="Emacs">
-<meta property="og:url" content="https://ngkz.github.io/tags/emacs/">
-<meta property="twitter:url" content="https://ngkz.github.io/tags/emacs/">
+Zlib, File, Readline, M4, Bcをインストールした
+binutilsのビルドの途中
+
+
+CPPFLAGSに-D_FORTIFY_SOURCE=2が入っているとlimits.hの存在チェックが壊れてビルドできななかった
+CFLAGSとCXXFLAGSに_FORTIFY_SOURCEの定義を移して解決
+ビルドはできるようになったがテストが通らない
+CFLAGS, CXXFLAGS, CPPFLAGSを削除したらgold以外のテストは通るようになったので、 Hardening フラグのどれかが原因っぽい
+
+
+
+筋トレ
+
+
+THE プレワークアウトを筋トレ30分前に1スクープ摂取
+HMBを昼, トレーニング1時間前, 就寝前に1g摂取
+前日の睡眠 7:23 (23:37-7:11)
+
+
+あまりよく眠れなかった
+
+DiscordのJMusicBotをいじってたら時間がなくなってしまった
+
+
+上半身プル
+
+
+
+
+種目
+重量&amp;目標回数
+回数
+備考
+
+
+
+
+
+ハーフデッドリフト
+3セット 30kg(27.5kgx2&#43;シャフト) 21回以上
+↓15 9 12
+力を出しきれなかった
+
+
+
+ワンハンドローイング
+左右2セット 12.5kg(10kg&#43;シャフト) 21回以上 →ドロップ
+↓左15 右16 左17→5kgで12 右16→5kgで20
+
+
+
+
+ダンベルシュラッグ
+2セット 30kg(27.5kg&#43;シャフトx2) 23回以上 →ドロップ
+↓18 19
+
+
+
+
+ダンベルカール
+3セット 10kg(7.5kg&#43;シャフト) 11回以上 →ドロップ
+
+時間切れ
+
+
+
+変形バックエクステンション
+2セット 自重&#43;5kg 16回以上 →ドロップ
+
+
+
+
+
+
+">
+
+
+<meta property="og:description" content="Linux from Scratch
+
+
+Zlib, File, Readline, M4, Bcをインストールした
+binutilsのビルドの途中
+
+
+CPPFLAGSに-D_FORTIFY_SOURCE=2が入っているとlimits.hの存在チェックが壊れてビルドできななかった
+CFLAGSとCXXFLAGSに_FORTIFY_SOURCEの定義を移して解決
+ビルドはできるようになったがテストが通らない
+CFLAGS, CXXFLAGS, CPPFLAGSを削除したらgold以外のテストは通るようになったので、 Hardening フラグのどれかが原因っぽい
+
+
+
+筋トレ
+
+
+THE プレワークアウトを筋トレ30分前に1スクープ摂取
+HMBを昼, トレーニング1時間前, 就寝前に1g摂取
+前日の睡眠 7:23 (23:37-7:11)
+
+
+あまりよく眠れなかった
+
+DiscordのJMusicBotをいじってたら時間がなくなってしまった
+
+
+上半身プル
+
+
+
+
+種目
+重量&amp;目標回数
+回数
+備考
+
+
+
+
+
+ハーフデッドリフト
+3セット 30kg(27.5kgx2&#43;シャフト) 21回以上
+↓15 9 12
+力を出しきれなかった
+
+
+
+ワンハンドローイング
+左右2セット 12.5kg(10kg&#43;シャフト) 21回以上 →ドロップ
+↓左15 右16 左17→5kgで12 右16→5kgで20
+
+
+
+
+ダンベルシュラッグ
+2セット 30kg(27.5kg&#43;シャフトx2) 23回以上 →ドロップ
+↓18 19
+
+
+
+
+ダンベルカール
+3セット 10kg(7.5kg&#43;シャフト) 11回以上 →ドロップ
+
+時間切れ
+
+
+
+変形バックエクステンション
+2セット 自重&#43;5kg 16回以上 →ドロップ
+
+
+
+
+
+
+">
+<meta property="og:type" content="article">
+<meta property="og:title" content="日記 2019/03/20(水)">
+<meta name="twitter:title" content="日記 2019/03/20(水)">
+<meta property="og:url" content="https://ngkz.github.io/2019/03/diary-20190320/">
+<meta property="twitter:url" content="https://ngkz.github.io/2019/03/diary-20190320/">
 <meta property="og:site_name" content="ngkz.log">
-<meta property="og:description" content="Kazutoshi Noguchi&#39;s blog">
-<meta name="twitter:description" content="Kazutoshi Noguchi&#39;s blog">
+<meta property="og:description" content="Linux from Scratch
+
+
+Zlib, File, Readline, M4, Bcをインストールした
+binutilsのビルドの途中
+
+
+CPPFLAGSに-D_FORTIFY_SOURCE=2が入っているとlimits.hの存在チェックが壊れてビルドできななかった
+CFLAGSとCXXFLAGSに_FORTIFY_SOURCEの定義を移して解決
+ビルドはできるようになったがテストが通らない
+CFLAGS, CXXFLAGS, CPPFLAGSを削除したらgold以外のテストは通るようになったので、 Hardening フラグのどれかが原因っぽい
+
+
+
+筋トレ
+
+
+THE プレワークアウトを筋トレ30分前に1スクープ摂取
+HMBを昼, トレーニング1時間前, 就寝前に1g摂取
+前日の睡眠 7:23 (23:37-7:11)
+
+
+あまりよく眠れなかった
+
+DiscordのJMusicBotをいじってたら時間がなくなってしまった
+
+
+上半身プル
+
+
+
+
+種目
+重量&amp;目標回数
+回数
+備考
+
+
+
+
+
+ハーフデッドリフト
+3セット 30kg(27.5kgx2&#43;シャフト) 21回以上
+↓15 9 12
+力を出しきれなかった
+
+
+
+ワンハンドローイング
+左右2セット 12.5kg(10kg&#43;シャフト) 21回以上 →ドロップ
+↓左15 右16 左17→5kgで12 右16→5kgで20
+
+
+
+
+ダンベルシュラッグ
+2セット 30kg(27.5kg&#43;シャフトx2) 23回以上 →ドロップ
+↓18 19
+
+
+
+
+ダンベルカール
+3セット 10kg(7.5kg&#43;シャフト) 11回以上 →ドロップ
+
+時間切れ
+
+
+
+変形バックエクステンション
+2セット 自重&#43;5kg 16回以上 →ドロップ
+
+
+
+
+
+
+">
+<meta name="twitter:description" content="Linux from Scratch
+
+
+Zlib, File, Readline, M4, Bcをインストールした
+binutilsのビルドの途中
+
+
+CPPFLAGSに-D_FORTIFY_SOURCE=2が入っているとlimits.hの存在チェックが壊れてビルドできななかった
+CFLAGSとCXXFLAGSに_FORTIFY_SOURCEの定義を移して解決
+ビルドはできるようになったがテストが通らない
+CFLAGS, CXXFLAGS, CPPFLAGSを削除したらgold以外のテストは通るようになったので、 Hardening フラグのどれかが原因っぽい
+
+
+
+筋トレ
+
+
+THE プレワークアウトを筋トレ30分前に1スクープ摂取
+HMBを昼, トレーニング1時間前, 就寝前に1g摂取
+前日の睡眠 7:23 (23:37-7:11)
+
+
+あまりよく眠れなかった
+
+DiscordのJMusicBotをいじってたら時間がなくなってしまった
+
+
+上半身プル
+
+
+
+
+種目
+重量&amp;目標回数
+回数
+備考
+
+
+
+
+
+ハーフデッドリフト
+3セット 30kg(27.5kgx2&#43;シャフト) 21回以上
+↓15 9 12
+力を出しきれなかった
+
+
+
+ワンハンドローイング
+左右2セット 12.5kg(10kg&#43;シャフト) 21回以上 →ドロップ
+↓左15 右16 左17→5kgで12 右16→5kgで20
+
+
+
+
+ダンベルシュラッグ
+2セット 30kg(27.5kg&#43;シャフトx2) 23回以上 →ドロップ
+↓18 19
+
+
+
+
+ダンベルカール
+3セット 10kg(7.5kg&#43;シャフト) 11回以上 →ドロップ
+
+時間切れ
+
+
+
+変形バックエクステンション
+2セット 自重&#43;5kg 16回以上 →ドロップ
+
+
+
+
+
+
+">
 <meta property="og:locale" content="ja">
+
+  
+    <meta property="article:published_time" content="2019-03-20T22:17:43">
+  
+  
+    <meta property="article:modified_time" content="2019-03-20T22:17:43">
+  
+  
+  
+    
+      <meta property="article:section" content="日記">
+    
+  
+  
+    
+      <meta property="article:tag" content="LFS">
+    
+      <meta property="article:tag" content="筋トレ">
+    
+  
 
 
 <meta name="twitter:card" content="summary">
@@ -39,16 +367,14 @@
   <meta property="twitter:image" content="https://ngkz.github.io/mypicture.jpg">
 
 
-    <title>Emacs</title>
+    <title>日記 2019/03/20(水)</title>
 
     <link rel="icon" href="https://ngkz.github.io/favicon.png">
     
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://ngkz.github.io/tags/emacs/index.xml">
-    
 
     
 
-    <link rel="canonical" href="https://ngkz.github.io/tags/emacs/">
+    <link rel="canonical" href="https://ngkz.github.io/2019/03/diary-20190320/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -187,48 +513,30 @@
 </nav>
 
       
-        
 
-      
       <div id="main" data-behavior="1"
         class="
                hasCoverMetaIn
                ">
-        
-          <section class="postShorten-group main-content-wrap">
-            
-            
-              
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
   
-    
-      
-        
-      
-    
+    <h1 class="post-title" itemprop="headline">
+      日記 2019/03/20(水)
+    </h1>
   
-
-
   
-
-<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://ngkz.github.io/2018/10/doom-emacs-develop-setup/">
-          DOOM Emacsの導入方法 &amp; 設定例
-        </a>
-      </h1>
-      
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-10-20T10:50:27&#43;09:00">
+      <time itemprop="datePublished" datetime="2019-03-20T22:17:43&#43;09:00">
         
   
   
   
   
-    2018-10-20
+    2019-03-20
   
 
       </time>
@@ -238,44 +546,197 @@
   
     <span>カテゴリー</span>
     
-      <a class="category-link" href="https://ngkz.github.io/categories/howto">howto</a>
+      <a class="category-link" href="https://ngkz.github.io/categories/%e6%97%a5%e8%a8%98">日記</a>
     
   
 
   </div>
 
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <h2 id="動機">動機</h2>
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <h2 id="linux-from-scratch">Linux from Scratch</h2>
 
-<ol>
-<li>収録ソフトウェアがかなり古くなってきている Ubuntu 14.04 から Linux From Scratch に移行しよう</li>
-<li>この機会に neovim に移行して、vim の設定を一から書き直そう</li>
-<li>エディタ部分は大量に設定を書かないと使い勝手が悪いし、プラグインの導入と設定も面倒だ</li>
-<li>vim 風のキーバインディングで、よりすぐれた操作性を持つ <a href="http://kakoune.org/why-kakoune/why-kakoune.html">Kakoune というエディタがあるらしい</a>。<a href="https://github.com/ngkz/kakrc">試してみよう</a></li>
-<li>たしかに、設計・デフォルト設定や操作性は vim より良いが、プラグインが足りない</li>
-<li>じゃあプラグインが充実している Emacs だ。素の Emacs は設定が大変らしいから、<a href="http://spacemacs.org/">spacemacs</a>も試してみよう。</li>
-<li>起動が遅い</li>
-<li>Spacemacs より軽い DOOM Emacs というのがあるらしい。これにしよう</li>
-</ol>
+<ul>
+<li>Zlib, File, Readline, M4, Bcをインストールした</li>
+<li>binutilsのビルドの途中
+
+<ul>
+<li>CPPFLAGSに<code>-D_FORTIFY_SOURCE=2</code>が入っているとlimits.hの存在チェックが壊れてビルドできななかった</li>
+<li>CFLAGSとCXXFLAGSに<code>_FORTIFY_SOURCE</code>の定義を移して解決</li>
+<li>ビルドはできるようになったがテストが通らない</li>
+<li>CFLAGS, CXXFLAGS, CPPFLAGSを削除したらgold以外のテストは通るようになったので、 Hardening フラグのどれかが原因っぽい</li>
+</ul></li>
+</ul>
+
+<h2 id="筋トレ">筋トレ</h2>
+
+<ul>
+<li>THE プレワークアウトを筋トレ30分前に1スクープ摂取</li>
+<li>HMBを昼, トレーニング1時間前, 就寝前に1g摂取</li>
+<li>前日の睡眠 7:23 (23:37-7:11)
+
+<ul>
+<li>あまりよく眠れなかった</li>
+</ul></li>
+<li>DiscordのJMusicBotをいじってたら時間がなくなってしまった</li>
+</ul>
+
+<p><strong>上半身プル</strong></p>
+
+<table>
+<thead>
+<tr>
+<th>種目</th>
+<th>重量&amp;目標回数</th>
+<th>回数</th>
+<th>備考</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>ハーフデッドリフト</td>
+<td>3セット 30kg(27.5kgx2+シャフト) 21回以上</td>
+<td>↓15 9 12</td>
+<td>力を出しきれなかった</td>
+</tr>
+
+<tr>
+<td>ワンハンドローイング</td>
+<td>左右2セット 12.5kg(10kg+シャフト) 21回以上 →ドロップ</td>
+<td>↓左15 右16 左17→5kgで12 右16→5kgで20</td>
+<td></td>
+</tr>
+
+<tr>
+<td>ダンベルシュラッグ</td>
+<td>2セット 30kg(27.5kg+シャフトx2) 23回以上 →ドロップ</td>
+<td>↓18 19</td>
+<td></td>
+</tr>
+
+<tr>
+<td>ダンベルカール</td>
+<td>3セット 10kg(7.5kg+シャフト) 11回以上 →ドロップ</td>
+<td></td>
+<td>時間切れ</td>
+</tr>
+
+<tr>
+<td>変形バックエクステンション</td>
+<td>2セット 自重+5kg 16回以上 →ドロップ</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 <p></p>
-      
-      <p>
-        <a href="https://ngkz.github.io/2018/10/doom-emacs-develop-setup/" class="postShorten-excerpt_link link">続きを読む</a>
-        
-      </p>
-    </div>
-  </div>
+
+<h2 id="その他">その他</h2>
+
+<ul>
+<li>ネットで1.5時間, JMusicBotで1時間無駄にした</li>
+</ul>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">タグ</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://ngkz.github.io/tags/lfs/">LFS</a>
+
+  <a class="tag tag--primary tag--small" href="https://ngkz.github.io/tags/%E7%AD%8B%E3%83%88%E3%83%AC/">筋トレ</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
   
-</article>
-
-            
-            
-
-          </section>
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">次</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/03/diary-20190315/" data-tooltip="日記 2019/03/15(金)">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">前</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
         
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2019/03/diary-20190320/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2019/03/diary-20190320/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2019/03/diary-20190320/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">ngkz.log</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://ngkz.github.io/" property="cc:attributionName" rel="cc:attributionURL">Kazutoshi Noguchi</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
@@ -283,6 +744,102 @@
 </footer>
 
       </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="1">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">次</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/03/diary-20190315/" data-tooltip="日記 2019/03/15(金)">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">前</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2019/03/diary-20190320/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2019/03/diary-20190320/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2019/03/diary-20190320/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="1">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fngkz.github.io%2F2019%2F03%2Fdiary-20190320%2F">
+          <i class="fa fa-facebook-official"></i><span>Facebookで共有</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fngkz.github.io%2F2019%2F03%2Fdiary-20190320%2F">
+          <i class="fa fa-twitter"></i><span>Twitterで共有</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fngkz.github.io%2F2019%2F03%2Fdiary-20190320%2F">
+          <i class="fa fa-google-plus"></i><span>Google&#43;で共有</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
     </div>
     
     <div id="about">
@@ -1068,6 +1625,32 @@ $(document).ready(function() {
 });
 </script>
 
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/ngkz.github.io\/2019\/03\/diary-20190320\/';
+          
+            this.page.identifier = '\/2019\/03\/diary-20190320\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'ngkz-log';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
 
 
 
