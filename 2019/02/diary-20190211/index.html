@@ -1018,6 +1018,37 @@ Summary of test results:
           <div class="media">
             
             <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190321/">
+                <h3 class="media-heading">日記 2019/03/21(木)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Mar 3, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><h2 id="linux-from-scratch">Linux from Scratch</h2>
+
+<ul>
+<li>Binutilsのインストールが完了した
+
+<ul>
+<li>Hardening フラグを削除してもテストが失敗するのは GCCをDefault PIEでコンパイルしていたのが原因だった。</li>
+<li>テストするときに、<code>CFLAGS</code>, <code>CXXFLAGS</code>, <code>CPPFLAGS</code>, <code>LDFLAGS</code>を取り除いて、<code>CC</code>と<code>CXX</code>に<code>-fno-PIE -no-pie</code>を加えてPIEを無効にしたら全テストが通るようになった</li>
+</ul></li>
+<li>GMPをインストールした</li>
+</ul>
+
+<h2 id="筋トレ">筋トレ</h2>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
               <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190320/">
                 <h3 class="media-heading">日記 2019/03/20(水)</h3>
               </a>
@@ -1664,35 +1695,6 @@ Summary of test results:
             <hr>
           </div>
         
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190307/">
-                <h3 class="media-heading">日記 2019/03/07(木)</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Mar 3, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="linux-from-scratch">Linux from Scratch</h2>
-
-<p>glibcの設定をしている途中</p>
-
-<h2 id="その他">その他</h2>
-
-<ul>
-<li>風呂入って戻ってきたらドローンが置いてあった 何これ？</li>
-<li>4.6時間無駄にした</li>
-<li>昨日夜更ししたせいで疲れていたので筋トレせずにはやめにねた</li>
-</ul>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
       </div>
     </div>
     <div class="modal-footer">
@@ -1700,7 +1702,7 @@ Summary of test results:
          data-message-zero=""
          data-message-one=""
          data-message-other="">
-         78 posts found
+         79 posts found
       </p>
     </div>
   </div>

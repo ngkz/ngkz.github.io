@@ -6,10 +6,33 @@
     <description>Recent content in Lfs on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 20 Mar 2019 22:17:43 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 21 Mar 2019 22:50:19 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/tags/lfs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>日記 2019/03/21(木)</title>
+      <link>https://ngkz.github.io/2019/03/diary-20190321/</link>
+      <pubDate>Thu, 21 Mar 2019 22:50:19 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/03/diary-20190321/</guid>
+      <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Binutilsのインストールが完了した
+
+&lt;ul&gt;
+&lt;li&gt;Hardening フラグを削除してもテストが失敗するのは GCCをDefault PIEでコンパイルしていたのが原因だった。&lt;/li&gt;
+&lt;li&gt;テストするときに、&lt;code&gt;CFLAGS&lt;/code&gt;, &lt;code&gt;CXXFLAGS&lt;/code&gt;, &lt;code&gt;CPPFLAGS&lt;/code&gt;, &lt;code&gt;LDFLAGS&lt;/code&gt;を取り除いて、&lt;code&gt;CC&lt;/code&gt;と&lt;code&gt;CXX&lt;/code&gt;に&lt;code&gt;-fno-PIE -no-pie&lt;/code&gt;を加えてPIEを無効にしたら全テストが通るようになった&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;GMPをインストールした&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>日記 2019/03/20(水)</title>
