@@ -215,6 +215,82 @@
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://ngkz.github.io/2019/01/diary-20190123/">
+          日記 (2019/01/23)
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-01-23T20:21:33&#43;09:00">
+        
+  
+  
+  
+  
+    2019-01-23
+  
+
+      </time>
+    
+    
+  
+  
+    <span>カテゴリー</span>
+    
+      <a class="category-link" href="https://ngkz.github.io/categories/%e6%97%a5%e8%a8%98">日記</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        <h2 id="lfs">LFS</h2>
+
+<p>進捗ほとんどなし</p>
+
+<h2 id="筋トレ">筋トレ</h2>
+
+<p>上半身プル</p>
+
+<pre><code>ハーフデッドリフト         3セット 25kg x 2
+ワンハンドローイング   左右2セット 10kg
+ダンベルシュラッグ         2セット 25kg x 2
+ダンベルカール             3セット 7.5kg
+変形バックエクステンション 2セット 2.5kg
+</code></pre>
+
+<p></p>
+      
+      <p>
+        <a href="https://ngkz.github.io/2019/01/diary-20190123/" class="postShorten-excerpt_link link">続きを読む</a>
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
         <a class="link-unstyled" href="https://ngkz.github.io/2019/01/diary-20190122/">
           日記 (2019/01/22)
         </a>
@@ -354,6 +430,39 @@
       <div class="no-result text-color-light text-center"></div>
       <div class="results">
         
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190322/">
+                <h3 class="media-heading">日記 2019/03/22(金)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Mar 3, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><h2 id="linux-from-scratch">Linux from Scratch</h2>
+
+<ul>
+<li>昨日ビルドしたbinutilsのバイナリがなぜか非PIEになっていた。 ログを採って調べてみたら、テスト前にHardeningフラグを取り除いてPIEを無効にしたときにMakefileのタイムスタンプが変わったのが原因で、バイナリがPIE無効で再リンクされてしまていたことが分かった。<br />
+<a href="https://github.com/ngkz/my-lfs-setup/commit/84551e209d17e9220912b057dc1c56d1814e353e">Makefileに細工するときにタイムスタンプが変わらないようにしたら解決した</a>。</li>
+<li>MPFR,MPC,Shadowをインストールした。</li>
+<li>GCCをビルドしている途中
+
+<ul>
+<li>ほぼ全てのテストが失敗するので原因を調べてみたら、<code>/dev/pts</code>のマウントオプションが間違っていて<code>/dev/pts/ptmx</code>のモードが<code>000</code>になっていたのが原因だった。マウントオプションに<code>newinstance,ptmxmode=0666</code>を加えて解決。</li>
+<li><code>/dev/pts/ptmx</code>を直したら大体のテストは通るようになったが、まだ何十ものテストが失敗している。テストに数時間かかるのでデバッグにかなり手間がかかりそう。</li>
+</ul></li>
+</ul>
+
+<h2 id="筋トレ">筋トレ</h2>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
         
           <div class="media">
             
@@ -991,50 +1100,6 @@
             <hr>
           </div>
         
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190308/">
-                <h3 class="media-heading">日記 2019/03/08(金)</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Mar 3, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="linux-from-scratch">Linux from Scratch</h2>
-
-<ul>
-<li>glibcの構築手順の説明を更新</li>
-<li>必要なライブラリ以外はデバッグ情報を残さないように変更 (途中)</li>
-</ul>
-
-<h2 id="スキー">スキー</h2>
-
-<ul>
-<li>荷物をパッキングして積んだ</li>
-</ul>
-
-<h2 id="みんなで逮捕されようプロジェクト">みんなで逮捕されようプロジェクト</h2>
-
-<ul>
-<li>中学生がalertループへのURLを貼って補導された件で、
-<a href="https://www.data-max.co.jp/article/28329">「みんなで逮捕されようプロジェクト」 </a> っていうのが始まったらしいので、私も兵庫県警に喧嘩を売っておいた
-<a href="https://ngkz.github.io/lets-get-arrested/">https://ngkz.github.io/lets-get-arrested/</a>
-
-<ul>
-<li>茨城県警のサイバー犯罪対策室はちゃんとしたセキュリティ技術者を雇っていて、技術力も高いようだから逮捕される確率は低そう</li>
-</ul></li>
-</ul>
-
-<h2 id="ドローン">ドローン</h2>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
       </div>
     </div>
     <div class="modal-footer">
@@ -1042,7 +1107,7 @@
          data-message-zero=""
          data-message-one=""
          data-message-other="">
-         79 posts found
+         80 posts found
       </p>
     </div>
   </div>

@@ -6,10 +6,35 @@
     <description>Recent content in 日記 on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 21 Mar 2019 22:50:19 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 22 Mar 2019 17:11:56 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/categories/%E6%97%A5%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>日記 2019/03/22(金)</title>
+      <link>https://ngkz.github.io/2019/03/diary-20190322/</link>
+      <pubDate>Fri, 22 Mar 2019 17:11:56 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/03/diary-20190322/</guid>
+      <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;昨日ビルドしたbinutilsのバイナリがなぜか非PIEになっていた。 ログを採って調べてみたら、テスト前にHardeningフラグを取り除いてPIEを無効にしたときにMakefileのタイムスタンプが変わったのが原因で、バイナリがPIE無効で再リンクされてしまていたことが分かった。&lt;br /&gt;
+&lt;a href=&#34;https://github.com/ngkz/my-lfs-setup/commit/84551e209d17e9220912b057dc1c56d1814e353e&#34;&gt;Makefileに細工するときにタイムスタンプが変わらないようにしたら解決した&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;MPFR,MPC,Shadowをインストールした。&lt;/li&gt;
+&lt;li&gt;GCCをビルドしている途中
+
+&lt;ul&gt;
+&lt;li&gt;ほぼ全てのテストが失敗するので原因を調べてみたら、&lt;code&gt;/dev/pts&lt;/code&gt;のマウントオプションが間違っていて&lt;code&gt;/dev/pts/ptmx&lt;/code&gt;のモードが&lt;code&gt;000&lt;/code&gt;になっていたのが原因だった。マウントオプションに&lt;code&gt;newinstance,ptmxmode=0666&lt;/code&gt;を加えて解決。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/dev/pts/ptmx&lt;/code&gt;を直したら大体のテストは通るようになったが、まだ何十ものテストが失敗している。テストに数時間かかるのでデバッグにかなり手間がかかりそう。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>日記 2019/03/21(木)</title>
