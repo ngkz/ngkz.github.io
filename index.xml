@@ -24,7 +24,7 @@
 
 &lt;ul&gt;
 &lt;li&gt;Hardening フラグを削除してもテストが失敗するのは GCCをDefault PIEでコンパイルしていたのが原因だった。&lt;/li&gt;
-&lt;li&gt;テストするときに、&lt;code&gt;CFLAGS&lt;/code&gt;, &lt;code&gt;CXXFLAGS&lt;/code&gt;, &lt;code&gt;CPPFLAGS&lt;/code&gt;, &lt;code&gt;LDFLAGS&lt;/code&gt;を取り除いて、&lt;code&gt;CC&lt;/code&gt;と&lt;code&gt;CXX&lt;/code&gt;に&lt;code&gt;-fno-PIE -no-pie&lt;/code&gt;を加えてPIEを無効にしたら全テストが通るようになった&lt;/li&gt;
+&lt;li&gt;テストするときに、&lt;code&gt;CFLAGS&lt;/code&gt;, &lt;code&gt;CXXFLAGS&lt;/code&gt;, &lt;code&gt;CPPFLAGS&lt;/code&gt;, &lt;code&gt;LDFLAGS&lt;/code&gt;を取り除くだけでなく、&lt;code&gt;CC&lt;/code&gt;と&lt;code&gt;CXX&lt;/code&gt;に&lt;code&gt;-fno-PIE -no-pie&lt;/code&gt;を加えてPIEを無効にしたら全テストが通るようになった&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;GMPをインストールした&lt;/li&gt;
 &lt;/ul&gt;
