@@ -562,6 +562,7 @@
 <li>GCCをビルドしている途中
 
 <ul>
+<li>nobodyユーザーに切り替えるとなぜか モードが<code>666</code>の<code>/dev/tty</code>が読めなくなった。<code>/</code>の所有者が<code>1000</code>でモードが<code>700</code>になっていたのが原因だった。</li>
 <li>ほぼ全てのテストが失敗するので原因を調べてみたら、<code>/dev/pts</code>のマウントオプションが間違っていて<code>/dev/pts/ptmx</code>のモードが<code>000</code>になっていたのが原因だった。マウントオプションに<code>newinstance,ptmxmode=0666</code>を加えて解決。</li>
 <li><code>/dev/pts/ptmx</code>を直したら大体のテストは通るようになったが、まだ何十ものテストが失敗している。テストに数時間かかるのでデバッグにかなり手間がかかりそう。</li>
 </ul></li>

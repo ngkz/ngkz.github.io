@@ -26,6 +26,7 @@
 &lt;li&gt;GCCをビルドしている途中
 
 &lt;ul&gt;
+&lt;li&gt;nobodyユーザーに切り替えるとなぜか モードが&lt;code&gt;666&lt;/code&gt;の&lt;code&gt;/dev/tty&lt;/code&gt;が読めなくなった。&lt;code&gt;/&lt;/code&gt;の所有者が&lt;code&gt;1000&lt;/code&gt;でモードが&lt;code&gt;700&lt;/code&gt;になっていたのが原因だった。&lt;/li&gt;
 &lt;li&gt;ほぼ全てのテストが失敗するので原因を調べてみたら、&lt;code&gt;/dev/pts&lt;/code&gt;のマウントオプションが間違っていて&lt;code&gt;/dev/pts/ptmx&lt;/code&gt;のモードが&lt;code&gt;000&lt;/code&gt;になっていたのが原因だった。マウントオプションに&lt;code&gt;newinstance,ptmxmode=0666&lt;/code&gt;を加えて解決。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;/dev/pts/ptmx&lt;/code&gt;を直したら大体のテストは通るようになったが、まだ何十ものテストが失敗している。テストに数時間かかるのでデバッグにかなり手間がかかりそう。&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
