@@ -8,96 +8,126 @@
 <meta name="generator" content="Hugo 0.42.2 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
-<meta name="description" content="
-  
-    
-  
-    
-  
-    
-  
-   
-    Scoreboard
-  
+<meta name="description" content="Linux from Scratch
+
+
+lddが正常に動いていなかったのを直した
+
+
+rtlddirを/usr/libに設定したとき lddが64bitダイナミックリンカのパスとして /usr/lib64/ld-linux-x86_64.so.2 を使っていたのが原因だった。
+/usr/lib64から/usr/libへのシンボリックリンクを貼って解決
+
+ライセンス違反を解決
+
+
+大部分がCC-BY-NC-SA 2.0のLFS Bookからの引用になったのに、リポジトリのライセンスが互換性のないGPLv3のままになっていた。
+ライセンスをCC-BY-NC-SAに変更して解決
+
+Adjusting the Toolchain
+
+
+/usr/lib32に必要な32bitライブラリへのリンクを貼るのを忘れていたため、32bitでコンパイルできなかったのを直した
 
 
 
-優勝して賞金2500円を手に入れました。
-
-">
+筋トレ">
 
 
-<meta property="og:description" content="
-  
-    
-  
-    
-  
-    
-  
-   
-    Scoreboard
-  
+<meta property="og:description" content="Linux from Scratch
+
+
+lddが正常に動いていなかったのを直した
+
+
+rtlddirを/usr/libに設定したとき lddが64bitダイナミックリンカのパスとして /usr/lib64/ld-linux-x86_64.so.2 を使っていたのが原因だった。
+/usr/lib64から/usr/libへのシンボリックリンクを貼って解決
+
+ライセンス違反を解決
+
+
+大部分がCC-BY-NC-SA 2.0のLFS Bookからの引用になったのに、リポジトリのライセンスが互換性のないGPLv3のままになっていた。
+ライセンスをCC-BY-NC-SAに変更して解決
+
+Adjusting the Toolchain
+
+
+/usr/lib32に必要な32bitライブラリへのリンクを貼るのを忘れていたため、32bitでコンパイルできなかったのを直した
 
 
 
-優勝して賞金2500円を手に入れました。
-
-">
+筋トレ">
 <meta property="og:type" content="article">
-<meta property="og:title" content="年越しCTF x86-64.jp大会 2014で優勝しました。">
-<meta name="twitter:title" content="年越しCTF x86-64.jp大会 2014で優勝しました。">
-<meta property="og:url" content="https://ngkz.github.io/2014/01/newyearsctf/">
-<meta property="twitter:url" content="https://ngkz.github.io/2014/01/newyearsctf/">
+<meta property="og:title" content="日記 2019/03/19(火)">
+<meta name="twitter:title" content="日記 2019/03/19(火)">
+<meta property="og:url" content="https://ngkz.github.io/2019/03/diary-20190319/">
+<meta property="twitter:url" content="https://ngkz.github.io/2019/03/diary-20190319/">
 <meta property="og:site_name" content="ngkz.log">
-<meta property="og:description" content="
-  
-    
-  
-    
-  
-    
-  
-   
-    Scoreboard
-  
+<meta property="og:description" content="Linux from Scratch
+
+
+lddが正常に動いていなかったのを直した
+
+
+rtlddirを/usr/libに設定したとき lddが64bitダイナミックリンカのパスとして /usr/lib64/ld-linux-x86_64.so.2 を使っていたのが原因だった。
+/usr/lib64から/usr/libへのシンボリックリンクを貼って解決
+
+ライセンス違反を解決
+
+
+大部分がCC-BY-NC-SA 2.0のLFS Bookからの引用になったのに、リポジトリのライセンスが互換性のないGPLv3のままになっていた。
+ライセンスをCC-BY-NC-SAに変更して解決
+
+Adjusting the Toolchain
+
+
+/usr/lib32に必要な32bitライブラリへのリンクを貼るのを忘れていたため、32bitでコンパイルできなかったのを直した
 
 
 
-優勝して賞金2500円を手に入れました。
-
-">
-<meta name="twitter:description" content="
-  
-    
-  
-    
-  
-    
-  
-   
-    Scoreboard
-  
+筋トレ">
+<meta name="twitter:description" content="Linux from Scratch
 
 
+lddが正常に動いていなかったのを直した
 
-優勝して賞金2500円を手に入れました。
 
-">
+rtlddirを/usr/libに設定したとき lddが64bitダイナミックリンカのパスとして /usr/lib64/ld-linux-x86_64.so.2 を使っていたのが原因だった。
+/usr/lib64から/usr/libへのシンボリックリンクを貼って解決
+
+ライセンス違反を解決
+
+
+大部分がCC-BY-NC-SA 2.0のLFS Bookからの引用になったのに、リポジトリのライセンスが互換性のないGPLv3のままになっていた。
+ライセンスをCC-BY-NC-SAに変更して解決
+
+Adjusting the Toolchain
+
+
+/usr/lib32に必要な32bitライブラリへのリンクを貼るのを忘れていたため、32bitでコンパイルできなかったのを直した
+
+
+
+筋トレ">
 <meta property="og:locale" content="ja">
 
   
-    <meta property="article:published_time" content="2014-01-01T15:45:15">
+    <meta property="article:published_time" content="2019-03-19T23:59:59">
   
   
-    <meta property="article:modified_time" content="2014-01-01T15:45:15">
+    <meta property="article:modified_time" content="2019-03-19T23:59:59">
   
   
   
     
-      <meta property="article:section" content="CTF">
+      <meta property="article:section" content="日記">
     
   
+  
+    
+      <meta property="article:tag" content="LFS">
+    
+      <meta property="article:tag" content="筋トレ">
+    
   
 
 
@@ -117,14 +147,14 @@
   <meta property="twitter:image" content="https://ngkz.github.io/mypicture.jpg">
 
 
-    <title>年越しCTF x86-64.jp大会 2014で優勝しました。</title>
+    <title>日記 2019/03/19(火)</title>
 
     <link rel="icon" href="https://ngkz.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://ngkz.github.io/2014/01/newyearsctf/">
+    <link rel="canonical" href="https://ngkz.github.io/2019/03/diary-20190319/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -274,19 +304,19 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      年越しCTF x86-64.jp大会 2014で優勝しました。
+      日記 2019/03/19(火)
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2014-01-01T15:45:15&#43;09:00">
+      <time itemprop="datePublished" datetime="2019-03-19T23:59:59&#43;09:00">
         
   
   
   
   
-    2014-01-01
+    2019-03-19
   
 
       </time>
@@ -296,7 +326,7 @@
   
     <span>カテゴリー</span>
     
-      <a class="category-link" href="https://ngkz.github.io/categories/ctf">CTF</a>
+      <a class="category-link" href="https://ngkz.github.io/categories/%e6%97%a5%e8%a8%98">日記</a>
     
   
 
@@ -306,31 +336,128 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <div class="figure " >
-  
-    <a class="fancybox" href="https://ngkz.github.io/assets/newyearsctf/0734e47f8886a005a11bedd17955a0c6.png" title="Scoreboard" data-fancybox-group="">
-  
-    <img class="fig-img" src="https://ngkz.github.io/assets/newyearsctf/0734e47f8886a005a11bedd17955a0c6.png"  alt="Scoreboard">
-  
-    </a>
-  
-   
-    <span class="caption">Scoreboard</span>
-  
-</div>
+              <h2 id="linux-from-scratch">Linux from Scratch</h2>
 
+<ul>
+<li>lddが正常に動いていなかったのを直した
 
-<p>優勝して賞金2500円を手に入れました。</p>
+<ul>
+<li><code>rtlddir</code>を<code>/usr/lib</code>に設定したとき <code>ldd</code>が64bitダイナミックリンカのパスとして <code>/usr/lib64/ld-linux-x86_64.so.2</code> を使っていたのが原因だった。</li>
+<li><code>/usr/lib64</code>から<code>/usr/lib</code>へのシンボリックリンクを貼って解決</li>
+</ul></li>
+<li>ライセンス違反を解決
 
-<p></p>
+<ul>
+<li>大部分がCC-BY-NC-SA 2.0のLFS Bookからの引用になったのに、リポジトリのライセンスが互換性のないGPLv3のままになっていた。</li>
+<li>ライセンスをCC-BY-NC-SAに変更して解決</li>
+</ul></li>
+<li>Adjusting the Toolchain
 
-<p>主催者によるwriteup:
-<a href="https://x86-64.jp/blog/new-years-ctf">https://x86-64.jp/blog/new-years-ctf</a></p>
+<ul>
+<li><code>/usr/lib32</code>に必要な32bitライブラリへのリンクを貼るのを忘れていたため、32bitでコンパイルできなかったのを直した</li>
+</ul></li>
+</ul>
+
+<h2 id="筋トレ">筋トレ</h2>
+
+<p>
+- THE プレワークアウトを筋トレ30分前に1スクープ摂取
+- HMBを昼, トレーニング3時間前, 就寝前に1g摂取
+- 前日の睡眠 7:44 (23:20-7:23)
+  - 枕の空気が抜けてよく眠れなかった</p>
+
+<p><strong>上半身プッシュ+腹筋</strong></p>
+
+<p>22:19-22:58 39分</p>
+
+<p>プッシュアップの注意: 手の幅は肩より少し広く, 脇を開けない, 頂点まで行ったらさらに持ちあげる, 肩甲骨を寄せる, 大胸筋を意識する</p>
+
+<table>
+<thead>
+<tr>
+<th>種目</th>
+<th>重量&amp;目標回数</th>
+<th>回数</th>
+<th>備考</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>ローテーターカフのウォームアップ</td>
+<td></td>
+<td></td>
+<td>時間がないので省略</td>
+</tr>
+
+<tr>
+<td>プッシュアップ</td>
+<td>3セット 自重 11回以上 → 膝つき</td>
+<td>↓9.5→自重で4 5→自重で2 4.5→自重で2.5</td>
+<td></td>
+</tr>
+
+<tr>
+<td>ダンベルショルダープレス</td>
+<td>2セット 25kg(10kg+シャフトx2) 14回以上 → ドロップ</td>
+<td>↓12 7→10kgで12</td>
+<td></td>
+</tr>
+
+<tr>
+<td>ダンベルフレンチプレス</td>
+<td>2セット 12.5kg(10kg+シャフト) 15回以上 → ドロップ</td>
+<td>↓9 7→5kgで19</td>
+<td></td>
+</tr>
+
+<tr>
+<td>ダンベルフライ</td>
+<td>2セット 20kg(7.5kg+シャフトx2) 17回以上 → ドロップ</td>
+<td></td>
+<td>時間がないので省略</td>
+</tr>
+
+<tr>
+<td>ツイストクランチ</td>
+<td>3セット 自重+5kg</td>
+<td>34 自重+10kgで21 自重+10kgで25</td>
+<td>ダンベル手にもってやるとうまくいかない</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="その他">その他</h2>
+
+<ul>
+<li>空気枕に見えないほど小さな穴が空いたみたいで、寝ている途中に空気が抜けてしまった。修正用のパッチはあるけど空気が抜けるのがゆっくりてどこから漏れているかわからないので直しようがない。
+
+<ul>
+<li>幸い空気枕はあと2個あるのでそれを使うことにする。</li>
+</ul></li>
+<li>Bus Pirateが届いた
+
+<ul>
+<li>動作確認とファームウェアアップデートのためにwikiを読んでみたら、Bus Pirateの開発は放棄されただとか、v5.1以降ファームウェアが大きくなりすぎてBus Pirate v3のメモリに入らなくなったとか書いてあった。FT232Hにしときゃよかった</li>
+</ul></li>
+</ul>
               
             </div>
           </div>
           <div id="post-footer" class="post-footer main-content-wrap">
             
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">タグ</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://ngkz.github.io/tags/lfs/">LFS</a>
+
+  <a class="tag tag--primary tag--small" href="https://ngkz.github.io/tags/%E7%AD%8B%E3%83%88%E3%83%AC/">筋トレ</a>
+
+                  </div>
+                
               
             
             <div class="post-actions-wrap">
@@ -340,7 +467,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2014/01/tkbctf1-writeup/" data-tooltip="tkbctf1 writeup">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/03/diary-20190320/" data-tooltip="日記 2019/03/20(水)">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">次</span>
@@ -348,7 +475,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2013/09/galaxys3-adb-restore-fail/" data-tooltip="Galaxy S3(SC-06D)がadbバックアップを戻した後再起動を繰り返すようになったときの対処方法">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/03/diary-20190315/" data-tooltip="日記 2019/03/15(金)">
               
                   <span class="hide-xs hide-sm text-small icon-mr">前</span>
                   <i class="fa fa-angle-right"></i>
@@ -366,19 +493,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2014/01/newyearsctf/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2019/03/diary-20190319/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2014/01/newyearsctf/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2019/03/diary-20190319/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2014/01/newyearsctf/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2019/03/diary-20190319/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -426,7 +553,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2014/01/tkbctf1-writeup/" data-tooltip="tkbctf1 writeup">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/03/diary-20190320/" data-tooltip="日記 2019/03/20(水)">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">次</span>
@@ -434,7 +561,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2013/09/galaxys3-adb-restore-fail/" data-tooltip="Galaxy S3(SC-06D)がadbバックアップを戻した後再起動を繰り返すようになったときの対処方法">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/03/diary-20190315/" data-tooltip="日記 2019/03/15(金)">
               
                   <span class="hide-xs hide-sm text-small icon-mr">前</span>
                   <i class="fa fa-angle-right"></i>
@@ -452,19 +579,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2014/01/newyearsctf/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2019/03/diary-20190319/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2014/01/newyearsctf/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2019/03/diary-20190319/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2014/01/newyearsctf/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2019/03/diary-20190319/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -494,19 +621,19 @@
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fngkz.github.io%2F2014%2F01%2Fnewyearsctf%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fngkz.github.io%2F2019%2F03%2Fdiary-20190319%2F">
           <i class="fa fa-facebook-official"></i><span>Facebookで共有</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fngkz.github.io%2F2014%2F01%2Fnewyearsctf%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fngkz.github.io%2F2019%2F03%2Fdiary-20190319%2F">
           <i class="fa fa-twitter"></i><span>Twitterで共有</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fngkz.github.io%2F2014%2F01%2Fnewyearsctf%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fngkz.github.io%2F2019%2F03%2Fdiary-20190319%2F">
           <i class="fa fa-google-plus"></i><span>Google&#43;で共有</span>
         </a>
       </li>
@@ -1206,9 +1333,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/ngkz.github.io\/2014\/01\/newyearsctf\/';
+          this.page.url = 'https:\/\/ngkz.github.io\/2019\/03\/diary-20190319\/';
           
-            this.page.identifier = '\/2014\/01\/newyearsctf\/'
+            this.page.identifier = '\/2019\/03\/diary-20190319\/'
           
         };
         (function() {

@@ -147,6 +147,37 @@
     </item>
     
     <item>
+      <title>日記 2019/03/19(火)</title>
+      <link>https://ngkz.github.io/2019/03/diary-20190319/</link>
+      <pubDate>Tue, 19 Mar 2019 23:59:59 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/03/diary-20190319/</guid>
+      <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;lddが正常に動いていなかったのを直した
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;rtlddir&lt;/code&gt;を&lt;code&gt;/usr/lib&lt;/code&gt;に設定したとき &lt;code&gt;ldd&lt;/code&gt;が64bitダイナミックリンカのパスとして &lt;code&gt;/usr/lib64/ld-linux-x86_64.so.2&lt;/code&gt; を使っていたのが原因だった。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/usr/lib64&lt;/code&gt;から&lt;code&gt;/usr/lib&lt;/code&gt;へのシンボリックリンクを貼って解決&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;ライセンス違反を解決
+
+&lt;ul&gt;
+&lt;li&gt;大部分がCC-BY-NC-SA 2.0のLFS Bookからの引用になったのに、リポジトリのライセンスが互換性のないGPLv3のままになっていた。&lt;/li&gt;
+&lt;li&gt;ライセンスをCC-BY-NC-SAに変更して解決&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Adjusting the Toolchain
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/usr/lib32&lt;/code&gt;に必要な32bitライブラリへのリンクを貼るのを忘れていたため、32bitでコンパイルできなかったのを直した&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;</description>
+    </item>
+    
+    <item>
       <title>日記 2019/03/15(金)</title>
       <link>https://ngkz.github.io/2019/03/diary-20190315/</link>
       <pubDate>Fri, 15 Mar 2019 23:59:59 +0900</pubDate>

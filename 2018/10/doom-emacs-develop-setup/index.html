@@ -1223,6 +1223,45 @@ Spacemacs より軽い DOOM Emacs というのがあるらしい。これにし�
           <div class="media">
             
             <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190319/">
+                <h3 class="media-heading">日記 2019/03/19(火)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Mar 3, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><h2 id="linux-from-scratch">Linux from Scratch</h2>
+
+<ul>
+<li>lddが正常に動いていなかったのを直した
+
+<ul>
+<li><code>rtlddir</code>を<code>/usr/lib</code>に設定したとき <code>ldd</code>が64bitダイナミックリンカのパスとして <code>/usr/lib64/ld-linux-x86_64.so.2</code> を使っていたのが原因だった。</li>
+<li><code>/usr/lib64</code>から<code>/usr/lib</code>へのシンボリックリンクを貼って解決</li>
+</ul></li>
+<li>ライセンス違反を解決
+
+<ul>
+<li>大部分がCC-BY-NC-SA 2.0のLFS Bookからの引用になったのに、リポジトリのライセンスが互換性のないGPLv3のままになっていた。</li>
+<li>ライセンスをCC-BY-NC-SAに変更して解決</li>
+</ul></li>
+<li>Adjusting the Toolchain
+
+<ul>
+<li><code>/usr/lib32</code>に必要な32bitライブラリへのリンクを貼るのを忘れていたため、32bitでコンパイルできなかったのを直した</li>
+</ul></li>
+</ul>
+
+<h2 id="筋トレ">筋トレ</h2></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
               <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190315/">
                 <h3 class="media-heading">日記 2019/03/15(金)</h3>
               </a>
@@ -1602,135 +1641,6 @@ Spacemacs より軽い DOOM Emacs というのがあるらしい。これにし�
             <hr>
           </div>
         
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190309/">
-                <h3 class="media-heading">日記 2019/03/09(土)</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Mar 3, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="スキー">スキー</h2>
-
-<ul>
-<li>数年ぶりにハンターマウンテン塩原へ行った</li>
-<li>3月だから大丈夫だろうと思って遅めに行ったら遠いところに止めさせられて移動が大変だった</li>
-<li>雪はまだたくさん残っていた</li>
-<li>スキーの検定でコースが何箇所か閉鎖になっていたが、ほとんどのコースを滑ることができた。</li>
-<li>景色はきれいでコースも楽しかった
-
-
- 
-  
-  
-  
-  
-    
-  
-    
-      
-    
-  
-
-<div class="figure center" >
-  
-    <a class="fancybox" href="https://ngkz.github.io/assets/diary-20190309/2019-03-09%2009.39.56.jpg" title="景色" data-fancybox-group="">
-  
-    <img class="fig-img" src="https://ngkz.github.io/assets/diary-20190309/2019-03-09%2009.39.56-thumbnail.jpg" style="width: 700px;height: 122px;" alt="景色">
-  
-    </a>
-  
-   
-    <span class="caption">景色</span>
-  
-</div>
-</li>
-<li>昼食にケバブロールとプレーンポテトを食べた。
-
-<ul>
-<li>最初はおいしかったけど途中で飽きた。ポテトはソースで味に変化がつけられるように味つきのやつにしたほうがいい</li>
-</ul></li>
-<li>パラレルで滑ってると大腿四頭筋にくる
-
-<ul>
-<li>途中から滑ってる途中に筋肉の限界がくるようになった</li>
-</ul></li>
-<li>板やブーツについた雪を吹きとばすためのエアガンがあって便利だった</li>
-<li>いつのまにか滑走面に深い傷がついていた
-
-
- 
-  
-  
-  
-  
-    
-  
-    
-      
-    
-  
-
-<div class="figure center" >
-  
-    <a class="fancybox" href="https://ngkz.github.io/assets/diary-20190309/2019-03-09%2015.13.54.jpg" title="滑走面の傷" data-fancybox-group="">
-  
-    <img class="fig-img" src="https://ngkz.github.io/assets/diary-20190309/2019-03-09%2015.13.54.jpg" style="width: 600px;height: 450px;" alt="滑走面の傷">
-  
-    </a>
-  
-   
-    <span class="caption">滑走面の傷</span>
-  
-</div>
-</li>
-<li>普段はスキーの後に寺の湯に入っているが、2週間前のスキーで硫黄泉に入ったし、明日行く予定の那須高原の泉質も硫黄泉のようなのでアルカリ泉のあかつきの湯に入った。</li>
-<li>朝飯を作る時間がないので、スキー場の近くの駐車場に泊まって朝コンビニで飯買っていこうと思っていたが、駐車場は傾斜してるし那須高原の山中にはコンビニがないのであてがはずれた</li>
-<li>二重寝袋+毛布2枚 にしたら電気毛布なしでも快適に眠れた
-
-
- 
-  
-  
-  
-  
-    
-  
-    
-      
-    
-  
-
-<div class="figure center" >
-  
-    <a class="fancybox" href="https://ngkz.github.io/assets/diary-20190309/2019-03-09%2021.04.59.jpg" title="R E A L S L E E P" data-fancybox-group="">
-  
-    <img class="fig-img" src="https://ngkz.github.io/assets/diary-20190309/2019-03-09%2021.04.59.jpg" style="width: 600px;height: 450px;" alt="R E A L S L E E P">
-  
-    </a>
-  
-   
-    <span class="caption">R E A L S L E E P</span>
-  
-</div>
-</li>
-</ul>
-
-<h2 id="その他">その他</h2>
-
-<ul>
-<li>花粉がひどい</li>
-</ul>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
       </div>
     </div>
     <div class="modal-footer">
@@ -1738,7 +1648,7 @@ Spacemacs より軽い DOOM Emacs というのがあるらしい。これにし�
          data-message-zero=""
          data-message-one=""
          data-message-other="">
-         80 posts found
+         81 posts found
       </p>
     </div>
   </div>
