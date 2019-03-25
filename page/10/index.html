@@ -198,6 +198,82 @@
             
   
     
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://ngkz.github.io/2019/01/edid-repair/">
+          EDIDが壊れて認識しないモニターの修理
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-01-06T17:19:12&#43;09:00">
+        
+  
+  
+  
+  
+    2019-01-06
+  
+
+      </time>
+    
+    
+  
+  
+    <span>カテゴリー</span>
+    
+      <a class="category-link" href="https://ngkz.github.io/categories/howto">howto</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        <p>Acer H243HをDVIで接続すると認識しない。VGA接続とHDMI接続では正常に動作するが、DVIで接続するとsyslogに以下のエラーが出る。</p>
+
+<pre><code>Jan  5 23:48:32 haramaki kernel: [97894.621687] amdgpu 0000:01:00.0: DVI-D-1: EDID is invalid:
+Jan  5 23:48:32 haramaki kernel: [97894.621694]         [00] BAD  00 ff ff ff ff ff ff 00 ff ff ff ff ff ff ff ff
+Jan  5 23:48:32 haramaki kernel: [97894.621696]         [00] BAD  2b 13 01 03 80 35 1d 78 ea 60 85 a6 56 4a 9c 25
+Jan  5 23:48:32 haramaki kernel: [97894.621697]         [00] BAD  12 50 54 af cf 00 81 80 71 4f 95 00 95 0f a9 40
+Jan  5 23:48:32 haramaki kernel: [97894.621698]         [00] BAD  b3 00 01 01 01 01 1a 36 80 a0 70 38 1f 40 30 20
+Jan  5 23:48:32 haramaki kernel: [97894.621699]         [00] BAD  35 00 13 2a 21 00 00 1a 00 00 00 fc 00 48 32 34
+Jan  5 23:48:32 haramaki kernel: [97894.621700]         [00] BAD  33 48 0a 20 20 20 20 20 20 20 00 00 00 fd 00 38
+Jan  5 23:48:32 haramaki kernel: [97894.621701]         [00] BAD  4c 1f 53 12 00 0a 20 20 20 20 20 20 00 00 00 ff
+Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30 43 30 31 34 34 30 31 31 0a 00 33
+</code></pre>
+
+<p>どうやらEDIDが壊れているようだ。</p>
+
+<p></p>
+      
+      <p>
+        <a href="https://ngkz.github.io/2019/01/edid-repair/" class="postShorten-excerpt_link link">続きを読む</a>
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
   
 
 
@@ -587,69 +663,6 @@
 </article>
 
           
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://ngkz.github.io/2018/07/audit-cargo-crate/">
-          依存しているパッケージ(crate)の中身を実行せずに調べる方法 (Rust)
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2018-07-25T22:24:30&#43;09:00">
-        
-  
-  
-  
-  
-    2018-07-25
-  
-
-      </time>
-    
-    
-  
-  
-    <span>カテゴリー</span>
-    
-      <a class="category-link" href="https://ngkz.github.io/categories/howto">howto</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        cargo fetch1 でパッケージを取得すると、~/.cargo/registry/src/github.com-1ecc6299db9ec823/(パッケージ名)-(バージョン) にパッケージのソースコードが展開される。
-Cargo.lockにすべての依存クレートの名前とバージョンが記録されているので、これを見てコードに問題がないか調べることができる。
- cargo buildはビルドスクリプトを実行してしまうのでダメ [return]   
-      
-      <p>
-        <a href="https://ngkz.github.io/2018/07/audit-cargo-crate/" class="postShorten-excerpt_link link">続きを読む</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
           
   <div class="pagination-bar">
     <ul class="pagination">
@@ -733,6 +746,60 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
       <div class="no-result text-color-light text-center"></div>
       <div class="results">
         
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190325/">
+                <h3 class="media-heading">日記 2019/03/25(月)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Mar 3, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><h2 id="linux-from-scratch">Linux from Scratch</h2>
+
+<ul>
+<li>ビルド手順に何箇所か問題があったので修正</li>
+<li>進捗ほとんどなし</li>
+</ul>
+
+<h2 id="筋トレ">筋トレ</h2>
+
+<ul>
+<li>THE プレワークアウトを筋トレ40分前に1スクープ摂取</li>
+<li>HMBをトレーニング1.5時間前, 就寝前に1.5g摂取</li>
+<li>前日の睡眠 6:17 (1:27→7:50）</li>
+</ul>
+
+<p><strong>下半身+腹筋</strong></p>
+
+<table>
+<thead>
+<tr>
+<th>種目</th>
+<th>重量&amp;目標回数</th>
+<th>回数</th>
+<th>備考</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>ピストルスクワット</td>
+<td>自重,ベンチでチーティング</td>
+<td>左5 右3 左9 右15 左13 右19 左7 右8 左7 右5</td>
+<td>やり方覚えながら 時間切れ</td>
+</tr>
+</tbody>
+</table>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
         
           <div class="media">
             
@@ -1234,95 +1301,6 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
             <hr>
           </div>
         
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190311/">
-                <h3 class="media-heading">日記 2019/03/11(月)</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Mar 3, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="筋トレ">筋トレ</h2>
-
-<ul>
-<li>THE プレワークアウトを筋トレ30分前に1スクープ摂取</li>
-<li>HMBを夕方, トレーニング1時間前, 就寝前に1g摂取</li>
-<li>前日の睡眠 6時間未満</li>
-<li>オーバーナイトリカバリーが無くなったのでカゼイン + バニラエッセンス + パラチニットスイート1本(1.2g, 砂糖5g相当) を飲んだ。バニラエッセンスを12滴も入れたのに、なぜかバニラの香りがほとんどしない</li>
-</ul>
-
-<p><strong>上半身プッシュ</strong></p>
-
-<table>
-<thead>
-<tr>
-<th>種目</th>
-<th>重量&amp;目標回数</th>
-<th>回数</th>
-<th>備考</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>ローテーターカフのウォームアップ</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td>プッシュアップ</td>
-<td>3セット 自重 10回以上 → 膝つき</td>
-<td>→ 9→3 5→3 4→4</td>
-<td></td>
-</tr>
-
-<tr>
-<td>ダンベルショルダープレス</td>
-<td>2セット 25kg(10kg+シャフトx2) 11回以上 → ドロップ</td>
-<td>↑11 9→10kgで20</td>
-<td></td>
-</tr>
-
-<tr>
-<td>ダンベルフレンチプレス</td>
-<td>2セット 12.5kg(10kg+シャフト) 12回以上 → ドロップ</td>
-<td>↓10 11→5kgで15</td>
-<td></td>
-</tr>
-
-<tr>
-<td>ダンベルフライ</td>
-<td>2セット 20kg(7.5kg+シャフトx2) 13回以上 → ドロップ</td>
-<td>↑14 12→10kgで20</td>
-<td></td>
-</tr>
-
-<tr>
-<td>ツイストクランチ</td>
-<td>3セット 自重 5秒維持 23回以上</td>
-<td></td>
-<td>時間切れ</td>
-</tr>
-</tbody>
-</table>
-
-<h2 id="その他">その他</h2>
-
-<ul>
-<li>雨が降って車が1日もたたないうちにドロドロになった :(</li>
-</ul>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
       </div>
     </div>
     <div class="modal-footer">
@@ -1330,7 +1308,7 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
          data-message-zero=""
          data-message-one=""
          data-message-other="">
-         82 posts found
+         83 posts found
       </p>
     </div>
   </div>
