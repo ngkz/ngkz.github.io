@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.42.2 with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="author" content="Kazutoshi Noguchi">
+<meta name="keywords" content="">
+<meta name="description" content="Linux from Scratch
+
+
+GCCのテストが通らない
+
+
+テスト時にHardeningフラグとPIEを無効にしてみたり、フラグをいろいろと変えてコンパイラをビルドしてみたりしてみたがダメだった
+
+
+
+冷蔵庫
+
+
+父から使われていない車用ポータブル冷蔵庫をもらった。
+
+
+">
+
+
+<meta property="og:description" content="Linux from Scratch
+
+
+GCCのテストが通らない
+
+
+テスト時にHardeningフラグとPIEを無効にしてみたり、フラグをいろいろと変えてコンパイラをビルドしてみたりしてみたがダメだった
+
+
+
+冷蔵庫
+
+
+父から使われていない車用ポータブル冷蔵庫をもらった。
+
+
+">
+<meta property="og:type" content="article">
+<meta property="og:title" content="日記 2019/03/23(土)">
+<meta name="twitter:title" content="日記 2019/03/23(土)">
+<meta property="og:url" content="https://ngkz.github.io/2019/03/diary-20190323/">
+<meta property="twitter:url" content="https://ngkz.github.io/2019/03/diary-20190323/">
+<meta property="og:site_name" content="ngkz.log">
+<meta property="og:description" content="Linux from Scratch
+
+
+GCCのテストが通らない
+
+
+テスト時にHardeningフラグとPIEを無効にしてみたり、フラグをいろいろと変えてコンパイラをビルドしてみたりしてみたがダメだった
+
+
+
+冷蔵庫
+
+
+父から使われていない車用ポータブル冷蔵庫をもらった。
+
+
+">
+<meta name="twitter:description" content="Linux from Scratch
+
+
+GCCのテストが通らない
+
+
+テスト時にHardeningフラグとPIEを無効にしてみたり、フラグをいろいろと変えてコンパイラをビルドしてみたりしてみたがダメだった
+
+
+
+冷蔵庫
+
+
+父から使われていない車用ポータブル冷蔵庫をもらった。
+
+
+">
+<meta property="og:locale" content="ja">
+
+  
+    <meta property="article:published_time" content="2019-03-23T23:21:03">
+  
+  
+    <meta property="article:modified_time" content="2019-03-23T23:21:03">
+  
+  
+  
+    
+      <meta property="article:section" content="日記">
+    
+  
+  
+    
+      <meta property="article:tag" content="LFS">
+    
+      <meta property="article:tag" content="筋トレ">
+    
+      <meta property="article:tag" content="整備記録">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://ngkz.github.io/mypicture.jpg">
+  <meta property="twitter:image" content="https://ngkz.github.io/mypicture.jpg">
+
+
+    <title>日記 2019/03/23(土)</title>
+
+    <link rel="icon" href="https://ngkz.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://ngkz.github.io/2019/03/diary-20190323/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://ngkz.github.io/css/style-nnm2spxvve8onlujjlegkkytaehyadd4ksxc1hyzzq9a2wvtrgbljqyulomn.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="1">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://ngkz.github.io/">ngkz.log</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://ngkz.github.io/page/profile/">
+    
+    
+    
+      
+        <img class="header-picture" src="https://ngkz.github.io/mypicture.jpg" alt="プロフィール画像" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="1">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://ngkz.github.io/page/profile/">
+          <img class="sidebar-profile-picture" src="https://ngkz.github.io/mypicture.jpg" alt="プロフィール画像" />
+        </a>
+        <h4 class="sidebar-profile-name">Kazutoshi Noguchi</h4>
+        
+          <h5 class="sidebar-profile-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://ngkz.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">ホーム</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://ngkz.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">カテゴリー</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://ngkz.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">タグ</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://ngkz.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">アーカイブ</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://ngkz.github.io/page/profile/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">プロフィール</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/ngkz" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://ngkz.github.io/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="1"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      日記 2019/03/23(土)
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-03-23T23:21:03&#43;09:00">
+        
+  
+  
+  
+  
+    2019-03-23
+  
+
+      </time>
+    
+    
+  
+  
+    <span>カテゴリー</span>
+    
+      <a class="category-link" href="https://ngkz.github.io/categories/%e6%97%a5%e8%a8%98">日記</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <h2 id="linux-from-scratch">Linux from Scratch</h2>
+
+<ul>
+<li>GCCのテストが通らない
+
+<ul>
+<li>テスト時にHardeningフラグとPIEを無効にしてみたり、フラグをいろいろと変えてコンパイラをビルドしてみたりしてみたがダメだった</li>
+</ul></li>
+</ul>
+
+<h2 id="冷蔵庫">冷蔵庫</h2>
+
+<ul>
+<li>父から使われていない車用ポータブル冷蔵庫をもらった。</li>
+</ul>
+
+<p></p>
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+    
+      
+    
+  
+
+<div class="figure center" >
+  
+    <a class="fancybox" href="https://ngkz.github.io/assets/diary-20190323/1.jpg" data-fancybox-group="">
+  
+    <img class="fig-img" src="https://ngkz.github.io/assets/diary-20190323/1.jpg" style="width: 600px;height: 380px;">
+  
+    </a>
+  
+  
+</div>
+
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+    
+      
+    
+  
+
+<div class="figure center" >
+  
+    <a class="fancybox" href="https://ngkz.github.io/assets/diary-20190323/2.jpg" data-fancybox-group="">
+  
+    <img class="fig-img" src="https://ngkz.github.io/assets/diary-20190323/2.jpg" style="width: 600px;height: 450px;">
+  
+    </a>
+  
+  
+</div>
+
+
+
+
+ 
+  
+  
+  
+  
+    
+  
+    
+      
+    
+  
+
+<div class="figure center" >
+  
+    <a class="fancybox" href="https://ngkz.github.io/assets/diary-20190323/3.jpg" data-fancybox-group="">
+  
+    <img class="fig-img" src="https://ngkz.github.io/assets/diary-20190323/3.jpg" style="width: 508px;height: 600px;">
+  
+    </a>
+  
+  
+</div>
+
+
+<h2 id="筋トレ">筋トレ</h2>
+
+<ul>
+<li>HMBをトレーニング直前に摂取</li>
+<li>THE プレワークアウトは持っていくのを忘れたので取ってない</li>
+<li>前日の睡眠 9:06 (0:26-7:04,7:05→9:55)</li>
+<li>タイヤ交換のついでに公園にある健康遊具で筋トレしてみた。<br />
+ 背中を全体的に鍛えていたつもりなのに懸垂が1回しかできなかった。ちょっとショック<br />
+ (追記) 後で大円筋に強烈な筋肉痛が来た。ここを鍛えられてなかったみたいだ
+
+<ul>
+<li>幅が狭いのでワイドグリップチンニングができない</li>
+<li>夏になると蚊が出てくるだろうし、単管あたりでチンニング&amp;ディップススタンド作って家でやるほうがよさそう</li>
+</ul></li>
+</ul>
+
+<p><strong>上半身プル</strong>*</p>
+
+<table>
+<thead>
+<tr>
+<th>種目</th>
+<th>重量&amp;目標回数</th>
+<th>回数</th>
+<th>備考</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>懸垂</td>
+<td>自重</td>
+<td>1 (+チーティングして何回か)</td>
+<td>チーティングなしだと1回しかできなかった チーティングしても1セット2-3回が限界</td>
+</tr>
+
+<tr>
+<td>斜め懸垂</td>
+<td>自重</td>
+<td>8 7 3 6 4 5 2</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="その他">その他</h2>
+
+<ul>
+<li>夏タイヤに交換した。</li>
+</ul>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">タグ</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://ngkz.github.io/tags/lfs/">LFS</a>
+
+  <a class="tag tag--primary tag--small" href="https://ngkz.github.io/tags/%E7%AD%8B%E3%83%88%E3%83%AC/">筋トレ</a>
+
+  <a class="tag tag--primary tag--small" href="https://ngkz.github.io/tags/%E6%95%B4%E5%82%99%E8%A8%98%E9%8C%B2/">整備記録</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/03/diary-20190324/" data-tooltip="日記 2019/03/24(日)">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">次</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/03/diary-20190322/" data-tooltip="日記 2019/03/22(金)">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">前</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2019/03/diary-20190323/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2019/03/diary-20190323/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2019/03/diary-20190323/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">ngkz.log</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://ngkz.github.io/" property="cc:attributionName" rel="cc:attributionURL">Kazutoshi Noguchi</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="1">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/03/diary-20190324/" data-tooltip="日記 2019/03/24(日)">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">次</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/03/diary-20190322/" data-tooltip="日記 2019/03/22(金)">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">前</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2019/03/diary-20190323/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2019/03/diary-20190323/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2019/03/diary-20190323/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="1">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fngkz.github.io%2F2019%2F03%2Fdiary-20190323%2F">
+          <i class="fa fa-facebook-official"></i><span>Facebookで共有</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fngkz.github.io%2F2019%2F03%2Fdiary-20190323%2F">
+          <i class="fa fa-twitter"></i><span>Twitterで共有</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fngkz.github.io%2F2019%2F03%2Fdiary-20190323%2F">
+          <i class="fa fa-google-plus"></i><span>Google&#43;で共有</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://ngkz.github.io/mypicture.jpg" alt="プロフィール画像" />
+    
+    <h4 id="about-card-name">Kazutoshi Noguchi</h4>
+    
+      <div id="about-card-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        System integrator
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Japan
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="検索" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center"></div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190326/">
+                <h3 class="media-heading">日記 2019/03/26(火)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Mar 3, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><h2 id="linux-from-scratch">Linux from Scratch</h2>
+
+<ul>
+<li>GCCのビルド中
+
+<ul>
+<li>別のマシンでビルドしてもテストが通らなかった。</li>
+<li>テストコードとGCCが生成したバイナリを調べたり、GCCのメーリングリストとバグトラッカーで解決策を探したりしてみたら、何個かのテストについては解決策を見つけた。一部のテストが<code>--enable-default-pie</code>や<code>--enable-default-ssp</code>でビルドしたGCCに対応していないらしい。</li>
+</ul></li>
+</ul>
+
+<h2 id="その他">その他</h2>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190325/">
+                <h3 class="media-heading">日記 2019/03/25(月)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Mar 3, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><h2 id="linux-from-scratch">Linux from Scratch</h2>
+
+<ul>
+<li>ビルド手順に何箇所か問題があったので修正</li>
+<li>進捗ほとんどなし</li>
+</ul>
+
+<h2 id="筋トレ">筋トレ</h2>
+
+<ul>
+<li>THE プレワークアウトを筋トレ40分前に1スクープ摂取</li>
+<li>HMBをトレーニング1.5時間前, 就寝前に1.5g摂取</li>
+<li>前日の睡眠 6:17 (1:27→7:50）</li>
+</ul>
+
+<p><strong>下半身+腹筋</strong></p>
+
+<table>
+<thead>
+<tr>
+<th>種目</th>
+<th>重量&amp;目標回数</th>
+<th>回数</th>
+<th>備考</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>ピストルスクワット</td>
+<td>自重,ベンチでチーティング</td>
+<td>左5 右3 左9 右15 左13 右19 左7 右8 左7 右5</td>
+<td>やり方覚えながら 時間切れ</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="その他">その他</h2>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190324/">
+                <h3 class="media-heading">日記 2019/03/24(日)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Mar 3, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><h2 id="linux-from-scratch">Linux from Scratch</h2>
+
+<ul>
+<li>GCCのテストが通らない
+
+<ul>
+<li>フラグを全部削除してみたり、フラグを全部削除+PIE無効にしてみてもテストが通らない。</li>
+<li><a href="http://www.linuxfromscratch.org/lfs/build-logs/8.3/i7-5820K/test-logs/087-gcc-8.2.0">LFS著者のビルドログでは全テストが通っている</a>ので、ビルド手順を間違ったか、ツールチェーンのカスタマイズに問題があるかもしれない</li>
+<li>ビルド+テスト 1周に2-3時間はかかるのでかなりつらい</li>
+</ul></li>
+</ul>
+
+<h2 id="筋トレ">筋トレ</h2>
+
+<ul>
+<li>休憩日</li>
+<li>ソルティッドキャラメル味のインパクトホエイを使いきったので、ノンフレーバーのホエイプロテインに CAFE LATORY 抹茶と甘味料を入れて飲んでみた。カゼインと違ってプロテイン自体にほとんど味がないので1本で完全に抹茶味になった。おいしかった。
+
+<ul>
+<li>ソルティッドキャラメル味とラテ味は不快な甘みがあって途中から飲むのがつらくなった。マイプロテインの甘い系のフレーバーは自分の好みではないようだ。</li>
+</ul></li>
+</ul>
+
+<h2 id="その他">その他</h2>
+
+<ul>
+<li>カーメイトのシガーソケット分配器の接点が凹んでしまっていたので分解して直した。なぜかケースの片側が発熱するパイロットランプにホットボンドで固定されていた。別の箇所でもう片側のケースにネジ止めされているから強度の問題はないんだけど、こんなものを付けるくらいなら強く押すと凹む接点をどうにかしてほしい</li>
+<li>昨日もらったポータブル冷蔵庫のファンフィルターが汚れていたので分解清掃した。経年劣化で中のガムテープらしきものが全部剥がれてしまっていたので貼り替えた。</li>
+</ul>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190323/">
+                <h3 class="media-heading">日記 2019/03/23(土)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Mar 3, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><h2 id="linux-from-scratch">Linux from Scratch</h2>
+
+<ul>
+<li>GCCのテストが通らない
+
+<ul>
+<li>テスト時にHardeningフラグとPIEを無効にしてみたり、フラグをいろいろと変えてコンパイラをビルドしてみたりしてみたがダメだった</li>
+</ul></li>
+</ul>
+
+<h2 id="冷蔵庫">冷蔵庫</h2>
+
+<ul>
+<li>父から使われていない車用ポータブル冷蔵庫をもらった。</li>
+</ul>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190322/">
+                <h3 class="media-heading">日記 2019/03/22(金)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Mar 3, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><h2 id="linux-from-scratch">Linux from Scratch</h2>
+
+<ul>
+<li>昨日ビルドしたbinutilsのバイナリがなぜか非PIEになっていた。 ログを採って調べてみたら、テスト前にHardeningフラグを取り除いてPIEを無効にしたときにMakefileのタイムスタンプが変わったのが原因で、バイナリがPIE無効で再リンクされてしまていたことが分かった。<br />
+<a href="https://github.com/ngkz/my-lfs-setup/commit/84551e209d17e9220912b057dc1c56d1814e353e">Makefileに細工するときにタイムスタンプが変わらないようにしたら解決した</a>。</li>
+<li>MPFR,MPC,Shadowをインストールした。</li>
+<li>GCCをビルドしている途中
+
+<ul>
+<li>nobodyユーザーに切り替えるとなぜか モードが<code>666</code>の<code>/dev/tty</code>が読めなくなった。<code>/</code>の所有者が<code>1000</code>でモードが<code>700</code>になっていたのが原因だった。</li>
+<li>ほぼ全てのテストが失敗するので原因を調べてみたら、<code>/dev/pts</code>のマウントオプションが間違っていて<code>/dev/pts/ptmx</code>のモードが<code>000</code>になっていたのが原因だった。マウントオプションに<code>newinstance,ptmxmode=0666</code>を加えて解決。</li>
+<li><code>/dev/pts/ptmx</code>を直したら大体のテストは通るようになったが、まだ何十ものテストが失敗している。テストに数時間かかるのでデバッグにかなり手間がかかりそう。</li>
+</ul></li>
+</ul>
+
+<h2 id="筋トレ">筋トレ</h2>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190321/">
+                <h3 class="media-heading">日記 2019/03/21(木)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Mar 3, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><h2 id="linux-from-scratch">Linux from Scratch</h2>
+
+<ul>
+<li>Binutilsのインストールが完了した
+
+<ul>
+<li>Hardening フラグを削除してもテストが失敗するのは GCCをDefault PIEでコンパイルしていたのが原因だった。</li>
+<li>テストするときに、<code>CFLAGS</code>, <code>CXXFLAGS</code>, <code>CPPFLAGS</code>, <code>LDFLAGS</code>を取り除くだけでなく、<code>CC</code>と<code>CXX</code>に<code>-fno-PIE -no-pie</code>を加えてPIEを無効にしたら全テストが通るようになった</li>
+</ul></li>
+<li>GMPをインストールした</li>
+</ul>
+
+<h2 id="筋トレ">筋トレ</h2>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190320/">
+                <h3 class="media-heading">日記 2019/03/20(水)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Mar 3, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><h2 id="linux-from-scratch">Linux from Scratch</h2>
+
+<ul>
+<li>Zlib, File, Readline, M4, Bcをインストールした</li>
+<li>binutilsをビルド中
+
+<ul>
+<li>CPPFLAGSに<code>-D_FORTIFY_SOURCE=2</code>が入っているとlimits.hの存在チェックが壊れてビルドできななかった</li>
+<li>CFLAGSとCXXFLAGSに<code>_FORTIFY_SOURCE</code>の定義を移して解決</li>
+<li>ビルドが通るようになったがテストが通らない</li>
+<li>CFLAGS, CXXFLAGS, CPPFLAGS, LDFLAGSを削除したらgold以外のテストは通るようになったので、 Hardening フラグのどれかが原因っぽい</li>
+</ul></li>
+</ul>
+
+<h2 id="筋トレ">筋トレ</h2>
+
+<ul>
+<li>THE プレワークアウトを筋トレ30分前に1スクープ摂取</li>
+<li>HMBを昼, トレーニング1時間前, 就寝前に1g摂取</li>
+<li>前日の睡眠 7:23 (23:37-7:11)
+
+<ul>
+<li>あまりよく眠れなかった</li>
+</ul></li>
+<li>DiscordのJMusicBotをいじってたら時間がなくなってしまった</li>
+</ul>
+
+<p><strong>上半身プル</strong></p>
+
+<table>
+<thead>
+<tr>
+<th>種目</th>
+<th>重量&amp;目標回数</th>
+<th>回数</th>
+<th>備考</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>ハーフデッドリフト</td>
+<td>3セット 30kg(27.5kgx2+シャフト) 21回以上</td>
+<td>↓15 9 12</td>
+<td>力を出しきれなかった</td>
+</tr>
+
+<tr>
+<td>ワンハンドローイング</td>
+<td>左右2セット 12.5kg(10kg+シャフト) 21回以上 →ドロップ</td>
+<td>↓左15 右16 左17→5kgで12 右16→5kgで20</td>
+<td></td>
+</tr>
+
+<tr>
+<td>ダンベルシュラッグ</td>
+<td>2セット 30kg(27.5kg+シャフトx2) 23回以上 →ドロップ</td>
+<td>↓18 19</td>
+<td></td>
+</tr>
+
+<tr>
+<td>ダンベルカール</td>
+<td>3セット 10kg(7.5kg+シャフト) 11回以上 →ドロップ</td>
+<td></td>
+<td>時間切れ</td>
+</tr>
+
+<tr>
+<td>変形バックエクステンション</td>
+<td>2セット 自重+5kg 16回以上 →ドロップ</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190319/">
+                <h3 class="media-heading">日記 2019/03/19(火)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Mar 3, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><h2 id="linux-from-scratch">Linux from Scratch</h2>
+
+<ul>
+<li>lddが正常に動いていなかったのを直した
+
+<ul>
+<li><code>rtlddir</code>を<code>/usr/lib</code>に設定したとき <code>ldd</code>が64bitダイナミックリンカのパスとして <code>/usr/lib64/ld-linux-x86_64.so.2</code> を使っていたのが原因だった。</li>
+<li><code>/usr/lib64</code>から<code>/usr/lib</code>へのシンボリックリンクを貼って解決</li>
+</ul></li>
+<li>ライセンス違反を解決
+
+<ul>
+<li>大部分がCC-BY-NC-SA 2.0のLFS Bookからの引用になったのに、リポジトリのライセンスが互換性のないGPLv3のままになっていた。</li>
+<li>ライセンスをCC-BY-NC-SAに変更して解決</li>
+</ul></li>
+<li>Adjusting the Toolchain
+
+<ul>
+<li><code>/usr/lib32</code>に必要な32bitライブラリへのリンクを貼るのを忘れていたため、32bitでコンパイルできなかったのを直した</li>
+</ul></li>
+</ul>
+
+<h2 id="筋トレ">筋トレ</h2></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190315/">
+                <h3 class="media-heading">日記 2019/03/15(金)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Mar 3, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><h2 id="linux-from-scratch">Linux from Scratch</h2>
+
+<ul>
+<li>tzdataをパッケージ化してインストールした</li>
+<li>タイムゾーンの設定をした</li>
+<li>MarkdownでLFS Bookの中身を書き直すかわりに本家のBookをフォークしてそれにこっちの環境特有の変更を入れることにした。git-svnの使い方がまだよくわかっていないのでforkすらできていないが</li>
+</ul>
+
+<h2 id="筋トレ">筋トレ</h2>
+
+<ul>
+<li>THE プレワークアウトを筋トレ40分前に1スクープ摂取</li>
+<li>HMBを夕, トレーニング40分前, 就寝前に1g摂取</li>
+<li>前日の睡眠 7:32 (23:49→7:27)</li>
+<li>カゼイン40g + 200mlの水にブレンディカフェラトリー濃厚抹茶とパラチニットスイート1本(1.2g)を入れて飲んだ。濃厚抹茶1本では味が薄すぎる感じ。カフェインが1本あたり20mg入ってるから就寝前に飲むカゼインに入れるには向いてないね</li>
+</ul>
+
+<p><strong>上半身プッシュ+腹筋</strong></p>
+
+<table>
+<thead>
+<tr>
+<th>種目</th>
+<th>重量&amp;目標回数</th>
+<th>回数</th>
+<th>備考</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>プッシュアップ</td>
+<td>3セット 自重 10回以上 → 膝つき</td>
+<td>↑10→2 9→6 7→4</td>
+<td></td>
+</tr>
+
+<tr>
+<td>ダンベルショルダープレス</td>
+<td>2セット 25kg(10kg+シャフトx2) 12回以上 → ドロップ</td>
+<td>↑13 12→10kgで15</td>
+<td></td>
+</tr>
+
+<tr>
+<td>ダンベルフレンチプレス</td>
+<td>2セット 12.5kg(10kg+シャフト) 11回以上 → ドロップ</td>
+<td>↑14 4→5kgで25</td>
+<td></td>
+</tr>
+
+<tr>
+<td>ダンベルフライ</td>
+<td>2セット 20kg(7.5kg+シャフトx2) 15回以上 → ドロップ</td>
+<td>↑16 10→12</td>
+<td></td>
+</tr>
+
+<tr>
+<td>ツイストクランチ</td>
+<td>3セット 自重 5秒維持 23回以上</td>
+<td>↓21 17 14</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="その他">その他</h2>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190314/">
+                <h3 class="media-heading">日記 2019/03/14(木)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Mar 3, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><h2 id="linux-from-scratch">Linux from Scratch</h2>
+
+<ul>
+<li>パッケージの後処理スクリプトが完成
+
+<ul>
+<li>パッケージの全バイナリとライブラリをstripするスクリプトが完成
+特定のファイルのデバッグ情報を分離して保持できるようにしてある</li>
+<li>man圧縮スクリプトの処理内容を出力するようにした</li>
+<li>後処理スクリプト自体もパッケージ化した</li>
+</ul></li>
+<li>全パッケージが新しい後処理スクリプトを使うようにした</li>
+<li>必要なライブラリ以外はデバッグ情報を残さないようにした</li>
+<li>glibcのパッケージ化とインストールが完了</li>
+<li>今までの変更をリポジトリにコミットした</li>
+</ul>
+
+<h2 id="筋トレ">筋トレ</h2>
+
+<p>休み</p>
+
+<p>今日は夕飯を食べるのが遅かったので、消化されるのを待っていたら寝る時間になってしまった。最近寝不足気味なので今日は筋トレせずに<del>早く寝ることにする</del>。</p>
+
+<p>LFSを組んでたら結局寝るのが遅くなってしまった。</p>
+
+<h2 id="その他">その他</h2>
+
+<ul>
+<li>このサイトのデプロイスクリプトをシンプルにした <a href="https://github.com/ngkz/ngkz.github.io/blob/src/deploy.sh">https://github.com/ngkz/ngkz.github.io/blob/src/deploy.sh</a></li>
+<li>DOOM Emacsのsmartparensの動作がおかしくてイライラするのでオフにした</li>
+</ul>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero=""
+         data-message-one=""
+         data-message-other="">
+         85 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://ngkz.github.io/images/cover.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://ngkz.github.io/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/ngkz.github.io\/2019\/03\/diary-20190323\/';
+          
+            this.page.identifier = '\/2019\/03\/diary-20190323\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'ngkz-log';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

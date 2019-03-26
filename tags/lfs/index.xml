@@ -6,10 +6,32 @@
     <description>Recent content in Lfs on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 25 Mar 2019 22:49:06 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 26 Mar 2019 22:40:00 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/tags/lfs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>日記 2019/03/26(火)</title>
+      <link>https://ngkz.github.io/2019/03/diary-20190326/</link>
+      <pubDate>Tue, 26 Mar 2019 22:40:00 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/03/diary-20190326/</guid>
+      <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;GCCのビルド中
+
+&lt;ul&gt;
+&lt;li&gt;別のマシンでビルドしてもテストが通らなかった。&lt;/li&gt;
+&lt;li&gt;テストコードとGCCが生成したバイナリを調べたり、GCCのメーリングリストとバグトラッカーで解決策を探したりしてみたら、何個かのテストについては解決策を見つけた。一部のテストが&lt;code&gt;--enable-default-pie&lt;/code&gt;や&lt;code&gt;--enable-default-ssp&lt;/code&gt;でビルドしたGCCに対応していないらしい。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>日記 2019/03/25(月)</title>
@@ -93,6 +115,31 @@
 &lt;ul&gt;
 &lt;li&gt;カーメイトのシガーソケット分配器の接点が凹んでしまっていたので分解して直した。なぜかケースの片側が発熱するパイロットランプにホットボンドで固定されていた。別の箇所でもう片側のケースにネジ止めされているから強度の問題はないんだけど、こんなものを付けるくらいなら強く押すと凹む接点をどうにかしてほしい&lt;/li&gt;
 &lt;li&gt;昨日もらったポータブル冷蔵庫のファンフィルターが汚れていたので分解清掃した。経年劣化で中のガムテープらしきものが全部剥がれてしまっていたので貼り替えた。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>日記 2019/03/23(土)</title>
+      <link>https://ngkz.github.io/2019/03/diary-20190323/</link>
+      <pubDate>Sat, 23 Mar 2019 23:21:03 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/03/diary-20190323/</guid>
+      <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;GCCのテストが通らない
+
+&lt;ul&gt;
+&lt;li&gt;テスト時にHardeningフラグとPIEを無効にしてみたり、フラグをいろいろと変えてコンパイラをビルドしてみたりしてみたがダメだった&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;冷蔵庫&#34;&gt;冷蔵庫&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;父から使われていない車用ポータブル冷蔵庫をもらった。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
