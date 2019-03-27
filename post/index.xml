@@ -333,6 +333,29 @@
     </item>
     
     <item>
+      <title>日記 2019/03/17(日)</title>
+      <link>https://ngkz.github.io/2019/03/diary-20190317/</link>
+      <pubDate>Sun, 17 Mar 2019 23:59:59 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/03/diary-20190317/</guid>
+      <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;LFS BookのSVNリポジトリ全体をインポートしようとしたが、時間がかかりすぎるので諦めた&lt;/li&gt;
+&lt;li&gt;git-svnをいろいろといじっていたら、trunkと欲しい最期のタグの分岐点のリビジョンからfetchすれば、正常な歴史を維持したまま特定のタグだけ取得できることが分かった&lt;/li&gt;
+&lt;li&gt;最終的に、LFS Bookに変更を加える方法ではうまく行かないことが分かったので、諦めてMarkdownで書き直す方法に戻した&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;掃除&#34;&gt;掃除&lt;/h2&gt;
+
+&lt;p&gt;部屋が汚くなってきたので掃除した。&lt;/p&gt;
+
+&lt;p&gt;部屋の半分にはコルクマット、もう半分にはカーペットが敷いてあるが、両方とも掃除が面倒くさい。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>日記 2019/03/15(金)</title>
       <link>https://ngkz.github.io/2019/03/diary-20190315/</link>
       <pubDate>Fri, 15 Mar 2019 23:59:59 +0900</pubDate>
