@@ -215,6 +215,83 @@
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://ngkz.github.io/2019/01/diary-20190124/">
+          日記 (2019/01/24)
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-01-24T23:58:27&#43;09:00">
+        
+  
+  
+  
+  
+    2019-01-24
+  
+
+      </time>
+    
+    
+  
+  
+    <span>カテゴリー</span>
+    
+      <a class="category-link" href="https://ngkz.github.io/categories/%e6%97%a5%e8%a8%98">日記</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        <h2 id="linux-from-scratch">Linux from Scratch</h2>
+
+<p>ファイルシステムのディレクトリ構造と/etc/passwdに登録するシステムユーザーを決めた。システムグループの役割と使用箇所を調べている途中。</p>
+
+<h2 id="筋トレ">筋トレ</h2>
+
+<p>下半身 + 腹筋</p>
+
+<p>LFSの構築をやりすぎたせいで途中までしかできなかった。
+下半身が一番時間がかかるからか、時間切れで中断することが多くなってきていてまずい</p>
+
+<pre><code>ブルガリアンスクワット       3セット 15kgx2 + 自重 左10回 右9回 左7回 右7回 左6回+自重で何回か 右5回+自重で8回
+レッグエクステンション       2セット 20kg          12回 12回+10kgで16回
+ツイストクランチ             3セット 自重          5秒維持 13回 -&gt; 1秒維持 18回 18回
+</code></pre>
+
+<p></p>
+      
+      <p>
+        <a href="https://ngkz.github.io/2019/01/diary-20190124/" class="postShorten-excerpt_link link">続きを読む</a>
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
         <a class="link-unstyled" href="https://ngkz.github.io/2019/01/diary-20190120/">
           日記 (2019/01/20)
         </a>
@@ -374,6 +451,38 @@
       <div class="no-result text-color-light text-center"></div>
       <div class="results">
         
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190330/">
+                <h3 class="media-heading">日記 2019/03/30(土)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Mar 3, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><h2 id="linux-from-scratch">Linux from Scratch</h2>
+
+<ul>
+<li>GCCのビルド中
+
+<ul>
+<li><code>--enable-default-pie</code>と<code>--enable-default-ssp</code>で問題を起こすテストの修正が完了</li>
+<li>テストケースへの変更をパッチにした</li>
+<li>フラグをいろいろ変えてビルドしたときのログをチェックして問題のあるフラグを調べた</li>
+<li>問題のあるフラグを除去してビルドとテストをしているところ</li>
+</ul></li>
+</ul>
+
+<h2 id="筋トレ">筋トレ</h2>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
         
           <div class="media">
             
@@ -839,100 +948,6 @@
             <hr>
           </div>
         
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190320/">
-                <h3 class="media-heading">日記 2019/03/20(水)</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Mar 3, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="linux-from-scratch">Linux from Scratch</h2>
-
-<ul>
-<li>Zlib, File, Readline, M4, Bcをインストールした</li>
-<li>binutilsをビルド中
-
-<ul>
-<li>CPPFLAGSに<code>-D_FORTIFY_SOURCE=2</code>が入っているとlimits.hの存在チェックが壊れてビルドできななかった</li>
-<li>CFLAGSとCXXFLAGSに<code>_FORTIFY_SOURCE</code>の定義を移して解決</li>
-<li>ビルドが通るようになったがテストが通らない</li>
-<li>CFLAGS, CXXFLAGS, CPPFLAGS, LDFLAGSを削除したらgold以外のテストは通るようになったので、 Hardening フラグのどれかが原因っぽい</li>
-</ul></li>
-</ul>
-
-<h2 id="筋トレ">筋トレ</h2>
-
-<ul>
-<li>THE プレワークアウトを筋トレ30分前に1スクープ摂取</li>
-<li>HMBを昼, トレーニング1時間前, 就寝前に1g摂取</li>
-<li>前日の睡眠 7:23 (23:37-7:11)
-
-<ul>
-<li>あまりよく眠れなかった</li>
-</ul></li>
-<li>DiscordのJMusicBotをいじってたら時間がなくなってしまった</li>
-</ul>
-
-<p><strong>上半身プル</strong></p>
-
-<table>
-<thead>
-<tr>
-<th>種目</th>
-<th>重量&amp;目標回数</th>
-<th>回数</th>
-<th>備考</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>ハーフデッドリフト</td>
-<td>3セット 30kg(27.5kgx2+シャフト) 21回以上</td>
-<td>↓15 9 12</td>
-<td>力を出しきれなかった</td>
-</tr>
-
-<tr>
-<td>ワンハンドローイング</td>
-<td>左右2セット 12.5kg(10kg+シャフト) 21回以上 →ドロップ</td>
-<td>↓左15 右16 左17→5kgで12 右16→5kgで20</td>
-<td></td>
-</tr>
-
-<tr>
-<td>ダンベルシュラッグ</td>
-<td>2セット 30kg(27.5kg+シャフトx2) 23回以上 →ドロップ</td>
-<td>↓18 19</td>
-<td></td>
-</tr>
-
-<tr>
-<td>ダンベルカール</td>
-<td>3セット 10kg(7.5kg+シャフト) 11回以上 →ドロップ</td>
-<td></td>
-<td>時間切れ</td>
-</tr>
-
-<tr>
-<td>変形バックエクステンション</td>
-<td>2セット 自重+5kg 16回以上 →ドロップ</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
       </div>
     </div>
     <div class="modal-footer">
@@ -940,7 +955,7 @@
          data-message-zero=""
          data-message-one=""
          data-message-other="">
-         90 posts found
+         91 posts found
       </p>
     </div>
   </div>
