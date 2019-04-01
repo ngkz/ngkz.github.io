@@ -8,349 +8,19 @@
 <meta name="generator" content="Hugo 0.42.2 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
-<meta name="description" content="Linux from Scratch
-
-/etc/passwdと/etc/groupが完成した。Linuxの/etc/passwdと/etc/groupにあるシステムユーザー/システムグループはディストリビュージョンによって異なり、名前やUID/GIDが違う、過去に使われていたが今は未使用のユーザー/グループがある、システムグループに属するシステムユーザーが違う、などの違いがある。
-
-LFS Bookに/etc/groupの詳しい解説がなかったので、いろいろなディストロに/etc/groupを見てみたり、システムグループの使用目的を調べたり、いらないグループを削ったりしていたら時間がかかってしまった。
-
-筋トレ
-
-上半身プッシュ &#43; 腹筋
-
-プッシュアップのフォームを修正したら大胸筋によく効くようになった。筋力の伸びが停滞してる気がする
-
-
-
-
-種目
-重量&amp;目標回数
-回数
-備考
-
-
-
-
-
-ローテーターカフのウォームアップ
-
-
-
-
-
-
-プッシュアップ
-3セット 自重 12回以上 &#43; 膝つき
-↓8&#43;5 6&#43;3 7&#43;3
-今までフォームが間違ってたのが原因
-
-
-
-ダンベルショルダープレス
-2セット 10kgx2 15回以上 → ドロップ
-↓13 10&#43;5kgx2で10&#43;2.5kgx2で14&#43;1.25kgx2で11
-
-
-
-
-ダンベルフレンチプレス
-2セット 10kg 11回以上 → ドロップ
-↑12 10&#43;2.5kgx2で6&#43;2.5kgで38&#43;1.25kgで?
-
-
-
-
-ダンベルフライ
-2セット 7.5kg x 2 17回以上 → ドロップ
-→16 10&#43;5kgx2で17
-
-
-
-
-ツイストクランチ
-3セット 自重 5秒維持 14回以上 → 1秒維持 20回以上
-↓5秒維持 12 → 1秒維持 16 18
-
-
-
-
-
-スキーのトップシートの修理
-
-別の箇所を接着した。トップシートが欠けている箇所をホットボンドで埋め、固まる前にシリコンオイルを塗った定規で形を整えた。定規に油を塗ればホットボンドがくっつくのを避けられると思っていたが、あまり効果はなかった。
-
-その他
-
-
-LeechBlock効果でインターネットで無駄にした時間がだいぶ減った
-
-
-">
-
-
-<meta property="og:description" content="Linux from Scratch
-
-/etc/passwdと/etc/groupが完成した。Linuxの/etc/passwdと/etc/groupにあるシステムユーザー/システムグループはディストリビュージョンによって異なり、名前やUID/GIDが違う、過去に使われていたが今は未使用のユーザー/グループがある、システムグループに属するシステムユーザーが違う、などの違いがある。
-
-LFS Bookに/etc/groupの詳しい解説がなかったので、いろいろなディストロに/etc/groupを見てみたり、システムグループの使用目的を調べたり、いらないグループを削ったりしていたら時間がかかってしまった。
-
-筋トレ
-
-上半身プッシュ &#43; 腹筋
-
-プッシュアップのフォームを修正したら大胸筋によく効くようになった。筋力の伸びが停滞してる気がする
-
-
-
-
-種目
-重量&amp;目標回数
-回数
-備考
-
-
-
-
-
-ローテーターカフのウォームアップ
-
-
-
-
-
-
-プッシュアップ
-3セット 自重 12回以上 &#43; 膝つき
-↓8&#43;5 6&#43;3 7&#43;3
-今までフォームが間違ってたのが原因
-
-
-
-ダンベルショルダープレス
-2セット 10kgx2 15回以上 → ドロップ
-↓13 10&#43;5kgx2で10&#43;2.5kgx2で14&#43;1.25kgx2で11
-
-
-
-
-ダンベルフレンチプレス
-2セット 10kg 11回以上 → ドロップ
-↑12 10&#43;2.5kgx2で6&#43;2.5kgで38&#43;1.25kgで?
-
-
-
-
-ダンベルフライ
-2セット 7.5kg x 2 17回以上 → ドロップ
-→16 10&#43;5kgx2で17
-
-
-
-
-ツイストクランチ
-3セット 自重 5秒維持 14回以上 → 1秒維持 20回以上
-↓5秒維持 12 → 1秒維持 16 18
-
-
-
-
-
-スキーのトップシートの修理
-
-別の箇所を接着した。トップシートが欠けている箇所をホットボンドで埋め、固まる前にシリコンオイルを塗った定規で形を整えた。定規に油を塗ればホットボンドがくっつくのを避けられると思っていたが、あまり効果はなかった。
-
-その他
-
-
-LeechBlock効果でインターネットで無駄にした時間がだいぶ減った
-
-
-">
-<meta property="og:type" content="article">
-<meta property="og:title" content="日記 (2019/02/04)">
-<meta name="twitter:title" content="日記 (2019/02/04)">
-<meta property="og:url" content="https://ngkz.github.io/2019/02/diary-20190204/">
-<meta property="twitter:url" content="https://ngkz.github.io/2019/02/diary-20190204/">
+<meta name="description" content="Kazutoshi Noguchi&#39;s blog">
+
+
+<meta property="og:description" content="Kazutoshi Noguchi&#39;s blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="日記">
+<meta name="twitter:title" content="日記">
+<meta property="og:url" content="https://ngkz.github.io/categories/%E6%97%A5%E8%A8%98/">
+<meta property="twitter:url" content="https://ngkz.github.io/categories/%E6%97%A5%E8%A8%98/">
 <meta property="og:site_name" content="ngkz.log">
-<meta property="og:description" content="Linux from Scratch
-
-/etc/passwdと/etc/groupが完成した。Linuxの/etc/passwdと/etc/groupにあるシステムユーザー/システムグループはディストリビュージョンによって異なり、名前やUID/GIDが違う、過去に使われていたが今は未使用のユーザー/グループがある、システムグループに属するシステムユーザーが違う、などの違いがある。
-
-LFS Bookに/etc/groupの詳しい解説がなかったので、いろいろなディストロに/etc/groupを見てみたり、システムグループの使用目的を調べたり、いらないグループを削ったりしていたら時間がかかってしまった。
-
-筋トレ
-
-上半身プッシュ &#43; 腹筋
-
-プッシュアップのフォームを修正したら大胸筋によく効くようになった。筋力の伸びが停滞してる気がする
-
-
-
-
-種目
-重量&amp;目標回数
-回数
-備考
-
-
-
-
-
-ローテーターカフのウォームアップ
-
-
-
-
-
-
-プッシュアップ
-3セット 自重 12回以上 &#43; 膝つき
-↓8&#43;5 6&#43;3 7&#43;3
-今までフォームが間違ってたのが原因
-
-
-
-ダンベルショルダープレス
-2セット 10kgx2 15回以上 → ドロップ
-↓13 10&#43;5kgx2で10&#43;2.5kgx2で14&#43;1.25kgx2で11
-
-
-
-
-ダンベルフレンチプレス
-2セット 10kg 11回以上 → ドロップ
-↑12 10&#43;2.5kgx2で6&#43;2.5kgで38&#43;1.25kgで?
-
-
-
-
-ダンベルフライ
-2セット 7.5kg x 2 17回以上 → ドロップ
-→16 10&#43;5kgx2で17
-
-
-
-
-ツイストクランチ
-3セット 自重 5秒維持 14回以上 → 1秒維持 20回以上
-↓5秒維持 12 → 1秒維持 16 18
-
-
-
-
-
-スキーのトップシートの修理
-
-別の箇所を接着した。トップシートが欠けている箇所をホットボンドで埋め、固まる前にシリコンオイルを塗った定規で形を整えた。定規に油を塗ればホットボンドがくっつくのを避けられると思っていたが、あまり効果はなかった。
-
-その他
-
-
-LeechBlock効果でインターネットで無駄にした時間がだいぶ減った
-
-
-">
-<meta name="twitter:description" content="Linux from Scratch
-
-/etc/passwdと/etc/groupが完成した。Linuxの/etc/passwdと/etc/groupにあるシステムユーザー/システムグループはディストリビュージョンによって異なり、名前やUID/GIDが違う、過去に使われていたが今は未使用のユーザー/グループがある、システムグループに属するシステムユーザーが違う、などの違いがある。
-
-LFS Bookに/etc/groupの詳しい解説がなかったので、いろいろなディストロに/etc/groupを見てみたり、システムグループの使用目的を調べたり、いらないグループを削ったりしていたら時間がかかってしまった。
-
-筋トレ
-
-上半身プッシュ &#43; 腹筋
-
-プッシュアップのフォームを修正したら大胸筋によく効くようになった。筋力の伸びが停滞してる気がする
-
-
-
-
-種目
-重量&amp;目標回数
-回数
-備考
-
-
-
-
-
-ローテーターカフのウォームアップ
-
-
-
-
-
-
-プッシュアップ
-3セット 自重 12回以上 &#43; 膝つき
-↓8&#43;5 6&#43;3 7&#43;3
-今までフォームが間違ってたのが原因
-
-
-
-ダンベルショルダープレス
-2セット 10kgx2 15回以上 → ドロップ
-↓13 10&#43;5kgx2で10&#43;2.5kgx2で14&#43;1.25kgx2で11
-
-
-
-
-ダンベルフレンチプレス
-2セット 10kg 11回以上 → ドロップ
-↑12 10&#43;2.5kgx2で6&#43;2.5kgで38&#43;1.25kgで?
-
-
-
-
-ダンベルフライ
-2セット 7.5kg x 2 17回以上 → ドロップ
-→16 10&#43;5kgx2で17
-
-
-
-
-ツイストクランチ
-3セット 自重 5秒維持 14回以上 → 1秒維持 20回以上
-↓5秒維持 12 → 1秒維持 16 18
-
-
-
-
-
-スキーのトップシートの修理
-
-別の箇所を接着した。トップシートが欠けている箇所をホットボンドで埋め、固まる前にシリコンオイルを塗った定規で形を整えた。定規に油を塗ればホットボンドがくっつくのを避けられると思っていたが、あまり効果はなかった。
-
-その他
-
-
-LeechBlock効果でインターネットで無駄にした時間がだいぶ減った
-
-
-">
+<meta property="og:description" content="Kazutoshi Noguchi&#39;s blog">
+<meta name="twitter:description" content="Kazutoshi Noguchi&#39;s blog">
 <meta property="og:locale" content="ja">
-
-  
-    <meta property="article:published_time" content="2019-02-04T21:52:28">
-  
-  
-    <meta property="article:modified_time" content="2019-02-04T21:52:28">
-  
-  
-  
-    
-      <meta property="article:section" content="日記">
-    
-  
-  
-    
-      <meta property="article:tag" content="筋トレ">
-    
-      <meta property="article:tag" content="LFS">
-    
-      <meta property="article:tag" content="スキー">
-    
-  
 
 
 <meta name="twitter:card" content="summary">
@@ -369,14 +39,16 @@ LeechBlock効果でインターネットで無駄にした時間がだいぶ減�
   <meta property="twitter:image" content="https://ngkz.github.io/mypicture.jpg">
 
 
-    <title>日記 (2019/02/04)</title>
+    <title>日記</title>
 
     <link rel="icon" href="https://ngkz.github.io/favicon.png">
     
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://ngkz.github.io/categories/%E6%97%A5%E8%A8%98/index.xml">
+    
 
     
 
-    <link rel="canonical" href="https://ngkz.github.io/2019/02/diary-20190204/">
+    <link rel="canonical" href="https://ngkz.github.io/categories/%E6%97%A5%E8%A8%98/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -515,30 +187,48 @@ LeechBlock効果でインターネットで無駄にした時間がだいぶ減�
 </nav>
 
       
+        
 
+      
       <div id="main" data-behavior="1"
         class="
                hasCoverMetaIn
                ">
-        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
-          
-          
-            <div class="post-header main-content-wrap text-left">
+        
+          <section class="postShorten-group main-content-wrap">
+            
+            
+              
   
-    <h1 class="post-title" itemprop="headline">
-      日記 (2019/02/04)
-    </h1>
+    
+      
+        
+      
+    
   
+
+
   
+
+<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://ngkz.github.io/2019/01/diary-20190120/">
+          日記 (2019/01/20)
+        </a>
+      </h1>
+      
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2019-02-04T21:52:28&#43;09:00">
+      <time itemprop="datePublished" datetime="2019-01-20T23:08:46&#43;09:00">
         
   
   
   
   
-    2019-02-04
+    2019-01-20
   
 
       </time>
@@ -554,187 +244,80 @@ LeechBlock効果でインターネットで無駄にした時間がだいぶ減�
 
   </div>
 
-</div>
-          
-          <div class="post-content markdown" itemprop="articleBody">
-            <div class="main-content-wrap">
-              <h2 id="linux-from-scratch">Linux from Scratch</h2>
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        <p>SNSはやめたので、代わりに某所のつぶやきチャンネルにつぶやきを書き捨てていたが、自分一人でかなりチャンネル流量を上げてしまっているのでこれからはここに書く。</p>
 
-<p>/etc/passwdと/etc/groupが完成した。Linuxの/etc/passwdと/etc/groupにあるシステムユーザー/システムグループはディストリビュージョンによって異なり、名前やUID/GIDが違う、過去に使われていたが今は未使用のユーザー/グループがある、システムグループに属するシステムユーザーが違う、などの違いがある。</p>
-
-<p>LFS Bookに/etc/groupの詳しい解説がなかったので、いろいろなディストロに/etc/groupを見てみたり、システムグループの使用目的を調べたり、いらないグループを削ったりしていたら時間がかかってしまった。</p>
-
-<h2 id="筋トレ">筋トレ</h2>
-
-<p>上半身プッシュ + 腹筋</p>
-
-<p>プッシュアップのフォームを修正したら大胸筋によく効くようになった。筋力の伸びが停滞してる気がする</p>
-
-<table>
-<thead>
-<tr>
-<th>種目</th>
-<th>重量&amp;目標回数</th>
-<th>回数</th>
-<th>備考</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>ローテーターカフのウォームアップ</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-
-<tr>
-<td>プッシュアップ</td>
-<td>3セット 自重 12回以上 + 膝つき</td>
-<td>↓8+5 6+3 7+3</td>
-<td>今までフォームが間違ってたのが原因</td>
-</tr>
-
-<tr>
-<td>ダンベルショルダープレス</td>
-<td>2セット 10kgx2 15回以上 → ドロップ</td>
-<td>↓13 10+5kgx2で10+2.5kgx2で14+1.25kgx2で11</td>
-<td></td>
-</tr>
-
-<tr>
-<td>ダンベルフレンチプレス</td>
-<td>2セット 10kg 11回以上 → ドロップ</td>
-<td>↑12 10+2.5kgx2で6+2.5kgで38+1.25kgで?</td>
-<td></td>
-</tr>
-
-<tr>
-<td>ダンベルフライ</td>
-<td>2セット 7.5kg x 2 17回以上 → ドロップ</td>
-<td>→16 10+5kgx2で17</td>
-<td></td>
-</tr>
-
-<tr>
-<td>ツイストクランチ</td>
-<td>3セット 自重 5秒維持 14回以上 → 1秒維持 20回以上</td>
-<td>↓5秒維持 12 → 1秒維持 16 18</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-<h2 id="スキーのトップシートの修理">スキーのトップシートの修理</h2>
-
-<p>別の箇所を接着した。トップシートが欠けている箇所をホットボンドで埋め、固まる前にシリコンオイルを塗った定規で形を整えた。定規に油を塗ればホットボンドがくっつくのを避けられると思っていたが、あまり効果はなかった。</p>
-
-<h2 id="その他">その他</h2>
+<h2 id="スキー">スキー</h2>
 
 <ul>
-<li>LeechBlock効果でインターネットで無駄にした時間がだいぶ減った</li>
+<li>草津に一泊二日のスキー旅行に行った。去年の白根山噴火の影響で白根火山ロープウェイが廃止されていて、中上級コースのほとんどがなくなっていた。</li>
+<li>ロープウェイ廃止のためか、ロープウェイの駐車場だった場所は滑れるようになっていて、駐車場へのアクセスに使われていた国道292号もスキーコースになっていた。ただ、傾斜が緩やかな上に途中複数回登り勾配になっていて、初級者にはつらく、中上級者にはつまらないためか、人気はなく、隣のしゃくなげコースに人が流れていた。</li>
+<li>普通に滑っているとつまらないし、たまたま使っている板がビンディングが後ろよりについているがツインチップのやつだったので、人の少ないコースでフリースタイルスキーに挑戦してみた。</li>
+<li>まずストレートジャンプをやってみた。何回か平地や斜面でジャンプして感覚をつかんだ後、コースのでこぼこの部分でジャンプしたらうまくいった。コースの形状の都合で短距離のジャンプしかできないが楽しかった。</li>
+<li>フェイキー(後ろ滑り)もやってみた。後ろに向くのは楽勝で、後ろにまっすぐ滑るのもなんとかできたが、ほとんど曲がれないし、前向きに戻るのに高確率で失敗した。
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=Q_4WcUHAddw">【スキー】 スイッチ（後ろ向き）の滑り方講座Part1 / フリースキー初心者が最初にやるべき８のトリック～ファースト８～ - YouTube</a> を参考に練習していきたい。</li>
+</ul></li>
+<li>とりあえずフェイキーから戻れるように<a href="https://oshiete.goo.ne.jp/qa/3607716.html">これ</a>を参考にグランドスピンを練習した。
+
+<ul>
+<li>後ろに回ったとき足が広がって勢いが削げてしまうが、2連続回転できるようになった。</li>
+<li>次はスピンをマスターして何回も回れるようになりたい</li>
+</ul></li>
+<li>筋トレしてふくらはぎが太くなったせいか、足のブーツと接する部分に水膨れができてしまった。これ以上脚が太くなったらブーツを買いかえなきゃいけなくなるかもしれない</li>
 </ul>
 
-<p></p>
-              
-            </div>
-          </div>
-          <div id="post-footer" class="post-footer main-content-wrap">
-            
-              
-                
-                
-                  <div class="post-footer-tags">
-                    <span class="text-color-light text-small">タグ</span><br/>
-                    
-  <a class="tag tag--primary tag--small" href="https://ngkz.github.io/tags/%E7%AD%8B%E3%83%88%E3%83%AC/">筋トレ</a>
+<h2 id="linux-from-scratch">Linux from Scratch</h2>
 
-  <a class="tag tag--primary tag--small" href="https://ngkz.github.io/tags/lfs/">LFS</a>
+<ul>
+<li>2016年8月ごろ、Ubuntu 14.04の収録ソフトウェアが古くなって不便になってきたので、ローリングリリースのディストロに移行することにした。
+最初はOpenSUSE Tumbleweedを試してみたが、しっくりこなかったのでArch Linuxに移行しようとした。<br />
+しかし、移行のついでにVimやZshの設定を見直したり、ソフトウェアの構成を変えてみたり、パッケージマネージャを書こうとしてみたり、Webブラウザや信頼できないアプリを隔離するjailを書こうとしてみたり、数ヶ月間別のことに興味が移ってたり、Arch Linuxに不満が出てきたので移行先をLinux from Scratchに変更したり、など脱線<br />
+そうこうしているうちに2019年1月になり、Ubuntu 14.04のサポート切れまであと3ヶ月に
 
-  <a class="tag tag--primary tag--small" href="https://ngkz.github.io/tags/%E3%82%B9%E3%82%AD%E3%83%BC/">スキー</a>
+<ul>
+<li>セカンドシステム症候群</li>
+</ul></li>
+<li>このままではまずいので、とりあえず手動で普通のLinuxデスクトップ仕様のLinux from Scratchを組んでUbuntu 14.04から移行することにした。</li>
+<li>Temporary Systemの構築が終わり、実際のシステムを構築する直前まで行った。</li>
+</ul>
 
-                  </div>
-                
-              
-            
-            <div class="post-actions-wrap">
+<h2 id="筋トレ">筋トレ</h2>
+      
+      <p>
+        <a href="https://ngkz.github.io/2019/01/diary-20190120/" class="postShorten-excerpt_link link">続きを読む</a>
+        
+      </p>
+    </div>
+  </div>
   
-      <nav >
-        <ul class="post-actions post-action-nav">
-          
-            <li class="post-action">
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/02/diary-20190205/" data-tooltip="日記 (2019/02/05)">
-              
-                  <i class="fa fa-angle-left"></i>
-                  <span class="hide-xs hide-sm text-small icon-ml">次</span>
-                </a>
-            </li>
-            <li class="post-action">
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/02/diary-20190203/" data-tooltip="日記 (2019/02/03)">
-              
-                  <span class="hide-xs hide-sm text-small icon-mr">前</span>
-                  <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-          
-        </ul>
-      </nav>
-    <ul class="post-actions post-action-share" >
+</article>
+
+            
+            
+  <div class="pagination-bar">
+    <ul class="pagination">
       
-        <li class="post-action hide-lg hide-md hide-sm">
-          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
-            <i class="fa fa-share-alt"></i>
-          </a>
-        </li>
         
-          <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2019/02/diary-20190204/">
-              <i class="fa fa-facebook-official"></i>
+          <li class="pagination-prev">
+            <a class="btn btn--default btn--small" href="https://ngkz.github.io/categories/%E6%97%A5%E8%A8%98/page/10/">
+              <i class="fa fa-angle-left text-base icon-mr"></i>
+              <span>新しい投稿</span>
             </a>
           </li>
         
-          <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2019/02/diary-20190204/">
-              <i class="fa fa-twitter"></i>
-            </a>
-          </li>
-        
-          <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2019/02/diary-20190204/">
-              <i class="fa fa-google-plus"></i>
-            </a>
-          </li>
         
       
-      
-        <li class="post-action">
-          <a class="post-action-btn btn btn--default" href="#disqus_thread">
-            <i class="fa fa-comment-o"></i>
-          </a>
-        </li>
-      
-      <li class="post-action">
-        
-          <a class="post-action-btn btn btn--default" href="#">
-        
-          <i class="fa fa-list"></i>
-        </a>
-      </li>
+      <li class="pagination-number">page 11 of 11</li>
     </ul>
-  
-</div>
+  </div>
 
-            
-              
-                <div id="disqus_thread">
-  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
-              
-            
-          </div>
-        </article>
+
+          </section>
+        
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">ngkz.log</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://ngkz.github.io/" property="cc:attributionName" rel="cc:attributionURL">Kazutoshi Noguchi</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
@@ -742,102 +325,6 @@ LeechBlock効果でインターネットで無駄にした時間がだいぶ減�
 </footer>
 
       </div>
-      <div id="bottom-bar" class="post-bottom-bar" data-behavior="1">
-        <div class="post-actions-wrap">
-  
-      <nav >
-        <ul class="post-actions post-action-nav">
-          
-            <li class="post-action">
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/02/diary-20190205/" data-tooltip="日記 (2019/02/05)">
-              
-                  <i class="fa fa-angle-left"></i>
-                  <span class="hide-xs hide-sm text-small icon-ml">次</span>
-                </a>
-            </li>
-            <li class="post-action">
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/02/diary-20190203/" data-tooltip="日記 (2019/02/03)">
-              
-                  <span class="hide-xs hide-sm text-small icon-mr">前</span>
-                  <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-          
-        </ul>
-      </nav>
-    <ul class="post-actions post-action-share" >
-      
-        <li class="post-action hide-lg hide-md hide-sm">
-          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
-            <i class="fa fa-share-alt"></i>
-          </a>
-        </li>
-        
-          <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2019/02/diary-20190204/">
-              <i class="fa fa-facebook-official"></i>
-            </a>
-          </li>
-        
-          <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2019/02/diary-20190204/">
-              <i class="fa fa-twitter"></i>
-            </a>
-          </li>
-        
-          <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2019/02/diary-20190204/">
-              <i class="fa fa-google-plus"></i>
-            </a>
-          </li>
-        
-      
-      
-        <li class="post-action">
-          <a class="post-action-btn btn btn--default" href="#disqus_thread">
-            <i class="fa fa-comment-o"></i>
-          </a>
-        </li>
-      
-      <li class="post-action">
-        
-          <a class="post-action-btn btn btn--default" href="#">
-        
-          <i class="fa fa-list"></i>
-        </a>
-      </li>
-    </ul>
-  
-</div>
-
-      </div>
-      <div id="share-options-bar" class="share-options-bar" data-behavior="1">
-  <i id="btn-close-shareoptions" class="fa fa-close"></i>
-  <ul class="share-options">
-    
-      <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fngkz.github.io%2F2019%2F02%2Fdiary-20190204%2F">
-          <i class="fa fa-facebook-official"></i><span>Facebookで共有</span>
-        </a>
-      </li>
-    
-      <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fngkz.github.io%2F2019%2F02%2Fdiary-20190204%2F">
-          <i class="fa fa-twitter"></i><span>Twitterで共有</span>
-        </a>
-      </li>
-    
-      <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fngkz.github.io%2F2019%2F02%2Fdiary-20190204%2F">
-          <i class="fa fa-google-plus"></i><span>Google&#43;で共有</span>
-        </a>
-      </li>
-    
-  </ul>
-</div>
-<div id="share-options-mask" class="share-options-mask"></div>
     </div>
     
     <div id="about">
@@ -1483,32 +970,6 @@ $(document).ready(function() {
 });
 </script>
 
-
-  
-    
-      <script>
-        var disqus_config = function () {
-          this.page.url = 'https:\/\/ngkz.github.io\/2019\/02\/diary-20190204\/';
-          
-            this.page.identifier = '\/2019\/02\/diary-20190204\/'
-          
-        };
-        (function() {
-          
-          
-          if (window.location.hostname == "localhost") {
-            return;
-          }
-          var d = document, s = d.createElement('script');
-          var disqus_shortname = 'ngkz-log';
-          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-        })();
-      </script>
-    
-  
 
 
 
