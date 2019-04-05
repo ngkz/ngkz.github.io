@@ -6,10 +6,56 @@
     <description>Recent content in Posts on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 03 Apr 2019 23:59:59 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 05 Apr 2019 23:59:59 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>日記 2019/04/05(金)</title>
+      <link>https://ngkz.github.io/2019/04/diary-20190405/</link>
+      <pubDate>Fri, 05 Apr 2019 23:59:59 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/04/diary-20190405/</guid>
+      <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;変更をリポジトリにコミット&lt;/li&gt;
+&lt;li&gt;手順書に何箇所か間違いがあったので修正&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HMBをトレーニング30分前, 就寝前に1.5g摂取&lt;/li&gt;
+&lt;li&gt;前日の睡眠 7:24 (0:12→7:56)
+
+&lt;ul&gt;
+&lt;li&gt;目覚めが悪かった&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;公園で自重トレ&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;上半身&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>日記 2019/04/04(木)</title>
+      <link>https://ngkz.github.io/2019/04/diary-20190404/</link>
+      <pubDate>Thu, 04 Apr 2019 23:02:57 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/04/diary-20190404/</guid>
+      <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;pkg-configをインストール&lt;/li&gt;
+&lt;li&gt;あまり作業できなかった&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>日記 2019/04/03(水)</title>
