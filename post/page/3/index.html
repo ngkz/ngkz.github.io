@@ -212,6 +212,80 @@
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190326/">
+          日記 2019/03/26(火)
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-03-26T22:40:00&#43;09:00">
+        
+  
+  
+  
+  
+    2019-03-26
+  
+
+      </time>
+    
+    
+  
+  
+    <span>カテゴリー</span>
+    
+      <a class="category-link" href="https://ngkz.github.io/categories/%e6%97%a5%e8%a8%98">日記</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        <h2 id="linux-from-scratch">Linux from Scratch</h2>
+
+<ul>
+<li>GCCのビルド中
+
+<ul>
+<li>別のマシンでビルドしてもテストが通らなかった。</li>
+<li>テストコードとGCCが生成したバイナリを調べたり、GCCのメーリングリストとバグトラッカーで解決策を探したりしてみたら、何個かのテストについては解決策を見つけた。一部のテストが<code>--enable-default-pie</code>や<code>--enable-default-ssp</code>でビルドしたGCCに対応していないらしい。</li>
+</ul></li>
+</ul>
+
+<h2 id="その他">その他</h2>
+
+<p></p>
+      
+      <p>
+        <a href="https://ngkz.github.io/2019/03/diary-20190326/" class="postShorten-excerpt_link link">続きを読む</a>
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
         <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190325/">
           日記 2019/03/25(月)
         </a>
@@ -754,89 +828,6 @@
 </article>
 
           
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190319/">
-          日記 2019/03/19(火)
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2019-03-19T23:59:59&#43;09:00">
-        
-  
-  
-  
-  
-    2019-03-19
-  
-
-      </time>
-    
-    
-  
-  
-    <span>カテゴリー</span>
-    
-      <a class="category-link" href="https://ngkz.github.io/categories/%e6%97%a5%e8%a8%98">日記</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <h2 id="linux-from-scratch">Linux from Scratch</h2>
-
-<ul>
-<li>lddが正常に動いていなかったのを直した
-
-<ul>
-<li><code>rtlddir</code>を<code>/usr/lib</code>に設定したとき <code>ldd</code>が64bitダイナミックリンカのパスとして <code>/usr/lib64/ld-linux-x86_64.so.2</code> を使っていたのが原因だった。</li>
-<li><code>/usr/lib64</code>から<code>/usr/lib</code>へのシンボリックリンクを貼って解決</li>
-</ul></li>
-<li>ライセンス違反を解決
-
-<ul>
-<li>大部分がCC-BY-NC-SA 2.0のLFS Bookからの引用になったのに、リポジトリのライセンスが互換性のないGPLv3のままになっていた。</li>
-<li>ライセンスをCC-BY-NC-SAに変更して解決</li>
-</ul></li>
-<li>Adjusting the Toolchain
-
-<ul>
-<li><code>/usr/lib32</code>に必要な32bitライブラリへのリンクを貼るのを忘れていたため、32bitでコンパイルできなかったのを直した</li>
-</ul></li>
-</ul>
-
-<h2 id="筋トレ">筋トレ</h2>
-      
-      <p>
-        <a href="https://ngkz.github.io/2019/03/diary-20190319/" class="postShorten-excerpt_link link">続きを読む</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
           
   <div class="pagination-bar">
     <ul class="pagination">
@@ -920,6 +911,41 @@
       <div class="no-result text-color-light text-center"></div>
       <div class="results">
         
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2019/04/diary-20190408/">
+                <h3 class="media-heading">日記 2019/04/08(月)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Apr 4, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><h2 id="linux-from-scratch">Linux from Scratch</h2>
+
+<ul>
+<li>Ncursesをインストールした</li>
+</ul>
+
+<h2 id="筋トレ">筋トレ</h2>
+
+<ul>
+<li>HMBを昼, トレーニング40分前, 就寝前に1g摂取</li>
+<li>前日の睡眠 7:29 (0:04→7:36)
+
+<ul>
+<li>目覚めが悪かった</li>
+</ul></li>
+<li>公園で自重トレ</li>
+</ul>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
         
           <div class="media">
             
@@ -1324,38 +1350,6 @@
             <hr>
           </div>
         
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190330/">
-                <h3 class="media-heading">日記 2019/03/30(土)</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Mar 3, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="linux-from-scratch">Linux from Scratch</h2>
-
-<ul>
-<li>GCCのビルド中
-
-<ul>
-<li><code>--enable-default-pie</code>と<code>--enable-default-ssp</code>で問題を起こすテストの修正が完了</li>
-<li>テストケースへの変更をパッチにした</li>
-<li>フラグをいろいろ変えてビルドしたときのログをチェックして問題のあるフラグを調べた</li>
-<li>問題のあるフラグを除去してビルドとテストをしているところ</li>
-</ul></li>
-</ul>
-
-<h2 id="筋トレ">筋トレ</h2>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
       </div>
     </div>
     <div class="modal-footer">
@@ -1363,7 +1357,7 @@
          data-message-zero=""
          data-message-one=""
          data-message-other="">
-         99 posts found
+         100 posts found
       </p>
     </div>
   </div>

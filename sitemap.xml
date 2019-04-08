@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://ngkz.github.io/2019/04/diary-20190408/</loc>
+    <lastmod>2019-04-08T23:01:09+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ngkz.github.io/2019/04/diary-20190407/</loc>
     <lastmod>2019-04-07T23:02:41+09:00</lastmod>
   </url>
@@ -545,7 +550,7 @@
   
   <url>
     <loc>https://ngkz.github.io/tags/lfs/</loc>
-    <lastmod>2019-04-05T23:59:59+09:00</lastmod>
+    <lastmod>2019-04-08T23:01:09+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -556,7 +561,7 @@
   
   <url>
     <loc>https://ngkz.github.io/post/</loc>
-    <lastmod>2019-04-07T23:02:41+09:00</lastmod>
+    <lastmod>2019-04-08T23:01:09+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -596,7 +601,7 @@
   
   <url>
     <loc>https://ngkz.github.io/</loc>
-    <lastmod>2019-04-07T23:02:41+09:00</lastmod>
+    <lastmod>2019-04-08T23:01:09+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -632,13 +637,13 @@
   
   <url>
     <loc>https://ngkz.github.io/categories/%E6%97%A5%E8%A8%98/</loc>
-    <lastmod>2019-04-07T23:02:41+09:00</lastmod>
+    <lastmod>2019-04-08T23:01:09+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ngkz.github.io/tags/%E7%AD%8B%E3%83%88%E3%83%AC/</loc>
-    <lastmod>2019-04-05T23:59:59+09:00</lastmod>
+    <lastmod>2019-04-08T23:01:09+09:00</lastmod>
     <priority>0</priority>
   </url>
   
