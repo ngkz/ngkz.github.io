@@ -6,10 +6,26 @@
     <description>Recent content in Lfs on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 09 Apr 2019 23:02:39 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 10 Apr 2019 23:19:26 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/tags/lfs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>日記 2019/04/10(水)</title>
+      <link>https://ngkz.github.io/2019/04/diary-20190410/</link>
+      <pubDate>Wed, 10 Apr 2019 23:19:26 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/04/diary-20190410/</guid>
+      <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;grep, libtool, gdbm, gperf, expatとinetutilsをインストールした&lt;/li&gt;
+&lt;li&gt;手順書のヘッダのレベルが間違っていたので修正&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>日記 2019/04/09(火)</title>
