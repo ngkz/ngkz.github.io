@@ -6,10 +6,87 @@
     <description>Recent content in 日記 on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 10 Apr 2019 23:19:26 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 12 Apr 2019 23:59:59 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/categories/%E6%97%A5%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>日記 2019/04/12(金)</title>
+      <link>https://ngkz.github.io/2019/04/diary-20190412/</link>
+      <pubDate>Fri, 12 Apr 2019 23:59:59 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/04/diary-20190412/</guid>
+      <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
+
+&lt;p&gt;Perl 5, XML::Parser-2.44, Intltool-0.51.0, autoconf, automake, xz, kmod, gettextをインストール&lt;/p&gt;
+
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
+
+&lt;p&gt;眠いので明日に延期&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>日記 2019/04/11(木)</title>
+      <link>https://ngkz.github.io/2019/04/diary-20190411/</link>
+      <pubDate>Thu, 11 Apr 2019 23:59:59 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/04/diary-20190411/</guid>
+      <description>&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HMBを昼, トレーニング1時間前, 就寝前に1g摂取&lt;/li&gt;
+&lt;li&gt;前日の睡眠 7:26 (23:57→7:28)&lt;/li&gt;
+&lt;li&gt;公園で自重トレ&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;下半身&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;種目&lt;/th&gt;
+&lt;th&gt;重量&amp;amp;目標回数&lt;/th&gt;
+&lt;th&gt;回数&lt;/th&gt;
+&lt;th&gt;備考&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ピストルスクワット&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;紐でチーティングして左5 右5 左4 右4 左4 右4 左2 右4 左3 左3 右4 左2 右3 左3 ベンチでチーティングして左3 右4&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;ブルガリアンスクワット&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;左20 右13 左20 右16 左11 右15&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;片足スタンディングカーフレイズ&lt;/td&gt;
+&lt;td&gt;3セット 自重 左右21回以上&lt;/td&gt;
+&lt;td&gt;左24? 右23 左17 右26 左28 右20&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;perlのビルド中&lt;/li&gt;
+&lt;li&gt;あまり作業できなかった&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>日記 2019/04/10(水)</title>
