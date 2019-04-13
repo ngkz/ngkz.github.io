@@ -215,6 +215,128 @@
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://ngkz.github.io/2019/04/diary-20190401/">
+          日記 2019/04/01(月)
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-04-01T22:48:30&#43;09:00">
+        
+  
+  
+  
+  
+    2019-04-01
+  
+
+      </time>
+    
+    
+  
+  
+    <span>カテゴリー</span>
+    
+      <a class="category-link" href="https://ngkz.github.io/categories/%e6%97%a5%e8%a8%98">日記</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        <h2 id="筋トレ">筋トレ</h2>
+
+<ul>
+<li>THE プレワークアウトを筋トレ1時間前に1スクープ摂取</li>
+<li>HMBを昼, トレーニング1時間前, 就寝前に1g摂取</li>
+<li>前日の睡眠 7:01 (0:55→8:01)
+
+<ul>
+<li>目覚めが悪かった</li>
+</ul></li>
+</ul>
+
+<p><strong>下半身</strong></p>
+
+<table>
+<thead>
+<tr>
+<th>種目</th>
+<th>重量&amp;目標回数</th>
+<th>回数</th>
+<th>備考</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>ピストルスクワット</td>
+<td>自重</td>
+<td>かかとを1x4材に乗せて ロープでチーティングして 左1 右6 机でチーティング 左9 右17 左10 右15? 左9 右10 左15 右11 左6 右10 左7 右10 左9 右11 第一段階 左7 右10</td>
+<td></td>
+</tr>
+
+<tr>
+<td>ブルガリアンスクワット</td>
+<td>自重</td>
+<td>左24 右16 左20 右20</td>
+<td></td>
+</tr>
+
+<tr>
+<td>スクワット</td>
+<td>自重</td>
+<td>20</td>
+<td></td>
+</tr>
+
+<tr>
+<td>片足スタンディングカーフレイズ</td>
+<td>3セット 自重 左右22回以上</td>
+<td>左23 右24 左18 右19 左16 右11</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="その他">その他</h2>
+
+<ul>
+<li>ドローンのマニュアルを翻訳している</li>
+</ul>
+
+<p></p>
+      
+      <p>
+        <a href="https://ngkz.github.io/2019/04/diary-20190401/" class="postShorten-excerpt_link link">続きを読む</a>
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
         <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190329/">
           日記 2019/03/29(金)
         </a>
@@ -831,84 +953,6 @@
 </article>
 
             
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190322/">
-          日記 2019/03/22(金)
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2019-03-22T17:11:56&#43;09:00">
-        
-  
-  
-  
-  
-    2019-03-22
-  
-
-      </time>
-    
-    
-  
-  
-    <span>カテゴリー</span>
-    
-      <a class="category-link" href="https://ngkz.github.io/categories/%e6%97%a5%e8%a8%98">日記</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <h2 id="linux-from-scratch">Linux from Scratch</h2>
-
-<ul>
-<li>昨日ビルドしたbinutilsのバイナリがなぜか非PIEになっていた。 ログを採って調べてみたら、テスト前にHardeningフラグを取り除いてPIEを無効にしたときにMakefileのタイムスタンプが変わったのが原因で、バイナリがPIE無効で再リンクされてしまていたことが分かった。<br />
-<a href="https://github.com/ngkz/my-lfs-setup/commit/84551e209d17e9220912b057dc1c56d1814e353e">Makefileに細工するときにタイムスタンプが変わらないようにしたら解決した</a>。</li>
-<li>MPFR,MPC,Shadowをインストールした。</li>
-<li>GCCをビルドしている途中
-
-<ul>
-<li>nobodyユーザーに切り替えるとなぜか モードが<code>666</code>の<code>/dev/tty</code>が読めなくなった。<code>/</code>の所有者が<code>1000</code>でモードが<code>700</code>になっていたのが原因だった。</li>
-<li>ほぼ全てのテストが失敗するので原因を調べてみたら、<code>/dev/pts</code>のマウントオプションが間違っていて<code>/dev/pts/ptmx</code>のモードが<code>000</code>になっていたのが原因だった。マウントオプションに<code>newinstance,ptmxmode=0666</code>を加えて解決。</li>
-<li><code>/dev/pts/ptmx</code>を直したら大体のテストは通るようになったが、まだ何十ものテストが失敗している。テストに数時間かかるのでデバッグにかなり手間がかかりそう。</li>
-</ul></li>
-</ul>
-
-<h2 id="筋トレ">筋トレ</h2>
-
-<p></p>
-      
-      <p>
-        <a href="https://ngkz.github.io/2019/03/diary-20190322/" class="postShorten-excerpt_link link">続きを読む</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
             
   <div class="pagination-bar">
     <ul class="pagination">
@@ -993,6 +1037,121 @@
       <div class="no-result text-color-light text-center"></div>
       <div class="results">
         
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://ngkz.github.io/2019/04/diary-20190413/">
+                <h3 class="media-heading">日記 2019/04/13(土)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Apr 4, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><h2 id="linux-from-scratch">Linux from Scratch</h2>
+
+<ul>
+<li>libelf, libffi, openssl, python, ninjaをインストールした。</li>
+</ul>
+
+<h2 id="筋トレ">筋トレ</h2>
+
+<ul>
+<li>桜を見るついで大きな公園に行ったら家族連れで健康遊具が混んでいたので、途中で人の少なそうな公園に移動した
+
+<ul>
+<li>人が少なく、懸垂に使える雲梯と、斜め懸垂に丁度いい鉄棒と、プッシュアップバーの代わりになる配置のベンチがあり、ディップス以外の上半身の筋トレができた。雰囲気がよくて桜も綺麗だった</li>
+<li>穴場を見つけた</li>
+</ul></li>
+<li>HMBを昼, トレーニング1時間前, 就寝前に1g摂取</li>
+<li>公園で自重トレ</li>
+</ul>
+
+<p><strong>上半身</strong></p>
+
+<table>
+<thead>
+<tr>
+<th>種目</th>
+<th>重量&amp;目標回数</th>
+<th>回数</th>
+<th>備考</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>懸垂</td>
+<td>2回以上</td>
+<td>↑2 1 1 1 1 0</td>
+<td></td>
+</tr>
+
+<tr>
+<td>逆手懸垂</td>
+<td>2回以上</td>
+<td>↑2 1 1 1 0</td>
+<td></td>
+</tr>
+
+<tr>
+<td>ワイドグリップチンニング</td>
+<td></td>
+<td>0</td>
+<td></td>
+</tr>
+
+<tr>
+<td>パラレルグリップチンニング</td>
+<td></td>
+<td>0</td>
+<td></td>
+</tr>
+
+<tr>
+<td>斜め懸垂</td>
+<td></td>
+<td>7? 6 5 4 5 5 5</td>
+<td></td>
+</tr>
+
+<tr>
+<td>逆手斜め懸垂</td>
+<td></td>
+<td>3 2 3 4 3 3 4</td>
+<td></td>
+</tr>
+
+<tr>
+<td>インクラインプッシュアップ</td>
+<td></td>
+<td>7 6.5 6 4 3 2 2 沈み込ませずに5</td>
+<td></td>
+</tr>
+
+<tr>
+<td>パイクプッシュアップ</td>
+<td></td>
+<td>4 5 2 4 2</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="その他">その他</h2>
+
+<ul>
+<li>夜に目が覚めたので、朝まで作業したあと二度寝して昼に起きた。</li>
+<li>変なパターンで寝たせいかいつもより早く眠くなったので、早めに寝た</li>
+<li>2.8時間無駄にした</li>
+</ul>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
         
           <div class="media">
             
@@ -1317,30 +1476,6 @@
             <hr>
           </div>
         
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://ngkz.github.io/2019/04/diary-20190404/">
-                <h3 class="media-heading">日記 2019/04/04(木)</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Apr 4, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="linux-from-scratch">Linux from Scratch</h2>
-
-<ul>
-<li>pkg-configをインストール</li>
-<li>あまり作業できなかった</li>
-</ul>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
       </div>
     </div>
     <div class="modal-footer">
@@ -1348,7 +1483,7 @@
          data-message-zero=""
          data-message-one=""
          data-message-other="">
-         104 posts found
+         105 posts found
       </p>
     </div>
   </div>
