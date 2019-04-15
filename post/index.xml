@@ -6,10 +6,81 @@
     <description>Recent content in Posts on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 13 Apr 2019 21:54:41 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 15 Apr 2019 23:50:23 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>日記 2019/04/15(月)</title>
+      <link>https://ngkz.github.io/2019/04/diary-20190415/</link>
+      <pubDate>Mon, 15 Apr 2019 23:50:23 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/04/diary-20190415/</guid>
+      <description>&lt;h2 id=&#34;ubuntu-18-04へアップグレード&#34;&gt;Ubuntu 18.04へアップグレード&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ubuntu 16.04を18.04へアップグレードしている。ファイルが競合したり依存関係が壊れたりしてアップグレードに失敗した。時間が無くなったので明日なおす&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;買い物&#34;&gt;買い物&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;今まで車内で調理するとき、たまにしか使わないので100均のやつでいいやと思って100均の食器と調理器具を使っていたが、味気ないしかさばるのでキャンプ用のクッカーセットを買った。
+
+&lt;ul&gt;
+&lt;li&gt;ホムセンでSOLAキャンピング鍋8点セットを2000円で買った。&lt;/li&gt;
+&lt;li&gt;今見てみたらamazonの方が安かった :(&lt;/li&gt;
+&lt;li&gt;鍋2つ, 鍋フタ兼用のフライパン、鍋フタ兼用の皿1枚, 皿2枚, マグ2つのセット。全部ステンレス製&lt;/li&gt;
+&lt;li&gt;マグ以外は大鍋に重ねて収納できるようになっている&lt;/li&gt;
+&lt;li&gt;安物だから最初から傷だらけでマグの底に洗剤でとれない汚れがこびりついている
+
+&lt;ul&gt;
+&lt;li&gt;後でパーツクリーナーで落ちないか試してみる&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;ステンレス製なのでマグの内側に傷をつければ計量カップ化できそう&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
+
+&lt;p&gt;買い物してたら時間がなくなったので延期&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>日記 2019/04/14(日)</title>
+      <link>https://ngkz.github.io/2019/04/diary-20190414/</link>
+      <pubDate>Sun, 14 Apr 2019 23:59:59 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/04/diary-20190414/</guid>
+      <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Meson, procps-ng, e2fsprogsをインストール&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;ubuntu-18-04へアップグレード&#34;&gt;Ubuntu 18.04へアップグレード&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;4/17のUbuntu 14.04のサポート切れにLFSの構築が間に合わないので、OSをUbuntu 18.04へアップグレードしている
+
+&lt;ul&gt;
+&lt;li&gt;Ubuntu 14.04から18.04へ直接アップグレードができないので、まずUbuntu 16.04へアップグレードした。&lt;/li&gt;
+&lt;li&gt;source.listのミラーが遅いやつのままになっていたのでかなり時間がかかった。&lt;/li&gt;
+&lt;li&gt;アップグレードツールのバグ修正パッチがUbuntu 14.04へバックポートされてなくて途中でクラッシュしたり、toolchainのPPAや自分でビルドしたパッケージを入れたままアップグレードしたせいで依存関係が壊れてシステムがおかしくなったりしたが、なんとか修復して16.04へアップグレードできた。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ubuntu 16.04へアップグレードしたり買い物したりしていたら時間がなくなったので延期&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>日記 2019/04/13(土)</title>
