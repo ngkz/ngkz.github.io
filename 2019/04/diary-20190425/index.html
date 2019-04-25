@@ -8,449 +8,57 @@
 <meta name="generator" content="Hugo 0.40.1 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
-<meta name="description" content="Linux from Scratch
+<meta name="description" content="その他
 
 
-64bit glibcのテストが通るようになった。
-
-
--fno-plt -fexceptionsのどれかがCFLAGSに入っているとテストコードが、-z nowがLDFLAGSに入っているとダイナミックリンカが壊れることが分かった。
-前者は、 一度しか実行せず攻撃を受けることもないテストコードには最適化もHardeningも不要なので、テスト時にすべてのフラグを削除することで対処した。
-後者はライブラリのビルド時に一時的に -z now をLDFLAGSから削除することで対処した。
-
-manページの圧縮処理とデバッグ情報の分離処理を書いている途中
-
-
-筋トレ
-
-
-THE プレワークアウトを筋トレ30分前に1スクープ摂取
-HMBを昼, 夕食前, 就寝前に1g摂取
-前日の睡眠 6:57 (0:26→7:28)
-食事前に筋トレ
-
-
-上半身プル&#43;腹筋
-
-集中できなかった
-
-
-
-
-種目
-重量&amp;目標回数
-回数
-備考
-
-
-
-
-
-ハーフデッドリフト
-3セット 30kg(27.5kgx2&#43;シャフト) 24回以上
-↑25 16 13 12?
-3セット目途中で邪魔が入った。力が出しきれなかった
-
-
-
-ワンハンドローイング
-左右2セット 12.5kg(10kg&#43;シャフト) 15回以上 →ドロップ
-→右14 左16 右12→7.5kg(2.5kgx2&#43;シャフト)で15→5kgで13→2.5kgで15→1.25kgで13 左17→7.5kg(2.5kgx2&#43;シャフト)で14→5kgで21→2.5kgで20→1.25kgで22
-
-
-
-
-ダンベルシュラッグ
-2セット 30kg(27.5kgx2&#43;シャフト) 24回以上 →ドロップ
-↑24 16→15kg&#43;シャフトで25
-
-
-
-
-ダンベルカール
-3セット 10kg(7.5kg&#43;シャフト) 13回以上 →ドロップ
-12.5kgで3回 8.5 8.5
-重量間違えた
-
-
-
-変形バックエクステンション
-2セット 自重&#43;5kg 16回以上 →ドロップ
-
-時間切れ
-
-
-
-ツイストクランチ
-3セット 自重 5秒維持 16回以上 → 1秒維持 23回以上
-
-
-
-
-
-
-その他
-
-
-明日が休日だとつい夜更ししてしまう。健康によくないし、休日でないとできないことができなくなるし、筋肉や神経系に悪影響が出るので、23時になったらPCを強制サスペンドするようにcronを設定した。
-電気毛布とカードスリーブと名刺入れが届いた。
-
-
-磁気カードと非接触ICカードを防磁防RFカードスリーブに入れた。
-スリーブを付けるとカードが財布のカード入れに入らない。
-
-
-カードスリーブをつけるとサイズが大きくなるのを忘れていた。
-スリーブよりシールド付きの財布を買った方がよかったかもしれない。
-
-スリーブに入れるとスマホで読みとれなくなるので、防RF効果はちゃんとあるようだ。
-
-
-防磁は試す勇気がない
-
-名刺入れは金属部分に大きく深い切り傷があったので、販売者に交換してもらうことにした。
-その後、業者が交換品を送り、不良品はこっちで破棄することになった。 2日後に交換品が届いた。
-電気毛布はちゃんと動いた。明日車の中でどれくらいの効果があるかテストしてみる予定
-
+生活リズムが崩壊している。また寝不足になる→寝る準備をするのが億劫になる→さらに寝不足になるの悪循環に入ってしまった
+疲れた
+6.8時間無駄にした
 
 
 ">
 
 
-<meta property="og:description" content="Linux from Scratch
+<meta property="og:description" content="その他
 
 
-64bit glibcのテストが通るようになった。
-
-
--fno-plt -fexceptionsのどれかがCFLAGSに入っているとテストコードが、-z nowがLDFLAGSに入っているとダイナミックリンカが壊れることが分かった。
-前者は、 一度しか実行せず攻撃を受けることもないテストコードには最適化もHardeningも不要なので、テスト時にすべてのフラグを削除することで対処した。
-後者はライブラリのビルド時に一時的に -z now をLDFLAGSから削除することで対処した。
-
-manページの圧縮処理とデバッグ情報の分離処理を書いている途中
-
-
-筋トレ
-
-
-THE プレワークアウトを筋トレ30分前に1スクープ摂取
-HMBを昼, 夕食前, 就寝前に1g摂取
-前日の睡眠 6:57 (0:26→7:28)
-食事前に筋トレ
-
-
-上半身プル&#43;腹筋
-
-集中できなかった
-
-
-
-
-種目
-重量&amp;目標回数
-回数
-備考
-
-
-
-
-
-ハーフデッドリフト
-3セット 30kg(27.5kgx2&#43;シャフト) 24回以上
-↑25 16 13 12?
-3セット目途中で邪魔が入った。力が出しきれなかった
-
-
-
-ワンハンドローイング
-左右2セット 12.5kg(10kg&#43;シャフト) 15回以上 →ドロップ
-→右14 左16 右12→7.5kg(2.5kgx2&#43;シャフト)で15→5kgで13→2.5kgで15→1.25kgで13 左17→7.5kg(2.5kgx2&#43;シャフト)で14→5kgで21→2.5kgで20→1.25kgで22
-
-
-
-
-ダンベルシュラッグ
-2セット 30kg(27.5kgx2&#43;シャフト) 24回以上 →ドロップ
-↑24 16→15kg&#43;シャフトで25
-
-
-
-
-ダンベルカール
-3セット 10kg(7.5kg&#43;シャフト) 13回以上 →ドロップ
-12.5kgで3回 8.5 8.5
-重量間違えた
-
-
-
-変形バックエクステンション
-2セット 自重&#43;5kg 16回以上 →ドロップ
-
-時間切れ
-
-
-
-ツイストクランチ
-3セット 自重 5秒維持 16回以上 → 1秒維持 23回以上
-
-
-
-
-
-
-その他
-
-
-明日が休日だとつい夜更ししてしまう。健康によくないし、休日でないとできないことができなくなるし、筋肉や神経系に悪影響が出るので、23時になったらPCを強制サスペンドするようにcronを設定した。
-電気毛布とカードスリーブと名刺入れが届いた。
-
-
-磁気カードと非接触ICカードを防磁防RFカードスリーブに入れた。
-スリーブを付けるとカードが財布のカード入れに入らない。
-
-
-カードスリーブをつけるとサイズが大きくなるのを忘れていた。
-スリーブよりシールド付きの財布を買った方がよかったかもしれない。
-
-スリーブに入れるとスマホで読みとれなくなるので、防RF効果はちゃんとあるようだ。
-
-
-防磁は試す勇気がない
-
-名刺入れは金属部分に大きく深い切り傷があったので、販売者に交換してもらうことにした。
-その後、業者が交換品を送り、不良品はこっちで破棄することになった。 2日後に交換品が届いた。
-電気毛布はちゃんと動いた。明日車の中でどれくらいの効果があるかテストしてみる予定
-
+生活リズムが崩壊している。また寝不足になる→寝る準備をするのが億劫になる→さらに寝不足になるの悪循環に入ってしまった
+疲れた
+6.8時間無駄にした
 
 
 ">
 <meta property="og:type" content="article">
-<meta property="og:title" content="日記 (2019/02/15)">
-<meta name="twitter:title" content="日記 (2019/02/15)">
-<meta property="og:url" content="https://ngkz.github.io/2019/02/diary-20190215/">
-<meta property="twitter:url" content="https://ngkz.github.io/2019/02/diary-20190215/">
+<meta property="og:title" content="日記 2019/04/25(木)">
+<meta name="twitter:title" content="日記 2019/04/25(木)">
+<meta property="og:url" content="https://ngkz.github.io/2019/04/diary-20190425/">
+<meta property="twitter:url" content="https://ngkz.github.io/2019/04/diary-20190425/">
 <meta property="og:site_name" content="ngkz.log">
-<meta property="og:description" content="Linux from Scratch
+<meta property="og:description" content="その他
 
 
-64bit glibcのテストが通るようになった。
-
-
--fno-plt -fexceptionsのどれかがCFLAGSに入っているとテストコードが、-z nowがLDFLAGSに入っているとダイナミックリンカが壊れることが分かった。
-前者は、 一度しか実行せず攻撃を受けることもないテストコードには最適化もHardeningも不要なので、テスト時にすべてのフラグを削除することで対処した。
-後者はライブラリのビルド時に一時的に -z now をLDFLAGSから削除することで対処した。
-
-manページの圧縮処理とデバッグ情報の分離処理を書いている途中
-
-
-筋トレ
-
-
-THE プレワークアウトを筋トレ30分前に1スクープ摂取
-HMBを昼, 夕食前, 就寝前に1g摂取
-前日の睡眠 6:57 (0:26→7:28)
-食事前に筋トレ
-
-
-上半身プル&#43;腹筋
-
-集中できなかった
-
-
-
-
-種目
-重量&amp;目標回数
-回数
-備考
-
-
-
-
-
-ハーフデッドリフト
-3セット 30kg(27.5kgx2&#43;シャフト) 24回以上
-↑25 16 13 12?
-3セット目途中で邪魔が入った。力が出しきれなかった
-
-
-
-ワンハンドローイング
-左右2セット 12.5kg(10kg&#43;シャフト) 15回以上 →ドロップ
-→右14 左16 右12→7.5kg(2.5kgx2&#43;シャフト)で15→5kgで13→2.5kgで15→1.25kgで13 左17→7.5kg(2.5kgx2&#43;シャフト)で14→5kgで21→2.5kgで20→1.25kgで22
-
-
-
-
-ダンベルシュラッグ
-2セット 30kg(27.5kgx2&#43;シャフト) 24回以上 →ドロップ
-↑24 16→15kg&#43;シャフトで25
-
-
-
-
-ダンベルカール
-3セット 10kg(7.5kg&#43;シャフト) 13回以上 →ドロップ
-12.5kgで3回 8.5 8.5
-重量間違えた
-
-
-
-変形バックエクステンション
-2セット 自重&#43;5kg 16回以上 →ドロップ
-
-時間切れ
-
-
-
-ツイストクランチ
-3セット 自重 5秒維持 16回以上 → 1秒維持 23回以上
-
-
-
-
-
-
-その他
-
-
-明日が休日だとつい夜更ししてしまう。健康によくないし、休日でないとできないことができなくなるし、筋肉や神経系に悪影響が出るので、23時になったらPCを強制サスペンドするようにcronを設定した。
-電気毛布とカードスリーブと名刺入れが届いた。
-
-
-磁気カードと非接触ICカードを防磁防RFカードスリーブに入れた。
-スリーブを付けるとカードが財布のカード入れに入らない。
-
-
-カードスリーブをつけるとサイズが大きくなるのを忘れていた。
-スリーブよりシールド付きの財布を買った方がよかったかもしれない。
-
-スリーブに入れるとスマホで読みとれなくなるので、防RF効果はちゃんとあるようだ。
-
-
-防磁は試す勇気がない
-
-名刺入れは金属部分に大きく深い切り傷があったので、販売者に交換してもらうことにした。
-その後、業者が交換品を送り、不良品はこっちで破棄することになった。 2日後に交換品が届いた。
-電気毛布はちゃんと動いた。明日車の中でどれくらいの効果があるかテストしてみる予定
-
+生活リズムが崩壊している。また寝不足になる→寝る準備をするのが億劫になる→さらに寝不足になるの悪循環に入ってしまった
+疲れた
+6.8時間無駄にした
 
 
 ">
-<meta name="twitter:description" content="Linux from Scratch
+<meta name="twitter:description" content="その他
 
 
-64bit glibcのテストが通るようになった。
-
-
--fno-plt -fexceptionsのどれかがCFLAGSに入っているとテストコードが、-z nowがLDFLAGSに入っているとダイナミックリンカが壊れることが分かった。
-前者は、 一度しか実行せず攻撃を受けることもないテストコードには最適化もHardeningも不要なので、テスト時にすべてのフラグを削除することで対処した。
-後者はライブラリのビルド時に一時的に -z now をLDFLAGSから削除することで対処した。
-
-manページの圧縮処理とデバッグ情報の分離処理を書いている途中
-
-
-筋トレ
-
-
-THE プレワークアウトを筋トレ30分前に1スクープ摂取
-HMBを昼, 夕食前, 就寝前に1g摂取
-前日の睡眠 6:57 (0:26→7:28)
-食事前に筋トレ
-
-
-上半身プル&#43;腹筋
-
-集中できなかった
-
-
-
-
-種目
-重量&amp;目標回数
-回数
-備考
-
-
-
-
-
-ハーフデッドリフト
-3セット 30kg(27.5kgx2&#43;シャフト) 24回以上
-↑25 16 13 12?
-3セット目途中で邪魔が入った。力が出しきれなかった
-
-
-
-ワンハンドローイング
-左右2セット 12.5kg(10kg&#43;シャフト) 15回以上 →ドロップ
-→右14 左16 右12→7.5kg(2.5kgx2&#43;シャフト)で15→5kgで13→2.5kgで15→1.25kgで13 左17→7.5kg(2.5kgx2&#43;シャフト)で14→5kgで21→2.5kgで20→1.25kgで22
-
-
-
-
-ダンベルシュラッグ
-2セット 30kg(27.5kgx2&#43;シャフト) 24回以上 →ドロップ
-↑24 16→15kg&#43;シャフトで25
-
-
-
-
-ダンベルカール
-3セット 10kg(7.5kg&#43;シャフト) 13回以上 →ドロップ
-12.5kgで3回 8.5 8.5
-重量間違えた
-
-
-
-変形バックエクステンション
-2セット 自重&#43;5kg 16回以上 →ドロップ
-
-時間切れ
-
-
-
-ツイストクランチ
-3セット 自重 5秒維持 16回以上 → 1秒維持 23回以上
-
-
-
-
-
-
-その他
-
-
-明日が休日だとつい夜更ししてしまう。健康によくないし、休日でないとできないことができなくなるし、筋肉や神経系に悪影響が出るので、23時になったらPCを強制サスペンドするようにcronを設定した。
-電気毛布とカードスリーブと名刺入れが届いた。
-
-
-磁気カードと非接触ICカードを防磁防RFカードスリーブに入れた。
-スリーブを付けるとカードが財布のカード入れに入らない。
-
-
-カードスリーブをつけるとサイズが大きくなるのを忘れていた。
-スリーブよりシールド付きの財布を買った方がよかったかもしれない。
-
-スリーブに入れるとスマホで読みとれなくなるので、防RF効果はちゃんとあるようだ。
-
-
-防磁は試す勇気がない
-
-名刺入れは金属部分に大きく深い切り傷があったので、販売者に交換してもらうことにした。
-その後、業者が交換品を送り、不良品はこっちで破棄することになった。 2日後に交換品が届いた。
-電気毛布はちゃんと動いた。明日車の中でどれくらいの効果があるかテストしてみる予定
-
+生活リズムが崩壊している。また寝不足になる→寝る準備をするのが億劫になる→さらに寝不足になるの悪循環に入ってしまった
+疲れた
+6.8時間無駄にした
 
 
 ">
 <meta property="og:locale" content="ja">
 
   
-    <meta property="article:published_time" content="2019-02-15T23:59:59">
+    <meta property="article:published_time" content="2019-04-25T22:38:53">
   
   
-    <meta property="article:modified_time" content="2019-02-15T23:59:59">
+    <meta property="article:modified_time" content="2019-04-25T22:38:53">
   
   
   
@@ -458,12 +66,6 @@ HMBを昼, 夕食前, 就寝前に1g摂取
       <meta property="article:section" content="日記">
     
   
-  
-    
-      <meta property="article:tag" content="LFS">
-    
-      <meta property="article:tag" content="筋トレ">
-    
   
 
 
@@ -483,14 +85,14 @@ HMBを昼, 夕食前, 就寝前に1g摂取
   <meta property="twitter:image" content="https://ngkz.github.io/mypicture.jpg">
 
 
-    <title>日記 (2019/02/15)</title>
+    <title>日記 2019/04/25(木)</title>
 
     <link rel="icon" href="https://ngkz.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://ngkz.github.io/2019/02/diary-20190215/">
+    <link rel="canonical" href="https://ngkz.github.io/2019/04/diary-20190425/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -640,19 +242,19 @@ HMBを昼, 夕食前, 就寝前に1g摂取
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      日記 (2019/02/15)
+      日記 2019/04/25(木)
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2019-02-15T23:59:59&#43;09:00">
+      <time itemprop="datePublished" datetime="2019-04-25T22:38:53&#43;09:00">
         
   
   
   
   
-    2019-02-15
+    2019-04-25
   
 
       </time>
@@ -672,110 +274,12 @@ HMBを昼, 夕食前, 就寝前に1g摂取
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <h2 id="linux-from-scratch">Linux from Scratch</h2>
+              <h2 id="その他">その他</h2>
 
 <ul>
-<li>64bit glibcのテストが通るようになった。
-
-<ul>
-<li><code>-fno-plt</code> <code>-fexceptions</code>のどれかがCFLAGSに入っているとテストコードが、<code>-z now</code>がLDFLAGSに入っているとダイナミックリンカが壊れることが分かった。</li>
-<li>前者は、 一度しか実行せず攻撃を受けることもないテストコードには最適化もHardeningも不要なので、テスト時にすべてのフラグを削除することで対処した。</li>
-<li>後者はライブラリのビルド時に一時的に <code>-z now</code> をLDFLAGSから削除することで対処した。</li>
-</ul></li>
-<li>manページの圧縮処理とデバッグ情報の分離処理を書いている途中</li>
-</ul>
-
-<h2 id="筋トレ">筋トレ</h2>
-
-<ul>
-<li>THE プレワークアウトを筋トレ30分前に1スクープ摂取</li>
-<li>HMBを昼, 夕食前, 就寝前に1g摂取</li>
-<li>前日の睡眠 6:57 (0:26→7:28)</li>
-<li>食事前に筋トレ</li>
-</ul>
-
-<p><strong>上半身プル+腹筋</strong></p>
-
-<p>集中できなかった</p>
-
-<table>
-<thead>
-<tr>
-<th>種目</th>
-<th>重量&amp;目標回数</th>
-<th>回数</th>
-<th>備考</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>ハーフデッドリフト</td>
-<td>3セット 30kg(27.5kgx2+シャフト) 24回以上</td>
-<td>↑25 16 13 12?</td>
-<td>3セット目途中で邪魔が入った。力が出しきれなかった</td>
-</tr>
-
-<tr>
-<td>ワンハンドローイング</td>
-<td>左右2セット 12.5kg(10kg+シャフト) 15回以上 →ドロップ</td>
-<td>→右14 左16 右12→7.5kg(2.5kgx2+シャフト)で15→5kgで13→2.5kgで15→1.25kgで13 左17→7.5kg(2.5kgx2+シャフト)で14→5kgで21→2.5kgで20→1.25kgで22</td>
-<td></td>
-</tr>
-
-<tr>
-<td>ダンベルシュラッグ</td>
-<td>2セット 30kg(27.5kgx2+シャフト) 24回以上 →ドロップ</td>
-<td>↑24 16→15kg+シャフトで25</td>
-<td></td>
-</tr>
-
-<tr>
-<td>ダンベルカール</td>
-<td>3セット 10kg(7.5kg+シャフト) 13回以上 <del>→ドロップ</del></td>
-<td>12.5kgで3回 8.5 8.5</td>
-<td>重量間違えた</td>
-</tr>
-
-<tr>
-<td>変形バックエクステンション</td>
-<td>2セット 自重+5kg 16回以上 →ドロップ</td>
-<td></td>
-<td>時間切れ</td>
-</tr>
-
-<tr>
-<td>ツイストクランチ</td>
-<td>3セット 自重 5秒維持 16回以上 → 1秒維持 23回以上</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-<h2 id="その他">その他</h2>
-
-<ul>
-<li>明日が休日だとつい夜更ししてしまう。健康によくないし、休日でないとできないことができなくなるし、筋肉や神経系に悪影響が出るので、23時になったらPCを強制サスペンドするようにcronを設定した。</li>
-<li><a href="https://www.amazon.co.jp/gp/product/B01LW43RYZ">電気毛布</a>と<a href="https://www.amazon.co.jp/gp/product/B073TDGH3M">カードスリーブ</a>と<a href="https://www.amazon.co.jp/gp/product/B07D26LM4K">名刺入れ</a>が届いた。
-
-<ul>
-<li>磁気カードと非接触ICカードを防磁防RFカードスリーブに入れた。</li>
-<li>スリーブを付けるとカードが財布のカード入れに入らない。
-
-<ul>
-<li>カードスリーブをつけるとサイズが大きくなるのを忘れていた。</li>
-<li>スリーブよりシールド付きの財布を買った方がよかったかもしれない。</li>
-</ul></li>
-<li>スリーブに入れるとスマホで読みとれなくなるので、防RF効果はちゃんとあるようだ。
-
-<ul>
-<li>防磁は試す勇気がない</li>
-</ul></li>
-<li>名刺入れは金属部分に大きく深い切り傷があったので、販売者に交換してもらうことにした。</li>
-<li>その後、業者が交換品を送り、不良品はこっちで破棄することになった。 <a href="https://ngkz.github.io/2019/02/diary-20190217/">2日後に交換品が届いた</a>。</li>
-<li>電気毛布はちゃんと動いた。明日車の中でどれくらいの効果があるかテストしてみる予定</li>
-</ul></li>
+<li>生活リズムが崩壊している。また寝不足になる→寝る準備をするのが億劫になる→さらに寝不足になるの悪循環に入ってしまった</li>
+<li>疲れた</li>
+<li>6.8時間無駄にした</li>
 </ul>
 
 <p></p>
@@ -785,18 +289,6 @@ HMBを昼, 夕食前, 就寝前に1g摂取
           <div id="post-footer" class="post-footer main-content-wrap">
             
               
-                
-                
-                  <div class="post-footer-tags">
-                    <span class="text-color-light text-small">タグ</span><br/>
-                    
-  <a class="tag tag--primary tag--small" href="https://ngkz.github.io/tags/lfs/">LFS</a>
-
-  <a class="tag tag--primary tag--small" href="https://ngkz.github.io/tags/%E7%AD%8B%E3%83%88%E3%83%AC/">筋トレ</a>
-
-                  </div>
-                
-              
             
             <div class="post-actions-wrap">
   
@@ -805,7 +297,7 @@ HMBを昼, 夕食前, 就寝前に1g摂取
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/02/diary-20190216/" data-tooltip="日記 2019/02/16(土)">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">次</span>
@@ -813,7 +305,7 @@ HMBを昼, 夕食前, 就寝前に1g摂取
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/02/diary-20190214/" data-tooltip="日記 (2019/02/14)">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/04/diary-20190416/" data-tooltip="日記 2019/04/16(火)">
               
                   <span class="hide-xs hide-sm text-small icon-mr">前</span>
                   <i class="fa fa-angle-right"></i>
@@ -831,19 +323,19 @@ HMBを昼, 夕食前, 就寝前に1g摂取
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2019/02/diary-20190215/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2019/04/diary-20190425/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2019/02/diary-20190215/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2019/04/diary-20190425/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2019/02/diary-20190215/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2019/04/diary-20190425/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -891,7 +383,7 @@ HMBを昼, 夕食前, 就寝前に1g摂取
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/02/diary-20190216/" data-tooltip="日記 2019/02/16(土)">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">次</span>
@@ -899,7 +391,7 @@ HMBを昼, 夕食前, 就寝前に1g摂取
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/02/diary-20190214/" data-tooltip="日記 (2019/02/14)">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/04/diary-20190416/" data-tooltip="日記 2019/04/16(火)">
               
                   <span class="hide-xs hide-sm text-small icon-mr">前</span>
                   <i class="fa fa-angle-right"></i>
@@ -917,19 +409,19 @@ HMBを昼, 夕食前, 就寝前に1g摂取
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2019/02/diary-20190215/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2019/04/diary-20190425/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2019/02/diary-20190215/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2019/04/diary-20190425/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2019/02/diary-20190215/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2019/04/diary-20190425/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -959,19 +451,19 @@ HMBを昼, 夕食前, 就寝前に1g摂取
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fngkz.github.io%2F2019%2F02%2Fdiary-20190215%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fngkz.github.io%2F2019%2F04%2Fdiary-20190425%2F">
           <i class="fa fa-facebook-official"></i><span>Facebookで共有</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fngkz.github.io%2F2019%2F02%2Fdiary-20190215%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fngkz.github.io%2F2019%2F04%2Fdiary-20190425%2F">
           <i class="fa fa-twitter"></i><span>Twitterで共有</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fngkz.github.io%2F2019%2F02%2Fdiary-20190215%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fngkz.github.io%2F2019%2F04%2Fdiary-20190425%2F">
           <i class="fa fa-google-plus"></i><span>Google&#43;で共有</span>
         </a>
       </li>
@@ -1481,9 +973,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/ngkz.github.io\/2019\/02\/diary-20190215\/';
+          this.page.url = 'https:\/\/ngkz.github.io\/2019\/04\/diary-20190425\/';
           
-            this.page.identifier = '\/2019\/02\/diary-20190215\/'
+            this.page.identifier = '\/2019\/04\/diary-20190425\/'
           
         };
         (function() {
