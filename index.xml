@@ -6,10 +6,42 @@
     <description>Recent content on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 02 Jun 2019 13:14:41 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 02 Jun 2019 23:03:00 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>オイル交換メモ</title>
+      <link>https://ngkz.github.io/2019/06/oil-change/</link>
+      <pubDate>Sun, 02 Jun 2019 23:03:00 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/06/oil-change/</guid>
+      <description>&lt;h2 id=&#34;必要な物&#34;&gt;必要な物&lt;/h2&gt;
+
+&lt;p&gt;たまに忘れるので&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;オイル (消耗品)&lt;/li&gt;
+&lt;li&gt;オイル処理箱 (消耗品)&lt;/li&gt;
+&lt;li&gt;オイルフィルター (フィルター交換の場合, 消耗品)&lt;/li&gt;
+&lt;li&gt;ウエス (消耗品)&lt;/li&gt;
+&lt;li&gt;パーツクリーナー (消耗品)&lt;/li&gt;
+&lt;li&gt;ドレンパッキン (消耗品)&lt;/li&gt;
+&lt;li&gt;手袋 (消耗品)&lt;/li&gt;
+&lt;li&gt;ゴミ袋 (消耗品)&lt;/li&gt;
+&lt;li&gt;スロープ&lt;/li&gt;
+&lt;li&gt;新聞紙&lt;/li&gt;
+&lt;li&gt;メガネレンチ&lt;/li&gt;
+&lt;li&gt;オイルジョッキ&lt;/li&gt;
+&lt;li&gt;オイルフィルターレンチ (フィルター交換の場合)&lt;/li&gt;
+&lt;li&gt;エクステンションバー (フィルター交換の場合)&lt;/li&gt;
+&lt;li&gt;ラチェットハンドル (フィルター交換の場合)&lt;/li&gt;
+&lt;li&gt;ウマ (タイヤローテーションもする場合)&lt;/li&gt;
+&lt;li&gt;ジャッキ (タイヤローテーションもする場合)&lt;/li&gt;
+&lt;li&gt;トルクレンチ (タイヤローテーションもする場合)&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     
     <item>
       <title>内蔵HDDに入ってるWindows 10をUSB HDDから起動できるようにする方法</title>
@@ -449,38 +481,6 @@ Windows8感
 &lt;li&gt;バックアップデータをチェックした&lt;/li&gt;
 &lt;li&gt;ウォッシャー液が完全に無くなったので倉庫にあった昔のガラコウォッシャー液を入れてみた&lt;/li&gt;
 &lt;li&gt;4.3時間無駄にした&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>オイル交換メモ</title>
-      <link>https://ngkz.github.io/2019/04/oil-change/</link>
-      <pubDate>Sat, 06 Apr 2019 20:27:00 +0900</pubDate>
-      
-      <guid>https://ngkz.github.io/2019/04/oil-change/</guid>
-      <description>&lt;h2 id=&#34;必要な物&#34;&gt;必要な物&lt;/h2&gt;
-
-&lt;p&gt;たまに忘れるので&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;オイル (消耗品)&lt;/li&gt;
-&lt;li&gt;オイル処理箱 (消耗品)&lt;/li&gt;
-&lt;li&gt;オイルフィルター (フィルター交換の場合, 消耗品)&lt;/li&gt;
-&lt;li&gt;ウエス (消耗品)&lt;/li&gt;
-&lt;li&gt;パーツクリーナー (消耗品)&lt;/li&gt;
-&lt;li&gt;ドレンパッキン (消耗品)&lt;/li&gt;
-&lt;li&gt;手袋 (消耗品)&lt;/li&gt;
-&lt;li&gt;ゴミ袋 (消耗品)&lt;/li&gt;
-&lt;li&gt;スロープ&lt;/li&gt;
-&lt;li&gt;新聞紙&lt;/li&gt;
-&lt;li&gt;メガネレンチ&lt;/li&gt;
-&lt;li&gt;オイルジョッキ&lt;/li&gt;
-&lt;li&gt;オイルフィルターレンチ (フィルター交換の場合)&lt;/li&gt;
-&lt;li&gt;エクステンションバー (フィルター交換の場合)&lt;/li&gt;
-&lt;li&gt;ラチェットハンドル (フィルター交換の場合)&lt;/li&gt;
-&lt;li&gt;ウマ (タイヤローテーションもする場合)&lt;/li&gt;
-&lt;li&gt;ジャッキ (タイヤローテーションもする場合)&lt;/li&gt;
-&lt;li&gt;トルクレンチ (タイヤローテーションもする場合)&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
