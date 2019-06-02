@@ -6,10 +6,45 @@
     <description>Recent content in Howto on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 13 Jan 2019 20:20:09 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 02 Jun 2019 13:14:41 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/categories/howto/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>内蔵HDDにインストールしたWindows 10をUSB HDDから起動できるようにする方法</title>
+      <link>https://ngkz.github.io/2019/06/howto-boot-preinstalled-windows-from-usb-hdd/</link>
+      <pubDate>Sun, 02 Jun 2019 13:14:41 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/06/howto-boot-preinstalled-windows-from-usb-hdd/</guid>
+      <description>&lt;p&gt;Windowsが入った内蔵HDDをUSB経由で接続し、そこから起動しようとするとSTOPエラーで失敗するが、レジストリの&lt;code&gt;HKEY_LOCAL_MACHINE\SYSTEM&lt;/code&gt;の&lt;code&gt;HardwareConfig&lt;/code&gt;キー中の&lt;code&gt;BootDriverFlags&lt;/code&gt;を&lt;code&gt;0x14&lt;/code&gt;に設定すると、USBストレージから起動できるようになる。&lt;/p&gt;
+
+&lt;p&gt;ただし、このHDDを使ってWindowsを起動すると、接続したマシンのUEFIのブートエントリにWindowsが登録されてしまう。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu 19.04 タッチパッドの誤タップ対策</title>
+      <link>https://ngkz.github.io/2019/05/ubuntu-1904-reenable-touchpad-palm-detection/</link>
+      <pubDate>Fri, 03 May 2019 13:57:33 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/05/ubuntu-1904-reenable-touchpad-palm-detection/</guid>
+      <description>&lt;p&gt;Ubuntu 19.04へアップグレードしたら、手のひら検知と入力中にタッチパッドを無効にする機能がオフになり、入力中にカーソルが勝手にあちこちに飛ぶようになってしまった。&lt;/p&gt;
+
+&lt;p&gt;以下の手順で設定して、Xサーバーを再起動(再ログイン)すると再有効化できる。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;sudo -e /etc/X11/xorg.conf.d/90-libinput.conf
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;Section &amp;quot;InputClass&amp;quot;
+    Identifier &amp;quot;libinput touchpad catchall&amp;quot;
+    MatchIsTouchpad &amp;quot;on&amp;quot;
+    MatchDevicePath &amp;quot;/dev/input/event*&amp;quot;
+    Driver &amp;quot;libinput&amp;quot;
+    Option &amp;quot;Tapping&amp;quot; &amp;quot;True&amp;quot;
+    Option &amp;quot;DisableWhileTyping&amp;quot; &amp;quot;True&amp;quot;
+EndSection
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
     
     <item>
       <title>AFWall&#43; を有効にするとBluetoothテザリングで通信できなくなるのをなおす</title>
@@ -23,9 +58,7 @@
 
 &lt;p&gt;ログと検索エンジンで調べたところ、AFWall+がBluetoothテザリングに対応していないため、クライアントにDHCPとDNS Proxyを提供しているdnsmasqからのDNS通信がブロックされてしまっていることが分かった。&lt;/p&gt;
 
-&lt;h2 id=&#34;解決策1-dnsを手動設定する&#34;&gt;解決策1: DNSを手動設定する&lt;/h2&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;h2 id=&#34;解決策1-dnsを手動設定する&#34;&gt;解決策1: DNSを手動設定する&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -47,9 +80,7 @@ Jan  5 23:48:32 haramaki kernel: [97894.621701]         [00] BAD  4c 1f 53 12 00
 Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30 43 30 31 34 34 30 31 31 0a 00 33
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;どうやらEDIDが壊れているようだ。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;どうやらEDIDが壊れているようだ。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -69,9 +100,7 @@ Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30
 &lt;li&gt;じゃあプラグインが充実している Emacs だ。素の Emacs は設定が大変らしいから、&lt;a href=&#34;http://spacemacs.org/&#34;&gt;spacemacs&lt;/a&gt;も試してみよう。&lt;/li&gt;
 &lt;li&gt;起動が遅い&lt;/li&gt;
 &lt;li&gt;Spacemacs より軽い DOOM Emacs というのがあるらしい。これにしよう&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/ol&gt;</description>
     </item>
     
     <item>
@@ -80,9 +109,7 @@ Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30
       <pubDate>Wed, 01 Aug 2018 17:37:33 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2018/08/cargo-run-test-with-sudo/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/rust-lang/cargo/issues/1924&#34;&gt;https://github.com/rust-lang/cargo/issues/1924&lt;/a&gt; によると、&lt;code&gt;cargo test --no-run --message-format=json | jq -r &amp;quot;select(.profile.test == true) | .filenames[]&amp;quot;&lt;/code&gt; でテストバイナリの一覧が取得できる。これをsudoで実行するスクリプトを作ればOK&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/rust-lang/cargo/issues/1924&#34;&gt;https://github.com/rust-lang/cargo/issues/1924&lt;/a&gt; によると、&lt;code&gt;cargo test --no-run --message-format=json | jq -r &amp;quot;select(.profile.test == true) | .filenames[]&amp;quot;&lt;/code&gt; でテストバイナリの一覧が取得できる。これをsudoで実行するスクリプトを作ればOK&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -108,9 +135,7 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
 
 &lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/QVa3yfxP0Zs&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
 
-&lt;h2 id=&#34;バックアップを展開&#34;&gt;バックアップを展開&lt;/h2&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;h2 id=&#34;バックアップを展開&#34;&gt;バックアップを展開&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -122,9 +147,7 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
       <description>&lt;p&gt;Ubuntu 12.10-14.04で確認済み&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;echo &amp;quot;keepassx=1&amp;quot; &amp;gt;&amp;gt; /etc/xdg/sni-qt.conf
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
   </channel>

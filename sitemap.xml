@@ -3,8 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://ngkz.github.io/2019/06/howto-boot-preinstalled-windows-from-usb-hdd/</loc>
+    <lastmod>2019-06-02T13:14:41+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ngkz.github.io/2019/05/ubuntu-1904-reenable-touchpad-palm-detection/</loc>
+    <lastmod>2019-05-03T13:57:33+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ngkz.github.io/2019/04/diary-20190427/</loc>
+    <lastmod>2019-04-27T23:59:59+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ngkz.github.io/2019/04/diary-20190425/</loc>
     <lastmod>2019-04-25T22:38:53+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ngkz.github.io/2019/04/diary-20190417/</loc>
+    <lastmod>2019-04-17T23:59:59+09:00</lastmod>
   </url>
   
   <url>
@@ -548,6 +568,10 @@
   </url>
   
   <url>
+    <loc>https://ngkz.github.io/1/01/rotten-contact/</loc>
+  </url>
+  
+  <url>
     <loc>https://ngkz.github.io/archives/</loc>
     <priority>0</priority>
   </url>
@@ -589,13 +613,13 @@
   
   <url>
     <loc>https://ngkz.github.io/categories/howto/</loc>
-    <lastmod>2019-01-13T20:20:09+09:00</lastmod>
+    <lastmod>2019-06-02T13:14:41+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ngkz.github.io/tags/lfs/</loc>
-    <lastmod>2019-04-16T23:59:59+09:00</lastmod>
+    <lastmod>2019-04-17T23:59:59+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -606,7 +630,7 @@
   
   <url>
     <loc>https://ngkz.github.io/post/</loc>
-    <lastmod>2019-04-25T22:38:53+09:00</lastmod>
+    <lastmod>2019-06-02T13:14:41+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -639,6 +663,12 @@
   </url>
   
   <url>
+    <loc>https://ngkz.github.io/tags/windows/</loc>
+    <lastmod>2019-06-02T13:14:41+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://ngkz.github.io/categories/writeup/</loc>
     <lastmod>2014-07-23T19:57:23+09:00</lastmod>
     <priority>0</priority>
@@ -646,7 +676,7 @@
   
   <url>
     <loc>https://ngkz.github.io/</loc>
-    <lastmod>2019-04-25T22:38:53+09:00</lastmod>
+    <lastmod>2019-06-02T13:14:41+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -682,7 +712,7 @@
   
   <url>
     <loc>https://ngkz.github.io/categories/%E6%97%A5%E8%A8%98/</loc>
-    <lastmod>2019-04-25T22:38:53+09:00</lastmod>
+    <lastmod>2019-04-27T23:59:59+09:00</lastmod>
     <priority>0</priority>
   </url>
   

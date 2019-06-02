@@ -17,9 +17,7 @@
       <pubDate>Wed, 01 Aug 2018 17:37:33 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2018/08/cargo-run-test-with-sudo/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/rust-lang/cargo/issues/1924&#34;&gt;https://github.com/rust-lang/cargo/issues/1924&lt;/a&gt; によると、&lt;code&gt;cargo test --no-run --message-format=json | jq -r &amp;quot;select(.profile.test == true) | .filenames[]&amp;quot;&lt;/code&gt; でテストバイナリの一覧が取得できる。これをsudoで実行するスクリプトを作ればOK&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/rust-lang/cargo/issues/1924&#34;&gt;https://github.com/rust-lang/cargo/issues/1924&lt;/a&gt; によると、&lt;code&gt;cargo test --no-run --message-format=json | jq -r &amp;quot;select(.profile.test == true) | .filenames[]&amp;quot;&lt;/code&gt; でテストバイナリの一覧が取得できる。これをsudoで実行するスクリプトを作ればOK&lt;/p&gt;</description>
     </item>
     
     <item>

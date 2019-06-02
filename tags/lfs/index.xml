@@ -6,10 +6,48 @@
     <description>Recent content in Lfs on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 16 Apr 2019 23:59:59 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 17 Apr 2019 23:59:59 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/tags/lfs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>日記 2019/04/17(水)</title>
+      <link>https://ngkz.github.io/2019/04/diary-20190417/</link>
+      <pubDate>Wed, 17 Apr 2019 23:59:59 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/04/diary-20190417/</guid>
+      <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;diffutils, gawk, findutils, groff&lt;/li&gt;
+&lt;li&gt;GRUBのビルドに失敗した
+
+&lt;ul&gt;
+&lt;li&gt;PIEが有効だとビルドに失敗するっぽい&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;一部のソフトウェアはCPPFLAGSに&lt;code&gt;_FORTIFY_SOURCE&lt;/code&gt;の定義があるとconfigureが失敗するので、configureにパッチを当てて対処していたが、ハックが4箇所くらいに増えたのでCFLAGSに&lt;code&gt;_FORTIFY_SOURCE&lt;/code&gt;の定義を移動してハックを削除した。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;ubuntuのアップグレード&#34;&gt;Ubuntuのアップグレード&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ubuntu 18.04へのアップグレードが途中で止まったのは、壊れたシンボリックリンクが&lt;code&gt;/etc/ca-certificates&lt;/code&gt;に残っていたせいでca-certificatesの設定が失敗した結果、それに依存するパッケージ全部の設定が連鎖的に失敗したのが原因だった。&lt;/li&gt;
+&lt;li&gt;一応アップグレードは成功したが、あちこちの動作が怪しい&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;新しいキャンプ用食器&#34;&gt;新しいキャンプ用食器&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;別のセリアに行って小さいコッヘルを探してみたが、Lサイズすら置いてなかった。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;4K15.6インチの画面がどれくらい精細なのか気になったので電気屋に実物を見にいってみたが、4Kのラップトップが置いてなかった。&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     
     <item>
       <title>日記 2019/04/16(火)</title>
@@ -47,9 +85,7 @@
 &lt;li&gt;筋トレ中に夜8時になってしまったので中断&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;全身&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;strong&gt;全身&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -80,9 +116,7 @@
 
 &lt;ul&gt;
 &lt;li&gt;Ubuntu 16.04へアップグレードしたり買い物したりしていたら時間がなくなったので延期&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -110,8 +144,7 @@
 &lt;li&gt;公園で自重トレ&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;上半身&lt;/strong&gt;
-&lt;/p&gt;</description>
+&lt;p&gt;&lt;strong&gt;上半身&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -126,9 +159,7 @@
 
 &lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 
-&lt;p&gt;眠いので明日に延期&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;眠いので明日に延期&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -186,9 +217,7 @@
 &lt;ul&gt;
 &lt;li&gt;perlのビルド中&lt;/li&gt;
 &lt;li&gt;あまり作業できなかった&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -202,9 +231,7 @@
 &lt;ul&gt;
 &lt;li&gt;grep, libtool, gdbm, gperf, expatとinetutilsをインストールした&lt;/li&gt;
 &lt;li&gt;手順書のヘッダのレベルが間違っていたので修正&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -234,9 +261,7 @@
 &lt;li&gt;筋力が伸びてない気がする&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;上半身&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;strong&gt;上半身&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -261,9 +286,7 @@
 &lt;li&gt;目覚めが悪かった&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;公園で自重トレ&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -291,9 +314,7 @@
 &lt;li&gt;公園で自重トレ&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;上半身&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;strong&gt;上半身&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -307,9 +328,7 @@
 &lt;ul&gt;
 &lt;li&gt;pkg-configをインストール&lt;/li&gt;
 &lt;li&gt;あまり作業できなかった&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -325,9 +344,7 @@
 &lt;li&gt;あまり作業できなかった&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -346,9 +363,7 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -370,9 +385,7 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -448,9 +461,7 @@
 
 &lt;ul&gt;
 &lt;li&gt;4時間くらい無駄にした。集中できていない&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -469,9 +480,7 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -491,9 +500,7 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -539,9 +546,7 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -578,9 +583,7 @@
 &lt;ul&gt;
 &lt;li&gt;カーメイトのシガーソケット分配器の接点が凹んでしまっていたので分解して直した。なぜかケースの片側が発熱するパイロットランプにホットボンドで固定されていた。別の箇所でもう片側のケースにネジ止めされているから強度の問題はないんだけど、こんなものを付けるくらいなら強く押すと凹む接点をどうにかしてほしい&lt;/li&gt;
 &lt;li&gt;昨日もらったポータブル冷蔵庫のファンフィルターが汚れていたので分解清掃した。経年劣化で中のガムテープらしきものが全部剥がれてしまっていたので貼り替えた。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -603,9 +606,7 @@
 
 &lt;ul&gt;
 &lt;li&gt;父から使われていない車用ポータブル冷蔵庫をもらった。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -629,9 +630,7 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -652,9 +651,7 @@
 &lt;li&gt;GMPをインストールした&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -738,9 +735,7 @@
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/table&gt;</description>
     </item>
     
     <item>
@@ -792,9 +787,7 @@
 
 &lt;p&gt;部屋が汚くなってきたので掃除した。&lt;/p&gt;
 
-&lt;p&gt;部屋の半分にはコルクマット、もう半分にはカーペットが敷いてあるが、両方とも掃除が面倒くさい。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;部屋の半分にはコルクマット、もう半分にはカーペットが敷いてあるが、両方とも掃除が面倒くさい。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -870,9 +863,7 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -911,9 +902,7 @@
 &lt;ul&gt;
 &lt;li&gt;このサイトのデプロイスクリプトをシンプルにした &lt;a href=&#34;https://github.com/ngkz/ngkz.github.io/blob/src/deploy.sh&#34;&gt;https://github.com/ngkz/ngkz.github.io/blob/src/deploy.sh&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;DOOM Emacsのsmartparensの動作がおかしくてイライラするのでオフにした&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -997,9 +986,7 @@
 
 &lt;ul&gt;
 &lt;li&gt;ヨドバシからまだ返品要求メールへの返信がこない&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -1015,9 +1002,7 @@
 &lt;li&gt;パッケージの後処理(バイナリとライブラリのstrip, manページの圧縮, 不要なファイルを削除) をするスクリプトを改良している途中&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -1051,9 +1036,7 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;ドローン&#34;&gt;ドローン&lt;/h2&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;h2 id=&#34;ドローン&#34;&gt;ドローン&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -1072,9 +1055,7 @@
 &lt;li&gt;風呂入って戻ってきたらドローンが置いてあった 何これ？&lt;/li&gt;
 &lt;li&gt;4.6時間無駄にした&lt;/li&gt;
 &lt;li&gt;昨日夜更ししたせいで疲れていたので筋トレせずにはやめにねた&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -1158,9 +1139,7 @@
 
 &lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 
-&lt;p&gt;最近ついてない。今日は車のミラーを電柱にぶつけ、会社のサーバーのRAIDカードが文鎮化し、プロテインの粉をぶちまけた。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;最近ついてない。今日は車のミラーを電柱にぶつけ、会社のサーバーのRAIDカードが文鎮化し、プロテインの粉をぶちまけた。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1189,9 +1168,7 @@
 &lt;li&gt;防寒インナーと厚手の靴下を買った。まだ2月なのに、だんだん暖かくなってきているからか、商品が入れかわっていて防寒用の衣類が店頭からほとんど消えてしまっていた&lt;/li&gt;
 &lt;li&gt;食料(紅茶パック, インスタントスープ, パックごはん, グリーンカレーとガパオライスの缶詰)を調達した&lt;/li&gt;
 &lt;li&gt;アルミの天ぷらガードでコンロの風防を作った&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -1272,9 +1249,7 @@
 
 &lt;ul&gt;
 &lt;li&gt;スキーのケバを取って簡易ワックスを塗った。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -1375,9 +1350,7 @@
 &lt;ul&gt;
 &lt;li&gt;真鍮ブラシで擦っても落ちない傷があったし、滑走面に何箇所かへこみがあるのでシーズンが終わったらメンテナンスに出したほうがよさそう&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -1469,9 +1442,7 @@
 
 &lt;ul&gt;
 &lt;li&gt;3時間くらい余計なことやって時間を無駄にしてしまった。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -1584,9 +1555,7 @@
 &lt;li&gt;その後、業者が交換品を送り、不良品はこっちで破棄することになった。 &lt;a href=&#34;https://ngkz.github.io/2019/02/diary-20190217/&#34;&gt;2日後に交換品が届いた&lt;/a&gt;。&lt;/li&gt;
 &lt;li&gt;電気毛布はちゃんと動いた。明日車の中でどれくらいの効果があるかテストしてみる予定&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -1673,9 +1642,7 @@
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/table&gt;</description>
     </item>
     
     <item>
@@ -1758,9 +1725,7 @@
 
 &lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
 
-&lt;p&gt;立バンドの裏を塗装し、ステーのめっきが剥げた箇所にサビ止めを塗った。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;立バンドの裏を塗装し、ステーのめっきが剥げた箇所にサビ止めを塗った。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1855,9 +1820,7 @@
 &lt;li&gt;セキュリティコードを隠すための剥がすと跡が残るシール&lt;/li&gt;
 &lt;li&gt;まともな名刺ケース&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -1934,9 +1897,7 @@
 
 &lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
 
-&lt;p&gt;LFS BookとArch LinuxのPKGBUILDを参考にglibcをビルドしている。64bitライブラリのビルドはできたが、テストが通らない。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;LFS BookとArch LinuxのPKGBUILDを参考にglibcをビルドしている。64bitライブラリのビルドはできたが、テストが通らない。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1951,9 +1912,7 @@
 
 &lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 
-&lt;p&gt;いろいろやっていたら時間がなくなったので明日に延期&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;いろいろやっていたら時間がなくなったので明日に延期&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -2025,9 +1984,7 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;ほとんどの種目のトレーニングボリュームが現状維持か低下している。疲れが回復しきっていないのが原因だと思う&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;ほとんどの種目のトレーニングボリュームが現状維持か低下している。疲れが回復しきっていないのが原因だと思う&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -2113,9 +2070,7 @@
 
 &lt;ul&gt;
 &lt;li&gt;茨城県庁で茨城県警が超小型のArduino Leonardo互換機でBadUSBのデモをやってた&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -2184,9 +2139,7 @@
 
 &lt;h2 id=&#34;スキーのトップシートの修理&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
 
-&lt;p&gt;別の箇所を接着した。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;別の箇所を接着した。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -2270,9 +2223,7 @@
 
 &lt;ul&gt;
 &lt;li&gt;LeechBlock効果でインターネットで無駄にした時間がだいぶ減った&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -2305,9 +2256,7 @@
 &lt;ul&gt;
 &lt;li&gt;リフト券の引換券が当たった。ラックとスキー板を直したらスキーしに行こう&lt;/li&gt;
 &lt;li&gt;DOOM Emacs たまに使いづらい、vimに戻りたくなってきた。でもvimでDOOM Emacsっぽいことをしようとすると面倒くさい&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -2341,9 +2290,7 @@
 
 &lt;p&gt;なし&lt;/p&gt;
 
-&lt;p&gt;昨日睡眠時間が短かかったのと、オイル交換とラックとスキーの修理に必要な物の調達で帰るのが遅くなったのもあって、夕食を食べてから2時間経つ前に眠くなってしまった。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;昨日睡眠時間が短かかったのと、オイル交換とラックとスキーの修理に必要な物の調達で帰るのが遅くなったのもあって、夕食を食べてから2時間経つ前に眠くなってしまった。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -2366,9 +2313,7 @@
 &lt;pre&gt;&lt;code&gt;ブルガリアンスクワット       3セット 15kgx2 + 自重 左10回 右9回 左7回 右7回 左6回+自重で何回か 右5回+自重で8回
 レッグエクステンション       2セット 20kg          12回 12回+10kgで16回
 ツイストクランチ             3セット 自重          5秒維持 13回 -&amp;gt; 1秒維持 18回 18回
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     <item>
