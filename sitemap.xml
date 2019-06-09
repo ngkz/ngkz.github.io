@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://ngkz.github.io/2019/06/howto-etch-stainless-mug/</loc>
+    <lastmod>2019-06-09T17:34:45+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ngkz.github.io/2019/06/oil-change/</loc>
     <lastmod>2019-06-02T23:03:00+09:00</lastmod>
   </url>
@@ -25,6 +30,11 @@
   <url>
     <loc>https://ngkz.github.io/2019/04/diary-20190425/</loc>
     <lastmod>2019-04-25T22:38:53+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ngkz.github.io/2019/04/diary-20190419/</loc>
+    <lastmod>2019-04-19T23:59:59+09:00</lastmod>
   </url>
   
   <url>
@@ -588,12 +598,6 @@
   </url>
   
   <url>
-    <loc>https://ngkz.github.io/tags/coleman-508/</loc>
-    <lastmod>2018-12-09T12:09:05+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://ngkz.github.io/categories/ctf/</loc>
     <lastmod>2014-07-23T19:57:23+09:00</lastmod>
     <priority>0</priority>
@@ -613,7 +617,7 @@
   
   <url>
     <loc>https://ngkz.github.io/categories/howto/</loc>
-    <lastmod>2019-06-02T13:14:41+09:00</lastmod>
+    <lastmod>2019-06-09T17:34:45+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -630,7 +634,7 @@
   
   <url>
     <loc>https://ngkz.github.io/post/</loc>
-    <lastmod>2019-06-02T23:03:00+09:00</lastmod>
+    <lastmod>2019-06-09T17:34:45+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -676,13 +680,13 @@
   
   <url>
     <loc>https://ngkz.github.io/</loc>
-    <lastmod>2019-06-02T23:03:00+09:00</lastmod>
+    <lastmod>2019-06-09T17:34:45+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://ngkz.github.io/categories/%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%97%E7%94%A8%E5%93%81/</loc>
-    <lastmod>2018-12-09T12:09:05+09:00</lastmod>
+    <loc>https://ngkz.github.io/tags/%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%97/</loc>
+    <lastmod>2019-06-09T17:34:45+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -731,6 +735,12 @@
   <url>
     <loc>https://ngkz.github.io/categories/%E8%BB%8A/</loc>
     <lastmod>2019-06-02T23:03:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ngkz.github.io/categories/%E9%9B%91%E8%A8%98/</loc>
+    <lastmod>2018-12-09T12:09:05+09:00</lastmod>
     <priority>0</priority>
   </url>
   

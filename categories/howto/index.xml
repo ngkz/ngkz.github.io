@@ -6,10 +6,26 @@
     <description>Recent content in Howto on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 02 Jun 2019 13:14:41 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 09 Jun 2019 17:34:45 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/categories/howto/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ステンレスカップにメモリをつけてみた</title>
+      <link>https://ngkz.github.io/2019/06/howto-etch-stainless-mug/</link>
+      <pubDate>Sun, 09 Jun 2019 17:34:45 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2019/06/howto-etch-stainless-mug/</guid>
+      <description> 一ヶ月半前くらいの話 酢と塩と9V電池でステンレス鍋に目盛りをつける方法を知ったので、計量カップを追い出して旅行の荷物を減らすためにステンレスマグを計量カップ化してみた。
+どうやるの 上のリンクの内容を要約すると
+ 印をつけたい部分の周辺をマスキング 酢と塩を混ぜて綿棒の先につける 綿棒を9V電池のマイナス、ステンレスマグを9V電池のプラスに接続 綿棒の先をエッチングしたい部分に押し付ける シュワシュワという音がして数秒くらいで印が点く  自分の場合は酢にやさしい酢を使ったのと、印をつける面がヘアライン加工されていたせいか、9V電池では目盛りがつくのに時間がかかったので、電源電圧を12Vに上げて反応速度を上げた。
+底で試す まず、試しにマグの底にマークを付けてみた。マスキングに厚みのあるビニールテープを使ったせいか、テープが重なる部分の付近から液体が侵入してマーキングがはみ出してしまった。
+ 底で試した  本番 粘着面に耐水性がある薄いテープを持ってないし、水位がわかれば見た目はどうでもいいので本番もビニールテープでやった。
+秤で重量を測りながら水を入れ、水50ccごとに200ccの位置までビニールテープの切れ端をで目印をつけた。水を捨て、目盛りの形になるように追加でマスキングしてエッチングした。
+同様に米と無洗米の目印も1/4合(45cc)ごとに1合まで、無洗米の目印も1/4合(42.75cc)ごとに1合まで付けた。
+ 水 精白米 無洗米  </description>
+    </item>
     
     <item>
       <title>内蔵HDDに入ってるWindows 10をUSB HDDから起動できるようにする方法</title>
