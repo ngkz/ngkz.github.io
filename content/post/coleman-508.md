@@ -2,9 +2,9 @@
 title: "28年前製造のガソリンストーブに火を入れてみた"
 date: 2018-12-09T12:09:05+09:00
 categories:
-- キャンプ用品
+- 雑記
 tags:
-- Coleman 508
+- キャンプ
 thumbnailImage: /assets/coleman-508/burning.jpg
 ---
 
