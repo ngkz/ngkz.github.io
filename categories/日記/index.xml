@@ -6,56 +6,10 @@
     <description>Recent content in 日記 on ngkz.log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 27 Apr 2019 23:59:59 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 25 Apr 2019 22:38:53 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/categories/%E6%97%A5%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>日記 2019/04/27(土)</title>
-      <link>https://ngkz.github.io/2019/04/diary-20190427/</link>
-      <pubDate>Sat, 27 Apr 2019 23:59:59 +0900</pubDate>
-      
-      <guid>https://ngkz.github.io/2019/04/diary-20190427/</guid>
-      <description>&lt;p&gt;ThinkPad出荷されたか BTOで注文すると2週間以内に出荷されなかった場合にしかキャンセルできないから遅れることに期待してたんだけど&lt;/p&gt;
-
-&lt;h2 id=&#34;ubuntu-18-04のguiがおかしくなった&#34;&gt;Ubuntu 18.04のGUIがおかしくなった&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Ubuntu 18.04のGUIが急におかしくなった
-デスクトップ環境が急にクリックに反応しなくなった
-ngkz昨日 午前10時59分
-Xサーバーを再起動したらクリックできるようになった
-ngkz昨日 午前11時21分
-マウスボタンとスペースキーが反応しなくなったり急に戻ったりしてる
-ngkz昨日 午前11時44分
-いつものGWは昼間に車内が暑くなるから途中から山に行ってたんだけど、今年は曇ってるから快適に地上ですごせそう
-逆に山は寒そう&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;再起動しても数分おきにクリックが効かなくなるから頭に来た Ubuntu 18.10へアップグレードする
-ngkz昨日 午後7時24分
-18.10に上げたらサブディスプレイが死亡
-ngkz昨日 午後8時18分
-Ubuntu 19.04のロック画面の壁紙かっこいいな
-ngkz昨日 午後9時27分
-Ubuntu 19.04に上げたら通知のテキスト読み上げが動作するようになった
-ngkz昨日 午後11時27分
-HiDPI環境のスケーリング Ubuntu 19.04のGNOME 2.30.3でもまだまともに動かない :frowning:
-X11アプリが1xでレンダリングした後引き伸ばされるからFirefoxが汚くなる
-Windows8感
-やっとクリックが効かなくなるのが直った&lt;/p&gt;
-
-&lt;h2 id=&#34;バーナーパットが届いた&#34;&gt;バーナーパットが届いた&lt;/h2&gt;
-
-&lt;p&gt;熱がいい感じに分散してて、焦げ付かずに飯が炊けそう。ただ、熱が下にも分散するから確実に燃費が悪くなるし、強火にするとボンベが加熱されてしまう。&lt;/p&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;小雨が降っていたので洗車して虫の死骸を落とした&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
     
     <item>
       <title>日記 2019/04/25(木)</title>
