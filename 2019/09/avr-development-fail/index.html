@@ -8,107 +8,89 @@
 <meta name="generator" content="Hugo 0.58.3 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
-<meta name="description" content="一ヶ月半前くらいの話
+<meta name="description" content="AVRでファンコントローラを作っていたら、いろいろなところで嵌って何時間も無駄にしたので、後学のために何があったかを書いておく。
 
-酢と塩と9V電池でステンレス鍋に目盛りをつける方法を知ったので、計量カップを追い出して旅行の荷物を減らすためにステンレスマグを計量カップ化してみた。
+GCC拡張インラインアセンブラ構文の嵌りどころ
 
-どうやるの
+GCCの拡張インラインアセンブラ構文を使うときはマニュアルをよく読まないとこういう目にあう
 
-上のリンクの内容を要約すると
+入力オペランドと出力オペランドは同じレジスタに割り当てられることがある
 
+同じレジスタに割り当てられるとまずい場合は出力オペランドの制約に&amp;をつける。付け忘れていたら最適化をかけたときに入力と出力が同じレジスタに割り当てられて嵌った。
 
-印をつけたい部分の周辺をマスキング
-酢と塩を混ぜて綿棒の先につける
-綿棒を9V電池のマイナス、ステンレスマグを9V電池のプラスに接続
-綿棒の先をエッチングしたい部分に押し付ける
-シュワシュワという音がして数秒くらいで印が点く
+NG: asm volatile(&quot;...&quot; : [output] &quot;=r&quot; (...) : [input] &quot;r&quot; (...)); 
+OK: asm volatile(&quot;...&quot; : [output] &quot;=&amp;r&quot; (...) : [input] &quot;r&quot; (...));
 
-
-自分の場合は酢にやさしい酢を使ったのと、印をつける面がヘアライン加工されていたせいか、9V電池では目盛りがつくのに時間がかかったので、電源電圧を12Vに上げて反応速度を上げた。
-
-底で試す">
+入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる">
 
 
-<meta property="og:description" content="一ヶ月半前くらいの話
+<meta property="og:description" content="AVRでファンコントローラを作っていたら、いろいろなところで嵌って何時間も無駄にしたので、後学のために何があったかを書いておく。
 
-酢と塩と9V電池でステンレス鍋に目盛りをつける方法を知ったので、計量カップを追い出して旅行の荷物を減らすためにステンレスマグを計量カップ化してみた。
+GCC拡張インラインアセンブラ構文の嵌りどころ
 
-どうやるの
+GCCの拡張インラインアセンブラ構文を使うときはマニュアルをよく読まないとこういう目にあう
 
-上のリンクの内容を要約すると
+入力オペランドと出力オペランドは同じレジスタに割り当てられることがある
 
+同じレジスタに割り当てられるとまずい場合は出力オペランドの制約に&amp;をつける。付け忘れていたら最適化をかけたときに入力と出力が同じレジスタに割り当てられて嵌った。
 
-印をつけたい部分の周辺をマスキング
-酢と塩を混ぜて綿棒の先につける
-綿棒を9V電池のマイナス、ステンレスマグを9V電池のプラスに接続
-綿棒の先をエッチングしたい部分に押し付ける
-シュワシュワという音がして数秒くらいで印が点く
+NG: asm volatile(&quot;...&quot; : [output] &quot;=r&quot; (...) : [input] &quot;r&quot; (...)); 
+OK: asm volatile(&quot;...&quot; : [output] &quot;=&amp;r&quot; (...) : [input] &quot;r&quot; (...));
 
-
-自分の場合は酢にやさしい酢を使ったのと、印をつける面がヘアライン加工されていたせいか、9V電池では目盛りがつくのに時間がかかったので、電源電圧を12Vに上げて反応速度を上げた。
-
-底で試す">
+入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ステンレスカップにメモリをつけてみた">
-<meta name="twitter:title" content="ステンレスカップにメモリをつけてみた">
-<meta property="og:url" content="https://ngkz.github.io/2019/06/howto-etch-stainless-mug/">
-<meta property="twitter:url" content="https://ngkz.github.io/2019/06/howto-etch-stainless-mug/">
+<meta property="og:title" content="GCCインラインアセンブラとplatformioの嵌りどころ">
+<meta name="twitter:title" content="GCCインラインアセンブラとplatformioの嵌りどころ">
+<meta property="og:url" content="https://ngkz.github.io/2019/09/avr-development-fail/">
+<meta property="twitter:url" content="https://ngkz.github.io/2019/09/avr-development-fail/">
 <meta property="og:site_name" content="ngkz.log">
-<meta property="og:description" content="一ヶ月半前くらいの話
+<meta property="og:description" content="AVRでファンコントローラを作っていたら、いろいろなところで嵌って何時間も無駄にしたので、後学のために何があったかを書いておく。
 
-酢と塩と9V電池でステンレス鍋に目盛りをつける方法を知ったので、計量カップを追い出して旅行の荷物を減らすためにステンレスマグを計量カップ化してみた。
+GCC拡張インラインアセンブラ構文の嵌りどころ
 
-どうやるの
+GCCの拡張インラインアセンブラ構文を使うときはマニュアルをよく読まないとこういう目にあう
 
-上のリンクの内容を要約すると
+入力オペランドと出力オペランドは同じレジスタに割り当てられることがある
 
+同じレジスタに割り当てられるとまずい場合は出力オペランドの制約に&amp;をつける。付け忘れていたら最適化をかけたときに入力と出力が同じレジスタに割り当てられて嵌った。
 
-印をつけたい部分の周辺をマスキング
-酢と塩を混ぜて綿棒の先につける
-綿棒を9V電池のマイナス、ステンレスマグを9V電池のプラスに接続
-綿棒の先をエッチングしたい部分に押し付ける
-シュワシュワという音がして数秒くらいで印が点く
+NG: asm volatile(&quot;...&quot; : [output] &quot;=r&quot; (...) : [input] &quot;r&quot; (...)); 
+OK: asm volatile(&quot;...&quot; : [output] &quot;=&amp;r&quot; (...) : [input] &quot;r&quot; (...));
 
+入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる">
+<meta name="twitter:description" content="AVRでファンコントローラを作っていたら、いろいろなところで嵌って何時間も無駄にしたので、後学のために何があったかを書いておく。
 
-自分の場合は酢にやさしい酢を使ったのと、印をつける面がヘアライン加工されていたせいか、9V電池では目盛りがつくのに時間がかかったので、電源電圧を12Vに上げて反応速度を上げた。
+GCC拡張インラインアセンブラ構文の嵌りどころ
 
-底で試す">
-<meta name="twitter:description" content="一ヶ月半前くらいの話
+GCCの拡張インラインアセンブラ構文を使うときはマニュアルをよく読まないとこういう目にあう
 
-酢と塩と9V電池でステンレス鍋に目盛りをつける方法を知ったので、計量カップを追い出して旅行の荷物を減らすためにステンレスマグを計量カップ化してみた。
+入力オペランドと出力オペランドは同じレジスタに割り当てられることがある
 
-どうやるの
+同じレジスタに割り当てられるとまずい場合は出力オペランドの制約に&amp;をつける。付け忘れていたら最適化をかけたときに入力と出力が同じレジスタに割り当てられて嵌った。
 
-上のリンクの内容を要約すると
+NG: asm volatile(&quot;...&quot; : [output] &quot;=r&quot; (...) : [input] &quot;r&quot; (...)); 
+OK: asm volatile(&quot;...&quot; : [output] &quot;=&amp;r&quot; (...) : [input] &quot;r&quot; (...));
 
-
-印をつけたい部分の周辺をマスキング
-酢と塩を混ぜて綿棒の先につける
-綿棒を9V電池のマイナス、ステンレスマグを9V電池のプラスに接続
-綿棒の先をエッチングしたい部分に押し付ける
-シュワシュワという音がして数秒くらいで印が点く
-
-
-自分の場合は酢にやさしい酢を使ったのと、印をつける面がヘアライン加工されていたせいか、9V電池では目盛りがつくのに時間がかかったので、電源電圧を12Vに上げて反応速度を上げた。
-
-底で試す">
+入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる">
 <meta property="og:locale" content="ja">
 
   
-    <meta property="article:published_time" content="2019-06-09T17:34:45">
+    <meta property="article:published_time" content="2019-09-23T07:30:10">
   
   
-    <meta property="article:modified_time" content="2019-06-09T17:34:45">
+    <meta property="article:modified_time" content="2019-09-23T07:30:10">
   
-  
-  
-    
-      <meta property="article:section" content="howto">
-    
   
   
     
-      <meta property="article:tag" content="キャンプ">
+      <meta property="article:section" content="failure">
+    
+  
+  
+    
+      <meta property="article:tag" content="GCC">
+    
+      <meta property="article:tag" content="platformio">
     
   
 
@@ -129,14 +111,14 @@
   <meta property="twitter:image" content="https://ngkz.github.io/mypicture.jpg">
 
 
-    <title>ステンレスカップにメモリをつけてみた</title>
+    <title>GCCインラインアセンブラとplatformioの嵌りどころ</title>
 
     <link rel="icon" href="https://ngkz.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://ngkz.github.io/2019/06/howto-etch-stainless-mug/">
+    <link rel="canonical" href="https://ngkz.github.io/2019/09/avr-development-fail/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -286,19 +268,19 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      ステンレスカップにメモリをつけてみた
+      GCCインラインアセンブラとplatformioの嵌りどころ
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2019-06-09T17:34:45&#43;09:00">
+      <time itemprop="datePublished" datetime="2019-09-23T07:30:10&#43;09:00">
         
   
   
   
   
-    2019-06-09
+    2019-09-23
   
 
       </time>
@@ -308,7 +290,7 @@
   
     <span>カテゴリー</span>
     
-      <a class="category-link" href="https://ngkz.github.io/categories/howto">howto</a>
+      <a class="category-link" href="https://ngkz.github.io/categories/failure">failure</a>
     
   
 
@@ -318,90 +300,91 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <h2 id="一ヶ月半前くらいの話">一ヶ月半前くらいの話</h2>
+              <p>AVRでファンコントローラを作っていたら、いろいろなところで嵌って何時間も無駄にしたので、後学のために何があったかを書いておく。</p>
 
-<p><a href="https://imgur.com/a/dCvS5">酢と塩と9V電池でステンレス鍋に目盛りをつける方法</a>を知ったので、計量カップを追い出して旅行の荷物を減らすためにステンレスマグを計量カップ化してみた。</p>
+<h2 id="gcc拡張インラインアセンブラ構文の嵌りどころ">GCC拡張インラインアセンブラ構文の嵌りどころ</h2>
 
-<h2 id="どうやるの">どうやるの</h2>
+<p>GCCの拡張インラインアセンブラ構文を使うときはマニュアルをよく読まないとこういう目にあう</p>
 
-<p>上のリンクの内容を要約すると</p>
+<h3 id="入力オペランドと出力オペランドは同じレジスタに割り当てられることがある">入力オペランドと出力オペランドは同じレジスタに割り当てられることがある</h3>
+
+<p>同じレジスタに割り当てられるとまずい場合は出力オペランドの制約に<code>&amp;</code>をつける。付け忘れていたら最適化をかけたときに入力と出力が同じレジスタに割り当てられて嵌った。</p>
+
+<p>NG: <code>asm volatile(&quot;...&quot; : [output] &quot;=r&quot; (...) : [input] &quot;r&quot; (...));</code> <br />
+OK: <code>asm volatile(&quot;...&quot; : [output] &quot;=&amp;r&quot; (...) : [input] &quot;r&quot; (...));</code></p>
+
+<h3 id="入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる">入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる</h3>
+
+<p>インラインアセンブラ中で入力オペランドを書き換える場合は、同じレジスタを出力オペランドにも割り当てておかないと最適化で破壊されることがある。 (<a href="https://stackoverflow.com/questions/48381184/can-i-modify-input-operands-in-gcc-inline-assembly">https://stackoverflow.com/questions/48381184/can-i-modify-input-operands-in-gcc-inline-assembly</a>)</p>
+
+<p>インラインアセンブラを書いた関数がループ中にインライン展開されたときに、入力オペランドの初期化処理がループの外に移動されて、2回目以降に処理がおかしくなったことでこれに気づいた。</p>
+
+<p>NG: <code>asm volatile(&quot;(inputを変更するコード)&quot; : : [input] &quot;r&quot; (...));</code> <br />
+OK:</p>
+
+<pre><code>uint8_t dummy;
+asm volatile(&quot;...&quot; : &quot;=r&quot; (dummy) : [input] &quot;0&quot; (...)); //inputの制約の&quot;0&quot;は0番目の出力オペランド(&quot;=r&quot; (dummy))と同じレジスタを割り当てるという意味
+</code></pre>
+
+<h2 id="platformioの嵌りどころ">platformioの嵌りどころ</h2>
+
+<h3 id="attiny系のマイコンで-pio-run-t-uploadeep-するとプログラムが消去される">ATtiny系のマイコンで<code>pio run -t uploadeep</code>するとプログラムが消去される</h3>
+
+<p>platformioのATtiny系マイコンのボード定義にはバグがある。ボード定義中の<code>&quot;extra_flags&quot;: &quot;-e&quot;</code>が原因で、avrdudeを実行するときに必ず<code>-e</code>(Perform a chip erase)オプションが渡されてしまい、EEPROMの書き込みとヒューズの設定を行うときにもチップ全体が消去されてしまう。</p>
+
+<p>バグトラッカーに報告があるがすぐには修正されなさそうな雰囲気なので、下の方法で回避している。</p>
 
 <ol>
-<li>印をつけたい部分の周辺をマスキング</li>
-<li>酢と塩を混ぜて綿棒の先につける</li>
-<li>綿棒を9V電池のマイナス、ステンレスマグを9V電池のプラスに接続</li>
-<li>綿棒の先をエッチングしたい部分に押し付ける</li>
-<li>シュワシュワという音がして数秒くらいで印が点く</li>
+<li><p>プロジェクトのディレクトリにboardsディレクトリを作り、その中に<code>&quot;extra_flags&quot;: &quot;-e&quot;</code>を削除したボード定義を作る</p>
+
+<pre><code class="language-sh">(ATtiny85の場合)
+PROJECT $ mkdir boards
+PROJECT $ cat &lt;&lt;'EOS' &gt;hoge.json
+{
+ &quot;build&quot;: {
+   &quot;core&quot;: &quot;tiny&quot;,
+   &quot;extra_flags&quot;: &quot;-DARDUINO_AVR_ATTINYX5&quot;,
+   &quot;f_cpu&quot;: &quot;8000000L&quot;,
+   &quot;mcu&quot;: &quot;attiny85&quot;,
+   &quot;variant&quot;: &quot;tinyX5&quot;
+ },
+ &quot;frameworks&quot;: [
+   &quot;arduino&quot;
+ ],
+ &quot;name&quot;: &quot;HOGEHOGEHOGE&quot;,
+ &quot;upload&quot;: {
+   &quot;maximum_ram_size&quot;: 512,
+   &quot;maximum_size&quot;: 8192,
+   &quot;protocol&quot;: &quot;usbtiny&quot;
+ },
+ &quot;url&quot;: &quot;https://HOGEHOGE&quot;,
+ &quot;vendor&quot;: &quot;HOGEHOGEHOGE&quot;
+}
+EOS
+</code></pre></li>
+
+<li><p>platformio.iniを変更</p>
+
+<pre><code>-[env:attiny85]
++[env:hoge]
+platform = atmelavr
+-board = attiny85
++board = hoge
+upload_protocol = buspirate
+upload_flags =
+    -P$UPLOAD_PORT
+    -b$UPLOAD_SPEED
+upload_port = /dev/ttyUSB0
+upload_speed = 115200
++extra_scripts = extra_script.py
+</code></pre></li>
+
+<li><p>platformio.iniと同じディレクトリにextra_script.pyを作成し、プログラムの書き込み時だけChip Eraseオプションを渡すよう設定</p>
+
+<pre><code>Import('env')
+env.Replace(UPLOADCMD='$UPLOADER $UPLOADERFLAGS -e -U flash:w:$SOURCES:i')
+</code></pre></li>
 </ol>
-
-<p>自分の場合は酢にやさしい酢を使ったのと、印をつける面がヘアライン加工されていたせいか、9V電池では目盛りがつくのに時間がかかったので、電源電圧を12Vに上げて反応速度を上げた。</p>
-
-<h2 id="底で試す">底で試す</h2>
-
-<p>まず、試しにマグの底にマークを付けてみた。マスキングに厚みのあるビニールテープを使ったせいか、テープが重なる部分の付近から液体が侵入してマーキングがはみ出してしまった。</p>
-
-
-
- 
-  
-  
-  
-  
-    
-  
-    
-      
-    
-  
-
-<div class="figure center" >
-  
-    <a class="fancybox" href="https://ngkz.github.io/assets/howto-etch-stainless-mug/JPEG_20190420_222205.jpg" title="底で試した" data-fancybox-group="">
-  
-    <img class="fig-img" src="https://ngkz.github.io/assets/howto-etch-stainless-mug/JPEG_20190420_222205.jpg" style="width: 400px;height: 373px;" alt="底で試した">
-  
-    </a>
-  
-   
-    <span class="caption">底で試した</span>
-  
-</div>
-
-
-<h2 id="本番">本番</h2>
-
-<p>粘着面に耐水性がある薄いテープを持ってないし、水位がわかれば見た目はどうでもいいので本番もビニールテープでやった。</p>
-
-<p>秤で重量を測りながら水を入れ、水50ccごとに200ccの位置までビニールテープの切れ端をで目印をつけた。水を捨て、目盛りの形になるように追加でマスキングしてエッチングした。</p>
-
-<p>同様に精白米と無洗米の目印も、米は1/4合(45cc)ごと、無洗米は1/4合(42.75cc)ごとに1合まで付けた。</p>
-
-
-
- 
-  
-  
-  
-  
-    
-  
-    
-      
-    
-  
-
-<div class="figure center" >
-  
-    <a class="fancybox" href="https://ngkz.github.io/assets/howto-etch-stainless-mug/2019-04-21%2016.48.56.jpg" title="水 精白米 無洗米" data-fancybox-group="">
-  
-    <img class="fig-img" src="https://ngkz.github.io/assets/howto-etch-stainless-mug/2019-04-21%2016.48.56.jpg" style="width: 400px;height: 534px;" alt="水 精白米 無洗米">
-  
-    </a>
-  
-   
-    <span class="caption">水 精白米 無洗米</span>
-  
-</div>
               
             </div>
           </div>
@@ -413,7 +396,9 @@
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">タグ</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://ngkz.github.io/tags/%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%97/">キャンプ</a>
+  <a class="tag tag--primary tag--small" href="https://ngkz.github.io/tags/gcc/">GCC</a>
+
+  <a class="tag tag--primary tag--small" href="https://ngkz.github.io/tags/platformio/">platformio</a>
 
                   </div>
                 
@@ -426,7 +411,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/09/avr-development-fail/" data-tooltip="GCCインラインアセンブラとplatformioの嵌りどころ">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/09/homeserver-build-20190922/" data-tooltip="サーバー構築ログ (2019/09/22)">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">次</span>
@@ -434,7 +419,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/06/oil-change/" data-tooltip="オイル交換メモ">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/06/howto-etch-stainless-mug/" data-tooltip="ステンレスカップにメモリをつけてみた">
               
                   <span class="hide-xs hide-sm text-small icon-mr">前</span>
                   <i class="fa fa-angle-right"></i>
@@ -452,19 +437,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2019/06/howto-etch-stainless-mug/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2019/09/avr-development-fail/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2019/06/howto-etch-stainless-mug/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2019/09/avr-development-fail/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2019/06/howto-etch-stainless-mug/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2019/09/avr-development-fail/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -512,7 +497,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/09/avr-development-fail/" data-tooltip="GCCインラインアセンブラとplatformioの嵌りどころ">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/09/homeserver-build-20190922/" data-tooltip="サーバー構築ログ (2019/09/22)">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">次</span>
@@ -520,7 +505,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/06/oil-change/" data-tooltip="オイル交換メモ">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2019/06/howto-etch-stainless-mug/" data-tooltip="ステンレスカップにメモリをつけてみた">
               
                   <span class="hide-xs hide-sm text-small icon-mr">前</span>
                   <i class="fa fa-angle-right"></i>
@@ -538,19 +523,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2019/06/howto-etch-stainless-mug/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2019/09/avr-development-fail/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2019/06/howto-etch-stainless-mug/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2019/09/avr-development-fail/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2019/06/howto-etch-stainless-mug/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2019/09/avr-development-fail/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -580,19 +565,19 @@
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fngkz.github.io%2F2019%2F06%2Fhowto-etch-stainless-mug%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fngkz.github.io%2F2019%2F09%2Favr-development-fail%2F">
           <i class="fa fa-facebook-official"></i><span>Facebookで共有</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fngkz.github.io%2F2019%2F06%2Fhowto-etch-stainless-mug%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fngkz.github.io%2F2019%2F09%2Favr-development-fail%2F">
           <i class="fa fa-twitter"></i><span>Twitterで共有</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fngkz.github.io%2F2019%2F06%2Fhowto-etch-stainless-mug%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fngkz.github.io%2F2019%2F09%2Favr-development-fail%2F">
           <i class="fa fa-google-plus"></i><span>Google&#43;で共有</span>
         </a>
       </li>
@@ -684,9 +669,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/ngkz.github.io\/2019\/06\/howto-etch-stainless-mug\/';
+          this.page.url = 'https:\/\/ngkz.github.io\/2019\/09\/avr-development-fail\/';
           
-            this.page.identifier = '\/2019\/06\/howto-etch-stainless-mug\/'
+            this.page.identifier = '\/2019\/09\/avr-development-fail\/'
           
         };
         (function() {

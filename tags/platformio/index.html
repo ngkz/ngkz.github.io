@@ -13,10 +13,10 @@
 
 <meta property="og:description" content="Kazutoshi Noguchi&#39;s blog">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Posts">
-<meta name="twitter:title" content="Posts">
-<meta property="og:url" content="https://ngkz.github.io/post/">
-<meta property="twitter:url" content="https://ngkz.github.io/post/">
+<meta property="og:title" content="platformio">
+<meta name="twitter:title" content="platformio">
+<meta property="og:url" content="https://ngkz.github.io/tags/platformio/">
+<meta property="twitter:url" content="https://ngkz.github.io/tags/platformio/">
 <meta property="og:site_name" content="ngkz.log">
 <meta property="og:description" content="Kazutoshi Noguchi&#39;s blog">
 <meta name="twitter:description" content="Kazutoshi Noguchi&#39;s blog">
@@ -39,16 +39,16 @@
   <meta property="twitter:image" content="https://ngkz.github.io/mypicture.jpg">
 
 
-    <title>Posts</title>
+    <title>platformio</title>
 
     <link rel="icon" href="https://ngkz.github.io/favicon.png">
     
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://ngkz.github.io/post/index.xml">
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://ngkz.github.io/tags/platformio/index.xml">
     
 
     
 
-    <link rel="canonical" href="https://ngkz.github.io/post/">
+    <link rel="canonical" href="https://ngkz.github.io/tags/platformio/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -187,16 +187,18 @@
 </nav>
 
       
+        
 
+      
       <div id="main" data-behavior="1"
         class="
                hasCoverMetaIn
                ">
-        <section class="postShorten-group main-content-wrap">
-          
-          
-          
+        
+          <section class="postShorten-group main-content-wrap">
             
+            
+              
   
     
       
@@ -213,20 +215,20 @@
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://ngkz.github.io/2014/01/newyearsctf/">
-          年越しCTF x86-64.jp大会 2014で優勝しました。
+        <a class="link-unstyled" href="https://ngkz.github.io/2019/09/avr-development-fail/">
+          GCCインラインアセンブラとplatformioの嵌りどころ
         </a>
       </h1>
       
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2014-01-01T15:45:15&#43;09:00">
+      <time itemprop="datePublished" datetime="2019-09-23T07:30:10&#43;09:00">
         
   
   
   
   
-    2014-01-01
+    2019-09-23
   
 
       </time>
@@ -236,7 +238,7 @@
   
     <span>カテゴリー</span>
     
-      <a class="category-link" href="https://ngkz.github.io/categories/ctf">CTF</a>
+      <a class="category-link" href="https://ngkz.github.io/categories/failure">failure</a>
     
   
 
@@ -245,24 +247,23 @@
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        <div class="figure " >
-  
-    <a class="fancybox" href="https://ngkz.github.io/assets/newyearsctf/0734e47f8886a005a11bedd17955a0c6.png" title="Scoreboard" data-fancybox-group="">
-  
-    <img class="fig-img" src="https://ngkz.github.io/assets/newyearsctf/0734e47f8886a005a11bedd17955a0c6.png"  alt="Scoreboard">
-  
-    </a>
-  
-   
-    <span class="caption">Scoreboard</span>
-  
-</div>
+        <p>AVRでファンコントローラを作っていたら、いろいろなところで嵌って何時間も無駄にしたので、後学のために何があったかを書いておく。</p>
 
+<h2 id="gcc拡張インラインアセンブラ構文の嵌りどころ">GCC拡張インラインアセンブラ構文の嵌りどころ</h2>
 
-<p>優勝して賞金2500円を手に入れました。</p>
+<p>GCCの拡張インラインアセンブラ構文を使うときはマニュアルをよく読まないとこういう目にあう</p>
+
+<h3 id="入力オペランドと出力オペランドは同じレジスタに割り当てられることがある">入力オペランドと出力オペランドは同じレジスタに割り当てられることがある</h3>
+
+<p>同じレジスタに割り当てられるとまずい場合は出力オペランドの制約に<code>&amp;</code>をつける。付け忘れていたら最適化をかけたときに入力と出力が同じレジスタに割り当てられて嵌った。</p>
+
+<p>NG: <code>asm volatile(&quot;...&quot; : [output] &quot;=r&quot; (...) : [input] &quot;r&quot; (...));</code> <br />
+OK: <code>asm volatile(&quot;...&quot; : [output] &quot;=&amp;r&quot; (...) : [input] &quot;r&quot; (...));</code></p>
+
+<h3 id="入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる">入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる</h3>
       
       <p>
-        <a href="https://ngkz.github.io/2014/01/newyearsctf/" class="postShorten-excerpt_link link">続きを読む</a>
+        <a href="https://ngkz.github.io/2019/09/avr-development-fail/" class="postShorten-excerpt_link link">続きを読む</a>
         
       </p>
     </div>
@@ -270,332 +271,11 @@
   
 </article>
 
-          
             
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://ngkz.github.io/2013/09/galaxys3-adb-restore-fail/">
-          Galaxy S3(SC-06D)がadbバックアップを戻した後再起動を繰り返すようになったときの対処方法
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2013-09-12T13:29:56&#43;09:00">
-        
-  
-  
-  
-  
-    2013-09-12
-  
-
-      </time>
-    
-    
-  
-  
-    <span>カテゴリー</span>
-    
-      <a class="category-link" href="https://ngkz.github.io/categories/howto">howto</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <h2 id="リカバリモードに入ってファクトリーリセットする">リカバリモードに入ってファクトリーリセットする</h2>
-
-<p>galaxy S3 リカバリモードの入り方:</p>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QVa3yfxP0Zs" frameborder="0" allowfullscreen></iframe>
-
-<h2 id="バックアップを展開">バックアップを展開</h2>
-      
-      <p>
-        <a href="https://ngkz.github.io/2013/09/galaxys3-adb-restore-fail/" class="postShorten-excerpt_link link">続きを読む</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
             
-  
-    
-      
+
+          </section>
         
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://ngkz.github.io/2013/03/howto-reactivate-keepassx/">
-          トレイに格納したKeePassXを復元できるようにする方法
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2013-03-14T17:21:07&#43;09:00">
-        
-  
-  
-  
-  
-    2013-03-14
-  
-
-      </time>
-    
-    
-  
-  
-    <span>カテゴリー</span>
-    
-      <a class="category-link" href="https://ngkz.github.io/categories/howto">howto</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <p>Ubuntu 12.10-14.04で確認済み</p>
-
-<pre><code>echo &quot;keepassx=1&quot; &gt;&gt; /etc/xdg/sni-qt.conf
-</code></pre>
-      
-      <p>
-        <a href="https://ngkz.github.io/2013/03/howto-reactivate-keepassx/" class="postShorten-excerpt_link link">続きを読む</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://ngkz.github.io/2012/12/seccon-2012-yokohama-quals-writeup/">
-          SECCON CTF 横浜大会 (SECCON 2012 予選) writeup
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2012-12-24T05:03:22&#43;09:00">
-        
-  
-  
-  
-  
-    2012-12-24
-  
-
-      </time>
-    
-    
-  
-  
-    <span>カテゴリー</span>
-    
-      <a class="category-link" href="https://ngkz.github.io/categories/ctf">CTF</a>, 
-    
-      <a class="category-link" href="https://ngkz.github.io/categories/writeup">writeup</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <p><a href="http://www.seccon.jp/">SECCON CTF 横浜大会</a>にチーム 0x0として参加しました。<br />
-チームメンバーは nash氏、wasao氏、waidotto氏、nullmineral氏と私です。</p>
-
-<h2 id="成績">成績</h2>
-
-<p>score: たぶん8120</p>
-
-
-
- 
-  
-  
-  
-  
-    
-  
-
-<div class="figure " >
-  
-    <a class="fancybox" href="https://ngkz.github.io/assets/seccon-2012-yokohama-quals-writeup/514d338eaff15827c0309966508eddbb.png" title="終了数分前の問題一覧" data-fancybox-group="">
-  
-    <img class="fig-img" src="https://ngkz.github.io/assets/seccon-2012-yokohama-quals-writeup/514d338eaff15827c0309966508eddbb.png"  alt="終了数分前の問題一覧">
-  
-    </a>
-  
-   
-    <span class="caption">終了数分前の問題一覧</span>
-  
-</div>
-
-
-<p></p>
-
-
-
- 
-  
-  
-  
-  
-    
-  
-
-<div class="figure " >
-  
-    <a class="fancybox" href="https://ngkz.github.io/assets/seccon-2012-yokohama-quals-writeup/seccon-yokohama.jpg" title="賞状 第三位" data-fancybox-group="">
-  
-    <img class="fig-img" src="https://ngkz.github.io/assets/seccon-2012-yokohama-quals-writeup/seccon-yokohama.jpg" style="width: 295px;height: 400px;" alt="賞状 第三位">
-  
-    </a>
-  
-   
-    <span class="caption">賞状 第三位</span>
-  
-</div>
-
-
-<p><br />
-✌(&lsquo;ω&rsquo;)</p>
-      
-      <p>
-        <a href="https://ngkz.github.io/2012/12/seccon-2012-yokohama-quals-writeup/" class="postShorten-excerpt_link link">続きを読む</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://ngkz.github.io/1/01/rotten-contact/">
-          
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="0001-01-01T00:00:00Z">
-        
-  
-  
-  
-  
-    0001-01-01
-  
-
-      </time>
-    
-    
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        Document Title 9時間くらいでフリーズしたので怪しいメモリを取り外した
-      
-      <p>
-        <a href="https://ngkz.github.io/1/01/rotten-contact/" class="postShorten-excerpt_link link">続きを読む</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-          
-  <div class="pagination-bar">
-    <ul class="pagination">
-      
-        
-          <li class="pagination-prev">
-            <a class="btn btn--default btn--small" href="https://ngkz.github.io/post/page/16/">
-              <i class="fa fa-angle-left text-base icon-mr"></i>
-              <span>新しい投稿</span>
-            </a>
-          </li>
-        
-        
-      
-      <li class="pagination-number">page 17 of 17</li>
-    </ul>
-  </div>
-
-
-        </section>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">ngkz.log</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://ngkz.github.io/" property="cc:attributionName" rel="cc:attributionURL">Kazutoshi Noguchi</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.

@@ -28,12 +28,32 @@
   </url>
   
   <url>
-    <loc>https://ngkz.github.io/categories/howto/</loc>
-    <lastmod>2019-06-09T17:34:45+09:00</lastmod>
+    <loc>https://ngkz.github.io/categories/failure/</loc>
+    <lastmod>2019-09-23T07:30:10+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ngkz.github.io/tags/gcc/</loc>
+    <lastmod>2019-09-23T07:30:10+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ngkz.github.io/2019/09/avr-development-fail/</loc>
+    <lastmod>2019-09-23T07:30:10+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ngkz.github.io/tags/platformio/</loc>
+    <lastmod>2019-09-23T07:30:10+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://ngkz.github.io/tags/</loc>
+    <lastmod>2019-09-23T07:30:10+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ngkz.github.io/categories/howto/</loc>
     <lastmod>2019-06-09T17:34:45+09:00</lastmod>
   </url>
   
