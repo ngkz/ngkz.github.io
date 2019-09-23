@@ -46,7 +46,7 @@ platformioのATtiny系マイコンのボード定義にはバグがある。ボ�
    ```sh
    (ATtiny85の場合)
    PROJECT $ mkdir boards
-   PROJECT $ cat <<'EOS' >hoge.json
+   PROJECT $ cat <<'EOS' >boards/hoge.json
    {
      "build": {
        "core": "tiny",
