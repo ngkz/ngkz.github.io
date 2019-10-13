@@ -49,13 +49,13 @@ bitcoin
 ## スキル
 
 プログラミング言語
-: C, Python, C++, Assembly(x86, x86-64, PIC, ARM, etc.), Rust, Go, JavaScript, CoffeeScript, Shell script(POSIX, bash), Java, HTML, PHP, CSS, VBA
+: C, Python, C++, Assembly(x86, x86-64, PIC, ARM, AVR, etc.), Rust, Go, JavaScript, CoffeeScript, Shell script(POSIX, bash), Java, HTML, PHP, CSS, VBA
 
 触ったことのあるフレームワーク
 : Django, Flask, Express, Electron, nw.js
 
 インフラ
-: Linux, AppArmor, Docker, Apache, Nginx, Postfix, Node.js, Ansible, Zabbix, Chef, SNMP, OpenSSH, OpenVPN, systemd, AIDE, munin, Nutanix (CE, 商用版両方), Microsoft Deployment Toolkit
+: Linux, Windows Server, AppArmor, Docker, Apache, Nginx, Postfix, Node.js, Ansible, Zabbix, Chef, SNMP, OpenSSH, OpenVPN, SoftEther, systemd, AIDE, Zabbix, Nutanix (CE, 商用版両方), Microsoft Deployment Toolkit
 
 ハッキング
 : Pwning, Reverse Engineering, Web hacking, Forensics
@@ -64,7 +64,7 @@ bitcoin
 : 電気工事, 電子工作, Verilog HDL, 日曜大工
 
 その他
-: IBM PC 互換機の OS 開発
+: OS開発, 組み込みプログラミング
 
 ## 主な経歴
 
