@@ -5,16 +5,14 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.61.0 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="Windowsが入った内蔵HDDをUSB経由で接続し、そこから起動しようとするとSTOPエラーで失敗するが、レジストリのHKEY_LOCAL_MACHINE\SYSTEMのHardwareConfigキー中のBootDriverFlagsを0x14に設定すると、USBストレージから起動できるようになる。
-
 ただし、このHDDを使ってWindowsを起動すると、接続したマシンのUEFIのブートエントリにWindowsが登録されてしまう。">
 
 
 <meta property="og:description" content="Windowsが入った内蔵HDDをUSB経由で接続し、そこから起動しようとするとSTOPエラーで失敗するが、レジストリのHKEY_LOCAL_MACHINE\SYSTEMのHardwareConfigキー中のBootDriverFlagsを0x14に設定すると、USBストレージから起動できるようになる。
-
 ただし、このHDDを使ってWindowsを起動すると、接続したマシンのUEFIのブートエントリにWindowsが登録されてしまう。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="内蔵HDDに入ってるWindows 10をUSB HDDから起動できるようにする方法">
@@ -23,10 +21,8 @@
 <meta property="twitter:url" content="https://ngkz.github.io/2019/06/howto-boot-preinstalled-windows-from-usb-hdd/">
 <meta property="og:site_name" content="ngkz.log">
 <meta property="og:description" content="Windowsが入った内蔵HDDをUSB経由で接続し、そこから起動しようとするとSTOPエラーで失敗するが、レジストリのHKEY_LOCAL_MACHINE\SYSTEMのHardwareConfigキー中のBootDriverFlagsを0x14に設定すると、USBストレージから起動できるようになる。
-
 ただし、このHDDを使ってWindowsを起動すると、接続したマシンのUEFIのブートエントリにWindowsが登録されてしまう。">
 <meta name="twitter:description" content="Windowsが入った内蔵HDDをUSB経由で接続し、そこから起動しようとするとSTOPエラーで失敗するが、レジストリのHKEY_LOCAL_MACHINE\SYSTEMのHardwareConfigキー中のBootDriverFlagsを0x14に設定すると、USBストレージから起動できるようになる。
-
 ただし、このHDDを使ってWindowsを起動すると、接続したマシンのUEFIのブートエントリにWindowsが登録されてしまう。">
 <meta property="og:locale" content="ja">
 
@@ -121,7 +117,7 @@
         </a>
         <h4 class="sidebar-profile-name">Kazutoshi Noguchi</h4>
         
-          <h5 class="sidebar-profile-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</h5>
+          <h5 class="sidebar-profile-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</h5>
         
       </div>
     
@@ -255,7 +251,6 @@
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
               <p>Windowsが入った内蔵HDDをUSB経由で接続し、そこから起動しようとするとSTOPエラーで失敗するが、レジストリの<code>HKEY_LOCAL_MACHINE\SYSTEM</code>の<code>HardwareConfig</code>キー中の<code>BootDriverFlags</code>を<code>0x14</code>に設定すると、USBストレージから起動できるようになる。</p>
-
 <p>ただし、このHDDを使ってWindowsを起動すると、接続したマシンのUEFIのブートエントリにWindowsが登録されてしまう。</p>
               
             </div>
@@ -467,7 +462,7 @@
     
     <h4 id="about-card-name">Kazutoshi Noguchi</h4>
     
-      <div id="about-card-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</div>
+      <div id="about-card-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</div>
     
     
       <div id="about-card-job">

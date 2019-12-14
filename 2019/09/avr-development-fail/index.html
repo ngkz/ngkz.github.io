@@ -5,38 +5,26 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.61.0 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="AVRでファンコントローラを作っていたら、いろいろなところで嵌って何時間も無駄にしたので、後学のために何があったかを書いておく。
-
 GCC拡張インラインアセンブラ構文の嵌りどころ
-
 GCCの拡張インラインアセンブラ構文を使うときはマニュアルをよく読まないとこういう目にあう
-
 入力オペランドと出力オペランドは同じレジスタに割り当てられることがある
-
 同じレジスタに割り当てられるとまずい場合は出力オペランドの制約に&amp;をつける。付け忘れていたら最適化をかけたときに入力と出力が同じレジスタに割り当てられて嵌った。
-
-NG: asm volatile(&quot;...&quot; : [output] &quot;=r&quot; (...) : [input] &quot;r&quot; (...)); 
+NG: asm volatile(&quot;...&quot; : [output] &quot;=r&quot; (...) : [input] &quot;r&quot; (...));
 OK: asm volatile(&quot;...&quot; : [output] &quot;=&amp;r&quot; (...) : [input] &quot;r&quot; (...));
-
 入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる">
 
 
 <meta property="og:description" content="AVRでファンコントローラを作っていたら、いろいろなところで嵌って何時間も無駄にしたので、後学のために何があったかを書いておく。
-
 GCC拡張インラインアセンブラ構文の嵌りどころ
-
 GCCの拡張インラインアセンブラ構文を使うときはマニュアルをよく読まないとこういう目にあう
-
 入力オペランドと出力オペランドは同じレジスタに割り当てられることがある
-
 同じレジスタに割り当てられるとまずい場合は出力オペランドの制約に&amp;をつける。付け忘れていたら最適化をかけたときに入力と出力が同じレジスタに割り当てられて嵌った。
-
-NG: asm volatile(&quot;...&quot; : [output] &quot;=r&quot; (...) : [input] &quot;r&quot; (...)); 
+NG: asm volatile(&quot;...&quot; : [output] &quot;=r&quot; (...) : [input] &quot;r&quot; (...));
 OK: asm volatile(&quot;...&quot; : [output] &quot;=&amp;r&quot; (...) : [input] &quot;r&quot; (...));
-
 入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる">
 <meta property="og:type" content="article">
 <meta property="og:title" content="GCCインラインアセンブラとplatformioの嵌りどころ">
@@ -45,32 +33,20 @@ OK: asm volatile(&quot;...&quot; : [output] &quot;=&amp;r&quot; (...) : [input] 
 <meta property="twitter:url" content="https://ngkz.github.io/2019/09/avr-development-fail/">
 <meta property="og:site_name" content="ngkz.log">
 <meta property="og:description" content="AVRでファンコントローラを作っていたら、いろいろなところで嵌って何時間も無駄にしたので、後学のために何があったかを書いておく。
-
 GCC拡張インラインアセンブラ構文の嵌りどころ
-
 GCCの拡張インラインアセンブラ構文を使うときはマニュアルをよく読まないとこういう目にあう
-
 入力オペランドと出力オペランドは同じレジスタに割り当てられることがある
-
 同じレジスタに割り当てられるとまずい場合は出力オペランドの制約に&amp;をつける。付け忘れていたら最適化をかけたときに入力と出力が同じレジスタに割り当てられて嵌った。
-
-NG: asm volatile(&quot;...&quot; : [output] &quot;=r&quot; (...) : [input] &quot;r&quot; (...)); 
+NG: asm volatile(&quot;...&quot; : [output] &quot;=r&quot; (...) : [input] &quot;r&quot; (...));
 OK: asm volatile(&quot;...&quot; : [output] &quot;=&amp;r&quot; (...) : [input] &quot;r&quot; (...));
-
 入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる">
 <meta name="twitter:description" content="AVRでファンコントローラを作っていたら、いろいろなところで嵌って何時間も無駄にしたので、後学のために何があったかを書いておく。
-
 GCC拡張インラインアセンブラ構文の嵌りどころ
-
 GCCの拡張インラインアセンブラ構文を使うときはマニュアルをよく読まないとこういう目にあう
-
 入力オペランドと出力オペランドは同じレジスタに割り当てられることがある
-
 同じレジスタに割り当てられるとまずい場合は出力オペランドの制約に&amp;をつける。付け忘れていたら最適化をかけたときに入力と出力が同じレジスタに割り当てられて嵌った。
-
-NG: asm volatile(&quot;...&quot; : [output] &quot;=r&quot; (...) : [input] &quot;r&quot; (...)); 
+NG: asm volatile(&quot;...&quot; : [output] &quot;=r&quot; (...) : [input] &quot;r&quot; (...));
 OK: asm volatile(&quot;...&quot; : [output] &quot;=&amp;r&quot; (...) : [input] &quot;r&quot; (...));
-
 入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる">
 <meta property="og:locale" content="ja">
 
@@ -167,7 +143,7 @@ OK: asm volatile(&quot;...&quot; : [output] &quot;=&amp;r&quot; (...) : [input] 
         </a>
         <h4 class="sidebar-profile-name">Kazutoshi Noguchi</h4>
         
-          <h5 class="sidebar-profile-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</h5>
+          <h5 class="sidebar-profile-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</h5>
         
       </div>
     
@@ -301,86 +277,65 @@ OK: asm volatile(&quot;...&quot; : [output] &quot;=&amp;r&quot; (...) : [input] 
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
               <p>AVRでファンコントローラを作っていたら、いろいろなところで嵌って何時間も無駄にしたので、後学のために何があったかを書いておく。</p>
-
-<h2 id="gcc拡張インラインアセンブラ構文の嵌りどころ">GCC拡張インラインアセンブラ構文の嵌りどころ</h2>
-
+<h2 id="gcc">GCC拡張インラインアセンブラ構文の嵌りどころ</h2>
 <p>GCCの拡張インラインアセンブラ構文を使うときはマニュアルをよく読まないとこういう目にあう</p>
-
-<h3 id="入力オペランドと出力オペランドは同じレジスタに割り当てられることがある">入力オペランドと出力オペランドは同じレジスタに割り当てられることがある</h3>
-
+<h3 id="heading">入力オペランドと出力オペランドは同じレジスタに割り当てられることがある</h3>
 <p>同じレジスタに割り当てられるとまずい場合は出力オペランドの制約に<code>&amp;</code>をつける。付け忘れていたら最適化をかけたときに入力と出力が同じレジスタに割り当てられて嵌った。</p>
-
-<p>NG: <code>asm volatile(&quot;...&quot; : [output] &quot;=r&quot; (...) : [input] &quot;r&quot; (...));</code> <br />
+<p>NG: <code>asm volatile(&quot;...&quot; : [output] &quot;=r&quot; (...) : [input] &quot;r&quot; (...));</code><br>
 OK: <code>asm volatile(&quot;...&quot; : [output] &quot;=&amp;r&quot; (...) : [input] &quot;r&quot; (...));</code></p>
-
-<h3 id="入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる">入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる</h3>
-
-<p>インラインアセンブラ中で入力オペランドを書き換える場合は、同じレジスタを出力オペランドにも割り当てておかないと最適化で破壊されることがある。 (<a href="https://stackoverflow.com/questions/48381184/can-i-modify-input-operands-in-gcc-inline-assembly">https://stackoverflow.com/questions/48381184/can-i-modify-input-operands-in-gcc-inline-assembly</a>)</p>
-
+<h3 id="heading-1">入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる</h3>
+<p>インラインアセンブラのコードが入力オペランドを割り当てたレジスタを破壊する場合は、同じレジスタを出力オペランドにも割り当てておかないと最適化で動作がおかしくなることがある。 (<a href="https://stackoverflow.com/questions/48381184/can-i-modify-input-operands-in-gcc-inline-assembly">https://stackoverflow.com/questions/48381184/can-i-modify-input-operands-in-gcc-inline-assembly</a>)</p>
 <p>インラインアセンブラを書いた関数がループ中にインライン展開されたときに、入力オペランドの初期化処理がループの外に移動されて、2回目以降に処理がおかしくなったことでこれに気づいた。</p>
-
-<p>NG: <code>asm volatile(&quot;(inputを変更するコード)&quot; : : [input] &quot;r&quot; (...));</code> <br />
+<p>NG: <code>asm volatile(&quot;(inputを破壊するコード)&quot; : : [input] &quot;r&quot; (...));</code><br>
 OK:</p>
-
 <pre><code>uint8_t dummy;
 asm volatile(&quot;...&quot; : &quot;=r&quot; (dummy) : [input] &quot;0&quot; (...)); //inputの制約の&quot;0&quot;は0番目の出力オペランド(&quot;=r&quot; (dummy))と同じレジスタを割り当てるという意味
-</code></pre>
-
-<h2 id="platformioの嵌りどころ">platformioの嵌りどころ</h2>
-
-<h3 id="attiny系のマイコンで-pio-run-t-uploadeep-するとプログラムが消去される">ATtiny系のマイコンで<code>pio run -t uploadeep</code>するとプログラムが消去される</h3>
-
-<p>platformioのATtiny系マイコンのボード定義にはバグがある。ボード定義中の<code>&quot;extra_flags&quot;: &quot;-e&quot;</code>が原因で、avrdudeを実行するときに必ず<code>-e</code>(Perform a chip erase)オプションが渡されてしまい、EEPROMの書き込みとヒューズの設定を行うときにもチップ全体が消去されてしまう。</p>
-
+</code></pre><h2 id="platformio">platformioの嵌りどころ</h2>
+<h3 id="attinypio-run--t-uploadeep">ATtiny系のマイコンで<code>pio run -t uploadeep</code>するとプログラムが消去される</h3>
+<p>platformioのATtiny系マイコンのボード定義にはバグがあり、ボード定義中の<code>&quot;extra_flags&quot;: &quot;-e&quot;</code>が原因で、avrdudeを実行するときに必ず<code>-e</code>(Perform a chip erase)オプションが渡されてしまい、EEPROMの書き込みとヒューズの設定を行うときにプログラムが消去されてしまう。</p>
 <p>バグトラッカーに報告があるがすぐには修正されなさそうな雰囲気なので、下の方法で回避している。</p>
-
 <ol>
-<li><p>プロジェクトのディレクトリにboardsディレクトリを作り、その中に<code>&quot;extra_flags&quot;: &quot;-e&quot;</code>を削除したボード定義を作る</p>
-
-<pre><code class="language-sh">(ATtiny85の場合)
+<li>プロジェクトのディレクトリにboardsディレクトリを作り、その中に<code>&quot;extra_flags&quot;: &quot;-e&quot;</code>を削除したボード定義を作る
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#f92672">(</span>ATtiny85の場合<span style="color:#f92672">)</span>
 PROJECT $ mkdir boards
-PROJECT $ cat &lt;&lt;'EOS' &gt;boards/hoge.json
-{
- &quot;build&quot;: {
-   &quot;core&quot;: &quot;tiny&quot;,
-   &quot;extra_flags&quot;: &quot;-DARDUINO_AVR_ATTINYX5&quot;,
-   &quot;f_cpu&quot;: &quot;8000000L&quot;,
-   &quot;mcu&quot;: &quot;attiny85&quot;,
-   &quot;variant&quot;: &quot;tinyX5&quot;
- },
- &quot;frameworks&quot;: [
-   &quot;arduino&quot;
- ],
- &quot;name&quot;: &quot;HOGEHOGEHOGE&quot;,
- &quot;upload&quot;: {
-   &quot;maximum_ram_size&quot;: 512,
-   &quot;maximum_size&quot;: 8192,
-   &quot;protocol&quot;: &quot;usbtiny&quot;
- },
- &quot;url&quot;: &quot;https://HOGEHOGE&quot;,
- &quot;vendor&quot;: &quot;HOGEHOGEHOGE&quot;
-}
-EOS
-</code></pre></li>
-
-<li><p>platformio.iniを変更</p>
-
+PROJECT $ cat <span style="color:#e6db74">&lt;&lt;&#39;EOS&#39; &gt;boards/hoge.json
+</span><span style="color:#e6db74">{
+</span><span style="color:#e6db74">  &#34;build&#34;: {
+</span><span style="color:#e6db74">    &#34;core&#34;: &#34;tiny&#34;,
+</span><span style="color:#e6db74">    &#34;extra_flags&#34;: &#34;-DARDUINO_AVR_ATTINYX5&#34;,
+</span><span style="color:#e6db74">    &#34;f_cpu&#34;: &#34;8000000L&#34;,
+</span><span style="color:#e6db74">    &#34;mcu&#34;: &#34;attiny85&#34;,
+</span><span style="color:#e6db74">    &#34;variant&#34;: &#34;tinyX5&#34;
+</span><span style="color:#e6db74">  },
+</span><span style="color:#e6db74">  &#34;frameworks&#34;: [
+</span><span style="color:#e6db74">    &#34;arduino&#34;
+</span><span style="color:#e6db74">  ],
+</span><span style="color:#e6db74">  &#34;name&#34;: &#34;HOGEHOGEHOGE&#34;,
+</span><span style="color:#e6db74">  &#34;upload&#34;: {
+</span><span style="color:#e6db74">    &#34;maximum_ram_size&#34;: 512,
+</span><span style="color:#e6db74">    &#34;maximum_size&#34;: 8192,
+</span><span style="color:#e6db74">    &#34;protocol&#34;: &#34;usbtiny&#34;
+</span><span style="color:#e6db74">  },
+</span><span style="color:#e6db74">  &#34;url&#34;: &#34;https://HOGEHOGE&#34;,
+</span><span style="color:#e6db74">  &#34;vendor&#34;: &#34;HOGEHOGEHOGE&#34;
+</span><span style="color:#e6db74">}
+</span><span style="color:#e6db74">EOS</span>
+</code></pre></div></li>
+<li>platformio.iniを変更
 <pre><code>-[env:attiny85]
 +[env:hoge]
-platform = atmelavr
+ platform = atmelavr
 -board = attiny85
 +board = hoge
-upload_protocol = buspirate
-upload_flags =
-    -P$UPLOAD_PORT
-    -b$UPLOAD_SPEED
-upload_port = /dev/ttyUSB0
-upload_speed = 115200
+ upload_protocol = buspirate
+ upload_flags =
+     -P$UPLOAD_PORT
+     -b$UPLOAD_SPEED
+ upload_port = /dev/ttyUSB0
+ upload_speed = 115200
 +extra_scripts = extra_script.py
 </code></pre></li>
-
-<li><p>platformio.iniと同じディレクトリにextra_script.pyを作成し、プログラムの書き込み時だけChip Eraseオプションを渡すよう設定</p>
-
+<li>platformio.iniと同じディレクトリにextra_script.pyを作成し、プログラムの書き込み時だけChip Eraseオプションを渡すよう設定
 <pre><code>Import('env')
 env.Replace(UPLOADCMD='$UPLOADER $UPLOADERFLAGS -e -U flash:w:$SOURCES:i')
 </code></pre></li>
@@ -597,7 +552,7 @@ env.Replace(UPLOADCMD='$UPLOADER $UPLOADERFLAGS -e -U flash:w:$SOURCES:i')
     
     <h4 id="about-card-name">Kazutoshi Noguchi</h4>
     
-      <div id="about-card-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</div>
+      <div id="about-card-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</div>
     
     
       <div id="about-card-job">

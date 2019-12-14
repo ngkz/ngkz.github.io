@@ -18,7 +18,6 @@
       
       <guid>https://ngkz.github.io/2019/06/howto-boot-preinstalled-windows-from-usb-hdd/</guid>
       <description>&lt;p&gt;Windowsが入った内蔵HDDをUSB経由で接続し、そこから起動しようとするとSTOPエラーで失敗するが、レジストリの&lt;code&gt;HKEY_LOCAL_MACHINE\SYSTEM&lt;/code&gt;の&lt;code&gt;HardwareConfig&lt;/code&gt;キー中の&lt;code&gt;BootDriverFlags&lt;/code&gt;を&lt;code&gt;0x14&lt;/code&gt;に設定すると、USBストレージから起動できるようになる。&lt;/p&gt;
-
 &lt;p&gt;ただし、このHDDを使ってWindowsを起動すると、接続したマシンのUEFIのブートエントリにWindowsが登録されてしまう。&lt;/p&gt;</description>
     </item>
     

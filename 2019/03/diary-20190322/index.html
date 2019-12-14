@@ -5,17 +5,15 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.61.0 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="Linux from Scratch
-
 
 昨日ビルドしたbinutilsのバイナリがなぜか非PIEになっていた。 ログを採って調べてみたら、テスト前にHardeningフラグを取り除いてPIEを無効にしたときにMakefileのタイムスタンプが変わったのが原因で、バイナリがPIE無効で再リンクされてしまていたことが分かった。
 Makefileに細工するときにタイムスタンプが変わらないようにしたら解決した。
 MPFR,MPC,Shadowをインストールした。
 GCCをビルドしている途中
-
 
 nobodyユーザーに切り替えるとなぜか モードが666の/dev/ttyが読めなくなった。/の所有者が1000でモードが700になっていたのが原因だった。
 ほぼ全てのテストが失敗するので原因を調べてみたら、/dev/ptsのマウントオプションが間違っていて/dev/pts/ptmxのモードが000になっていたのが原因だった。マウントオプションにnewinstance,ptmxmode=0666を加えて解決。
@@ -28,12 +26,10 @@ nobodyユーザーに切り替えるとなぜか モードが666の/dev/ttyが�
 
 <meta property="og:description" content="Linux from Scratch
 
-
 昨日ビルドしたbinutilsのバイナリがなぜか非PIEになっていた。 ログを採って調べてみたら、テスト前にHardeningフラグを取り除いてPIEを無効にしたときにMakefileのタイムスタンプが変わったのが原因で、バイナリがPIE無効で再リンクされてしまていたことが分かった。
 Makefileに細工するときにタイムスタンプが変わらないようにしたら解決した。
 MPFR,MPC,Shadowをインストールした。
 GCCをビルドしている途中
-
 
 nobodyユーザーに切り替えるとなぜか モードが666の/dev/ttyが読めなくなった。/の所有者が1000でモードが700になっていたのが原因だった。
 ほぼ全てのテストが失敗するので原因を調べてみたら、/dev/ptsのマウントオプションが間違っていて/dev/pts/ptmxのモードが000になっていたのが原因だった。マウントオプションにnewinstance,ptmxmode=0666を加えて解決。
@@ -50,12 +46,10 @@ nobodyユーザーに切り替えるとなぜか モードが666の/dev/ttyが�
 <meta property="og:site_name" content="ngkz.log">
 <meta property="og:description" content="Linux from Scratch
 
-
 昨日ビルドしたbinutilsのバイナリがなぜか非PIEになっていた。 ログを採って調べてみたら、テスト前にHardeningフラグを取り除いてPIEを無効にしたときにMakefileのタイムスタンプが変わったのが原因で、バイナリがPIE無効で再リンクされてしまていたことが分かった。
 Makefileに細工するときにタイムスタンプが変わらないようにしたら解決した。
 MPFR,MPC,Shadowをインストールした。
 GCCをビルドしている途中
-
 
 nobodyユーザーに切り替えるとなぜか モードが666の/dev/ttyが読めなくなった。/の所有者が1000でモードが700になっていたのが原因だった。
 ほぼ全てのテストが失敗するので原因を調べてみたら、/dev/ptsのマウントオプションが間違っていて/dev/pts/ptmxのモードが000になっていたのが原因だった。マウントオプションにnewinstance,ptmxmode=0666を加えて解決。
@@ -66,12 +60,10 @@ nobodyユーザーに切り替えるとなぜか モードが666の/dev/ttyが�
 筋トレ">
 <meta name="twitter:description" content="Linux from Scratch
 
-
 昨日ビルドしたbinutilsのバイナリがなぜか非PIEになっていた。 ログを採って調べてみたら、テスト前にHardeningフラグを取り除いてPIEを無効にしたときにMakefileのタイムスタンプが変わったのが原因で、バイナリがPIE無効で再リンクされてしまていたことが分かった。
 Makefileに細工するときにタイムスタンプが変わらないようにしたら解決した。
 MPFR,MPC,Shadowをインストールした。
 GCCをビルドしている途中
-
 
 nobodyユーザーに切り替えるとなぜか モードが666の/dev/ttyが読めなくなった。/の所有者が1000でモードが700になっていたのが原因だった。
 ほぼ全てのテストが失敗するので原因を調べてみたら、/dev/ptsのマウントオプションが間違っていて/dev/pts/ptmxのモードが000になっていたのが原因だった。マウントオプションにnewinstance,ptmxmode=0666を加えて解決。
@@ -175,7 +167,7 @@ nobodyユーザーに切り替えるとなぜか モードが666の/dev/ttyが�
         </a>
         <h4 class="sidebar-profile-name">Kazutoshi Noguchi</h4>
         
-          <h5 class="sidebar-profile-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</h5>
+          <h5 class="sidebar-profile-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</h5>
         
       </div>
     
@@ -309,30 +301,25 @@ nobodyユーザーに切り替えるとなぜか モードが666の/dev/ttyが�
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
               <h2 id="linux-from-scratch">Linux from Scratch</h2>
-
 <ul>
-<li>昨日ビルドしたbinutilsのバイナリがなぜか非PIEになっていた。 ログを採って調べてみたら、テスト前にHardeningフラグを取り除いてPIEを無効にしたときにMakefileのタイムスタンプが変わったのが原因で、バイナリがPIE無効で再リンクされてしまていたことが分かった。<br />
+<li>昨日ビルドしたbinutilsのバイナリがなぜか非PIEになっていた。 ログを採って調べてみたら、テスト前にHardeningフラグを取り除いてPIEを無効にしたときにMakefileのタイムスタンプが変わったのが原因で、バイナリがPIE無効で再リンクされてしまていたことが分かった。<br>
 <a href="https://github.com/ngkz/my-lfs-setup/commit/84551e209d17e9220912b057dc1c56d1814e353e">Makefileに細工するときにタイムスタンプが変わらないようにしたら解決した</a>。</li>
 <li>MPFR,MPC,Shadowをインストールした。</li>
 <li>GCCをビルドしている途中
-
 <ul>
 <li>nobodyユーザーに切り替えるとなぜか モードが<code>666</code>の<code>/dev/tty</code>が読めなくなった。<code>/</code>の所有者が<code>1000</code>でモードが<code>700</code>になっていたのが原因だった。</li>
 <li>ほぼ全てのテストが失敗するので原因を調べてみたら、<code>/dev/pts</code>のマウントオプションが間違っていて<code>/dev/pts/ptmx</code>のモードが<code>000</code>になっていたのが原因だった。マウントオプションに<code>newinstance,ptmxmode=0666</code>を加えて解決。</li>
 <li><code>/dev/pts/ptmx</code>を直したら大体のテストは通るようになったが、まだ何十ものテストが失敗している。テストに数時間かかるのでデバッグにかなり手間がかかりそう。</li>
-</ul></li>
 </ul>
-
-<h2 id="筋トレ">筋トレ</h2>
-
+</li>
+</ul>
+<h2 id="heading">筋トレ</h2>
 <ul>
 <li>THE プレワークアウトを筋トレ1時間前に1スクープ摂取</li>
 <li>HMBを朝, トレーニング1時間前, 就寝前に1g摂取</li>
 <li>前日の睡眠 7:21 (1:07-8:34)</li>
 </ul>
-
 <p><strong>上半身プッシュ+腹筋</strong></p>
-
 <table>
 <thead>
 <tr>
@@ -342,7 +329,6 @@ nobodyユーザーに切り替えるとなぜか モードが666の/dev/ttyが�
 <th>備考</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>ローテーターカフのウォームアップ</td>
@@ -350,35 +336,30 @@ nobodyユーザーに切り替えるとなぜか モードが666の/dev/ttyが�
 <td></td>
 <td></td>
 </tr>
-
 <tr>
 <td>プッシュアップ</td>
 <td>3セット 自重 11回以上 → 膝つき</td>
 <td>↑10→自重で5 9→自重で5 7→自重で5</td>
 <td></td>
 </tr>
-
 <tr>
 <td>ダンベルショルダープレス</td>
 <td>2セット 25kg(10kg+シャフトx2) 13回以上 → ドロップ</td>
 <td>↑15 14→10kgで10→5kgで16→2.5kgで20</td>
 <td></td>
 </tr>
-
 <tr>
 <td>ダンベルフレンチプレス</td>
 <td>2セット 12.5kg(10kg+シャフト) 10回以上 → ドロップ</td>
 <td>↑15 15→7.5kgで12→5kgで14→2.5kgで47</td>
 <td></td>
 </tr>
-
 <tr>
 <td>ダンベルフライ</td>
 <td>2セット 20kg(7.5kg+シャフトx2) 17回以上 → ドロップ</td>
 <td>↑17 13→10kgで16</td>
 <td></td>
 </tr>
-
 <tr>
 <td>クランチ</td>
 <td>3セット 自重+10kg(7.5kg+シャフト)</td>
@@ -387,9 +368,7 @@ nobodyユーザーに切り替えるとなぜか モードが666の/dev/ttyが�
 </tr>
 </tbody>
 </table>
-
-<h2 id="その他">その他</h2>
-
+<h2 id="heading-1">その他</h2>
 <ul>
 <li>めずらしく祝日に休みになった</li>
 <li>晴れていたので超撥水コーティング剤をミラーとバックカメラに塗っていたら途中で薬剤がなくなった。最悪</li>
@@ -608,7 +587,7 @@ nobodyユーザーに切り替えるとなぜか モードが666の/dev/ttyが�
     
     <h4 id="about-card-name">Kazutoshi Noguchi</h4>
     
-      <div id="about-card-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</div>
+      <div id="about-card-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</div>
     
     
       <div id="about-card-job">

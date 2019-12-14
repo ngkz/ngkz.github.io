@@ -5,26 +5,30 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.61.0 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="Linux from Scratch
 
-
 lddが正常に動いていなかったのを直した
 
-
 rtlddirを/usr/libに設定したとき lddが64bitダイナミックリンカのパスとして /usr/lib64/ld-linux-x86_64.so.2 を使っていたのが原因だった。
+
 /usr/lib64から/usr/libへのシンボリックリンクを貼って解決
+
+
+
 
 ライセンス違反を解決
 
-
 大部分がCC-BY-NC-SA 2.0のLFS Bookからの引用になったのに、リポジトリのライセンスが互換性のないGPLv3のままになっていた。
+
 ライセンスをCC-BY-NC-SAに変更して解決
 
-Adjusting the Toolchain
 
+
+
+Adjusting the Toolchain
 
 /usr/lib32に必要な32bitライブラリへのリンクを貼るのを忘れていたため、32bitでコンパイルできなかったのを直した
 
@@ -35,21 +39,25 @@ Adjusting the Toolchain
 
 <meta property="og:description" content="Linux from Scratch
 
-
 lddが正常に動いていなかったのを直した
 
-
 rtlddirを/usr/libに設定したとき lddが64bitダイナミックリンカのパスとして /usr/lib64/ld-linux-x86_64.so.2 を使っていたのが原因だった。
+
 /usr/lib64から/usr/libへのシンボリックリンクを貼って解決
+
+
+
 
 ライセンス違反を解決
 
-
 大部分がCC-BY-NC-SA 2.0のLFS Bookからの引用になったのに、リポジトリのライセンスが互換性のないGPLv3のままになっていた。
+
 ライセンスをCC-BY-NC-SAに変更して解決
 
-Adjusting the Toolchain
 
+
+
+Adjusting the Toolchain
 
 /usr/lib32に必要な32bitライブラリへのリンクを貼るのを忘れていたため、32bitでコンパイルできなかったのを直した
 
@@ -64,21 +72,25 @@ Adjusting the Toolchain
 <meta property="og:site_name" content="ngkz.log">
 <meta property="og:description" content="Linux from Scratch
 
-
 lddが正常に動いていなかったのを直した
 
-
 rtlddirを/usr/libに設定したとき lddが64bitダイナミックリンカのパスとして /usr/lib64/ld-linux-x86_64.so.2 を使っていたのが原因だった。
+
 /usr/lib64から/usr/libへのシンボリックリンクを貼って解決
+
+
+
 
 ライセンス違反を解決
 
-
 大部分がCC-BY-NC-SA 2.0のLFS Bookからの引用になったのに、リポジトリのライセンスが互換性のないGPLv3のままになっていた。
+
 ライセンスをCC-BY-NC-SAに変更して解決
 
-Adjusting the Toolchain
 
+
+
+Adjusting the Toolchain
 
 /usr/lib32に必要な32bitライブラリへのリンクを貼るのを忘れていたため、32bitでコンパイルできなかったのを直した
 
@@ -87,21 +99,25 @@ Adjusting the Toolchain
 筋トレ">
 <meta name="twitter:description" content="Linux from Scratch
 
-
 lddが正常に動いていなかったのを直した
 
-
 rtlddirを/usr/libに設定したとき lddが64bitダイナミックリンカのパスとして /usr/lib64/ld-linux-x86_64.so.2 を使っていたのが原因だった。
+
 /usr/lib64から/usr/libへのシンボリックリンクを貼って解決
+
+
+
 
 ライセンス違反を解決
 
-
 大部分がCC-BY-NC-SA 2.0のLFS Bookからの引用になったのに、リポジトリのライセンスが互換性のないGPLv3のままになっていた。
+
 ライセンスをCC-BY-NC-SAに変更して解決
 
-Adjusting the Toolchain
 
+
+
+Adjusting the Toolchain
 
 /usr/lib32に必要な32bitライブラリへのリンクを貼るのを忘れていたため、32bitでコンパイルできなかったのを直した
 
@@ -203,7 +219,7 @@ Adjusting the Toolchain
         </a>
         <h4 class="sidebar-profile-name">Kazutoshi Noguchi</h4>
         
-          <h5 class="sidebar-profile-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</h5>
+          <h5 class="sidebar-profile-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</h5>
         
       </div>
     
@@ -337,45 +353,44 @@ Adjusting the Toolchain
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
               <h2 id="linux-from-scratch">Linux from Scratch</h2>
-
 <ul>
 <li>lddが正常に動いていなかったのを直した
-
 <ul>
-<li><code>rtlddir</code>を<code>/usr/lib</code>に設定したとき <code>ldd</code>が64bitダイナミックリンカのパスとして <code>/usr/lib64/ld-linux-x86_64.so.2</code> を使っていたのが原因だった。</li>
+<li><code>rtlddir</code>を<code>/usr/lib</code>に設定したとき <code>ldd</code>が64bitダイナミックリンカのパスとして <code>/usr/lib64/ld-linux-x86_64.so.2</code> を使っていたのが原因だった。
+<ul>
 <li><code>/usr/lib64</code>から<code>/usr/lib</code>へのシンボリックリンクを貼って解決</li>
-</ul></li>
+</ul>
+</li>
+</ul>
+</li>
 <li>ライセンス違反を解決
-
 <ul>
-<li>大部分がCC-BY-NC-SA 2.0のLFS Bookからの引用になったのに、リポジトリのライセンスが互換性のないGPLv3のままになっていた。</li>
+<li>大部分がCC-BY-NC-SA 2.0のLFS Bookからの引用になったのに、リポジトリのライセンスが互換性のないGPLv3のままになっていた。
+<ul>
 <li>ライセンスをCC-BY-NC-SAに変更して解決</li>
-</ul></li>
+</ul>
+</li>
+</ul>
+</li>
 <li>Adjusting the Toolchain
-
 <ul>
 <li><code>/usr/lib32</code>に必要な32bitライブラリへのリンクを貼るのを忘れていたため、32bitでコンパイルできなかったのを直した</li>
-</ul></li>
 </ul>
-
-<h2 id="筋トレ">筋トレ</h2>
-
+</li>
+</ul>
+<h2 id="heading">筋トレ</h2>
 <ul>
 <li>THE プレワークアウトを筋トレ30分前に1スクープ摂取</li>
 <li>HMBを昼, トレーニング3時間前, 就寝前に1g摂取</li>
 <li>前日の睡眠 7:44 (23:20-7:23)
-
 <ul>
 <li>枕の空気が抜けてよく眠れなかった</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <p><strong>上半身プッシュ+腹筋</strong></p>
-
 <p>22:19-22:58 39分</p>
-
 <p>プッシュアップの注意: 手の幅は肩より少し広く, 脇を開けない, 頂点まで行ったらさらに持ちあげる, 肩甲骨を寄せる, 大胸筋を意識する</p>
-
 <table>
 <thead>
 <tr>
@@ -385,7 +400,6 @@ Adjusting the Toolchain
 <th>備考</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>ローテーターカフのウォームアップ</td>
@@ -393,35 +407,30 @@ Adjusting the Toolchain
 <td></td>
 <td>時間がないので省略</td>
 </tr>
-
 <tr>
 <td>プッシュアップ</td>
 <td>3セット 自重 11回以上 → 膝つき</td>
 <td>↓9.5→自重で4 5→自重で2 4.5→自重で2.5</td>
 <td></td>
 </tr>
-
 <tr>
 <td>ダンベルショルダープレス</td>
 <td>2セット 25kg(10kg+シャフトx2) 14回以上 → ドロップ</td>
 <td>↓12 7→10kgで12</td>
 <td></td>
 </tr>
-
 <tr>
 <td>ダンベルフレンチプレス</td>
 <td>2セット 12.5kg(10kg+シャフト) 15回以上 → ドロップ</td>
 <td>↓9 7→5kgで19</td>
 <td></td>
 </tr>
-
 <tr>
 <td>ダンベルフライ</td>
 <td>2セット 20kg(7.5kg+シャフトx2) 17回以上 → ドロップ</td>
 <td></td>
 <td>時間がないので省略</td>
 </tr>
-
 <tr>
 <td>ツイストクランチ</td>
 <td>3セット 自重+5kg</td>
@@ -430,20 +439,18 @@ Adjusting the Toolchain
 </tr>
 </tbody>
 </table>
-
-<h2 id="その他">その他</h2>
-
+<h2 id="heading-1">その他</h2>
 <ul>
 <li>空気枕に見えないほど小さな穴が空いたみたいで、寝ている途中に空気が抜けてしまった。修正用のパッチはあるけど、空気が抜けるのがゆっくりすぎてどこから漏れているか分からない。
-
 <ul>
 <li>幸い空気枕はあと2個あるのでそれを使うことにする。</li>
-</ul></li>
+</ul>
+</li>
 <li>Bus Pirateが届いた
-
 <ul>
 <li>動作確認とファームウェアアップデートのためにwikiを読んでみたら、Bus Pirateの開発は放棄されただとか、v5.1以降ファームウェアが大きくなりすぎてBus Pirate v3のメモリに入らなくなったとか書いてあった。FT232Hにしときゃよかった</li>
-</ul></li>
+</ul>
+</li>
 </ul>
               
             </div>
@@ -657,7 +664,7 @@ Adjusting the Toolchain
     
     <h4 id="about-card-name">Kazutoshi Noguchi</h4>
     
-      <div id="about-card-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</div>
+      <div id="about-card-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</div>
     
     
       <div id="about-card-job">

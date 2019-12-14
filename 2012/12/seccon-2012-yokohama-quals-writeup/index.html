@@ -5,16 +5,13 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.61.0 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="SECCON CTF 横浜大会にチーム 0x0として参加しました。
 チームメンバーは nash氏、wasao氏、waidotto氏、nullmineral氏と私です。
-
 成績
-
 score: たぶん8120
-
 
 
  
@@ -38,9 +35,7 @@ score: たぶん8120
   
 
 
-
-
-
+\
 
 
  
@@ -62,7 +57,6 @@ score: たぶん8120
    
     賞状 第三位
   
-
 
 
 
@@ -71,11 +65,8 @@ score: たぶん8120
 
 <meta property="og:description" content="SECCON CTF 横浜大会にチーム 0x0として参加しました。
 チームメンバーは nash氏、wasao氏、waidotto氏、nullmineral氏と私です。
-
 成績
-
 score: たぶん8120
-
 
 
  
@@ -99,9 +90,7 @@ score: たぶん8120
   
 
 
-
-
-
+\
 
 
  
@@ -123,7 +112,6 @@ score: たぶん8120
    
     賞状 第三位
   
-
 
 
 
@@ -136,11 +124,8 @@ score: たぶん8120
 <meta property="og:site_name" content="ngkz.log">
 <meta property="og:description" content="SECCON CTF 横浜大会にチーム 0x0として参加しました。
 チームメンバーは nash氏、wasao氏、waidotto氏、nullmineral氏と私です。
-
 成績
-
 score: たぶん8120
-
 
 
  
@@ -164,9 +149,7 @@ score: たぶん8120
   
 
 
-
-
-
+\
 
 
  
@@ -188,18 +171,14 @@ score: たぶん8120
    
     賞状 第三位
   
-
 
 
 
 ✌(&lsquo;ω&rsquo;)">
 <meta name="twitter:description" content="SECCON CTF 横浜大会にチーム 0x0として参加しました。
 チームメンバーは nash氏、wasao氏、waidotto氏、nullmineral氏と私です。
-
 成績
-
 score: たぶん8120
-
 
 
  
@@ -223,9 +202,7 @@ score: たぶん8120
   
 
 
-
-
-
+\
 
 
  
@@ -247,7 +224,6 @@ score: たぶん8120
    
     賞状 第三位
   
-
 
 
 
@@ -347,7 +323,7 @@ score: たぶん8120
         </a>
         <h4 class="sidebar-profile-name">Kazutoshi Noguchi</h4>
         
-          <h5 class="sidebar-profile-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</h5>
+          <h5 class="sidebar-profile-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</h5>
         
       </div>
     
@@ -482,13 +458,10 @@ score: たぶん8120
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p><a href="http://www.seccon.jp/">SECCON CTF 横浜大会</a>にチーム 0x0として参加しました。<br />
+              <p><a href="http://www.seccon.jp/">SECCON CTF 横浜大会</a>にチーム 0x0として参加しました。<br>
 チームメンバーは nash氏、wasao氏、waidotto氏、nullmineral氏と私です。</p>
-
-<h2 id="成績">成績</h2>
-
+<h2 id="heading">成績</h2>
 <p>score: たぶん8120</p>
-
 
 
  
@@ -512,9 +485,7 @@ score: たぶん8120
   
 </div>
 
-
-<p></p>
-
+<p>\</p>
 
 
  
@@ -538,30 +509,20 @@ score: たぶん8120
   
 </div>
 
-
-<p><br />
+<p><br>
 ✌(&lsquo;ω&rsquo;)</p>
-
-<h2 id="解けた問題の解説">解けた問題の解説</h2>
-
-<h3 id="パスワードを答えよ-binary">パスワードを答えよ (Binary)</h3>
-
+<h2 id="heading-1">解けた問題の解説</h2>
+<h3 id="-binary">パスワードを答えよ (Binary)</h3>
 <p>問題ページにあるzipファイルを解凍するとtlscb-iwa.exeが出てくる。</p>
-
 <pre><code>$ file tlscb-iwa.exe
 tlscb-iwa.exe: PE32 executable (console) Intel 80386, for MS Windows
 </code></pre>
-
-<p></p>
-
+<p>\</p>
 <p>OllyDbgで実行すると、<a href="http://www.netagent-blog.jp/archives/51735398.html">エントリポイントに到達する前に TLS
 Callbacksでコードを実行している</a>ことが分かります。</p>
-
-<p><br />
+<p><br>
 IDA に食わせると TlsCallbacksという怪しい配列があることが分かります。</p>
-
-<p>この配列の関数が スレッドの起動時と終了時に呼ばれます。</p>
-
+<p>この配列の関数が スレッドの起動時と終了時に呼ばれます。\</p>
 <pre><code>.rdata:0040610C TlsCallbacks    dd offset TlsCallback_0_copy_commandline
 .rdata:0040610C                                         ; DATA XREF: .rdata:TlsCallbacks_ptr.o
 .rdata:00406110                 dd offset TlsCallback_3_encode
@@ -571,11 +532,8 @@ IDA に食わせると TlsCallbacksという怪しい配列があることが分
 .rdata:00406120                 dd offset TlsCallback_5_check
 .rdata:00406124                 dd 0
 </code></pre>
-
-<p></p>
-
+<p>\</p>
 <p>これらの関数を読み進めていくと、</p>
-
 <ul>
 <li>TlsCallback_0では コマンドラインを取得してバッファにコピー</li>
 <li>TlsCallback_3では 256バイトのバイト列(以下encval)を使って
@@ -584,11 +542,8 @@ IDA に食わせると TlsCallbacksという怪しい配列があることが分
 <li>TlsCallback_5では TlsCallback_3
 とTlsCallback_4をさらに実行した後、バイト列(以下checkval)とバッファが一致していたら正解とする</li>
 </ul>
-
 <p>ことが分かる。</p>
-
 <p>つまり、checkvalから入力を逆算すると答えが分かる。</p>
-
 <pre><code>checkval = [0xd4, 0x46, 0xf0, 0x4f, 0xb6, 3, 6, 0xaa, 0xfe, 0x31, 0xae, 0x8a]
 encval = open(&quot;tlscb-iwa.exe&quot;).read()[0x6a00:0x6a00 + 256]
 xorval = [0xab, 0xcd, 0xef]
@@ -611,21 +566,14 @@ callback_reverse3()
 
 print &quot;&quot;.join([chr(c) for c in checkval])
 </code></pre>
-
-<p>答えは「7LSCaLL13aCK」</p>
-
+<p>答えは「7LSCaLL13aCK」\</p>
 <h3 id="find-the-key-network">Find the key. (Network)</h3>
-
 <p>USB通信のキャプチャからkeyを取り出す問題。</p>
-
-<p></p>
-
+<p>\</p>
 <pre><code>$ file 7d157d658655465f35a6e06fc95b1446 
 7d157d658655465f35a6e06fc95b1446: tcpdump capture file (little-endian) - version 2.4, capture length 65535)
 </code></pre>
-
-<p></p>
-
+<p>\</p>
 
 
  
@@ -651,7 +599,6 @@ print &quot;&quot;.join([chr(c) for c in checkval])
 
 
 
-
  
   
   
@@ -673,20 +620,14 @@ print &quot;&quot;.join([chr(c) for c in checkval])
   
 </div>
 
-
-<p></p>
-
-<p></p>
-
+<p>\</p>
+<p>\</p>
 <p>Wiresharkでパケットを眺めてみると、
 USBメモリとの通信をキャプチャしたものであることと、 </p>
-
 <p>SCSI Read パケットで LBAとセクタ数を指定して read要求をし、 直後のSCSI
 Data In パケットでその結果を受け取っていることが分かる。</p>
-
 <p>Mass
 Storageのプロトコルを調べるのが面倒なので、かなり適当な方法でパケットをパースしてディスクイメージを組立てた。</p>
-
 <pre><code>#-*- coding: utf-8 -*-
 from struct import *
 from scapy.all import *
@@ -731,22 +672,14 @@ for pkt in pcap:
         lba = unpack('&gt;L', pkt.load[0x51:0x51 + 4])[0]
         skip = False
 </code></pre>
-
-<p></p>
-
+<p>\</p>
 <p>ディスクイメージをバイナリエディタで見ると最後の方に答えらしき文字列があることが分かる。</p>
-
 <p>答えは「Haiyore! Yuzuharatan!」でした。</p>
-
-<p></p>
-
+<p>\</p>
 <p>ちなみに、ディスクイメージの中身は↓こんな感じでした。</p>
-
 <p>$ sudo mount -t vfat -o
 loop,offset=4194304,rw,iocharset=utf8,codepage=932 disk.img mnt</p>
-
 <p>mnt$ ls -al</p>
-
 <pre><code>合計 1892
 drwxr-xr-x 2 root        root          32768  1月  1  1970 .
 drwxrwxr-x 3 superbacker superbacker    4096 12月 24 03:39 ..
@@ -754,11 +687,9 @@ drwxrwxr-x 3 superbacker superbacker    4096 12月 24 03:39 ..
 -rwxr-xr-x 1 root        root             21 10月  6 16:41 key.txt
 -rwxr-xr-x 1 root        root           4632  7月 16 01:56 やる夫.png
 </code></pre>
-
-<p>mnt$ cat key.txt<br />
-Haiyore! Yuzuharatan!</p>
-
-<p>mnt$ xdg-open dame.bmp<br />
+<p>mnt$ cat key.txt<br>
+Haiyore! Yuzuharatan!\</p>
+<p>mnt$ xdg-open dame.bmp<br>
 
 
  
@@ -782,8 +713,7 @@ Haiyore! Yuzuharatan!</p>
   
 </div>
 </p>
-
-<p>mnt$ xdg-open やる夫.png<br />
+<p>mnt$ xdg-open やる夫.png<br>
 
 
  
@@ -807,11 +737,8 @@ Haiyore! Yuzuharatan!</p>
   
 </div>
 </p>
-
-<p></p>
-
-<h4 id="別解">別解</h4>
-
+<p>\</p>
+<h4 id="heading-2">別解</h4>
 
 
  
@@ -835,20 +762,14 @@ Haiyore! Yuzuharatan!</p>
   
 </div>
 
-
-<p></p>
-
+<p>\</p>
 <p>strings→目grepすると、最後のほうに答えらしきものがあることが分かる。</p>
-
 <p>key.txtはサイズが小さいので、複数のセクタ もしくは
 パケットにまたがることはない。そのため、ディスクイメージを組み立てる必要はなかった。</p>
-
-<h3 id="動かした気になろう-binary">動かした気になろう (Binary)</h3>
-
+<h3 id="-binary-1">動かした気になろう (Binary)</h3>
 <p>問題文: 忘れた。
-&ldquo;ファイルが出力する最後の行を答えよ&rdquo;という内容だったと思う。<br />
-</p>
-
+&ldquo;ファイルが出力する最後の行を答えよ&quot;という内容だったと思う。<br>
+\</p>
 <pre><code>$ file mondai 
 mondai: ELF 32-bit MSB executable, PowerPC or cisco 4500, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.18, BuildID[sha1]=0x4d9acce3c74d7d3431fcf3a7d9651902e3b3aa09, with unknown capability 0x41000000 = 0x13676e75, with unknown capability 0x10000 = 0xb0401, not stripped
 
@@ -857,21 +778,14 @@ mondai: ELF 32-bit MSB executable, PowerPC or cisco 4500, version 1 (SYSV), dyna
 Hello Fukuoka
 Hello Kyutech
 </code></pre>
-
-<p></p>
-
+<p>\</p>
 <p>QEMUとPowerPC環境を使い、ファイルを実行すると文字列が出る。</p>
-
 <p>「Hello Kyutech」が答えでした。</p>
-
-<h2 id="反省点">反省点</h2>
-
+<h2 id="heading-3">反省点</h2>
 <p>Find the
 key.をstringsした時答えに気づかなかったため、時間がかかってしまった。</p>
-
 <p>もっと時間があればAccending Orderを解けたと思う。</p>
-
-<p></p>
+<p>\</p>
               
             </div>
           </div>
@@ -1082,7 +996,7 @@ key.をstringsした時答えに気づかなかったため、時間がかかっ
     
     <h4 id="about-card-name">Kazutoshi Noguchi</h4>
     
-      <div id="about-card-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</div>
+      <div id="about-card-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</div>
     
     
       <div id="about-card-job">

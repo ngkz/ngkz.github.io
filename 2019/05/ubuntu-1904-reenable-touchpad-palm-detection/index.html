@@ -5,41 +5,33 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.61.0 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="Ubuntu 19.04へアップグレードしたら、手のひら検知と入力中にタッチパッドを無効にする機能がオフになり、入力中にカーソルが勝手にあちこちに飛ぶようになってしまった。
-
 以下の手順で設定して、Xサーバーを再起動(再ログイン)すると再有効化できる。
-
 sudo -e /etc/X11/xorg.conf.d/90-libinput.conf
-
-
-Section &quot;InputClass&quot;
-    Identifier &quot;libinput touchpad catchall&quot;
-    MatchIsTouchpad &quot;on&quot;
-    MatchDevicePath &quot;/dev/input/event*&quot;
-    Driver &quot;libinput&quot;
-    Option &quot;Tapping&quot; &quot;True&quot;
-    Option &quot;DisableWhileTyping&quot; &quot;True&quot;
+Section &#34;InputClass&#34;
+    Identifier &#34;libinput touchpad catchall&#34;
+    MatchIsTouchpad &#34;on&#34;
+    MatchDevicePath &#34;/dev/input/event*&#34;
+    Driver &#34;libinput&#34;
+    Option &#34;Tapping&#34; &#34;True&#34;
+    Option &#34;DisableWhileTyping&#34; &#34;True&#34;
 EndSection
 ">
 
 
 <meta property="og:description" content="Ubuntu 19.04へアップグレードしたら、手のひら検知と入力中にタッチパッドを無効にする機能がオフになり、入力中にカーソルが勝手にあちこちに飛ぶようになってしまった。
-
 以下の手順で設定して、Xサーバーを再起動(再ログイン)すると再有効化できる。
-
 sudo -e /etc/X11/xorg.conf.d/90-libinput.conf
-
-
-Section &quot;InputClass&quot;
-    Identifier &quot;libinput touchpad catchall&quot;
-    MatchIsTouchpad &quot;on&quot;
-    MatchDevicePath &quot;/dev/input/event*&quot;
-    Driver &quot;libinput&quot;
-    Option &quot;Tapping&quot; &quot;True&quot;
-    Option &quot;DisableWhileTyping&quot; &quot;True&quot;
+Section &#34;InputClass&#34;
+    Identifier &#34;libinput touchpad catchall&#34;
+    MatchIsTouchpad &#34;on&#34;
+    MatchDevicePath &#34;/dev/input/event*&#34;
+    Driver &#34;libinput&#34;
+    Option &#34;Tapping&#34; &#34;True&#34;
+    Option &#34;DisableWhileTyping&#34; &#34;True&#34;
 EndSection
 ">
 <meta property="og:type" content="article">
@@ -49,35 +41,27 @@ EndSection
 <meta property="twitter:url" content="https://ngkz.github.io/2019/05/ubuntu-1904-reenable-touchpad-palm-detection/">
 <meta property="og:site_name" content="ngkz.log">
 <meta property="og:description" content="Ubuntu 19.04へアップグレードしたら、手のひら検知と入力中にタッチパッドを無効にする機能がオフになり、入力中にカーソルが勝手にあちこちに飛ぶようになってしまった。
-
 以下の手順で設定して、Xサーバーを再起動(再ログイン)すると再有効化できる。
-
 sudo -e /etc/X11/xorg.conf.d/90-libinput.conf
-
-
-Section &quot;InputClass&quot;
-    Identifier &quot;libinput touchpad catchall&quot;
-    MatchIsTouchpad &quot;on&quot;
-    MatchDevicePath &quot;/dev/input/event*&quot;
-    Driver &quot;libinput&quot;
-    Option &quot;Tapping&quot; &quot;True&quot;
-    Option &quot;DisableWhileTyping&quot; &quot;True&quot;
+Section &#34;InputClass&#34;
+    Identifier &#34;libinput touchpad catchall&#34;
+    MatchIsTouchpad &#34;on&#34;
+    MatchDevicePath &#34;/dev/input/event*&#34;
+    Driver &#34;libinput&#34;
+    Option &#34;Tapping&#34; &#34;True&#34;
+    Option &#34;DisableWhileTyping&#34; &#34;True&#34;
 EndSection
 ">
 <meta name="twitter:description" content="Ubuntu 19.04へアップグレードしたら、手のひら検知と入力中にタッチパッドを無効にする機能がオフになり、入力中にカーソルが勝手にあちこちに飛ぶようになってしまった。
-
 以下の手順で設定して、Xサーバーを再起動(再ログイン)すると再有効化できる。
-
 sudo -e /etc/X11/xorg.conf.d/90-libinput.conf
-
-
-Section &quot;InputClass&quot;
-    Identifier &quot;libinput touchpad catchall&quot;
-    MatchIsTouchpad &quot;on&quot;
-    MatchDevicePath &quot;/dev/input/event*&quot;
-    Driver &quot;libinput&quot;
-    Option &quot;Tapping&quot; &quot;True&quot;
-    Option &quot;DisableWhileTyping&quot; &quot;True&quot;
+Section &#34;InputClass&#34;
+    Identifier &#34;libinput touchpad catchall&#34;
+    MatchIsTouchpad &#34;on&#34;
+    MatchDevicePath &#34;/dev/input/event*&#34;
+    Driver &#34;libinput&#34;
+    Option &#34;Tapping&#34; &#34;True&#34;
+    Option &#34;DisableWhileTyping&#34; &#34;True&#34;
 EndSection
 ">
 <meta property="og:locale" content="ja">
@@ -169,7 +153,7 @@ EndSection
         </a>
         <h4 class="sidebar-profile-name">Kazutoshi Noguchi</h4>
         
-          <h5 class="sidebar-profile-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</h5>
+          <h5 class="sidebar-profile-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</h5>
         
       </div>
     
@@ -303,21 +287,17 @@ EndSection
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
               <p>Ubuntu 19.04へアップグレードしたら、手のひら検知と入力中にタッチパッドを無効にする機能がオフになり、入力中にカーソルが勝手にあちこちに飛ぶようになってしまった。</p>
-
 <p>以下の手順で設定して、Xサーバーを再起動(再ログイン)すると再有効化できる。</p>
-
-<pre><code class="language-sh">sudo -e /etc/X11/xorg.conf.d/90-libinput.conf
-</code></pre>
-
-<pre><code class="language-sh">Section &quot;InputClass&quot;
-    Identifier &quot;libinput touchpad catchall&quot;
-    MatchIsTouchpad &quot;on&quot;
-    MatchDevicePath &quot;/dev/input/event*&quot;
-    Driver &quot;libinput&quot;
-    Option &quot;Tapping&quot; &quot;True&quot;
-    Option &quot;DisableWhileTyping&quot; &quot;True&quot;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo -e /etc/X11/xorg.conf.d/90-libinput.conf
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">Section <span style="color:#e6db74">&#34;InputClass&#34;</span>
+    Identifier <span style="color:#e6db74">&#34;libinput touchpad catchall&#34;</span>
+    MatchIsTouchpad <span style="color:#e6db74">&#34;on&#34;</span>
+    MatchDevicePath <span style="color:#e6db74">&#34;/dev/input/event*&#34;</span>
+    Driver <span style="color:#e6db74">&#34;libinput&#34;</span>
+    Option <span style="color:#e6db74">&#34;Tapping&#34;</span> <span style="color:#e6db74">&#34;True&#34;</span>
+    Option <span style="color:#e6db74">&#34;DisableWhileTyping&#34;</span> <span style="color:#e6db74">&#34;True&#34;</span>
 EndSection
-</code></pre>
+</code></pre></div>
               
             </div>
           </div>
@@ -518,7 +498,7 @@ EndSection
     
     <h4 id="about-card-name">Kazutoshi Noguchi</h4>
     
-      <div id="about-card-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</div>
+      <div id="about-card-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</div>
     
     
       <div id="about-card-job">

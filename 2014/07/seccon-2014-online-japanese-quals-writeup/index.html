@@ -5,12 +5,11 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.61.0 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="0x0として参加しました。
 予選2位通過
-
 
 
  
@@ -39,7 +38,6 @@
 
 <meta property="og:description" content="0x0として参加しました。
 予選2位通過
-
 
 
  
@@ -74,7 +72,6 @@
 予選2位通過
 
 
-
  
   
   
@@ -99,7 +96,6 @@
 ※上のスクリーンショットを撮った後に@nolzeがPrint it!を解いている">
 <meta name="twitter:description" content="0x0として参加しました。
 予選2位通過
-
 
 
  
@@ -219,7 +215,7 @@
         </a>
         <h4 class="sidebar-profile-name">Kazutoshi Noguchi</h4>
         
-          <h5 class="sidebar-profile-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</h5>
+          <h5 class="sidebar-profile-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</h5>
         
       </div>
     
@@ -354,9 +350,8 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>0x0として参加しました。<br />
+              <p>0x0として参加しました。<br>
 予選2位通過</p>
-
 <p>
 
  
@@ -379,33 +374,23 @@
     <span class="caption">問題一覧</span>
   
 </div>
-<br />
+<br>
 ※上のスクリーンショットを撮った後に@nolzeがPrint it!を解いている</p>
-
-<h2 id="このパケットを解析せよ-ネットワーク-100pt">このパケットを解析せよ (ネットワーク 100pt)</h2>
-
+<h2 id="--100pt">このパケットを解析せよ (ネットワーク 100pt)</h2>
 <p>FTP通信のキャプチャ
 flag.txtにbase64エンコードされたflagが書かれている</p>
-
 <p>Flag: FLAG{F7P 15 N07 53CUR3}</p>
-
-<h2 id="ソーシャルハック-ネットワーク-300pt">ソーシャルハック？(ネットワーク 300pt)</h2>
-
+<h2 id="-300pt">ソーシャルハック？(ネットワーク 300pt)</h2>
 <p>画像ファイルのURLを渡すとそこにアクセスしてくる。(デフォルトのポート以外ではダメ)</p>
-
 <pre><code>153.120.82.112 - - [19/Jul/2014:15:26:05 +0900] &quot;HEAD **/img.jpg HTTP/1.1&quot; 404 204 &quot;-&quot; &quot;MyVNCpasswordIsVNCpass123&quot;
 </code></pre>
-
-<p></p>
-
+<p>\</p>
 <pre><code>PORT STATE SERVICE
 5901/tcp open vnc-1
 5902/tcp open vnc-2
 5903/tcp open vnc-3
 </code></pre>
-
 <p>接続元でVNCサーバーが動いているのでVNC viewer で接続するとflagが出てくる</p>
-
 
 
  
@@ -429,11 +414,8 @@ flag.txtにbase64エンコードされたflagが書かれている</p>
   
 </div>
 
-
-<h2 id="879-394-bytes-フォレンジック-100pt">879,394 bytes (フォレンジック 100pt)</h2>
-
+<h2 id="879394-bytes--100pt">879,394 bytes (フォレンジック 100pt)</h2>
 <p>あからさまにVFATなのだ!</p>
-
 
 
  
@@ -457,13 +439,9 @@ flag.txtにbase64エンコードされたflagが書かれている</p>
   
 </div>
 
-
 <p>ファイルサイズが879,394 bytesなエントリのファイル名がflag</p>
-
 <p>Flag: Chrysanthemum.jpg</p>
-
-<h2 id="捏造された契約書を暴け-フォレンジック-300pt">捏造された契約書を暴け (フォレンジック 300pt)</h2>
-
+<h2 id="--300pt">捏造された契約書を暴け (フォレンジック 300pt)\</h2>
 <pre><code>ある会社からSECCONが守秘義務に違反しているとの警告文書が届きました。しかし、SECCON はその会社とは過去に一切の取引がなく、そのような守秘義務契約書を結んだ記録はありません。
 
 相手方の会社は「原本は紙だったが、不慮の事故により消失してしまった。しかし、念のためTiffイメージとして電子化し保存しておいたデータがある」、という契約書の電子データ（Tiff画像）に含まれている印影などを元に、この守秘義務契約書が 2012年1月1日に締結されたも有効な文書であると主張しています。
@@ -476,12 +454,10 @@ flag.txtにbase64エンコードされたflagが書かれている</p>
 
 なお、回答は YYYY/MM/DD HH:MM:SS の形式で記入してください。 
 </code></pre>
-
-<p>autopsyでMFTエントリを探し、Tiff画像の元ファイル C:/機密保持契約書.docxを復元する。<br />
+<p>autopsyでMFTエントリを探し、Tiff画像の元ファイル C:/機密保持契約書.docxを復元する。<br>
 印鑑画像のExifの日付が答え。</p>
-
-<p>$ unzip vol1-meta39.docx<br />
-$ stirling word/media/image2.jpeg<br />
+<p>$ unzip vol1-meta39.docx<br>
+$ stirling word/media/image2.jpeg<br>
 
 
  
@@ -505,17 +481,12 @@ $ stirling word/media/image2.jpeg<br />
   
 </div>
 </p>
-
 <p>Flag: 2012/05/23 13:29:00</p>
-
-<h2 id="ダンプを追え-バイナリ-300pt">ダンプを追え！ (バイナリ 300pt)</h2>
-
+<h2 id="--300pt-1">ダンプを追え！ (バイナリ 300pt)</h2>
 <p>メモリダンプ dump.bin と シンボル情報 encrypt.nm
 が問題文に添付されている。</p>
-
 <p>$ strings dump.binAj,YV850 binaryflag.txtdump.bin
 $ cat encrypt.nm</p>
-
 <pre><code>00001400 T _start
 00001400 T _stext
 0000141a T ___r_exit
@@ -542,13 +513,9 @@ $ cat encrypt.nm</p>
 00001780 A _end
 00001780 B _estack
 </code></pre>
-
-<p>メモリダンプ中に &ldquo;V850 binary&rdquo;という文字列があるので、NEC V850のバイナリであることが分かる。</p>
-
+<p>メモリダンプ中に &ldquo;V850 binary&quot;という文字列があるので、NEC V850のバイナリであることが分かる。</p>
 <p>$ all-objdump -D -b binary -m v850 &ndash;adjust-vma 0x1400 dump.bin</p>
-
 <p>でメモリダンプを逆アセンブルして メモリマップと突き合わせながら読む</p>
-
 <pre><code>f = open(&quot;dump.bin&quot;, &quot;rb&quot;)
 f.seek(0x163c - 0x1400)
 e = f.read(64)
@@ -567,19 +534,14 @@ def decode(initial):
 for i in range(256):
     decode(i)
 </code></pre>
-
-<p></p>
-
+<p>\</p>
 <pre><code>...v)�tory850}�����������������������������������������������
 FLAG{Victory850}�����������������������������������������������
 EJMk6��tory850}�����������������������������������������������
 ...
 </code></pre>
-
-<h2 id="箱庭sqliチャレンジ-web-100pt">箱庭SQLiチャレンジ (Web 100pt)</h2>
-
+<h2 id="sqli-web-100pt">箱庭SQLiチャレンジ (Web 100pt)</h2>
 <p>単純なSQL Injection。DBエンジンはsqlite3</p>
-
 
 
  
@@ -603,9 +565,7 @@ EJMk6��tory850}��������������������
   
 </div>
 
-
 <p>やるだけ</p>
-
 <pre><code>' AND 1=0 union select name,NULL,NULL,NULL,NULL from sqlite_master --' AND 1=0 union select *,NULL,NULL,NULL,NULL from seccon --
 </code></pre>
               
@@ -818,7 +778,7 @@ EJMk6��tory850}��������������������
     
     <h4 id="about-card-name">Kazutoshi Noguchi</h4>
     
-      <div id="about-card-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</div>
+      <div id="about-card-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</div>
     
     
       <div id="about-card-job">

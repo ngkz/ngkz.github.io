@@ -17,14 +17,10 @@
       <pubDate>Sun, 09 Jun 2019 17:34:45 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/06/howto-etch-stainless-mug/</guid>
-      <description>&lt;h2 id=&#34;一ヶ月半前くらいの話&#34;&gt;一ヶ月半前くらいの話&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;一ヶ月半前くらいの話&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://imgur.com/a/dCvS5&#34;&gt;酢と塩と9V電池でステンレス鍋に目盛りをつける方法&lt;/a&gt;を知ったので、計量カップを追い出して旅行の荷物を減らすためにステンレスマグを計量カップ化してみた。&lt;/p&gt;
-
-&lt;h2 id=&#34;どうやるの&#34;&gt;どうやるの&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;どうやるの&lt;/h2&gt;
 &lt;p&gt;上のリンクの内容を要約すると&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;印をつけたい部分の周辺をマスキング&lt;/li&gt;
 &lt;li&gt;酢と塩を混ぜて綿棒の先につける&lt;/li&gt;
@@ -32,10 +28,8 @@
 &lt;li&gt;綿棒の先をエッチングしたい部分に押し付ける&lt;/li&gt;
 &lt;li&gt;シュワシュワという音がして数秒くらいで印が点く&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;自分の場合は酢にやさしい酢を使ったのと、印をつける面がヘアライン加工されていたせいか、9V電池では目盛りがつくのに時間がかかったので、電源電圧を12Vに上げて反応速度を上げた。&lt;/p&gt;
-
-&lt;h2 id=&#34;底で試す&#34;&gt;底で試す&lt;/h2&gt;</description>
+&lt;h2 id=&#34;heading-2&#34;&gt;底で試す&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -45,7 +39,6 @@
       
       <guid>https://ngkz.github.io/2019/06/howto-boot-preinstalled-windows-from-usb-hdd/</guid>
       <description>&lt;p&gt;Windowsが入った内蔵HDDをUSB経由で接続し、そこから起動しようとするとSTOPエラーで失敗するが、レジストリの&lt;code&gt;HKEY_LOCAL_MACHINE\SYSTEM&lt;/code&gt;の&lt;code&gt;HardwareConfig&lt;/code&gt;キー中の&lt;code&gt;BootDriverFlags&lt;/code&gt;を&lt;code&gt;0x14&lt;/code&gt;に設定すると、USBストレージから起動できるようになる。&lt;/p&gt;
-
 &lt;p&gt;ただし、このHDDを使ってWindowsを起動すると、接続したマシンのUEFIのブートエントリにWindowsが登録されてしまう。&lt;/p&gt;</description>
     </item>
     
@@ -56,21 +49,17 @@
       
       <guid>https://ngkz.github.io/2019/05/ubuntu-1904-reenable-touchpad-palm-detection/</guid>
       <description>&lt;p&gt;Ubuntu 19.04へアップグレードしたら、手のひら検知と入力中にタッチパッドを無効にする機能がオフになり、入力中にカーソルが勝手にあちこちに飛ぶようになってしまった。&lt;/p&gt;
-
 &lt;p&gt;以下の手順で設定して、Xサーバーを再起動(再ログイン)すると再有効化できる。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;sudo -e /etc/X11/xorg.conf.d/90-libinput.conf
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;Section &amp;quot;InputClass&amp;quot;
-    Identifier &amp;quot;libinput touchpad catchall&amp;quot;
-    MatchIsTouchpad &amp;quot;on&amp;quot;
-    MatchDevicePath &amp;quot;/dev/input/event*&amp;quot;
-    Driver &amp;quot;libinput&amp;quot;
-    Option &amp;quot;Tapping&amp;quot; &amp;quot;True&amp;quot;
-    Option &amp;quot;DisableWhileTyping&amp;quot; &amp;quot;True&amp;quot;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;sudo -e /etc/X11/xorg.conf.d/90-libinput.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;Section &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;InputClass&amp;#34;&lt;/span&gt;
+    Identifier &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;libinput touchpad catchall&amp;#34;&lt;/span&gt;
+    MatchIsTouchpad &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;on&amp;#34;&lt;/span&gt;
+    MatchDevicePath &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/dev/input/event*&amp;#34;&lt;/span&gt;
+    Driver &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;libinput&amp;#34;&lt;/span&gt;
+    Option &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Tapping&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;True&amp;#34;&lt;/span&gt;
+    Option &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;DisableWhileTyping&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;True&amp;#34;&lt;/span&gt;
 EndSection
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -80,12 +69,9 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/01/afwall-bt-tethering/</guid>
       <description>&lt;p&gt;AFWall+を有効にしていると、Bluetoothテザリングで接続したクライアントが通信できなくなるのをなんとかする。&lt;/p&gt;
-
-&lt;h2 id=&#34;原因&#34;&gt;原因&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;原因&lt;/h2&gt;
 &lt;p&gt;ログと検索エンジンで調べたところ、AFWall+がBluetoothテザリングに対応していないため、クライアントにDHCPとDNS Proxyを提供しているdnsmasqからのDNS通信がブロックされてしまっていることが分かった。&lt;/p&gt;
-
-&lt;h2 id=&#34;解決策1-dnsを手動設定する&#34;&gt;解決策1: DNSを手動設定する&lt;/h2&gt;</description>
+&lt;h2 id=&#34;1-dns&#34;&gt;解決策1: DNSを手動設定する&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -95,7 +81,6 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/01/edid-repair/</guid>
       <description>&lt;p&gt;Acer H243HをDVIで接続すると認識しない。VGA接続とHDMI接続では正常に動作するが、DVIで接続するとsyslogに以下のエラーが出る。&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Jan  5 23:48:32 haramaki kernel: [97894.621687] amdgpu 0000:01:00.0: DVI-D-1: EDID is invalid:
 Jan  5 23:48:32 haramaki kernel: [97894.621694]         [00] BAD  00 ff ff ff ff ff ff 00 ff ff ff ff ff ff ff ff
 Jan  5 23:48:32 haramaki kernel: [97894.621696]         [00] BAD  2b 13 01 03 80 35 1d 78 ea 60 85 a6 56 4a 9c 25
@@ -105,9 +90,7 @@ Jan  5 23:48:32 haramaki kernel: [97894.621699]         [00] BAD  35 00 13 2a 21
 Jan  5 23:48:32 haramaki kernel: [97894.621700]         [00] BAD  33 48 0a 20 20 20 20 20 20 20 00 00 00 fd 00 38
 Jan  5 23:48:32 haramaki kernel: [97894.621701]         [00] BAD  4c 1f 53 12 00 0a 20 20 20 20 20 20 00 00 00 ff
 Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30 43 30 31 34 34 30 31 31 0a 00 33
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;どうやらEDIDが壊れているようだ。&lt;/p&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;どうやらEDIDが壊れているようだ。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -116,8 +99,7 @@ Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30
       <pubDate>Sat, 20 Oct 2018 10:50:27 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2018/10/doom-emacs-develop-setup/</guid>
-      <description>&lt;h2 id=&#34;動機&#34;&gt;動機&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;動機&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;収録ソフトウェアがかなり古くなってきている Ubuntu 14.04 から Linux From Scratch に移行しよう&lt;/li&gt;
 &lt;li&gt;この機会に neovim に移行して、vim の設定を一から書き直そう&lt;/li&gt;
@@ -147,7 +129,8 @@ Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30
       <guid>https://ngkz.github.io/2018/07/audit-cargo-crate/</guid>
       <description>cargo fetch1 でパッケージを取得すると、~/.cargo/registry/src/github.com-1ecc6299db9ec823/(パッケージ名)-(バージョン) にパッケージのソースコードが展開される。
 Cargo.lockにすべての依存クレートの名前とバージョンが記録されているので、これを見てコードに問題がないか調べることができる。
- cargo buildはビルドスクリプトを実行してしまうのでダメ [return]   </description>
+  cargo buildはビルドスクリプトを実行してしまうのでダメ &amp;#x21a9;&amp;#xfe0e;
+   </description>
     </item>
     
     <item>
@@ -156,13 +139,10 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
       <pubDate>Thu, 12 Sep 2013 13:29:56 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2013/09/galaxys3-adb-restore-fail/</guid>
-      <description>&lt;h2 id=&#34;リカバリモードに入ってファクトリーリセットする&#34;&gt;リカバリモードに入ってファクトリーリセットする&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;リカバリモードに入ってファクトリーリセットする&lt;/h2&gt;
 &lt;p&gt;galaxy S3 リカバリモードの入り方:&lt;/p&gt;
-
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/QVa3yfxP0Zs&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;h2 id=&#34;バックアップを展開&#34;&gt;バックアップを展開&lt;/h2&gt;</description>
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;heading-1&#34;&gt;バックアップを展開&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -172,7 +152,6 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
       
       <guid>https://ngkz.github.io/2013/03/howto-reactivate-keepassx/</guid>
       <description>&lt;p&gt;Ubuntu 12.10-14.04で確認済み&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;echo &amp;quot;keepassx=1&amp;quot; &amp;gt;&amp;gt; /etc/xdg/sni-qt.conf
 &lt;/code&gt;&lt;/pre&gt;</description>
     </item>

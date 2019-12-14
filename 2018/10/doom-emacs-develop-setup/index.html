@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.61.0 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="動機
-
 
 収録ソフトウェアがかなり古くなってきている Ubuntu 14.04 から Linux From Scratch に移行しよう
 この機会に neovim に移行して、vim の設定を一から書き直そう
@@ -23,7 +22,6 @@ Spacemacs より軽い DOOM Emacs というのがあるらしい。これにし�
 
 
 <meta property="og:description" content="動機
-
 
 収録ソフトウェアがかなり古くなってきている Ubuntu 14.04 から Linux From Scratch に移行しよう
 この機会に neovim に移行して、vim の設定を一から書き直そう
@@ -42,7 +40,6 @@ Spacemacs より軽い DOOM Emacs というのがあるらしい。これにし�
 <meta property="og:site_name" content="ngkz.log">
 <meta property="og:description" content="動機
 
-
 収録ソフトウェアがかなり古くなってきている Ubuntu 14.04 から Linux From Scratch に移行しよう
 この機会に neovim に移行して、vim の設定を一から書き直そう
 エディタ部分は大量に設定を書かないと使い勝手が悪いし、プラグインの導入と設定も面倒だ
@@ -53,7 +50,6 @@ vim 風のキーバインディングで、よりすぐれた操作性を持つ 
 Spacemacs より軽い DOOM Emacs というのがあるらしい。これにしよう
 ">
 <meta name="twitter:description" content="動機
-
 
 収録ソフトウェアがかなり古くなってきている Ubuntu 14.04 から Linux From Scratch に移行しよう
 この機会に neovim に移行して、vim の設定を一から書き直そう
@@ -157,7 +153,7 @@ Spacemacs より軽い DOOM Emacs というのがあるらしい。これにし�
         </a>
         <h4 class="sidebar-profile-name">Kazutoshi Noguchi</h4>
         
-          <h5 class="sidebar-profile-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</h5>
+          <h5 class="sidebar-profile-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</h5>
         
       </div>
     
@@ -290,8 +286,7 @@ Spacemacs より軽い DOOM Emacs というのがあるらしい。これにし�
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <h2 id="動機">動機</h2>
-
+              <h2 id="heading">動機</h2>
 <ol>
 <li>収録ソフトウェアがかなり古くなってきている Ubuntu 14.04 から Linux From Scratch に移行しよう</li>
 <li>この機会に neovim に移行して、vim の設定を一から書き直そう</li>
@@ -302,52 +297,39 @@ Spacemacs より軽い DOOM Emacs というのがあるらしい。これにし�
 <li>起動が遅い</li>
 <li>Spacemacs より軽い DOOM Emacs というのがあるらしい。これにしよう</li>
 </ol>
-
-<h2 id="インストール">インストール</h2>
-
+<h2 id="heading-1">インストール</h2>
 <p>現在、<a href="https://github.com/hlissner/doom-emacs/issues/739">master ブランチは動作しない</a> 状態なので、<a href="https://github.com/hlissner/doom-emacs/tree/develop">develop ブランチ</a>をインストールする。</p>
-
-<pre><code class="language-sh">~$ rm -rf ~/.emacs.d
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">~$ rm -rf ~/.emacs.d
 ~$ git clone https://github.com/hlissner/doom-emacs ~/.emacs.d
 ~$ cd .emacs.d
 ~$ git checkout develop
-#設定を~/.doom.dに置く場合
+<span style="color:#75715e">#設定を~/.doom.dに置く場合</span>
 ~/.emacs.d$ bin/doom quickstart
-#設定を~/.config/doomに置く場合
+<span style="color:#75715e">#設定を~/.config/doomに置く場合</span>
 ~/.emacs.d$ bin/doom -p ~/.config/doom quickstart
-</code></pre>
-
-<p>master ブランチの README と Wiki の情報は古くなっているので、develop ブランチの README と DOOM Emacs のコードを参考に設定する。</p>
-
-<h3 id="doom-emacs-の一部をバイトコンパイルして起動を高速化">DOOM Emacs の一部をバイトコンパイルして起動を高速化</h3>
-
+</code></pre></div><p>master ブランチの README と Wiki の情報は古くなっているので、develop ブランチの README と DOOM Emacs のコードを参考に設定する。</p>
+<h3 id="doom-emacs-">DOOM Emacs の一部をバイトコンパイルして起動を高速化</h3>
 <p>私の環境ではほとんど効果がなかった。</p>
-
-<pre><code class="language-sh">~/.emacs.d $ bin/doom compile :core
-</code></pre>
-
-<h2 id="使い方">使い方</h2>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">~/.emacs.d $ bin/doom compile :core
+</code></pre></div><h2 id="heading-2">使い方</h2>
 <ul>
 <li>キーバインドは各モジュールの<code>config.el</code>や<code>+binding.el</code>で定義されている。
-
 <ul>
 <li>基本的なキーバインドは<a href="https://github.com/hlissner/doom-emacs/blob/develop/modules/config/default/%2Bbindings.el">config/default モジュールで定義されている</a></li>
-</ul></li>
+</ul>
+</li>
 <li>Space, g, C-x などのプレフィックスキーを押した後、2 秒くらい何もしないでいると、キーの一覧と短い説明が自動で出てくる。</li>
-<li><code>SPC :</code>または<code>M-x</code>で emacs コマンドの検索と実行ができる。キーバインドも表示される(ただし複数のキーにマップされている場合 1 つだけしか表示されない)。<br />
+<li><code>SPC :</code>または<code>M-x</code>で emacs コマンドの検索と実行ができる。キーバインドも表示される(ただし複数のキーにマップされている場合 1 つだけしか表示されない)。<br>
 キーバインドを覚えていない機能を使うときに便利</li>
 <li><code>SPC h</code> で現在使用中のモード・選択したシンボル・指定した関数などのヘルプが出せる。</li>
 <li><code>doom update</code> でプラグインをアップデート</li>
 <li><code>doom upgrade</code> で DOOM Emacs をアップデート</li>
 <li><code>doom doctor</code> を実行すると、DOOM Emacs が正しくインストールされているか、依存プログラムがインストールされているかをチェックしてくれる</li>
 </ul>
-
-<h2 id="カスタマイズ方法">カスタマイズ方法</h2>
-
+<h2 id="heading-3">カスタマイズ方法</h2>
 <ol>
-<li><p><code>.doom.d</code> ディレクトリ内の以下のファイルを編集する。</p>
-
+<li>
+<p><code>.doom.d</code> ディレクトリ内の以下のファイルを編集する。</p>
 <table>
 <thead>
 <tr>
@@ -355,53 +337,41 @@ Spacemacs より軽い DOOM Emacs というのがあるらしい。これにし�
 <th>役割</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>init.el</td>
 <td>DOOM のコアが初期化された後、モジュールがロードされる前に実行される。ここで使用するモジュールを指定する</td>
 </tr>
-
 <tr>
 <td>packages.el</td>
 <td>ここに追加でインストールするパッケージを書く</td>
 </tr>
-
 <tr>
 <td>config.el</td>
 <td>依存パッケージのロード後に実行される。ここにキーバインドやパッケージの設定を書く</td>
 </tr>
 </tbody>
-</table></li>
-
-<li><p><code>init.el</code>か<code>packages.el</code>を編集した場合、<code>doom refresh</code>を叩き、プラグインのインストール、不要なプラグインの削除と autoload ファイルの更新 を行う。</p>
-
-<pre><code class="language-sh">~/.emacs.d$ bin/doom refresh
-</code></pre></li>
-
-<li><p><code>SPC q r</code> で再起動</p></li>
+</table>
+</li>
+<li>
+<p><code>init.el</code>か<code>packages.el</code>を編集した場合、<code>doom refresh</code>を叩き、プラグインのインストール、不要なプラグインの削除と autoload ファイルの更新 を行う。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">~/.emacs.d$ bin/doom refresh
+</code></pre></div></li>
+<li>
+<p><code>SPC q r</code> で再起動</p>
+</li>
 </ol>
-
-<h3 id="機能を有効にする">機能を有効にする</h3>
-
+<h3 id="heading-4">機能を有効にする</h3>
 <p>デフォルト状態では基本的な機能以外は無効になっている。</p>
-
 <p><code>init.el</code>を開き、コメントアウトを外し、<code>doom refresh</code>すると使えるようになる。モジュールによっては <code>(format +onsave)</code>にように、モジュール名を括弧で囲み、<code>+</code>でオプション名を付けるとオプション機能を有効にできる。</p>
-
 <p>機能の使い方、必要な外部プログラム、使えるオプションはモジュールの README やソースコードで調べられる。</p>
-
-<h3 id="キーバインドの追加">キーバインドの追加</h3>
-
-<h4 id="キーに関数をマップ">キーに関数をマップ</h4>
-
-<pre><code class="language-elisp">;(map! :&lt;モード&gt; &quot;&lt;キー&gt;&quot; &lt;キーが押されたとき実行する関数&gt;)
-;複数のキーを同時にマップできる
-(map! :nvi &quot;C-h&quot; #'evil-window-left ;#'&lt;関数名&gt;
-      :nvi &quot;C-j&quot; #'evil-window-down)
-</code></pre>
-
-<p>モードには以下の値が使える</p>
-
+<h3 id="heading-5">キーバインドの追加</h3>
+<h4 id="heading-6">キーに関数をマップ</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#75715e">;(map! :&lt;モード&gt; &#34;&lt;キー&gt;&#34; &lt;キーが押されたとき実行する関数&gt;)</span>
+<span style="color:#75715e">;複数のキーを同時にマップできる</span>
+(map! :nvi <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">C-h</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">#&#39;</span>evil-window-left <span style="color:#75715e">;#&#39;&lt;関数名&gt;</span>
+      :nvi <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">C-j</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">#&#39;</span>evil-window-down)
+</code></pre></div><p>モードには以下の値が使える</p>
 <table>
 <thead>
 <tr>
@@ -409,400 +379,285 @@ Spacemacs より軽い DOOM Emacs というのがあるらしい。これにし�
 <th>対応するモード</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>n</td>
 <td>ノーマル</td>
 </tr>
-
 <tr>
 <td>v</td>
 <td>ビジュアル</td>
 </tr>
-
 <tr>
 <td>i</td>
 <td>インサート</td>
 </tr>
-
 <tr>
 <td>e</td>
 <td>emacs</td>
 </tr>
-
 <tr>
 <td>o</td>
 <td>オペレータ</td>
 </tr>
-
 <tr>
 <td>m</td>
 <td>モーション</td>
 </tr>
-
 <tr>
 <td>r</td>
 <td>replace</td>
 </tr>
-
 <tr>
 <td>g</td>
 <td>global</td>
 </tr>
 </tbody>
 </table>
-
-<h4 id="vim-の-map-と同等のことをする">vim の:map と同等のことをする</h4>
-
-<pre><code class="language-elisp">(map! :n &quot;C-;&quot; (kbd &quot;itest&quot;))
-</code></pre>
-
-<h2 id="カスタマイズ例">カスタマイズ例</h2>
-
+<h4 id="vim-map-">vim の:map と同等のことをする</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(map! :n <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">C-;</span><span style="color:#e6db74">&#34;</span> (kbd <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">itest</span><span style="color:#e6db74">&#34;</span>))
+</code></pre></div><h2 id="heading-7">カスタマイズ例</h2>
 <p><a href="https://github.com/ngkz/doom.d">https://github.com/ngkz/doom.d</a></p>
-
-<h3 id="フォントの変更">フォントの変更</h3>
-
+<h3 id="heading-8">フォントの変更</h3>
 <p><a href="https://github.com/hlissner/doom-emacs/tree/develop/modules/ui/doom#changing-fonts">https://github.com/hlissner/doom-emacs/tree/develop/modules/ui/doom#changing-fonts</a></p>
-
 <p><strong>config.el</strong> に以下のコードを追加</p>
-
-<pre><code class="language-elisp">(setq doom-font (font-spec :family &quot;NasuM&quot; :size 14)
-      doom-variable-pitch-font (font-spec :family &quot;Nasu&quot;)
-      doom-unicode-font (font-spec :family &quot;NasuM&quot;)
-      doom-big-font (font-spec :family &quot;NasuM&quot; :size 22))
-</code></pre>
-
-<h3 id="コメントを見やすくする">コメントを見やすくする</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(setq doom-font (<span style="color:#a6e22e">font-spec</span> :family <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">NasuM</span><span style="color:#e6db74">&#34;</span> :size <span style="color:#ae81ff">14</span>)
+      doom-variable-pitch-font (<span style="color:#a6e22e">font-spec</span> :family <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Nasu</span><span style="color:#e6db74">&#34;</span>)
+      doom-unicode-font (<span style="color:#a6e22e">font-spec</span> :family <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">NasuM</span><span style="color:#e6db74">&#34;</span>)
+      doom-big-font (<span style="color:#a6e22e">font-spec</span> :family <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">NasuM</span><span style="color:#e6db74">&#34;</span> :size <span style="color:#ae81ff">22</span>))
+</code></pre></div><h3 id="heading-9">コメントを見やすくする</h3>
 <p><code>&lt;テーマ名&gt;-brighter-comments</code> を真にするとコメントの文字色と背景色が明るくなる。背景が白っぽいと見栄えが悪いので、<code>&lt;テーマ名&gt;-comment-bg</code>で戻す。テーマによっては使えないので注意 (<a href="https://github.com/hlissner/emacs-doom-themes">テーマのソースコード</a> 参照)</p>
-
 <p><strong>config.el</strong></p>
-
-<pre><code class="language-elisp">(setq doom-one-brighter-comments t)
-;; don't lighten the background of the comment
-(setq doom-one-comment-bg nil)
-</code></pre>
-
-<h3 id="保存時に自動フォーマット">保存時に自動フォーマット</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(setq doom-one-brighter-comments <span style="color:#66d9ef">t</span>)
+<span style="color:#75715e">;; don&#39;t lighten the background of the comment</span>
+(setq doom-one-comment-bg <span style="color:#66d9ef">nil</span>)
+</code></pre></div><h3 id="heading-10">保存時に自動フォーマット</h3>
 <p><strong>init.el</strong></p>
-
-<pre><code class="language-elisp">       :editor
-       (format +onsave)  ; automated prettiness
-</code></pre>
-
-<h3 id="デフォルトのコメント開始文字を-に設定">デフォルトのコメント開始文字を#に設定</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">       :editor
+       (<span style="color:#a6e22e">format</span> +onsave)  <span style="color:#75715e">; automated prettiness</span>
+</code></pre></div><h3 id="heading-11">デフォルトのコメント開始文字を#に設定</h3>
 <p><strong>config.el</strong></p>
-
-<pre><code class="language-elisp">(setq-default comment-start &quot;# &quot;)
-</code></pre>
-
-<h3 id="行末の空白文字をハイライト">行末の空白文字をハイライト</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(setq-default comment-start <span style="color:#e6db74">&#34;</span><span style="color:#e6db74"># </span><span style="color:#e6db74">&#34;</span>)
+</code></pre></div><h3 id="heading-12">行末の空白文字をハイライト</h3>
 <p>terminal では無効にする</p>
-
 <p><strong>config.el</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#75715e">;; Highlight trailing whitespace</span>
+(setq-default show-trailing-whitespace <span style="color:#66d9ef">t</span>)
 
-<pre><code class="language-elisp">;; Highlight trailing whitespace
-(setq-default show-trailing-whitespace t)
-
-;; Disable trailing whitespace highlighting when in some modes
-;; https://qiita.com/tadsan/items/df73c711f921708facdc
+<span style="color:#75715e">;; Disable trailing whitespace highlighting when in some modes</span>
+<span style="color:#75715e">;; https://qiita.com/tadsan/items/df73c711f921708facdc</span>
 (defun my/disable-trailing-mode-hook ()
-  &quot;Disable show tail whitespace.&quot;
-  (setq show-trailing-whitespace nil))
+  <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Disable show tail whitespace.</span><span style="color:#e6db74">&#34;</span>
+  (setq show-trailing-whitespace <span style="color:#66d9ef">nil</span>))
 
 (defvar my/disable-trailing-modes
-  '(comint-mode
+  <span style="color:#f92672">&#39;</span>(comint-mode
     eshell-mode
     eww-mode
     term-mode
     twittering-mode))
 
-(mapc
+(<span style="color:#a6e22e">mapc</span>
  (lambda (mode)
-   (add-hook (intern (concat (symbol-name mode) &quot;-hook&quot;))
-             'my/disable-trailing-mode-hook))
+   (add-hook (<span style="color:#a6e22e">intern</span> (<span style="color:#a6e22e">concat</span> (<span style="color:#a6e22e">symbol-name</span> mode) <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">-hook</span><span style="color:#e6db74">&#34;</span>))
+             <span style="color:#e6db74">&#39;my/disable-trailing-mode-hook</span>))
  my/disable-trailing-modes)
-</code></pre>
-
-<h3 id="タブ-全角スペース-ハードスペースを記号に変換して表示">タブ・全角スペース・ハードスペースを記号に変換して表示</h3>
-
+</code></pre></div><h3 id="heading-13">タブ・全角スペース・ハードスペースを記号に変換して表示</h3>
 <p><code>␣</code>は曖昧幅なので、<code>␣</code>が半角になるフォントを使用している場合は、<code>□</code>などの全角文字に変更しないと表示がおかしくなる。</p>
-
 <p><strong>config.el</strong></p>
-
-<pre><code class="language-elisp">; highlight tab, hard space, and full-width space
-(require 'whitespace)
-(setq whitespace-style '(
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#75715e">; highlight tab, hard space, and full-width space</span>
+(require <span style="color:#e6db74">&#39;whitespace</span>)
+(setq whitespace-style <span style="color:#f92672">&#39;</span>(
     face
     tabs
     spaces
     space-mark
     tab-mark
 ))
-(setq whitespace-display-mappings '(
-    (space-mark ?\u3000 [?␣])       ;full-width space AMBIGUOUS WIDTH!
-    (space-mark ?\u00A0 [?\uFF65])   ;hard space
-    (tab-mark   ?\t     [?» ?\t])    ;tab
+(setq whitespace-display-mappings <span style="color:#f92672">&#39;</span>(
+    (space-mark <span style="color:#e6db74">?\u</span><span style="color:#ae81ff">3000</span> [<span style="color:#e6db74">?␣</span>])       <span style="color:#75715e">;full-width space AMBIGUOUS WIDTH!</span>
+    (space-mark <span style="color:#e6db74">?\u</span>00A0 [<span style="color:#e6db74">?\u</span>FF65])   <span style="color:#75715e">;hard space</span>
+    (tab-mark   <span style="color:#e6db74">?\t</span>     [<span style="color:#e6db74">?»</span> <span style="color:#e6db74">?\t</span>])    <span style="color:#75715e">;tab</span>
 ))
-(setq whitespace-space-regexp &quot;\\([\u3000]+\\)&quot;) ; highlight only full-width space
-(global-whitespace-mode t)
-</code></pre>
-
-<h3 id="markdown-モードの-auto-fill-を切る">Markdown モードの auto-fill を切る</h3>
-
+(setq whitespace-space-regexp <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">\\</span><span style="color:#e6db74">([</span><span style="color:#e6db74">\u</span><span style="color:#e6db74">3000]+</span><span style="color:#e6db74">\\</span><span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>) <span style="color:#75715e">; highlight only full-width space</span>
+(global-whitespace-mode <span style="color:#66d9ef">t</span>)
+</code></pre></div><h3 id="markdown--auto-fill-">Markdown モードの auto-fill を切る</h3>
 <p>Markdown モードの Auto-Fill (行が長くなったら自動で改行を入れる機能) が鬱陶しいのでオフにする。</p>
-
 <p><strong>config.el</strong></p>
-
-<pre><code class="language-elisp">;turn off auto-fill
-(add-hook 'markdown-mode-hook (lambda () (auto-fill-mode -1)))
-</code></pre>
-
-<h3 id="画面端で行を折り返す-soft-wrap">画面端で行を折り返す (soft wrap)</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#75715e">;turn off auto-fill</span>
+(add-hook <span style="color:#e6db74">&#39;markdown-mode-hook</span> (lambda () (auto-fill-mode <span style="color:#ae81ff">-1</span>)))
+</code></pre></div><h3 id="-soft-wrap">画面端で行を折り返す (soft wrap)</h3>
 <p><strong>config.el</strong></p>
-
-<pre><code class="language-elisp">;soft wrapping
-(global-visual-line-mode t)
-</code></pre>
-
-<h3 id="ウィンドウをリサイズしやすくする">ウィンドウをリサイズしやすくする</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#75715e">;soft wrapping</span>
+(global-visual-line-mode <span style="color:#66d9ef">t</span>)
+</code></pre></div><h3 id="heading-14">ウィンドウをリサイズしやすくする</h3>
 <p><a href="http://d.hatena.ne.jp/khiker/20100119/window_resize">Re: 分割したウィンドウの大きさをインタラクティヴに変更する</a> の改変</p>
-
 <p><code>Ctrl-W SPC</code> を押すと、HJKL でウィンドウのサイズが変更できるようになる。(HJKL で大まかに調整、Shift+HJKL で微調整)。他のキーを押すとノーマルモードに戻る。</p>
-
 <p><strong>config.el</strong></p>
-
-<pre><code class="language-elisp">;resize window quickly
-;http://d.hatena.ne.jp/khiker/20100119/window_resize
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#75715e">;resize window quickly</span>
+<span style="color:#75715e">;http://d.hatena.ne.jp/khiker/20100119/window_resize</span>
 (defun my-window-resizer ()
-  &quot;Control window size and position.&quot;
+  <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Control window size and position.</span><span style="color:#e6db74">&#34;</span>
   (interactive)
-  (let ((window-obj (selected-window))
+  (let ((window-obj (<span style="color:#a6e22e">selected-window</span>))
         (current-width (window-width))
         (current-height (window-height))
-        (dx (if (= (nth 0 (window-edges)) 0) 1
-              -1))
-        (dy (if (= (nth 1 (window-edges)) 0) 1
-              -1))
+        (dx (if (<span style="color:#a6e22e">=</span> (<span style="color:#a6e22e">nth</span> <span style="color:#ae81ff">0</span> (<span style="color:#a6e22e">window-edges</span>)) <span style="color:#ae81ff">0</span>) <span style="color:#ae81ff">1</span>
+              <span style="color:#ae81ff">-1</span>))
+        (dy (if (<span style="color:#a6e22e">=</span> (<span style="color:#a6e22e">nth</span> <span style="color:#ae81ff">1</span> (<span style="color:#a6e22e">window-edges</span>)) <span style="color:#ae81ff">0</span>) <span style="color:#ae81ff">1</span>
+              <span style="color:#ae81ff">-1</span>))
         action c)
-    (catch 'end-flag
-      (while t
+    (catch <span style="color:#e6db74">&#39;end-flag</span>
+      (while <span style="color:#66d9ef">t</span>
         (setq action
-              (read-key-sequence-vector (format &quot;size[%dx%d]&quot;
+              (<span style="color:#a6e22e">read-key-sequence-vector</span> (<span style="color:#a6e22e">format</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">size[%dx%d]</span><span style="color:#e6db74">&#34;</span>
                                                 (window-width)
                                                 (window-height))))
-        (setq c (aref action 0))
-        (cond ((= c ?l)
-               (enlarge-window-horizontally (* dx 5)))
-              ((= c ?L)
+        (setq c (<span style="color:#a6e22e">aref</span> action <span style="color:#ae81ff">0</span>))
+        (cond ((<span style="color:#a6e22e">=</span> c <span style="color:#e6db74">?l</span>)
+               (enlarge-window-horizontally (<span style="color:#a6e22e">*</span> dx <span style="color:#ae81ff">5</span>)))
+              ((<span style="color:#a6e22e">=</span> c <span style="color:#e6db74">?L</span>)
                (enlarge-window-horizontally dx))
-              ((= c ?h)
-               (shrink-window-horizontally (* dx 5)))
-              ((= c ?H)
+              ((<span style="color:#a6e22e">=</span> c <span style="color:#e6db74">?h</span>)
+               (shrink-window-horizontally (<span style="color:#a6e22e">*</span> dx <span style="color:#ae81ff">5</span>)))
+              ((<span style="color:#a6e22e">=</span> c <span style="color:#e6db74">?H</span>)
                (shrink-window-horizontally dx))
-              ((= c ?j)
-               (enlarge-window (* dy 2)))
-              ((= c ?J)
+              ((<span style="color:#a6e22e">=</span> c <span style="color:#e6db74">?j</span>)
+               (enlarge-window (<span style="color:#a6e22e">*</span> dy <span style="color:#ae81ff">2</span>)))
+              ((<span style="color:#a6e22e">=</span> c <span style="color:#e6db74">?J</span>)
                (enlarge-window dy))
-              ((= c ?k)
-               (shrink-window (* dy 2)))
-              ((= c ?K)
+              ((<span style="color:#a6e22e">=</span> c <span style="color:#e6db74">?k</span>)
+               (shrink-window (<span style="color:#a6e22e">*</span> dy <span style="color:#ae81ff">2</span>)))
+              ((<span style="color:#a6e22e">=</span> c <span style="color:#e6db74">?K</span>)
                (shrink-window dy))
-              ;; otherwise
-              (t
-               (let ((last-command-char (aref action 0))
-                     (command (key-binding action)))
+              <span style="color:#75715e">;; otherwise</span>
+              (<span style="color:#66d9ef">t</span>
+               (let ((last-command-char (<span style="color:#a6e22e">aref</span> action <span style="color:#ae81ff">0</span>))
+                     (command (<span style="color:#a6e22e">key-binding</span> action)))
                  (when command
-                   (call-interactively command)))
-               (message &quot;Quit&quot;)
-               (throw 'end-flag t)))))))
+                   (<span style="color:#a6e22e">call-interactively</span> command)))
+               (<span style="color:#a6e22e">message</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Quit</span><span style="color:#e6db74">&#34;</span>)
+               (throw <span style="color:#e6db74">&#39;end-flag</span> <span style="color:#66d9ef">t</span>)))))))
 
 (map! :map evil-window-map
-      &quot;SPC&quot; #'my-window-resizer) ; CTRL-w SPC or SPC w SPC
-</code></pre>
-
-<h3 id="ctrl-hjkl-でウィンドウを切り替え">Ctrl-hjkl でウィンドウを切り替え</h3>
-
+      <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">SPC</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">#&#39;</span>my-window-resizer) <span style="color:#75715e">; CTRL-w SPC or SPC w SPC</span>
+</code></pre></div><h3 id="ctrl-hjkl-">Ctrl-hjkl でウィンドウを切り替え</h3>
 <p><strong>config.el</strong></p>
-
-<pre><code class="language-elisp">;; switch between window with C-hjkl
-(map! :nvi &quot;C-h&quot; #'evil-window-left
-      :nvi &quot;C-j&quot; #'evil-window-down
-      :nvi &quot;C-k&quot; #'evil-window-up
-      :nvi &quot;C-l&quot; #'evil-window-right)
-</code></pre>
-
-<h3 id="ctrl-shift-hjkl-でウィンドウを移動">Ctrl-Shift-hjkl でウィンドウを移動</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#75715e">;; switch between window with C-hjkl</span>
+(map! :nvi <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">C-h</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">#&#39;</span>evil-window-left
+      :nvi <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">C-j</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">#&#39;</span>evil-window-down
+      :nvi <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">C-k</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">#&#39;</span>evil-window-up
+      :nvi <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">C-l</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">#&#39;</span>evil-window-right)
+</code></pre></div><h3 id="ctrl-shift-hjkl-">Ctrl-Shift-hjkl でウィンドウを移動</h3>
 <p><strong>config.el</strong></p>
-
-<pre><code class="language-elisp">;; move the window with C-S-hjkl
-(map! :nvi &quot;C-S-h&quot; #'+evil/window-move-left
-      :nvi &quot;C-S-j&quot; #'+evil/window-move-down
-      :nvi &quot;C-S-k&quot; #'+evil/window-move-up
-      :nvi &quot;C-S-l&quot; #'+evil/window-move-right)
-</code></pre>
-
-<h3 id="画面の上下左右に余裕を持たせてスクロール-scrolloff-sidescrolloff">画面の上下左右に余裕を持たせてスクロール (scrolloff, sidescrolloff)</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#75715e">;; move the window with C-S-hjkl</span>
+(map! :nvi <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">C-S-h</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">#&#39;</span>+evil/window-move-left
+      :nvi <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">C-S-j</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">#&#39;</span>+evil/window-move-down
+      :nvi <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">C-S-k</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">#&#39;</span>+evil/window-move-up
+      :nvi <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">C-S-l</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">#&#39;</span>+evil/window-move-right)
+</code></pre></div><h3 id="-scrolloff-sidescrolloff">画面の上下左右に余裕を持たせてスクロール (scrolloff, sidescrolloff)</h3>
 <p><strong>config.el</strong></p>
-
-<pre><code class="language-elisp">;; minimal number of screen lines to keep above and below the cursor
-(setq-default scroll-margin 3)
-;; minimal number of screen columns to keep to the left and to the right of the cursor
-(setq-default hscroll-margin 5)
-</code></pre>
-
-<h3 id="x-で文字を削除するとき-yank-しない">x で文字を削除するとき yank しない</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#75715e">;; minimal number of screen lines to keep above and below the cursor</span>
+(setq-default scroll-margin <span style="color:#ae81ff">3</span>)
+<span style="color:#75715e">;; minimal number of screen columns to keep to the left and to the right of the cursor</span>
+(setq-default hscroll-margin <span style="color:#ae81ff">5</span>)
+</code></pre></div><h3 id="x--yank-">x で文字を削除するとき yank しない</h3>
 <p><strong>config.el</strong></p>
-
-<pre><code class="language-elisp">;; delete character without yanking
-(map! :n &quot;x&quot; #'delete-char)
-</code></pre>
-
-<h3 id="テキストファイルを編集するとき-角括弧の内側に自動でスペースを挿入-削除しない">テキストファイルを編集するとき 角括弧の内側に自動でスペースを挿入・削除しない</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#75715e">;; delete character without yanking</span>
+(map! :n <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">x</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">#&#39;</span><span style="color:#a6e22e">delete-char</span>)
+</code></pre></div><h3 id="-">テキストファイルを編集するとき 角括弧の内側に自動でスペースを挿入・削除しない</h3>
 <p>角括弧でチェックボックスを作るときに鬱陶しいので</p>
-
 <p><strong>config.el</strong></p>
-
-<pre><code class="language-elisp">;; Don't do square-bracket space-expansion where it doesn't make sense to
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#75715e">;; Don&#39;t do square-bracket space-expansion where it doesn&#39;t make sense to</span>
 (after! smartparens-text
-  (sp-local-pair 'text-mode
-                 &quot;[&quot; nil :post-handlers '(:rem (&quot;| &quot; &quot;SPC&quot;))))
-</code></pre>
-
-<h3 id="インサートモードで-c-d-が使えるようにする">インサートモードで C-d が使えるようにする</h3>
-
+  (sp-local-pair <span style="color:#e6db74">&#39;text-mode</span>
+                 <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">[</span><span style="color:#e6db74">&#34;</span> <span style="color:#66d9ef">nil</span> :post-handlers <span style="color:#f92672">&#39;</span>(:rem (<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">| </span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">SPC</span><span style="color:#e6db74">&#34;</span>))))
+</code></pre></div><h3 id="-c-d-">インサートモードで C-d が使えるようにする</h3>
 <p><strong>config.el</strong></p>
-
-<pre><code class="language-elisp">;; Make C-d usable in insert mode
-(map! :i &quot;C-d&quot; #'delete-char)
-</code></pre>
-
-<h3 id="org-mode-の-todo-アイテムの完了時刻を記録する">org-mode の TODO アイテムの完了時刻を記録する</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#75715e">;; Make C-d usable in insert mode</span>
+(map! :i <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">C-d</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">#&#39;</span><span style="color:#a6e22e">delete-char</span>)
+</code></pre></div><h3 id="org-mode--todo-">org-mode の TODO アイテムの完了時刻を記録する</h3>
 <p><strong>config.el</strong></p>
-
-<pre><code class="language-elisp">;; log when a certain todo item was finished
-(setq org-log-done t)
-</code></pre>
-
-<h3 id="org-mode-の日付の曜日を英語にする">org-mode の日付の曜日を英語にする</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#75715e">;; log when a certain todo item was finished</span>
+(setq org-log-done <span style="color:#66d9ef">t</span>)
+</code></pre></div><h3 id="org-mode-">org-mode の日付の曜日を英語にする</h3>
 <p><strong>config.el</strong></p>
-
-<pre><code class="language-elisp">; Make sure that the weekdays in the time stamps of your Org mode files and in the agenda appear in English.
-(setq system-time-locale &quot;C&quot;)
-</code></pre>
-
-<h3 id="端末を有効化">端末を有効化</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#75715e">; Make sure that the weekdays in the time stamps of your Org mode files and in the agenda appear in English.</span>
+(setq system-time-locale <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">C</span><span style="color:#e6db74">&#34;</span>)
+</code></pre></div><h3 id="heading-15">端末を有効化</h3>
 <p><code>SPC o t</code>, <code>SPC o T</code> で端末を開けるようにする</p>
-
 <p><strong>init.el</strong></p>
-
-<pre><code class="language-elisp">       term              ; terminals in Emacs
-</code></pre>
-
-<h2 id="ansible-サポートを有効化">ansible サポートを有効化</h2>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">       term              <span style="color:#75715e">; terminals in Emacs</span>
+</code></pre></div><h2 id="ansible-">ansible サポートを有効化</h2>
 <p><strong>init.el</strong></p>
-
-<pre><code class="language-elisp">       ansible
-</code></pre>
-
-<h2 id="docker-サポートを有効化">docker サポートを有効化</h2>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">       ansible
+</code></pre></div><h2 id="docker-">docker サポートを有効化</h2>
 <p>Docker の操作と Dockerfile の編集のサポートを有効にする</p>
-
 <p><strong>init.el</strong></p>
-
-<pre><code class="language-elisp">       docker
-</code></pre>
-
-<h2 id="magit-を有効化">magit を有効化</h2>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">       docker
+</code></pre></div><h2 id="magit-">magit を有効化</h2>
 <p>便利な git のフロントエンドを使えるようにする</p>
-
 <p><strong>init.el</strong></p>
-
-<pre><code class="language-elisp">       magit             ; a git porcelain for Emacs
-</code></pre>
-
-<h2 id="その他の言語のサポートを有効化">その他の言語のサポートを有効化</h2>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">       magit             <span style="color:#75715e">; a git porcelain for Emacs</span>
+</code></pre></div><h2 id="heading-16">その他の言語のサポートを有効化</h2>
 <p>:lang セクションの使うやつをアンコメントしたりオプションをつけたりする</p>
-
 <p><strong>init.el</strong></p>
-
-<pre><code class="language-elisp">       :lang
-       assembly          ; assembly for fun or debugging
-       (cc +irony +rtags); C/C++/Obj-C madness
-       ;;clojure           ; java with a lisp
-       ;;common-lisp       ; if you've seen one lisp, you've seen them all
-       ;;coq               ; proofs-as-programs
-       ;;crystal           ; ruby at the speed of c
-       ;;csharp            ; unity, .NET, and mono shenanigans
-       data              ; config/data formats
-       ;;erlang            ; an elegant language for a more civilized age
-       ;;elixir            ; erlang done right
-       ;;elm               ; care for a cup of TEA?
-       emacs-lisp        ; drown in parentheses
-       ;;ess               ; emacs speaks statistics
-       go                ; the hipster dialect
-       ;;(haskell +intero) ; a language that's lazier than I am
-       ;;hy                ; readability of scheme w/ speed of python
-       ;;idris             ;
-       ;;(java +meghanada) ; the poster child for carpal tunnel syndrome
-       javascript        ; all(hope(abandon(ye(who(enter(here))))))
-       ;;julia             ; a better, faster MATLAB
-       ;;latex             ; writing papers in Emacs has never been so fun
-       ;;ledger            ; an accounting system in Emacs
-       ;;lua               ; one-based indices? one-based indices
-       markdown          ; writing docs for people to ignore
-       ;;nim               ; python + lisp at the speed of c
-       ;;nix               ; I hereby declare &quot;nix geht mehr!&quot;
-       ;;ocaml             ; an objective camel
-       (org              ; organize your plain life in plain text
-        +attach          ; custom attachment system
-        +babel           ; running code in org
-        +capture         ; org-capture in and outside of Emacs
-        +export          ; Exporting org to whatever you want
-        +present)        ; Emacs for presentations
-       ;;perl              ; write code no one else can comprehend
-       ;;php               ; perl's insecure younger brother
-       ;;plantuml          ; diagrams for confusing people more
-       ;;purescript        ; javascript, but functional
-       (python            ; beautiful is better than ugly
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">       :lang
+       assembly          <span style="color:#75715e">; assembly for fun or debugging</span>
+       (cc +irony +rtags)<span style="color:#75715e">; C/C++/Obj-C madness</span>
+       <span style="color:#75715e">;;clojure           ; java with a lisp</span>
+       <span style="color:#75715e">;;common-lisp       ; if you&#39;ve seen one lisp, you&#39;ve seen them all</span>
+       <span style="color:#75715e">;;coq               ; proofs-as-programs</span>
+       <span style="color:#75715e">;;crystal           ; ruby at the speed of c</span>
+       <span style="color:#75715e">;;csharp            ; unity, .NET, and mono shenanigans</span>
+       data              <span style="color:#75715e">; config/data formats</span>
+       <span style="color:#75715e">;;erlang            ; an elegant language for a more civilized age</span>
+       <span style="color:#75715e">;;elixir            ; erlang done right</span>
+       <span style="color:#75715e">;;elm               ; care for a cup of TEA?</span>
+       emacs-lisp        <span style="color:#75715e">; drown in parentheses</span>
+       <span style="color:#75715e">;;ess               ; emacs speaks statistics</span>
+       go                <span style="color:#75715e">; the hipster dialect</span>
+       <span style="color:#75715e">;;(haskell +intero) ; a language that&#39;s lazier than I am</span>
+       <span style="color:#75715e">;;hy                ; readability of scheme w/ speed of python</span>
+       <span style="color:#75715e">;;idris             ;</span>
+       <span style="color:#75715e">;;(java +meghanada) ; the poster child for carpal tunnel syndrome</span>
+       javascript        <span style="color:#75715e">; all(hope(abandon(ye(who(enter(here))))))</span>
+       <span style="color:#75715e">;;julia             ; a better, faster MATLAB</span>
+       <span style="color:#75715e">;;latex             ; writing papers in Emacs has never been so fun</span>
+       <span style="color:#75715e">;;ledger            ; an accounting system in Emacs</span>
+       <span style="color:#75715e">;;lua               ; one-based indices? one-based indices</span>
+       markdown          <span style="color:#75715e">; writing docs for people to ignore</span>
+       <span style="color:#75715e">;;nim               ; python + lisp at the speed of c</span>
+       <span style="color:#75715e">;;nix               ; I hereby declare &#34;nix geht mehr!&#34;</span>
+       <span style="color:#75715e">;;ocaml             ; an objective camel</span>
+       (org              <span style="color:#75715e">; organize your plain life in plain text</span>
+        +attach          <span style="color:#75715e">; custom attachment system</span>
+        +babel           <span style="color:#75715e">; running code in org</span>
+        +capture         <span style="color:#75715e">; org-capture in and outside of Emacs</span>
+        +export          <span style="color:#75715e">; Exporting org to whatever you want</span>
+        +present)        <span style="color:#75715e">; Emacs for presentations</span>
+       <span style="color:#75715e">;;perl              ; write code no one else can comprehend</span>
+       <span style="color:#75715e">;;php               ; perl&#39;s insecure younger brother</span>
+       <span style="color:#75715e">;;plantuml          ; diagrams for confusing people more</span>
+       <span style="color:#75715e">;;purescript        ; javascript, but functional</span>
+       (python            <span style="color:#75715e">; beautiful is better than ugly</span>
         +pyenv
         +pyvenv)
-       ;;qt                ; the 'cutest' gui framework ever
-       ;;racket            ; a DSL for DSLs
-       ;;rest              ; Emacs as a REST client
-       ruby              ; 1.step do {|i| p &quot;Ruby is #{i.even? ? 'love' : 'life'}&quot;}
-       rust              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
-       ;;scala             ; java, but good
-       (sh +fish)        ; she sells (ba|z|fi)sh shells on the C xor
-       ;;solidity          ; do you need a blockchain? No.
-       ;;swift             ; who asked for emoji variables?
-       web               ; the tubes
-       ;;vala              ; GObjective-C
-</code></pre>
-
-<h2 id="smartparensを無効にする">smartparensを無効にする</h2>
-
-<pre><code class="language-elisp">;; smartparens is more annoying than useful
-(after! smartparens (smartparens-global-mode -1))
-</code></pre>
+       <span style="color:#75715e">;;qt                ; the &#39;cutest&#39; gui framework ever</span>
+       <span style="color:#75715e">;;racket            ; a DSL for DSLs</span>
+       <span style="color:#75715e">;;rest              ; Emacs as a REST client</span>
+       ruby              <span style="color:#75715e">; 1.step do {|i| p &#34;Ruby is #{i.even? ? &#39;love&#39; : &#39;life&#39;}&#34;}</span>
+       rust              <span style="color:#75715e">; Fe2O3.unwrap().unwrap().unwrap().unwrap()</span>
+       <span style="color:#75715e">;;scala             ; java, but good</span>
+       (sh +fish)        <span style="color:#75715e">; she sells (ba|z|fi)sh shells on the C xor</span>
+       <span style="color:#75715e">;;solidity          ; do you need a blockchain? No.</span>
+       <span style="color:#75715e">;;swift             ; who asked for emoji variables?</span>
+       web               <span style="color:#75715e">; the tubes</span>
+       <span style="color:#75715e">;;vala              ; GObjective-C</span>
+</code></pre></div><h2 id="smartparens">smartparensを無効にする</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#75715e">;; smartparens is more annoying than useful</span>
+(after! smartparens (smartparens-global-mode <span style="color:#ae81ff">-1</span>))
+</code></pre></div>
               
             </div>
           </div>
@@ -1013,7 +868,7 @@ Spacemacs より軽い DOOM Emacs というのがあるらしい。これにし�
     
     <h4 id="about-card-name">Kazutoshi Noguchi</h4>
     
-      <div id="about-card-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</div>
+      <div id="about-card-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</div>
     
     
       <div id="about-card-job">

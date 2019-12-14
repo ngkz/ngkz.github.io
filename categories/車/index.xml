@@ -17,10 +17,8 @@
       <pubDate>Sun, 02 Jun 2019 23:03:00 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/06/oil-change/</guid>
-      <description>&lt;h2 id=&#34;必要な物&#34;&gt;必要な物&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;必要な物&lt;/h2&gt;
 &lt;p&gt;たまに忘れるので&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;オイル (消耗品)&lt;/li&gt;
 &lt;li&gt;オイル処理箱 (消耗品)&lt;/li&gt;
@@ -92,8 +90,7 @@
   
 &lt;/div&gt;
 
-
-&lt;p&gt;リアの窓と換気扇だけでは車内の換気能力が足りないので、ボーンバー&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;を作った。&lt;/p&gt;</description>
+&lt;p&gt;リアの窓と換気扇だけでは車内の換気能力が足りないので、ボーンバー&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;を作った。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -114,7 +111,6 @@
     &lt;span class=&#34;caption&#34;&gt;ラゲッジフック&lt;/span&gt;
   
 &lt;/div&gt;
-
 
 &lt;p&gt;リアゲートを開けたときに荷物が落ちるので、荷物ベルトを通すフックをつけてみた&lt;/p&gt;</description>
     </item>

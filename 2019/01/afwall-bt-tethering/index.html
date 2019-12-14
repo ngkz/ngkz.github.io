@@ -5,24 +5,18 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.61.0 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="AFWall&#43;を有効にしていると、Bluetoothテザリングで接続したクライアントが通信できなくなるのをなんとかする。
-
 原因
-
 ログと検索エンジンで調べたところ、AFWall&#43;がBluetoothテザリングに対応していないため、クライアントにDHCPとDNS Proxyを提供しているdnsmasqからのDNS通信がブロックされてしまっていることが分かった。
-
 解決策1: DNSを手動設定する">
 
 
 <meta property="og:description" content="AFWall&#43;を有効にしていると、Bluetoothテザリングで接続したクライアントが通信できなくなるのをなんとかする。
-
 原因
-
 ログと検索エンジンで調べたところ、AFWall&#43;がBluetoothテザリングに対応していないため、クライアントにDHCPとDNS Proxyを提供しているdnsmasqからのDNS通信がブロックされてしまっていることが分かった。
-
 解決策1: DNSを手動設定する">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AFWall&#43; を有効にするとBluetoothテザリングで通信できなくなるのをなおす">
@@ -31,18 +25,12 @@
 <meta property="twitter:url" content="https://ngkz.github.io/2019/01/afwall-bt-tethering/">
 <meta property="og:site_name" content="ngkz.log">
 <meta property="og:description" content="AFWall&#43;を有効にしていると、Bluetoothテザリングで接続したクライアントが通信できなくなるのをなんとかする。
-
 原因
-
 ログと検索エンジンで調べたところ、AFWall&#43;がBluetoothテザリングに対応していないため、クライアントにDHCPとDNS Proxyを提供しているdnsmasqからのDNS通信がブロックされてしまっていることが分かった。
-
 解決策1: DNSを手動設定する">
 <meta name="twitter:description" content="AFWall&#43;を有効にしていると、Bluetoothテザリングで接続したクライアントが通信できなくなるのをなんとかする。
-
 原因
-
 ログと検索エンジンで調べたところ、AFWall&#43;がBluetoothテザリングに対応していないため、クライアントにDHCPとDNS Proxyを提供しているdnsmasqからのDNS通信がブロックされてしまっていることが分かった。
-
 解決策1: DNSを手動設定する">
 <meta property="og:locale" content="ja">
 
@@ -133,7 +121,7 @@
         </a>
         <h4 class="sidebar-profile-name">Kazutoshi Noguchi</h4>
         
-          <h5 class="sidebar-profile-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</h5>
+          <h5 class="sidebar-profile-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</h5>
         
       </div>
     
@@ -267,33 +255,21 @@
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
               <p>AFWall+を有効にしていると、Bluetoothテザリングで接続したクライアントが通信できなくなるのをなんとかする。</p>
-
-<h2 id="原因">原因</h2>
-
+<h2 id="heading">原因</h2>
 <p>ログと検索エンジンで調べたところ、AFWall+がBluetoothテザリングに対応していないため、クライアントにDHCPとDNS Proxyを提供しているdnsmasqからのDNS通信がブロックされてしまっていることが分かった。</p>
-
-<h2 id="解決策1-dnsを手動設定する">解決策1: DNSを手動設定する</h2>
-
+<h2 id="1-dns">解決策1: DNSを手動設定する</h2>
 <p>AFWall+はFORWARDチェインを素通し状態にしているので、DNSを手動設定してdnsmasqを通さずに名前解決すれば通信できるようになる。</p>
-
 <p>クライアント機器がDNSを手動設定できない仕様なので、今回この方法は使えない。</p>
-
-<h2 id="解決策2-カスタムスクリプトを使う">解決策2: カスタムスクリプトを使う</h2>
-
+<h2 id="2-">解決策2: カスタムスクリプトを使う</h2>
 <p>AFWall+には、ファイアウォールの起動時と停止時にスクリプトを実行する機能がある。これを使ってiptablesにルールを追加し、dnsmasqからのDNS通信を許可すれば、クライアントが名前解決できるようになる。</p>
-
 <p>iptablesは、対応カーネルならばownerモジュールの<code>--pid-owner</code>, <code>--sid-owner</code>, <code>--cmd-owner</code> で特定プロセスからの通信のみを許可することができるようだが、Androidのiptablesバイナリはこれらのオプションに対応していない。代わりに、AFWall+がテザリング時に設定するルールと同じように、<code>--uid-owner</code>でdnsmasqの動作ユーザー(UID 9999)からのDNS通信を許可する。</p>
-
 <p>AFWall+がわざわざテザリング時に限定している通信を常に許可することになるのでセキュリティは落ちることになるが、
 ざっと見たかぎり、UID 9999は特定のシステムプロセスしか使用していないようなので問題はないだろう。</p>
-
 <p>心配な場合は、Bluetoothテザリングの開始・終了を検知してiptablesのルールを追加・削除するアプリを作れば解決できる。</p>
-
 <p>以下のコマンドで、<code>/data/local/afwall_bluetooth.sh</code> にカスタムスクリプトを作成する。</p>
-
-<pre><code class="language-plain">host $ adb shell
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">host $ adb shell
 device $ su
-device # cat &lt;&lt;'EOS' &gt;/data/local/afwall_bluetooth.sh
+device # cat &lt;&lt;&#39;EOS&#39; &gt;/data/local/afwall_bluetooth.sh
 #!/system/bin/sh
 IPTABLES=/system/bin/iptables
 
@@ -304,10 +280,7 @@ $IPTABLES -I OUTPUT -m owner --uid-owner 9999 -p udp --dport 53 -j ACCEPT
 EOS
 device # chmod 700 /data/local/afwall_bluetooth.sh #root権限で実行されるので、絶対に他のユーザーが書き込めるパーミッションにしないこと
 #ファイアウォール停止時に残っていても実害はないので、停止スクリプトは作成しない。
-</code></pre>
-
-<p>AFWall+のメニューで <code>カスタムスクリプト設定</code> を開き、「<strong>下記にカスタムスクリプトを記入してください。</strong>」 の入力欄を <code>/data/local/afwall_bluetooth.sh</code>に設定する。</p>
-
+</code></pre></div><p>AFWall+のメニューで <code>カスタムスクリプト設定</code> を開き、「<strong>下記にカスタムスクリプトを記入してください。</strong>」 の入力欄を <code>/data/local/afwall_bluetooth.sh</code>に設定する。</p>
 <p>これでBluetoothテザリングで通信できるようになる。</p>
               
             </div>
@@ -509,7 +482,7 @@ device # chmod 700 /data/local/afwall_bluetooth.sh #root権限で実行される
     
     <h4 id="about-card-name">Kazutoshi Noguchi</h4>
     
-      <div id="about-card-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</div>
+      <div id="about-card-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</div>
     
     
       <div id="about-card-job">

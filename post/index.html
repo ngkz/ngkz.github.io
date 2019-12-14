@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.61.0 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="Kazutoshi Noguchi&#39;s blog">
@@ -97,7 +97,7 @@
         </a>
         <h4 class="sidebar-profile-name">Kazutoshi Noguchi</h4>
         
-          <h5 class="sidebar-profile-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</h5>
+          <h5 class="sidebar-profile-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</h5>
         
       </div>
     
@@ -245,14 +245,10 @@
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        <h2 id="不良メモリのその後">不良メモリのその後</h2>
-
+        <h2 id="heading">不良メモリのその後</h2>
 <p>正常なメモリに交換したら安定動作するようになった。</p>
-
 <h2 id="nic">NIC</h2>
-
 <p>1ヶ月半以上かかってWYI350T4が届いたので取り付けてテストした。ちゃんと4ポート全部ほぼワイヤースピード出てていい感じ</p>
-
 
 
  
@@ -279,7 +275,6 @@
     <span class="caption">相手は安ハブ経由のカニ</span>
   
 </div>
-
 
 <p>LFSが出来たら続きをやります</p>
       
@@ -343,15 +338,13 @@
     <div class="postShorten-excerpt" itemprop="articleBody">
       
         <p>自宅サーバーを再開したくなった。まだOS(Linux from Scratch)が完成していないけど、10月に増税なのでとりあえず必要なパーツの調達と動作確認だけしておくことにした。</p>
-
-<h2 id="構成">構成</h2>
-
+<h2 id="heading">構成</h2>
 <ul>
-<li>エンコード支援機能がついてるIntel以外のCPU<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup> で、3スロットPCIeがついていて(NIC用, 2.4G WLAN用, 5G WLAN用)、できるだけ省電力で安い構成にしたかった
-
+<li>エンコード支援機能がついてるIntel以外のCPU<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> で、3スロットPCIeがついていて(NIC用, 2.4G WLAN用, 5G WLAN用)、できるだけ省電力で安い構成にしたかった
 <ul>
 <li>11ac Wave2対応のAtherosのカードがまだ高価なので、結局WLAN AP化は中止した</li>
-</ul></li>
+</ul>
+</li>
 </ul>
       
       <p>
@@ -414,19 +407,13 @@
     <div class="postShorten-excerpt" itemprop="articleBody">
       
         <p>AVRでファンコントローラを作っていたら、いろいろなところで嵌って何時間も無駄にしたので、後学のために何があったかを書いておく。</p>
-
-<h2 id="gcc拡張インラインアセンブラ構文の嵌りどころ">GCC拡張インラインアセンブラ構文の嵌りどころ</h2>
-
+<h2 id="gcc">GCC拡張インラインアセンブラ構文の嵌りどころ</h2>
 <p>GCCの拡張インラインアセンブラ構文を使うときはマニュアルをよく読まないとこういう目にあう</p>
-
-<h3 id="入力オペランドと出力オペランドは同じレジスタに割り当てられることがある">入力オペランドと出力オペランドは同じレジスタに割り当てられることがある</h3>
-
+<h3 id="heading">入力オペランドと出力オペランドは同じレジスタに割り当てられることがある</h3>
 <p>同じレジスタに割り当てられるとまずい場合は出力オペランドの制約に<code>&amp;</code>をつける。付け忘れていたら最適化をかけたときに入力と出力が同じレジスタに割り当てられて嵌った。</p>
-
-<p>NG: <code>asm volatile(&quot;...&quot; : [output] &quot;=r&quot; (...) : [input] &quot;r&quot; (...));</code> <br />
+<p>NG: <code>asm volatile(&quot;...&quot; : [output] &quot;=r&quot; (...) : [input] &quot;r&quot; (...));</code><br>
 OK: <code>asm volatile(&quot;...&quot; : [output] &quot;=&amp;r&quot; (...) : [input] &quot;r&quot; (...));</code></p>
-
-<h3 id="入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる">入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる</h3>
+<h3 id="heading-1">入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる</h3>
       
       <p>
         <a href="https://ngkz.github.io/2019/09/avr-development-fail/" class="postShorten-excerpt_link link">続きを読む</a>
@@ -487,14 +474,10 @@ OK: <code>asm volatile(&quot;...&quot; : [output] &quot;=&amp;r&quot; (...) : [i
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        <h2 id="一ヶ月半前くらいの話">一ヶ月半前くらいの話</h2>
-
+        <h2 id="heading">一ヶ月半前くらいの話</h2>
 <p><a href="https://imgur.com/a/dCvS5">酢と塩と9V電池でステンレス鍋に目盛りをつける方法</a>を知ったので、計量カップを追い出して旅行の荷物を減らすためにステンレスマグを計量カップ化してみた。</p>
-
-<h2 id="どうやるの">どうやるの</h2>
-
+<h2 id="heading-1">どうやるの</h2>
 <p>上のリンクの内容を要約すると</p>
-
 <ol>
 <li>印をつけたい部分の周辺をマスキング</li>
 <li>酢と塩を混ぜて綿棒の先につける</li>
@@ -502,10 +485,8 @@ OK: <code>asm volatile(&quot;...&quot; : [output] &quot;=&amp;r&quot; (...) : [i
 <li>綿棒の先をエッチングしたい部分に押し付ける</li>
 <li>シュワシュワという音がして数秒くらいで印が点く</li>
 </ol>
-
 <p>自分の場合は酢にやさしい酢を使ったのと、印をつける面がヘアライン加工されていたせいか、9V電池では目盛りがつくのに時間がかかったので、電源電圧を12Vに上げて反応速度を上げた。</p>
-
-<h2 id="底で試す">底で試す</h2>
+<h2 id="heading-2">底で試す</h2>
       
       <p>
         <a href="https://ngkz.github.io/2019/06/howto-etch-stainless-mug/" class="postShorten-excerpt_link link">続きを読む</a>
@@ -566,10 +547,8 @@ OK: <code>asm volatile(&quot;...&quot; : [output] &quot;=&amp;r&quot; (...) : [i
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        <h2 id="必要な物">必要な物</h2>
-
+        <h2 id="heading">必要な物</h2>
 <p>たまに忘れるので</p>
-
 <ul>
 <li>オイル (消耗品)</li>
 <li>オイル処理箱 (消耗品)</li>
@@ -651,7 +630,6 @@ OK: <code>asm volatile(&quot;...&quot; : [output] &quot;=&amp;r&quot; (...) : [i
     <div class="postShorten-excerpt" itemprop="articleBody">
       
         <p>Windowsが入った内蔵HDDをUSB経由で接続し、そこから起動しようとするとSTOPエラーで失敗するが、レジストリの<code>HKEY_LOCAL_MACHINE\SYSTEM</code>の<code>HardwareConfig</code>キー中の<code>BootDriverFlags</code>を<code>0x14</code>に設定すると、USBストレージから起動できるようになる。</p>
-
 <p>ただし、このHDDを使ってWindowsを起動すると、接続したマシンのUEFIのブートエントリにWindowsが登録されてしまう。</p>
       
       <p>
@@ -714,21 +692,17 @@ OK: <code>asm volatile(&quot;...&quot; : [output] &quot;=&amp;r&quot; (...) : [i
     <div class="postShorten-excerpt" itemprop="articleBody">
       
         <p>Ubuntu 19.04へアップグレードしたら、手のひら検知と入力中にタッチパッドを無効にする機能がオフになり、入力中にカーソルが勝手にあちこちに飛ぶようになってしまった。</p>
-
 <p>以下の手順で設定して、Xサーバーを再起動(再ログイン)すると再有効化できる。</p>
-
-<pre><code class="language-sh">sudo -e /etc/X11/xorg.conf.d/90-libinput.conf
-</code></pre>
-
-<pre><code class="language-sh">Section &quot;InputClass&quot;
-    Identifier &quot;libinput touchpad catchall&quot;
-    MatchIsTouchpad &quot;on&quot;
-    MatchDevicePath &quot;/dev/input/event*&quot;
-    Driver &quot;libinput&quot;
-    Option &quot;Tapping&quot; &quot;True&quot;
-    Option &quot;DisableWhileTyping&quot; &quot;True&quot;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo -e /etc/X11/xorg.conf.d/90-libinput.conf
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">Section <span style="color:#e6db74">&#34;InputClass&#34;</span>
+    Identifier <span style="color:#e6db74">&#34;libinput touchpad catchall&#34;</span>
+    MatchIsTouchpad <span style="color:#e6db74">&#34;on&#34;</span>
+    MatchDevicePath <span style="color:#e6db74">&#34;/dev/input/event*&#34;</span>
+    Driver <span style="color:#e6db74">&#34;libinput&#34;</span>
+    Option <span style="color:#e6db74">&#34;Tapping&#34;</span> <span style="color:#e6db74">&#34;True&#34;</span>
+    Option <span style="color:#e6db74">&#34;DisableWhileTyping&#34;</span> <span style="color:#e6db74">&#34;True&#34;</span>
 EndSection
-</code></pre>
+</code></pre></div>
       
       <p>
         <a href="https://ngkz.github.io/2019/05/ubuntu-1904-reenable-touchpad-palm-detection/" class="postShorten-excerpt_link link">続きを読む</a>
@@ -779,7 +753,7 @@ EndSection
     
     <h4 id="about-card-name">Kazutoshi Noguchi</h4>
     
-      <div id="about-card-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</div>
+      <div id="about-card-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</div>
     
     
       <div id="about-card-job">

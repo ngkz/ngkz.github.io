@@ -17,14 +17,10 @@
       <pubDate>Mon, 04 Nov 2019 00:31:35 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/11/homeserver-build-20191104/</guid>
-      <description>&lt;h2 id=&#34;不良メモリのその後&#34;&gt;不良メモリのその後&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;不良メモリのその後&lt;/h2&gt;
 &lt;p&gt;正常なメモリに交換したら安定動作するようになった。&lt;/p&gt;
-
 &lt;h2 id=&#34;nic&#34;&gt;NIC&lt;/h2&gt;
-
 &lt;p&gt;1ヶ月半以上かかってWYI350T4が届いたので取り付けてテストした。ちゃんと4ポート全部ほぼワイヤースピード出てていい感じ&lt;/p&gt;
-
 
 
  
@@ -52,7 +48,6 @@
   
 &lt;/div&gt;
 
-
 &lt;p&gt;LFSが出来たら続きをやります&lt;/p&gt;</description>
     </item>
     
@@ -63,15 +58,13 @@
       
       <guid>https://ngkz.github.io/2019/09/homeserver-build-20190922/</guid>
       <description>&lt;p&gt;自宅サーバーを再開したくなった。まだOS(Linux from Scratch)が完成していないけど、10月に増税なのでとりあえず必要なパーツの調達と動作確認だけしておくことにした。&lt;/p&gt;
-
-&lt;h2 id=&#34;構成&#34;&gt;構成&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;構成&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;エンコード支援機能がついてるIntel以外のCPU&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; で、3スロットPCIeがついていて(NIC用, 2.4G WLAN用, 5G WLAN用)、できるだけ省電力で安い構成にしたかった
-
+&lt;li&gt;エンコード支援機能がついてるIntel以外のCPU&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; で、3スロットPCIeがついていて(NIC用, 2.4G WLAN用, 5G WLAN用)、できるだけ省電力で安い構成にしたかった
 &lt;ul&gt;
 &lt;li&gt;11ac Wave2対応のAtherosのカードがまだ高価なので、結局WLAN AP化は中止した&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
@@ -82,19 +75,13 @@
       
       <guid>https://ngkz.github.io/2019/09/avr-development-fail/</guid>
       <description>&lt;p&gt;AVRでファンコントローラを作っていたら、いろいろなところで嵌って何時間も無駄にしたので、後学のために何があったかを書いておく。&lt;/p&gt;
-
-&lt;h2 id=&#34;gcc拡張インラインアセンブラ構文の嵌りどころ&#34;&gt;GCC拡張インラインアセンブラ構文の嵌りどころ&lt;/h2&gt;
-
+&lt;h2 id=&#34;gcc&#34;&gt;GCC拡張インラインアセンブラ構文の嵌りどころ&lt;/h2&gt;
 &lt;p&gt;GCCの拡張インラインアセンブラ構文を使うときはマニュアルをよく読まないとこういう目にあう&lt;/p&gt;
-
-&lt;h3 id=&#34;入力オペランドと出力オペランドは同じレジスタに割り当てられることがある&#34;&gt;入力オペランドと出力オペランドは同じレジスタに割り当てられることがある&lt;/h3&gt;
-
+&lt;h3 id=&#34;heading&#34;&gt;入力オペランドと出力オペランドは同じレジスタに割り当てられることがある&lt;/h3&gt;
 &lt;p&gt;同じレジスタに割り当てられるとまずい場合は出力オペランドの制約に&lt;code&gt;&amp;amp;&lt;/code&gt;をつける。付け忘れていたら最適化をかけたときに入力と出力が同じレジスタに割り当てられて嵌った。&lt;/p&gt;
-
-&lt;p&gt;NG: &lt;code&gt;asm volatile(&amp;quot;...&amp;quot; : [output] &amp;quot;=r&amp;quot; (...) : [input] &amp;quot;r&amp;quot; (...));&lt;/code&gt; &lt;br /&gt;
+&lt;p&gt;NG: &lt;code&gt;asm volatile(&amp;quot;...&amp;quot; : [output] &amp;quot;=r&amp;quot; (...) : [input] &amp;quot;r&amp;quot; (...));&lt;/code&gt;&lt;br&gt;
 OK: &lt;code&gt;asm volatile(&amp;quot;...&amp;quot; : [output] &amp;quot;=&amp;amp;r&amp;quot; (...) : [input] &amp;quot;r&amp;quot; (...));&lt;/code&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる&#34;&gt;入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる&lt;/h3&gt;</description>
+&lt;h3 id=&#34;heading-1&#34;&gt;入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる&lt;/h3&gt;</description>
     </item>
     
     <item>
@@ -103,14 +90,10 @@ OK: &lt;code&gt;asm volatile(&amp;quot;...&amp;quot; : [output] &amp;quot;=&amp;
       <pubDate>Sun, 09 Jun 2019 17:34:45 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/06/howto-etch-stainless-mug/</guid>
-      <description>&lt;h2 id=&#34;一ヶ月半前くらいの話&#34;&gt;一ヶ月半前くらいの話&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;一ヶ月半前くらいの話&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://imgur.com/a/dCvS5&#34;&gt;酢と塩と9V電池でステンレス鍋に目盛りをつける方法&lt;/a&gt;を知ったので、計量カップを追い出して旅行の荷物を減らすためにステンレスマグを計量カップ化してみた。&lt;/p&gt;
-
-&lt;h2 id=&#34;どうやるの&#34;&gt;どうやるの&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;どうやるの&lt;/h2&gt;
 &lt;p&gt;上のリンクの内容を要約すると&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;印をつけたい部分の周辺をマスキング&lt;/li&gt;
 &lt;li&gt;酢と塩を混ぜて綿棒の先につける&lt;/li&gt;
@@ -118,10 +101,8 @@ OK: &lt;code&gt;asm volatile(&amp;quot;...&amp;quot; : [output] &amp;quot;=&amp;
 &lt;li&gt;綿棒の先をエッチングしたい部分に押し付ける&lt;/li&gt;
 &lt;li&gt;シュワシュワという音がして数秒くらいで印が点く&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;自分の場合は酢にやさしい酢を使ったのと、印をつける面がヘアライン加工されていたせいか、9V電池では目盛りがつくのに時間がかかったので、電源電圧を12Vに上げて反応速度を上げた。&lt;/p&gt;
-
-&lt;h2 id=&#34;底で試す&#34;&gt;底で試す&lt;/h2&gt;</description>
+&lt;h2 id=&#34;heading-2&#34;&gt;底で試す&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -130,10 +111,8 @@ OK: &lt;code&gt;asm volatile(&amp;quot;...&amp;quot; : [output] &amp;quot;=&amp;
       <pubDate>Sun, 02 Jun 2019 23:03:00 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/06/oil-change/</guid>
-      <description>&lt;h2 id=&#34;必要な物&#34;&gt;必要な物&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;必要な物&lt;/h2&gt;
 &lt;p&gt;たまに忘れるので&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;オイル (消耗品)&lt;/li&gt;
 &lt;li&gt;オイル処理箱 (消耗品)&lt;/li&gt;
@@ -163,7 +142,6 @@ OK: &lt;code&gt;asm volatile(&amp;quot;...&amp;quot; : [output] &amp;quot;=&amp;
       
       <guid>https://ngkz.github.io/2019/06/howto-boot-preinstalled-windows-from-usb-hdd/</guid>
       <description>&lt;p&gt;Windowsが入った内蔵HDDをUSB経由で接続し、そこから起動しようとするとSTOPエラーで失敗するが、レジストリの&lt;code&gt;HKEY_LOCAL_MACHINE\SYSTEM&lt;/code&gt;の&lt;code&gt;HardwareConfig&lt;/code&gt;キー中の&lt;code&gt;BootDriverFlags&lt;/code&gt;を&lt;code&gt;0x14&lt;/code&gt;に設定すると、USBストレージから起動できるようになる。&lt;/p&gt;
-
 &lt;p&gt;ただし、このHDDを使ってWindowsを起動すると、接続したマシンのUEFIのブートエントリにWindowsが登録されてしまう。&lt;/p&gt;</description>
     </item>
     
@@ -174,21 +152,17 @@ OK: &lt;code&gt;asm volatile(&amp;quot;...&amp;quot; : [output] &amp;quot;=&amp;
       
       <guid>https://ngkz.github.io/2019/05/ubuntu-1904-reenable-touchpad-palm-detection/</guid>
       <description>&lt;p&gt;Ubuntu 19.04へアップグレードしたら、手のひら検知と入力中にタッチパッドを無効にする機能がオフになり、入力中にカーソルが勝手にあちこちに飛ぶようになってしまった。&lt;/p&gt;
-
 &lt;p&gt;以下の手順で設定して、Xサーバーを再起動(再ログイン)すると再有効化できる。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;sudo -e /etc/X11/xorg.conf.d/90-libinput.conf
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;Section &amp;quot;InputClass&amp;quot;
-    Identifier &amp;quot;libinput touchpad catchall&amp;quot;
-    MatchIsTouchpad &amp;quot;on&amp;quot;
-    MatchDevicePath &amp;quot;/dev/input/event*&amp;quot;
-    Driver &amp;quot;libinput&amp;quot;
-    Option &amp;quot;Tapping&amp;quot; &amp;quot;True&amp;quot;
-    Option &amp;quot;DisableWhileTyping&amp;quot; &amp;quot;True&amp;quot;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;sudo -e /etc/X11/xorg.conf.d/90-libinput.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;Section &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;InputClass&amp;#34;&lt;/span&gt;
+    Identifier &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;libinput touchpad catchall&amp;#34;&lt;/span&gt;
+    MatchIsTouchpad &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;on&amp;#34;&lt;/span&gt;
+    MatchDevicePath &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/dev/input/event*&amp;#34;&lt;/span&gt;
+    Driver &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;libinput&amp;#34;&lt;/span&gt;
+    Option &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Tapping&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;True&amp;#34;&lt;/span&gt;
+    Option &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;DisableWhileTyping&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;True&amp;#34;&lt;/span&gt;
 EndSection
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -197,8 +171,7 @@ EndSection
       <pubDate>Thu, 25 Apr 2019 22:38:53 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/04/diary-20190425/</guid>
-      <description>&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;生活リズムが崩壊している。また寝不足になる→寝る準備をするのが億劫になる→さらに寝不足になるの悪循環に入ってしまった&lt;/li&gt;
 &lt;li&gt;疲れた&lt;/li&gt;
@@ -212,12 +185,9 @@ EndSection
       <pubDate>Fri, 19 Apr 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/04/diary-20190419/</guid>
-      <description>&lt;h2 id=&#34;ubuntuのアップグレード&#34;&gt;Ubuntuのアップグレード&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;ubuntu&#34;&gt;Ubuntuのアップグレード&lt;/h2&gt;
 &lt;p&gt;Ubuntu 18.04へアップグレード成功&lt;/p&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;その他&lt;/h2&gt;
 &lt;p&gt;最近頻繁に車が虫まみれになる。洗車機だと落ちきらないから高圧洗浄機から泡を噴射するツールを買った。
 110km/hあたりになると急激に虫がぶつかる頻度が増えて、フロントガラスに虫の中身が飛び散ったり、バンパーに虫が頭を突っこんで死んだりする。&lt;/p&gt;</description>
     </item>
@@ -229,32 +199,25 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/04/diary-20190417/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;diffutils, gawk, findutils, groff&lt;/li&gt;
 &lt;li&gt;GRUBのビルドに失敗した
-
 &lt;ul&gt;
 &lt;li&gt;PIEが有効だとビルドに失敗するっぽい&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;一部のソフトウェアはCPPFLAGSに&lt;code&gt;_FORTIFY_SOURCE&lt;/code&gt;の定義があるとconfigureが失敗するので、configureにパッチを当てて対処していたが、ハックが4箇所くらいに増えたのでCFLAGSに&lt;code&gt;_FORTIFY_SOURCE&lt;/code&gt;の定義を移動してハックを削除した。&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;ubuntuのアップグレード&#34;&gt;Ubuntuのアップグレード&lt;/h2&gt;
-
+&lt;h2 id=&#34;ubuntu&#34;&gt;Ubuntuのアップグレード&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Ubuntu 18.04へのアップグレードが途中で止まったのは、壊れたシンボリックリンクが&lt;code&gt;/etc/ca-certificates&lt;/code&gt;に残っていたせいでca-certificatesの設定が失敗した結果、それに依存するパッケージ全部の設定が連鎖的に失敗したのが原因だった。&lt;/li&gt;
 &lt;li&gt;一応アップグレードは成功したが、あちこちの動作が怪しい&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;新しいキャンプ用食器&#34;&gt;新しいキャンプ用食器&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;新しいキャンプ用食器&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;別のセリアに行って小さいコッヘルを探してみたが、Lサイズすら置いてなかった。&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;4K15.6インチの画面がどれくらい精細なのか気になったので電気屋に実物を見にいってみたが、4Kのラップトップが置いてなかった。&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -267,35 +230,32 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/04/diary-20190416/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;coreutils, checkをインストール&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;新しいキャンプ用食器&#34;&gt;新しいキャンプ用食器&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;新しいキャンプ用食器&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;クッカーセットの鍋はスープの器代わりにするには大きすぎるので、小鍋(約12cm)に入れて収納できるサイズのステンレス食器が欲しい。
-
 &lt;ul&gt;
-&lt;li&gt;百均にステンレスのコッヘルが売っていることを知ったので買いに行ったが、ダイソーのやつは既に店頭から消えていて、セリアにはギリギリ小鍋に入らないLサイズのものしかなかった。&lt;/li&gt;
+&lt;li&gt;百均にステンレスのコッヘルが売っていることを知ったので買いに行ったが、ダイソーのやつは既に店頭から消えていて、セリアにはギリギリ小鍋に入らないLサイズのものしかなかった。
+&lt;ul&gt;
 &lt;li&gt;付属のマグがスープがギリギリ入りそうな容量 (8割入れたとき200mlくらい) なのでそれで代用することにする&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;ステンレスマグに&lt;a href=&#34;https://imgur.com/a/dCvS5&#34;&gt;酢と塩と9V電池でエッチングする方法&lt;/a&gt;で目盛りをつけようとしたら、水位の位置をうまくけがけなくて断念した。
-
 &lt;ul&gt;
 &lt;li&gt;検索したら&lt;a href=&#34;https://makezine.com/projects/make-40/etch-a-kettle/&#34;&gt;詳しいやり方が出てきた&lt;/a&gt;ので後でこれを参考に再チャレンジする&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;heading-1&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;HMBを昼, トレーニング1.5時間前, 就寝前に1g摂取&lt;/li&gt;
 &lt;li&gt;公園で自重トレ&lt;/li&gt;
 &lt;li&gt;筋トレ中に夜8時になってしまったので中断&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;全身&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     
@@ -305,33 +265,31 @@ EndSection
       <pubDate>Mon, 15 Apr 2019 23:50:23 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/04/diary-20190415/</guid>
-      <description>&lt;h2 id=&#34;ubuntu-18-04へアップグレード&#34;&gt;Ubuntu 18.04へアップグレード&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;ubuntu-1804&#34;&gt;Ubuntu 18.04へアップグレード&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Ubuntu 16.04を18.04へアップグレードしている。ファイルが競合したり依存関係が壊れたりしてアップグレードに失敗した。時間が無くなったので明日なおす&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;買い物&#34;&gt;買い物&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;買い物&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;今まで車内で調理するとき、たまにしか使わないので100均のやつでいいやと思って100均の食器と調理器具を使っていたが、味気ないしかさばるのでキャンプ用のクッカーセットを買った。
-
 &lt;ul&gt;
-&lt;li&gt;ホムセンでSOLAキャンピング鍋8点セットを2000円で買った。&lt;/li&gt;
+&lt;li&gt;ホムセンでSOLAキャンピング鍋8点セットを2000円で買った。
+&lt;ul&gt;
 &lt;li&gt;今見てみたらamazonの方が安かった :(&lt;/li&gt;
 &lt;li&gt;鍋2つ, 鍋フタ兼用のフライパン、鍋フタ兼用の皿1枚, 皿2枚, マグ2つのセット。全部ステンレス製&lt;/li&gt;
 &lt;li&gt;マグ以外は大鍋に重ねて収納できるようになっている&lt;/li&gt;
 &lt;li&gt;安物だから最初から傷だらけでマグの底に洗剤でとれない汚れがこびりついている
-
 &lt;ul&gt;
 &lt;li&gt;後でパーツクリーナーで落ちないか試してみる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;ステンレス製なのでマグの内側に傷をつければ計量カップ化できそう&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;/li&gt;
+&lt;li&gt;ステンレス製なのでマグの内側に傷をつければ計量カップ化できそう&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;heading-1&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;買い物してたら時間がなくなったので延期&lt;/p&gt;</description>
     </item>
     
@@ -342,25 +300,23 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/04/diary-20190414/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Meson, procps-ng, e2fsprogsをインストール&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;ubuntu-18-04へアップグレード&#34;&gt;Ubuntu 18.04へアップグレード&lt;/h2&gt;
-
+&lt;h2 id=&#34;ubuntu-1804&#34;&gt;Ubuntu 18.04へアップグレード&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;4/17のUbuntu 14.04のサポート切れにLFSの構築が間に合わないので、OSをUbuntu 18.04へアップグレードしている
-
 &lt;ul&gt;
-&lt;li&gt;Ubuntu 14.04から18.04へ直接アップグレードができないので、まずUbuntu 16.04へアップグレードした。&lt;/li&gt;
+&lt;li&gt;Ubuntu 14.04から18.04へ直接アップグレードができないので、まずUbuntu 16.04へアップグレードした。
+&lt;ul&gt;
 &lt;li&gt;source.listのミラーが遅いやつのままになっていたのでかなり時間がかかった。&lt;/li&gt;
 &lt;li&gt;アップグレードツールのバグ修正パッチがUbuntu 14.04へバックポートされてなくて途中でクラッシュしたり、toolchainのPPAや自分でビルドしたパッケージを入れたままアップグレードしたせいで依存関係が壊れてシステムがおかしくなったりしたが、なんとか修復して16.04へアップグレードできた。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Ubuntu 16.04へアップグレードしたり買い物したりしていたら時間がなくなったので延期&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -373,24 +329,23 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/04/diary-20190413/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;libelf, libffi, openssl, python, ninjaをインストールした。&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;桜を見るついで大きな公園に行ったら家族連れで健康遊具が混んでいたので、途中で人の少なそうな公園に移動した
-
 &lt;ul&gt;
-&lt;li&gt;人が少なく、懸垂に使える雲梯と、斜め懸垂に丁度いい鉄棒と、プッシュアップバーの代わりになる配置のベンチがあり、ディップス以外の上半身の筋トレができた。雰囲気がよくて桜も綺麗だった&lt;/li&gt;
+&lt;li&gt;人が少なく、懸垂に使える雲梯と、斜め懸垂に丁度いい鉄棒と、プッシュアップバーの代わりになる配置のベンチがあり、ディップス以外の上半身の筋トレができた。雰囲気がよくて桜も綺麗だった
+&lt;ul&gt;
 &lt;li&gt;穴場を見つけた&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;HMBを昼, トレーニング1時間前, 就寝前に1g摂取&lt;/li&gt;
 &lt;li&gt;公園で自重トレ&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;上半身&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     
@@ -401,11 +356,8 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/04/diary-20190412/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;p&gt;Perl 5, XML::Parser-2.44, Intltool-0.51.0, autoconf, automake, xz, kmod, gettextをインストール&lt;/p&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;眠いので明日に延期&lt;/p&gt;</description>
     </item>
     
@@ -415,16 +367,13 @@ EndSection
       <pubDate>Thu, 11 Apr 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/04/diary-20190411/</guid>
-      <description>&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;HMBを昼, トレーニング1時間前, 就寝前に1g摂取&lt;/li&gt;
 &lt;li&gt;前日の睡眠 7:26 (23:57→7:28)&lt;/li&gt;
 &lt;li&gt;公園で自重トレ&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;下半身&lt;/strong&gt;&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -434,7 +383,6 @@ EndSection
 &lt;th&gt;備考&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;ピストルスクワット&lt;/td&gt;
@@ -442,14 +390,12 @@ EndSection
 &lt;td&gt;紐でチーティングして左5 右5 左4 右4 左4 右4 左2 右4 左3 左3 右4 左2 右3 左3 ベンチでチーティングして左3 右4&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ブルガリアンスクワット&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;左20 右13 左20 右16 左11 右15&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;片足スタンディングカーフレイズ&lt;/td&gt;
 &lt;td&gt;3セット 自重 左右21回以上&lt;/td&gt;
@@ -458,9 +404,7 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
 &lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;perlのビルド中&lt;/li&gt;
 &lt;li&gt;あまり作業できなかった&lt;/li&gt;
@@ -474,7 +418,6 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/04/diary-20190410/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;grep, libtool, gdbm, gperf, expatとinetutilsをインストールした&lt;/li&gt;
 &lt;li&gt;手順書のヘッダのレベルが間違っていたので修正&lt;/li&gt;
@@ -488,26 +431,22 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/04/diary-20190409/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;attr, acl, libcap, sed, psmisc, iana-etc, bison, flexをインストール&lt;/li&gt;
 &lt;li&gt;ncursesのインストールがうまくいってなかったので修正&lt;/li&gt;
 &lt;li&gt;説明の間違いを修正&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;HMBを昼, トレーニング1.5時間前, 就寝前に1g摂取&lt;/li&gt;
 &lt;li&gt;前日の睡眠 7:34 (23:43→7:23)
-
 &lt;ul&gt;
 &lt;li&gt;寝覚めはいつもより大分ましだった&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;公園で自重トレ&lt;/li&gt;
 &lt;li&gt;筋力が伸びてない気がする&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;上半身&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     
@@ -518,20 +457,17 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/04/diary-20190408/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Ncursesをインストールした&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;HMBを昼, トレーニング40分前, 就寝前に1g摂取&lt;/li&gt;
 &lt;li&gt;前日の睡眠 7:29 (0:04→7:36)
-
 &lt;ul&gt;
 &lt;li&gt;目覚めが悪かった&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;公園で自重トレ&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
@@ -545,10 +481,10 @@ EndSection
       <description>&lt;ul&gt;
 &lt;li&gt;ドローンのマニュアルを翻訳した&lt;/li&gt;
 &lt;li&gt;ネットで3時間無駄にした
-
 &lt;ul&gt;
 &lt;li&gt;面倒なことがあるとネットサーフィンしてしまう癖がどんどんひどくなってきている。今週はLeechBlockの設定をきつくしたり、必要のないときはネットから切断することで、できるだけネット断ちしていく&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
@@ -574,24 +510,20 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/04/diary-20190405/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;変更をリポジトリにコミット&lt;/li&gt;
 &lt;li&gt;手順書に何箇所か間違いがあったので修正&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;HMBをトレーニング30分前, 就寝前に1.5g摂取&lt;/li&gt;
 &lt;li&gt;前日の睡眠 7:24 (0:12→7:56)
-
 &lt;ul&gt;
 &lt;li&gt;目覚めが悪かった&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;公園で自重トレ&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;上半身&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     
@@ -602,7 +534,6 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/04/diary-20190404/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;pkg-configをインストール&lt;/li&gt;
 &lt;li&gt;あまり作業できなかった&lt;/li&gt;
@@ -616,13 +547,11 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/04/diary-20190403/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;bzip2をインストールした&lt;/li&gt;
 &lt;li&gt;あまり作業できなかった&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;</description>
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -631,21 +560,18 @@ EndSection
       <pubDate>Tue, 02 Apr 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/04/diary-20190402/</guid>
-      <description>&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ30分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBを昼, トレーニング30分前, 就寝前に1g摂取&lt;/li&gt;
 &lt;li&gt;前日の睡眠 7:27 (23:45→7:17）
-
 &lt;ul&gt;
 &lt;li&gt;目覚めが悪かった&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;公園で自重トレ&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;上半身&lt;/strong&gt;&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -655,7 +581,6 @@ EndSection
 &lt;th&gt;備考&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;懸垂&lt;/td&gt;
@@ -663,63 +588,54 @@ EndSection
 &lt;td&gt;↑ 1 1 0 1&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;逆手懸垂&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;↓ 1 1 0 0&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ナローグリップチンニング&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;→ 1 1 0&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ワイドグリップチンニング&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;0&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;斜め懸垂&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;↑9 5 6 3&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;斜め逆手懸垂&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;↓2 3 3 3 3&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ディップス（前傾）&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;↑2.5&lt;/td&gt;
 &lt;td&gt;大胸筋が痛いので中断&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ディップス (垂直)&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;インクラインプッシュアップ&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;↑11 10 6&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;パイクプッシュアップ&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
@@ -736,20 +652,17 @@ EndSection
       <pubDate>Mon, 01 Apr 2019 22:48:30 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/04/diary-20190401/</guid>
-      <description>&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ1時間前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBを昼, トレーニング1時間前, 就寝前に1g摂取&lt;/li&gt;
 &lt;li&gt;前日の睡眠 7:01 (0:55→8:01)
-
 &lt;ul&gt;
 &lt;li&gt;目覚めが悪かった&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;下半身&lt;/strong&gt;&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -759,7 +672,6 @@ EndSection
 &lt;th&gt;備考&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;ピストルスクワット&lt;/td&gt;
@@ -767,21 +679,18 @@ EndSection
 &lt;td&gt;かかとを1x4材に乗せて ロープでチーティングして 左1 右6 机でチーティング 左9 右17 左10 右15? 左9 右10 左15 右11 左6 右10 左7 右10 左9 右11 第一段階 左7 右10&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ブルガリアンスクワット&lt;/td&gt;
 &lt;td&gt;自重&lt;/td&gt;
 &lt;td&gt;左24 右16 左20 右20&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;スクワット&lt;/td&gt;
 &lt;td&gt;自重&lt;/td&gt;
 &lt;td&gt;20&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;片足スタンディングカーフレイズ&lt;/td&gt;
 &lt;td&gt;3セット 自重 左右22回以上&lt;/td&gt;
@@ -790,9 +699,7 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;ドローンのマニュアルを翻訳している&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -805,16 +712,14 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/03/diary-20190331/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/ngkz/my-lfs-setup/commit/250f062f02b29fbb0edf0197e4cc8cb750da5397&#34;&gt;GCCのインストールが完了&lt;/a&gt;
-
 &lt;ul&gt;
 &lt;li&gt;テストを通すのに苦戦したのと、今週あまり作業できなかったのもあって結局9日くらいかかった&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;</description>
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;heading&#34;&gt;その他&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -824,19 +729,17 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/03/diary-20190330/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;GCCのビルド中
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;--enable-default-pie&lt;/code&gt;と&lt;code&gt;--enable-default-ssp&lt;/code&gt;で問題を起こすテストの修正が完了&lt;/li&gt;
 &lt;li&gt;テストケースへの変更をパッチにした&lt;/li&gt;
 &lt;li&gt;フラグをいろいろ変えてビルドしたときのログをチェックして問題のあるフラグを調べた&lt;/li&gt;
 &lt;li&gt;問題のあるフラグを除去してビルドとテストをしているところ&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;</description>
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -845,24 +748,20 @@ EndSection
       <pubDate>Fri, 29 Mar 2019 22:13:54 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/03/diary-20190329/</guid>
-      <description>&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ30分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBを昼, トレーニング30分前, 就寝前に1g摂取&lt;/li&gt;
 &lt;li&gt;前日の睡眠 8:23 (23:17→7:46）
-
 &lt;ul&gt;
 &lt;li&gt;目覚めが悪かった&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;公園で自重トレ&lt;/li&gt;
 &lt;li&gt;まだ筋肉が回復しきってない感じがする 次からは3日ごとにやることにする&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;上半身&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;18:07-19:39&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -872,7 +771,6 @@ EndSection
 &lt;th&gt;備考&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;懸垂&lt;/td&gt;
@@ -880,63 +778,54 @@ EndSection
 &lt;td&gt;↓ 1 0 0&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;逆手懸垂&lt;/td&gt;
 &lt;td&gt;自重 2回以上&lt;/td&gt;
 &lt;td&gt;→1 1 1&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ナローグリップチンニング&lt;/td&gt;
 &lt;td&gt;自重&lt;/td&gt;
 &lt;td&gt;1 1&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;斜め懸垂&lt;/td&gt;
 &lt;td&gt;自重 9回以上&lt;/td&gt;
 &lt;td&gt;↑7 6 4&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;斜め逆手懸垂&lt;/td&gt;
 &lt;td&gt;自重 6回以上&lt;/td&gt;
 &lt;td&gt;↑4 3.5 6 4 0.5&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;斜め懸垂&lt;/td&gt;
 &lt;td&gt;自重&lt;/td&gt;
 &lt;td&gt;2 5 5 5&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;斜め逆手懸垂&lt;/td&gt;
 &lt;td&gt;自重&lt;/td&gt;
 &lt;td&gt;4&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ディップス(前傾)&lt;/td&gt;
 &lt;td&gt;自重&lt;/td&gt;
 &lt;td&gt;2&lt;/td&gt;
 &lt;td&gt;大胸筋が痛いので中断&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;インクラインプッシュアップ&lt;/td&gt;
 &lt;td&gt;自重 15回以上&lt;/td&gt;
 &lt;td&gt;↓10 9 8&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;パイクプッシュアップ&lt;/td&gt;
 &lt;td&gt;自重 8回以上&lt;/td&gt;
@@ -954,27 +843,22 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/03/diary-20190328/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;引き続きGCCの&lt;code&gt;--enable-default-pie&lt;/code&gt;と&lt;code&gt;--enable-default-ssp&lt;/code&gt;が原因で壊れるテストを修正中&lt;/li&gt;
 &lt;li&gt;ほとんど作業できてない&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ30分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBを昼, トレーニング1時間前, 就寝前に1g摂取&lt;/li&gt;
 &lt;li&gt;前日の睡眠 8:23 (23:25→7:24）
-
 &lt;ul&gt;
 &lt;li&gt;目覚めが悪かった&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;公園で自重トレ&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;下半身&lt;/strong&gt;&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -984,7 +868,6 @@ EndSection
 &lt;th&gt;備考&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;ピストルスクワット&lt;/td&gt;
@@ -992,21 +875,18 @@ EndSection
 &lt;td&gt;紐をポールに引っ掛けてチーティング: 左5 ベンチでチーティング: 右14 左4 右4 左4 右5 左3 右6 腕で支えながら左4 右3&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ブルガリアンスクワット&lt;/td&gt;
 &lt;td&gt;自重&lt;/td&gt;
 &lt;td&gt;左20 右19 左17 右15&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;スクワット&lt;/td&gt;
 &lt;td&gt;自重&lt;/td&gt;
 &lt;td&gt;19 20&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;片足スタンディングカーフレイズ&lt;/td&gt;
 &lt;td&gt;3セット 自重&lt;/td&gt;
@@ -1015,9 +895,7 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;4時間くらい無駄にした。集中できていない&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -1030,16 +908,14 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/03/diary-20190327/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;GCCのビルド中
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;--enable-default-pie&lt;/code&gt;と&lt;code&gt;--enable-default-ssp&lt;/code&gt;が原因で壊れるテストの修正中&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;</description>
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -1049,17 +925,15 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/03/diary-20190326/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;GCCのビルド中
-
 &lt;ul&gt;
 &lt;li&gt;別のマシンでビルドしてもテストが通らなかった。&lt;/li&gt;
 &lt;li&gt;テストコードとGCCが生成したバイナリを調べたり、GCCのメーリングリストとバグトラッカーで解決策を探したりしてみたら、何個かのテストについては解決策を見つけた。一部のテストが&lt;code&gt;--enable-default-pie&lt;/code&gt;や&lt;code&gt;--enable-default-ssp&lt;/code&gt;でビルドしたGCCに対応していないらしい。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;</description>
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;heading&#34;&gt;その他&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -1069,22 +943,17 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/03/diary-20190325/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;ビルド手順に何箇所か問題があったので修正&lt;/li&gt;
 &lt;li&gt;進捗ほとんどなし&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ40分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBをトレーニング1.5時間前, 就寝前に1.5g摂取&lt;/li&gt;
 &lt;li&gt;前日の睡眠 6:17 (1:27→7:50）&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;下半身+腹筋&lt;/strong&gt;&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1094,7 +963,6 @@ EndSection
 &lt;th&gt;備考&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;ピストルスクワット&lt;/td&gt;
@@ -1104,8 +972,7 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;</description>
+&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -1115,30 +982,25 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/03/diary-20190324/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;GCCのテストが通らない
-
 &lt;ul&gt;
 &lt;li&gt;フラグを全部削除してみたり、フラグを全部削除+PIE無効にしてみてもテストが通らない。&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.linuxfromscratch.org/lfs/build-logs/8.3/i7-5820K/test-logs/087-gcc-8.2.0&#34;&gt;LFS著者のビルドログでは全テストが通っている&lt;/a&gt;ので、ビルド手順を間違ったか、ツールチェーンのカスタマイズに問題があるかもしれない&lt;/li&gt;
 &lt;li&gt;ビルド+テスト 1周に2-3時間はかかるのでかなりつらい&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;休憩日&lt;/li&gt;
 &lt;li&gt;ソルティッドキャラメル味のインパクトホエイを使いきったので、ノンフレーバーのホエイプロテインに CAFE LATORY 抹茶と甘味料を入れて飲んでみた。カゼインと違ってプロテイン自体にほとんど味がないので1本で完全に抹茶味になった。おいしかった。
-
 &lt;ul&gt;
 &lt;li&gt;ソルティッドキャラメル味とラテ味は不快な甘みがあって途中から飲むのがつらくなった。マイプロテインの甘い系のフレーバーは自分の好みではないようだ。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;カーメイトのシガーソケット分配器の接点が凹んでしまっていたので分解して直した。なぜかケースの片側が発熱するパイロットランプにホットボンドで固定されていた。別の箇所でもう片側のケースにネジ止めされているから強度の問題はないんだけど、こんなものを付けるくらいなら強く押すと凹む接点をどうにかしてほしい&lt;/li&gt;
 &lt;li&gt;昨日もらったポータブル冷蔵庫のファンフィルターが汚れていたので分解清掃した。経年劣化で中のガムテープらしきものが全部剥がれてしまっていたので貼り替えた。&lt;/li&gt;
@@ -1152,17 +1014,14 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/03/diary-20190323/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;GCCのテストが通らない
-
 &lt;ul&gt;
 &lt;li&gt;テスト時にHardeningフラグとPIEを無効にしてみたり、フラグをいろいろと変えてコンパイラをビルドしてみたりしてみたがダメだった&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;冷蔵庫&#34;&gt;冷蔵庫&lt;/h2&gt;
-
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;heading&#34;&gt;冷蔵庫&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;父から使われていない車用ポータブル冷蔵庫をもらった。&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -1175,21 +1034,19 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/03/diary-20190322/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
-&lt;li&gt;昨日ビルドしたbinutilsのバイナリがなぜか非PIEになっていた。 ログを採って調べてみたら、テスト前にHardeningフラグを取り除いてPIEを無効にしたときにMakefileのタイムスタンプが変わったのが原因で、バイナリがPIE無効で再リンクされてしまていたことが分かった。&lt;br /&gt;
+&lt;li&gt;昨日ビルドしたbinutilsのバイナリがなぜか非PIEになっていた。 ログを採って調べてみたら、テスト前にHardeningフラグを取り除いてPIEを無効にしたときにMakefileのタイムスタンプが変わったのが原因で、バイナリがPIE無効で再リンクされてしまていたことが分かった。&lt;br&gt;
 &lt;a href=&#34;https://github.com/ngkz/my-lfs-setup/commit/84551e209d17e9220912b057dc1c56d1814e353e&#34;&gt;Makefileに細工するときにタイムスタンプが変わらないようにしたら解決した&lt;/a&gt;。&lt;/li&gt;
 &lt;li&gt;MPFR,MPC,Shadowをインストールした。&lt;/li&gt;
 &lt;li&gt;GCCをビルドしている途中
-
 &lt;ul&gt;
 &lt;li&gt;nobodyユーザーに切り替えるとなぜか モードが&lt;code&gt;666&lt;/code&gt;の&lt;code&gt;/dev/tty&lt;/code&gt;が読めなくなった。&lt;code&gt;/&lt;/code&gt;の所有者が&lt;code&gt;1000&lt;/code&gt;でモードが&lt;code&gt;700&lt;/code&gt;になっていたのが原因だった。&lt;/li&gt;
 &lt;li&gt;ほぼ全てのテストが失敗するので原因を調べてみたら、&lt;code&gt;/dev/pts&lt;/code&gt;のマウントオプションが間違っていて&lt;code&gt;/dev/pts/ptmx&lt;/code&gt;のモードが&lt;code&gt;000&lt;/code&gt;になっていたのが原因だった。マウントオプションに&lt;code&gt;newinstance,ptmxmode=0666&lt;/code&gt;を加えて解決。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;/dev/pts/ptmx&lt;/code&gt;を直したら大体のテストは通るようになったが、まだ何十ものテストが失敗している。テストに数時間かかるのでデバッグにかなり手間がかかりそう。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;</description>
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -1199,18 +1056,16 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/03/diary-20190321/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Binutilsのインストールが完了した
-
 &lt;ul&gt;
 &lt;li&gt;Hardening フラグを削除してもテストが失敗するのは GCCをDefault PIEでコンパイルしていたのが原因だった。&lt;/li&gt;
 &lt;li&gt;テストするときに、&lt;code&gt;CFLAGS&lt;/code&gt;, &lt;code&gt;CXXFLAGS&lt;/code&gt;, &lt;code&gt;CPPFLAGS&lt;/code&gt;, &lt;code&gt;LDFLAGS&lt;/code&gt;を取り除くだけでなく、&lt;code&gt;CC&lt;/code&gt;と&lt;code&gt;CXX&lt;/code&gt;に&lt;code&gt;-fno-PIE -no-pie&lt;/code&gt;を加えてPIEを無効にしたら全テストが通るようになった&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;GMPをインストールした&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;</description>
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -1220,34 +1075,32 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/03/diary-20190320/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Zlib, File, Readline, M4, Bcをインストールした&lt;/li&gt;
 &lt;li&gt;binutilsをビルド中
-
 &lt;ul&gt;
-&lt;li&gt;CPPFLAGSに&lt;code&gt;-D_FORTIFY_SOURCE=2&lt;/code&gt;が入っているとlimits.hの存在チェックが壊れてビルドできななかった&lt;/li&gt;
+&lt;li&gt;CPPFLAGSに&lt;code&gt;-D_FORTIFY_SOURCE=2&lt;/code&gt;が入っているとlimits.hの存在チェックが壊れてビルドできななかった
+&lt;ul&gt;
 &lt;li&gt;CFLAGSとCXXFLAGSに&lt;code&gt;_FORTIFY_SOURCE&lt;/code&gt;の定義を移して解決&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;ビルドが通るようになったがテストが通らない&lt;/li&gt;
 &lt;li&gt;CFLAGS, CXXFLAGS, CPPFLAGS, LDFLAGSを削除したらgold以外のテストは通るようになったので、 Hardening フラグのどれかが原因っぽい&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ30分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBを昼, トレーニング1時間前, 就寝前に1g摂取&lt;/li&gt;
 &lt;li&gt;前日の睡眠 7:23 (23:37-7:11)
-
 &lt;ul&gt;
 &lt;li&gt;あまりよく眠れなかった&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;DiscordのJMusicBotをいじってたら時間がなくなってしまった&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;上半身プル&lt;/strong&gt;&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1257,7 +1110,6 @@ EndSection
 &lt;th&gt;備考&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;ハーフデッドリフト&lt;/td&gt;
@@ -1265,28 +1117,24 @@ EndSection
 &lt;td&gt;↓15 9 12&lt;/td&gt;
 &lt;td&gt;力を出しきれなかった&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ワンハンドローイング&lt;/td&gt;
 &lt;td&gt;左右2セット 12.5kg(10kg+シャフト) 21回以上 →ドロップ&lt;/td&gt;
 &lt;td&gt;↓左15 右16 左17→5kgで12 右16→5kgで20&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルシュラッグ&lt;/td&gt;
 &lt;td&gt;2セット 30kg(27.5kg+シャフトx2) 23回以上 →ドロップ&lt;/td&gt;
 &lt;td&gt;↓18 19&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルカール&lt;/td&gt;
 &lt;td&gt;3セット 10kg(7.5kg+シャフト) 11回以上 →ドロップ&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;時間切れ&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;変形バックエクステンション&lt;/td&gt;
 &lt;td&gt;2セット 自重+5kg 16回以上 →ドロップ&lt;/td&gt;
@@ -1304,28 +1152,32 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/03/diary-20190319/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;lddが正常に動いていなかったのを直した
-
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;rtlddir&lt;/code&gt;を&lt;code&gt;/usr/lib&lt;/code&gt;に設定したとき &lt;code&gt;ldd&lt;/code&gt;が64bitダイナミックリンカのパスとして &lt;code&gt;/usr/lib64/ld-linux-x86_64.so.2&lt;/code&gt; を使っていたのが原因だった。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rtlddir&lt;/code&gt;を&lt;code&gt;/usr/lib&lt;/code&gt;に設定したとき &lt;code&gt;ldd&lt;/code&gt;が64bitダイナミックリンカのパスとして &lt;code&gt;/usr/lib64/ld-linux-x86_64.so.2&lt;/code&gt; を使っていたのが原因だった。
+&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;/usr/lib64&lt;/code&gt;から&lt;code&gt;/usr/lib&lt;/code&gt;へのシンボリックリンクを貼って解決&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;ライセンス違反を解決
-
 &lt;ul&gt;
-&lt;li&gt;大部分がCC-BY-NC-SA 2.0のLFS Bookからの引用になったのに、リポジトリのライセンスが互換性のないGPLv3のままになっていた。&lt;/li&gt;
+&lt;li&gt;大部分がCC-BY-NC-SA 2.0のLFS Bookからの引用になったのに、リポジトリのライセンスが互換性のないGPLv3のままになっていた。
+&lt;ul&gt;
 &lt;li&gt;ライセンスをCC-BY-NC-SAに変更して解決&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;Adjusting the Toolchain
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;/usr/lib32&lt;/code&gt;に必要な32bitライブラリへのリンクを貼るのを忘れていたため、32bitでコンパイルできなかったのを直した&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;</description>
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -1334,8 +1186,7 @@ EndSection
       <pubDate>Mon, 18 Mar 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/03/diary-20190318/</guid>
-      <description>&lt;h2 id=&#34;虚無&#34;&gt;虚無&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;虚無&lt;/h2&gt;
 &lt;p&gt;生活リズムがおかしくなったせいか体調がよくないしやる気がしない&lt;/p&gt;</description>
     </item>
     
@@ -1346,17 +1197,13 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/03/diary-20190317/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;LFS BookのSVNリポジトリ全体をインポートしようとしたが、時間がかかりすぎるので諦めた&lt;/li&gt;
 &lt;li&gt;git-svnをいろいろといじっていたら、trunkと欲しい最期のタグの分岐点のリビジョンからfetchすれば、正常な歴史を維持したまま特定のタグだけ取得できることが分かった&lt;/li&gt;
 &lt;li&gt;最終的に、LFS Bookに変更を加える方法ではうまく行かないことが分かったので、諦めてMarkdownで書き直す方法に戻した&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;掃除&#34;&gt;掃除&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;掃除&lt;/h2&gt;
 &lt;p&gt;部屋が汚くなってきたので掃除した。&lt;/p&gt;
-
 &lt;p&gt;部屋の半分にはコルクマット、もう半分にはカーペットが敷いてあるが、両方とも掃除が面倒くさい。&lt;/p&gt;</description>
     </item>
     
@@ -1367,24 +1214,19 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/03/diary-20190315/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;tzdataをパッケージ化してインストールした&lt;/li&gt;
 &lt;li&gt;タイムゾーンの設定をした&lt;/li&gt;
 &lt;li&gt;MarkdownでLFS Bookの中身を書き直すかわりに本家のBookをフォークしてそれにこっちの環境特有の変更を入れることにした。git-svnの使い方がまだよくわかっていないのでforkすらできていないが&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ40分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBを夕, トレーニング40分前, 就寝前に1g摂取&lt;/li&gt;
 &lt;li&gt;前日の睡眠 7:32 (23:49→7:27)&lt;/li&gt;
 &lt;li&gt;カゼイン40g + 200mlの水にブレンディカフェラトリー濃厚抹茶とパラチニットスイート1本(1.2g)を入れて飲んだ。濃厚抹茶1本では味が薄すぎる感じ。カフェインが1本あたり20mg入ってるから就寝前に飲むカゼインに入れるには向いてないね&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;上半身プッシュ+腹筋&lt;/strong&gt;&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1394,7 +1236,6 @@ EndSection
 &lt;th&gt;備考&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;プッシュアップ&lt;/td&gt;
@@ -1402,28 +1243,24 @@ EndSection
 &lt;td&gt;↑10→2 9→6 7→4&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルショルダープレス&lt;/td&gt;
 &lt;td&gt;2セット 25kg(10kg+シャフトx2) 12回以上 → ドロップ&lt;/td&gt;
 &lt;td&gt;↑13 12→10kgで15&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルフレンチプレス&lt;/td&gt;
 &lt;td&gt;2セット 12.5kg(10kg+シャフト) 11回以上 → ドロップ&lt;/td&gt;
 &lt;td&gt;↑14 4→5kgで25&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルフライ&lt;/td&gt;
 &lt;td&gt;2セット 20kg(7.5kg+シャフトx2) 15回以上 → ドロップ&lt;/td&gt;
 &lt;td&gt;↑16 10→12&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ツイストクランチ&lt;/td&gt;
 &lt;td&gt;3セット 自重 5秒維持 23回以上&lt;/td&gt;
@@ -1432,8 +1269,7 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;</description>
+&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -1443,32 +1279,25 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/03/diary-20190314/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;パッケージの後処理スクリプトが完成
-
 &lt;ul&gt;
 &lt;li&gt;パッケージの全バイナリとライブラリをstripするスクリプトが完成
 特定のファイルのデバッグ情報を分離して保持できるようにしてある&lt;/li&gt;
 &lt;li&gt;man圧縮スクリプトの処理内容を出力するようにした&lt;/li&gt;
 &lt;li&gt;後処理スクリプト自体もパッケージ化した&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;全パッケージが新しい後処理スクリプトを使うようにした&lt;/li&gt;
 &lt;li&gt;必要なライブラリ以外はデバッグ情報を残さないようにした&lt;/li&gt;
 &lt;li&gt;glibcのパッケージ化とインストールが完了&lt;/li&gt;
 &lt;li&gt;今までの変更をリポジトリにコミットした&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;休み&lt;/p&gt;
-
 &lt;p&gt;今日は夕飯を食べるのが遅かったので、消化されるのを待っていたら寝る時間になってしまった。最近寝不足気味なので今日は筋トレせずに&lt;del&gt;早く寝ることにする&lt;/del&gt;。&lt;/p&gt;
-
 &lt;p&gt;LFSを組んでたら結局寝るのが遅くなってしまった。&lt;/p&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;このサイトのデプロイスクリプトをシンプルにした &lt;a href=&#34;https://github.com/ngkz/ngkz.github.io/blob/src/deploy.sh&#34;&gt;https://github.com/ngkz/ngkz.github.io/blob/src/deploy.sh&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;DOOM Emacsのsmartparensの動作がおかしくてイライラするのでオフにした&lt;/li&gt;
@@ -1482,28 +1311,23 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/03/diary-20190313/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;必要なライブラリ以外はデバッグ情報を残さないように変更 (途中)&lt;/li&gt;
 &lt;li&gt;パッケージの後処理(バイナリとライブラリのstrip, manページの圧縮, 不要なファイルを削除) をするスクリプトを改良している途中&lt;/li&gt;
 &lt;li&gt;数時間作業できたのにほとんど進捗がない。Ubuntu 14.04のサポート切れがせまっているので、迷ったらとりあえず本通りに先に進めるようにしたい。&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;HMBを昼, トレーニング30分前, 就寝前に1g摂取&lt;/li&gt;
 &lt;li&gt;前日の睡眠 7:09 (0:03→7：19)&lt;/li&gt;
 &lt;li&gt;2/18以降下半身の筋トレができてなかったので大幅に筋力が落ちていた
-
 &lt;ul&gt;
 &lt;li&gt;ヒップスラストは12月の水準まで落ちてしまっている&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;カゼインプロテインにブレンディスティック カフェオレ やすらぎのカフェインレスを混ぜて飲んだ。おいしかった&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;下半身&lt;/strong&gt;&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1513,7 +1337,6 @@ EndSection
 &lt;th&gt;備考&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;ブルガリアンスクワット&lt;/td&gt;
@@ -1521,28 +1344,24 @@ EndSection
 &lt;td&gt;↓左9 右7 左4→自重で15 右5→自重で8 左3 右 12.5kgx2で6&lt;/td&gt;
 &lt;td&gt;セット数間違えてた&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;シシースクワット&lt;/td&gt;
 &lt;td&gt;2セット 自重&lt;/td&gt;
 &lt;td&gt;13  14&lt;/td&gt;
 &lt;td&gt;やり方調べながら まだ慣れていないので力を出しきれなかった&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ヒップスラスト&lt;/td&gt;
 &lt;td&gt;2セット 30kg(27.5kg+シャフト) 24回以上 →ドロップ&lt;/td&gt;
 &lt;td&gt;↓15 17→15kgで20?&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;レッグカール&lt;/td&gt;
 &lt;td&gt;2セット 22.5kg(20kg+シャフト) 11回以上 →ドロップ&lt;/td&gt;
 &lt;td&gt;↓8 2→12.5kgで21&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;片足スタンディングカーフレイズ&lt;/td&gt;
 &lt;td&gt;3セット 自重 左右23回以上&lt;/td&gt;
@@ -1551,9 +1370,7 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;ヨドバシからまだ返品要求メールへの返信がこない&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -1566,13 +1383,11 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/03/diary-20190312/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;ロケールのインストール&lt;/li&gt;
 &lt;li&gt;パッケージの後処理(バイナリとライブラリのstrip, manページの圧縮, 不要なファイルを削除) をするスクリプトを改良している途中&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;</description>
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -1581,17 +1396,14 @@ EndSection
       <pubDate>Mon, 11 Mar 2019 23:37:15 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/03/diary-20190311/</guid>
-      <description>&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ30分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBを夕方, トレーニング1時間前, 就寝前に1g摂取&lt;/li&gt;
 &lt;li&gt;前日の睡眠 6時間未満&lt;/li&gt;
 &lt;li&gt;オーバーナイトリカバリーが無くなったのでカゼイン + バニラエッセンス + パラチニットスイート1本(1.2g, 砂糖5g相当) を飲んだ。バニラエッセンスを12滴も入れたのに、なぜかバニラの香りがほとんどしない&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;上半身プッシュ&lt;/strong&gt;&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1601,7 +1413,6 @@ EndSection
 &lt;th&gt;備考&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;ローテーターカフのウォームアップ&lt;/td&gt;
@@ -1609,35 +1420,30 @@ EndSection
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;プッシュアップ&lt;/td&gt;
 &lt;td&gt;3セット 自重 10回以上 → 膝つき&lt;/td&gt;
 &lt;td&gt;→ 9→3 5→3 4→4&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルショルダープレス&lt;/td&gt;
 &lt;td&gt;2セット 25kg(10kg+シャフトx2) 11回以上 → ドロップ&lt;/td&gt;
 &lt;td&gt;↑11 9→10kgで20&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルフレンチプレス&lt;/td&gt;
 &lt;td&gt;2セット 12.5kg(10kg+シャフト) 12回以上 → ドロップ&lt;/td&gt;
 &lt;td&gt;↓10 11→5kgで15&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルフライ&lt;/td&gt;
 &lt;td&gt;2セット 20kg(7.5kg+シャフトx2) 13回以上 → ドロップ&lt;/td&gt;
 &lt;td&gt;↑14 12→10kgで20&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ツイストクランチ&lt;/td&gt;
 &lt;td&gt;3セット 自重 5秒維持 23回以上&lt;/td&gt;
@@ -1646,9 +1452,7 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;雨が降って車が1日もたたないうちにドロドロになった :(&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -1660,25 +1464,24 @@ EndSection
       <pubDate>Sun, 10 Mar 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/03/diary-20190310/</guid>
-      <description>&lt;h2 id=&#34;スキー-2日目&#34;&gt;スキー 2日目&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;-2&#34;&gt;スキー 2日目&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;マウントジーンズ那須に行った。&lt;/li&gt;
 &lt;li&gt;寝てる途中に電話のバッテリーが切れてアラームが鳴らなかった。スキー場に着くのが始業20分だったので、今回も遠いところに停めさせられてしまった。
-
 &lt;ul&gt;
 &lt;li&gt;駐車場自体がスキー場から離れた場所にある&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;こっちはシーズン終わりな感じだった。ゲレンデの雪が無くなってきていてところどころハゲているし、元々少ないコースが半分くらい閉鎖されていた。残った雪もザラメ状態になっていた。&lt;/li&gt;
 &lt;li&gt;ゴンドラが水冷モーターと遊星ギアで駆動されていた&lt;/li&gt;
 &lt;li&gt;山頂のカフェでピザとケーキを食べた。&lt;/li&gt;
 &lt;li&gt;大腿四頭筋が完全に回復していないので、パラレルで滑っていると限界がすぐ来てしまう。&lt;/li&gt;
 &lt;li&gt;1時くらいまで滑った後鹿の湯に入って帰った。&lt;/li&gt;
 &lt;li&gt;帰る途中、給油のついでに洗車した。
-
 &lt;ul&gt;
 &lt;li&gt;また洗車前に天気予報のチェックをするのを忘れた。洗車機に突っこんだ後に雨の予報だったことに気が付いた。(1週間ぶり2回目)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
@@ -1688,8 +1491,7 @@ EndSection
       <pubDate>Sat, 09 Mar 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/03/diary-20190309/</guid>
-      <description>&lt;h2 id=&#34;スキー&#34;&gt;スキー&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;スキー&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;数年ぶりにハンターマウンテン塩原へ行った&lt;/li&gt;
 &lt;li&gt;3月だから大丈夫だろうと思って遅めに行ったら遠いところに止めさせられて移動が大変だった&lt;/li&gt;
@@ -1724,15 +1526,15 @@ EndSection
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;昼食にケバブロールとプレーンポテトを食べた。
-
 &lt;ul&gt;
 &lt;li&gt;最初はおいしかったけど途中で飽きた。ポテトはソースで味に変化がつけられるように味つきのやつにしたほうがいい&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;パラレルで滑ってると大腿四頭筋にくる
-
 &lt;ul&gt;
 &lt;li&gt;途中から滑ってる途中に筋肉の限界がくるようになった&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;板やブーツについた雪を吹きとばすためのエアガンがあって便利だった&lt;/li&gt;
 &lt;li&gt;いつのまにか滑走面に深い傷がついていた
 
@@ -1793,9 +1595,7 @@ EndSection
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;花粉がひどい&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -1808,31 +1608,25 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/03/diary-20190308/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;glibcの構築手順の説明を更新&lt;/li&gt;
 &lt;li&gt;必要なライブラリ以外はデバッグ情報を残さないように変更 (途中)&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;スキー&#34;&gt;スキー&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;スキー&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;荷物をパッキングして積んだ&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;みんなで逮捕されようプロジェクト&#34;&gt;みんなで逮捕されようプロジェクト&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;みんなで逮捕されようプロジェクト&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;中学生がalertループへのURLを貼って補導された件で、
 &lt;a href=&#34;https://www.data-max.co.jp/article/28329&#34;&gt;「みんなで逮捕されようプロジェクト」 &lt;/a&gt; っていうのが始まったらしいので、私も兵庫県警に喧嘩を売っておいた
 &lt;a href=&#34;https://ngkz.github.io/lets-get-arrested/&#34;&gt;https://ngkz.github.io/lets-get-arrested/&lt;/a&gt;
-
 &lt;ul&gt;
 &lt;li&gt;茨城県警のサイバー犯罪対策室はちゃんとしたセキュリティ技術者を雇っていて、技術力も高いようだから逮捕される確率は低そう&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;ドローン&#34;&gt;ドローン&lt;/h2&gt;</description>
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;heading-2&#34;&gt;ドローン&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -1842,11 +1636,8 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/03/diary-20190307/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;p&gt;glibcの設定をしている途中&lt;/p&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;風呂入って戻ってきたらドローンが置いてあった 何これ？&lt;/li&gt;
 &lt;li&gt;4.6時間無駄にした&lt;/li&gt;
@@ -1860,28 +1651,21 @@ EndSection
       <pubDate>Wed, 06 Mar 2019 23:31:17 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/03/diary-20190306/</guid>
-      <description>&lt;h2 id=&#34;スキー&#34;&gt;スキー&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;スキー&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;スキーに行く準備をした。
-
 &lt;ul&gt;
 &lt;li&gt;ハンターマウンテン塩原とマウントジーンズ那須のリフト引換券があるので、一日目はハンターマウンテン、二日目はマウントジーンズ那須へ行くことにした。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;買い物で失敗-2&#34;&gt;買い物で失敗 #2&lt;/h2&gt;
-
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-2&#34;&gt;買い物で失敗 #2&lt;/h2&gt;
 &lt;p&gt;ヨドバシ.comは商品の発送が非常に早く、月曜の夜に注文した商品がなんと火曜の昼に届いていたが、不在で再配達になっていたので、再配達依頼をして今日受けとった。&lt;/p&gt;
-
 &lt;p&gt;ポンプカップと杏仁霜は取り寄せ品だったので、スマートフォンホルダー EC-176とUSB type-C シガーソケットチャージャー PJ-1819だけが届いた。&lt;/p&gt;
-
 &lt;p&gt;スマートフォンホルダー EC-176を組み立ててNexus 5Xをつけてみたら、ホルダー部分が大きすぎて指紋センサが隠れてしまうし、ホルダを締めると左右のツメが音量調整ボタンに触れてしまうことに気付いた。音量ボタンの干渉はロックを緩めにしたら回避できるが、指紋センサが隠れるのはどうしようもないので困った。&lt;a href=&#34;https://www.amazon.co.jp/gp/product/B00UJ33YAQ/&#34;&gt;前使っていたもの&lt;/a&gt;と同等以下の大きさのホルダーを選べばよかった。アームと吸盤部分は前より頑丈そうでいい感じだ。&lt;/p&gt;
-
 &lt;p&gt;PJ-1819 はNexus 5Xから最大電流が1.5Aの充電器として認識されてしまい、急速充電ができなかった。おそらく、初期不良かプルアップ抵抗の値が間違っている設計ミスなので、返品して別の物を買うことにした。
 コネクタのプルアップ抵抗の値を測ろうとしてみたが、テスター棒は入らないしブレークアウトボードも持っていないのでできなかった。&lt;/p&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;</description>
+&lt;h2 id=&#34;heading-1&#34;&gt;筋トレ&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -1890,28 +1674,23 @@ EndSection
       <pubDate>Tue, 05 Mar 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/03/diary-20190305/</guid>
-      <description>&lt;h2 id=&#34;買い物で失敗&#34;&gt;買い物で失敗&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;買い物で失敗&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;昨日
 買ったBus Pirate v3.6aが発送された後に、新バージョンのBus Pirate v4が出ていることに気づいた。
-
 &lt;ul&gt;
 &lt;li&gt;さらに、Bus Pirateより遥かに高速で、Bit Bangモードを使えばほとんどのプロトコルを喋れ、AliExpressで
 ドングルがBus Pirateの半額程度で売っているFT232Hの存在にも気づいた。&lt;/li&gt;
 &lt;li&gt;よく調べずにBus Pirate v3.6aを買ったのは失敗だった。FT232HかFT2232Hのボードを買った方がよかった。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;スキーの滑走面のケバ取りをした&lt;/li&gt;
 &lt;li&gt;ネットで3.5時間くらい無駄にした&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-2&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ45分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBをトレーニング45分前, 就寝前に1.5g摂取&lt;/li&gt;
@@ -1921,7 +1700,6 @@ EndSection
 &lt;li&gt;筋トレ中にいろいろやってたら時間がなくなった&lt;/li&gt;
 &lt;li&gt;しばらく筋トレしてなかったら筋力と筋肉量が落ちた&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;上半身プッシュ+腹筋&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     
@@ -1931,20 +1709,15 @@ EndSection
       <pubDate>Mon, 04 Mar 2019 23:07:34 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/03/diary-20190304/</guid>
-      <description>&lt;h2 id=&#34;いろいろ買った&#34;&gt;いろいろ買った&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;いろいろ買った&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;ダメになったポンプカップの代わりを注文した&lt;/li&gt;
 &lt;li&gt;ついでに壊れたスマホホルダーの代わりとシガーソケットUSB type-C充電器と杏仁霜も注文&lt;/li&gt;
 &lt;li&gt;USB-UARTすらないとハードウェアをいじる時不便なので、3.3V/5V両用のUSB-UARTを買おうとしていたら、UARTだけでなくI²C, SPIやJTAGなどのプロトコルにも対応した&lt;a href=&#34;https://www.sparkfun.com/products/12942&#34;&gt;Bus Pirate&lt;/a&gt; というツールがあることを思いだしたので、かわりにそれを買った。&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;買い物してたら時間がなくなったのでなし&lt;/p&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-2&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;2-3時間くらいインターネットで時間を無駄にしてしまったので、LeechBlockの設定を厳しくした。&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -1956,29 +1729,28 @@ EndSection
       <pubDate>Sun, 03 Mar 2019 21:51:31 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/03/diary-20190303/</guid>
-      <description>&lt;h2 id=&#34;コールマン508の修理&#34;&gt;コールマン508の修理&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;508&#34;&gt;コールマン508の修理&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://ngkz.github.io/2019/02/diary-20190224/&#34;&gt;先週&lt;/a&gt;ポンプがスカスカで使えなかったコールマン508を調べてみた。
-
 &lt;ul&gt;
 &lt;li&gt;部屋でポンピングしてみたら圧縮できたが、圧縮するとき少し空気が漏れる音がした。&lt;/li&gt;
-&lt;li&gt;
-先週点火しなかったのは、暖かい地上では点火するギリギリのサイズにまで収縮していたポンプカップが温度低下によってポンピングできなくなるサイズまでさらに縮小したのが原因かもしれない&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;先週点火しなかったのは、暖かい地上では点火するギリギリのサイズにまで収縮していたポンプカップが温度低下によってポンピングできなくなるサイズまでさらに縮小したのが原因かもしれない&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;ポンプカップに油をさしたら一応点火はしたが、寒いと動かないかもしれないのであとでポンプカップを交換する&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;ついでに落としてしまったときに歪んだ五徳をラジオペンチで修正した。&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;雨が降っていたのでミラーのコーティングと擦り傷の修理ができなかった。
-
 &lt;ul&gt;
 &lt;li&gt;天気予報をチェックしてみたら来週末まで雨の予報だった。&lt;/li&gt;
 &lt;li&gt;洗車する前に天気予報を確認するのを忘れていた。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;4時間21分くらいネットで無駄にしてしまっていた。休日なのにほとんど何もできていない&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
@@ -1989,15 +1761,13 @@ EndSection
       <pubDate>Sat, 02 Mar 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/03/diary-20190302/</guid>
-      <description>&lt;h2 id=&#34;車のメンテ&#34;&gt;車のメンテ&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;車のメンテ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;オイルを交換した&lt;/li&gt;
 &lt;li&gt;洗車して塗装の擦り傷とミラーとバックカメラの超撥水コーティングを直そうとしたが、洗車したら日が暮れてしまった。&lt;/li&gt;
 &lt;li&gt;オイル交換しているときに兄弟がむりやり車を出そうとしたせいでパンパーに傷がついた。上側にスリ傷がついて下側は10円玉くらいの面積の塗装が完全に剥げている。手持ちの機材では直せないので、あとで車屋で直して修理費用を請求することにする&lt;/li&gt;
 &lt;li&gt;関係ない箇所に何箇所か謎のスリ傷ができていたが、こっちは家にあるコンパウンドで修正できそう&lt;/li&gt;
 &lt;/ul&gt;
-
 
 
  
@@ -2025,8 +1795,7 @@ EndSection
   
 &lt;/div&gt;
 
-
-&lt;h1 id=&#34;プロテインを移し替えた&#34;&gt;プロテインを移し替えた&lt;/h1&gt;</description>
+&lt;h1 id=&#34;heading-1&#34;&gt;プロテインを移し替えた&lt;/h1&gt;</description>
     </item>
     
     <item>
@@ -2035,19 +1804,16 @@ EndSection
       <pubDate>Fri, 01 Mar 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/03/diary-20190301/</guid>
-      <description>&lt;h2 id=&#34;疲れた&#34;&gt;疲れた&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;疲れた&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;寝不足になる→寝る準備をするのすら億劫になる→さらに寝不足になるの悪循環に入ってしまった
-
 &lt;ul&gt;
 &lt;li&gt;疲れが社会性に影響が出るレベルにまでなってきた&lt;/li&gt;
 &lt;li&gt;筋トレする気になれないし、やるべきことがTODOリストに溜まってきててまずい&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;オーバーナイトリカバリーブレンドがなくなってきたので、5kgのカゼインをボトルに移しかえた。部屋の中でやったら粉が部屋中に舞って大変なことになった。&lt;/li&gt;
 &lt;li&gt;ボトルに貼るプロテインのラベルのSVG画像を作った&lt;/li&gt;
@@ -2060,10 +1826,8 @@ EndSection
       <pubDate>Thu, 28 Feb 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/02/diary-20190228/</guid>
-      <description>&lt;h2 id=&#34;最近ついてない&#34;&gt;最近ついてない&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;最近ついてない&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.amazon.co.jp/gp/product/B00UJ33YAQ/&#34;&gt;スマートフォンホルダー&lt;/a&gt;が崩壊した&lt;/p&gt;
-
 
 
  
@@ -2091,8 +1855,7 @@ EndSection
   
 &lt;/div&gt;
 
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;</description>
+&lt;h2 id=&#34;heading-1&#34;&gt;筋トレ&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -2102,23 +1865,18 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/02/diary-20190227/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;glibcの設定を途中までやった&lt;/li&gt;
 &lt;li&gt;LFS構築に使える時間がない&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ30分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBを夕, トレーニング一時間前, 就寝前に1g摂取&lt;/li&gt;
 &lt;li&gt;前日の睡眠 2:41 (4:58→7:44)&lt;/li&gt;
 &lt;li&gt;集中してできなかった&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;上半身プル+腹筋&lt;/strong&gt;&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -2128,7 +1886,6 @@ EndSection
 &lt;th&gt;備考&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;ハーフデッドリフト&lt;/td&gt;
@@ -2136,35 +1893,30 @@ EndSection
 &lt;td&gt;↑19 20 8&lt;/td&gt;
 &lt;td&gt;力を出しきれてない&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ワンハンドローイング&lt;/td&gt;
 &lt;td&gt;左右2セット 12.5kg(10kg+シャフト) 17回以上 →ドロップ&lt;/td&gt;
 &lt;td&gt;→左18 右16 左15+7.5kg(2.5kgx2+シャフト)で10 右16+7.5kg(2.5kgx2+シャフト)で18&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルシュラッグ&lt;/td&gt;
 &lt;td&gt;2セット 30kg(27.5kgx2+シャフト) 22回以上 →ドロップ&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;時間がないので省略&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルカール&lt;/td&gt;
 &lt;td&gt;3セット 10kg(7.5kg+シャフト) 10回以上 →ドロップ&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;変形バックエクステンション&lt;/td&gt;
 &lt;td&gt;2セット 自重+5kg 16回以上 →ドロップ&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ツイストクランチ&lt;/td&gt;
 &lt;td&gt;3セット 自重 5秒維持 16回以上&lt;/td&gt;
@@ -2173,9 +1925,7 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
 &lt;p&gt;最近ついてない。今日は車のミラーを電柱にぶつけ、会社のサーバーのRAIDカードが文鎮化し、プロテインの粉をぶちまけた。&lt;/p&gt;</description>
     </item>
     
@@ -2185,14 +1935,12 @@ EndSection
       <pubDate>Tue, 26 Feb 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/02/diary-20190226/</guid>
-      <description>&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;HMBをトレーニング一時間前と就寝前に1.5g摂取&lt;/li&gt;
 &lt;li&gt;前日の睡眠 8:55 (22:00→7:03)&lt;/li&gt;
 &lt;li&gt;食事前に筋トレ&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;上半身プッシュ+腹筋&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     
@@ -2211,14 +1959,13 @@ EndSection
       <pubDate>Sun, 24 Feb 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/02/diary-20190224/</guid>
-      <description>&lt;h2 id=&#34;スキー&#34;&gt;スキー&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;スキー&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;朝飯を作るためにパック燃料で水を暖めていたら沸騰する前に燃料が切れた。
-
 &lt;ul&gt;
 &lt;li&gt;火力が低いので冬の朝は火力不足になる。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;仕方がないので車内でコールマン508を使おうとしたら、ポンプがスカスカでまったくポンピングできなかった。&lt;/li&gt;
 &lt;li&gt;中途半端に暖まったお湯にパックごはんとおかずの缶詰を入れておいたらぬるいものの食べられる状態になったが、盛りつけるときにおかずをこぼしてしまった。後始末が面倒だった。&lt;/li&gt;
 &lt;li&gt;朝食がグダグダになって気分が萎えたので、ハンターマウンテンには行かずに温泉に入って帰った。&lt;/li&gt;
@@ -2231,18 +1978,13 @@ EndSection
       <pubDate>Sat, 23 Feb 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/02/diary-20190223/</guid>
-      <description>&lt;h2 id=&#34;スキー&#34;&gt;スキー&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;スキー&lt;/h2&gt;
 &lt;p&gt;たかつえスキー場で滑った。&lt;/p&gt;
-
 &lt;p&gt;頂上の一人乗り
 リフトがすごかった。幅が狭くて背もたれも申し訳程度のものしかない搬器が高速で向かってくるので、最初に乗ったときに落ちそうになった。&lt;a href=&#34;https://www.youtube.com/watch?v=FZugZkBDQo8&#34;&gt;(参考動画)&lt;/a&gt;&lt;/p&gt;
-
 &lt;p&gt;コースの中腹あたりから下は晴れていたが、山の頂上付近は視界が悪くて先がほとんど見えないしコースがガリガリなので大変だった。&lt;/p&gt;
-
 &lt;p&gt;3
 時ごろまで滑った後、会津高原温泉御宿夢の湯に入った。那須塩原や草津より成分が薄めな感じの硫黄泉だった。浴場の大きな窓から大きい山が見えるので、春や夏に行くといい景色が見られそう。&lt;/p&gt;
-
 &lt;p&gt;夕食に鍋を食べて寝た。&lt;/p&gt;</description>
     </item>
     
@@ -2252,10 +1994,8 @@ EndSection
       <pubDate>Fri, 22 Feb 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/02/diary-20190222/</guid>
-      <description>&lt;h2 id=&#34;スキーの準備をした&#34;&gt;スキーの準備をした&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;スキーの準備をした&lt;/h2&gt;
 &lt;p&gt;荷物を積みこんでシートを両方倒した状態で眠る方法を検討した。&lt;/p&gt;
-
 &lt;p&gt;スキーの道具が入った大きなボストンバッグ以外の荷物をダッシュボードと天井ラックとシートの裏に逃がし、バッグをS字フックでラックにつり下げたらシートの上が完全に開いた。これなら幅広のマットを敷いて眠れそう。&lt;/p&gt;</description>
     </item>
     
@@ -2266,22 +2006,22 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/02/diary-20190221/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;32bit glibcをパッケージ化してインストールした&lt;/li&gt;
 &lt;li&gt;glibcを設定をしている途中&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;スキー&#34;&gt;スキー&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;スキー&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;スキーに行く準備をした。
-
 &lt;ul&gt;
-&lt;li&gt;行き先を決めて食料を調達して荷物をパッキングした&lt;/li&gt;
+&lt;li&gt;行き先を決めて食料を調達して荷物をパッキングした
+&lt;ul&gt;
 &lt;li&gt;たかつえスキー場, 南郷スキー場, だいくらスキー場, 高畑スキー場のどれかのリフト券との引き換え券があったので、一日目は一番面白そうなたかつえスキー場に行くことにした&lt;/li&gt;
 &lt;li&gt;那須塩原に近かったので、二日目はハンターマウンテンに行くことにした&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;防寒インナーと厚手の靴下を買った。まだ2月なのに、だんだん暖かくなってきているからか、商品が入れかわっていて防寒用の衣類が店頭からほとんど消えてしまっていた&lt;/li&gt;
 &lt;li&gt;食料(紅茶パック, インスタントスープ, パックごはん, グリーンカレーとガパオライスの缶詰)を調達した&lt;/li&gt;
 &lt;li&gt;アルミの天ぷらガードでコンロの風防を作った&lt;/li&gt;
@@ -2295,15 +2035,12 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/02/diary-20190220/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;デバッグ情報を分離するスクリプトとmanページを圧縮するスクリプトが完成した。&lt;/li&gt;
 &lt;li&gt;Man-pagesパッケージのmanページを圧縮した。&lt;/li&gt;
 &lt;li&gt;glibcを設定している途中&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ30分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBを昼, トレーニング前, 就寝前に1g摂取&lt;/li&gt;
@@ -2311,9 +2048,7 @@ EndSection
 &lt;li&gt;食事前に筋トレ&lt;/li&gt;
 &lt;li&gt;途中で腹が減ってきた&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;上半身プル&lt;/strong&gt;&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -2323,7 +2058,6 @@ EndSection
 &lt;th&gt;備考&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;ハーフデッドリフト&lt;/td&gt;
@@ -2331,28 +2065,24 @@ EndSection
 &lt;td&gt;↓16 14 16&lt;/td&gt;
 &lt;td&gt;?&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ワンハンドローイング&lt;/td&gt;
 &lt;td&gt;左右2セット 12.5kg(10kg+シャフト) 15回以上 →ドロップ&lt;/td&gt;
 &lt;td&gt;→左16 右10 左14→7.5kgで13 右14→7.5kgで8&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルシュラッグ&lt;/td&gt;
 &lt;td&gt;2セット 30kg(27.5kgx2+シャフト) 25回以上 →ドロップ&lt;/td&gt;
 &lt;td&gt;↓21 21→22.5kgで19&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルカール&lt;/td&gt;
 &lt;td&gt;3セット 10kg(7.5kg+シャフト) 13回以上 →ドロップ&lt;/td&gt;
 &lt;td&gt;↓9.5 8→5kgx2で17&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;変形バックエクステンション&lt;/td&gt;
 &lt;td&gt;2セット 自重+5kg 16回以上 →ドロップ&lt;/td&gt;
@@ -2361,9 +2091,7 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;スキーのケバを取って簡易ワックスを塗った。&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -2376,34 +2104,29 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/02/diary-20190219/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;一時システムのGCC (Pass 2)のmultilibを間違えて無効にしていたので直して再ビルドした。ついでにPIE・Stack Smashing Protector・Build ID出力をデフォルトで有効にした。
-
 &lt;ul&gt;
 &lt;li&gt;32bit glibcのビルドが通るようになった。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;ついでにBinutils (Pass 2)もRELROをデフォルトにし、不要なライブラリ検索パスも除去して再ビルドした。&lt;/li&gt;
 &lt;li&gt;一時システムにホストの環境をマウントする処理と環境のアンマウント処理に不備があったので直した。&lt;/li&gt;
 &lt;li&gt;デバッグ情報を分離するスクリプトを書いている。&lt;/li&gt;
-&lt;li&gt;もうglibcをビルドしはじめてから12日もたっている。システムをmultiarch化しようとしたり&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;、libcを強引にmultilib化したmusl libcに置き換えたとき&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;は数日間苦戦したあと諦めることになったし、システムの基礎部分をいじるとかなり苦労する。&lt;/li&gt;
+&lt;li&gt;もうglibcをビルドしはじめてから12日もたっている。システムをmultiarch化しようとしたり&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;、libcを強引にmultilib化したmusl libcに置き換えたとき&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;は数日間苦戦したあと諦めることになったし、システムの基礎部分をいじるとかなり苦労する。&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ30分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBを朝, トレーニング一時間前, 就寝前に1g摂取&lt;/li&gt;
 &lt;li&gt;前日の睡眠 6:45 (0:29→7:19)
-
 &lt;ul&gt;
 &lt;li&gt;短すぎる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;食事前に筋トレ&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;上半身プッシュ+腹筋&lt;/strong&gt;&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -2413,7 +2136,6 @@ EndSection
 &lt;th&gt;備考&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;ローテーターカフのウォームアップ&lt;/td&gt;
@@ -2421,35 +2143,30 @@ EndSection
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;プッシュアップ&lt;/td&gt;
 &lt;td&gt;3セット 自重 10回以上 → 膝つき&lt;/td&gt;
 &lt;td&gt;↑11→3 7.5→3 5.5→5&lt;/td&gt;
 &lt;td&gt;肩甲骨を寄せるのを忘れたせいか大胸筋にあまり効いている感じがしない&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルショルダープレス&lt;/td&gt;
 &lt;td&gt;2セット 25kg(10kg+シャフトx2) 16回以上 → ドロップ&lt;/td&gt;
 &lt;td&gt;↓14 12→5kgx2で20→2.5kgx2で16&lt;/td&gt;
 &lt;td&gt;直前にスキーのケバ取りをしたのが原因かも&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルフレンチプレス&lt;/td&gt;
 &lt;td&gt;2セット 12.5kg(10kg+シャフト) 13回以上 → ドロップ&lt;/td&gt;
 &lt;td&gt;↓10 9→7.5kg(2.5x2+シャフト)で11&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルフライ&lt;/td&gt;
 &lt;td&gt;2セット 20kg(7.5kg+シャフトx2) 19回以上 → ドロップ&lt;/td&gt;
 &lt;td&gt;↓16 11→5kgx2で30&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ツイストクランチ&lt;/td&gt;
 &lt;td&gt;3セット 自重 5秒維持 16回以上 → 1秒維持 23回以上&lt;/td&gt;
@@ -2458,15 +2175,13 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;スキーのケバ取りを途中までやった。
-
 &lt;ul&gt;
 &lt;li&gt;真鍮ブラシで擦っても落ちない傷があったし、滑走面に何箇所かへこみがあるのでシーズンが終わったらメンテナンスに出したほうがよさそう&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
@@ -2477,36 +2192,31 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/02/diary-20190218/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;別のマシンでglibcのテストが通らなかったので原因を調べていた。systemdがかけたリソースの制限のせいでPIDが不足したのと、他のプロセスの負荷が原因でテストがタイムアウトしたのが原因だった。&lt;/li&gt;
 &lt;li&gt;32bitのglibcをビルドしようとしたら失敗した。
-
 &lt;ul&gt;
 &lt;li&gt;間違ってGCC (pass 2)をmultilib無効でビルドしていた&lt;/li&gt;
 &lt;li&gt;明日再ビルドして、ついでにデフォルトPIE, デフォルト stack protectorとbuild idの自動出力を有効にする予定&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ30分前に1スクープ摂取
-
 &lt;ul&gt;
 &lt;li&gt;プレワークアウト飲んで下半身の筋トレをすると気分が悪くなるのを忘れていた。次からは飲まないようにする&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;HMBを朝, トレーニング一時間前, 就寝前に1g摂取&lt;/li&gt;
 &lt;li&gt;前日の睡眠 7:24 (23:09→5:16, 5:35→5:44, 6:10→7:24)
-
 &lt;ul&gt;
 &lt;li&gt;周囲が騒がしくて途中で起きてしまった。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;前日の疲れが残っているせいかあまり集中できなかった&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;下半身&lt;/strong&gt;&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -2516,7 +2226,6 @@ EndSection
 &lt;th&gt;備考&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;ブルガリアンスクワット&lt;/td&gt;
@@ -2524,28 +2233,24 @@ EndSection
 &lt;td&gt;↓左13 右11 左9 右10 左8→自重で6 右8→10&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;シシースクワット&lt;/td&gt;
 &lt;td&gt;2セット 自重&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;時間切れ&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ヒップスラスト&lt;/td&gt;
 &lt;td&gt;2セット 30kg(27.5kg+シャフト) 24回以上 →ドロップ&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;レッグカール&lt;/td&gt;
 &lt;td&gt;2セット 22.5kg(20kg+シャフト) 11回以上 →ドロップ&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;片足スタンディングカーフレイズ&lt;/td&gt;
 &lt;td&gt;3セット 自重 左右23回以上&lt;/td&gt;
@@ -2554,9 +2259,7 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;3時間くらい余計なことやって時間を無駄にしてしまった。&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -2568,19 +2271,14 @@ EndSection
       <pubDate>Sun, 17 Feb 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/02/diary-20190217/</guid>
-      <description>&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;疲れていて頭痛もするのでなし&lt;/p&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.amazon.co.jp/gp/product/B07D26LM4K&#34;&gt;名刺入れ&lt;/a&gt; の &lt;a href=&#34;https://www.amazon.co.jp/sp?_encoding=UTF8&amp;amp;asin=&amp;amp;isAmazonFulfilled=1&amp;amp;isCBA=&amp;amp;marketplaceID=A1VC38T7YXB528&amp;amp;orderID=&amp;amp;seller=A2RKBYP0767LPV&amp;amp;tab=&amp;amp;vasStoreID=&#34;&gt;販売業者&lt;/a&gt; から交換品が届いた。&lt;/li&gt;
 &lt;li&gt;体調が悪いので何もする気がおきず、ダラダラ起きていたら何もせずに1日が終わってしまった。早く寝て疲れを取ればよかった。&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;車中泊テスト&#34;&gt;車中泊テスト&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-2&#34;&gt;車中泊テスト&lt;/h2&gt;
 &lt;p&gt;電気毛布が届いたので、試しに近くで車中泊してみた。&lt;/p&gt;</description>
     </item>
     
@@ -2590,22 +2288,19 @@ EndSection
       <pubDate>Sat, 16 Feb 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/02/diary-20190216/</guid>
-      <description>&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;ラックの修理&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;ラックを車に取り付けてボルトを塗装し、車体の穴をフェルトで塞いだ。&lt;/li&gt;
 &lt;li&gt;これでラックの修理は完了&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;寝るのが遅すぎたのが原因でラックを修理していたら夜遅くになってしまった。今日の筋トレはなし&lt;/li&gt;
 &lt;li&gt;通常の食事2食, 追加でタンパク質64g分のプロテイン, HMB3gを摂取
-
 &lt;ul&gt;
 &lt;li&gt;筋トレしない日もHMBはとったほうがいいのか？&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
@@ -2616,31 +2311,28 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/02/diary-20190215/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;64bit glibcのテストが通るようになった。
-
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;-fno-plt&lt;/code&gt; &lt;code&gt;-fexceptions&lt;/code&gt;のどれかがCFLAGSに入っているとテストコードが、&lt;code&gt;-z now&lt;/code&gt;がLDFLAGSに入っているとダイナミックリンカが壊れることが分かった。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-fno-plt&lt;/code&gt; &lt;code&gt;-fexceptions&lt;/code&gt;のどれかがCFLAGSに入っているとテストコードが、&lt;code&gt;-z now&lt;/code&gt;がLDFLAGSに入っているとダイナミックリンカが壊れることが分かった。
+&lt;ul&gt;
 &lt;li&gt;前者は、 一度しか実行せず攻撃を受けることもないテストコードには最適化もHardeningも不要なので、テスト時にすべてのフラグを削除することで対処した。&lt;/li&gt;
 &lt;li&gt;後者はライブラリのビルド時に一時的に &lt;code&gt;-z now&lt;/code&gt; をLDFLAGSから削除することで対処した。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;manページの圧縮処理とデバッグ情報の分離処理を書いている途中&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ30分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBを昼, 夕食前, 就寝前に1g摂取&lt;/li&gt;
 &lt;li&gt;前日の睡眠 6:57 (0:26→7:28)&lt;/li&gt;
 &lt;li&gt;食事前に筋トレ&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;上半身プル+腹筋&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;集中できなかった&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -2650,7 +2342,6 @@ EndSection
 &lt;th&gt;備考&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;ハーフデッドリフト&lt;/td&gt;
@@ -2658,35 +2349,30 @@ EndSection
 &lt;td&gt;↑25 16 13 12?&lt;/td&gt;
 &lt;td&gt;3セット目途中で邪魔が入った。力が出しきれなかった&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ワンハンドローイング&lt;/td&gt;
 &lt;td&gt;左右2セット 12.5kg(10kg+シャフト) 15回以上 →ドロップ&lt;/td&gt;
 &lt;td&gt;→右14 左16 右12→7.5kg(2.5kgx2+シャフト)で15→5kgで13→2.5kgで15→1.25kgで13 左17→7.5kg(2.5kgx2+シャフト)で14→5kgで21→2.5kgで20→1.25kgで22&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルシュラッグ&lt;/td&gt;
 &lt;td&gt;2セット 30kg(27.5kgx2+シャフト) 24回以上 →ドロップ&lt;/td&gt;
 &lt;td&gt;↑24 16→15kg+シャフトで25&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルカール&lt;/td&gt;
 &lt;td&gt;3セット 10kg(7.5kg+シャフト) 13回以上 &lt;del&gt;→ドロップ&lt;/del&gt;&lt;/td&gt;
 &lt;td&gt;12.5kgで3回 8.5 8.5&lt;/td&gt;
 &lt;td&gt;重量間違えた&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;変形バックエクステンション&lt;/td&gt;
 &lt;td&gt;2セット 自重+5kg 16回以上 →ドロップ&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;時間切れ&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ツイストクランチ&lt;/td&gt;
 &lt;td&gt;3セット 自重 5秒維持 16回以上 → 1秒維持 23回以上&lt;/td&gt;
@@ -2695,30 +2381,34 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;明日が休日だとつい夜更ししてしまう。健康によくないし、休日でないとできないことができなくなるし、筋肉や神経系に悪影響が出るので、23時になったらPCを強制サスペンドするようにcronを設定した。&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.amazon.co.jp/gp/product/B01LW43RYZ&#34;&gt;電気毛布&lt;/a&gt;と&lt;a href=&#34;https://www.amazon.co.jp/gp/product/B073TDGH3M&#34;&gt;カードスリーブ&lt;/a&gt;と&lt;a href=&#34;https://www.amazon.co.jp/gp/product/B07D26LM4K&#34;&gt;名刺入れ&lt;/a&gt;が届いた。
-
 &lt;ul&gt;
-&lt;li&gt;磁気カードと非接触ICカードを防磁防RFカードスリーブに入れた。&lt;/li&gt;
+&lt;li&gt;磁気カードと非接触ICカードを防磁防RFカードスリーブに入れた。
+&lt;ul&gt;
 &lt;li&gt;スリーブを付けるとカードが財布のカード入れに入らない。
-
 &lt;ul&gt;
 &lt;li&gt;カードスリーブをつけるとサイズが大きくなるのを忘れていた。&lt;/li&gt;
 &lt;li&gt;スリーブよりシールド付きの財布を買った方がよかったかもしれない。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;スリーブに入れるとスマホで読みとれなくなるので、防RF効果はちゃんとあるようだ。
-
 &lt;ul&gt;
 &lt;li&gt;防磁は試す勇気がない&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;名刺入れは金属部分に大きく深い切り傷があったので、販売者に交換してもらうことにした。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;名刺入れは金属部分に大きく深い切り傷があったので、販売者に交換してもらうことにした。
+&lt;ul&gt;
 &lt;li&gt;その後、業者が交換品を送り、不良品はこっちで破棄することになった。 &lt;a href=&#34;https://ngkz.github.io/2019/02/diary-20190217/&#34;&gt;2日後に交換品が届いた&lt;/a&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;電気毛布はちゃんと動いた。明日車の中でどれくらいの効果があるかテストしてみる予定&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
@@ -2729,37 +2419,30 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/02/diary-20190214/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;glibcのビルドはまだ成功していない。再ビルドに時間がかかるのでテストの実行を一部だけにしても1周数十分かかる。嫌になってきた
-
 &lt;ul&gt;
 &lt;li&gt;ライブラリのビルド・バイナリのビルド・テストの各段階で使えないフラグが違うっぽい&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;デバッグ情報を分離して &lt;code&gt;/usr/lib/debug/.build-id/...&lt;/code&gt; に置きたいので、LDFLAGSに &lt;code&gt;-Wl,--build-id&lt;/code&gt;を追加してBuild IDを生成するようにした&lt;/li&gt;
 &lt;li&gt;必要なさそうなので &lt;code&gt;CFLAGS&lt;/code&gt;から &lt;code&gt;-grecord-gcc-switches&lt;/code&gt;を削除&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;ラックの修理&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;ステーと立バンドの裏に塗料を重ね塗りした。今週末には完成しそう&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ30分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBを昼, 夕食前, 就寝前に1g摂取&lt;/li&gt;
 &lt;li&gt;前日の睡眠 7:38 (0:00 → 7:43)
-
 &lt;ul&gt;
 &lt;li&gt;途中トイレに行きたくなって起きてしまったものの、全体的にはアラームに気付かないくらい熟睡した&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;上半身プッシュ&lt;/strong&gt;&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -2769,7 +2452,6 @@ EndSection
 &lt;th&gt;備考&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;ローテーターカフのウォームアップ&lt;/td&gt;
@@ -2777,28 +2459,24 @@ EndSection
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;プッシュアップ&lt;/td&gt;
 &lt;td&gt;3セット 自重 8回以上 → 膝つき&lt;/td&gt;
 &lt;td&gt;↑9→5 9→6 6→3&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルショルダープレス&lt;/td&gt;
 &lt;td&gt;2セット 25kg(10kgx2+シャフト) 15回以上 → ドロップ&lt;/td&gt;
 &lt;td&gt;↑15 13→5kgx2で21→2.5kgx2で23&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルフレンチプレス&lt;/td&gt;
 &lt;td&gt;2セット 10kg+シャフト 11回以上 → ドロップ&lt;/td&gt;
 &lt;td&gt;↑12? 9+14&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルフライ&lt;/td&gt;
 &lt;td&gt;2セット 7.5kgx2+シャフト 14回以上 &lt;del&gt;→ ドロップ&lt;/del&gt;&lt;/td&gt;
@@ -2816,22 +2494,17 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/02/diary-20190213/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;glibcのテストが失敗するのは LDFLAGSで &lt;code&gt;-z now&lt;/code&gt;を渡すとダイナミックリンカが壊れるのが原因だった。&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ30分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBを昼, 筋トレ1時間前, 就寝前に1g摂取&lt;/li&gt;
 &lt;li&gt;前日の睡眠 6:59 (0:28 → 7:37)&lt;/li&gt;
 &lt;li&gt;シシースクワットでレッグエクステンションを置き換え&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;下半身+腹筋&lt;/strong&gt;&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -2841,7 +2514,6 @@ EndSection
 &lt;th&gt;備考&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;ブルガリアンスクワット&lt;/td&gt;
@@ -2849,35 +2521,30 @@ EndSection
 &lt;td&gt;↑左13 右12 左9 右10 左10→自重で12 右8→自重で14&lt;/td&gt;
 &lt;td&gt;プレワークアウトのカフェインの副作用のせいかかなりつらい&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;シシースクワット&lt;/td&gt;
 &lt;td&gt;2セット 自重&lt;/td&gt;
 &lt;td&gt;21 20 25&lt;/td&gt;
 &lt;td&gt;難しい, 中断してフォームを確認しながら&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ヒップスラスト&lt;/td&gt;
 &lt;td&gt;2セット 30kg(27.5kg+シャフト) 24回以上 →ドロップ&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;時間がないので省略&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;レッグカール&lt;/td&gt;
 &lt;td&gt;2セット 22.5kg(20kg+シャフト) 11回以上 →ドロップ&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;片足スタンディングカーフレイズ&lt;/td&gt;
 &lt;td&gt;3セット 自重 左右23回以上&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ツイストクランチ&lt;/td&gt;
 &lt;td&gt;3セット 自重 5秒維持 16回以上 → 1秒維持 23回以上&lt;/td&gt;
@@ -2886,9 +2553,7 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
-&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;ラックの修理&lt;/h2&gt;
 &lt;p&gt;立バンドの裏を塗装し、ステーのめっきが剥げた箇所にサビ止めを塗った。&lt;/p&gt;</description>
     </item>
     
@@ -2899,28 +2564,25 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/02/diary-20190212/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;glibcのビルドをしている&lt;/p&gt;
-
+&lt;li&gt;
+&lt;p&gt;glibcのビルドをしている&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;*FLAGS&lt;/code&gt;を空にした状態でビルドしてみたらテストが通ったので、フラグを変えながらビルドとテストを繰り返してどれが失敗の原因か調べている&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://clfs.org&#34;&gt;Cross Linux from Scratch&lt;/a&gt; のサイトが消滅してた&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;http://clfs.org&#34;&gt;Cross Linux from Scratch&lt;/a&gt; のサイトが消滅してた&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを30分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBを昼に1g, トレーニング1時間前に1g摂取, 夜に1g摂取&lt;/li&gt;
 &lt;li&gt;前日の睡眠 7:23 (0:09 → 7:33)&lt;/li&gt;
 &lt;li&gt;食事前に筋トレ&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;上半身プル&lt;/strong&gt;&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -2930,7 +2592,6 @@ EndSection
 &lt;th&gt;備考&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;ハーフデッドリフト&lt;/td&gt;
@@ -2938,28 +2599,24 @@ EndSection
 &lt;td&gt;↑23 16 16&lt;/td&gt;
 &lt;td&gt;キツい 追いこみきれてない 1/30くらいのトレーニングボリュームに回復した&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ワンハンドローイング&lt;/td&gt;
 &lt;td&gt;左右2セット 10kg+シャフト 12回以上 →ドロップ&lt;/td&gt;
 &lt;td&gt;↑右14 左16 右14→5kg+シャフトで13 左15→5kg+シャフトで17&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルシュラッグ&lt;/td&gt;
 &lt;td&gt;2セット 27.5kgx2+シャフト 23回以上 →ドロップ&lt;/td&gt;
 &lt;td&gt;↑23 17→15kg+シャフトで34&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルカール&lt;/td&gt;
 &lt;td&gt;3セット 7.5kg+シャフト 12回以上 →ドロップ&lt;/td&gt;
 &lt;td&gt;↑12 8.5 6&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;変形バックエクステンション&lt;/td&gt;
 &lt;td&gt;2セット 自重+5kg 16回以上 →ドロップ&lt;/td&gt;
@@ -2968,22 +2625,18 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
-&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;ラックの修理&lt;/h2&gt;
 &lt;p&gt;立バンドに塗料を塗り重ねた&lt;/p&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-2&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;スキーに行くとき車中泊する予定なので電気毛布を注文した&lt;/li&gt;
 &lt;li&gt;ついでにいろいろと注文した
-
 &lt;ul&gt;
 &lt;li&gt;カードの保護のための防磁・防RFのカードスリーブ&lt;/li&gt;
 &lt;li&gt;セキュリティコードを隠すための剥がすと跡が残るシール&lt;/li&gt;
 &lt;li&gt;まともな名刺ケース&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
@@ -2993,17 +2646,13 @@ EndSection
       <pubDate>Mon, 11 Feb 2019 21:10:30 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/02/diary-20190211/</guid>
-      <description>&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを多めの水(400ml)に溶かしてみたら、ちょうどいい味の濃さになりケミカル感も軽減されておいしかった。&lt;/li&gt;
 &lt;li&gt;ノンフレーバーHMB + Impact ホエイ ソルティッドキャラメル味は相性が悪く、HMBのワキガ臭と苦みを打ち消しきれない。&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;上半身プッシュ+腹筋&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;徹夜の悪影響が残っているからかトレーニングボリュームが落ちている。&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -3013,7 +2662,6 @@ EndSection
 &lt;th&gt;備考&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;ローテーターカフのウォームアップ&lt;/td&gt;
@@ -3021,35 +2669,30 @@ EndSection
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;プッシュアップ&lt;/td&gt;
 &lt;td&gt;3セット 自重 9回以上 → 膝つき&lt;/td&gt;
 &lt;td&gt;↓7→4 8+4 7+5&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルショルダープレス&lt;/td&gt;
 &lt;td&gt;2セット 10kgx2+シャフト 14回以上 &lt;del&gt;→ ドロップ&lt;/del&gt;&lt;/td&gt;
 &lt;td&gt;↑14 12&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルフレンチプレス&lt;/td&gt;
 &lt;td&gt;2セット 10kg+シャフト 11回以上 &lt;del&gt;→ ドロップ&lt;/del&gt;&lt;/td&gt;
 &lt;td&gt;→10 11&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルフライ&lt;/td&gt;
 &lt;td&gt;2セット 7.5kgx2+シャフト 14回以上 &lt;del&gt;→ ドロップ&lt;/del&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;時間がないので省略&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ツイストクランチ&lt;/td&gt;
 &lt;td&gt;3セット 自重 5秒維持 16回以上 → 1秒維持 23回以上&lt;/td&gt;
@@ -3058,9 +2701,7 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
 &lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;p&gt;LFS BookとArch LinuxのPKGBUILDを参考にglibcをビルドしている。64bitライブラリのビルドはできたが、テストが通らない。&lt;/p&gt;</description>
     </item>
     
@@ -3070,39 +2711,31 @@ EndSection
       <pubDate>Sun, 10 Feb 2019 14:36:00 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/02/diary-20190210/</guid>
-      <description>&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;ラックの修理&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;残りのステー4つを加工して仮付けしてみた。&lt;/li&gt;
 &lt;li&gt;一旦ステーとラックを全部外してサビ止めと塗装
-
 &lt;ul&gt;
 &lt;li&gt;パーツクリーナーでこびりついたラベルとセロテープをはがして脱脂した&lt;/li&gt;
 &lt;li&gt;やすりで足つけした&lt;/li&gt;
 &lt;li&gt;立バンドを黒に塗装している途中&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;もう半分のプロテインが届いた&#34;&gt;もう半分のプロテインが届いた&lt;/h2&gt;
-
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;heading-1&#34;&gt;もう半分のプロテインが届いた&lt;/h2&gt;
 &lt;p&gt;マイプロテインから残りの品(カゼイン5kg, 10Lサプリメント用ボトル2個)が入った箱が届いた。商品の大きさに対して箱が小さすぎるのでこっちもボトルがベコベコになっていた。&lt;/p&gt;
-
 &lt;p&gt;ボトルのへこみを手で戻して洗い、フタの裏に乾燥剤を貼りつけておいた。&lt;/p&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-2&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;プレワークアウトの変な臭みは混ぜたHMBが原因だった。HMBを混ぜてないTHE プレワークアウトのフルーツパンチ味はケミカルな感じのする甘酸っぱい味だった。&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://hmb-supplement.net/?p=413&#34;&gt;HMBの臭み消しには柑橘系のフルーツジュースやココア味やチョコ味のプロテインが有効らしい&lt;/a&gt;
-
 &lt;ul&gt;
 &lt;li&gt;実際オーバーナイトリカバリーブレンド チョコレートスムース味との相性はよく、HMBの臭みと苦みをほとんど感じないくらいに打ち消せている&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;HMBの袋のチャックが締まらなかったので強引に締めようとしたら完全にチャックが壊れた。幸い250gのパッケージなので、そこらで買える密閉容器に詰めればなんとかなりそう。&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;下半身&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -3112,7 +2745,6 @@ EndSection
 &lt;th&gt;備考&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;ブルガリアンスクワット&lt;/td&gt;
@@ -3120,28 +2752,24 @@ EndSection
 &lt;td&gt;→左10 右7 左5 右6 左3&lt;/td&gt;
 &lt;td&gt;力が出ない 途中で寝た&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;シッシースクワット&lt;/td&gt;
 &lt;td&gt;2セット&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ヒップスラスト&lt;/td&gt;
 &lt;td&gt;2セット 30kg(27.5kg+シャフト) 24回以上 →ドロップ&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;レッグカール&lt;/td&gt;
 &lt;td&gt;2セット 22.5kg(20kg+シャフト) 11回以上 →ドロップ&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;片足スタンディングカーフレイズ&lt;/td&gt;
 &lt;td&gt;3セット 自重 左右23回以上&lt;/td&gt;
@@ -3150,9 +2778,7 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
 &lt;p&gt;寝るタイミングを逃して徹夜したせいで、まだ筋肉は効いていないのにセットの途中で力がまったく発揮できなくなり、まだカフェインが効いているはずなのに途中で気を失うように眠ってしまった。&lt;/p&gt;
-
 &lt;p&gt;きちんと睡眠をとらないとトレーニングに影響が出ることを身をもって体感した。これからは決まった時間に長めに眠ることにする。昨日トレーニングボリュームが落ちたのはいつもより眠る時間が遅かったせいかもしれない。&lt;/p&gt;</description>
     </item>
     
@@ -3162,18 +2788,12 @@ EndSection
       <pubDate>Sat, 09 Feb 2019 19:54:35 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/02/diary-20190209/</guid>
-      <description>&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;ラックの修理&lt;/h2&gt;
 &lt;p&gt;ステーを2本削って曲げ、ラックのリア側も立バンド固定にした。&lt;/p&gt;
-
-&lt;h2 id=&#34;プロテインが半分届いた&#34;&gt;プロテインが半分届いた&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;プロテインが半分届いた&lt;/h2&gt;
 &lt;p&gt;先週マイプロテインに頼んだサプリメントが2分割で発送され、ホエイ5kg、プレワークアウト、HMBとおまけが入った方の箱が届いた。&lt;/p&gt;
-
 &lt;p&gt;プレミアム配送が無料になる注文金額だったので、はじめてプレミアム配送を使ってみたが、梱包は通常配送と変わらないようなので、謎の粉まみれになっていたり、サプリメント容器が薄汚れてベコベコになっていたりしたが、&lt;del&gt;破損はなかった。&lt;/del&gt; HMBの袋のチャックが壊れかかってた。なんとか密封されているようだが、かなり締めにくい&lt;/p&gt;
-
 &lt;p&gt;前回通常配送で頼んだときは、 11/12注文 11/15発送 11/26着で、今回は1週間で半分到着なので、通常配送より速くはなっているようだ。&lt;/p&gt;
-
 &lt;p&gt;もう片方の箱はまだ空港から出ていないので、届くのは数日後になりそう。&lt;/p&gt;</description>
     </item>
     
@@ -3184,11 +2804,8 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/02/diary-20190208/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;p&gt;glibcをインストールしている&lt;/p&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;いろいろやっていたら時間がなくなったので明日に延期&lt;/p&gt;</description>
     </item>
     
@@ -3199,13 +2816,9 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/02/diary-20190207/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;p&gt;Temporary Systemにchrootする処理を書き、chrootしてカーネルヘッダとmanページをインストールした。&lt;/p&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;上半身 + 腹筋&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -3215,7 +2828,6 @@ EndSection
 &lt;th&gt;備考&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;ローテーターカフのウォームアップ&lt;/td&gt;
@@ -3223,35 +2835,30 @@ EndSection
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;プッシュアップ&lt;/td&gt;
 &lt;td&gt;3セット 自重 9回以上 → 膝つき&lt;/td&gt;
 &lt;td&gt;→ 8→6 7→2 5→4&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルショルダープレス&lt;/td&gt;
 &lt;td&gt;2セット 10kgx2+シャフト 14回以上 → ドロップ&lt;/td&gt;
 &lt;td&gt;→ 13 9→5kgx2で12→2.5kgx2で18→1.25kgx2で20&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルフレンチプレス&lt;/td&gt;
 &lt;td&gt;2セット 10kg+シャフト 13回以上 → ドロップ&lt;/td&gt;
 &lt;td&gt;↓10 6+5kgで21+2.5kgで39+1.25kgで21&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルフライ&lt;/td&gt;
 &lt;td&gt;2セット 7.5kgx2+シャフト 17回以上 → ドロップ&lt;/td&gt;
 &lt;td&gt;↓13 16+5kgx2で20+2.5kgx2で46&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ツイストクランチ&lt;/td&gt;
 &lt;td&gt;3セット 自重 5秒維持 13回以上 → 1秒維持 17回以上&lt;/td&gt;
@@ -3260,7 +2867,6 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
 &lt;p&gt;ほとんどの種目のトレーニングボリュームが現状維持か低下している。疲れが回復しきっていないのが原因だと思う&lt;/p&gt;</description>
     </item>
     
@@ -3271,23 +2877,14 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/02/diary-20190206/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;p&gt;&lt;code&gt;*FLAGS&lt;/code&gt; の解説が完成した。Temporary Systemにchrootにする処理を書いている。&lt;/p&gt;
-
-&lt;h2 id=&#34;スキーのトップシートの修理&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
 &lt;p&gt;接着後にトップシートに残った欠けをホットボンドで埋めた。修理完了&lt;/p&gt;
-
-&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;ラックの修理&lt;/h2&gt;
 &lt;p&gt;ステーを2本同じ方法で加工した。日曜に買った荒目のヤスリを使ったら加工時間が半分になった。&lt;/p&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-2&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;下半身 + 腹筋&lt;/p&gt;
-
 &lt;p&gt;うまくいかなかった&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -3297,7 +2894,6 @@ EndSection
 &lt;th&gt;備考&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;ブルガリアンスクワット&lt;/td&gt;
@@ -3305,35 +2901,30 @@ EndSection
 &lt;td&gt;↓左10 右10 左8 右9 左5,自重で11 右7,自重で11&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;レッグエクステンション&lt;/td&gt;
 &lt;td&gt;2セット 20kg+シャフト 20回以上 →10kg&lt;/td&gt;
 &lt;td&gt;↓13 12 10 13,10kg+シャフトで14回&lt;/td&gt;
 &lt;td&gt;ダンベルが足から転がりおちてしまって追いこめない。別の種目に置き換えたほうがよさそう&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ヒップスラスト&lt;/td&gt;
 &lt;td&gt;2セット 27.5kg+シャフト 22回以上 →15kg&lt;/td&gt;
 &lt;td&gt;↑23 20,15kg+シャフトで15回&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;レッグカール&lt;/td&gt;
 &lt;td&gt;2セット 20kg+シャフト 15回以上 →10kg&lt;/td&gt;
 &lt;td&gt;↓10 7.5,10kg+シャフトで19.5&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;片足スタンディングカーフレイズ&lt;/td&gt;
 &lt;td&gt;3セット 自重 左右25回以上&lt;/td&gt;
 &lt;td&gt;↓左22 右25 左26 右22 左27 右20&lt;/td&gt;
 &lt;td&gt;1セット目途中からふくらはぎの筋肉の付け根が痛くなってくる。ウォームアップが必要かも&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ツイストクランチ&lt;/td&gt;
 &lt;td&gt;3セット 自重 5秒維持 13回以上 → 1秒維持 17回以上&lt;/td&gt;
@@ -3342,9 +2933,7 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-3&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;茨城県庁で茨城県警が超小型のArduino Leonardo互換機でBadUSBのデモをやってた&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -3357,15 +2946,10 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/02/diary-20190205/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;p&gt;chrootに入る処理と *FLAGSの解説を書いている。&lt;/p&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;上半身プル&lt;/p&gt;
-
 &lt;p&gt;今までダンベルシャフトの重量を計算に入れるのを忘れていた。&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -3375,7 +2959,6 @@ EndSection
 &lt;th&gt;備考&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;ハーフデッドリフト&lt;/td&gt;
@@ -3383,28 +2966,24 @@ EndSection
 &lt;td&gt;↑20 13 14&lt;/td&gt;
 &lt;td&gt;力が出しきれなかった&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ワンハンドローイング&lt;/td&gt;
 &lt;td&gt;左右&lt;del&gt;2&lt;/del&gt;3セット &lt;del&gt;17.5kg 12回以上&lt;/del&gt; 12.5kg 22回以上 →ドロップ&lt;/td&gt;
 &lt;td&gt;↓左12 (17.5kg) 右15 左13 右16 左15+5kgで13+2.5kgで18+1.25kgで18 右12+5kgで13+2.5kgで12+1.25kgで12&lt;/td&gt;
 &lt;td&gt;フォームを確認しながら 広背筋にうまく効かない&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルシュラッグ&lt;/td&gt;
 &lt;td&gt;2セット 30kg x 2 17回以上 →ドロップ&lt;/td&gt;
 &lt;td&gt;↑18 12+22.5kgで15+12.5kgで31+7.5kgで62&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルカール&lt;/td&gt;
 &lt;td&gt;3セット 10kg    13回以上 →ドロップ&lt;/td&gt;
 &lt;td&gt;↓8.5 7+5kgx2で12+2.5kgx2で26&lt;/td&gt;
 &lt;td&gt;ネガティブ動作をゆっくりにしてみた&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;変形バックエクステンション&lt;/td&gt;
 &lt;td&gt;2セット 自重+5kg →ドロップ&lt;/td&gt;
@@ -3413,9 +2992,7 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
-&lt;h2 id=&#34;スキーのトップシートの修理&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
 &lt;p&gt;別の箇所を接着した。&lt;/p&gt;</description>
     </item>
     
@@ -3426,17 +3003,11 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/02/diary-20190204/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;p&gt;/etc/passwdと/etc/groupが完成した。Linuxの/etc/passwdと/etc/groupにあるシステムユーザー/システムグループはディストリビュージョンによって異なり、名前やUID/GIDが違う、過去に使われていたが今は未使用のユーザー/グループがある、システムグループに属するシステムユーザーが違う、などの違いがある。&lt;/p&gt;
-
 &lt;p&gt;LFS Bookに/etc/groupの詳しい解説がなかったので、いろいろなディストロに/etc/groupを見てみたり、システムグループの使用目的を調べたり、いらないグループを削ったりしていたら時間がかかってしまった。&lt;/p&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;上半身プッシュ + 腹筋&lt;/p&gt;
-
 &lt;p&gt;プッシュアップのフォームを修正したら大胸筋によく効くようになった。筋力の伸びが停滞してる気がする&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -3446,7 +3017,6 @@ EndSection
 &lt;th&gt;備考&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;ローテーターカフのウォームアップ&lt;/td&gt;
@@ -3454,35 +3024,30 @@ EndSection
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;プッシュアップ&lt;/td&gt;
 &lt;td&gt;3セット 自重 12回以上 + 膝つき&lt;/td&gt;
 &lt;td&gt;↓8+5 6+3 7+3&lt;/td&gt;
 &lt;td&gt;今までフォームが間違ってたのが原因&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルショルダープレス&lt;/td&gt;
 &lt;td&gt;2セット 10kgx2 15回以上 → ドロップ&lt;/td&gt;
 &lt;td&gt;↓13 10+5kgx2で10+2.5kgx2で14+1.25kgx2で11&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルフレンチプレス&lt;/td&gt;
 &lt;td&gt;2セット 10kg 11回以上 → ドロップ&lt;/td&gt;
 &lt;td&gt;↑12 10+2.5kgx2で6+2.5kgで38+1.25kgで?&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルフライ&lt;/td&gt;
 &lt;td&gt;2セット 7.5kg x 2 17回以上 → ドロップ&lt;/td&gt;
 &lt;td&gt;→16 10+5kgx2で17&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ツイストクランチ&lt;/td&gt;
 &lt;td&gt;3セット 自重 5秒維持 14回以上 → 1秒維持 20回以上&lt;/td&gt;
@@ -3491,13 +3056,9 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
-&lt;h2 id=&#34;スキーのトップシートの修理&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
 &lt;p&gt;別の箇所を接着した。トップシートが欠けている箇所をホットボンドで埋め、固まる前にシリコンオイルを塗った定規で形を整えた。定規に油を塗ればホットボンドがくっつくのを避けられると思っていたが、あまり効果はなかった。&lt;/p&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-2&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;LeechBlock効果でインターネットで無駄にした時間がだいぶ減った&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -3509,18 +3070,12 @@ EndSection
       <pubDate>Sun, 03 Feb 2019 21:07:36 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/02/diary-20190203/</guid>
-      <description>&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;ラックの修理&lt;/h2&gt;
 &lt;p&gt;\980で細工用の荒目ヤスリが売ってたので買った。アシストグリップが入っていた穴を隠すためのフェルトも調達した。&lt;/p&gt;
-
 &lt;p&gt;天井収納にかけた費用が &lt;a href=&#34;https://www.monotaro.com/p/3469/3872/&#34;&gt;https://www.monotaro.com/p/3469/3872/&lt;/a&gt;  2本より高くなってた。かけた手間暇を考えたらこれ2本買ってすべり止め巻くだけのほうがマシだったかも。&lt;/p&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;缶コーヒーを2本 (カフェイン90mg x 2) 飲んだら、最初は筋トレが楽になったけど途中から気分が悪くなってきて逆に回数が落ちた。しばらく休憩したら回復した。&lt;/p&gt;
-
 &lt;p&gt;下半身&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -3530,7 +3085,6 @@ EndSection
 &lt;th&gt;備考&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;ブルガリアンスクワット&lt;/td&gt;
@@ -3538,35 +3092,30 @@ EndSection
 &lt;td&gt;右13 左9 右9 左7 右5+自重で16 左7+自重で19&lt;/td&gt;
 &lt;td&gt;途中気分が悪くなった&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;レッグエクステンション&lt;/td&gt;
 &lt;td&gt;2セット 20kg 13回以上&lt;/td&gt;
 &lt;td&gt;19 17+10kgで14+5kgで134&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ヒップスラスト&lt;/td&gt;
 &lt;td&gt;2セット 30kg 18回以上&lt;/td&gt;
 &lt;td&gt;21 22+15kgで19&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ワイドスクワット&lt;/td&gt;
 &lt;td&gt;1セット 15kg&lt;/td&gt;
 &lt;td&gt;19&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;レッグカール&lt;/td&gt;
 &lt;td&gt;2セット 20kg 12回以上&lt;/td&gt;
 &lt;td&gt;14 6.5+10kgで21.5&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;片足スタンディングカーフレイズ&lt;/td&gt;
 &lt;td&gt;3セット 自重 左右15回以上&lt;/td&gt;
@@ -3575,9 +3124,7 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-2&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;買い物して、3時間筋トレして、3時間ネットで無駄にしたら1日が終わってた。未完了のタスクが積もってきている。ネットで時間を無駄にするのを防ぐためにLeechBlockを入れてみたけど、効果のあるルールが作れない。&lt;/li&gt;
 &lt;li&gt;部屋がホコリっぽくなってきたので掃除した&lt;/li&gt;
@@ -3590,10 +3137,8 @@ EndSection
       <pubDate>Sat, 02 Feb 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/02/diary-20190202/</guid>
-      <description>&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;ラックの修理&lt;/h2&gt;
 &lt;p&gt;ステーの削る位置を変えてみたらラックが入った。&lt;/p&gt;
-
 &lt;p&gt;
 
  
@@ -3648,26 +3193,18 @@ EndSection
   
 &lt;/div&gt;
 &lt;/p&gt;
-
 &lt;p&gt;細工用のヤスリを使うとバンドのネジが入るようにステーを削るのに1本45分くらいかかってしまう。
 普通サイズの荒いヤスリだとステーの穴に入らないし、あと6本加工しないといけないから困った。&lt;/p&gt;
-
-&lt;h2 id=&#34;プロテインの調達&#34;&gt;プロテインの調達&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;プロテインの調達&lt;/h2&gt;
 &lt;p&gt;ゾロ目フラッシュセール開始2時間後に買った商品が売り切れていないかチェックした。&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Impact ホエイ ノンフレーバーの5kgが売り切れていた&lt;/li&gt;
 &lt;li&gt;スローリリース カゼイン ノンフレーバーの5kgはあった&lt;/li&gt;
 &lt;li&gt;プレワークアウトは何種類かのフレーバーが売り切れになっていた&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;ホエイノンフレ5kgは開始直後かフラッシュセール開始前に調達しないとまずいことが分かった。&lt;/p&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-2&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;上半身プッシュ+腹筋&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -3677,7 +3214,6 @@ EndSection
 &lt;th&gt;備考&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;ローテーターカフのウォームアップ&lt;/td&gt;
@@ -3685,35 +3221,30 @@ EndSection
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;プッシュアップ&lt;/td&gt;
 &lt;td&gt;3セット 自重 13回以上 + 膝つき&lt;/td&gt;
 &lt;td&gt;↓11+4 10+7 11+5&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルショルダープレス&lt;/td&gt;
 &lt;td&gt;2セット 10kgx2 14回以上+5kgで何回か&lt;/td&gt;
 &lt;td&gt;↑14 11+5kgx2で17回 2.5kgx2で48回+1.25kgx2で69回&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルフレンチプレス&lt;/td&gt;
 &lt;td&gt;2セット 10kg 13回以上+5kgで何回か&lt;/td&gt;
 &lt;td&gt;↓10 12+5kgで7+2.5kgで34+1.25kgで51&lt;/td&gt;
 &lt;td&gt;直前にヤスリがけしたのが原因かも&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルフライ&lt;/td&gt;
 &lt;td&gt;2セット 7.5kg x 2 14回以上+5kgで何回か&lt;/td&gt;
 &lt;td&gt;↑16? 10+5kgx2で18+2.5kgx2で55+1.25kgx2で42&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ツイストクランチ&lt;/td&gt;
 &lt;td&gt;3セット 自重 5秒維持 10回以上 -&amp;gt; 1秒維持 17回以上&lt;/td&gt;
@@ -3731,21 +3262,15 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/02/diary-20190201/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;p&gt;/etc/group&lt;/p&gt;
-
-&lt;h2 id=&#34;プロテインの調達&#34;&gt;プロテインの調達&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;プロテインの調達&lt;/h2&gt;
 &lt;p&gt;ゾロ目セール(40%割引)が始まったので、プロテイン、保存容器とプレワークサプリを注文した。明日の21時あたりまで待てばフラッシュセールでさらに5%安くなると思うが、以下の理由で早めに注文した。&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;マイプロテインは配達に時間がかかる&lt;/li&gt;
 &lt;li&gt;人気商品はフラッシュセールまでに在庫が無くなることがあるが、 まだどれが人気商品なのか把握していない&lt;/li&gt;
 &lt;li&gt;プロテインの在庫がなくなってきた&lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
 &lt;p&gt;眠い、疲れた&lt;/p&gt;</description>
     </item>
     
@@ -3756,19 +3281,12 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/01/diary-20190131/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;p&gt;ほとんど作業できなかった&lt;/p&gt;
-
-&lt;h2 id=&#34;スキーのトップシートの修理&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
 &lt;p&gt;GPクリヤーは貼り合わせる前に接着剤を5-10分乾かす必要があるので、すき間ができるほどシートがめくれている部分しか接着できない。エポキシじゃないとダメだ&lt;/p&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;下半身&lt;/p&gt;
-
 &lt;p&gt;😩&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -3778,7 +3296,6 @@ EndSection
 &lt;th&gt;備考&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;ブルガリアンスクワット&lt;/td&gt;
@@ -3786,42 +3303,36 @@ EndSection
 &lt;td&gt;↓ 左8 右9 左8 右8 左5+21 右8+5&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;レッグエクステンション&lt;/td&gt;
 &lt;td&gt;2セット 20kg 13回以上&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;時間切れ&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ヒップスラスト&lt;/td&gt;
 &lt;td&gt;2セット 30kg 18回以上&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ワイドスクワット&lt;/td&gt;
 &lt;td&gt;1セット 15kg&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;レッグカール&lt;/td&gt;
 &lt;td&gt;2セット 20kg 12回以上&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;片足スタンディングカーフレイズ&lt;/td&gt;
 &lt;td&gt;3セット 自重 左右15回以上&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ツイストクランチ&lt;/td&gt;
 &lt;td&gt;3セット 5秒維持 10回以上 -&amp;gt; 1秒維持 17回以上&lt;/td&gt;
@@ -3830,27 +3341,20 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
-&lt;h2 id=&#34;プロテインの調達&#34;&gt;プロテインの調達&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-2&#34;&gt;プロテインの調達&lt;/h2&gt;
 &lt;p&gt;プロテインは大容量のパッケージを買うと単価が安くなるが、&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;同じ味のものを5kgも飲むと途中で飽きそう&lt;/li&gt;
 &lt;li&gt;複数の味の大容量パッケージを買って同時に封を切ると、邪魔だし飲みきる前に湿気るかダニが侵入しそう
-
 &lt;ul&gt;
 &lt;li&gt;密閉できるボトルに移しかえるともっと邪魔になる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;という問題があるので、味つきのプロテインを買うかわりに、大容量のノンフレーバーのプロテインを買って味付けをして飲むことにした。&lt;/p&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-3&#34;&gt;その他&lt;/h2&gt;
 &lt;p&gt;マイプロテインの決済はクレジットカードが必須だが、クレジットカードの審査が通らなかったし、Vプリカは手数料が高いので困っている。
 楽天銀行の無料VISAデビットが復活していたので塩漬けにしていた口座で発行してみた。&lt;/p&gt;
-
 &lt;p&gt;楽天銀行は、金利は高いがATM手数料が高くwebサイトのUXもいまいちなので、使い勝手のいい銀行に口座を開設したほうがいいかもしれない。&lt;/p&gt;</description>
     </item>
     
@@ -3861,21 +3365,15 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/01/diary-20190130/</guid>
       <description>&lt;h2 id=&#34;lfs&#34;&gt;LFS&lt;/h2&gt;
-
 &lt;p&gt;進捗なし、まったく集中できていない。何時間かLFS構築に使える時間があったのに数十分しか作業できていない。&lt;/p&gt;
-
-&lt;h2 id=&#34;プロテイン調達&#34;&gt;プロテイン調達&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;プロテイン調達&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;プロテインの在庫が無くなってきたので、マイプロテインの2/2のゾロ目セールに備えて商品をカゴに入れた。&lt;/li&gt;
 &lt;li&gt;味が何十種類もあってどれを買えばいいかかなり迷う。当たり外れがあるので適当に買うと失敗するし、1食分(25g)のお試しサイズは\210なので大量に買うとかなりの金額になる。&lt;/li&gt;
 &lt;li&gt;ついでに買うサプリメントを選んだり、お試しサイズで買うフレーバーをネットで調べて厳選していたら2時間たってしまった。&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;上半身プル&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -3885,7 +3383,6 @@ EndSection
 &lt;th&gt;備考&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;ハーフデッドリフト&lt;/td&gt;
@@ -3893,28 +3390,24 @@ EndSection
 &lt;td&gt;↑22 19 16&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ワンハンドローイング&lt;/td&gt;
 &lt;td&gt;左右2セット 10kg 17回以上&lt;/td&gt;
 &lt;td&gt;↑左21 右21 左19+5kgで何回か 右16+5kgで何回か&lt;/td&gt;
 &lt;td&gt;右側の2セット目で負荷が肩に逃げてしまった。たぶんフォームが間違ってる&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルシュラッグ&lt;/td&gt;
 &lt;td&gt;2セット 30kg x 2 17回以上&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;時間がない&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルカール&lt;/td&gt;
 &lt;td&gt;3セット 7.5kg    13回以上&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;時間がない&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;変形バックエクステンション&lt;/td&gt;
 &lt;td&gt;2セット 5kg&lt;/td&gt;
@@ -3923,11 +3416,8 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
 &lt;p&gt;プロテインの調達、英語ライティングの参考書探しとチャットをしてたら途中で時間切れ :(&lt;/p&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-2&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;英語のライティングがほとんどできないのをどうにかしたい。とりあえず英語ライティングの本を何冊か買ってみた。&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -3939,27 +3429,18 @@ EndSection
       <pubDate>Tue, 29 Jan 2019 20:34:30 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/01/diary-20190129/</guid>
-      <description>&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;上半身プッシュ + 腹筋&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;プッシュアップ               3セット 自重              12回以上 + 膝つき             ↑12+4回 8+4回 11+6回
 ダンベルショルダープレス     2セット 10kgx2            14回以上+5kgで何回か          →13回 10+15回
 ダンベルフレンチプレス       2セット 10kg              12回以上+5kgで何回か          ↑12回 11+5回
 ダンベルフライ               2セット 7.5kg x 2         14回以上+5kgで何回か          ↓12回 12回+?回
 ツイストクランチ             3セット                   5秒維持 13回以上 -&amp;gt; 1秒維持   ↓9回 -&amp;gt; 16回 20回
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;土曜に片足スタンディングカーフレイズした結果起きたヒラメ筋の付け根の痛みがまだ収まらない。負荷が強すぎたようだ。しばらく下半身の筋トレはできなさそう&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;土曜に片足スタンディングカーフレイズした結果起きたヒラメ筋の付け根の痛みがまだ収まらない。負荷が強すぎたようだ。しばらく下半身の筋トレはできなさそう&lt;/p&gt;
 &lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;p&gt;&lt;code&gt;*FLAGS&lt;/code&gt;のカスタマイズ&lt;/p&gt;
-
 &lt;p&gt;作業に集中できていない。&lt;/p&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;リフト券の引換券が当たった。ラックとスキー板を直したらスキーしに行こう&lt;/li&gt;
 &lt;li&gt;DOOM Emacs たまに使いづらい、vimに戻りたくなってきた。でもvimでDOOM Emacsっぽいことをしようとすると面倒くさい&lt;/li&gt;
@@ -3973,17 +3454,11 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/01/diary-20190128/</guid>
       <description>&lt;p&gt;頭痛がしたので帰ってきた後すぐ寝たら中途半端な時間に目がさめた。&lt;/p&gt;
-
 &lt;h2 id=&#34;lfs&#34;&gt;LFS&lt;/h2&gt;
-
 &lt;p&gt;進捗なし&lt;/p&gt;
-
-&lt;h2 id=&#34;スキーのトップシートの修理&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
 &lt;p&gt;他の部分を接着した。&lt;/p&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;食後に消化を待つと家を出る時間の直前になってしまうので延期&lt;/p&gt;</description>
     </item>
     
@@ -3993,14 +3468,10 @@ EndSection
       <pubDate>Sun, 27 Jan 2019 22:21:54 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/01/diary-20190127/</guid>
-      <description>&lt;h2 id=&#34;車のメンテ&#34;&gt;車のメンテ&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;車のメンテ&lt;/h2&gt;
 &lt;p&gt;オイルとフィルターを交換してタイヤローテーションもした。先週スキーに行ったので、車の足回りを高圧洗浄機で掃除した。&lt;/p&gt;
-
-&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;ラックの修理&lt;/h2&gt;
 &lt;p&gt;試しに立バンドのボルトが入るようにステーを削って前席の左右に取り付けてみたが、立バンド間の幅が小さくてラックが入らなかった。立バンドの取り付け位置を変えてもだめだったら、叩いてステーの角度を変えるか、ステーを切断して短くする必要がありそう&lt;/p&gt;
-
 
 
  
@@ -4028,9 +3499,7 @@ EndSection
   
 &lt;/div&gt;
 
-
-&lt;h2 id=&#34;スキーのトップシートの修理&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-2&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
 &lt;p&gt;昨日の接着面がムラがあるものの十分な強度で接着されていたので、他の部分も接着した。&lt;/p&gt;</description>
     </item>
     
@@ -4040,17 +3509,12 @@ EndSection
       <pubDate>Sat, 26 Jan 2019 23:17:24 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/01/diary-20190126/</guid>
-      <description>&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;ラックの修理&lt;/h2&gt;
 &lt;p&gt;簡単な加工で使えそうなステーと立バンド各8個と、サビ止めを調達した。&lt;/p&gt;
-
-&lt;h2 id=&#34;スキーのトップシートの修理&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
 &lt;p&gt;無色で弾力性のあるエポキシ接着剤が売っていないので、かわりにGPクリヤーを購入した。接着面全体を圧着するために5x100x100のゴム板も買った。&lt;/p&gt;
-
 &lt;p&gt;接着力が不安なので、試しに完全に接着されなくても問題なさそうな場所を接着してみた。&lt;/p&gt;
-
-
+&lt;p&gt;
 
  
   
@@ -4076,16 +3540,11 @@ EndSection
     &lt;span class=&#34;caption&#34;&gt;ゴム板とクランプで圧着&lt;/span&gt;
   
 &lt;/div&gt;
-
-
+\&lt;/p&gt;
 &lt;p&gt;完全な接着に24時間かかるので、修理には数週間かかりそう。&lt;/p&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-2&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;全身&lt;/p&gt;
-
 &lt;p&gt;集中できなかった&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;ブルガリアンスクワット       3セット 15kgx2 + 自重     11回以上                     右11回 左10回 右8回 左8回 右7回+自重で何回か 左6回+自重で何回か
 プッシュアップ               3セット 自重              12回以上 + 膝つき            9回+膝つき9回 7回+膝つき4回 6回+膝つき5回
 ハーフデッドリフト           3セット 25kg x 2          15回以上                     16回 力が出しきれてない 27.5kgx2 13回 13回
@@ -4101,31 +3560,21 @@ EndSection
       <pubDate>Fri, 25 Jan 2019 22:41:58 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/01/diary-20190125/</guid>
-      <description>&lt;h2 id=&#34;オイル交換-スキーのトップシートの修理-ラックの修理&#34;&gt;オイル交換・スキーのトップシートの修理・ラックの修理&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;オイル交換・スキーのトップシートの修理・ラックの修理&lt;/h2&gt;
 &lt;p&gt;必要な物をホームセンターで調達していたら途中で閉店時間になってしまった。&lt;/p&gt;
-
 &lt;p&gt;SN 5W-30のエンジンオイル 4L、シリコンスプレーとターンナット F-602 2セットを購入。&lt;/p&gt;
-
 &lt;p&gt;ラックの固定にちょうどいいステーと、トップシートの修理に必要な無色の耐衝撃エポキシ接着剤が見つからない。&lt;/p&gt;
-
 &lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;ファイルシステムのディレクトリ構造の作成&lt;/li&gt;
 &lt;li&gt;最低限必要なファイルの作成&lt;/li&gt;
 &lt;li&gt;仮想ファイルシステムの準備&lt;/li&gt;
 &lt;li&gt;CPPFLAGS, CFLAGS, CXXFLAGSとLDFLAGSのカスタマイズ&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;のあたり&lt;/p&gt;
-
 &lt;p&gt;あまり集中して作業できていなかった&lt;/p&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;なし&lt;/p&gt;
-
 &lt;p&gt;昨日睡眠時間が短かかったのと、オイル交換とラックとスキーの修理に必要な物の調達で帰るのが遅くなったのもあって、夕食を食べてから2時間経つ前に眠くなってしまった。&lt;/p&gt;</description>
     </item>
     
@@ -4136,16 +3585,11 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/01/diary-20190124/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;p&gt;ファイルシステムのディレクトリ構造と/etc/passwdに登録するシステムユーザーを決めた。システムグループの役割と使用箇所を調べている途中。&lt;/p&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;下半身 + 腹筋&lt;/p&gt;
-
 &lt;p&gt;LFSの構築をやりすぎたせいで途中までしかできなかった。
 下半身が一番時間がかかるからか、時間切れで中断することが多くなってきていてまずい&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;ブルガリアンスクワット       3セット 15kgx2 + 自重 左10回 右9回 左7回 右7回 左6回+自重で何回か 右5回+自重で8回
 レッグエクステンション       2セット 20kg          12回 12回+10kgで16回
 ツイストクランチ             3セット 自重          5秒維持 13回 -&amp;gt; 1秒維持 18回 18回
@@ -4159,13 +3603,9 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/01/diary-20190123/</guid>
       <description>&lt;h2 id=&#34;lfs&#34;&gt;LFS&lt;/h2&gt;
-
 &lt;p&gt;進捗ほとんどなし&lt;/p&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;上半身プル&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;ハーフデッドリフト         3セット 25kg x 2
 ワンハンドローイング   左右2セット 10kg
 ダンベルシュラッグ         2セット 25kg x 2
@@ -4181,19 +3621,12 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/01/diary-20190122/</guid>
       <description>&lt;h2 id=&#34;lfs&#34;&gt;LFS&lt;/h2&gt;
-
 &lt;p&gt;進捗なし&lt;/p&gt;
-
 &lt;p&gt;いろいろやってたら時間がなくなった&lt;/p&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;上半身プッシュ + 腹筋&lt;/p&gt;
-
 &lt;p&gt;プッシュアップ 3セット, ダンベルショルダープレス 2セット 10kgx2, ダンベルフレンチプレス 2セット 10kg, ダンベルフライ 2セット 7.5kg x 2, クランチ 1セット, ツイストクランチ 2セット&lt;/p&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;スキーでジャンプしたらなぜか腹筋が筋肉痛になった&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -4205,17 +3638,12 @@ EndSection
       <pubDate>Sun, 20 Jan 2019 23:50:07 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/01/diary-20190121/</guid>
-      <description>&lt;h2 id=&#34;新潟県警のクラックの件&#34;&gt;新潟県警のクラックの件&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;新潟県警のクラックの件&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://www3.nhk.or.jp/news/html/20190120/k10011784571000.html&#34;&gt;新潟県警のサーバー不正操作 掲示板に爆破予告書き込みか&lt;/a&gt;&lt;/p&gt;
-
 &lt;p&gt;&lt;a href=&#34;http://archive.vn/https://www.police.pref.niigata.jp/*&#34;&gt;攻撃の痕跡が魚拓に残っている。&lt;/a&gt;&lt;/p&gt;
-
 &lt;p&gt;メールフォーム(&lt;a href=&#34;http://archive.vn/LPTbJ&#34;&gt;http://archive.vn/LPTbJ&lt;/a&gt;) の画像添付機能にあった初歩的なOSコマンドインジェクション脆弱性(&lt;a href=&#34;https://archive.is/whWsu&#34;&gt;https://archive.is/whWsu&lt;/a&gt;) を突かれた模様。&lt;/p&gt;
-
 &lt;p&gt;&lt;a href=&#34;https://archive.vn/DhvA7&#34;&gt;某弁護士の画像がアップロードされていた。&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;3gモデムカードとsimカードの接続方法&#34;&gt;3GモデムカードとSIMカードの接続方法&lt;/h2&gt;</description>
+&lt;h2 id=&#34;3gsim&#34;&gt;3GモデムカードとSIMカードの接続方法&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -4225,44 +3653,39 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/01/diary-20190120/</guid>
       <description>&lt;p&gt;SNSはやめたので、代わりに某所のつぶやきチャンネルにつぶやきを書き捨てていたが、自分一人でかなりチャンネル流量を上げてしまっているのでこれからはここに書く。&lt;/p&gt;
-
-&lt;h2 id=&#34;スキー&#34;&gt;スキー&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;スキー&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;草津に一泊二日のスキー旅行に行った。去年の白根山噴火の影響で白根火山ロープウェイが廃止されていて、中上級コースのほとんどがなくなっていた。&lt;/li&gt;
 &lt;li&gt;ロープウェイ廃止のためか、ロープウェイの駐車場だった場所は滑れるようになっていて、駐車場へのアクセスに使われていた国道292号もスキーコースになっていた。ただ、傾斜が緩やかな上に途中複数回登り勾配になっていて、初級者にはつらく、中上級者にはつまらないためか、人気はなく、隣のしゃくなげコースに人が流れていた。&lt;/li&gt;
 &lt;li&gt;普通に滑っているとつまらないし、たまたま使っている板がビンディングが後ろよりについているがツインチップのやつだったので、人の少ないコースでフリースタイルスキーに挑戦してみた。&lt;/li&gt;
 &lt;li&gt;まずストレートジャンプをやってみた。何回か平地や斜面でジャンプして感覚をつかんだ後、コースのでこぼこの部分でジャンプしたらうまくいった。コースの形状の都合で短距離のジャンプしかできないが楽しかった。&lt;/li&gt;
 &lt;li&gt;フェイキー(後ろ滑り)もやってみた。後ろに向くのは楽勝で、後ろにまっすぐ滑るのもなんとかできたが、ほとんど曲がれないし、前向きに戻るのに高確率で失敗した。
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=Q_4WcUHAddw&#34;&gt;【スキー】 スイッチ（後ろ向き）の滑り方講座Part1 / フリースキー初心者が最初にやるべき８のトリック～ファースト８～ - YouTube&lt;/a&gt; を参考に練習していきたい。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;とりあえずフェイキーから戻れるように&lt;a href=&#34;https://oshiete.goo.ne.jp/qa/3607716.html&#34;&gt;これ&lt;/a&gt;を参考にグランドスピンを練習した。
-
 &lt;ul&gt;
 &lt;li&gt;後ろに回ったとき足が広がって勢いが削げてしまうが、2連続回転できるようになった。&lt;/li&gt;
 &lt;li&gt;次はスピンをマスターして何回も回れるようになりたい&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;筋トレしてふくらはぎが太くなったせいか、足のブーツと接する部分に水膨れができてしまった。これ以上脚が太くなったらブーツを買いかえなきゃいけなくなるかもしれない&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;2016年8月ごろ、Ubuntu 14.04の収録ソフトウェアが古くなって不便になってきたので、ローリングリリースのディストロに移行することにした。
-最初はOpenSUSE Tumbleweedを試してみたが、しっくりこなかったのでArch Linuxに移行しようとした。&lt;br /&gt;
-しかし、移行のついでにVimやZshの設定を見直したり、ソフトウェアの構成を変えてみたり、パッケージマネージャを書こうとしてみたり、Webブラウザや信頼できないアプリを隔離するjailを書こうとしてみたり、数ヶ月間別のことに興味が移ってたり、Arch Linuxに不満が出てきたので移行先をLinux from Scratchに変更したり、など脱線&lt;br /&gt;
+最初はOpenSUSE Tumbleweedを試してみたが、しっくりこなかったのでArch Linuxに移行しようとした。&lt;br&gt;
+しかし、移行のついでにVimやZshの設定を見直したり、ソフトウェアの構成を変えてみたり、パッケージマネージャを書こうとしてみたり、Webブラウザや信頼できないアプリを隔離するjailを書こうとしてみたり、数ヶ月間別のことに興味が移ってたり、Arch Linuxに不満が出てきたので移行先をLinux from Scratchに変更したり、など脱線&lt;br&gt;
 そうこうしているうちに2019年1月になり、Ubuntu 14.04のサポート切れまであと3ヶ月に
-
 &lt;ul&gt;
 &lt;li&gt;セカンドシステム症候群&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;このままではまずいので、とりあえず手動で普通のLinuxデスクトップ仕様のLinux from Scratchを組んでUbuntu 14.04から移行することにした。&lt;/li&gt;
 &lt;li&gt;Temporary Systemの構築が終わり、実際のシステムを構築する直前まで行った。&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;</description>
+&lt;h2 id=&#34;heading-1&#34;&gt;筋トレ&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -4272,12 +3695,9 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/01/afwall-bt-tethering/</guid>
       <description>&lt;p&gt;AFWall+を有効にしていると、Bluetoothテザリングで接続したクライアントが通信できなくなるのをなんとかする。&lt;/p&gt;
-
-&lt;h2 id=&#34;原因&#34;&gt;原因&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;原因&lt;/h2&gt;
 &lt;p&gt;ログと検索エンジンで調べたところ、AFWall+がBluetoothテザリングに対応していないため、クライアントにDHCPとDNS Proxyを提供しているdnsmasqからのDNS通信がブロックされてしまっていることが分かった。&lt;/p&gt;
-
-&lt;h2 id=&#34;解決策1-dnsを手動設定する&#34;&gt;解決策1: DNSを手動設定する&lt;/h2&gt;</description>
+&lt;h2 id=&#34;1-dns&#34;&gt;解決策1: DNSを手動設定する&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -4287,7 +3707,6 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/01/edid-repair/</guid>
       <description>&lt;p&gt;Acer H243HをDVIで接続すると認識しない。VGA接続とHDMI接続では正常に動作するが、DVIで接続するとsyslogに以下のエラーが出る。&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Jan  5 23:48:32 haramaki kernel: [97894.621687] amdgpu 0000:01:00.0: DVI-D-1: EDID is invalid:
 Jan  5 23:48:32 haramaki kernel: [97894.621694]         [00] BAD  00 ff ff ff ff ff ff 00 ff ff ff ff ff ff ff ff
 Jan  5 23:48:32 haramaki kernel: [97894.621696]         [00] BAD  2b 13 01 03 80 35 1d 78 ea 60 85 a6 56 4a 9c 25
@@ -4297,9 +3716,7 @@ Jan  5 23:48:32 haramaki kernel: [97894.621699]         [00] BAD  35 00 13 2a 21
 Jan  5 23:48:32 haramaki kernel: [97894.621700]         [00] BAD  33 48 0a 20 20 20 20 20 20 20 00 00 00 fd 00 38
 Jan  5 23:48:32 haramaki kernel: [97894.621701]         [00] BAD  4c 1f 53 12 00 0a 20 20 20 20 20 20 00 00 00 ff
 Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30 43 30 31 34 34 30 31 31 0a 00 33
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;どうやらEDIDが壊れているようだ。&lt;/p&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;どうやらEDIDが壊れているようだ。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -4338,8 +3755,7 @@ Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30
       <pubDate>Sat, 20 Oct 2018 10:50:27 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2018/10/doom-emacs-develop-setup/</guid>
-      <description>&lt;h2 id=&#34;動機&#34;&gt;動機&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;動機&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;収録ソフトウェアがかなり古くなってきている Ubuntu 14.04 から Linux From Scratch に移行しよう&lt;/li&gt;
 &lt;li&gt;この機会に neovim に移行して、vim の設定を一から書き直そう&lt;/li&gt;
@@ -4378,7 +3794,8 @@ Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30
       <guid>https://ngkz.github.io/2018/07/audit-cargo-crate/</guid>
       <description>cargo fetch1 でパッケージを取得すると、~/.cargo/registry/src/github.com-1ecc6299db9ec823/(パッケージ名)-(バージョン) にパッケージのソースコードが展開される。
 Cargo.lockにすべての依存クレートの名前とバージョンが記録されているので、これを見てコードに問題がないか調べることができる。
- cargo buildはビルドスクリプトを実行してしまうのでダメ [return]   </description>
+  cargo buildはビルドスクリプトを実行してしまうのでダメ &amp;#x21a9;&amp;#xfe0e;
+   </description>
     </item>
     
     <item>
@@ -4400,8 +3817,7 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
   
 &lt;/div&gt;
 
-
-&lt;p&gt;リアの窓と換気扇だけでは車内の換気能力が足りないので、ボーンバー&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;を作った。&lt;/p&gt;</description>
+&lt;p&gt;リアの窓と換気扇だけでは車内の換気能力が足りないので、ボーンバー&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;を作った。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -4423,7 +3839,6 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
   
 &lt;/div&gt;
 
-
 &lt;p&gt;リアゲートを開けたときに荷物が落ちるので、荷物ベルトを通すフックをつけてみた&lt;/p&gt;</description>
     </item>
     
@@ -4433,9 +3848,8 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
       <pubDate>Wed, 23 Jul 2014 19:57:23 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2014/07/seccon-2014-online-japanese-quals-writeup/</guid>
-      <description>&lt;p&gt;0x0として参加しました。&lt;br /&gt;
+      <description>&lt;p&gt;0x0として参加しました。&lt;br&gt;
 予選2位通過&lt;/p&gt;
-
 &lt;p&gt;
 
  
@@ -4458,7 +3872,7 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
     &lt;span class=&#34;caption&#34;&gt;問題一覧&lt;/span&gt;
   
 &lt;/div&gt;
-&lt;br /&gt;
+&lt;br&gt;
 ※上のスクリーンショットを撮った後に@nolzeがPrint it!を解いている&lt;/p&gt;</description>
     </item>
     
@@ -4468,8 +3882,7 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
       <pubDate>Tue, 04 Mar 2014 06:45:08 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2014/03/seccon-2013-finals-writeup/</guid>
-      <description>&lt;h2 id=&#34;結果&#34;&gt;結果&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;結果&lt;/h2&gt;
 
 
  
@@ -4495,7 +3908,6 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
 
 
 
-
  
   
   
@@ -4517,12 +3929,9 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
   
 &lt;/div&gt;
 
-
 &lt;p&gt;問題一覧の画像とCSSを保存し忘れた。 &lt;/p&gt;
-
 &lt;p&gt;チーム0x0としてSECCON 2013 全国大会に参加しました。&lt;/p&gt;
-
-&lt;p&gt;今回のメンバーはwasao, waidotto, nolzeと私です。&lt;br /&gt;
+&lt;p&gt;今回のメンバーはwasao, waidotto, nolzeと私です。&lt;br&gt;
 4139ptで優勝しました。&lt;/p&gt;</description>
     </item>
     
@@ -4533,13 +3942,9 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
       
       <guid>https://ngkz.github.io/2014/01/seccon-2013-online-quals-writeup/</guid>
       <description>&lt;p&gt;SECCON オンライン予選にチーム0x0のメンバーとして参加しました。&lt;/p&gt;
-
 &lt;p&gt;3700点で7位でした。&lt;/p&gt;
-
 &lt;p&gt;bin500に時間をかけ過ぎた結果、練習問題とbin200しか解けなかった。&lt;/p&gt;
-
 &lt;p&gt;バイナリ問題以外も見ておけばよかった&lt;/p&gt;
-
 
 
  
@@ -4571,7 +3976,6 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
       
       <guid>https://ngkz.github.io/2014/01/30c3ctf-writeup/</guid>
       <description>&lt;p&gt;2013/12/28-30 の30c3 ctfにチーム0x0として参加しました。&lt;/p&gt;
-
 &lt;p&gt;&lt;a href=&#34;https://archive.aachen.ccc.de/30c3ctf.aachen.ccc.de/scoreboard/&#34;&gt;2100点で19位でした。&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
@@ -4582,13 +3986,9 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
       
       <guid>https://ngkz.github.io/2014/01/seccon-2012-finals/</guid>
       <description>&lt;p&gt;書きかけのwriteupがあったのでアップロードしておく&lt;/p&gt;
-
 &lt;p&gt;2013/2/23 - 2/24の SECCON CTF 全国大会に チーム 0x0として参加しました。&lt;/p&gt;
-
 &lt;p&gt;チームメンバーは nash氏、wasao氏、waidotto氏、nullmineral氏と私です。&lt;/p&gt;
-
 &lt;p&gt;スコアは 1684ptでした。&lt;/p&gt;
-
 
 
  
@@ -4622,7 +4022,6 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
       <description>&lt;p&gt;2013/5/4〜5/5の&lt;a href=&#34;http://tkbctf.info/tkbctf1&#34;&gt;tkbctf1&lt;/a&gt;に参加しました。&lt;/p&gt;
 
 
-
  
   
   
@@ -4643,7 +4042,6 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
     &lt;span class=&#34;caption&#34;&gt;Scoreboard&lt;/span&gt;
   
 &lt;/div&gt;
-
 
 
 
@@ -4668,7 +4066,6 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
   
 &lt;/div&gt;
 
-
 &lt;p&gt;個人ランキングで1位でした。&lt;/p&gt;</description>
     </item>
     
@@ -4691,7 +4088,6 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
   
 &lt;/div&gt;
 
-
 &lt;p&gt;優勝して賞金2500円を手に入れました。&lt;/p&gt;</description>
     </item>
     
@@ -4701,13 +4097,10 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
       <pubDate>Thu, 12 Sep 2013 13:29:56 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2013/09/galaxys3-adb-restore-fail/</guid>
-      <description>&lt;h2 id=&#34;リカバリモードに入ってファクトリーリセットする&#34;&gt;リカバリモードに入ってファクトリーリセットする&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;リカバリモードに入ってファクトリーリセットする&lt;/h2&gt;
 &lt;p&gt;galaxy S3 リカバリモードの入り方:&lt;/p&gt;
-
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/QVa3yfxP0Zs&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;h2 id=&#34;バックアップを展開&#34;&gt;バックアップを展開&lt;/h2&gt;</description>
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;heading-1&#34;&gt;バックアップを展開&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -4717,7 +4110,6 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
       
       <guid>https://ngkz.github.io/2013/03/howto-reactivate-keepassx/</guid>
       <description>&lt;p&gt;Ubuntu 12.10-14.04で確認済み&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;echo &amp;quot;keepassx=1&amp;quot; &amp;gt;&amp;gt; /etc/xdg/sni-qt.conf
 &lt;/code&gt;&lt;/pre&gt;</description>
     </item>
@@ -4728,13 +4120,10 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
       <pubDate>Mon, 24 Dec 2012 05:03:22 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2012/12/seccon-2012-yokohama-quals-writeup/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://www.seccon.jp/&#34;&gt;SECCON CTF 横浜大会&lt;/a&gt;にチーム 0x0として参加しました。&lt;br /&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.seccon.jp/&#34;&gt;SECCON CTF 横浜大会&lt;/a&gt;にチーム 0x0として参加しました。&lt;br&gt;
 チームメンバーは nash氏、wasao氏、waidotto氏、nullmineral氏と私です。&lt;/p&gt;
-
-&lt;h2 id=&#34;成績&#34;&gt;成績&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;成績&lt;/h2&gt;
 &lt;p&gt;score: たぶん8120&lt;/p&gt;
-
 
 
  
@@ -4758,9 +4147,7 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
   
 &lt;/div&gt;
 
-
-&lt;p&gt;&lt;/p&gt;
-
+&lt;p&gt;\&lt;/p&gt;
 
 
  
@@ -4784,8 +4171,7 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
   
 &lt;/div&gt;
 
-
-&lt;p&gt;&lt;br /&gt;
+&lt;p&gt;&lt;br&gt;
 ✌(&amp;lsquo;ω&amp;rsquo;)&lt;/p&gt;</description>
     </item>
     

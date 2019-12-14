@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.61.0 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="Kazutoshi Noguchi&#39;s blog">
@@ -97,7 +97,7 @@
         </a>
         <h4 class="sidebar-profile-name">Kazutoshi Noguchi</h4>
         
-          <h5 class="sidebar-profile-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</h5>
+          <h5 class="sidebar-profile-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</h5>
         
       </div>
     
@@ -248,36 +248,31 @@
     <div class="postShorten-excerpt" itemprop="articleBody">
       
         <h2 id="linux-from-scratch">Linux from Scratch</h2>
-
 <ul>
 <li>別のマシンでglibcのテストが通らなかったので原因を調べていた。systemdがかけたリソースの制限のせいでPIDが不足したのと、他のプロセスの負荷が原因でテストがタイムアウトしたのが原因だった。</li>
 <li>32bitのglibcをビルドしようとしたら失敗した。
-
 <ul>
 <li>間違ってGCC (pass 2)をmultilib無効でビルドしていた</li>
 <li>明日再ビルドして、ついでにデフォルトPIE, デフォルト stack protectorとbuild idの自動出力を有効にする予定</li>
-</ul></li>
 </ul>
-
-<h2 id="筋トレ">筋トレ</h2>
-
+</li>
+</ul>
+<h2 id="heading">筋トレ</h2>
 <ul>
 <li>THE プレワークアウトを筋トレ30分前に1スクープ摂取
-
 <ul>
 <li>プレワークアウト飲んで下半身の筋トレをすると気分が悪くなるのを忘れていた。次からは飲まないようにする</li>
-</ul></li>
+</ul>
+</li>
 <li>HMBを朝, トレーニング一時間前, 就寝前に1g摂取</li>
 <li>前日の睡眠 7:24 (23:09→5:16, 5:35→5:44, 6:10→7:24)
-
 <ul>
 <li>周囲が騒がしくて途中で起きてしまった。</li>
-</ul></li>
+</ul>
+</li>
 <li>前日の疲れが残っているせいかあまり集中できなかった</li>
 </ul>
-
 <p><strong>下半身</strong></p>
-
 <table>
 <thead>
 <tr>
@@ -287,7 +282,6 @@
 <th>備考</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>ブルガリアンスクワット</td>
@@ -295,28 +289,24 @@
 <td>↓左13 右11 左9 右10 左8→自重で6 右8→10</td>
 <td></td>
 </tr>
-
 <tr>
 <td>シシースクワット</td>
 <td>2セット 自重</td>
 <td></td>
 <td>時間切れ</td>
 </tr>
-
 <tr>
 <td>ヒップスラスト</td>
 <td>2セット 30kg(27.5kg+シャフト) 24回以上 →ドロップ</td>
 <td></td>
 <td></td>
 </tr>
-
 <tr>
 <td>レッグカール</td>
 <td>2セット 22.5kg(20kg+シャフト) 11回以上 →ドロップ</td>
 <td></td>
 <td></td>
 </tr>
-
 <tr>
 <td>片足スタンディングカーフレイズ</td>
 <td>3セット 自重 左右23回以上</td>
@@ -325,9 +315,7 @@
 </tr>
 </tbody>
 </table>
-
-<h2 id="その他">その他</h2>
-
+<h2 id="heading-1">その他</h2>
 <ul>
 <li>3時間くらい余計なことやって時間を無駄にしてしまった。</li>
 </ul>
@@ -392,31 +380,28 @@
     <div class="postShorten-excerpt" itemprop="articleBody">
       
         <h2 id="linux-from-scratch">Linux from Scratch</h2>
-
 <ul>
 <li>64bit glibcのテストが通るようになった。
-
 <ul>
-<li><code>-fno-plt</code> <code>-fexceptions</code>のどれかがCFLAGSに入っているとテストコードが、<code>-z now</code>がLDFLAGSに入っているとダイナミックリンカが壊れることが分かった。</li>
+<li><code>-fno-plt</code> <code>-fexceptions</code>のどれかがCFLAGSに入っているとテストコードが、<code>-z now</code>がLDFLAGSに入っているとダイナミックリンカが壊れることが分かった。
+<ul>
 <li>前者は、 一度しか実行せず攻撃を受けることもないテストコードには最適化もHardeningも不要なので、テスト時にすべてのフラグを削除することで対処した。</li>
 <li>後者はライブラリのビルド時に一時的に <code>-z now</code> をLDFLAGSから削除することで対処した。</li>
-</ul></li>
+</ul>
+</li>
+</ul>
+</li>
 <li>manページの圧縮処理とデバッグ情報の分離処理を書いている途中</li>
 </ul>
-
-<h2 id="筋トレ">筋トレ</h2>
-
+<h2 id="heading">筋トレ</h2>
 <ul>
 <li>THE プレワークアウトを筋トレ30分前に1スクープ摂取</li>
 <li>HMBを昼, 夕食前, 就寝前に1g摂取</li>
 <li>前日の睡眠 6:57 (0:26→7:28)</li>
 <li>食事前に筋トレ</li>
 </ul>
-
 <p><strong>上半身プル+腹筋</strong></p>
-
 <p>集中できなかった</p>
-
 <table>
 <thead>
 <tr>
@@ -426,7 +411,6 @@
 <th>備考</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>ハーフデッドリフト</td>
@@ -434,35 +418,30 @@
 <td>↑25 16 13 12?</td>
 <td>3セット目途中で邪魔が入った。力が出しきれなかった</td>
 </tr>
-
 <tr>
 <td>ワンハンドローイング</td>
 <td>左右2セット 12.5kg(10kg+シャフト) 15回以上 →ドロップ</td>
 <td>→右14 左16 右12→7.5kg(2.5kgx2+シャフト)で15→5kgで13→2.5kgで15→1.25kgで13 左17→7.5kg(2.5kgx2+シャフト)で14→5kgで21→2.5kgで20→1.25kgで22</td>
 <td></td>
 </tr>
-
 <tr>
 <td>ダンベルシュラッグ</td>
 <td>2セット 30kg(27.5kgx2+シャフト) 24回以上 →ドロップ</td>
 <td>↑24 16→15kg+シャフトで25</td>
 <td></td>
 </tr>
-
 <tr>
 <td>ダンベルカール</td>
 <td>3セット 10kg(7.5kg+シャフト) 13回以上 <del>→ドロップ</del></td>
 <td>12.5kgで3回 8.5 8.5</td>
 <td>重量間違えた</td>
 </tr>
-
 <tr>
 <td>変形バックエクステンション</td>
 <td>2セット 自重+5kg 16回以上 →ドロップ</td>
 <td></td>
 <td>時間切れ</td>
 </tr>
-
 <tr>
 <td>ツイストクランチ</td>
 <td>3セット 自重 5秒維持 16回以上 → 1秒維持 23回以上</td>
@@ -471,30 +450,34 @@
 </tr>
 </tbody>
 </table>
-
-<h2 id="その他">その他</h2>
-
+<h2 id="heading-1">その他</h2>
 <ul>
 <li>明日が休日だとつい夜更ししてしまう。健康によくないし、休日でないとできないことができなくなるし、筋肉や神経系に悪影響が出るので、23時になったらPCを強制サスペンドするようにcronを設定した。</li>
 <li><a href="https://www.amazon.co.jp/gp/product/B01LW43RYZ">電気毛布</a>と<a href="https://www.amazon.co.jp/gp/product/B073TDGH3M">カードスリーブ</a>と<a href="https://www.amazon.co.jp/gp/product/B07D26LM4K">名刺入れ</a>が届いた。
-
 <ul>
-<li>磁気カードと非接触ICカードを防磁防RFカードスリーブに入れた。</li>
+<li>磁気カードと非接触ICカードを防磁防RFカードスリーブに入れた。
+<ul>
 <li>スリーブを付けるとカードが財布のカード入れに入らない。
-
 <ul>
 <li>カードスリーブをつけるとサイズが大きくなるのを忘れていた。</li>
 <li>スリーブよりシールド付きの財布を買った方がよかったかもしれない。</li>
-</ul></li>
+</ul>
+</li>
 <li>スリーブに入れるとスマホで読みとれなくなるので、防RF効果はちゃんとあるようだ。
-
 <ul>
 <li>防磁は試す勇気がない</li>
-</ul></li>
-<li>名刺入れは金属部分に大きく深い切り傷があったので、販売者に交換してもらうことにした。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>名刺入れは金属部分に大きく深い切り傷があったので、販売者に交換してもらうことにした。
+<ul>
 <li>その後、業者が交換品を送り、不良品はこっちで破棄することになった。 <a href="https://ngkz.github.io/2019/02/diary-20190217/">2日後に交換品が届いた</a>。</li>
+</ul>
+</li>
 <li>電気毛布はちゃんと動いた。明日車の中でどれくらいの効果があるかテストしてみる予定</li>
-</ul></li>
+</ul>
+</li>
 </ul>
       
       <p>
@@ -557,37 +540,30 @@
     <div class="postShorten-excerpt" itemprop="articleBody">
       
         <h2 id="linux-from-scratch">Linux from Scratch</h2>
-
 <ul>
 <li>glibcのビルドはまだ成功していない。再ビルドに時間がかかるのでテストの実行を一部だけにしても1周数十分かかる。嫌になってきた
-
 <ul>
 <li>ライブラリのビルド・バイナリのビルド・テストの各段階で使えないフラグが違うっぽい</li>
-</ul></li>
+</ul>
+</li>
 <li>デバッグ情報を分離して <code>/usr/lib/debug/.build-id/...</code> に置きたいので、LDFLAGSに <code>-Wl,--build-id</code>を追加してBuild IDを生成するようにした</li>
 <li>必要なさそうなので <code>CFLAGS</code>から <code>-grecord-gcc-switches</code>を削除</li>
 </ul>
-
-<h2 id="ラックの修理">ラックの修理</h2>
-
+<h2 id="heading">ラックの修理</h2>
 <ul>
 <li>ステーと立バンドの裏に塗料を重ね塗りした。今週末には完成しそう</li>
 </ul>
-
-<h2 id="筋トレ">筋トレ</h2>
-
+<h2 id="heading-1">筋トレ</h2>
 <ul>
 <li>THE プレワークアウトを筋トレ30分前に1スクープ摂取</li>
 <li>HMBを昼, 夕食前, 就寝前に1g摂取</li>
 <li>前日の睡眠 7:38 (0:00 → 7:43)
-
 <ul>
 <li>途中トイレに行きたくなって起きてしまったものの、全体的にはアラームに気付かないくらい熟睡した</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <p><strong>上半身プッシュ</strong></p>
-
 <table>
 <thead>
 <tr>
@@ -597,7 +573,6 @@
 <th>備考</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>ローテーターカフのウォームアップ</td>
@@ -605,28 +580,24 @@
 <td></td>
 <td></td>
 </tr>
-
 <tr>
 <td>プッシュアップ</td>
 <td>3セット 自重 8回以上 → 膝つき</td>
 <td>↑9→5 9→6 6→3</td>
 <td></td>
 </tr>
-
 <tr>
 <td>ダンベルショルダープレス</td>
 <td>2セット 25kg(10kgx2+シャフト) 15回以上 → ドロップ</td>
 <td>↑15 13→5kgx2で21→2.5kgx2で23</td>
 <td></td>
 </tr>
-
 <tr>
 <td>ダンベルフレンチプレス</td>
 <td>2セット 10kg+シャフト 11回以上 → ドロップ</td>
 <td>↑12? 9+14</td>
 <td></td>
 </tr>
-
 <tr>
 <td>ダンベルフライ</td>
 <td>2セット 7.5kgx2+シャフト 14回以上 <del>→ ドロップ</del></td>
@@ -696,22 +667,17 @@
     <div class="postShorten-excerpt" itemprop="articleBody">
       
         <h2 id="linux-from-scratch">Linux from Scratch</h2>
-
 <ul>
 <li>glibcのテストが失敗するのは LDFLAGSで <code>-z now</code>を渡すとダイナミックリンカが壊れるのが原因だった。</li>
 </ul>
-
-<h2 id="筋トレ">筋トレ</h2>
-
+<h2 id="heading">筋トレ</h2>
 <ul>
 <li>THE プレワークアウトを筋トレ30分前に1スクープ摂取</li>
 <li>HMBを昼, 筋トレ1時間前, 就寝前に1g摂取</li>
 <li>前日の睡眠 6:59 (0:28 → 7:37)</li>
 <li>シシースクワットでレッグエクステンションを置き換え</li>
 </ul>
-
 <p><strong>下半身+腹筋</strong></p>
-
 <table>
 <thead>
 <tr>
@@ -721,7 +687,6 @@
 <th>備考</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>ブルガリアンスクワット</td>
@@ -729,35 +694,30 @@
 <td>↑左13 右12 左9 右10 左10→自重で12 右8→自重で14</td>
 <td>プレワークアウトのカフェインの副作用のせいかかなりつらい</td>
 </tr>
-
 <tr>
 <td>シシースクワット</td>
 <td>2セット 自重</td>
 <td>21 20 25</td>
 <td>難しい, 中断してフォームを確認しながら</td>
 </tr>
-
 <tr>
 <td>ヒップスラスト</td>
 <td>2セット 30kg(27.5kg+シャフト) 24回以上 →ドロップ</td>
 <td></td>
 <td>時間がないので省略</td>
 </tr>
-
 <tr>
 <td>レッグカール</td>
 <td>2セット 22.5kg(20kg+シャフト) 11回以上 →ドロップ</td>
 <td></td>
 <td></td>
 </tr>
-
 <tr>
 <td>片足スタンディングカーフレイズ</td>
 <td>3セット 自重 左右23回以上</td>
 <td></td>
 <td></td>
 </tr>
-
 <tr>
 <td>ツイストクランチ</td>
 <td>3セット 自重 5秒維持 16回以上 → 1秒維持 23回以上</td>
@@ -766,9 +726,7 @@
 </tr>
 </tbody>
 </table>
-
-<h2 id="ラックの修理">ラックの修理</h2>
-
+<h2 id="heading-1">ラックの修理</h2>
 <p>立バンドの裏を塗装し、ステーのめっきが剥げた箇所にサビ止めを塗った。</p>
       
       <p>
@@ -831,28 +789,25 @@
     <div class="postShorten-excerpt" itemprop="articleBody">
       
         <h2 id="linux-from-scratch">Linux from Scratch</h2>
-
 <ul>
-<li><p>glibcのビルドをしている</p>
-
+<li>
+<p>glibcのビルドをしている</p>
 <ul>
 <li><code>*FLAGS</code>を空にした状態でビルドしてみたらテストが通ったので、フラグを変えながらビルドとテストを繰り返してどれが失敗の原因か調べている</li>
-</ul></li>
-
-<li><p><a href="http://clfs.org">Cross Linux from Scratch</a> のサイトが消滅してた</p></li>
 </ul>
-
-<h2 id="筋トレ">筋トレ</h2>
-
+</li>
+<li>
+<p><a href="http://clfs.org">Cross Linux from Scratch</a> のサイトが消滅してた</p>
+</li>
+</ul>
+<h2 id="heading">筋トレ</h2>
 <ul>
 <li>THE プレワークアウトを30分前に1スクープ摂取</li>
 <li>HMBを昼に1g, トレーニング1時間前に1g摂取, 夜に1g摂取</li>
 <li>前日の睡眠 7:23 (0:09 → 7:33)</li>
 <li>食事前に筋トレ</li>
 </ul>
-
 <p><strong>上半身プル</strong></p>
-
 <table>
 <thead>
 <tr>
@@ -862,7 +817,6 @@
 <th>備考</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>ハーフデッドリフト</td>
@@ -870,28 +824,24 @@
 <td>↑23 16 16</td>
 <td>キツい 追いこみきれてない 1/30くらいのトレーニングボリュームに回復した</td>
 </tr>
-
 <tr>
 <td>ワンハンドローイング</td>
 <td>左右2セット 10kg+シャフト 12回以上 →ドロップ</td>
 <td>↑右14 左16 右14→5kg+シャフトで13 左15→5kg+シャフトで17</td>
 <td></td>
 </tr>
-
 <tr>
 <td>ダンベルシュラッグ</td>
 <td>2セット 27.5kgx2+シャフト 23回以上 →ドロップ</td>
 <td>↑23 17→15kg+シャフトで34</td>
 <td></td>
 </tr>
-
 <tr>
 <td>ダンベルカール</td>
 <td>3セット 7.5kg+シャフト 12回以上 →ドロップ</td>
 <td>↑12 8.5 6</td>
 <td></td>
 </tr>
-
 <tr>
 <td>変形バックエクステンション</td>
 <td>2セット 自重+5kg 16回以上 →ドロップ</td>
@@ -900,22 +850,18 @@
 </tr>
 </tbody>
 </table>
-
-<h2 id="ラックの修理">ラックの修理</h2>
-
+<h2 id="heading-1">ラックの修理</h2>
 <p>立バンドに塗料を塗り重ねた</p>
-
-<h2 id="その他">その他</h2>
-
+<h2 id="heading-2">その他</h2>
 <ul>
 <li>スキーに行くとき車中泊する予定なので電気毛布を注文した</li>
 <li>ついでにいろいろと注文した
-
 <ul>
 <li>カードの保護のための防磁・防RFのカードスリーブ</li>
 <li>セキュリティコードを隠すための剥がすと跡が残るシール</li>
 <li>まともな名刺ケース</li>
-</ul></li>
+</ul>
+</li>
 </ul>
       
       <p>
@@ -977,17 +923,13 @@
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        <h2 id="筋トレ">筋トレ</h2>
-
+        <h2 id="heading">筋トレ</h2>
 <ul>
 <li>THE プレワークアウトを多めの水(400ml)に溶かしてみたら、ちょうどいい味の濃さになりケミカル感も軽減されておいしかった。</li>
 <li>ノンフレーバーHMB + Impact ホエイ ソルティッドキャラメル味は相性が悪く、HMBのワキガ臭と苦みを打ち消しきれない。</li>
 </ul>
-
 <p><strong>上半身プッシュ+腹筋</strong></p>
-
 <p>徹夜の悪影響が残っているからかトレーニングボリュームが落ちている。</p>
-
 <table>
 <thead>
 <tr>
@@ -997,7 +939,6 @@
 <th>備考</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>ローテーターカフのウォームアップ</td>
@@ -1005,35 +946,30 @@
 <td></td>
 <td></td>
 </tr>
-
 <tr>
 <td>プッシュアップ</td>
 <td>3セット 自重 9回以上 → 膝つき</td>
 <td>↓7→4 8+4 7+5</td>
 <td></td>
 </tr>
-
 <tr>
 <td>ダンベルショルダープレス</td>
 <td>2セット 10kgx2+シャフト 14回以上 <del>→ ドロップ</del></td>
 <td>↑14 12</td>
 <td></td>
 </tr>
-
 <tr>
 <td>ダンベルフレンチプレス</td>
 <td>2セット 10kg+シャフト 11回以上 <del>→ ドロップ</del></td>
 <td>→10 11</td>
 <td></td>
 </tr>
-
 <tr>
 <td>ダンベルフライ</td>
 <td>2セット 7.5kgx2+シャフト 14回以上 <del>→ ドロップ</del></td>
 <td></td>
 <td>時間がないので省略</td>
 </tr>
-
 <tr>
 <td>ツイストクランチ</td>
 <td>3セット 自重 5秒維持 16回以上 → 1秒維持 23回以上</td>
@@ -1042,9 +978,7 @@
 </tr>
 </tbody>
 </table>
-
 <h2 id="linux-from-scratch">Linux from Scratch</h2>
-
 <p>LFS BookとArch LinuxのPKGBUILDを参考にglibcをビルドしている。64bitライブラリのビルドはできたが、テストが通らない。</p>
       
       <p>
@@ -1107,11 +1041,8 @@
     <div class="postShorten-excerpt" itemprop="articleBody">
       
         <h2 id="linux-from-scratch">Linux from Scratch</h2>
-
 <p>glibcをインストールしている</p>
-
-<h2 id="筋トレ">筋トレ</h2>
-
+<h2 id="heading">筋トレ</h2>
 <p>いろいろやっていたら時間がなくなったので明日に延期</p>
       
       <p>
@@ -1171,7 +1102,7 @@
     
     <h4 id="about-card-name">Kazutoshi Noguchi</h4>
     
-      <div id="about-card-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</div>
+      <div id="about-card-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</div>
     
     
       <div id="about-card-job">

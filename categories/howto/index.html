@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.61.0 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="Kazutoshi Noguchi&#39;s blog">
@@ -97,7 +97,7 @@
         </a>
         <h4 class="sidebar-profile-name">Kazutoshi Noguchi</h4>
         
-          <h5 class="sidebar-profile-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</h5>
+          <h5 class="sidebar-profile-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</h5>
         
       </div>
     
@@ -247,14 +247,10 @@
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        <h2 id="一ヶ月半前くらいの話">一ヶ月半前くらいの話</h2>
-
+        <h2 id="heading">一ヶ月半前くらいの話</h2>
 <p><a href="https://imgur.com/a/dCvS5">酢と塩と9V電池でステンレス鍋に目盛りをつける方法</a>を知ったので、計量カップを追い出して旅行の荷物を減らすためにステンレスマグを計量カップ化してみた。</p>
-
-<h2 id="どうやるの">どうやるの</h2>
-
+<h2 id="heading-1">どうやるの</h2>
 <p>上のリンクの内容を要約すると</p>
-
 <ol>
 <li>印をつけたい部分の周辺をマスキング</li>
 <li>酢と塩を混ぜて綿棒の先につける</li>
@@ -262,10 +258,8 @@
 <li>綿棒の先をエッチングしたい部分に押し付ける</li>
 <li>シュワシュワという音がして数秒くらいで印が点く</li>
 </ol>
-
 <p>自分の場合は酢にやさしい酢を使ったのと、印をつける面がヘアライン加工されていたせいか、9V電池では目盛りがつくのに時間がかかったので、電源電圧を12Vに上げて反応速度を上げた。</p>
-
-<h2 id="底で試す">底で試す</h2>
+<h2 id="heading-2">底で試す</h2>
       
       <p>
         <a href="https://ngkz.github.io/2019/06/howto-etch-stainless-mug/" class="postShorten-excerpt_link link">続きを読む</a>
@@ -327,7 +321,6 @@
     <div class="postShorten-excerpt" itemprop="articleBody">
       
         <p>Windowsが入った内蔵HDDをUSB経由で接続し、そこから起動しようとするとSTOPエラーで失敗するが、レジストリの<code>HKEY_LOCAL_MACHINE\SYSTEM</code>の<code>HardwareConfig</code>キー中の<code>BootDriverFlags</code>を<code>0x14</code>に設定すると、USBストレージから起動できるようになる。</p>
-
 <p>ただし、このHDDを使ってWindowsを起動すると、接続したマシンのUEFIのブートエントリにWindowsが登録されてしまう。</p>
       
       <p>
@@ -390,21 +383,17 @@
     <div class="postShorten-excerpt" itemprop="articleBody">
       
         <p>Ubuntu 19.04へアップグレードしたら、手のひら検知と入力中にタッチパッドを無効にする機能がオフになり、入力中にカーソルが勝手にあちこちに飛ぶようになってしまった。</p>
-
 <p>以下の手順で設定して、Xサーバーを再起動(再ログイン)すると再有効化できる。</p>
-
-<pre><code class="language-sh">sudo -e /etc/X11/xorg.conf.d/90-libinput.conf
-</code></pre>
-
-<pre><code class="language-sh">Section &quot;InputClass&quot;
-    Identifier &quot;libinput touchpad catchall&quot;
-    MatchIsTouchpad &quot;on&quot;
-    MatchDevicePath &quot;/dev/input/event*&quot;
-    Driver &quot;libinput&quot;
-    Option &quot;Tapping&quot; &quot;True&quot;
-    Option &quot;DisableWhileTyping&quot; &quot;True&quot;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo -e /etc/X11/xorg.conf.d/90-libinput.conf
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">Section <span style="color:#e6db74">&#34;InputClass&#34;</span>
+    Identifier <span style="color:#e6db74">&#34;libinput touchpad catchall&#34;</span>
+    MatchIsTouchpad <span style="color:#e6db74">&#34;on&#34;</span>
+    MatchDevicePath <span style="color:#e6db74">&#34;/dev/input/event*&#34;</span>
+    Driver <span style="color:#e6db74">&#34;libinput&#34;</span>
+    Option <span style="color:#e6db74">&#34;Tapping&#34;</span> <span style="color:#e6db74">&#34;True&#34;</span>
+    Option <span style="color:#e6db74">&#34;DisableWhileTyping&#34;</span> <span style="color:#e6db74">&#34;True&#34;</span>
 EndSection
-</code></pre>
+</code></pre></div>
       
       <p>
         <a href="https://ngkz.github.io/2019/05/ubuntu-1904-reenable-touchpad-palm-detection/" class="postShorten-excerpt_link link">続きを読む</a>
@@ -466,12 +455,9 @@ EndSection
     <div class="postShorten-excerpt" itemprop="articleBody">
       
         <p>AFWall+を有効にしていると、Bluetoothテザリングで接続したクライアントが通信できなくなるのをなんとかする。</p>
-
-<h2 id="原因">原因</h2>
-
+<h2 id="heading">原因</h2>
 <p>ログと検索エンジンで調べたところ、AFWall+がBluetoothテザリングに対応していないため、クライアントにDHCPとDNS Proxyを提供しているdnsmasqからのDNS通信がブロックされてしまっていることが分かった。</p>
-
-<h2 id="解決策1-dnsを手動設定する">解決策1: DNSを手動設定する</h2>
+<h2 id="1-dns">解決策1: DNSを手動設定する</h2>
       
       <p>
         <a href="https://ngkz.github.io/2019/01/afwall-bt-tethering/" class="postShorten-excerpt_link link">続きを読む</a>
@@ -533,7 +519,6 @@ EndSection
     <div class="postShorten-excerpt" itemprop="articleBody">
       
         <p>Acer H243HをDVIで接続すると認識しない。VGA接続とHDMI接続では正常に動作するが、DVIで接続するとsyslogに以下のエラーが出る。</p>
-
 <pre><code>Jan  5 23:48:32 haramaki kernel: [97894.621687] amdgpu 0000:01:00.0: DVI-D-1: EDID is invalid:
 Jan  5 23:48:32 haramaki kernel: [97894.621694]         [00] BAD  00 ff ff ff ff ff ff 00 ff ff ff ff ff ff ff ff
 Jan  5 23:48:32 haramaki kernel: [97894.621696]         [00] BAD  2b 13 01 03 80 35 1d 78 ea 60 85 a6 56 4a 9c 25
@@ -543,9 +528,7 @@ Jan  5 23:48:32 haramaki kernel: [97894.621699]         [00] BAD  35 00 13 2a 21
 Jan  5 23:48:32 haramaki kernel: [97894.621700]         [00] BAD  33 48 0a 20 20 20 20 20 20 20 00 00 00 fd 00 38
 Jan  5 23:48:32 haramaki kernel: [97894.621701]         [00] BAD  4c 1f 53 12 00 0a 20 20 20 20 20 20 00 00 00 ff
 Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30 43 30 31 34 34 30 31 31 0a 00 33
-</code></pre>
-
-<p>どうやらEDIDが壊れているようだ。</p>
+</code></pre><p>どうやらEDIDが壊れているようだ。</p>
       
       <p>
         <a href="https://ngkz.github.io/2019/01/edid-repair/" class="postShorten-excerpt_link link">続きを読む</a>
@@ -606,8 +589,7 @@ Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        <h2 id="動機">動機</h2>
-
+        <h2 id="heading">動機</h2>
 <ol>
 <li>収録ソフトウェアがかなり古くなってきている Ubuntu 14.04 から Linux From Scratch に移行しよう</li>
 <li>この機会に neovim に移行して、vim の設定を一から書き直そう</li>
@@ -730,7 +712,7 @@ Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30
     
     <h4 id="about-card-name">Kazutoshi Noguchi</h4>
     
-      <div id="about-card-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</div>
+      <div id="about-card-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</div>
     
     
       <div id="about-card-job">

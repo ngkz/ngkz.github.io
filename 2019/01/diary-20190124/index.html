@@ -5,20 +5,15 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.61.0 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="Linux from Scratch
-
 ファイルシステムのディレクトリ構造と/etc/passwdに登録するシステムユーザーを決めた。システムグループの役割と使用箇所を調べている途中。
-
 筋トレ
-
 下半身 &#43; 腹筋
-
 LFSの構築をやりすぎたせいで途中までしかできなかった。
 下半身が一番時間がかかるからか、時間切れで中断することが多くなってきていてまずい
-
 ブルガリアンスクワット       3セット 15kgx2 &#43; 自重 左10回 右9回 左7回 右7回 左6回&#43;自重で何回か 右5回&#43;自重で8回
 レッグエクステンション       2セット 20kg          12回 12回&#43;10kgで16回
 ツイストクランチ             3セット 自重          5秒維持 13回 -&gt; 1秒維持 18回 18回
@@ -26,16 +21,11 @@ LFSの構築をやりすぎたせいで途中までしかできなかった。
 
 
 <meta property="og:description" content="Linux from Scratch
-
 ファイルシステムのディレクトリ構造と/etc/passwdに登録するシステムユーザーを決めた。システムグループの役割と使用箇所を調べている途中。
-
 筋トレ
-
 下半身 &#43; 腹筋
-
 LFSの構築をやりすぎたせいで途中までしかできなかった。
 下半身が一番時間がかかるからか、時間切れで中断することが多くなってきていてまずい
-
 ブルガリアンスクワット       3セット 15kgx2 &#43; 自重 左10回 右9回 左7回 右7回 左6回&#43;自重で何回か 右5回&#43;自重で8回
 レッグエクステンション       2セット 20kg          12回 12回&#43;10kgで16回
 ツイストクランチ             3セット 自重          5秒維持 13回 -&gt; 1秒維持 18回 18回
@@ -47,31 +37,21 @@ LFSの構築をやりすぎたせいで途中までしかできなかった。
 <meta property="twitter:url" content="https://ngkz.github.io/2019/01/diary-20190124/">
 <meta property="og:site_name" content="ngkz.log">
 <meta property="og:description" content="Linux from Scratch
-
 ファイルシステムのディレクトリ構造と/etc/passwdに登録するシステムユーザーを決めた。システムグループの役割と使用箇所を調べている途中。
-
 筋トレ
-
 下半身 &#43; 腹筋
-
 LFSの構築をやりすぎたせいで途中までしかできなかった。
 下半身が一番時間がかかるからか、時間切れで中断することが多くなってきていてまずい
-
 ブルガリアンスクワット       3セット 15kgx2 &#43; 自重 左10回 右9回 左7回 右7回 左6回&#43;自重で何回か 右5回&#43;自重で8回
 レッグエクステンション       2セット 20kg          12回 12回&#43;10kgで16回
 ツイストクランチ             3セット 自重          5秒維持 13回 -&gt; 1秒維持 18回 18回
 ">
 <meta name="twitter:description" content="Linux from Scratch
-
 ファイルシステムのディレクトリ構造と/etc/passwdに登録するシステムユーザーを決めた。システムグループの役割と使用箇所を調べている途中。
-
 筋トレ
-
 下半身 &#43; 腹筋
-
 LFSの構築をやりすぎたせいで途中までしかできなかった。
 下半身が一番時間がかかるからか、時間切れで中断することが多くなってきていてまずい
-
 ブルガリアンスクワット       3セット 15kgx2 &#43; 自重 左10回 右9回 左7回 右7回 左6回&#43;自重で何回か 右5回&#43;自重で8回
 レッグエクステンション       2セット 20kg          12回 12回&#43;10kgで16回
 ツイストクランチ             3セット 自重          5秒維持 13回 -&gt; 1秒維持 18回 18回
@@ -171,7 +151,7 @@ LFSの構築をやりすぎたせいで途中までしかできなかった。
         </a>
         <h4 class="sidebar-profile-name">Kazutoshi Noguchi</h4>
         
-          <h5 class="sidebar-profile-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</h5>
+          <h5 class="sidebar-profile-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</h5>
         
       </div>
     
@@ -305,16 +285,11 @@ LFSの構築をやりすぎたせいで途中までしかできなかった。
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
               <h2 id="linux-from-scratch">Linux from Scratch</h2>
-
 <p>ファイルシステムのディレクトリ構造と/etc/passwdに登録するシステムユーザーを決めた。システムグループの役割と使用箇所を調べている途中。</p>
-
-<h2 id="筋トレ">筋トレ</h2>
-
+<h2 id="heading">筋トレ</h2>
 <p>下半身 + 腹筋</p>
-
 <p>LFSの構築をやりすぎたせいで途中までしかできなかった。
 下半身が一番時間がかかるからか、時間切れで中断することが多くなってきていてまずい</p>
-
 <pre><code>ブルガリアンスクワット       3セット 15kgx2 + 自重 左10回 右9回 左7回 右7回 左6回+自重で何回か 右5回+自重で8回
 レッグエクステンション       2セット 20kg          12回 12回+10kgで16回
 ツイストクランチ             3セット 自重          5秒維持 13回 -&gt; 1秒維持 18回 18回
@@ -531,7 +506,7 @@ LFSの構築をやりすぎたせいで途中までしかできなかった。
     
     <h4 id="about-card-name">Kazutoshi Noguchi</h4>
     
-      <div id="about-card-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</div>
+      <div id="about-card-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</div>
     
     
       <div id="about-card-job">

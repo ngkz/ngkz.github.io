@@ -18,24 +18,19 @@
       
       <guid>https://ngkz.github.io/2019/03/diary-20190315/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;tzdataをパッケージ化してインストールした&lt;/li&gt;
 &lt;li&gt;タイムゾーンの設定をした&lt;/li&gt;
 &lt;li&gt;MarkdownでLFS Bookの中身を書き直すかわりに本家のBookをフォークしてそれにこっちの環境特有の変更を入れることにした。git-svnの使い方がまだよくわかっていないのでforkすらできていないが&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-
+&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ40分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBを夕, トレーニング40分前, 就寝前に1g摂取&lt;/li&gt;
 &lt;li&gt;前日の睡眠 7:32 (23:49→7:27)&lt;/li&gt;
 &lt;li&gt;カゼイン40g + 200mlの水にブレンディカフェラトリー濃厚抹茶とパラチニットスイート1本(1.2g)を入れて飲んだ。濃厚抹茶1本では味が薄すぎる感じ。カフェインが1本あたり20mg入ってるから就寝前に飲むカゼインに入れるには向いてないね&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;上半身プッシュ+腹筋&lt;/strong&gt;&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -45,7 +40,6 @@
 &lt;th&gt;備考&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;プッシュアップ&lt;/td&gt;
@@ -53,28 +47,24 @@
 &lt;td&gt;↑10→2 9→6 7→4&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルショルダープレス&lt;/td&gt;
 &lt;td&gt;2セット 25kg(10kg+シャフトx2) 12回以上 → ドロップ&lt;/td&gt;
 &lt;td&gt;↑13 12→10kgで15&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルフレンチプレス&lt;/td&gt;
 &lt;td&gt;2セット 12.5kg(10kg+シャフト) 11回以上 → ドロップ&lt;/td&gt;
 &lt;td&gt;↑14 4→5kgで25&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ダンベルフライ&lt;/td&gt;
 &lt;td&gt;2セット 20kg(7.5kg+シャフトx2) 15回以上 → ドロップ&lt;/td&gt;
 &lt;td&gt;↑16 10→12&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;ツイストクランチ&lt;/td&gt;
 &lt;td&gt;3セット 自重 5秒維持 23回以上&lt;/td&gt;
@@ -83,8 +73,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;</description>
+&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;</description>
     </item>
     
   </channel>

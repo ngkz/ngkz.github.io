@@ -5,23 +5,17 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.61.0 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="リカバリモードに入ってファクトリーリセットする
-
 galaxy S3 リカバリモードの入り方:
-
-
 
 バックアップを展開">
 
 
 <meta property="og:description" content="リカバリモードに入ってファクトリーリセットする
-
 galaxy S3 リカバリモードの入り方:
-
-
 
 バックアップを展開">
 <meta property="og:type" content="article">
@@ -31,17 +25,11 @@ galaxy S3 リカバリモードの入り方:
 <meta property="twitter:url" content="https://ngkz.github.io/2013/09/galaxys3-adb-restore-fail/">
 <meta property="og:site_name" content="ngkz.log">
 <meta property="og:description" content="リカバリモードに入ってファクトリーリセットする
-
 galaxy S3 リカバリモードの入り方:
-
-
 
 バックアップを展開">
 <meta name="twitter:description" content="リカバリモードに入ってファクトリーリセットする
-
 galaxy S3 リカバリモードの入り方:
-
-
 
 バックアップを展開">
 <meta property="og:locale" content="ja">
@@ -133,7 +121,7 @@ galaxy S3 リカバリモードの入り方:
         </a>
         <h4 class="sidebar-profile-name">Kazutoshi Noguchi</h4>
         
-          <h5 class="sidebar-profile-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</h5>
+          <h5 class="sidebar-profile-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</h5>
         
       </div>
     
@@ -266,35 +254,23 @@ galaxy S3 リカバリモードの入り方:
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <h2 id="リカバリモードに入ってファクトリーリセットする">リカバリモードに入ってファクトリーリセットする</h2>
-
+              <h2 id="heading">リカバリモードに入ってファクトリーリセットする</h2>
 <p>galaxy S3 リカバリモードの入り方:</p>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QVa3yfxP0Zs" frameborder="0" allowfullscreen></iframe>
-
-<h2 id="バックアップを展開">バックアップを展開</h2>
-
+<!-- raw HTML omitted -->
+<h2 id="heading-1">バックアップを展開</h2>
 <p><a href="https://github.com/nelenkov/android-backup-extractor">Android backup extractor</a>
-でバックアップを展開</p>
-
+でバックアップを展開\</p>
 <pre><code>android-backup-extractor $ ant build jar
 android-backup-extractor $ java -jar abe.jar unpack galaxys3.bak
 galaxys3.tar
 </code></pre>
-
-<h2 id="com-sec-android-gallery3dをバックアップから削除">com.sec.android.gallery3dをバックアップから削除</h2>
-
+<h2 id="comsecandroidgallery3d">com.sec.android.gallery3dをバックアップから削除</h2>
 <p>tarアーカイブ内のcom.sec.android.gallery3d フォルダを削除する。</p>
-
-<h3 id="バックアップを作成">バックアップを作成</h3>
-
+<h3 id="heading-2">バックアップを作成</h3>
 <pre><code>android-backup-extractor $ java -jar abe.jar pack galaxys3.tar galaxys3.bak
 </code></pre>
-
-<h3 id="バックアップを端末に戻す">バックアップを端末に戻す</h3>
-
+<h3 id="heading-3">バックアップを端末に戻す</h3>
 <p>あとは普通にadb restore</p>
-
 <pre><code>android-backup-extractor $ adb restore galaxys3.bak
 </code></pre>
               
@@ -497,7 +473,7 @@ galaxys3.tar
     
     <h4 id="about-card-name">Kazutoshi Noguchi</h4>
     
-      <div id="about-card-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</div>
+      <div id="about-card-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</div>
     
     
       <div id="about-card-job">

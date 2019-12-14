@@ -5,16 +5,14 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.61.0 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="2013/12/28-30 の30c3 ctfにチーム0x0として参加しました。
-
 2100点で19位でした。">
 
 
 <meta property="og:description" content="2013/12/28-30 の30c3 ctfにチーム0x0として参加しました。
-
 2100点で19位でした。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="30c3 ctf writeup">
@@ -23,10 +21,8 @@
 <meta property="twitter:url" content="https://ngkz.github.io/2014/01/30c3ctf-writeup/">
 <meta property="og:site_name" content="ngkz.log">
 <meta property="og:description" content="2013/12/28-30 の30c3 ctfにチーム0x0として参加しました。
-
 2100点で19位でした。">
 <meta name="twitter:description" content="2013/12/28-30 の30c3 ctfにチーム0x0として参加しました。
-
 2100点で19位でした。">
 <meta property="og:locale" content="ja">
 
@@ -123,7 +119,7 @@
         </a>
         <h4 class="sidebar-profile-name">Kazutoshi Noguchi</h4>
         
-          <h5 class="sidebar-profile-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</h5>
+          <h5 class="sidebar-profile-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</h5>
         
       </div>
     
@@ -259,13 +255,9 @@
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
               <p>2013/12/28-30 の30c3 ctfにチーム0x0として参加しました。</p>
-
 <p><a href="https://archive.aachen.ccc.de/30c3ctf.aachen.ccc.de/scoreboard/">2100点で19位でした。</a></p>
-
-<h2 id="自分が解いた問題">自分が解いた問題</h2>
-
+<h2 id="heading">自分が解いた問題</h2>
 <h3 id="guess">guess</h3>
-
 <pre><code>#!/usr/bin/python
  
 &quot;&quot;&quot;
@@ -337,9 +329,7 @@ for i in range(10):
     s.sendall(str(r.getrandbits(64)) + &quot;\n&quot;)
     print s.recv(4096)
 </code></pre>
-
 <h3 id="pyexec">pyexec</h3>
-
 <pre><code>#!/usr/bin/python
 &quot;&quot;&quot;
  
@@ -393,9 +383,7 @@ print &quot;# coding: raw_unicode_escape&quot;
 for c in f.read():
     sys.stdout.write(&quot;\u%04x&quot; % ord(c))
 </code></pre>
-
 <h3 id="yass">yass</h3>
-
 <pre><code>&quot;&quot;&quot;
 --------------------------------------------------------------------------------
 $ ./yass
@@ -456,9 +444,7 @@ $
 を突っ込むとシェルが起動する
 &quot;&quot;&quot;
 </code></pre>
-
 <h3 id="doge2">DOGE2</h3>
-
 <pre><code>#!/usr/bin/python
 &quot;&quot;&quot;
 DOGE2の説明に必要なので、DOGE1の解説も書いておきます。
@@ -598,13 +584,9 @@ if len(buf) &gt; 4096:
  
 sys.stdout.write(buf)
 </code></pre>
-
-<p></p>
-
-<p></p>
-
+<p>\</p>
+<p>\</p>
 <h3 id="int80">int80</h3>
-
 <pre><code>/*
 標準入力へシェルコードを入力すると、
 ・シェルコード中のint 0x80 (cd 80)、sysenter(0f 34)、 syscall(0f 05)を潰す
@@ -886,7 +868,7 @@ arg: .ascii &quot;/home/user/flag\0&quot;
     
     <h4 id="about-card-name">Kazutoshi Noguchi</h4>
     
-      <div id="about-card-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</div>
+      <div id="about-card-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</div>
     
     
       <div id="about-card-job">

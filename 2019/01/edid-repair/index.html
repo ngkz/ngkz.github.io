@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.61.0 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="Acer H243HをDVIで接続すると認識しない。VGA接続とHDMI接続では正常に動作するが、DVIで接続するとsyslogに以下のエラーが出る。
-
 Jan  5 23:48:32 haramaki kernel: [97894.621687] amdgpu 0000:01:00.0: DVI-D-1: EDID is invalid:
 Jan  5 23:48:32 haramaki kernel: [97894.621694]         [00] BAD  00 ff ff ff ff ff ff 00 ff ff ff ff ff ff ff ff
 Jan  5 23:48:32 haramaki kernel: [97894.621696]         [00] BAD  2b 13 01 03 80 35 1d 78 ea 60 85 a6 56 4a 9c 25
@@ -19,13 +18,10 @@ Jan  5 23:48:32 haramaki kernel: [97894.621699]         [00] BAD  35 00 13 2a 21
 Jan  5 23:48:32 haramaki kernel: [97894.621700]         [00] BAD  33 48 0a 20 20 20 20 20 20 20 00 00 00 fd 00 38
 Jan  5 23:48:32 haramaki kernel: [97894.621701]         [00] BAD  4c 1f 53 12 00 0a 20 20 20 20 20 20 00 00 00 ff
 Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30 43 30 31 34 34 30 31 31 0a 00 33
-
-
 どうやらEDIDが壊れているようだ。">
 
 
 <meta property="og:description" content="Acer H243HをDVIで接続すると認識しない。VGA接続とHDMI接続では正常に動作するが、DVIで接続するとsyslogに以下のエラーが出る。
-
 Jan  5 23:48:32 haramaki kernel: [97894.621687] amdgpu 0000:01:00.0: DVI-D-1: EDID is invalid:
 Jan  5 23:48:32 haramaki kernel: [97894.621694]         [00] BAD  00 ff ff ff ff ff ff 00 ff ff ff ff ff ff ff ff
 Jan  5 23:48:32 haramaki kernel: [97894.621696]         [00] BAD  2b 13 01 03 80 35 1d 78 ea 60 85 a6 56 4a 9c 25
@@ -35,8 +31,6 @@ Jan  5 23:48:32 haramaki kernel: [97894.621699]         [00] BAD  35 00 13 2a 21
 Jan  5 23:48:32 haramaki kernel: [97894.621700]         [00] BAD  33 48 0a 20 20 20 20 20 20 20 00 00 00 fd 00 38
 Jan  5 23:48:32 haramaki kernel: [97894.621701]         [00] BAD  4c 1f 53 12 00 0a 20 20 20 20 20 20 00 00 00 ff
 Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30 43 30 31 34 34 30 31 31 0a 00 33
-
-
 どうやらEDIDが壊れているようだ。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="EDIDが壊れて認識しないモニターの修理">
@@ -45,7 +39,6 @@ Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30
 <meta property="twitter:url" content="https://ngkz.github.io/2019/01/edid-repair/">
 <meta property="og:site_name" content="ngkz.log">
 <meta property="og:description" content="Acer H243HをDVIで接続すると認識しない。VGA接続とHDMI接続では正常に動作するが、DVIで接続するとsyslogに以下のエラーが出る。
-
 Jan  5 23:48:32 haramaki kernel: [97894.621687] amdgpu 0000:01:00.0: DVI-D-1: EDID is invalid:
 Jan  5 23:48:32 haramaki kernel: [97894.621694]         [00] BAD  00 ff ff ff ff ff ff 00 ff ff ff ff ff ff ff ff
 Jan  5 23:48:32 haramaki kernel: [97894.621696]         [00] BAD  2b 13 01 03 80 35 1d 78 ea 60 85 a6 56 4a 9c 25
@@ -55,11 +48,8 @@ Jan  5 23:48:32 haramaki kernel: [97894.621699]         [00] BAD  35 00 13 2a 21
 Jan  5 23:48:32 haramaki kernel: [97894.621700]         [00] BAD  33 48 0a 20 20 20 20 20 20 20 00 00 00 fd 00 38
 Jan  5 23:48:32 haramaki kernel: [97894.621701]         [00] BAD  4c 1f 53 12 00 0a 20 20 20 20 20 20 00 00 00 ff
 Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30 43 30 31 34 34 30 31 31 0a 00 33
-
-
 どうやらEDIDが壊れているようだ。">
 <meta name="twitter:description" content="Acer H243HをDVIで接続すると認識しない。VGA接続とHDMI接続では正常に動作するが、DVIで接続するとsyslogに以下のエラーが出る。
-
 Jan  5 23:48:32 haramaki kernel: [97894.621687] amdgpu 0000:01:00.0: DVI-D-1: EDID is invalid:
 Jan  5 23:48:32 haramaki kernel: [97894.621694]         [00] BAD  00 ff ff ff ff ff ff 00 ff ff ff ff ff ff ff ff
 Jan  5 23:48:32 haramaki kernel: [97894.621696]         [00] BAD  2b 13 01 03 80 35 1d 78 ea 60 85 a6 56 4a 9c 25
@@ -69,8 +59,6 @@ Jan  5 23:48:32 haramaki kernel: [97894.621699]         [00] BAD  35 00 13 2a 21
 Jan  5 23:48:32 haramaki kernel: [97894.621700]         [00] BAD  33 48 0a 20 20 20 20 20 20 20 00 00 00 fd 00 38
 Jan  5 23:48:32 haramaki kernel: [97894.621701]         [00] BAD  4c 1f 53 12 00 0a 20 20 20 20 20 20 00 00 00 ff
 Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30 43 30 31 34 34 30 31 31 0a 00 33
-
-
 どうやらEDIDが壊れているようだ。">
 <meta property="og:locale" content="ja">
 
@@ -161,7 +149,7 @@ Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30
         </a>
         <h4 class="sidebar-profile-name">Kazutoshi Noguchi</h4>
         
-          <h5 class="sidebar-profile-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</h5>
+          <h5 class="sidebar-profile-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</h5>
         
       </div>
     
@@ -295,7 +283,6 @@ Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
               <p>Acer H243HをDVIで接続すると認識しない。VGA接続とHDMI接続では正常に動作するが、DVIで接続するとsyslogに以下のエラーが出る。</p>
-
 <pre><code>Jan  5 23:48:32 haramaki kernel: [97894.621687] amdgpu 0000:01:00.0: DVI-D-1: EDID is invalid:
 Jan  5 23:48:32 haramaki kernel: [97894.621694]         [00] BAD  00 ff ff ff ff ff ff 00 ff ff ff ff ff ff ff ff
 Jan  5 23:48:32 haramaki kernel: [97894.621696]         [00] BAD  2b 13 01 03 80 35 1d 78 ea 60 85 a6 56 4a 9c 25
@@ -305,31 +292,20 @@ Jan  5 23:48:32 haramaki kernel: [97894.621699]         [00] BAD  35 00 13 2a 21
 Jan  5 23:48:32 haramaki kernel: [97894.621700]         [00] BAD  33 48 0a 20 20 20 20 20 20 20 00 00 00 fd 00 38
 Jan  5 23:48:32 haramaki kernel: [97894.621701]         [00] BAD  4c 1f 53 12 00 0a 20 20 20 20 20 20 00 00 00 ff
 Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30 43 30 31 34 34 30 31 31 0a 00 33
-</code></pre>
-
-<p>どうやらEDIDが壊れているようだ。</p>
-
-<h2 id="linuxからモニターのedid-romを読み書きするには">LinuxからモニターのEDID ROMを読み書きするには</h2>
-
+</code></pre><p>どうやらEDIDが壊れているようだ。</p>
+<h2 id="linuxedid-rom">LinuxからモニターのEDID ROMを読み書きするには</h2>
 <p>モニターには <a href="http://read.pudn.com/downloads110/ebook/456020/E-EDID%20Standard.pdf">EDID(利用可能な解像度・リフレッシュレート・メーカー名・型番などの情報)</a>が格納されたROMが搭載されており、PCとVESA Display Data Channel(I2Cベースのバス)で接続されている。</p>
-
 <p>このROMはLinuxからI2Cデバイスとして認識されているので、I2Cバス操作用のツールでROMを読み書きすることができる。</p>
-
-<h2 id="dviのedid-romが繋っているバスを探す">DVIのEDID ROMが繋っているバスを探す</h2>
-
+<h2 id="dviedid-rom">DVIのEDID ROMが繋っているバスを探す</h2>
 <p>rootで<code>i2cdetect -l</code> を実行し、バスの一覧を出す</p>
-
 <pre><code># i2cdetect -l
 i2c-3	i2c       	AMDGPU DM i2c hw bus 2          	I2C adapter
 i2c-1	i2c       	dmdc                            	I2C adapter
 i2c-2	i2c       	AMDGPU DM i2c hw bus 1          	I2C adapter
 i2c-0	i2c       	AMDGPU DM i2c hw bus 0          	I2C adapter
-</code></pre>
-
-<p>出力からバス0,2,3がGPUのものであることが分かるが、どのポートのものであるかまでは分からないので総当たりでダンプする。
+</code></pre><p>出力からバス0,2,3がGPUのものであることが分かるが、どのポートのものであるかまでは分からないので総当たりでダンプする。
 rootで<code>i2cdump (バス番号) 0x50</code> を実行するとEDIDをダンプできる。</p>
-
-<pre><code class="language-plain"># echo Y | i2cdump 0 0x50
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain"># echo Y | i2cdump 0 0x50
 No size specified (using byte-data access)
 WARNING! This program can confuse your I2C bus, cause data loss and worse!
 I will probe file /dev/i2c-0, address 0x50, mode byte
@@ -359,7 +335,7 @@ I will probe file /dev/i2c-2, address 0x50, mode byte
 Continue? [Y/n] 
      0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f    0123456789abcdef
 00: 00 ff ff ff ff ff ff 00 2a 59 00 28 00 00 00 00    ........*Y.(....
-10: 19 19 01 03 80 3e 22 78 ea 1e c5 ae 4f 34 b1 26    ?????&gt;&quot;x????O4?&amp;
+10: 19 19 01 03 80 3e 22 78 ea 1e c5 ae 4f 34 b1 26    ?????&gt;&#34;x????O4?&amp;
 20: 0e 50 54 af cf 00 d1 00 d1 c0 b3 00 a9 c0 95 00    ?PT??.?.???.???.
 30: 81 81 81 00 71 40 04 74 00 30 f2 70 5a 80 30 20    ???.q@?t.0?pZ?0 
 40: 36 00 70 fe 31 00 00 1a 56 5e 00 a0 a0 a0 29 50    6.p?1..?V^.???)P
@@ -397,40 +373,29 @@ c0:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
 d0:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
 e0:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
 f0:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
-</code></pre>
-
-<p>EDIDの内容から、このカードではバス番号2がHDMIのバスで、バス番号3がDVIポートのバスであることがわかる。</p>
-
-<h2 id="正常なedidを吸い出す">正常なEDIDを吸い出す</h2>
-
+</code></pre></div><p>EDIDの内容から、このカードではバス番号2がHDMIのバスで、バス番号3がDVIポートのバスであることがわかる。</p>
+<h2 id="edid">正常なEDIDを吸い出す</h2>
 <p>モニタを正常なポート(HDMI)で接続し、正常なEDIDを吸い出す</p>
-
-<pre><code class="language-plain"># echo Y | i2cdump 2 0x50 &gt; edid-h243h-hdmi.txt
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain"># echo Y | i2cdump 2 0x50 &gt; edid-h243h-hdmi.txt
 $ vim edid-h243h-hdmi.txt
 (マクロで余計なデータを取り除いてhex dumpに変換)
 $ xxd -r -p &lt; edid-h243h-hdmi.txt &gt; edid-h243h-hdmi.bin
-</code></pre>
-
-<h2 id="dviポートのedidの修復">DVIポートのEDIDの修復</h2>
-
+</code></pre></div><h2 id="dviedid">DVIポートのEDIDの修復</h2>
 <p>モニタをDVIで接続し、正常なEDIDを書き込む</p>
-
-<pre><code class="language-plain">$ cat &lt;&lt;'EOS' &gt;edidwrite.py
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">$ cat &lt;&lt;&#39;EOS&#39; &gt;edidwrite.py
 #!/usr/bin/python3
 import sys
 import os
 
-with open(sys.argv[2], &quot;rb&quot;) as f:
+with open(sys.argv[2], &#34;rb&#34;) as f:
     edid = f.read()
 
 for i, byt in enumerate(edid):
-    os.system(&quot;echo Y | i2cset %d 0x50 0x%02x 0x%02x b&quot; % (int(sys.argv[1]), i, byt))
-    os.system(&quot;sleep 0.1&quot;)
+    os.system(&#34;echo Y | i2cset %d 0x50 0x%02x 0x%02x b&#34; % (int(sys.argv[1]), i, byt))
+    os.system(&#34;sleep 0.1&#34;)
 EOS
 $ sudo python3 edidwrite.py 3 edid-h243h-hdmi.bin
-</code></pre>
-
-
+</code></pre></div>
 
  
   
@@ -457,11 +422,8 @@ $ sudo python3 edidwrite.py 3 edid-h243h-hdmi.bin
   
 </div>
 
-
-<h2 id="おまけ">おまけ</h2>
-
+<h2 id="heading">おまけ</h2>
 <p>EDIDをいじるとこういうこともできる</p>
-
 
 
  
@@ -688,7 +650,7 @@ $ sudo python3 edidwrite.py 3 edid-h243h-hdmi.bin
     
     <h4 id="about-card-name">Kazutoshi Noguchi</h4>
     
-      <div id="about-card-bio">I&rsquo;m interested in InfoSec, Trip, Electronics, and DIY.</div>
+      <div id="about-card-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</div>
     
     
       <div id="about-card-job">
