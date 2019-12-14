@@ -24,11 +24,11 @@ OK: `asm volatile("..." : [output] "=&r" (...) : [input] "r" (...));`
 
 <!--more-->
 
-インラインアセンブラ中で入力オペランドを書き換える場合は、同じレジスタを出力オペランドにも割り当てておかないと最適化で破壊されることがある。 (https://stackoverflow.com/questions/48381184/can-i-modify-input-operands-in-gcc-inline-assembly)
+インラインアセンブラのコードが入力オペランドを割り当てたレジスタを破壊する場合は、同じレジスタを出力オペランドにも割り当てておかないと最適化で動作がおかしくなることがある。 (https://stackoverflow.com/questions/48381184/can-i-modify-input-operands-in-gcc-inline-assembly)
 
 インラインアセンブラを書いた関数がループ中にインライン展開されたときに、入力オペランドの初期化処理がループの外に移動されて、2回目以降に処理がおかしくなったことでこれに気づいた。
 
-NG: `asm volatile("(inputを変更するコード)" : : [input] "r" (...));` \
+NG: `asm volatile("(inputを破壊するコード)" : : [input] "r" (...));` \
 OK:
 ```
 uint8_t dummy;
@@ -38,7 +38,7 @@ asm volatile("..." : "=r" (dummy) : [input] "0" (...)); //inputの制約の"0"�
 ## platformioの嵌りどころ
 ### ATtiny系のマイコンで`pio run -t uploadeep`するとプログラムが消去される
 
-platformioのATtiny系マイコンのボード定義にはバグがある。ボード定義中の`"extra_flags": "-e"`が原因で、avrdudeを実行するときに必ず`-e`(Perform a chip erase)オプションが渡されてしまい、EEPROMの書き込みとヒューズの設定を行うときにもチップ全体が消去されてしまう。
+platformioのATtiny系マイコンのボード定義にはバグがあり、ボード定義中の`"extra_flags": "-e"`が原因で、avrdudeを実行するときに必ず`-e`(Perform a chip erase)オプションが渡されてしまい、EEPROMの書き込みとヒューズの設定を行うときにプログラムが消去されてしまう。
 
 バグトラッカーに報告があるがすぐには修正されなさそうな雰囲気なので、下の方法で回避している。
 
