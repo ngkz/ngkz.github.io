@@ -15,7 +15,7 @@
 baseurl = "https://ngkz.github.io/"
 languageCode = "ja"
 defaultContentLanguage = "ja"
-title = "ngkz.log"
+title = "Fierce Falcon Laboratory"
 theme = "tranquilpeak"
 disqusShortname = "ngkz-log"
 #googleAnalytics = "UA-106134104-1"
@@ -32,14 +32,14 @@ canonifyurls = true
 
 [author]
   name = "Kazutoshi Noguchi"
-  bio = "I'm interested in InfoSec, Trip, Electronics, and DIY."
-  job = "System integrator"
+  bio = "I'm interested in Computer, Trip, Electronics, and DIY."
+  job = "System integrator, Programmer"
   location = "Japan"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
   # gravatarEmail = "thibaud.lepretre@gmail.com"
   # Your profile picture
   # Overwritten by your gravatar image if `author.gravatarEmail` is filled
-  picture = "/mypicture.jpg"
+  picture = "/insignia.png"
   # Your Twitter username without the @. E.g : thibaudlepretre
   # twitter = "thibaudlepretre"
   # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
