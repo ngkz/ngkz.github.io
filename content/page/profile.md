@@ -31,8 +31,6 @@ bitcoin
 [![donate bitcoin](https://img.shields.io/badge/donate-bitcoin-green.svg)](bitcoin:1FzRWZsT9sL6G5iaKpEHRuJmRsKniFNW6c)
 ![bitcoin address QR code](/bitcoin.png)
 
-\
-
 - 場面緘黙症
 - 精神障害者保健福祉手帳 (3 級)
 
