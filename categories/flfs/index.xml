@@ -17,10 +17,10 @@
       <pubDate>Thu, 02 Jan 2020 23:34:04 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2020/01/lfs-51/</guid>
-      <description>&lt;p&gt;I can&#39;t progress Linux from Scratch building from May to November, because I spent time on other projects.&lt;/p&gt;
-&lt;p&gt;I restarted building in December but I can&#39;t make much progress as I have been busy with work recently.&lt;/p&gt;
-&lt;h2 id=&#34;literate-distro-building&#34;&gt;Literate distro building&lt;/h2&gt;
-&lt;p&gt;I am building a literate programming style automated build system recently.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;what-happened-after-50th-lfs-post&#34;&gt;What happened after 50th LFS post&lt;/h2&gt;
+&lt;p&gt;I can&#39;t progress Linux from Scratch building from May to October, because I spent time on other projects.&lt;/p&gt;
+&lt;p&gt;I restarted building in October in parallel with other projects and almost done a basic system. In December, I started writing a literate programming style automated build system, but I can&#39;t make much progress as I have been busy with work recently.&lt;/p&gt;
+&lt;h2 id=&#34;literate-distro-building&#34;&gt;Literate distro building&lt;/h2&gt;</description>
     </item>
     
   </channel>

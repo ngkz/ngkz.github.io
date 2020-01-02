@@ -8,30 +8,30 @@
 <meta name="generator" content="Hugo 0.62.1 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
-<meta name="description" content="I can&#39;t progress Linux from Scratch building from May to November, because I spent time on other projects.
-I restarted building in December but I can&#39;t make much progress as I have been busy with work recently.
-Literate distro building
-I am building a literate programming style automated build system recently.">
+<meta name="description" content="What happened after 50th LFS post
+I can&#39;t progress Linux from Scratch building from May to October, because I spent time on other projects.
+I restarted building in October in parallel with other projects and almost done a basic system. In December, I started writing a literate programming style automated build system, but I can&#39;t make much progress as I have been busy with work recently.
+Literate distro building">
 
 
-<meta property="og:description" content="I can&#39;t progress Linux from Scratch building from May to November, because I spent time on other projects.
-I restarted building in December but I can&#39;t make much progress as I have been busy with work recently.
-Literate distro building
-I am building a literate programming style automated build system recently.">
+<meta property="og:description" content="What happened after 50th LFS post
+I can&#39;t progress Linux from Scratch building from May to October, because I spent time on other projects.
+I restarted building in October in parallel with other projects and almost done a basic system. In December, I started writing a literate programming style automated build system, but I can&#39;t make much progress as I have been busy with work recently.
+Literate distro building">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Building Linux from Scratch (Part 51)">
 <meta name="twitter:title" content="Building Linux from Scratch (Part 51)">
 <meta property="og:url" content="https://ngkz.github.io/2020/01/lfs-51/">
 <meta property="twitter:url" content="https://ngkz.github.io/2020/01/lfs-51/">
 <meta property="og:site_name" content="Fierce Falcon Laboratory">
-<meta property="og:description" content="I can&#39;t progress Linux from Scratch building from May to November, because I spent time on other projects.
-I restarted building in December but I can&#39;t make much progress as I have been busy with work recently.
-Literate distro building
-I am building a literate programming style automated build system recently.">
-<meta name="twitter:description" content="I can&#39;t progress Linux from Scratch building from May to November, because I spent time on other projects.
-I restarted building in December but I can&#39;t make much progress as I have been busy with work recently.
-Literate distro building
-I am building a literate programming style automated build system recently.">
+<meta property="og:description" content="What happened after 50th LFS post
+I can&#39;t progress Linux from Scratch building from May to October, because I spent time on other projects.
+I restarted building in October in parallel with other projects and almost done a basic system. In December, I started writing a literate programming style automated build system, but I can&#39;t make much progress as I have been busy with work recently.
+Literate distro building">
+<meta name="twitter:description" content="What happened after 50th LFS post
+I can&#39;t progress Linux from Scratch building from May to October, because I spent time on other projects.
+I restarted building in October in parallel with other projects and almost done a basic system. In December, I started writing a literate programming style automated build system, but I can&#39;t make much progress as I have been busy with work recently.
+Literate distro building">
 <meta property="og:locale" content="ja">
 
   
@@ -258,16 +258,16 @@ I am building a literate programming style automated build system recently.">
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>I can't progress Linux from Scratch building from May to November, because I spent time on other projects.</p>
-<p>I restarted building in December but I can't make much progress as I have been busy with work recently.</p>
+              <h2 id="what-happened-after-50th-lfs-post">What happened after 50th LFS post</h2>
+<p>I can't progress Linux from Scratch building from May to October, because I spent time on other projects.</p>
+<p>I restarted building in October in parallel with other projects and almost done a basic system. In December, I started writing a literate programming style automated build system, but I can't make much progress as I have been busy with work recently.</p>
 <h2 id="literate-distro-building">Literate distro building</h2>
-<p>I am building a literate programming style automated build system recently.</p>
 <p>I planned to build the LFS system and its HTML documentation using AsciiDoc documents.</p>
 <p>The document contains package information (version, dependencies, source location, etc.), build scripts, and its explanation. My automated build system will solve and sort package dependencies, build packages, and output the working system and documentation, using Asciidoctor with a custom plugin.</p>
 <p>I chose AsciiDoc + AsciiDoctor because I prefer its overall cleaner syntax and versatile table syntax, and it is extensible.</p>
 <p>But more and more the development progresses, I feel that AsciiDoctor is not suitable for this task strongly.
 It is difficult to build complex AST with API. It lacks internal documentation, so I have to dig into source code and spend time to debug. And it lacks chunked HTML output, therefore I need a static site generator.</p>
-<p>I discarded AsciiDoctor and migrating to Sphinx because it's much more extensible, has better documentation, and supports multi-pages.</p>
+<p>I ditched AsciiDoctor and migrating to Sphinx because it's much more extensible, has better documentation, and supports multi-pages.</p>
               
             </div>
           </div>
@@ -365,7 +365,7 @@ It is difficult to build complex AST with API. It lacks internal documentation, 
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">ngkz.log</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://ngkz.github.io/" property="cc:attributionName" rel="cc:attributionURL">Kazutoshi Noguchi</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">ngkz.log</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://ngkz.github.io/" property="cc:attributionName" rel="cc:attributionURL">Kazutoshi Noguchi</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. Cover image via <a href="https://www.goodfreephotos.com/">Good Free Photos</a>.
   </span>
 </footer>
 
