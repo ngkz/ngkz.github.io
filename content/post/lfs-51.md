@@ -7,13 +7,13 @@ tags:
 - LFS
 ---
 
-I can't progress Linux from Scratch building from May to November, because I spent time on other projects.
+## What happened after 50th LFS post
 
-I restarted building in December but I can't make much progress as I have been busy with work recently.
+I can't progress Linux from Scratch building from May to October, because I spent time on other projects.
+
+I restarted building in October in parallel with other projects and almost done a basic system. In December, I started writing a literate programming style automated build system, but I can't make much progress as I have been busy with work recently.
 
 ## Literate distro building
-I am building a literate programming style automated build system recently.
-
 <!--more-->
 
 I planned to build the LFS system and its HTML documentation using AsciiDoc documents.
@@ -25,4 +25,4 @@ I chose AsciiDoc + AsciiDoctor because I prefer its overall cleaner syntax and v
 But more and more the development progresses, I feel that AsciiDoctor is not suitable for this task strongly.
 It is difficult to build complex AST with API. It lacks internal documentation, so I have to dig into source code and spend time to debug. And it lacks chunked HTML output, therefore I need a static site generator.
 
-I discarded AsciiDoctor and migrating to Sphinx because it's much more extensible, has better documentation, and supports multi-pages.
+I ditched AsciiDoctor and migrating to Sphinx because it's much more extensible, has better documentation, and supports multi-pages.
