@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>F²LFS on Fierce Falcon Laboratory</title>
+    <link>https://ngkz.github.io/categories/flfs/</link>
+    <description>Recent content in F²LFS on Fierce Falcon Laboratory</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 02 Jan 2020 23:34:04 +0900</lastBuildDate>
+    
+	<atom:link href="https://ngkz.github.io/categories/flfs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Building Linux from Scratch (Part 51)</title>
+      <link>https://ngkz.github.io/2020/01/lfs-51/</link>
+      <pubDate>Thu, 02 Jan 2020 23:34:04 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2020/01/lfs-51/</guid>
+      <description>&lt;p&gt;I can&#39;t progress Linux from Scratch building from May to November, because I spent time on other projects.&lt;/p&gt;
+&lt;p&gt;I restarted building in December but I can&#39;t make much progress as I have been busy with work recently.&lt;/p&gt;
+&lt;h2 id=&#34;literate-distro-building&#34;&gt;Literate distro building&lt;/h2&gt;
+&lt;p&gt;I am building a literate programming style automated build system recently.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

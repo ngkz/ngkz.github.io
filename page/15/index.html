@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.61.0 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.62.1 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="Kazutoshi Noguchi&#39;s blog">
@@ -13,11 +13,11 @@
 
 <meta property="og:description" content="Kazutoshi Noguchi&#39;s blog">
 <meta property="og:type" content="website">
-<meta property="og:title" content="ngkz.log">
-<meta name="twitter:title" content="ngkz.log">
+<meta property="og:title" content="Fierce Falcon Laboratory">
+<meta name="twitter:title" content="Fierce Falcon Laboratory">
 <meta property="og:url" content="https://ngkz.github.io/">
 <meta property="twitter:url" content="https://ngkz.github.io/">
-<meta property="og:site_name" content="ngkz.log">
+<meta property="og:site_name" content="Fierce Falcon Laboratory">
 <meta property="og:description" content="Kazutoshi Noguchi&#39;s blog">
 <meta name="twitter:description" content="Kazutoshi Noguchi&#39;s blog">
 <meta property="og:locale" content="ja">
@@ -35,11 +35,11 @@
 
 
 
-  <meta property="og:image" content="https://ngkz.github.io/mypicture.jpg">
-  <meta property="twitter:image" content="https://ngkz.github.io/mypicture.jpg">
+  <meta property="og:image" content="https://ngkz.github.io/insignia.png">
+  <meta property="twitter:image" content="https://ngkz.github.io/insignia.png">
 
 
-    <title>ngkz.log</title>
+    <title>Fierce Falcon Laboratory</title>
 
     <link rel="icon" href="https://ngkz.github.io/favicon.png">
     
@@ -71,7 +71,7 @@
       <header id="header" data-behavior="1">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
-    <a class="header-title-link" href="https://ngkz.github.io/">ngkz.log</a>
+    <a class="header-title-link" href="https://ngkz.github.io/">Fierce Falcon Laboratory</a>
   </div>
   
     
@@ -81,7 +81,7 @@
     
     
       
-        <img class="header-picture" src="https://ngkz.github.io/mypicture.jpg" alt="プロフィール画像" />
+        <img class="header-picture" src="https://ngkz.github.io/insignia.png" alt="プロフィール画像" />
       
     
     </a>
@@ -93,11 +93,11 @@
     
       <div class="sidebar-profile">
         <a href="https://ngkz.github.io/page/profile/">
-          <img class="sidebar-profile-picture" src="https://ngkz.github.io/mypicture.jpg" alt="プロフィール画像" />
+          <img class="sidebar-profile-picture" src="https://ngkz.github.io/insignia.png" alt="プロフィール画像" />
         </a>
         <h4 class="sidebar-profile-name">Kazutoshi Noguchi</h4>
         
-          <h5 class="sidebar-profile-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</h5>
+          <h5 class="sidebar-profile-bio">I'm interested in Computer, Trip, Electronics, and DIY.</h5>
         
       </div>
     
@@ -194,6 +194,77 @@
                ">
         <section class="postShorten-group main-content-wrap">
           
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://ngkz.github.io/2019/01/edid-repair/">
+          EDIDが壊れて認識しないモニターの修理
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-01-06T17:19:12&#43;09:00">
+        
+  
+  
+  
+  
+    2019-01-06
+  
+
+      </time>
+    
+    
+  
+  
+    <span>カテゴリー</span>
+    
+      <a class="category-link" href="https://ngkz.github.io/categories/howto">howto</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        <p>Acer H243HをDVIで接続すると認識しない。VGA接続とHDMI接続では正常に動作するが、DVIで接続するとsyslogに以下のエラーが出る。</p>
+<pre><code>Jan  5 23:48:32 haramaki kernel: [97894.621687] amdgpu 0000:01:00.0: DVI-D-1: EDID is invalid:
+Jan  5 23:48:32 haramaki kernel: [97894.621694]         [00] BAD  00 ff ff ff ff ff ff 00 ff ff ff ff ff ff ff ff
+Jan  5 23:48:32 haramaki kernel: [97894.621696]         [00] BAD  2b 13 01 03 80 35 1d 78 ea 60 85 a6 56 4a 9c 25
+Jan  5 23:48:32 haramaki kernel: [97894.621697]         [00] BAD  12 50 54 af cf 00 81 80 71 4f 95 00 95 0f a9 40
+Jan  5 23:48:32 haramaki kernel: [97894.621698]         [00] BAD  b3 00 01 01 01 01 1a 36 80 a0 70 38 1f 40 30 20
+Jan  5 23:48:32 haramaki kernel: [97894.621699]         [00] BAD  35 00 13 2a 21 00 00 1a 00 00 00 fc 00 48 32 34
+Jan  5 23:48:32 haramaki kernel: [97894.621700]         [00] BAD  33 48 0a 20 20 20 20 20 20 20 00 00 00 fd 00 38
+Jan  5 23:48:32 haramaki kernel: [97894.621701]         [00] BAD  4c 1f 53 12 00 0a 20 20 20 20 20 20 00 00 00 ff
+Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30 43 30 31 34 34 30 31 31 0a 00 33
+</code></pre><p>どうやらEDIDが壊れているようだ。</p>
+      
+      <p>
+        <a href="https://ngkz.github.io/2019/01/edid-repair/" class="postShorten-excerpt_link link">続きを読む</a>
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
           
             
   
@@ -578,70 +649,6 @@
 </article>
 
           
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://ngkz.github.io/2018/07/audit-cargo-crate/">
-          依存しているパッケージ(crate)の中身を実行せずに調べる方法 (Rust)
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2018-07-25T22:24:30&#43;09:00">
-        
-  
-  
-  
-  
-    2018-07-25
-  
-
-      </time>
-    
-    
-  
-  
-    <span>カテゴリー</span>
-    
-      <a class="category-link" href="https://ngkz.github.io/categories/howto">howto</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        cargo fetch1 でパッケージを取得すると、~/.cargo/registry/src/github.com-1ecc6299db9ec823/(パッケージ名)-(バージョン) にパッケージのソースコードが展開される。
-Cargo.lockにすべての依存クレートの名前とバージョンが記録されているので、これを見てコードに問題がないか調べることができる。
-  cargo buildはビルドスクリプトを実行してしまうのでダメ &#x21a9;&#xfe0e;
-   
-      
-      <p>
-        <a href="https://ngkz.github.io/2018/07/audit-cargo-crate/" class="postShorten-excerpt_link link">続きを読む</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
           
   <div class="pagination-bar">
     <ul class="pagination">
@@ -684,17 +691,17 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
       <i class="fa fa-remove"></i>
     </div>
     
-      <img id="about-card-picture" src="https://ngkz.github.io/mypicture.jpg" alt="プロフィール画像" />
+      <img id="about-card-picture" src="https://ngkz.github.io/insignia.png" alt="プロフィール画像" />
     
     <h4 id="about-card-name">Kazutoshi Noguchi</h4>
     
-      <div id="about-card-bio">I'm interested in InfoSec, Trip, Electronics, and DIY.</div>
+      <div id="about-card-bio">I'm interested in Computer, Trip, Electronics, and DIY.</div>
     
     
       <div id="about-card-job">
         <i class="fa fa-briefcase"></i>
         <br/>
-        System integrator
+        System integrator, Programmer
       </div>
     
     

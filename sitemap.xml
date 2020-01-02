@@ -3,22 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://ngkz.github.io/categories/</loc>
-    <lastmod>2019-11-04T00:31:35+09:00</lastmod>
+    <loc>https://ngkz.github.io/2020/01/lfs-51/</loc>
+    <lastmod>2020-01-02T23:34:04+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://ngkz.github.io/categories/homeserver/</loc>
-    <lastmod>2019-11-04T00:31:35+09:00</lastmod>
+    <loc>https://ngkz.github.io/categories/</loc>
+    <lastmod>2020-01-02T23:34:04+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://ngkz.github.io/</loc>
-    <lastmod>2019-11-04T00:31:35+09:00</lastmod>
+    <lastmod>2020-01-02T23:34:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ngkz.github.io/categories/flfs/</loc>
+    <lastmod>2020-01-02T23:34:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ngkz.github.io/tags/lfs/</loc>
+    <lastmod>2020-01-02T23:34:04+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://ngkz.github.io/post/</loc>
+    <lastmod>2020-01-02T23:34:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ngkz.github.io/tags/</loc>
+    <lastmod>2020-01-02T23:34:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ngkz.github.io/categories/homeserver/</loc>
     <lastmod>2019-11-04T00:31:35+09:00</lastmod>
   </url>
   
@@ -49,11 +69,6 @@
   
   <url>
     <loc>https://ngkz.github.io/tags/platformio/</loc>
-    <lastmod>2019-09-23T07:30:10+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ngkz.github.io/tags/</loc>
     <lastmod>2019-09-23T07:30:10+09:00</lastmod>
   </url>
   
@@ -115,11 +130,6 @@
   <url>
     <loc>https://ngkz.github.io/2019/04/diary-20190419/</loc>
     <lastmod>2019-04-19T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ngkz.github.io/tags/lfs/</loc>
-    <lastmod>2019-04-17T23:59:59+09:00</lastmod>
   </url>
   
   <url>
