@@ -18,12 +18,12 @@ showPagination: false
 ↑ たぬき
 
 PGP 公開鍵
-: [BC6D CFE0 3513 A9FA 4F55 D702 06B8 1066 65DD 36F3](http://keys.gnupg.net/pks/lookup?op=get&search=0x06B8106665DD36F3)
+: [BC6D CFE0 3513 A9FA 4F55 D702 06B8 1066 65DD 36F3](/gpg-public-key.asc)
 
 github
 : [ngkz](https://github.com/ngkz)
 
-discord (非推奨, いいオープンソースの代替品があったら教えてください)
+discord (非推奨)
 : ngkz#6110
 
 bitcoin
@@ -47,10 +47,10 @@ bitcoin
 ## スキル
 
 プログラミング言語
-: C, Python, C++, Assembly(x86, x86-64, PIC, ARM, AVR, etc.), Rust, Go, JavaScript, CoffeeScript, Shell script(POSIX, bash), Java, HTML, PHP, CSS, VBA
+: C, Python, C++, Assembly(x86, x86-64, PIC, ARM, AVR, etc.), Rust, Go, JavaScript (ES2017+), Ruby, CoffeeScript, Shell script(POSIX, bash), Java, HTML, PHP, CSS, VBA
 
 触ったことのあるフレームワーク
-: Django, Flask, Express, Electron, nw.js
+: Django, Flask, Express, Electron, nw.js, Vue.js
 
 インフラ
 : Linux, Windows Server, AppArmor, Docker, Apache, Nginx, Postfix, Node.js, Ansible, Zabbix, Chef, SNMP, OpenSSH, OpenVPN, SoftEther, systemd, AIDE, Zabbix, Nutanix (CE, 商用版両方), Microsoft Deployment Toolkit
