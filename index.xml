@@ -29,7 +29,7 @@
       <pubDate>Mon, 04 Nov 2019 00:31:35 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/11/homeserver-build-20191104/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;不良メモリのその後&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;不良メモリのその後&#34;&gt;不良メモリのその後&lt;/h2&gt;
 &lt;p&gt;正常なメモリに交換したら安定動作するようになった。&lt;/p&gt;
 &lt;h2 id=&#34;nic&#34;&gt;NIC&lt;/h2&gt;
 &lt;p&gt;1ヶ月半以上かかってWYI350T4が届いたので取り付けてテストした。ちゃんと4ポート全部ほぼワイヤースピード出てていい感じ&lt;/p&gt;
@@ -70,7 +70,7 @@
       
       <guid>https://ngkz.github.io/2019/09/homeserver-build-20190922/</guid>
       <description>&lt;p&gt;自宅サーバーを再開したくなった。まだOS(Linux from Scratch)が完成していないけど、10月に増税なのでとりあえず必要なパーツの調達と動作確認だけしておくことにした。&lt;/p&gt;
-&lt;h2 id=&#34;heading&#34;&gt;構成&lt;/h2&gt;
+&lt;h2 id=&#34;構成&#34;&gt;構成&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;エンコード支援機能がついてるIntel以外のCPU&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; で、3スロットPCIeがついていて(NIC用, 2.4G WLAN用, 5G WLAN用)、できるだけ省電力で安い構成にしたかった
 &lt;ul&gt;
@@ -87,13 +87,13 @@
       
       <guid>https://ngkz.github.io/2019/09/avr-development-fail/</guid>
       <description>&lt;p&gt;AVRでファンコントローラを作っていたら、いろいろなところで嵌って何時間も無駄にしたので、後学のために何があったかを書いておく。&lt;/p&gt;
-&lt;h2 id=&#34;gcc&#34;&gt;GCC拡張インラインアセンブラ構文の嵌りどころ&lt;/h2&gt;
+&lt;h2 id=&#34;gcc拡張インラインアセンブラ構文の嵌りどころ&#34;&gt;GCC拡張インラインアセンブラ構文の嵌りどころ&lt;/h2&gt;
 &lt;p&gt;GCCの拡張インラインアセンブラ構文を使うときはマニュアルをよく読まないとこういう目にあう&lt;/p&gt;
-&lt;h3 id=&#34;heading&#34;&gt;入力オペランドと出力オペランドは同じレジスタに割り当てられることがある&lt;/h3&gt;
+&lt;h3 id=&#34;入力オペランドと出力オペランドは同じレジスタに割り当てられることがある&#34;&gt;入力オペランドと出力オペランドは同じレジスタに割り当てられることがある&lt;/h3&gt;
 &lt;p&gt;同じレジスタに割り当てられるとまずい場合は出力オペランドの制約に&lt;code&gt;&amp;amp;&lt;/code&gt;をつける。付け忘れていたら最適化をかけたときに入力と出力が同じレジスタに割り当てられて嵌った。&lt;/p&gt;
 &lt;p&gt;NG: &lt;code&gt;asm volatile(&amp;quot;...&amp;quot; : [output] &amp;quot;=r&amp;quot; (...) : [input] &amp;quot;r&amp;quot; (...));&lt;/code&gt;&lt;br&gt;
 OK: &lt;code&gt;asm volatile(&amp;quot;...&amp;quot; : [output] &amp;quot;=&amp;amp;r&amp;quot; (...) : [input] &amp;quot;r&amp;quot; (...));&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;heading-1&#34;&gt;入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる&lt;/h3&gt;</description>
+&lt;h3 id=&#34;入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる&#34;&gt;入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる&lt;/h3&gt;</description>
     </item>
     
     <item>
@@ -102,9 +102,9 @@ OK: &lt;code&gt;asm volatile(&amp;quot;...&amp;quot; : [output] &amp;quot;=&amp;
       <pubDate>Sun, 09 Jun 2019 17:34:45 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/06/howto-etch-stainless-mug/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;一ヶ月半前くらいの話&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;一ヶ月半前くらいの話&#34;&gt;一ヶ月半前くらいの話&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://imgur.com/a/dCvS5&#34;&gt;酢と塩と9V電池でステンレス鍋に目盛りをつける方法&lt;/a&gt;を知ったので、計量カップを追い出して旅行の荷物を減らすためにステンレスマグを計量カップ化してみた。&lt;/p&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;どうやるの&lt;/h2&gt;
+&lt;h2 id=&#34;どうやるの&#34;&gt;どうやるの&lt;/h2&gt;
 &lt;p&gt;上のリンクの内容を要約すると&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;印をつけたい部分の周辺をマスキング&lt;/li&gt;
@@ -114,7 +114,7 @@ OK: &lt;code&gt;asm volatile(&amp;quot;...&amp;quot; : [output] &amp;quot;=&amp;
 &lt;li&gt;シュワシュワという音がして数秒くらいで印が点く&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;自分の場合は酢にやさしい酢を使ったのと、印をつける面がヘアライン加工されていたせいか、9V電池では目盛りがつくのに時間がかかったので、電源電圧を12Vに上げて反応速度を上げた。&lt;/p&gt;
-&lt;h2 id=&#34;heading-2&#34;&gt;底で試す&lt;/h2&gt;</description>
+&lt;h2 id=&#34;底で試す&#34;&gt;底で試す&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -123,7 +123,7 @@ OK: &lt;code&gt;asm volatile(&amp;quot;...&amp;quot; : [output] &amp;quot;=&amp;
       <pubDate>Sun, 02 Jun 2019 23:03:00 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/06/oil-change/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;必要な物&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;必要な物&#34;&gt;必要な物&lt;/h2&gt;
 &lt;p&gt;たまに忘れるので&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;オイル (消耗品)&lt;/li&gt;
@@ -183,7 +183,7 @@ EndSection
       <pubDate>Thu, 25 Apr 2019 22:38:53 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/04/diary-20190425/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;その他&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;生活リズムが崩壊している。また寝不足になる→寝る準備をするのが億劫になる→さらに寝不足になるの悪循環に入ってしまった&lt;/li&gt;
 &lt;li&gt;疲れた&lt;/li&gt;
@@ -197,9 +197,9 @@ EndSection
       <pubDate>Fri, 19 Apr 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/04/diary-20190419/</guid>
-      <description>&lt;h2 id=&#34;ubuntu&#34;&gt;Ubuntuのアップグレード&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;ubuntuのアップグレード&#34;&gt;Ubuntuのアップグレード&lt;/h2&gt;
 &lt;p&gt;Ubuntu 18.04へアップグレード成功&lt;/p&gt;
-&lt;h2 id=&#34;heading&#34;&gt;その他&lt;/h2&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;p&gt;最近頻繁に車が虫まみれになる。洗車機だと落ちきらないから高圧洗浄機から泡を噴射するツールを買った。
 110km/hあたりになると急激に虫がぶつかる頻度が増えて、フロントガラスに虫の中身が飛び散ったり、バンパーに虫が頭を突っこんで死んだりする。&lt;/p&gt;</description>
     </item>
@@ -220,16 +220,16 @@ EndSection
 &lt;/li&gt;
 &lt;li&gt;一部のソフトウェアはCPPFLAGSに&lt;code&gt;_FORTIFY_SOURCE&lt;/code&gt;の定義があるとconfigureが失敗するので、configureにパッチを当てて対処していたが、ハックが4箇所くらいに増えたのでCFLAGSに&lt;code&gt;_FORTIFY_SOURCE&lt;/code&gt;の定義を移動してハックを削除した。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;ubuntu&#34;&gt;Ubuntuのアップグレード&lt;/h2&gt;
+&lt;h2 id=&#34;ubuntuのアップグレード&#34;&gt;Ubuntuのアップグレード&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Ubuntu 18.04へのアップグレードが途中で止まったのは、壊れたシンボリックリンクが&lt;code&gt;/etc/ca-certificates&lt;/code&gt;に残っていたせいでca-certificatesの設定が失敗した結果、それに依存するパッケージ全部の設定が連鎖的に失敗したのが原因だった。&lt;/li&gt;
 &lt;li&gt;一応アップグレードは成功したが、あちこちの動作が怪しい&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;新しいキャンプ用食器&lt;/h2&gt;
+&lt;h2 id=&#34;新しいキャンプ用食器&#34;&gt;新しいキャンプ用食器&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;別のセリアに行って小さいコッヘルを探してみたが、Lサイズすら置いてなかった。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;4K15.6インチの画面がどれくらい精細なのか気になったので電気屋に実物を見にいってみたが、4Kのラップトップが置いてなかった。&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -245,7 +245,7 @@ EndSection
 &lt;ul&gt;
 &lt;li&gt;coreutils, checkをインストール&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;新しいキャンプ用食器&lt;/h2&gt;
+&lt;h2 id=&#34;新しいキャンプ用食器&#34;&gt;新しいキャンプ用食器&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;クッカーセットの鍋はスープの器代わりにするには大きすぎるので、小鍋(約12cm)に入れて収納できるサイズのステンレス食器が欲しい。
 &lt;ul&gt;
@@ -262,7 +262,7 @@ EndSection
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;HMBを昼, トレーニング1.5時間前, 就寝前に1g摂取&lt;/li&gt;
 &lt;li&gt;公園で自重トレ&lt;/li&gt;
@@ -277,11 +277,11 @@ EndSection
       <pubDate>Mon, 15 Apr 2019 23:50:23 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/04/diary-20190415/</guid>
-      <description>&lt;h2 id=&#34;ubuntu-1804&#34;&gt;Ubuntu 18.04へアップグレード&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;ubuntu-1804へアップグレード&#34;&gt;Ubuntu 18.04へアップグレード&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Ubuntu 16.04を18.04へアップグレードしている。ファイルが競合したり依存関係が壊れたりしてアップグレードに失敗した。時間が無くなったので明日なおす&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;買い物&lt;/h2&gt;
+&lt;h2 id=&#34;買い物&#34;&gt;買い物&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;今まで車内で調理するとき、たまにしか使わないので100均のやつでいいやと思って100均の食器と調理器具を使っていたが、味気ないしかさばるのでキャンプ用のクッカーセットを買った。
 &lt;ul&gt;
@@ -301,7 +301,7 @@ EndSection
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;買い物してたら時間がなくなったので延期&lt;/p&gt;</description>
     </item>
     
@@ -315,7 +315,7 @@ EndSection
 &lt;ul&gt;
 &lt;li&gt;Meson, procps-ng, e2fsprogsをインストール&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;ubuntu-1804&#34;&gt;Ubuntu 18.04へアップグレード&lt;/h2&gt;
+&lt;h2 id=&#34;ubuntu-1804へアップグレード&#34;&gt;Ubuntu 18.04へアップグレード&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;4/17のUbuntu 14.04のサポート切れにLFSの構築が間に合わないので、OSをUbuntu 18.04へアップグレードしている
 &lt;ul&gt;
@@ -328,7 +328,7 @@ EndSection
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Ubuntu 16.04へアップグレードしたり買い物したりしていたら時間がなくなったので延期&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -344,7 +344,7 @@ EndSection
 &lt;ul&gt;
 &lt;li&gt;libelf, libffi, openssl, python, ninjaをインストールした。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;桜を見るついで大きな公園に行ったら家族連れで健康遊具が混んでいたので、途中で人の少なそうな公園に移動した
 &lt;ul&gt;
@@ -369,7 +369,7 @@ EndSection
       <guid>https://ngkz.github.io/2019/04/diary-20190412/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
 &lt;p&gt;Perl 5, XML::Parser-2.44, Intltool-0.51.0, autoconf, automake, xz, kmod, gettextをインストール&lt;/p&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;眠いので明日に延期&lt;/p&gt;</description>
     </item>
     
@@ -379,7 +379,7 @@ EndSection
       <pubDate>Thu, 11 Apr 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/04/diary-20190411/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;HMBを昼, トレーニング1時間前, 就寝前に1g摂取&lt;/li&gt;
 &lt;li&gt;前日の睡眠 7:26 (23:57→7:28)&lt;/li&gt;
@@ -448,7 +448,7 @@ EndSection
 &lt;li&gt;ncursesのインストールがうまくいってなかったので修正&lt;/li&gt;
 &lt;li&gt;説明の間違いを修正&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;HMBを昼, トレーニング1.5時間前, 就寝前に1g摂取&lt;/li&gt;
 &lt;li&gt;前日の睡眠 7:34 (23:43→7:23)
@@ -472,7 +472,7 @@ EndSection
 &lt;ul&gt;
 &lt;li&gt;Ncursesをインストールした&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;HMBを昼, トレーニング40分前, 就寝前に1g摂取&lt;/li&gt;
 &lt;li&gt;前日の睡眠 7:29 (0:04→7:36)
@@ -526,7 +526,7 @@ EndSection
 &lt;li&gt;変更をリポジトリにコミット&lt;/li&gt;
 &lt;li&gt;手順書に何箇所か間違いがあったので修正&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;HMBをトレーニング30分前, 就寝前に1.5g摂取&lt;/li&gt;
 &lt;li&gt;前日の睡眠 7:24 (0:12→7:56)
@@ -563,7 +563,7 @@ EndSection
 &lt;li&gt;bzip2をインストールした&lt;/li&gt;
 &lt;li&gt;あまり作業できなかった&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;</description>
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -572,7 +572,7 @@ EndSection
       <pubDate>Tue, 02 Apr 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/04/diary-20190402/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ30分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBを昼, トレーニング30分前, 就寝前に1g摂取&lt;/li&gt;
@@ -664,7 +664,7 @@ EndSection
       <pubDate>Mon, 01 Apr 2019 22:48:30 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/04/diary-20190401/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ1時間前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBを昼, トレーニング1時間前, 就寝前に1g摂取&lt;/li&gt;
@@ -711,7 +711,7 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;ドローンのマニュアルを翻訳している&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -731,7 +731,7 @@ EndSection
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;その他&lt;/h2&gt;</description>
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -751,7 +751,7 @@ EndSection
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;</description>
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -760,7 +760,7 @@ EndSection
       <pubDate>Fri, 29 Mar 2019 22:13:54 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/03/diary-20190329/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ30分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBを昼, トレーニング30分前, 就寝前に1g摂取&lt;/li&gt;
@@ -859,7 +859,7 @@ EndSection
 &lt;li&gt;引き続きGCCの&lt;code&gt;--enable-default-pie&lt;/code&gt;と&lt;code&gt;--enable-default-ssp&lt;/code&gt;が原因で壊れるテストを修正中&lt;/li&gt;
 &lt;li&gt;ほとんど作業できてない&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ30分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBを昼, トレーニング1時間前, 就寝前に1g摂取&lt;/li&gt;
@@ -907,7 +907,7 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;4時間くらい無駄にした。集中できていない&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -927,7 +927,7 @@ EndSection
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;</description>
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -945,7 +945,7 @@ EndSection
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;その他&lt;/h2&gt;</description>
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -959,7 +959,7 @@ EndSection
 &lt;li&gt;ビルド手順に何箇所か問題があったので修正&lt;/li&gt;
 &lt;li&gt;進捗ほとんどなし&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ40分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBをトレーニング1.5時間前, 就寝前に1.5g摂取&lt;/li&gt;
@@ -984,7 +984,7 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;</description>
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -1003,7 +1003,7 @@ EndSection
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;休憩日&lt;/li&gt;
 &lt;li&gt;ソルティッドキャラメル味のインパクトホエイを使いきったので、ノンフレーバーのホエイプロテインに CAFE LATORY 抹茶と甘味料を入れて飲んでみた。カゼインと違ってプロテイン自体にほとんど味がないので1本で完全に抹茶味になった。おいしかった。
@@ -1012,7 +1012,7 @@ EndSection
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;カーメイトのシガーソケット分配器の接点が凹んでしまっていたので分解して直した。なぜかケースの片側が発熱するパイロットランプにホットボンドで固定されていた。別の箇所でもう片側のケースにネジ止めされているから強度の問題はないんだけど、こんなものを付けるくらいなら強く押すと凹む接点をどうにかしてほしい&lt;/li&gt;
 &lt;li&gt;昨日もらったポータブル冷蔵庫のファンフィルターが汚れていたので分解清掃した。経年劣化で中のガムテープらしきものが全部剥がれてしまっていたので貼り替えた。&lt;/li&gt;
@@ -1033,7 +1033,7 @@ EndSection
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;冷蔵庫&lt;/h2&gt;
+&lt;h2 id=&#34;冷蔵庫&#34;&gt;冷蔵庫&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;父から使われていない車用ポータブル冷蔵庫をもらった。&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -1058,7 +1058,7 @@ EndSection
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;</description>
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -1077,7 +1077,7 @@ EndSection
 &lt;/li&gt;
 &lt;li&gt;GMPをインストールした&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;</description>
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -1101,7 +1101,7 @@ EndSection
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ30分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBを昼, トレーニング1時間前, 就寝前に1g摂取&lt;/li&gt;
@@ -1189,7 +1189,7 @@ EndSection
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;</description>
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -1198,7 +1198,7 @@ EndSection
       <pubDate>Mon, 18 Mar 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/03/diary-20190318/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;虚無&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;虚無&#34;&gt;虚無&lt;/h2&gt;
 &lt;p&gt;生活リズムがおかしくなったせいか体調がよくないしやる気がしない&lt;/p&gt;</description>
     </item>
     
@@ -1214,7 +1214,7 @@ EndSection
 &lt;li&gt;git-svnをいろいろといじっていたら、trunkと欲しい最期のタグの分岐点のリビジョンからfetchすれば、正常な歴史を維持したまま特定のタグだけ取得できることが分かった&lt;/li&gt;
 &lt;li&gt;最終的に、LFS Bookに変更を加える方法ではうまく行かないことが分かったので、諦めてMarkdownで書き直す方法に戻した&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;掃除&lt;/h2&gt;
+&lt;h2 id=&#34;掃除&#34;&gt;掃除&lt;/h2&gt;
 &lt;p&gt;部屋が汚くなってきたので掃除した。&lt;/p&gt;
 &lt;p&gt;部屋の半分にはコルクマット、もう半分にはカーペットが敷いてあるが、両方とも掃除が面倒くさい。&lt;/p&gt;</description>
     </item>
@@ -1231,7 +1231,7 @@ EndSection
 &lt;li&gt;タイムゾーンの設定をした&lt;/li&gt;
 &lt;li&gt;MarkdownでLFS Bookの中身を書き直すかわりに本家のBookをフォークしてそれにこっちの環境特有の変更を入れることにした。git-svnの使い方がまだよくわかっていないのでforkすらできていないが&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ40分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBを夕, トレーニング40分前, 就寝前に1g摂取&lt;/li&gt;
@@ -1281,7 +1281,7 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;</description>
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -1305,11 +1305,11 @@ EndSection
 &lt;li&gt;glibcのパッケージ化とインストールが完了&lt;/li&gt;
 &lt;li&gt;今までの変更をリポジトリにコミットした&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;休み&lt;/p&gt;
 &lt;p&gt;今日は夕飯を食べるのが遅かったので、消化されるのを待っていたら寝る時間になってしまった。最近寝不足気味なので今日は筋トレせずに&lt;del&gt;早く寝ることにする&lt;/del&gt;。&lt;/p&gt;
 &lt;p&gt;LFSを組んでたら結局寝るのが遅くなってしまった。&lt;/p&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;このサイトのデプロイスクリプトをシンプルにした &lt;a href=&#34;https://github.com/ngkz/ngkz.github.io/blob/src/deploy.sh&#34;&gt;https://github.com/ngkz/ngkz.github.io/blob/src/deploy.sh&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;DOOM Emacsのsmartparensの動作がおかしくてイライラするのでオフにした&lt;/li&gt;
@@ -1328,7 +1328,7 @@ EndSection
 &lt;li&gt;パッケージの後処理(バイナリとライブラリのstrip, manページの圧縮, 不要なファイルを削除) をするスクリプトを改良している途中&lt;/li&gt;
 &lt;li&gt;数時間作業できたのにほとんど進捗がない。Ubuntu 14.04のサポート切れがせまっているので、迷ったらとりあえず本通りに先に進めるようにしたい。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;HMBを昼, トレーニング30分前, 就寝前に1g摂取&lt;/li&gt;
 &lt;li&gt;前日の睡眠 7:09 (0:03→7：19)&lt;/li&gt;
@@ -1382,7 +1382,7 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;ヨドバシからまだ返品要求メールへの返信がこない&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -1399,7 +1399,7 @@ EndSection
 &lt;li&gt;ロケールのインストール&lt;/li&gt;
 &lt;li&gt;パッケージの後処理(バイナリとライブラリのstrip, manページの圧縮, 不要なファイルを削除) をするスクリプトを改良している途中&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;</description>
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -1408,7 +1408,7 @@ EndSection
       <pubDate>Mon, 11 Mar 2019 23:37:15 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/03/diary-20190311/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ30分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBを夕方, トレーニング1時間前, 就寝前に1g摂取&lt;/li&gt;
@@ -1464,7 +1464,7 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;雨が降って車が1日もたたないうちにドロドロになった :(&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -1476,7 +1476,7 @@ EndSection
       <pubDate>Sun, 10 Mar 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/03/diary-20190310/</guid>
-      <description>&lt;h2 id=&#34;-2&#34;&gt;スキー 2日目&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;スキー-2日目&#34;&gt;スキー 2日目&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;マウントジーンズ那須に行った。&lt;/li&gt;
 &lt;li&gt;寝てる途中に電話のバッテリーが切れてアラームが鳴らなかった。スキー場に着くのが始業20分だったので、今回も遠いところに停めさせられてしまった。
@@ -1503,7 +1503,7 @@ EndSection
       <pubDate>Sat, 09 Mar 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/03/diary-20190309/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;スキー&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;スキー&#34;&gt;スキー&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;数年ぶりにハンターマウンテン塩原へ行った&lt;/li&gt;
 &lt;li&gt;3月だから大丈夫だろうと思って遅めに行ったら遠いところに止めさせられて移動が大変だった&lt;/li&gt;
@@ -1607,7 +1607,7 @@ EndSection
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;花粉がひどい&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -1624,11 +1624,11 @@ EndSection
 &lt;li&gt;glibcの構築手順の説明を更新&lt;/li&gt;
 &lt;li&gt;必要なライブラリ以外はデバッグ情報を残さないように変更 (途中)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;スキー&lt;/h2&gt;
+&lt;h2 id=&#34;スキー&#34;&gt;スキー&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;荷物をパッキングして積んだ&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;みんなで逮捕されようプロジェクト&lt;/h2&gt;
+&lt;h2 id=&#34;みんなで逮捕されようプロジェクト&#34;&gt;みんなで逮捕されようプロジェクト&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;中学生がalertループへのURLを貼って補導された件で、
 &lt;a href=&#34;https://www.data-max.co.jp/article/28329&#34;&gt;「みんなで逮捕されようプロジェクト」 &lt;/a&gt; っていうのが始まったらしいので、私も兵庫県警に喧嘩を売っておいた
@@ -1638,7 +1638,7 @@ EndSection
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading-2&#34;&gt;ドローン&lt;/h2&gt;</description>
+&lt;h2 id=&#34;ドローン&#34;&gt;ドローン&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -1649,7 +1649,7 @@ EndSection
       <guid>https://ngkz.github.io/2019/03/diary-20190307/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
 &lt;p&gt;glibcの設定をしている途中&lt;/p&gt;
-&lt;h2 id=&#34;heading&#34;&gt;その他&lt;/h2&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;風呂入って戻ってきたらドローンが置いてあった 何これ？&lt;/li&gt;
 &lt;li&gt;4.6時間無駄にした&lt;/li&gt;
@@ -1663,7 +1663,7 @@ EndSection
       <pubDate>Wed, 06 Mar 2019 23:31:17 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/03/diary-20190306/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;スキー&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;スキー&#34;&gt;スキー&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;スキーに行く準備をした。
 &lt;ul&gt;
@@ -1671,13 +1671,13 @@ EndSection
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;-2&#34;&gt;買い物で失敗 #2&lt;/h2&gt;
+&lt;h2 id=&#34;買い物で失敗-2&#34;&gt;買い物で失敗 #2&lt;/h2&gt;
 &lt;p&gt;ヨドバシ.comは商品の発送が非常に早く、月曜の夜に注文した商品がなんと火曜の昼に届いていたが、不在で再配達になっていたので、再配達依頼をして今日受けとった。&lt;/p&gt;
 &lt;p&gt;ポンプカップと杏仁霜は取り寄せ品だったので、スマートフォンホルダー EC-176とUSB type-C シガーソケットチャージャー PJ-1819だけが届いた。&lt;/p&gt;
 &lt;p&gt;スマートフォンホルダー EC-176を組み立ててNexus 5Xをつけてみたら、ホルダー部分が大きすぎて指紋センサが隠れてしまうし、ホルダを締めると左右のツメが音量調整ボタンに触れてしまうことに気付いた。音量ボタンの干渉はロックを緩めにしたら回避できるが、指紋センサが隠れるのはどうしようもないので困った。&lt;a href=&#34;https://www.amazon.co.jp/gp/product/B00UJ33YAQ/&#34;&gt;前使っていたもの&lt;/a&gt;と同等以下の大きさのホルダーを選べばよかった。アームと吸盤部分は前より頑丈そうでいい感じだ。&lt;/p&gt;
 &lt;p&gt;PJ-1819 はNexus 5Xから最大電流が1.5Aの充電器として認識されてしまい、急速充電ができなかった。おそらく、初期不良かプルアップ抵抗の値が間違っている設計ミスなので、返品して別の物を買うことにした。
 コネクタのプルアップ抵抗の値を測ろうとしてみたが、テスター棒は入らないしブレークアウトボードも持っていないのでできなかった。&lt;/p&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;筋トレ&lt;/h2&gt;</description>
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -1686,7 +1686,7 @@ EndSection
       <pubDate>Tue, 05 Mar 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/03/diary-20190305/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;買い物で失敗&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;買い物で失敗&#34;&gt;買い物で失敗&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;昨日
 買ったBus Pirate v3.6aが発送された後に、新バージョンのBus Pirate v4が出ていることに気づいた。
@@ -1697,12 +1697,12 @@ EndSection
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;スキーの滑走面のケバ取りをした&lt;/li&gt;
 &lt;li&gt;ネットで3.5時間くらい無駄にした&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading-2&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ45分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBをトレーニング45分前, 就寝前に1.5g摂取&lt;/li&gt;
@@ -1721,15 +1721,15 @@ EndSection
       <pubDate>Mon, 04 Mar 2019 23:07:34 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/03/diary-20190304/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;いろいろ買った&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;いろいろ買った&#34;&gt;いろいろ買った&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;ダメになったポンプカップの代わりを注文した&lt;/li&gt;
 &lt;li&gt;ついでに壊れたスマホホルダーの代わりとシガーソケットUSB type-C充電器と杏仁霜も注文&lt;/li&gt;
 &lt;li&gt;USB-UARTすらないとハードウェアをいじる時不便なので、3.3V/5V両用のUSB-UARTを買おうとしていたら、UARTだけでなくI²C, SPIやJTAGなどのプロトコルにも対応した&lt;a href=&#34;https://www.sparkfun.com/products/12942&#34;&gt;Bus Pirate&lt;/a&gt; というツールがあることを思いだしたので、かわりにそれを買った。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;買い物してたら時間がなくなったのでなし&lt;/p&gt;
-&lt;h2 id=&#34;heading-2&#34;&gt;その他&lt;/h2&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;2-3時間くらいインターネットで時間を無駄にしてしまったので、LeechBlockの設定を厳しくした。&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -1741,7 +1741,7 @@ EndSection
       <pubDate>Sun, 03 Mar 2019 21:51:31 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/03/diary-20190303/</guid>
-      <description>&lt;h2 id=&#34;508&#34;&gt;コールマン508の修理&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;コールマン508の修理&#34;&gt;コールマン508の修理&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://ngkz.github.io/2019/02/diary-20190224/&#34;&gt;先週&lt;/a&gt;ポンプがスカスカで使えなかったコールマン508を調べてみた。
 &lt;ul&gt;
@@ -1755,7 +1755,7 @@ EndSection
 &lt;li&gt;ポンプカップに油をさしたら一応点火はしたが、寒いと動かないかもしれないのであとでポンプカップを交換する&lt;/li&gt;
 &lt;li&gt;ついでに落としてしまったときに歪んだ五徳をラジオペンチで修正した。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;その他&lt;/h2&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;雨が降っていたのでミラーのコーティングと擦り傷の修理ができなかった。
 &lt;ul&gt;
@@ -1773,7 +1773,7 @@ EndSection
       <pubDate>Sat, 02 Mar 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/03/diary-20190302/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;車のメンテ&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;車のメンテ&#34;&gt;車のメンテ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;オイルを交換した&lt;/li&gt;
 &lt;li&gt;洗車して塗装の擦り傷とミラーとバックカメラの超撥水コーティングを直そうとしたが、洗車したら日が暮れてしまった。&lt;/li&gt;
@@ -1807,7 +1807,7 @@ EndSection
   
 &lt;/div&gt;
 
-&lt;h1 id=&#34;heading-1&#34;&gt;プロテインを移し替えた&lt;/h1&gt;</description>
+&lt;h1 id=&#34;プロテインを移し替えた&#34;&gt;プロテインを移し替えた&lt;/h1&gt;</description>
     </item>
     
     <item>
@@ -1816,7 +1816,7 @@ EndSection
       <pubDate>Fri, 01 Mar 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/03/diary-20190301/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;疲れた&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;疲れた&#34;&gt;疲れた&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;寝不足になる→寝る準備をするのすら億劫になる→さらに寝不足になるの悪循環に入ってしまった
 &lt;ul&gt;
@@ -1825,7 +1825,7 @@ EndSection
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;オーバーナイトリカバリーブレンドがなくなってきたので、5kgのカゼインをボトルに移しかえた。部屋の中でやったら粉が部屋中に舞って大変なことになった。&lt;/li&gt;
 &lt;li&gt;ボトルに貼るプロテインのラベルのSVG画像を作った&lt;/li&gt;
@@ -1838,7 +1838,7 @@ EndSection
       <pubDate>Thu, 28 Feb 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/02/diary-20190228/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;最近ついてない&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;最近ついてない&#34;&gt;最近ついてない&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.amazon.co.jp/gp/product/B00UJ33YAQ/&#34;&gt;スマートフォンホルダー&lt;/a&gt;が崩壊した&lt;/p&gt;
 
 
@@ -1867,7 +1867,7 @@ EndSection
   
 &lt;/div&gt;
 
-&lt;h2 id=&#34;heading-1&#34;&gt;筋トレ&lt;/h2&gt;</description>
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -1881,7 +1881,7 @@ EndSection
 &lt;li&gt;glibcの設定を途中までやった&lt;/li&gt;
 &lt;li&gt;LFS構築に使える時間がない&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ30分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBを夕, トレーニング一時間前, 就寝前に1g摂取&lt;/li&gt;
@@ -1937,7 +1937,7 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;p&gt;最近ついてない。今日は車のミラーを電柱にぶつけ、会社のサーバーのRAIDカードが文鎮化し、プロテインの粉をぶちまけた。&lt;/p&gt;</description>
     </item>
     
@@ -1947,7 +1947,7 @@ EndSection
       <pubDate>Tue, 26 Feb 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/02/diary-20190226/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;HMBをトレーニング一時間前と就寝前に1.5g摂取&lt;/li&gt;
 &lt;li&gt;前日の睡眠 8:55 (22:00→7:03)&lt;/li&gt;
@@ -1971,7 +1971,7 @@ EndSection
       <pubDate>Sun, 24 Feb 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/02/diary-20190224/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;スキー&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;スキー&#34;&gt;スキー&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;朝飯を作るためにパック燃料で水を暖めていたら沸騰する前に燃料が切れた。
 &lt;ul&gt;
@@ -1990,7 +1990,7 @@ EndSection
       <pubDate>Sat, 23 Feb 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/02/diary-20190223/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;スキー&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;スキー&#34;&gt;スキー&lt;/h2&gt;
 &lt;p&gt;たかつえスキー場で滑った。&lt;/p&gt;
 &lt;p&gt;頂上の一人乗り
 リフトがすごかった。幅が狭くて背もたれも申し訳程度のものしかない搬器が高速で向かってくるので、最初に乗ったときに落ちそうになった。&lt;a href=&#34;https://www.youtube.com/watch?v=FZugZkBDQo8&#34;&gt;(参考動画)&lt;/a&gt;&lt;/p&gt;
@@ -2006,7 +2006,7 @@ EndSection
       <pubDate>Fri, 22 Feb 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/02/diary-20190222/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;スキーの準備をした&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;スキーの準備をした&#34;&gt;スキーの準備をした&lt;/h2&gt;
 &lt;p&gt;荷物を積みこんでシートを両方倒した状態で眠る方法を検討した。&lt;/p&gt;
 &lt;p&gt;スキーの道具が入った大きなボストンバッグ以外の荷物をダッシュボードと天井ラックとシートの裏に逃がし、バッグをS字フックでラックにつり下げたらシートの上が完全に開いた。これなら幅広のマットを敷いて眠れそう。&lt;/p&gt;</description>
     </item>
@@ -2022,7 +2022,7 @@ EndSection
 &lt;li&gt;32bit glibcをパッケージ化してインストールした&lt;/li&gt;
 &lt;li&gt;glibcを設定をしている途中&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;スキー&lt;/h2&gt;
+&lt;h2 id=&#34;スキー&#34;&gt;スキー&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;スキーに行く準備をした。
 &lt;ul&gt;
@@ -2052,7 +2052,7 @@ EndSection
 &lt;li&gt;Man-pagesパッケージのmanページを圧縮した。&lt;/li&gt;
 &lt;li&gt;glibcを設定している途中&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ30分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBを昼, トレーニング前, 就寝前に1g摂取&lt;/li&gt;
@@ -2103,7 +2103,7 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;スキーのケバを取って簡易ワックスを塗った。&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -2127,7 +2127,7 @@ EndSection
 &lt;li&gt;デバッグ情報を分離するスクリプトを書いている。&lt;/li&gt;
 &lt;li&gt;もうglibcをビルドしはじめてから12日もたっている。システムをmultiarch化しようとしたり&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;、libcを強引にmultilib化したmusl libcに置き換えたとき&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;は数日間苦戦したあと諦めることになったし、システムの基礎部分をいじるとかなり苦労する。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ30分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBを朝, トレーニング一時間前, 就寝前に1g摂取&lt;/li&gt;
@@ -2187,7 +2187,7 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;スキーのケバ取りを途中までやった。
 &lt;ul&gt;
@@ -2213,7 +2213,7 @@ EndSection
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ30分前に1スクープ摂取
 &lt;ul&gt;
@@ -2271,7 +2271,7 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;3時間くらい余計なことやって時間を無駄にしてしまった。&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -2283,14 +2283,14 @@ EndSection
       <pubDate>Sun, 17 Feb 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/02/diary-20190217/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;疲れていて頭痛もするのでなし&lt;/p&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.amazon.co.jp/gp/product/B07D26LM4K&#34;&gt;名刺入れ&lt;/a&gt; の &lt;a href=&#34;https://www.amazon.co.jp/sp?_encoding=UTF8&amp;amp;asin=&amp;amp;isAmazonFulfilled=1&amp;amp;isCBA=&amp;amp;marketplaceID=A1VC38T7YXB528&amp;amp;orderID=&amp;amp;seller=A2RKBYP0767LPV&amp;amp;tab=&amp;amp;vasStoreID=&#34;&gt;販売業者&lt;/a&gt; から交換品が届いた。&lt;/li&gt;
 &lt;li&gt;体調が悪いので何もする気がおきず、ダラダラ起きていたら何もせずに1日が終わってしまった。早く寝て疲れを取ればよかった。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading-2&#34;&gt;車中泊テスト&lt;/h2&gt;
+&lt;h2 id=&#34;車中泊テスト&#34;&gt;車中泊テスト&lt;/h2&gt;
 &lt;p&gt;電気毛布が届いたので、試しに近くで車中泊してみた。&lt;/p&gt;</description>
     </item>
     
@@ -2300,12 +2300,12 @@ EndSection
       <pubDate>Sat, 16 Feb 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/02/diary-20190216/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;ラックの修理&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;ラックを車に取り付けてボルトを塗装し、車体の穴をフェルトで塞いだ。&lt;/li&gt;
 &lt;li&gt;これでラックの修理は完了&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;寝るのが遅すぎたのが原因でラックを修理していたら夜遅くになってしまった。今日の筋トレはなし&lt;/li&gt;
 &lt;li&gt;通常の食事2食, 追加でタンパク質64g分のプロテイン, HMB3gを摂取
@@ -2336,7 +2336,7 @@ EndSection
 &lt;/li&gt;
 &lt;li&gt;manページの圧縮処理とデバッグ情報の分離処理を書いている途中&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ30分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBを昼, 夕食前, 就寝前に1g摂取&lt;/li&gt;
@@ -2393,7 +2393,7 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;明日が休日だとつい夜更ししてしまう。健康によくないし、休日でないとできないことができなくなるし、筋肉や神経系に悪影響が出るので、23時になったらPCを強制サスペンドするようにcronを設定した。&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.amazon.co.jp/gp/product/B01LW43RYZ&#34;&gt;電気毛布&lt;/a&gt;と&lt;a href=&#34;https://www.amazon.co.jp/gp/product/B073TDGH3M&#34;&gt;カードスリーブ&lt;/a&gt;と&lt;a href=&#34;https://www.amazon.co.jp/gp/product/B07D26LM4K&#34;&gt;名刺入れ&lt;/a&gt;が届いた。
@@ -2440,11 +2440,11 @@ EndSection
 &lt;li&gt;デバッグ情報を分離して &lt;code&gt;/usr/lib/debug/.build-id/...&lt;/code&gt; に置きたいので、LDFLAGSに &lt;code&gt;-Wl,--build-id&lt;/code&gt;を追加してBuild IDを生成するようにした&lt;/li&gt;
 &lt;li&gt;必要なさそうなので &lt;code&gt;CFLAGS&lt;/code&gt;から &lt;code&gt;-grecord-gcc-switches&lt;/code&gt;を削除&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;ラックの修理&lt;/h2&gt;
+&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;ステーと立バンドの裏に塗料を重ね塗りした。今週末には完成しそう&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ30分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBを昼, 夕食前, 就寝前に1g摂取&lt;/li&gt;
@@ -2509,7 +2509,7 @@ EndSection
 &lt;ul&gt;
 &lt;li&gt;glibcのテストが失敗するのは LDFLAGSで &lt;code&gt;-z now&lt;/code&gt;を渡すとダイナミックリンカが壊れるのが原因だった。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ30分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBを昼, 筋トレ1時間前, 就寝前に1g摂取&lt;/li&gt;
@@ -2565,7 +2565,7 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;ラックの修理&lt;/h2&gt;
+&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
 &lt;p&gt;立バンドの裏を塗装し、ステーのめっきが剥げた箇所にサビ止めを塗った。&lt;/p&gt;</description>
     </item>
     
@@ -2587,7 +2587,7 @@ EndSection
 &lt;p&gt;&lt;a href=&#34;http://clfs.org&#34;&gt;Cross Linux from Scratch&lt;/a&gt; のサイトが消滅してた&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを30分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBを昼に1g, トレーニング1時間前に1g摂取, 夜に1g摂取&lt;/li&gt;
@@ -2637,9 +2637,9 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;ラックの修理&lt;/h2&gt;
+&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
 &lt;p&gt;立バンドに塗料を塗り重ねた&lt;/p&gt;
-&lt;h2 id=&#34;heading-2&#34;&gt;その他&lt;/h2&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;スキーに行くとき車中泊する予定なので電気毛布を注文した&lt;/li&gt;
 &lt;li&gt;ついでにいろいろと注文した
@@ -2658,7 +2658,7 @@ EndSection
       <pubDate>Mon, 11 Feb 2019 21:10:30 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/02/diary-20190211/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを多めの水(400ml)に溶かしてみたら、ちょうどいい味の濃さになりケミカル感も軽減されておいしかった。&lt;/li&gt;
 &lt;li&gt;ノンフレーバーHMB + Impact ホエイ ソルティッドキャラメル味は相性が悪く、HMBのワキガ臭と苦みを打ち消しきれない。&lt;/li&gt;
@@ -2723,7 +2723,7 @@ EndSection
       <pubDate>Sun, 10 Feb 2019 14:36:00 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/02/diary-20190210/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;ラックの修理&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;残りのステー4つを加工して仮付けしてみた。&lt;/li&gt;
 &lt;li&gt;一旦ステーとラックを全部外してサビ止めと塗装
@@ -2734,10 +2734,10 @@ EndSection
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;もう半分のプロテインが届いた&lt;/h2&gt;
+&lt;h2 id=&#34;もう半分のプロテインが届いた&#34;&gt;もう半分のプロテインが届いた&lt;/h2&gt;
 &lt;p&gt;マイプロテインから残りの品(カゼイン5kg, 10Lサプリメント用ボトル2個)が入った箱が届いた。商品の大きさに対して箱が小さすぎるのでこっちもボトルがベコベコになっていた。&lt;/p&gt;
 &lt;p&gt;ボトルのへこみを手で戻して洗い、フタの裏に乾燥剤を貼りつけておいた。&lt;/p&gt;
-&lt;h2 id=&#34;heading-2&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;プレワークアウトの変な臭みは混ぜたHMBが原因だった。HMBを混ぜてないTHE プレワークアウトのフルーツパンチ味はケミカルな感じのする甘酸っぱい味だった。&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://hmb-supplement.net/?p=413&#34;&gt;HMBの臭み消しには柑橘系のフルーツジュースやココア味やチョコ味のプロテインが有効らしい&lt;/a&gt;
@@ -2800,9 +2800,9 @@ EndSection
       <pubDate>Sat, 09 Feb 2019 19:54:35 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/02/diary-20190209/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;ラックの修理&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
 &lt;p&gt;ステーを2本削って曲げ、ラックのリア側も立バンド固定にした。&lt;/p&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;プロテインが半分届いた&lt;/h2&gt;
+&lt;h2 id=&#34;プロテインが半分届いた&#34;&gt;プロテインが半分届いた&lt;/h2&gt;
 &lt;p&gt;先週マイプロテインに頼んだサプリメントが2分割で発送され、ホエイ5kg、プレワークアウト、HMBとおまけが入った方の箱が届いた。&lt;/p&gt;
 &lt;p&gt;プレミアム配送が無料になる注文金額だったので、はじめてプレミアム配送を使ってみたが、梱包は通常配送と変わらないようなので、謎の粉まみれになっていたり、サプリメント容器が薄汚れてベコベコになっていたりしたが、&lt;del&gt;破損はなかった。&lt;/del&gt; HMBの袋のチャックが壊れかかってた。なんとか密封されているようだが、かなり締めにくい&lt;/p&gt;
 &lt;p&gt;前回通常配送で頼んだときは、 11/12注文 11/15発送 11/26着で、今回は1週間で半分到着なので、通常配送より速くはなっているようだ。&lt;/p&gt;
@@ -2817,7 +2817,7 @@ EndSection
       <guid>https://ngkz.github.io/2019/02/diary-20190208/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
 &lt;p&gt;glibcをインストールしている&lt;/p&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;いろいろやっていたら時間がなくなったので明日に延期&lt;/p&gt;</description>
     </item>
     
@@ -2829,7 +2829,7 @@ EndSection
       <guid>https://ngkz.github.io/2019/02/diary-20190207/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
 &lt;p&gt;Temporary Systemにchrootする処理を書き、chrootしてカーネルヘッダとmanページをインストールした。&lt;/p&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;上半身 + 腹筋&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -2890,11 +2890,11 @@ EndSection
       <guid>https://ngkz.github.io/2019/02/diary-20190206/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;*FLAGS&lt;/code&gt; の解説が完成した。Temporary Systemにchrootにする処理を書いている。&lt;/p&gt;
-&lt;h2 id=&#34;heading&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
+&lt;h2 id=&#34;スキーのトップシートの修理&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
 &lt;p&gt;接着後にトップシートに残った欠けをホットボンドで埋めた。修理完了&lt;/p&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;ラックの修理&lt;/h2&gt;
+&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
 &lt;p&gt;ステーを2本同じ方法で加工した。日曜に買った荒目のヤスリを使ったら加工時間が半分になった。&lt;/p&gt;
-&lt;h2 id=&#34;heading-2&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;下半身 + 腹筋&lt;/p&gt;
 &lt;p&gt;うまくいかなかった&lt;/p&gt;
 &lt;table&gt;
@@ -2945,7 +2945,7 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading-3&#34;&gt;その他&lt;/h2&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;茨城県庁で茨城県警が超小型のArduino Leonardo互換機でBadUSBのデモをやってた&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -2959,7 +2959,7 @@ EndSection
       <guid>https://ngkz.github.io/2019/02/diary-20190205/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
 &lt;p&gt;chrootに入る処理と *FLAGSの解説を書いている。&lt;/p&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;上半身プル&lt;/p&gt;
 &lt;p&gt;今までダンベルシャフトの重量を計算に入れるのを忘れていた。&lt;/p&gt;
 &lt;table&gt;
@@ -3004,7 +3004,7 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
+&lt;h2 id=&#34;スキーのトップシートの修理&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
 &lt;p&gt;別の箇所を接着した。&lt;/p&gt;</description>
     </item>
     
@@ -3017,7 +3017,7 @@ EndSection
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
 &lt;p&gt;/etc/passwdと/etc/groupが完成した。Linuxの/etc/passwdと/etc/groupにあるシステムユーザー/システムグループはディストリビュージョンによって異なり、名前やUID/GIDが違う、過去に使われていたが今は未使用のユーザー/グループがある、システムグループに属するシステムユーザーが違う、などの違いがある。&lt;/p&gt;
 &lt;p&gt;LFS Bookに/etc/groupの詳しい解説がなかったので、いろいろなディストロに/etc/groupを見てみたり、システムグループの使用目的を調べたり、いらないグループを削ったりしていたら時間がかかってしまった。&lt;/p&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;上半身プッシュ + 腹筋&lt;/p&gt;
 &lt;p&gt;プッシュアップのフォームを修正したら大胸筋によく効くようになった。筋力の伸びが停滞してる気がする&lt;/p&gt;
 &lt;table&gt;
@@ -3068,9 +3068,9 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
+&lt;h2 id=&#34;スキーのトップシートの修理&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
 &lt;p&gt;別の箇所を接着した。トップシートが欠けている箇所をホットボンドで埋め、固まる前にシリコンオイルを塗った定規で形を整えた。定規に油を塗ればホットボンドがくっつくのを避けられると思っていたが、あまり効果はなかった。&lt;/p&gt;
-&lt;h2 id=&#34;heading-2&#34;&gt;その他&lt;/h2&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;LeechBlock効果でインターネットで無駄にした時間がだいぶ減った&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -3082,10 +3082,10 @@ EndSection
       <pubDate>Sun, 03 Feb 2019 21:07:36 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/02/diary-20190203/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;ラックの修理&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
 &lt;p&gt;\980で細工用の荒目ヤスリが売ってたので買った。アシストグリップが入っていた穴を隠すためのフェルトも調達した。&lt;/p&gt;
 &lt;p&gt;天井収納にかけた費用が &lt;a href=&#34;https://www.monotaro.com/p/3469/3872/&#34;&gt;https://www.monotaro.com/p/3469/3872/&lt;/a&gt;  2本より高くなってた。かけた手間暇を考えたらこれ2本買ってすべり止め巻くだけのほうがマシだったかも。&lt;/p&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;缶コーヒーを2本 (カフェイン90mg x 2) 飲んだら、最初は筋トレが楽になったけど途中から気分が悪くなってきて逆に回数が落ちた。しばらく休憩したら回復した。&lt;/p&gt;
 &lt;p&gt;下半身&lt;/p&gt;
 &lt;table&gt;
@@ -3136,7 +3136,7 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading-2&#34;&gt;その他&lt;/h2&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;買い物して、3時間筋トレして、3時間ネットで無駄にしたら1日が終わってた。未完了のタスクが積もってきている。ネットで時間を無駄にするのを防ぐためにLeechBlockを入れてみたけど、効果のあるルールが作れない。&lt;/li&gt;
 &lt;li&gt;部屋がホコリっぽくなってきたので掃除した&lt;/li&gt;
@@ -3149,7 +3149,7 @@ EndSection
       <pubDate>Sat, 02 Feb 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/02/diary-20190202/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;ラックの修理&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
 &lt;p&gt;ステーの削る位置を変えてみたらラックが入った。&lt;/p&gt;
 &lt;p&gt;
 
@@ -3207,7 +3207,7 @@ EndSection
 &lt;/p&gt;
 &lt;p&gt;細工用のヤスリを使うとバンドのネジが入るようにステーを削るのに1本45分くらいかかってしまう。
 普通サイズの荒いヤスリだとステーの穴に入らないし、あと6本加工しないといけないから困った。&lt;/p&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;プロテインの調達&lt;/h2&gt;
+&lt;h2 id=&#34;プロテインの調達&#34;&gt;プロテインの調達&lt;/h2&gt;
 &lt;p&gt;ゾロ目フラッシュセール開始2時間後に買った商品が売り切れていないかチェックした。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Impact ホエイ ノンフレーバーの5kgが売り切れていた&lt;/li&gt;
@@ -3215,7 +3215,7 @@ EndSection
 &lt;li&gt;プレワークアウトは何種類かのフレーバーが売り切れになっていた&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;ホエイノンフレ5kgは開始直後かフラッシュセール開始前に調達しないとまずいことが分かった。&lt;/p&gt;
-&lt;h2 id=&#34;heading-2&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;上半身プッシュ+腹筋&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -3275,14 +3275,14 @@ EndSection
       <guid>https://ngkz.github.io/2019/02/diary-20190201/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
 &lt;p&gt;/etc/group&lt;/p&gt;
-&lt;h2 id=&#34;heading&#34;&gt;プロテインの調達&lt;/h2&gt;
+&lt;h2 id=&#34;プロテインの調達&#34;&gt;プロテインの調達&lt;/h2&gt;
 &lt;p&gt;ゾロ目セール(40%割引)が始まったので、プロテイン、保存容器とプレワークサプリを注文した。明日の21時あたりまで待てばフラッシュセールでさらに5%安くなると思うが、以下の理由で早めに注文した。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;マイプロテインは配達に時間がかかる&lt;/li&gt;
 &lt;li&gt;人気商品はフラッシュセールまでに在庫が無くなることがあるが、 まだどれが人気商品なのか把握していない&lt;/li&gt;
 &lt;li&gt;プロテインの在庫がなくなってきた&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;p&gt;眠い、疲れた&lt;/p&gt;</description>
     </item>
     
@@ -3294,9 +3294,9 @@ EndSection
       <guid>https://ngkz.github.io/2019/01/diary-20190131/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
 &lt;p&gt;ほとんど作業できなかった&lt;/p&gt;
-&lt;h2 id=&#34;heading&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
+&lt;h2 id=&#34;スキーのトップシートの修理&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
 &lt;p&gt;GPクリヤーは貼り合わせる前に接着剤を5-10分乾かす必要があるので、すき間ができるほどシートがめくれている部分しか接着できない。エポキシじゃないとダメだ&lt;/p&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;下半身&lt;/p&gt;
 &lt;p&gt;😩&lt;/p&gt;
 &lt;table&gt;
@@ -3353,7 +3353,7 @@ EndSection
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading-2&#34;&gt;プロテインの調達&lt;/h2&gt;
+&lt;h2 id=&#34;プロテインの調達&#34;&gt;プロテインの調達&lt;/h2&gt;
 &lt;p&gt;プロテインは大容量のパッケージを買うと単価が安くなるが、&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;同じ味のものを5kgも飲むと途中で飽きそう&lt;/li&gt;
@@ -3364,7 +3364,7 @@ EndSection
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;という問題があるので、味つきのプロテインを買うかわりに、大容量のノンフレーバーのプロテインを買って味付けをして飲むことにした。&lt;/p&gt;
-&lt;h2 id=&#34;heading-3&#34;&gt;その他&lt;/h2&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;p&gt;マイプロテインの決済はクレジットカードが必須だが、クレジットカードの審査が通らなかったし、Vプリカは手数料が高いので困っている。
 楽天銀行の無料VISAデビットが復活していたので塩漬けにしていた口座で発行してみた。&lt;/p&gt;
 &lt;p&gt;楽天銀行は、金利は高いがATM手数料が高くwebサイトのUXもいまいちなので、使い勝手のいい銀行に口座を開設したほうがいいかもしれない。&lt;/p&gt;</description>
@@ -3378,13 +3378,13 @@ EndSection
       <guid>https://ngkz.github.io/2019/01/diary-20190130/</guid>
       <description>&lt;h2 id=&#34;lfs&#34;&gt;LFS&lt;/h2&gt;
 &lt;p&gt;進捗なし、まったく集中できていない。何時間かLFS構築に使える時間があったのに数十分しか作業できていない。&lt;/p&gt;
-&lt;h2 id=&#34;heading&#34;&gt;プロテイン調達&lt;/h2&gt;
+&lt;h2 id=&#34;プロテイン調達&#34;&gt;プロテイン調達&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;プロテインの在庫が無くなってきたので、マイプロテインの2/2のゾロ目セールに備えて商品をカゴに入れた。&lt;/li&gt;
 &lt;li&gt;味が何十種類もあってどれを買えばいいかかなり迷う。当たり外れがあるので適当に買うと失敗するし、1食分(25g)のお試しサイズは\210なので大量に買うとかなりの金額になる。&lt;/li&gt;
 &lt;li&gt;ついでに買うサプリメントを選んだり、お試しサイズで買うフレーバーをネットで調べて厳選していたら2時間たってしまった。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;上半身プル&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -3429,7 +3429,7 @@ EndSection
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;プロテインの調達、英語ライティングの参考書探しとチャットをしてたら途中で時間切れ :(&lt;/p&gt;
-&lt;h2 id=&#34;heading-2&#34;&gt;その他&lt;/h2&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;英語のライティングがほとんどできないのをどうにかしたい。とりあえず英語ライティングの本を何冊か買ってみた。&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -3441,7 +3441,7 @@ EndSection
       <pubDate>Tue, 29 Jan 2019 20:34:30 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/01/diary-20190129/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;上半身プッシュ + 腹筋&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;プッシュアップ               3セット 自重              12回以上 + 膝つき             ↑12+4回 8+4回 11+6回
 ダンベルショルダープレス     2セット 10kgx2            14回以上+5kgで何回か          →13回 10+15回
@@ -3452,7 +3452,7 @@ EndSection
 &lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;*FLAGS&lt;/code&gt;のカスタマイズ&lt;/p&gt;
 &lt;p&gt;作業に集中できていない。&lt;/p&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;リフト券の引換券が当たった。ラックとスキー板を直したらスキーしに行こう&lt;/li&gt;
 &lt;li&gt;DOOM Emacs たまに使いづらい、vimに戻りたくなってきた。でもvimでDOOM Emacsっぽいことをしようとすると面倒くさい&lt;/li&gt;
@@ -3468,9 +3468,9 @@ EndSection
       <description>&lt;p&gt;頭痛がしたので帰ってきた後すぐ寝たら中途半端な時間に目がさめた。&lt;/p&gt;
 &lt;h2 id=&#34;lfs&#34;&gt;LFS&lt;/h2&gt;
 &lt;p&gt;進捗なし&lt;/p&gt;
-&lt;h2 id=&#34;heading&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
+&lt;h2 id=&#34;スキーのトップシートの修理&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
 &lt;p&gt;他の部分を接着した。&lt;/p&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;食後に消化を待つと家を出る時間の直前になってしまうので延期&lt;/p&gt;</description>
     </item>
     
@@ -3480,9 +3480,9 @@ EndSection
       <pubDate>Sun, 27 Jan 2019 22:21:54 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/01/diary-20190127/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;車のメンテ&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;車のメンテ&#34;&gt;車のメンテ&lt;/h2&gt;
 &lt;p&gt;オイルとフィルターを交換してタイヤローテーションもした。先週スキーに行ったので、車の足回りを高圧洗浄機で掃除した。&lt;/p&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;ラックの修理&lt;/h2&gt;
+&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
 &lt;p&gt;試しに立バンドのボルトが入るようにステーを削って前席の左右に取り付けてみたが、立バンド間の幅が小さくてラックが入らなかった。立バンドの取り付け位置を変えてもだめだったら、叩いてステーの角度を変えるか、ステーを切断して短くする必要がありそう&lt;/p&gt;
 
 
@@ -3511,7 +3511,7 @@ EndSection
   
 &lt;/div&gt;
 
-&lt;h2 id=&#34;heading-2&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
+&lt;h2 id=&#34;スキーのトップシートの修理&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
 &lt;p&gt;昨日の接着面がムラがあるものの十分な強度で接着されていたので、他の部分も接着した。&lt;/p&gt;</description>
     </item>
     
@@ -3521,9 +3521,9 @@ EndSection
       <pubDate>Sat, 26 Jan 2019 23:17:24 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/01/diary-20190126/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;ラックの修理&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
 &lt;p&gt;簡単な加工で使えそうなステーと立バンド各8個と、サビ止めを調達した。&lt;/p&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
+&lt;h2 id=&#34;スキーのトップシートの修理&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
 &lt;p&gt;無色で弾力性のあるエポキシ接着剤が売っていないので、かわりにGPクリヤーを購入した。接着面全体を圧着するために5x100x100のゴム板も買った。&lt;/p&gt;
 &lt;p&gt;接着力が不安なので、試しに完全に接着されなくても問題なさそうな場所を接着してみた。&lt;/p&gt;
 &lt;p&gt;
@@ -3554,7 +3554,7 @@ EndSection
 &lt;/div&gt;
 \&lt;/p&gt;
 &lt;p&gt;完全な接着に24時間かかるので、修理には数週間かかりそう。&lt;/p&gt;
-&lt;h2 id=&#34;heading-2&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;全身&lt;/p&gt;
 &lt;p&gt;集中できなかった&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;ブルガリアンスクワット       3セット 15kgx2 + 自重     11回以上                     右11回 左10回 右8回 左8回 右7回+自重で何回か 左6回+自重で何回か
@@ -3572,7 +3572,7 @@ EndSection
       <pubDate>Fri, 25 Jan 2019 22:41:58 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/01/diary-20190125/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;オイル交換・スキーのトップシートの修理・ラックの修理&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;オイル交換スキーのトップシートの修理ラックの修理&#34;&gt;オイル交換・スキーのトップシートの修理・ラックの修理&lt;/h2&gt;
 &lt;p&gt;必要な物をホームセンターで調達していたら途中で閉店時間になってしまった。&lt;/p&gt;
 &lt;p&gt;SN 5W-30のエンジンオイル 4L、シリコンスプレーとターンナット F-602 2セットを購入。&lt;/p&gt;
 &lt;p&gt;ラックの固定にちょうどいいステーと、トップシートの修理に必要な無色の耐衝撃エポキシ接着剤が見つからない。&lt;/p&gt;
@@ -3585,7 +3585,7 @@ EndSection
 &lt;/ul&gt;
 &lt;p&gt;のあたり&lt;/p&gt;
 &lt;p&gt;あまり集中して作業できていなかった&lt;/p&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;なし&lt;/p&gt;
 &lt;p&gt;昨日睡眠時間が短かかったのと、オイル交換とラックとスキーの修理に必要な物の調達で帰るのが遅くなったのもあって、夕食を食べてから2時間経つ前に眠くなってしまった。&lt;/p&gt;</description>
     </item>
@@ -3598,7 +3598,7 @@ EndSection
       <guid>https://ngkz.github.io/2019/01/diary-20190124/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
 &lt;p&gt;ファイルシステムのディレクトリ構造と/etc/passwdに登録するシステムユーザーを決めた。システムグループの役割と使用箇所を調べている途中。&lt;/p&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;下半身 + 腹筋&lt;/p&gt;
 &lt;p&gt;LFSの構築をやりすぎたせいで途中までしかできなかった。
 下半身が一番時間がかかるからか、時間切れで中断することが多くなってきていてまずい&lt;/p&gt;
@@ -3616,7 +3616,7 @@ EndSection
       <guid>https://ngkz.github.io/2019/01/diary-20190123/</guid>
       <description>&lt;h2 id=&#34;lfs&#34;&gt;LFS&lt;/h2&gt;
 &lt;p&gt;進捗ほとんどなし&lt;/p&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;上半身プル&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;ハーフデッドリフト         3セット 25kg x 2
 ワンハンドローイング   左右2セット 10kg
@@ -3635,10 +3635,10 @@ EndSection
       <description>&lt;h2 id=&#34;lfs&#34;&gt;LFS&lt;/h2&gt;
 &lt;p&gt;進捗なし&lt;/p&gt;
 &lt;p&gt;いろいろやってたら時間がなくなった&lt;/p&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;上半身プッシュ + 腹筋&lt;/p&gt;
 &lt;p&gt;プッシュアップ 3セット, ダンベルショルダープレス 2セット 10kgx2, ダンベルフレンチプレス 2セット 10kg, ダンベルフライ 2セット 7.5kg x 2, クランチ 1セット, ツイストクランチ 2セット&lt;/p&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;スキーでジャンプしたらなぜか腹筋が筋肉痛になった&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -3650,12 +3650,12 @@ EndSection
       <pubDate>Sun, 20 Jan 2019 23:50:07 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/01/diary-20190121/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;新潟県警のクラックの件&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;新潟県警のクラックの件&#34;&gt;新潟県警のクラックの件&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://www3.nhk.or.jp/news/html/20190120/k10011784571000.html&#34;&gt;新潟県警のサーバー不正操作 掲示板に爆破予告書き込みか&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;http://archive.vn/https://www.police.pref.niigata.jp/*&#34;&gt;攻撃の痕跡が魚拓に残っている。&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;メールフォーム(&lt;a href=&#34;http://archive.vn/LPTbJ&#34;&gt;http://archive.vn/LPTbJ&lt;/a&gt;) の画像添付機能にあった初歩的なOSコマンドインジェクション脆弱性(&lt;a href=&#34;https://archive.is/whWsu&#34;&gt;https://archive.is/whWsu&lt;/a&gt;) を突かれた模様。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://archive.vn/DhvA7&#34;&gt;某弁護士の画像がアップロードされていた。&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;3gsim&#34;&gt;3GモデムカードとSIMカードの接続方法&lt;/h2&gt;</description>
+&lt;h2 id=&#34;3gモデムカードとsimカードの接続方法&#34;&gt;3GモデムカードとSIMカードの接続方法&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -3665,7 +3665,7 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/01/diary-20190120/</guid>
       <description>&lt;p&gt;SNSはやめたので、代わりに某所のつぶやきチャンネルにつぶやきを書き捨てていたが、自分一人でかなりチャンネル流量を上げてしまっているのでこれからはここに書く。&lt;/p&gt;
-&lt;h2 id=&#34;heading&#34;&gt;スキー&lt;/h2&gt;
+&lt;h2 id=&#34;スキー&#34;&gt;スキー&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;草津に一泊二日のスキー旅行に行った。去年の白根山噴火の影響で白根火山ロープウェイが廃止されていて、中上級コースのほとんどがなくなっていた。&lt;/li&gt;
 &lt;li&gt;ロープウェイ廃止のためか、ロープウェイの駐車場だった場所は滑れるようになっていて、駐車場へのアクセスに使われていた国道292号もスキーコースになっていた。ただ、傾斜が緩やかな上に途中複数回登り勾配になっていて、初級者にはつらく、中上級者にはつまらないためか、人気はなく、隣のしゃくなげコースに人が流れていた。&lt;/li&gt;
@@ -3697,7 +3697,7 @@ EndSection
 &lt;li&gt;このままではまずいので、とりあえず手動で普通のLinuxデスクトップ仕様のLinux from Scratchを組んでUbuntu 14.04から移行することにした。&lt;/li&gt;
 &lt;li&gt;Temporary Systemの構築が終わり、実際のシステムを構築する直前まで行った。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;筋トレ&lt;/h2&gt;</description>
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -3707,9 +3707,9 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/01/afwall-bt-tethering/</guid>
       <description>&lt;p&gt;AFWall+を有効にしていると、Bluetoothテザリングで接続したクライアントが通信できなくなるのをなんとかする。&lt;/p&gt;
-&lt;h2 id=&#34;heading&#34;&gt;原因&lt;/h2&gt;
+&lt;h2 id=&#34;原因&#34;&gt;原因&lt;/h2&gt;
 &lt;p&gt;ログと検索エンジンで調べたところ、AFWall+がBluetoothテザリングに対応していないため、クライアントにDHCPとDNS Proxyを提供しているdnsmasqからのDNS通信がブロックされてしまっていることが分かった。&lt;/p&gt;
-&lt;h2 id=&#34;1-dns&#34;&gt;解決策1: DNSを手動設定する&lt;/h2&gt;</description>
+&lt;h2 id=&#34;解決策1-dnsを手動設定する&#34;&gt;解決策1: DNSを手動設定する&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -3767,7 +3767,7 @@ Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30
       <pubDate>Sat, 20 Oct 2018 10:50:27 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2018/10/doom-emacs-develop-setup/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;動機&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;動機&#34;&gt;動機&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;収録ソフトウェアがかなり古くなってきている Ubuntu 14.04 から Linux From Scratch に移行しよう&lt;/li&gt;
 &lt;li&gt;この機会に neovim に移行して、vim の設定を一から書き直そう&lt;/li&gt;
@@ -3894,7 +3894,7 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
       <pubDate>Tue, 04 Mar 2014 06:45:08 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2014/03/seccon-2013-finals-writeup/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;結果&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;結果&#34;&gt;結果&lt;/h2&gt;
 
 
  
@@ -4109,10 +4109,10 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
       <pubDate>Thu, 12 Sep 2013 13:29:56 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2013/09/galaxys3-adb-restore-fail/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;リカバリモードに入ってファクトリーリセットする&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;リカバリモードに入ってファクトリーリセットする&#34;&gt;リカバリモードに入ってファクトリーリセットする&lt;/h2&gt;
 &lt;p&gt;galaxy S3 リカバリモードの入り方:&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;バックアップを展開&lt;/h2&gt;</description>
+&lt;h2 id=&#34;バックアップを展開&#34;&gt;バックアップを展開&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -4134,7 +4134,7 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
       <guid>https://ngkz.github.io/2012/12/seccon-2012-yokohama-quals-writeup/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.seccon.jp/&#34;&gt;SECCON CTF 横浜大会&lt;/a&gt;にチーム 0x0として参加しました。&lt;br&gt;
 チームメンバーは nash氏、wasao氏、waidotto氏、nullmineral氏と私です。&lt;/p&gt;
-&lt;h2 id=&#34;heading&#34;&gt;成績&lt;/h2&gt;
+&lt;h2 id=&#34;成績&#34;&gt;成績&lt;/h2&gt;
 &lt;p&gt;score: たぶん8120&lt;/p&gt;
 
 
@@ -4193,7 +4193,7 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ngkz.github.io/page/profile/</guid>
-      <description>名前 野口和敏 メール nたoたgたuたcたhたiた.たkたaたzたuたtたoたsたiた+た7た4たcた7たeたvたLたxた@たgたmたaたiたlた.たcたoたmた ↑ たぬき PGP 公開鍵 BC6D CFE0 3513 A9FA 4F55 D702 06B8 1066 65DD 36F3 github ngkz discord (非推奨, いいオープンソースの代替品があったら教えてください) ngkz#6110 bitcoin 1FzRWZsT9sL6G5iaKpEHRuJmRsKniFNW6c     場面緘黙症 精神障害者保健福祉手帳 (3 級)  資格  第一種運転免許 (準中型, 普通自動二輪小型 AT 限定) 第二種電気工事士 IT パスポート 基本情報技術者 応用情報技術者 情報処理安全確保支援士   第010448号     スキル  プログラミング言語 C, Python, C++, Assembly(x86, x86-64, PIC, ARM, AVR, etc.), Rust, Go, JavaScript, CoffeeScript, Shell script(POSIX, bash), Java, HTML, PHP, CSS, VBA 触ったことのあるフレームワーク Django, Flask, Express, Electron, nw.</description>
+      <description>名前 野口和敏 メール nたoたgたuたcたhたiた.たkたaたzたuたtたoたsたiた+た7た4たcた7たeたvたLたxた@たgたmたaたiたlた.たcたoたmた ↑ たぬき PGP 公開鍵 BC6D CFE0 3513 A9FA 4F55 D702 06B8 1066 65DD 36F3 github ngkz discord (非推奨) ngkz#6110 bitcoin 1FzRWZsT9sL6G5iaKpEHRuJmRsKniFNW6c     場面緘黙症 精神障害者保健福祉手帳 (3 級)  資格  第一種運転免許 (準中型, 普通自動二輪小型 AT 限定) 第二種電気工事士 IT パスポート 基本情報技術者 応用情報技術者 情報処理安全確保支援士   第010448号     スキル  プログラミング言語 C, Python, C++, Assembly(x86, x86-64, PIC, ARM, AVR, etc.), Rust, Go, JavaScript (ES2017+), Ruby, CoffeeScript, Shell script(POSIX, bash), Java, HTML, PHP, CSS, VBA 触ったことのあるフレームワーク Django, Flask, Express, Electron, nw.</description>
     </item>
     
   </channel>

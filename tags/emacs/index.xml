@@ -17,7 +17,7 @@
       <pubDate>Sat, 20 Oct 2018 10:50:27 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2018/10/doom-emacs-develop-setup/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;動機&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;動機&#34;&gt;動機&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;収録ソフトウェアがかなり古くなってきている Ubuntu 14.04 から Linux From Scratch に移行しよう&lt;/li&gt;
 &lt;li&gt;この機会に neovim に移行して、vim の設定を一から書き直そう&lt;/li&gt;

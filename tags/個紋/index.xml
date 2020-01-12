@@ -23,7 +23,7 @@
 &lt;li&gt;タイムゾーンの設定をした&lt;/li&gt;
 &lt;li&gt;MarkdownでLFS Bookの中身を書き直すかわりに本家のBookをフォークしてそれにこっちの環境特有の変更を入れることにした。git-svnの使い方がまだよくわかっていないのでforkすらできていないが&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ40分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBを夕, トレーニング40分前, 就寝前に1g摂取&lt;/li&gt;
@@ -73,7 +73,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;その他&lt;/h2&gt;</description>
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;</description>
     </item>
     
   </channel>

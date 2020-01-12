@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.62.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.62.2 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="Acer H243HをDVIで接続すると認識しない。VGA接続とHDMI接続では正常に動作するが、DVIで接続するとsyslogに以下のエラーが出る。
@@ -293,10 +293,10 @@ Jan  5 23:48:32 haramaki kernel: [97894.621700]         [00] BAD  33 48 0a 20 20
 Jan  5 23:48:32 haramaki kernel: [97894.621701]         [00] BAD  4c 1f 53 12 00 0a 20 20 20 20 20 20 00 00 00 ff
 Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30 43 30 31 34 34 30 31 31 0a 00 33
 </code></pre><p>どうやらEDIDが壊れているようだ。</p>
-<h2 id="linuxedid-rom">LinuxからモニターのEDID ROMを読み書きするには</h2>
+<h2 id="linuxからモニターのedid-romを読み書きするには">LinuxからモニターのEDID ROMを読み書きするには</h2>
 <p>モニターには <a href="http://read.pudn.com/downloads110/ebook/456020/E-EDID%20Standard.pdf">EDID(利用可能な解像度・リフレッシュレート・メーカー名・型番などの情報)</a>が格納されたROMが搭載されており、PCとVESA Display Data Channel(I2Cベースのバス)で接続されている。</p>
 <p>このROMはLinuxからI2Cデバイスとして認識されているので、I2Cバス操作用のツールでROMを読み書きすることができる。</p>
-<h2 id="dviedid-rom">DVIのEDID ROMが繋っているバスを探す</h2>
+<h2 id="dviのedid-romが繋っているバスを探す">DVIのEDID ROMが繋っているバスを探す</h2>
 <p>rootで<code>i2cdetect -l</code> を実行し、バスの一覧を出す</p>
 <pre><code># i2cdetect -l
 i2c-3	i2c       	AMDGPU DM i2c hw bus 2          	I2C adapter
@@ -374,13 +374,13 @@ d0:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
 e0:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
 f0:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
 </code></pre></div><p>EDIDの内容から、このカードではバス番号2がHDMIのバスで、バス番号3がDVIポートのバスであることがわかる。</p>
-<h2 id="edid">正常なEDIDを吸い出す</h2>
+<h2 id="正常なedidを吸い出す">正常なEDIDを吸い出す</h2>
 <p>モニタを正常なポート(HDMI)で接続し、正常なEDIDを吸い出す</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain"># echo Y | i2cdump 2 0x50 &gt; edid-h243h-hdmi.txt
 $ vim edid-h243h-hdmi.txt
 (マクロで余計なデータを取り除いてhex dumpに変換)
 $ xxd -r -p &lt; edid-h243h-hdmi.txt &gt; edid-h243h-hdmi.bin
-</code></pre></div><h2 id="dviedid">DVIポートのEDIDの修復</h2>
+</code></pre></div><h2 id="dviポートのedidの修復">DVIポートのEDIDの修復</h2>
 <p>モニタをDVIで接続し、正常なEDIDを書き込む</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">$ cat &lt;&lt;&#39;EOS&#39; &gt;edidwrite.py
 #!/usr/bin/python3
@@ -422,7 +422,7 @@ $ sudo python3 edidwrite.py 3 edid-h243h-hdmi.bin
   
 </div>
 
-<h2 id="heading">おまけ</h2>
+<h2 id="おまけ">おまけ</h2>
 <p>EDIDをいじるとこういうこともできる</p>
 
 

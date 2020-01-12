@@ -17,12 +17,12 @@
       <pubDate>Sat, 16 Feb 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/02/diary-20190216/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;ラックの修理&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;ラックを車に取り付けてボルトを塗装し、車体の穴をフェルトで塞いだ。&lt;/li&gt;
 &lt;li&gt;これでラックの修理は完了&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;寝るのが遅すぎたのが原因でラックを修理していたら夜遅くになってしまった。今日の筋トレはなし&lt;/li&gt;
 &lt;li&gt;通常の食事2食, 追加でタンパク質64g分のプロテイン, HMB3gを摂取
@@ -49,11 +49,11 @@
 &lt;li&gt;デバッグ情報を分離して &lt;code&gt;/usr/lib/debug/.build-id/...&lt;/code&gt; に置きたいので、LDFLAGSに &lt;code&gt;-Wl,--build-id&lt;/code&gt;を追加してBuild IDを生成するようにした&lt;/li&gt;
 &lt;li&gt;必要なさそうなので &lt;code&gt;CFLAGS&lt;/code&gt;から &lt;code&gt;-grecord-gcc-switches&lt;/code&gt;を削除&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;ラックの修理&lt;/h2&gt;
+&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;ステーと立バンドの裏に塗料を重ね塗りした。今週末には完成しそう&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ30分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBを昼, 夕食前, 就寝前に1g摂取&lt;/li&gt;
@@ -118,7 +118,7 @@
 &lt;ul&gt;
 &lt;li&gt;glibcのテストが失敗するのは LDFLAGSで &lt;code&gt;-z now&lt;/code&gt;を渡すとダイナミックリンカが壊れるのが原因だった。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを筋トレ30分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBを昼, 筋トレ1時間前, 就寝前に1g摂取&lt;/li&gt;
@@ -174,7 +174,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;ラックの修理&lt;/h2&gt;
+&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
 &lt;p&gt;立バンドの裏を塗装し、ステーのめっきが剥げた箇所にサビ止めを塗った。&lt;/p&gt;</description>
     </item>
     
@@ -196,7 +196,7 @@
 &lt;p&gt;&lt;a href=&#34;http://clfs.org&#34;&gt;Cross Linux from Scratch&lt;/a&gt; のサイトが消滅してた&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;THE プレワークアウトを30分前に1スクープ摂取&lt;/li&gt;
 &lt;li&gt;HMBを昼に1g, トレーニング1時間前に1g摂取, 夜に1g摂取&lt;/li&gt;
@@ -246,9 +246,9 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;ラックの修理&lt;/h2&gt;
+&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
 &lt;p&gt;立バンドに塗料を塗り重ねた&lt;/p&gt;
-&lt;h2 id=&#34;heading-2&#34;&gt;その他&lt;/h2&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;スキーに行くとき車中泊する予定なので電気毛布を注文した&lt;/li&gt;
 &lt;li&gt;ついでにいろいろと注文した
@@ -267,7 +267,7 @@
       <pubDate>Sun, 10 Feb 2019 14:36:00 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/02/diary-20190210/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;ラックの修理&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;残りのステー4つを加工して仮付けしてみた。&lt;/li&gt;
 &lt;li&gt;一旦ステーとラックを全部外してサビ止めと塗装
@@ -278,10 +278,10 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;もう半分のプロテインが届いた&lt;/h2&gt;
+&lt;h2 id=&#34;もう半分のプロテインが届いた&#34;&gt;もう半分のプロテインが届いた&lt;/h2&gt;
 &lt;p&gt;マイプロテインから残りの品(カゼイン5kg, 10Lサプリメント用ボトル2個)が入った箱が届いた。商品の大きさに対して箱が小さすぎるのでこっちもボトルがベコベコになっていた。&lt;/p&gt;
 &lt;p&gt;ボトルのへこみを手で戻して洗い、フタの裏に乾燥剤を貼りつけておいた。&lt;/p&gt;
-&lt;h2 id=&#34;heading-2&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;プレワークアウトの変な臭みは混ぜたHMBが原因だった。HMBを混ぜてないTHE プレワークアウトのフルーツパンチ味はケミカルな感じのする甘酸っぱい味だった。&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://hmb-supplement.net/?p=413&#34;&gt;HMBの臭み消しには柑橘系のフルーツジュースやココア味やチョコ味のプロテインが有効らしい&lt;/a&gt;
@@ -344,9 +344,9 @@
       <pubDate>Sat, 09 Feb 2019 19:54:35 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/02/diary-20190209/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;ラックの修理&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
 &lt;p&gt;ステーを2本削って曲げ、ラックのリア側も立バンド固定にした。&lt;/p&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;プロテインが半分届いた&lt;/h2&gt;
+&lt;h2 id=&#34;プロテインが半分届いた&#34;&gt;プロテインが半分届いた&lt;/h2&gt;
 &lt;p&gt;先週マイプロテインに頼んだサプリメントが2分割で発送され、ホエイ5kg、プレワークアウト、HMBとおまけが入った方の箱が届いた。&lt;/p&gt;
 &lt;p&gt;プレミアム配送が無料になる注文金額だったので、はじめてプレミアム配送を使ってみたが、梱包は通常配送と変わらないようなので、謎の粉まみれになっていたり、サプリメント容器が薄汚れてベコベコになっていたりしたが、&lt;del&gt;破損はなかった。&lt;/del&gt; HMBの袋のチャックが壊れかかってた。なんとか密封されているようだが、かなり締めにくい&lt;/p&gt;
 &lt;p&gt;前回通常配送で頼んだときは、 11/12注文 11/15発送 11/26着で、今回は1週間で半分到着なので、通常配送より速くはなっているようだ。&lt;/p&gt;
@@ -361,11 +361,11 @@
       <guid>https://ngkz.github.io/2019/02/diary-20190206/</guid>
       <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;*FLAGS&lt;/code&gt; の解説が完成した。Temporary Systemにchrootにする処理を書いている。&lt;/p&gt;
-&lt;h2 id=&#34;heading&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
+&lt;h2 id=&#34;スキーのトップシートの修理&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
 &lt;p&gt;接着後にトップシートに残った欠けをホットボンドで埋めた。修理完了&lt;/p&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;ラックの修理&lt;/h2&gt;
+&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
 &lt;p&gt;ステーを2本同じ方法で加工した。日曜に買った荒目のヤスリを使ったら加工時間が半分になった。&lt;/p&gt;
-&lt;h2 id=&#34;heading-2&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;下半身 + 腹筋&lt;/p&gt;
 &lt;p&gt;うまくいかなかった&lt;/p&gt;
 &lt;table&gt;
@@ -416,7 +416,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading-3&#34;&gt;その他&lt;/h2&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;茨城県庁で茨城県警が超小型のArduino Leonardo互換機でBadUSBのデモをやってた&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -428,10 +428,10 @@
       <pubDate>Sun, 03 Feb 2019 21:07:36 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/02/diary-20190203/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;ラックの修理&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
 &lt;p&gt;\980で細工用の荒目ヤスリが売ってたので買った。アシストグリップが入っていた穴を隠すためのフェルトも調達した。&lt;/p&gt;
 &lt;p&gt;天井収納にかけた費用が &lt;a href=&#34;https://www.monotaro.com/p/3469/3872/&#34;&gt;https://www.monotaro.com/p/3469/3872/&lt;/a&gt;  2本より高くなってた。かけた手間暇を考えたらこれ2本買ってすべり止め巻くだけのほうがマシだったかも。&lt;/p&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;缶コーヒーを2本 (カフェイン90mg x 2) 飲んだら、最初は筋トレが楽になったけど途中から気分が悪くなってきて逆に回数が落ちた。しばらく休憩したら回復した。&lt;/p&gt;
 &lt;p&gt;下半身&lt;/p&gt;
 &lt;table&gt;
@@ -482,7 +482,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;heading-2&#34;&gt;その他&lt;/h2&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;買い物して、3時間筋トレして、3時間ネットで無駄にしたら1日が終わってた。未完了のタスクが積もってきている。ネットで時間を無駄にするのを防ぐためにLeechBlockを入れてみたけど、効果のあるルールが作れない。&lt;/li&gt;
 &lt;li&gt;部屋がホコリっぽくなってきたので掃除した&lt;/li&gt;
@@ -495,7 +495,7 @@
       <pubDate>Sat, 02 Feb 2019 23:59:59 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/02/diary-20190202/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;ラックの修理&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
 &lt;p&gt;ステーの削る位置を変えてみたらラックが入った。&lt;/p&gt;
 &lt;p&gt;
 
@@ -553,7 +553,7 @@
 &lt;/p&gt;
 &lt;p&gt;細工用のヤスリを使うとバンドのネジが入るようにステーを削るのに1本45分くらいかかってしまう。
 普通サイズの荒いヤスリだとステーの穴に入らないし、あと6本加工しないといけないから困った。&lt;/p&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;プロテインの調達&lt;/h2&gt;
+&lt;h2 id=&#34;プロテインの調達&#34;&gt;プロテインの調達&lt;/h2&gt;
 &lt;p&gt;ゾロ目フラッシュセール開始2時間後に買った商品が売り切れていないかチェックした。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Impact ホエイ ノンフレーバーの5kgが売り切れていた&lt;/li&gt;
@@ -561,7 +561,7 @@
 &lt;li&gt;プレワークアウトは何種類かのフレーバーが売り切れになっていた&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;ホエイノンフレ5kgは開始直後かフラッシュセール開始前に調達しないとまずいことが分かった。&lt;/p&gt;
-&lt;h2 id=&#34;heading-2&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;上半身プッシュ+腹筋&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -619,9 +619,9 @@
       <pubDate>Sun, 27 Jan 2019 22:21:54 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/01/diary-20190127/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;車のメンテ&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;車のメンテ&#34;&gt;車のメンテ&lt;/h2&gt;
 &lt;p&gt;オイルとフィルターを交換してタイヤローテーションもした。先週スキーに行ったので、車の足回りを高圧洗浄機で掃除した。&lt;/p&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;ラックの修理&lt;/h2&gt;
+&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
 &lt;p&gt;試しに立バンドのボルトが入るようにステーを削って前席の左右に取り付けてみたが、立バンド間の幅が小さくてラックが入らなかった。立バンドの取り付け位置を変えてもだめだったら、叩いてステーの角度を変えるか、ステーを切断して短くする必要がありそう&lt;/p&gt;
 
 
@@ -650,7 +650,7 @@
   
 &lt;/div&gt;
 
-&lt;h2 id=&#34;heading-2&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
+&lt;h2 id=&#34;スキーのトップシートの修理&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
 &lt;p&gt;昨日の接着面がムラがあるものの十分な強度で接着されていたので、他の部分も接着した。&lt;/p&gt;</description>
     </item>
     
@@ -660,9 +660,9 @@
       <pubDate>Sat, 26 Jan 2019 23:17:24 +0900</pubDate>
       
       <guid>https://ngkz.github.io/2019/01/diary-20190126/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;ラックの修理&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;ラックの修理&#34;&gt;ラックの修理&lt;/h2&gt;
 &lt;p&gt;簡単な加工で使えそうなステーと立バンド各8個と、サビ止めを調達した。&lt;/p&gt;
-&lt;h2 id=&#34;heading-1&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
+&lt;h2 id=&#34;スキーのトップシートの修理&#34;&gt;スキーのトップシートの修理&lt;/h2&gt;
 &lt;p&gt;無色で弾力性のあるエポキシ接着剤が売っていないので、かわりにGPクリヤーを購入した。接着面全体を圧着するために5x100x100のゴム板も買った。&lt;/p&gt;
 &lt;p&gt;接着力が不安なので、試しに完全に接着されなくても問題なさそうな場所を接着してみた。&lt;/p&gt;
 &lt;p&gt;
@@ -693,7 +693,7 @@
 &lt;/div&gt;
 \&lt;/p&gt;
 &lt;p&gt;完全な接着に24時間かかるので、修理には数週間かかりそう。&lt;/p&gt;
-&lt;h2 id=&#34;heading-2&#34;&gt;筋トレ&lt;/h2&gt;
+&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
 &lt;p&gt;全身&lt;/p&gt;
 &lt;p&gt;集中できなかった&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;ブルガリアンスクワット       3セット 15kgx2 + 自重     11回以上                     右11回 左10回 右8回 左8回 右7回+自重で何回か 左6回+自重で何回か
