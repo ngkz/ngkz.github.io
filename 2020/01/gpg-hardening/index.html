@@ -448,7 +448,7 @@ ssb  rsa4096/0xC2AC8CAE60CEDC4F
 
 gpg&gt; save
 </code></pre><h3 id="backing-up-primary-secret-key">Backing up primary secret key</h3>
-<p>Backup <code>~/.gnupg</code> to safe place like encrypted USB stick.
+<p>Backup <code>~/.gnupg</code> to safe place like air-gapped computer or encrypted USB stick.
 (Warning: data in flash drives evaporates slowly)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ cp -a ~/.gnupg &lt;BACKUP&gt;
 </code></pre></div><p>If you need the primary secret key, mount the stick and use <code>--homedir</code> option.</p>
