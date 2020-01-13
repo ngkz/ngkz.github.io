@@ -121,7 +121,7 @@ gpg> save
 ```
 
 ### Backing up primary secret key
-Backup `~/.gnupg` to safe place like encrypted USB stick.
+Backup `~/.gnupg` to safe place like air-gapped computer or encrypted USB stick.
 (Warning: data in flash drives evaporates slowly)
 
 ```sh
