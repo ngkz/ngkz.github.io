@@ -6,10 +6,46 @@
     <description>Recent content in Posts on Fierce Falcon Laboratory</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 02 Jan 2020 23:34:04 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jan 2020 01:31:22 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>GnuPG Security Reinforcement</title>
+      <link>https://ngkz.github.io/2020/01/improve-gpg-security/</link>
+      <pubDate>Sun, 12 Jan 2020 01:31:22 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2020/01/improve-gpg-security/</guid>
+      <description>&lt;p&gt;SHA-1 is &lt;a href=&#34;https://sha-mbles.github.io/&#34;&gt;completely&lt;/a&gt; &lt;a href=&#34;https://shattered.io/&#34;&gt;dead&lt;/a&gt;. And I noticed legacy GPG signed my PGP key with SHA-1.&lt;/p&gt;
+&lt;h2 id=&#34;improving-gpg-configuration&#34;&gt;Improving GPG Configuration&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;$ vim ~/.gnupg/gpg.conf
+# use SHA-512 when signing a key
+cert-digest-algo SHA512
+# override recipient key cipher preferences
+# remove 3DES and prefer AES256
+personal-cipher-preferences AES256 AES192 AES CAST5
+# override recipient key digest preferences
+# remove SHA-1 and prefer SHA-512
+personal-digest-preferences SHA512 SHA384 SHA256 SHA224
+# remove SHA-1 and 3DES from cipher preferences of newly created key
+default-preference-list SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB BZIP2 ZIP Uncompressed
+# reject SHA-1 signature
+weak-digest SHA1
+# never allow use 3DES
+disable-cipher-algo 3DES
+# use AES256 when symmetric encryption
+s2k-cipher-algo AES256
+# use SHA-512 when symmetric encryption
+s2k-digest-algo SHA-512
+# mangle password many times as possible when symmetric encryption
+s2k-count 65011712
+# both short and long key IDs are insecure
+keyid-format none
+# use full fingerprint instead
+with-subkey-fingerprint
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;migrating-signature-digest-to-sha-512&#34;&gt;Migrating signature digest to SHA-512&lt;/h2&gt;</description>
+    </item>
     
     <item>
       <title>Building Linux from Scratch (Part 51)</title>

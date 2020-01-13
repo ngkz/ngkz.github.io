@@ -13,10 +13,10 @@
 
 <meta property="og:description" content="Kazutoshi Noguchi&#39;s blog">
 <meta property="og:type" content="website">
-<meta property="og:title" content="howto">
-<meta name="twitter:title" content="howto">
-<meta property="og:url" content="https://ngkz.github.io/categories/howto/">
-<meta property="twitter:url" content="https://ngkz.github.io/categories/howto/">
+<meta property="og:title" content="GPG">
+<meta name="twitter:title" content="GPG">
+<meta property="og:url" content="https://ngkz.github.io/tags/gpg/">
+<meta property="twitter:url" content="https://ngkz.github.io/tags/gpg/">
 <meta property="og:site_name" content="Fierce Falcon Laboratory">
 <meta property="og:description" content="Kazutoshi Noguchi&#39;s blog">
 <meta name="twitter:description" content="Kazutoshi Noguchi&#39;s blog">
@@ -39,16 +39,16 @@
   <meta property="twitter:image" content="https://ngkz.github.io/insignia.png">
 
 
-    <title>howto</title>
+    <title>GPG</title>
 
     <link rel="icon" href="https://ngkz.github.io/favicon.png">
     
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://ngkz.github.io/categories/howto/index.xml">
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://ngkz.github.io/tags/gpg/index.xml">
     
 
     
 
-    <link rel="canonical" href="https://ngkz.github.io/categories/howto/">
+    <link rel="canonical" href="https://ngkz.github.io/tags/gpg/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -215,20 +215,20 @@
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://ngkz.github.io/2018/08/cargo-run-test-with-sudo/">
-          テストをrootとして動かす方法 (Rust)
+        <a class="link-unstyled" href="https://ngkz.github.io/2020/01/improve-gpg-security/">
+          GnuPG Security Reinforcement
         </a>
       </h1>
       
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-08-01T17:37:33&#43;09:00">
+      <time itemprop="datePublished" datetime="2020-01-12T01:31:22&#43;09:00">
         
   
   
   
   
-    2018-08-01
+    2020-01-12
   
 
       </time>
@@ -247,201 +247,37 @@
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        <p><a href="https://github.com/rust-lang/cargo/issues/1924">https://github.com/rust-lang/cargo/issues/1924</a> によると、<code>cargo test --no-run --message-format=json | jq -r &quot;select(.profile.test == true) | .filenames[]&quot;</code> でテストバイナリの一覧が取得できる。これをsudoで実行するスクリプトを作ればOK</p>
+        <p>SHA-1 is <a href="https://sha-mbles.github.io/">completely</a> <a href="https://shattered.io/">dead</a>. And I noticed legacy GPG signed my PGP key with SHA-1.</p>
+<h2 id="improving-gpg-configuration">Improving GPG Configuration</h2>
+<pre><code>$ vim ~/.gnupg/gpg.conf
+# use SHA-512 when signing a key
+cert-digest-algo SHA512
+# override recipient key cipher preferences
+# remove 3DES and prefer AES256
+personal-cipher-preferences AES256 AES192 AES CAST5
+# override recipient key digest preferences
+# remove SHA-1 and prefer SHA-512
+personal-digest-preferences SHA512 SHA384 SHA256 SHA224
+# remove SHA-1 and 3DES from cipher preferences of newly created key
+default-preference-list SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB BZIP2 ZIP Uncompressed
+# reject SHA-1 signature
+weak-digest SHA1
+# never allow use 3DES
+disable-cipher-algo 3DES
+# use AES256 when symmetric encryption
+s2k-cipher-algo AES256
+# use SHA-512 when symmetric encryption
+s2k-digest-algo SHA-512
+# mangle password many times as possible when symmetric encryption
+s2k-count 65011712
+# both short and long key IDs are insecure
+keyid-format none
+# use full fingerprint instead
+with-subkey-fingerprint
+</code></pre><h2 id="migrating-signature-digest-to-sha-512">Migrating signature digest to SHA-512</h2>
       
       <p>
-        <a href="https://ngkz.github.io/2018/08/cargo-run-test-with-sudo/" class="postShorten-excerpt_link link">続きを読む</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://ngkz.github.io/2018/07/audit-cargo-crate/">
-          依存しているパッケージ(crate)の中身を実行せずに調べる方法 (Rust)
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2018-07-25T22:24:30&#43;09:00">
-        
-  
-  
-  
-  
-    2018-07-25
-  
-
-      </time>
-    
-    
-  
-  
-    <span>カテゴリー</span>
-    
-      <a class="category-link" href="https://ngkz.github.io/categories/howto">howto</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        cargo fetch1 でパッケージを取得すると、~/.cargo/registry/src/github.com-1ecc6299db9ec823/(パッケージ名)-(バージョン) にパッケージのソースコードが展開される。
-Cargo.lockにすべての依存クレートの名前とバージョンが記録されているので、これを見てコードに問題がないか調べることができる。
-  cargo buildはビルドスクリプトを実行してしまうのでダメ &#x21a9;&#xfe0e;
-   
-      
-      <p>
-        <a href="https://ngkz.github.io/2018/07/audit-cargo-crate/" class="postShorten-excerpt_link link">続きを読む</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://ngkz.github.io/2013/09/galaxys3-adb-restore-fail/">
-          Galaxy S3(SC-06D)がadbバックアップを戻した後再起動を繰り返すようになったときの対処方法
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2013-09-12T13:29:56&#43;09:00">
-        
-  
-  
-  
-  
-    2013-09-12
-  
-
-      </time>
-    
-    
-  
-  
-    <span>カテゴリー</span>
-    
-      <a class="category-link" href="https://ngkz.github.io/categories/howto">howto</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <h2 id="リカバリモードに入ってファクトリーリセットする">リカバリモードに入ってファクトリーリセットする</h2>
-<p>galaxy S3 リカバリモードの入り方:</p>
-<!-- raw HTML omitted -->
-<h2 id="バックアップを展開">バックアップを展開</h2>
-      
-      <p>
-        <a href="https://ngkz.github.io/2013/09/galaxys3-adb-restore-fail/" class="postShorten-excerpt_link link">続きを読む</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://ngkz.github.io/2013/03/howto-reactivate-keepassx/">
-          トレイに格納したKeePassXを復元できるようにする方法
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2013-03-14T17:21:07&#43;09:00">
-        
-  
-  
-  
-  
-    2013-03-14
-  
-
-      </time>
-    
-    
-  
-  
-    <span>カテゴリー</span>
-    
-      <a class="category-link" href="https://ngkz.github.io/categories/howto">howto</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <p>Ubuntu 12.10-14.04で確認済み</p>
-<pre><code>echo &quot;keepassx=1&quot; &gt;&gt; /etc/xdg/sni-qt.conf
-</code></pre>
-      
-      <p>
-        <a href="https://ngkz.github.io/2013/03/howto-reactivate-keepassx/" class="postShorten-excerpt_link link">続きを読む</a>
+        <a href="https://ngkz.github.io/2020/01/improve-gpg-security/" class="postShorten-excerpt_link link">続きを読む</a>
         
       </p>
     </div>
@@ -451,23 +287,6 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
 
             
             
-  <div class="pagination-bar">
-    <ul class="pagination">
-      
-        
-          <li class="pagination-prev">
-            <a class="btn btn--default btn--small" href="https://ngkz.github.io/categories/howto/">
-              <i class="fa fa-angle-left text-base icon-mr"></i>
-              <span>新しい投稿</span>
-            </a>
-          </li>
-        
-        
-      
-      <li class="pagination-number">page 2 of 2</li>
-    </ul>
-  </div>
-
 
           </section>
         
