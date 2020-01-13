@@ -12,11 +12,11 @@
     
     
     <item>
-      <title>GnuPG Security Reinforcement</title>
-      <link>https://ngkz.github.io/2020/01/improve-gpg-security/</link>
+      <title>GnuPG Hardening</title>
+      <link>https://ngkz.github.io/2020/01/gpg-hardening/</link>
       <pubDate>Sun, 12 Jan 2020 01:31:22 +0900</pubDate>
       
-      <guid>https://ngkz.github.io/2020/01/improve-gpg-security/</guid>
+      <guid>https://ngkz.github.io/2020/01/gpg-hardening/</guid>
       <description>&lt;p&gt;SHA-1 is &lt;a href=&#34;https://sha-mbles.github.io/&#34;&gt;completely&lt;/a&gt; &lt;a href=&#34;https://shattered.io/&#34;&gt;dead&lt;/a&gt;. And I noticed legacy GPG signed my PGP key with SHA-1.&lt;/p&gt;
 &lt;h2 id=&#34;improving-gpg-configuration&#34;&gt;Improving GPG Configuration&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;$ vim ~/.gnupg/gpg.conf
