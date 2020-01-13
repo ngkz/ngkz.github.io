@@ -1,5 +1,5 @@
 ---
-title: "GnuPG Security Reinforcement"
+title: "GnuPG Hardening"
 date: 2020-01-12T01:31:22+09:00
 categories:
 - howto
