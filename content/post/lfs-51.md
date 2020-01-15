@@ -1,5 +1,5 @@
 ---
-title: "Building Linux from Scratch (Part 51)"
+title: "Linux from Scratch - Automation Part 1"
 date: 2020-01-02T23:34:04+09:00
 categories:
 - F²LFS
