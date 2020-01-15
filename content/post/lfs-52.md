@@ -9,7 +9,7 @@ tags:
 
 I am writing a sphinx domain and directives for describing package and its build script.
 
-It only parses and stores package information for now. I'm implementing its visual representation now.
+It only parses and stores package information for now. It does not have a visual representation yet.
 
 <!--more-->
 
