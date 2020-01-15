@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Fierce Falcon Laboratory</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 12 Jan 2020 01:31:22 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jan 2020 18:35:15 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>F²LFS</title>
+      <link>https://ngkz.github.io/categories/flfs/</link>
+      <pubDate>Tue, 14 Jan 2020 18:35:15 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/categories/flfs/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>howto</title>
@@ -17,15 +26,6 @@
       <pubDate>Sun, 12 Jan 2020 01:31:22 +0900</pubDate>
       
       <guid>https://ngkz.github.io/categories/howto/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>F²LFS</title>
-      <link>https://ngkz.github.io/categories/flfs/</link>
-      <pubDate>Thu, 02 Jan 2020 23:34:04 +0900</pubDate>
-      
-      <guid>https://ngkz.github.io/categories/flfs/</guid>
       <description></description>
     </item>
     
