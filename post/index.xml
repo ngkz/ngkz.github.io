@@ -18,7 +18,7 @@
       
       <guid>https://ngkz.github.io/2020/01/lfs-52/</guid>
       <description>&lt;p&gt;I am writing a sphinx domain and directives for describing package and its build script.&lt;/p&gt;
-&lt;p&gt;It only parses and stores package information for now. I&#39;m implementing its visual representation now.&lt;/p&gt;</description>
+&lt;p&gt;It only parses and stores package information for now. It does not have a visual representation yet.&lt;/p&gt;</description>
     </item>
     
     <item>
