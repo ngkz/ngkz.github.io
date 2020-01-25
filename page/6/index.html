@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.62.2 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.63.1 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="Kazutoshi Noguchi&#39;s blog">
@@ -97,7 +97,7 @@
         </a>
         <h4 class="sidebar-profile-name">Kazutoshi Noguchi</h4>
         
-          <h5 class="sidebar-profile-bio">I'm interested in Computer, Trip, Electronics, and DIY.</h5>
+          <h5 class="sidebar-profile-bio">I&rsquo;m interested in Computer, Trip, Electronics, and DIY.</h5>
         
       </div>
     
@@ -194,6 +194,76 @@
                ">
         <section class="postShorten-group main-content-wrap">
           
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190326/">
+          日記 2019/03/26(火)
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-03-26T22:40:00&#43;09:00">
+        
+  
+  
+  
+  
+    2019-03-26
+  
+
+      </time>
+    
+    
+  
+  
+    <span>カテゴリー</span>
+    
+      <a class="category-link" href="https://ngkz.github.io/categories/%e6%97%a5%e8%a8%98">日記</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        <h2 id="linux-from-scratch">Linux from Scratch</h2>
+<ul>
+<li>GCCのビルド中
+<ul>
+<li>別のマシンでビルドしてもテストが通らなかった。</li>
+<li>テストコードとGCCが生成したバイナリを調べたり、GCCのメーリングリストとバグトラッカーで解決策を探したりしてみたら、何個かのテストについては解決策を見つけた。一部のテストが<code>--enable-default-pie</code>や<code>--enable-default-ssp</code>でビルドしたGCCに対応していないらしい。</li>
+</ul>
+</li>
+</ul>
+<h2 id="その他">その他</h2>
+      
+      <p>
+        <a href="https://ngkz.github.io/2019/03/diary-20190326/" class="postShorten-excerpt_link link">続きを読む</a>
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
           
             
   
@@ -716,93 +786,6 @@
 </article>
 
           
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190319/">
-          日記 2019/03/19(火)
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2019-03-19T23:59:59&#43;09:00">
-        
-  
-  
-  
-  
-    2019-03-19
-  
-
-      </time>
-    
-    
-  
-  
-    <span>カテゴリー</span>
-    
-      <a class="category-link" href="https://ngkz.github.io/categories/%e6%97%a5%e8%a8%98">日記</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <h2 id="linux-from-scratch">Linux from Scratch</h2>
-<ul>
-<li>lddが正常に動いていなかったのを直した
-<ul>
-<li><code>rtlddir</code>を<code>/usr/lib</code>に設定したとき <code>ldd</code>が64bitダイナミックリンカのパスとして <code>/usr/lib64/ld-linux-x86_64.so.2</code> を使っていたのが原因だった。
-<ul>
-<li><code>/usr/lib64</code>から<code>/usr/lib</code>へのシンボリックリンクを貼って解決</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>ライセンス違反を解決
-<ul>
-<li>大部分がCC-BY-NC-SA 2.0のLFS Bookからの引用になったのに、リポジトリのライセンスが互換性のないGPLv3のままになっていた。
-<ul>
-<li>ライセンスをCC-BY-NC-SAに変更して解決</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Adjusting the Toolchain
-<ul>
-<li><code>/usr/lib32</code>に必要な32bitライブラリへのリンクを貼るのを忘れていたため、32bitでコンパイルできなかったのを直した</li>
-</ul>
-</li>
-</ul>
-<h2 id="筋トレ">筋トレ</h2>
-      
-      <p>
-        <a href="https://ngkz.github.io/2019/03/diary-20190319/" class="postShorten-excerpt_link link">続きを読む</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
           
   <div class="pagination-bar">
     <ul class="pagination">
@@ -849,7 +832,7 @@
     
     <h4 id="about-card-name">Kazutoshi Noguchi</h4>
     
-      <div id="about-card-bio">I'm interested in Computer, Trip, Electronics, and DIY.</div>
+      <div id="about-card-bio">I&rsquo;m interested in Computer, Trip, Electronics, and DIY.</div>
     
     
       <div id="about-card-job">

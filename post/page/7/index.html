@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.62.2 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.63.1 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="Kazutoshi Noguchi&#39;s blog">
@@ -97,7 +97,7 @@
         </a>
         <h4 class="sidebar-profile-name">Kazutoshi Noguchi</h4>
         
-          <h5 class="sidebar-profile-bio">I'm interested in Computer, Trip, Electronics, and DIY.</h5>
+          <h5 class="sidebar-profile-bio">I&rsquo;m interested in Computer, Trip, Electronics, and DIY.</h5>
         
       </div>
     
@@ -195,6 +195,93 @@
         <section class="postShorten-group main-content-wrap">
           
           
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190319/">
+          日記 2019/03/19(火)
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-03-19T23:59:59&#43;09:00">
+        
+  
+  
+  
+  
+    2019-03-19
+  
+
+      </time>
+    
+    
+  
+  
+    <span>カテゴリー</span>
+    
+      <a class="category-link" href="https://ngkz.github.io/categories/%e6%97%a5%e8%a8%98">日記</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        <h2 id="linux-from-scratch">Linux from Scratch</h2>
+<ul>
+<li>lddが正常に動いていなかったのを直した
+<ul>
+<li><code>rtlddir</code>を<code>/usr/lib</code>に設定したとき <code>ldd</code>が64bitダイナミックリンカのパスとして <code>/usr/lib64/ld-linux-x86_64.so.2</code> を使っていたのが原因だった。
+<ul>
+<li><code>/usr/lib64</code>から<code>/usr/lib</code>へのシンボリックリンクを貼って解決</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>ライセンス違反を解決
+<ul>
+<li>大部分がCC-BY-NC-SA 2.0のLFS Bookからの引用になったのに、リポジトリのライセンスが互換性のないGPLv3のままになっていた。
+<ul>
+<li>ライセンスをCC-BY-NC-SAに変更して解決</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Adjusting the Toolchain
+<ul>
+<li><code>/usr/lib32</code>に必要な32bitライブラリへのリンクを貼るのを忘れていたため、32bitでコンパイルできなかったのを直した</li>
+</ul>
+</li>
+</ul>
+<h2 id="筋トレ">筋トレ</h2>
+      
+      <p>
+        <a href="https://ngkz.github.io/2019/03/diary-20190319/" class="postShorten-excerpt_link link">続きを読む</a>
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
           
             
   
@@ -718,126 +805,6 @@
 </article>
 
           
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190311/">
-          日記 2019/03/11(月)
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2019-03-11T23:37:15&#43;09:00">
-        
-  
-  
-  
-  
-    2019-03-11
-  
-
-      </time>
-    
-    
-  
-  
-    <span>カテゴリー</span>
-    
-      <a class="category-link" href="https://ngkz.github.io/categories/%e6%97%a5%e8%a8%98">日記</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <h2 id="筋トレ">筋トレ</h2>
-<ul>
-<li>THE プレワークアウトを筋トレ30分前に1スクープ摂取</li>
-<li>HMBを夕方, トレーニング1時間前, 就寝前に1g摂取</li>
-<li>前日の睡眠 6時間未満</li>
-<li>オーバーナイトリカバリーが無くなったのでカゼイン + バニラエッセンス + パラチニットスイート1本(1.2g, 砂糖5g相当) を飲んだ。バニラエッセンスを12滴も入れたのに、なぜかバニラの香りがほとんどしない</li>
-</ul>
-<p><strong>上半身プッシュ</strong></p>
-<table>
-<thead>
-<tr>
-<th>種目</th>
-<th>重量&amp;目標回数</th>
-<th>回数</th>
-<th>備考</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ローテーターカフのウォームアップ</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>プッシュアップ</td>
-<td>3セット 自重 10回以上 → 膝つき</td>
-<td>→ 9→3 5→3 4→4</td>
-<td></td>
-</tr>
-<tr>
-<td>ダンベルショルダープレス</td>
-<td>2セット 25kg(10kg+シャフトx2) 11回以上 → ドロップ</td>
-<td>↑11 9→10kgで20</td>
-<td></td>
-</tr>
-<tr>
-<td>ダンベルフレンチプレス</td>
-<td>2セット 12.5kg(10kg+シャフト) 12回以上 → ドロップ</td>
-<td>↓10 11→5kgで15</td>
-<td></td>
-</tr>
-<tr>
-<td>ダンベルフライ</td>
-<td>2セット 20kg(7.5kg+シャフトx2) 13回以上 → ドロップ</td>
-<td>↑14 12→10kgで20</td>
-<td></td>
-</tr>
-<tr>
-<td>ツイストクランチ</td>
-<td>3セット 自重 5秒維持 23回以上</td>
-<td></td>
-<td>時間切れ</td>
-</tr>
-</tbody>
-</table>
-<h2 id="その他">その他</h2>
-<ul>
-<li>雨が降って車が1日もたたないうちにドロドロになった :(</li>
-</ul>
-      
-      <p>
-        <a href="https://ngkz.github.io/2019/03/diary-20190311/" class="postShorten-excerpt_link link">続きを読む</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
           
   <div class="pagination-bar">
     <ul class="pagination">
@@ -884,7 +851,7 @@
     
     <h4 id="about-card-name">Kazutoshi Noguchi</h4>
     
-      <div id="about-card-bio">I'm interested in Computer, Trip, Electronics, and DIY.</div>
+      <div id="about-card-bio">I&rsquo;m interested in Computer, Trip, Electronics, and DIY.</div>
     
     
       <div id="about-card-job">

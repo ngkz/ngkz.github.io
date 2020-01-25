@@ -6,10 +6,19 @@
     <description>Recent content on Fierce Falcon Laboratory</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 14 Jan 2020 18:35:15 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jan 2020 18:04:25 +0900</lastBuildDate>
     
 	<atom:link href="https://ngkz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linux from Scratch - Automation Part 3</title>
+      <link>https://ngkz.github.io/2020/01/lfs-53/</link>
+      <pubDate>Sat, 25 Jan 2020 18:04:25 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2020/01/lfs-53/</guid>
+      <description>&lt;p&gt;I finished the sphinx domain.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Linux from Scratch - Automation Part 2</title>
@@ -64,8 +73,8 @@ with-subkey-fingerprint
       
       <guid>https://ngkz.github.io/2020/01/lfs-51/</guid>
       <description>&lt;h2 id=&#34;what-happened-after-50th-lfs-post&#34;&gt;What happened after 50th LFS post&lt;/h2&gt;
-&lt;p&gt;I can&#39;t progress Linux from Scratch building from May to October, because I spent time on other projects.&lt;/p&gt;
-&lt;p&gt;I restarted building in October in parallel with other projects and almost done a basic system. In December, I started writing a literate programming style automated build system, but I can&#39;t make much progress as I have been busy with work recently.&lt;/p&gt;
+&lt;p&gt;I can&amp;rsquo;t progress Linux from Scratch building from May to October, because I spent time on other projects.&lt;/p&gt;
+&lt;p&gt;I restarted building in October in parallel with other projects and almost done a basic system. In December, I started writing a literate programming style automated build system, but I can&amp;rsquo;t make much progress as I have been busy with work recently.&lt;/p&gt;
 &lt;h2 id=&#34;literate-distro-building&#34;&gt;Literate distro building&lt;/h2&gt;</description>
     </item>
     
