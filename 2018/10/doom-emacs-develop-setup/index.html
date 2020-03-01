@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.63.2 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.65.3 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="動機
@@ -369,8 +369,8 @@ Spacemacs より軽い DOOM Emacs というのがあるらしい。これにし�
 <h4 id="キーに関数をマップ">キーに関数をマップ</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#75715e">;(map! :&lt;モード&gt; &#34;&lt;キー&gt;&#34; &lt;キーが押されたとき実行する関数&gt;)</span>
 <span style="color:#75715e">;複数のキーを同時にマップできる</span>
-(map! :nvi <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">C-h</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">#&#39;</span>evil-window-left <span style="color:#75715e">;#&#39;&lt;関数名&gt;</span>
-      :nvi <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">C-j</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">#&#39;</span>evil-window-down)
+(map! :nvi <span style="color:#e6db74">&#34;C-h&#34;</span> <span style="color:#a6e22e">#&#39;</span>evil-window-left <span style="color:#75715e">;#&#39;&lt;関数名&gt;</span>
+      :nvi <span style="color:#e6db74">&#34;C-j&#34;</span> <span style="color:#a6e22e">#&#39;</span>evil-window-down)
 </code></pre></div><p>モードには以下の値が使える</p>
 <table>
 <thead>
@@ -415,16 +415,16 @@ Spacemacs より軽い DOOM Emacs というのがあるらしい。これにし�
 </tbody>
 </table>
 <h4 id="vim-のmap-と同等のことをする">vim の:map と同等のことをする</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(map! :n <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">C-;</span><span style="color:#e6db74">&#34;</span> (kbd <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">itest</span><span style="color:#e6db74">&#34;</span>))
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(map! :n <span style="color:#e6db74">&#34;C-;&#34;</span> (kbd <span style="color:#e6db74">&#34;itest&#34;</span>))
 </code></pre></div><h2 id="カスタマイズ例">カスタマイズ例</h2>
 <p><a href="https://github.com/ngkz/doom.d">https://github.com/ngkz/doom.d</a></p>
 <h3 id="フォントの変更">フォントの変更</h3>
 <p><a href="https://github.com/hlissner/doom-emacs/tree/develop/modules/ui/doom#changing-fonts">https://github.com/hlissner/doom-emacs/tree/develop/modules/ui/doom#changing-fonts</a></p>
 <p><strong>config.el</strong> に以下のコードを追加</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(setq doom-font (<span style="color:#a6e22e">font-spec</span> :family <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">NasuM</span><span style="color:#e6db74">&#34;</span> :size <span style="color:#ae81ff">14</span>)
-      doom-variable-pitch-font (<span style="color:#a6e22e">font-spec</span> :family <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Nasu</span><span style="color:#e6db74">&#34;</span>)
-      doom-unicode-font (<span style="color:#a6e22e">font-spec</span> :family <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">NasuM</span><span style="color:#e6db74">&#34;</span>)
-      doom-big-font (<span style="color:#a6e22e">font-spec</span> :family <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">NasuM</span><span style="color:#e6db74">&#34;</span> :size <span style="color:#ae81ff">22</span>))
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(setq doom-font (<span style="color:#a6e22e">font-spec</span> :family <span style="color:#e6db74">&#34;NasuM&#34;</span> :size <span style="color:#ae81ff">14</span>)
+      doom-variable-pitch-font (<span style="color:#a6e22e">font-spec</span> :family <span style="color:#e6db74">&#34;Nasu&#34;</span>)
+      doom-unicode-font (<span style="color:#a6e22e">font-spec</span> :family <span style="color:#e6db74">&#34;NasuM&#34;</span>)
+      doom-big-font (<span style="color:#a6e22e">font-spec</span> :family <span style="color:#e6db74">&#34;NasuM&#34;</span> :size <span style="color:#ae81ff">22</span>))
 </code></pre></div><h3 id="コメントを見やすくする">コメントを見やすくする</h3>
 <p><code>&lt;テーマ名&gt;-brighter-comments</code> を真にするとコメントの文字色と背景色が明るくなる。背景が白っぽいと見栄えが悪いので、<code>&lt;テーマ名&gt;-comment-bg</code>で戻す。テーマによっては使えないので注意 (<a href="https://github.com/hlissner/emacs-doom-themes">テーマのソースコード</a> 参照)</p>
 <p><strong>config.el</strong></p>
@@ -437,7 +437,7 @@ Spacemacs より軽い DOOM Emacs というのがあるらしい。これにし�
        (<span style="color:#a6e22e">format</span> +onsave)  <span style="color:#75715e">; automated prettiness</span>
 </code></pre></div><h3 id="デフォルトのコメント開始文字をに設定">デフォルトのコメント開始文字を#に設定</h3>
 <p><strong>config.el</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(setq-default comment-start <span style="color:#e6db74">&#34;</span><span style="color:#e6db74"># </span><span style="color:#e6db74">&#34;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp">(setq-default comment-start <span style="color:#e6db74">&#34;# &#34;</span>)
 </code></pre></div><h3 id="行末の空白文字をハイライト">行末の空白文字をハイライト</h3>
 <p>terminal では無効にする</p>
 <p><strong>config.el</strong></p>
@@ -447,7 +447,7 @@ Spacemacs より軽い DOOM Emacs というのがあるらしい。これにし�
 <span style="color:#75715e">;; Disable trailing whitespace highlighting when in some modes</span>
 <span style="color:#75715e">;; https://qiita.com/tadsan/items/df73c711f921708facdc</span>
 (defun my/disable-trailing-mode-hook ()
-  <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Disable show tail whitespace.</span><span style="color:#e6db74">&#34;</span>
+  <span style="color:#e6db74">&#34;Disable show tail whitespace.&#34;</span>
   (setq show-trailing-whitespace <span style="color:#66d9ef">nil</span>))
 
 (defvar my/disable-trailing-modes
@@ -459,7 +459,7 @@ Spacemacs より軽い DOOM Emacs というのがあるらしい。これにし�
 
 (<span style="color:#a6e22e">mapc</span>
  (lambda (mode)
-   (add-hook (<span style="color:#a6e22e">intern</span> (<span style="color:#a6e22e">concat</span> (<span style="color:#a6e22e">symbol-name</span> mode) <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">-hook</span><span style="color:#e6db74">&#34;</span>))
+   (add-hook (<span style="color:#a6e22e">intern</span> (<span style="color:#a6e22e">concat</span> (<span style="color:#a6e22e">symbol-name</span> mode) <span style="color:#e6db74">&#34;-hook&#34;</span>))
              <span style="color:#e6db74">&#39;my/disable-trailing-mode-hook</span>))
  my/disable-trailing-modes)
 </code></pre></div><h3 id="タブ全角スペースハードスペースを記号に変換して表示">タブ・全角スペース・ハードスペースを記号に変換して表示</h3>
@@ -479,7 +479,7 @@ Spacemacs より軽い DOOM Emacs というのがあるらしい。これにし�
     (space-mark <span style="color:#e6db74">?\u</span>00A0 [<span style="color:#e6db74">?\u</span>FF65])   <span style="color:#75715e">;hard space</span>
     (tab-mark   <span style="color:#e6db74">?\t</span>     [<span style="color:#e6db74">?»</span> <span style="color:#e6db74">?\t</span>])    <span style="color:#75715e">;tab</span>
 ))
-(setq whitespace-space-regexp <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">\\</span><span style="color:#e6db74">([</span><span style="color:#e6db74">\u</span><span style="color:#e6db74">3000]+</span><span style="color:#e6db74">\\</span><span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>) <span style="color:#75715e">; highlight only full-width space</span>
+(setq whitespace-space-regexp <span style="color:#e6db74">&#34;\\([\u3000]+\\)&#34;</span>) <span style="color:#75715e">; highlight only full-width space</span>
 (global-whitespace-mode <span style="color:#66d9ef">t</span>)
 </code></pre></div><h3 id="markdown-モードの-auto-fill-を切る">Markdown モードの auto-fill を切る</h3>
 <p>Markdown モードの Auto-Fill (行が長くなったら自動で改行を入れる機能) が鬱陶しいのでオフにする。</p>
@@ -497,7 +497,7 @@ Spacemacs より軽い DOOM Emacs というのがあるらしい。これにし�
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#75715e">;resize window quickly</span>
 <span style="color:#75715e">;http://d.hatena.ne.jp/khiker/20100119/window_resize</span>
 (defun my-window-resizer ()
-  <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Control window size and position.</span><span style="color:#e6db74">&#34;</span>
+  <span style="color:#e6db74">&#34;Control window size and position.&#34;</span>
   (interactive)
   (let ((window-obj (<span style="color:#a6e22e">selected-window</span>))
         (current-width (window-width))
@@ -510,7 +510,7 @@ Spacemacs より軽い DOOM Emacs というのがあるらしい。これにし�
     (catch <span style="color:#e6db74">&#39;end-flag</span>
       (while <span style="color:#66d9ef">t</span>
         (setq action
-              (<span style="color:#a6e22e">read-key-sequence-vector</span> (<span style="color:#a6e22e">format</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">size[%dx%d]</span><span style="color:#e6db74">&#34;</span>
+              (<span style="color:#a6e22e">read-key-sequence-vector</span> (<span style="color:#a6e22e">format</span> <span style="color:#e6db74">&#34;size[%dx%d]&#34;</span>
                                                 (window-width)
                                                 (window-height))))
         (setq c (<span style="color:#a6e22e">aref</span> action <span style="color:#ae81ff">0</span>))
@@ -536,25 +536,25 @@ Spacemacs より軽い DOOM Emacs というのがあるらしい。これにし�
                      (command (<span style="color:#a6e22e">key-binding</span> action)))
                  (when command
                    (<span style="color:#a6e22e">call-interactively</span> command)))
-               (<span style="color:#a6e22e">message</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Quit</span><span style="color:#e6db74">&#34;</span>)
+               (<span style="color:#a6e22e">message</span> <span style="color:#e6db74">&#34;Quit&#34;</span>)
                (throw <span style="color:#e6db74">&#39;end-flag</span> <span style="color:#66d9ef">t</span>)))))))
 
 (map! :map evil-window-map
-      <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">SPC</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">#&#39;</span>my-window-resizer) <span style="color:#75715e">; CTRL-w SPC or SPC w SPC</span>
+      <span style="color:#e6db74">&#34;SPC&#34;</span> <span style="color:#a6e22e">#&#39;</span>my-window-resizer) <span style="color:#75715e">; CTRL-w SPC or SPC w SPC</span>
 </code></pre></div><h3 id="ctrl-hjkl-でウィンドウを切り替え">Ctrl-hjkl でウィンドウを切り替え</h3>
 <p><strong>config.el</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#75715e">;; switch between window with C-hjkl</span>
-(map! :nvi <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">C-h</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">#&#39;</span>evil-window-left
-      :nvi <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">C-j</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">#&#39;</span>evil-window-down
-      :nvi <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">C-k</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">#&#39;</span>evil-window-up
-      :nvi <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">C-l</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">#&#39;</span>evil-window-right)
+(map! :nvi <span style="color:#e6db74">&#34;C-h&#34;</span> <span style="color:#a6e22e">#&#39;</span>evil-window-left
+      :nvi <span style="color:#e6db74">&#34;C-j&#34;</span> <span style="color:#a6e22e">#&#39;</span>evil-window-down
+      :nvi <span style="color:#e6db74">&#34;C-k&#34;</span> <span style="color:#a6e22e">#&#39;</span>evil-window-up
+      :nvi <span style="color:#e6db74">&#34;C-l&#34;</span> <span style="color:#a6e22e">#&#39;</span>evil-window-right)
 </code></pre></div><h3 id="ctrl-shift-hjkl-でウィンドウを移動">Ctrl-Shift-hjkl でウィンドウを移動</h3>
 <p><strong>config.el</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#75715e">;; move the window with C-S-hjkl</span>
-(map! :nvi <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">C-S-h</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">#&#39;</span>+evil/window-move-left
-      :nvi <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">C-S-j</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">#&#39;</span>+evil/window-move-down
-      :nvi <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">C-S-k</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">#&#39;</span>+evil/window-move-up
-      :nvi <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">C-S-l</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">#&#39;</span>+evil/window-move-right)
+(map! :nvi <span style="color:#e6db74">&#34;C-S-h&#34;</span> <span style="color:#a6e22e">#&#39;</span>+evil/window-move-left
+      :nvi <span style="color:#e6db74">&#34;C-S-j&#34;</span> <span style="color:#a6e22e">#&#39;</span>+evil/window-move-down
+      :nvi <span style="color:#e6db74">&#34;C-S-k&#34;</span> <span style="color:#a6e22e">#&#39;</span>+evil/window-move-up
+      :nvi <span style="color:#e6db74">&#34;C-S-l&#34;</span> <span style="color:#a6e22e">#&#39;</span>+evil/window-move-right)
 </code></pre></div><h3 id="画面の上下左右に余裕を持たせてスクロール-scrolloff-sidescrolloff">画面の上下左右に余裕を持たせてスクロール (scrolloff, sidescrolloff)</h3>
 <p><strong>config.el</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#75715e">;; minimal number of screen lines to keep above and below the cursor</span>
@@ -564,18 +564,18 @@ Spacemacs より軽い DOOM Emacs というのがあるらしい。これにし�
 </code></pre></div><h3 id="x-で文字を削除するとき-yank-しない">x で文字を削除するとき yank しない</h3>
 <p><strong>config.el</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#75715e">;; delete character without yanking</span>
-(map! :n <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">x</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">#&#39;</span><span style="color:#a6e22e">delete-char</span>)
+(map! :n <span style="color:#e6db74">&#34;x&#34;</span> <span style="color:#a6e22e">#&#39;delete-char</span>)
 </code></pre></div><h3 id="テキストファイルを編集するとき-角括弧の内側に自動でスペースを挿入削除しない">テキストファイルを編集するとき 角括弧の内側に自動でスペースを挿入・削除しない</h3>
 <p>角括弧でチェックボックスを作るときに鬱陶しいので</p>
 <p><strong>config.el</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#75715e">;; Don&#39;t do square-bracket space-expansion where it doesn&#39;t make sense to</span>
 (after! smartparens-text
   (sp-local-pair <span style="color:#e6db74">&#39;text-mode</span>
-                 <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">[</span><span style="color:#e6db74">&#34;</span> <span style="color:#66d9ef">nil</span> :post-handlers <span style="color:#f92672">&#39;</span>(:rem (<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">| </span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">SPC</span><span style="color:#e6db74">&#34;</span>))))
+                 <span style="color:#e6db74">&#34;[&#34;</span> <span style="color:#66d9ef">nil</span> :post-handlers <span style="color:#f92672">&#39;</span>(:rem (<span style="color:#e6db74">&#34;| &#34;</span> <span style="color:#e6db74">&#34;SPC&#34;</span>))))
 </code></pre></div><h3 id="インサートモードで-c-d-が使えるようにする">インサートモードで C-d が使えるようにする</h3>
 <p><strong>config.el</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#75715e">;; Make C-d usable in insert mode</span>
-(map! :i <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">C-d</span><span style="color:#e6db74">&#34;</span> <span style="color:#a6e22e">#&#39;</span><span style="color:#a6e22e">delete-char</span>)
+(map! :i <span style="color:#e6db74">&#34;C-d&#34;</span> <span style="color:#a6e22e">#&#39;delete-char</span>)
 </code></pre></div><h3 id="org-mode-の-todo-アイテムの完了時刻を記録する">org-mode の TODO アイテムの完了時刻を記録する</h3>
 <p><strong>config.el</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#75715e">;; log when a certain todo item was finished</span>
@@ -583,7 +583,7 @@ Spacemacs より軽い DOOM Emacs というのがあるらしい。これにし�
 </code></pre></div><h3 id="org-mode-の日付の曜日を英語にする">org-mode の日付の曜日を英語にする</h3>
 <p><strong>config.el</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#75715e">; Make sure that the weekdays in the time stamps of your Org mode files and in the agenda appear in English.</span>
-(setq system-time-locale <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">C</span><span style="color:#e6db74">&#34;</span>)
+(setq system-time-locale <span style="color:#e6db74">&#34;C&#34;</span>)
 </code></pre></div><h3 id="端末を有効化">端末を有効化</h3>
 <p><code>SPC o t</code>, <code>SPC o T</code> で端末を開けるようにする</p>
 <p><strong>init.el</strong></p>
