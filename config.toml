@@ -89,7 +89,7 @@ canonifyurls = true
   identifier = "twitter"
   name = "Twitter"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-twitter\"></i>"
-  url = "https://twitter.com/ngkz_f2l"
+  url = "https://twitter.com/n_g_k_z"
 
 [[menu.misc]]
   weight = 1
