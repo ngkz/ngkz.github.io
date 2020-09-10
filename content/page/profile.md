@@ -23,8 +23,8 @@ PGP 公開鍵
 github
 : [ngkz](https://github.com/ngkz)
 
-discord (非推奨)
-: ngkz#6110
+twttter
+: [n_g_k_z](https://twitter.com/n_g_k_z)
 
 bitcoin
 : 1FzRWZsT9sL6G5iaKpEHRuJmRsKniFNW6c
