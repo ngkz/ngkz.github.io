@@ -6,11 +6,7 @@
     <description>Recent content in homeserver on Fierce Falcon Laboratory</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 04 Nov 2019 00:31:35 +0900</lastBuildDate>
-    
-	<atom:link href="https://ngkz.github.io/categories/homeserver/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 04 Nov 2019 00:31:35 +0900</lastBuildDate><atom:link href="https://ngkz.github.io/categories/homeserver/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>サーバー構築ログ その2</title>
       <link>https://ngkz.github.io/2019/11/homeserver-build-20191104/</link>

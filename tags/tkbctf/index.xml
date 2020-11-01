@@ -6,11 +6,7 @@
     <description>Recent content in tkbctf on Fierce Falcon Laboratory</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 29 Jan 2014 13:06:30 +0900</lastBuildDate>
-    
-	<atom:link href="https://ngkz.github.io/tags/tkbctf/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 29 Jan 2014 13:06:30 +0900</lastBuildDate><atom:link href="https://ngkz.github.io/tags/tkbctf/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>tkbctf1 writeup</title>
       <link>https://ngkz.github.io/2014/01/tkbctf1-writeup/</link>

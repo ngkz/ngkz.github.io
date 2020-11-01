@@ -6,11 +6,7 @@
     <description>Recent content in windows on Fierce Falcon Laboratory</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 02 Jun 2019 13:14:41 +0900</lastBuildDate>
-    
-	<atom:link href="https://ngkz.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 02 Jun 2019 13:14:41 +0900</lastBuildDate><atom:link href="https://ngkz.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>内蔵HDDに入ってるWindows 10をUSB HDDから起動できるようにする方法</title>
       <link>https://ngkz.github.io/2019/06/howto-boot-preinstalled-windows-from-usb-hdd/</link>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.74.3 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.77.0 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="結果
@@ -861,12 +861,12 @@ p[DEST] = BINSH
 print p.payload(BUFIDX)
 </code></pre>
 <h4 id="stage3-1">stage3</h4>
-<p>jamserverは /home/jamにchrootし権限降格した後、/bin/putskeyを起動する。文字列&rdquo;/bin/putskey&quot;が書き換え可能。</p>
+<p>jamserverは /home/jamにchrootし権限降格した後、/bin/putskeyを起動する。文字列&quot;/bin/putskey&quot;が書き換え可能。</p>
 <p>/home/jam/tmpのパーミッションが777なのでpureserverの権限でファイルをコピーできる。</p>
 <p>chroot環境には最低限のライブラリしか入っていないので、jamserverでの作業にはbusyboxを使う。</p>
 <p>まず、pureserverのシェルで busyboxを /home/jam/tmpにコピーする。</p>
 <p>次に/bin/shを/home/jam/tmp/putskeyとしてコピーする。(入力文字列の長さ制限が厳しいので、最低限の書き換えで済むようにする)</p>
-<p>exploitで&rdquo;/bin/putskey&quot;を&rdquo;/tmp/putskey&quot;に書き換えてシェルを起動すると、/home/jam/key.txtにあるキーワードを読み込めるようになる。</p>
+<p>exploitで&quot;/bin/putskey&quot;を&quot;/tmp/putskey&quot;に書き換えてシェルを起動すると、/home/jam/key.txtにあるキーワードを読み込めるようになる。</p>
 <p>exploit:</p>
 <pre><code>#!/usr/bin/python
 from libformatstr import *
