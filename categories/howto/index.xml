@@ -82,8 +82,8 @@ with-subkey-fingerprint
       <guid>https://ngkz.github.io/2019/05/ubuntu-1904-reenable-touchpad-palm-detection/</guid>
       <description>&lt;p&gt;Ubuntu 19.04へアップグレードしたら、手のひら検知と入力中にタッチパッドを無効にする機能がオフになり、入力中にカーソルが勝手にあちこちに飛ぶようになってしまった。&lt;/p&gt;
 &lt;p&gt;以下の手順で設定して、Xサーバーを再起動(再ログイン)すると再有効化できる。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;sudo -e /etc/X11/xorg.conf.d/90-libinput.conf
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;Section &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;InputClass&amp;#34;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;sudo -e /etc/X11/xorg.conf.d/90-libinput.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;Section &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;InputClass&amp;#34;&lt;/span&gt;
     Identifier &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;libinput touchpad catchall&amp;#34;&lt;/span&gt;
     MatchIsTouchpad &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;on&amp;#34;&lt;/span&gt;
     MatchDevicePath &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/dev/input/event*&amp;#34;&lt;/span&gt;
@@ -161,7 +161,7 @@ Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30
       <guid>https://ngkz.github.io/2018/07/audit-cargo-crate/</guid>
       <description>cargo fetch1 でパッケージを取得すると、~/.cargo/registry/src/github.com-1ecc6299db9ec823/(パッケージ名)-(バージョン) にパッケージのソースコードが展開される。
 Cargo.lockにすべての依存クレートの名前とバージョンが記録されているので、これを見てコードに問題がないか調べることができる。
-  cargo buildはビルドスクリプトを実行してしまうのでダメ &amp;#x21a9;&amp;#xfe0e;
+  cargo buildはビルドスクリプトを実行してしまうのでダメ&amp;#160;&amp;#x21a9;&amp;#xfe0e;
    </description>
     </item>
     

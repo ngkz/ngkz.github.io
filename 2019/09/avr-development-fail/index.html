@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.80.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.86.0 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="AVRでファンコントローラを作っていたら、いろいろなところで嵌って何時間も無駄にしたので、後学のために何があったかを書いておく。
@@ -310,7 +310,7 @@ asm volatile(&quot;...&quot; : &quot;=r&quot; (dummy) : [input] &quot;0&quot; (.
 <p>バグトラッカーに報告があるがすぐには修正されなさそうな雰囲気なので、下の方法で回避している。</p>
 <ol>
 <li>プロジェクトのディレクトリにboardsディレクトリを作り、その中に<code>&quot;extra_flags&quot;: &quot;-e&quot;</code>を削除したボード定義を作る
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#f92672">(</span>ATtiny85の場合<span style="color:#f92672">)</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#f92672">(</span>ATtiny85の場合<span style="color:#f92672">)</span>
 PROJECT $ mkdir boards
 PROJECT $ cat <span style="color:#e6db74">&lt;&lt;&#39;EOS&#39; &gt;boards/hoge.json
 </span><span style="color:#e6db74">{

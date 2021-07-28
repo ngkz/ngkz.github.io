@@ -1,782 +1,470 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://ngkz.github.io/categories/</loc>
     <lastmod>2020-01-25T18:04:25+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/</loc>
     <lastmod>2020-01-25T18:04:25+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/categories/flfs/</loc>
     <lastmod>2020-01-25T18:04:25+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/tags/lfs/</loc>
     <lastmod>2020-01-25T18:04:25+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2020/01/lfs-53/</loc>
     <lastmod>2020-01-25T18:04:25+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/post/</loc>
     <lastmod>2020-01-25T18:04:25+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/tags/</loc>
     <lastmod>2020-01-25T18:04:25+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2020/01/lfs-52/</loc>
     <lastmod>2020-01-14T18:35:15+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2020/01/gpg-hardening/</loc>
     <lastmod>2020-01-12T01:31:22+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/tags/gpg/</loc>
     <lastmod>2020-01-12T01:31:22+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/categories/howto/</loc>
     <lastmod>2020-01-12T01:31:22+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2020/01/lfs-51/</loc>
     <lastmod>2020-01-02T23:34:04+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/categories/homeserver/</loc>
     <lastmod>2019-11-04T00:31:35+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/11/homeserver-build-20191104/</loc>
     <lastmod>2019-11-04T00:31:35+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/09/homeserver-build-20190922/</loc>
     <lastmod>2019-09-23T08:28:38+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/categories/failure/</loc>
     <lastmod>2019-09-23T07:30:10+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/tags/gcc/</loc>
     <lastmod>2019-09-23T07:30:10+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/09/avr-development-fail/</loc>
     <lastmod>2019-09-23T07:30:10+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/tags/platformio/</loc>
     <lastmod>2019-09-23T07:30:10+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/tags/%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%97/</loc>
     <lastmod>2019-06-09T17:34:45+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/06/howto-etch-stainless-mug/</loc>
     <lastmod>2019-06-09T17:34:45+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/06/oil-change/</loc>
     <lastmod>2019-06-02T23:03:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/tags/%E6%95%B4%E5%82%99%E8%A8%98%E9%8C%B2/</loc>
     <lastmod>2019-06-02T23:03:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/categories/%E8%BB%8A/</loc>
     <lastmod>2019-06-02T23:03:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/tags/windows/</loc>
     <lastmod>2019-06-02T13:14:41+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/06/howto-boot-preinstalled-windows-from-usb-hdd/</loc>
     <lastmod>2019-06-02T13:14:41+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/05/ubuntu-1904-reenable-touchpad-palm-detection/</loc>
     <lastmod>2019-05-03T13:57:33+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/categories/%E6%97%A5%E8%A8%98/</loc>
     <lastmod>2019-04-25T22:38:53+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/04/diary-20190425/</loc>
     <lastmod>2019-04-25T22:38:53+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/04/diary-20190419/</loc>
     <lastmod>2019-04-19T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/04/diary-20190417/</loc>
     <lastmod>2019-04-17T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/04/diary-20190416/</loc>
     <lastmod>2019-04-16T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/tags/%E7%AD%8B%E3%83%88%E3%83%AC/</loc>
     <lastmod>2019-04-16T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/04/diary-20190415/</loc>
     <lastmod>2019-04-15T23:50:23+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/04/diary-20190414/</loc>
     <lastmod>2019-04-14T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/04/diary-20190413/</loc>
     <lastmod>2019-04-13T21:54:41+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/04/diary-20190412/</loc>
     <lastmod>2019-04-12T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/04/diary-20190411/</loc>
     <lastmod>2019-04-11T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/04/diary-20190410/</loc>
     <lastmod>2019-04-10T23:19:26+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/04/diary-20190409/</loc>
     <lastmod>2019-04-09T23:02:39+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/04/diary-20190408/</loc>
     <lastmod>2019-04-08T23:01:09+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/04/diary-20190407/</loc>
     <lastmod>2019-04-07T23:02:41+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/04/diary-20190406/</loc>
     <lastmod>2019-04-06T23:33:36+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/04/diary-20190405/</loc>
     <lastmod>2019-04-05T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/04/diary-20190404/</loc>
     <lastmod>2019-04-04T23:02:57+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/04/diary-20190403/</loc>
     <lastmod>2019-04-03T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/04/diary-20190402/</loc>
     <lastmod>2019-04-02T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/04/diary-20190401/</loc>
     <lastmod>2019-04-01T22:48:30+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/03/diary-20190331/</loc>
     <lastmod>2019-03-31T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/03/diary-20190330/</loc>
     <lastmod>2019-03-30T23:11:04+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/03/diary-20190329/</loc>
     <lastmod>2019-03-29T22:13:54+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/03/diary-20190328/</loc>
     <lastmod>2019-03-28T20:57:16+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/03/diary-20190327/</loc>
     <lastmod>2019-03-27T22:13:27+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/03/diary-20190326/</loc>
     <lastmod>2019-03-26T22:40:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/03/diary-20190325/</loc>
     <lastmod>2019-03-25T22:49:06+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/03/diary-20190324/</loc>
     <lastmod>2019-03-24T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/03/diary-20190323/</loc>
     <lastmod>2019-03-23T23:21:03+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/03/diary-20190322/</loc>
     <lastmod>2019-03-22T17:11:56+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/03/diary-20190321/</loc>
     <lastmod>2019-03-21T22:50:19+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/03/diary-20190320/</loc>
     <lastmod>2019-03-20T22:17:43+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/03/diary-20190319/</loc>
     <lastmod>2019-03-19T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/03/diary-20190318/</loc>
     <lastmod>2019-03-18T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/03/diary-20190317/</loc>
     <lastmod>2019-03-17T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/tags/%E5%80%8B%E7%B4%8B/</loc>
     <lastmod>2019-03-15T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/03/diary-20190315/</loc>
     <lastmod>2019-03-15T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/03/diary-20190314/</loc>
     <lastmod>2019-03-14T21:30:10+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/03/diary-20190313/</loc>
     <lastmod>2019-03-13T23:54:10+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/03/diary-20190312/</loc>
     <lastmod>2019-03-12T23:08:43+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/03/diary-20190311/</loc>
     <lastmod>2019-03-11T23:37:15+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/tags/%E3%82%B9%E3%82%AD%E3%83%BC/</loc>
     <lastmod>2019-03-10T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/03/diary-20190310/</loc>
     <lastmod>2019-03-10T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/03/diary-20190309/</loc>
     <lastmod>2019-03-09T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/03/diary-20190308/</loc>
     <lastmod>2019-03-08T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/03/diary-20190307/</loc>
     <lastmod>2019-03-07T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/03/diary-20190306/</loc>
     <lastmod>2019-03-06T23:31:17+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/03/diary-20190305/</loc>
     <lastmod>2019-03-05T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/03/diary-20190304/</loc>
     <lastmod>2019-03-04T23:07:34+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/03/diary-20190303/</loc>
     <lastmod>2019-03-03T21:51:31+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/03/diary-20190302/</loc>
     <lastmod>2019-03-02T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/03/diary-20190301/</loc>
     <lastmod>2019-03-01T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/02/diary-20190228/</loc>
     <lastmod>2019-02-28T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/02/diary-20190227/</loc>
     <lastmod>2019-02-27T21:19:29+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/02/diary-20190226/</loc>
     <lastmod>2019-02-26T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/02/diary-20190225/</loc>
     <lastmod>2019-02-25T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/02/diary-20190224/</loc>
     <lastmod>2019-02-24T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/02/diary-20190223/</loc>
     <lastmod>2019-02-23T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/02/diary-20190222/</loc>
     <lastmod>2019-02-22T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/02/diary-20190221/</loc>
     <lastmod>2019-02-21T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/02/diary-20190220/</loc>
     <lastmod>2019-02-20T22:14:18+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/02/diary-20190219/</loc>
     <lastmod>2019-02-19T22:40:35+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/02/diary-20190218/</loc>
     <lastmod>2019-02-18T23:40:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/02/diary-20190217/</loc>
     <lastmod>2019-02-17T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/tags/diy/</loc>
     <lastmod>2019-02-16T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/02/diary-20190216/</loc>
     <lastmod>2019-02-16T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/02/diary-20190215/</loc>
     <lastmod>2019-02-15T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/02/diary-20190214/</loc>
     <lastmod>2019-02-14T23:19:25+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/02/diary-20190213/</loc>
     <lastmod>2019-02-13T19:39:07+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/02/diary-20190212/</loc>
     <lastmod>2019-02-12T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/tags/%E3%83%9E%E3%82%A4%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3/</loc>
     <lastmod>2019-02-11T21:10:30+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/02/diary-20190211/</loc>
     <lastmod>2019-02-11T21:10:30+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/02/diary-20190210/</loc>
     <lastmod>2019-02-10T14:36:00+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/02/diary-20190209/</loc>
     <lastmod>2019-02-09T19:54:35+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/02/diary-20190208/</loc>
     <lastmod>2019-02-08T23:20:48+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/02/diary-20190207/</loc>
     <lastmod>2019-02-07T23:34:09+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/02/diary-20190206/</loc>
     <lastmod>2019-02-06T20:57:51+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/02/diary-20190205/</loc>
     <lastmod>2019-02-05T22:25:23+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/02/diary-20190204/</loc>
     <lastmod>2019-02-04T21:52:28+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/02/diary-20190203/</loc>
     <lastmod>2019-02-03T21:07:36+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/02/diary-20190202/</loc>
     <lastmod>2019-02-02T23:59:59+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/02/diary-20190201/</loc>
     <lastmod>2019-02-01T23:05:49+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/01/diary-20190131/</loc>
     <lastmod>2019-01-31T21:59:24+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/01/diary-20190130/</loc>
     <lastmod>2019-01-30T22:01:35+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/tags/%E8%8B%B1%E8%AA%9E/</loc>
     <lastmod>2019-01-30T22:01:35+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/01/diary-20190129/</loc>
     <lastmod>2019-01-29T20:34:30+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/01/diary-20190128/</loc>
     <lastmod>2019-01-29T04:29:41+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/tags/%E9%A0%AD%E7%97%9B/</loc>
     <lastmod>2019-01-29T04:29:41+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/01/diary-20190127/</loc>
     <lastmod>2019-01-27T22:21:54+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/01/diary-20190126/</loc>
     <lastmod>2019-01-26T23:17:24+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/01/diary-20190125/</loc>
     <lastmod>2019-01-25T22:41:58+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/01/diary-20190124/</loc>
     <lastmod>2019-01-24T23:58:27+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/01/diary-20190123/</loc>
     <lastmod>2019-01-23T20:21:33+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/01/diary-20190122/</loc>
     <lastmod>2019-01-22T19:28:01+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/01/diary-20190121/</loc>
     <lastmod>2019-01-20T23:50:07+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/01/diary-20190120/</loc>
     <lastmod>2019-01-20T23:08:46+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/01/afwall-bt-tethering/</loc>
     <lastmod>2019-01-13T20:20:09+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2019/01/edid-repair/</loc>
     <lastmod>2019-01-06T17:19:12+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2018/12/wake-windshield-washer-tank-repair/</loc>
     <lastmod>2018-12-23T22:45:33+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2018/12/coleman-508/</loc>
     <lastmod>2018-12-09T12:09:05+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/categories/%E9%9B%91%E8%A8%98/</loc>
     <lastmod>2018-12-09T12:09:05+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2018/11/wake-1yr-maintenance/</loc>
     <lastmod>2018-11-04T16:35:49+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2018/10/doom-emacs-develop-setup/</loc>
     <lastmod>2018-10-20T10:50:27+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/tags/emacs/</loc>
     <lastmod>2018-10-20T10:50:27+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2018/09/change-differential-oil/</loc>
     <lastmod>2018-09-30T20:19:53+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/tags/rust/</loc>
     <lastmod>2018-08-01T17:37:33+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2018/08/cargo-run-test-with-sudo/</loc>
     <lastmod>2018-08-01T17:37:33+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2018/07/audit-cargo-crate/</loc>
     <lastmod>2018-07-25T22:24:30+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2018/05/bonebar/</loc>
     <lastmod>2018-05-13T23:58:19+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2017/12/wake-luggage-room-hook/</loc>
     <lastmod>2017-12-05T17:34:45+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/categories/ctf/</loc>
     <lastmod>2014-07-23T19:57:23+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/tags/seccon/</loc>
     <lastmod>2014-07-23T19:57:23+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2014/07/seccon-2014-online-japanese-quals-writeup/</loc>
     <lastmod>2014-07-23T19:57:23+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/categories/writeup/</loc>
     <lastmod>2014-07-23T19:57:23+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2014/03/seccon-2013-finals-writeup/</loc>
     <lastmod>2014-03-04T06:45:08+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2014/01/seccon-2013-online-quals-writeup/</loc>
     <lastmod>2014-01-30T11:40:33+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2014/01/30c3ctf-writeup/</loc>
     <lastmod>2014-01-29T14:04:07+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/tags/c3ctf/</loc>
     <lastmod>2014-01-29T14:04:07+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2014/01/seccon-2012-finals/</loc>
     <lastmod>2014-01-29T13:07:13+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/tags/tkbctf/</loc>
     <lastmod>2014-01-29T13:06:30+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2014/01/tkbctf1-writeup/</loc>
     <lastmod>2014-01-29T13:06:30+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2014/01/newyearsctf/</loc>
     <lastmod>2014-01-01T15:45:15+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2013/09/galaxys3-adb-restore-fail/</loc>
     <lastmod>2013-09-12T13:29:56+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2013/03/howto-reactivate-keepassx/</loc>
     <lastmod>2013-03-14T17:21:07+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/2012/12/seccon-2012-yokohama-quals-writeup/</loc>
     <lastmod>2012-12-24T05:03:22+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/archives/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/page/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://ngkz.github.io/page/profile/</loc>
   </url>
-  
 </urlset>

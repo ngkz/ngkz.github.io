@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.80.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.86.0 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="Kazutoshi Noguchi&#39;s blog">
@@ -486,8 +486,8 @@ with-subkey-fingerprint
       
         <p>Ubuntu 19.04へアップグレードしたら、手のひら検知と入力中にタッチパッドを無効にする機能がオフになり、入力中にカーソルが勝手にあちこちに飛ぶようになってしまった。</p>
 <p>以下の手順で設定して、Xサーバーを再起動(再ログイン)すると再有効化できる。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo -e /etc/X11/xorg.conf.d/90-libinput.conf
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">Section <span style="color:#e6db74">&#34;InputClass&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo -e /etc/X11/xorg.conf.d/90-libinput.conf
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">Section <span style="color:#e6db74">&#34;InputClass&#34;</span>
     Identifier <span style="color:#e6db74">&#34;libinput touchpad catchall&#34;</span>
     MatchIsTouchpad <span style="color:#e6db74">&#34;on&#34;</span>
     MatchDevicePath <span style="color:#e6db74">&#34;/dev/input/event*&#34;</span>

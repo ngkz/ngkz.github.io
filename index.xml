@@ -216,8 +216,8 @@ OK: &lt;code&gt;asm volatile(&amp;quot;...&amp;quot; : [output] &amp;quot;=&amp;
       <guid>https://ngkz.github.io/2019/05/ubuntu-1904-reenable-touchpad-palm-detection/</guid>
       <description>&lt;p&gt;Ubuntu 19.04へアップグレードしたら、手のひら検知と入力中にタッチパッドを無効にする機能がオフになり、入力中にカーソルが勝手にあちこちに飛ぶようになってしまった。&lt;/p&gt;
 &lt;p&gt;以下の手順で設定して、Xサーバーを再起動(再ログイン)すると再有効化できる。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;sudo -e /etc/X11/xorg.conf.d/90-libinput.conf
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;Section &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;InputClass&amp;#34;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;sudo -e /etc/X11/xorg.conf.d/90-libinput.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;Section &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;InputClass&amp;#34;&lt;/span&gt;
     Identifier &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;libinput touchpad catchall&amp;#34;&lt;/span&gt;
     MatchIsTouchpad &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;on&amp;#34;&lt;/span&gt;
     MatchDevicePath &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/dev/input/event*&amp;#34;&lt;/span&gt;
@@ -3857,7 +3857,7 @@ Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30
       <guid>https://ngkz.github.io/2018/07/audit-cargo-crate/</guid>
       <description>cargo fetch1 でパッケージを取得すると、~/.cargo/registry/src/github.com-1ecc6299db9ec823/(パッケージ名)-(バージョン) にパッケージのソースコードが展開される。
 Cargo.lockにすべての依存クレートの名前とバージョンが記録されているので、これを見てコードに問題がないか調べることができる。
-  cargo buildはビルドスクリプトを実行してしまうのでダメ &amp;#x21a9;&amp;#xfe0e;
+  cargo buildはビルドスクリプトを実行してしまうのでダメ&amp;#160;&amp;#x21a9;&amp;#xfe0e;
    </description>
     </item>
     
@@ -4244,7 +4244,7 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ngkz.github.io/page/profile/</guid>
-      <description>名前 野口和敏 メール nたoたgたuたcたhたiた.たkたaたzたuたtたoたsたiた+た7た4たcた7たeたvたLたxた@たgたmたaたiたlた.たcたoたmた ↑ たぬき PGP 公開鍵 BC6D CFE0 3513 A9FA 4F55 D702 06B8 1066 65DD 36F3 github ngkz twttter n_g_k_z bitcoin 1FzRWZsT9sL6G5iaKpEHRuJmRsKniFNW6c     場面緘黙症 精神障害者保健福祉手帳 (3 級)  資格  第一種運転免許 (準中型, 普通自動二輪小型 AT 限定) 第二種電気工事士 IT パスポート 基本情報技術者 応用情報技術者 情報処理安全確保支援士   第010448号     スキル  プログラミング言語 C, Python, C++, Assembly(x86, x86-64, PIC, ARM, AVR, etc.), Rust, Go, JavaScript (ES2017+), Ruby, CoffeeScript, Shell script(POSIX, bash), Java, HTML, PHP, CSS, VBA 触ったことのあるフレームワーク Django, Flask, Express, Electron, nw.</description>
+      <description>名前 野口和敏 メール nたoたgたuたcたhたiた.たkたaたzたuたtたoたsたiた+た7た4たcた7たeたvたLたxた@たgたmたaたiたlた.たcたoたmた ↑ たぬき PGP 公開鍵 BC6D CFE0 3513 A9FA 4F55 D702 06B8 1066 65DD 36F3 github ngkz twttter n_g_k_z bitcoin 1FzRWZsT9sL6G5iaKpEHRuJmRsKniFNW6c     場面緘黙症 精神障害者保健福祉手帳 (3 級)  資格  第一種運転免許 (準中型, 普通自動二輪小型 AT 限定) 第二種電気工事士 IT パスポート 基本情報技術者 応用情報技術者 情報処理安全確保支援士  第010448号     スキル  プログラミング言語 C, Python, C++, Assembly(x86, x86-64, PIC, ARM, AVR, etc.), Rust, Go, JavaScript (ES2017+), Ruby, CoffeeScript, Shell script(POSIX, bash), Java, HTML, PHP, CSS, VBA 触ったことのあるフレームワーク Django, Flask, Express, Electron, nw.</description>
     </item>
     
   </channel>

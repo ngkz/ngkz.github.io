@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.80.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.86.0 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="Acer H243HをDVIで接続すると認識しない。VGA接続とHDMI接続では正常に動作するが、DVIで接続するとsyslogに以下のエラーが出る。
@@ -319,7 +319,7 @@ i2c-2	i2c       	AMDGPU DM i2c hw bus 1          	I2C adapter
 i2c-0	i2c       	AMDGPU DM i2c hw bus 0          	I2C adapter
 </code></pre><p>出力からバス0,2,3がGPUのものであることが分かるが、どのポートのものであるかまでは分からないので総当たりでダンプする。
 rootで<code>i2cdump (バス番号) 0x50</code> を実行するとEDIDをダンプできる。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain"># echo Y | i2cdump 0 0x50
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain"># echo Y | i2cdump 0 0x50
 No size specified (using byte-data access)
 WARNING! This program can confuse your I2C bus, cause data loss and worse!
 I will probe file /dev/i2c-0, address 0x50, mode byte
@@ -390,13 +390,13 @@ f0:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
 </code></pre></div><p>EDIDの内容から、このカードではバス番号2がHDMIのバスで、バス番号3がDVIポートのバスであることがわかる。</p>
 <h2 id="正常なedidを吸い出す">正常なEDIDを吸い出す</h2>
 <p>モニタを正常なポート(HDMI)で接続し、正常なEDIDを吸い出す</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain"># echo Y | i2cdump 2 0x50 &gt; edid-h243h-hdmi.txt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain"># echo Y | i2cdump 2 0x50 &gt; edid-h243h-hdmi.txt
 $ vim edid-h243h-hdmi.txt
 (マクロで余計なデータを取り除いてhex dumpに変換)
 $ xxd -r -p &lt; edid-h243h-hdmi.txt &gt; edid-h243h-hdmi.bin
 </code></pre></div><h2 id="dviポートのedidの修復">DVIポートのEDIDの修復</h2>
 <p>モニタをDVIで接続し、正常なEDIDを書き込む</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">$ cat &lt;&lt;&#39;EOS&#39; &gt;edidwrite.py
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">$ cat &lt;&lt;&#39;EOS&#39; &gt;edidwrite.py
 #!/usr/bin/python3
 import sys
 import os
