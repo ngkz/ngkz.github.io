@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.86.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.88.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="AVRでファンコントローラを作っていたら、いろいろなところで嵌って何時間も無駄にしたので、後学のために何があったかを書いておく。
@@ -302,7 +302,7 @@ OK: <code>asm volatile(&quot;...&quot; : [output] &quot;=&amp;r&quot; (...) : [i
 <p>インラインアセンブラを書いた関数がループ中にインライン展開されたときに、入力オペランドの初期化処理がループの外に移動されて、2回目以降に処理がおかしくなったことでこれに気づいた。</p>
 <p>NG: <code>asm volatile(&quot;(inputを破壊するコード)&quot; : : [input] &quot;r&quot; (...));</code><br>
 OK:</p>
-<pre><code>uint8_t dummy;
+<pre tabindex="0"><code>uint8_t dummy;
 asm volatile(&quot;...&quot; : &quot;=r&quot; (dummy) : [input] &quot;0&quot; (...)); //inputの制約の&quot;0&quot;は0番目の出力オペランド(&quot;=r&quot; (dummy))と同じレジスタを割り当てるという意味
 </code></pre><h2 id="platformioの嵌りどころ">platformioの嵌りどころ</h2>
 <h3 id="attiny系のマイコンでpio-run--t-uploadeepするとプログラムが消去される">ATtiny系のマイコンで<code>pio run -t uploadeep</code>するとプログラムが消去される</h3>
@@ -336,7 +336,7 @@ PROJECT $ cat <span style="color:#e6db74">&lt;&lt;&#39;EOS&#39; &gt;boards/hoge.
 </span><span style="color:#e6db74">EOS</span>
 </code></pre></div></li>
 <li>platformio.iniを変更
-<pre><code>-[env:attiny85]
+<pre tabindex="0"><code>-[env:attiny85]
 +[env:hoge]
  platform = atmelavr
 -board = attiny85
@@ -350,7 +350,7 @@ PROJECT $ cat <span style="color:#e6db74">&lt;&lt;&#39;EOS&#39; &gt;boards/hoge.
 +extra_scripts = extra_script.py
 </code></pre></li>
 <li>platformio.iniと同じディレクトリにextra_script.pyを作成し、プログラムの書き込み時だけChip Eraseオプションを渡すよう設定
-<pre><code>Import('env')
+<pre tabindex="0"><code>Import('env')
 env.Replace(UPLOADCMD='$UPLOADER $UPLOADERFLAGS -e -U flash:w:$SOURCES:i')
 </code></pre></li>
 </ol>

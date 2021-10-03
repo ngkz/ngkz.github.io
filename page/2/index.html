@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.86.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.88.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="Kazutoshi Noguchi&#39;s blog">
@@ -226,6 +226,74 @@
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://ngkz.github.io/2019/09/avr-development-fail/">
+          GCCインラインアセンブラとplatformioの嵌りどころ
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-09-23T07:30:10&#43;09:00">
+        
+  
+  
+  
+  
+    2019-09-23
+  
+
+      </time>
+    
+    
+  
+  
+    <span>カテゴリー</span>
+    
+      <a class="category-link" href="https://ngkz.github.io/categories/failure">failure</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        <p>AVRでファンコントローラを作っていたら、いろいろなところで嵌って何時間も無駄にしたので、後学のために何があったかを書いておく。</p>
+<h2 id="gcc拡張インラインアセンブラ構文の嵌りどころ">GCC拡張インラインアセンブラ構文の嵌りどころ</h2>
+<p>GCCの拡張インラインアセンブラ構文を使うときはマニュアルをよく読まないとこういう目にあう</p>
+<h3 id="入力オペランドと出力オペランドは同じレジスタに割り当てられることがある">入力オペランドと出力オペランドは同じレジスタに割り当てられることがある</h3>
+<p>同じレジスタに割り当てられるとまずい場合は出力オペランドの制約に<code>&amp;</code>をつける。付け忘れていたら最適化をかけたときに入力と出力が同じレジスタに割り当てられて嵌った。</p>
+<p>NG: <code>asm volatile(&quot;...&quot; : [output] &quot;=r&quot; (...) : [input] &quot;r&quot; (...));</code><br>
+OK: <code>asm volatile(&quot;...&quot; : [output] &quot;=&amp;r&quot; (...) : [input] &quot;r&quot; (...));</code></p>
+<h3 id="入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる">入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる</h3>
+      
+      <p>
+        <a href="https://ngkz.github.io/2019/09/avr-development-fail/" class="postShorten-excerpt_link link">続きを読む</a>
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
         <a class="link-unstyled" href="https://ngkz.github.io/2019/06/howto-etch-stainless-mug/">
           ステンレスカップにメモリをつけてみた
         </a>
@@ -300,7 +368,7 @@
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
         <a class="link-unstyled" href="https://ngkz.github.io/2019/06/oil-change/">
-          オイル交換メモ
+          ウェイク オイル交換メモ
         </a>
       </h1>
       
@@ -621,89 +689,6 @@ EndSection
       
       <p>
         <a href="https://ngkz.github.io/2019/04/diary-20190419/" class="postShorten-excerpt_link link">続きを読む</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://ngkz.github.io/2019/04/diary-20190417/">
-          日記 2019/04/17(水)
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2019-04-17T23:59:59&#43;09:00">
-        
-  
-  
-  
-  
-    2019-04-17
-  
-
-      </time>
-    
-    
-  
-  
-    <span>カテゴリー</span>
-    
-      <a class="category-link" href="https://ngkz.github.io/categories/%e6%97%a5%e8%a8%98">日記</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <h2 id="linux-from-scratch">Linux from Scratch</h2>
-<ul>
-<li>diffutils, gawk, findutils, groff</li>
-<li>GRUBのビルドに失敗した
-<ul>
-<li>PIEが有効だとビルドに失敗するっぽい</li>
-</ul>
-</li>
-<li>一部のソフトウェアはCPPFLAGSに<code>_FORTIFY_SOURCE</code>の定義があるとconfigureが失敗するので、configureにパッチを当てて対処していたが、ハックが4箇所くらいに増えたのでCFLAGSに<code>_FORTIFY_SOURCE</code>の定義を移動してハックを削除した。</li>
-</ul>
-<h2 id="ubuntuのアップグレード">Ubuntuのアップグレード</h2>
-<ul>
-<li>Ubuntu 18.04へのアップグレードが途中で止まったのは、壊れたシンボリックリンクが<code>/etc/ca-certificates</code>に残っていたせいでca-certificatesの設定が失敗した結果、それに依存するパッケージ全部の設定が連鎖的に失敗したのが原因だった。</li>
-<li>一応アップグレードは成功したが、あちこちの動作が怪しい</li>
-</ul>
-<h2 id="新しいキャンプ用食器">新しいキャンプ用食器</h2>
-<ul>
-<li>別のセリアに行って小さいコッヘルを探してみたが、Lサイズすら置いてなかった。</li>
-</ul>
-<h2 id="その他">その他</h2>
-<ul>
-<li>4K15.6インチの画面がどれくらい精細なのか気になったので電気屋に実物を見にいってみたが、4Kのラップトップが置いてなかった。</li>
-</ul>
-      
-      <p>
-        <a href="https://ngkz.github.io/2019/04/diary-20190417/" class="postShorten-excerpt_link link">続きを読む</a>
         
       </p>
     </div>

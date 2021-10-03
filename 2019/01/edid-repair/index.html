@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.86.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.88.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="Acer H243HをDVIで接続すると認識しない。VGA接続とHDMI接続では正常に動作するが、DVIで接続するとsyslogに以下のエラーが出る。
@@ -297,7 +297,7 @@ Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
               <p>Acer H243HをDVIで接続すると認識しない。VGA接続とHDMI接続では正常に動作するが、DVIで接続するとsyslogに以下のエラーが出る。</p>
-<pre><code>Jan  5 23:48:32 haramaki kernel: [97894.621687] amdgpu 0000:01:00.0: DVI-D-1: EDID is invalid:
+<pre tabindex="0"><code>Jan  5 23:48:32 haramaki kernel: [97894.621687] amdgpu 0000:01:00.0: DVI-D-1: EDID is invalid:
 Jan  5 23:48:32 haramaki kernel: [97894.621694]         [00] BAD  00 ff ff ff ff ff ff 00 ff ff ff ff ff ff ff ff
 Jan  5 23:48:32 haramaki kernel: [97894.621696]         [00] BAD  2b 13 01 03 80 35 1d 78 ea 60 85 a6 56 4a 9c 25
 Jan  5 23:48:32 haramaki kernel: [97894.621697]         [00] BAD  12 50 54 af cf 00 81 80 71 4f 95 00 95 0f a9 40
@@ -312,7 +312,7 @@ Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30
 <p>このROMはLinuxからI2Cデバイスとして認識されているので、I2Cバス操作用のツールでROMを読み書きすることができる。</p>
 <h2 id="dviのedid-romが繋っているバスを探す">DVIのEDID ROMが繋っているバスを探す</h2>
 <p>rootで<code>i2cdetect -l</code> を実行し、バスの一覧を出す</p>
-<pre><code># i2cdetect -l
+<pre tabindex="0"><code># i2cdetect -l
 i2c-3	i2c       	AMDGPU DM i2c hw bus 2          	I2C adapter
 i2c-1	i2c       	dmdc                            	I2C adapter
 i2c-2	i2c       	AMDGPU DM i2c hw bus 1          	I2C adapter

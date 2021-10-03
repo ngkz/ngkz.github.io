@@ -15,7 +15,7 @@
       <guid>https://ngkz.github.io/2020/01/gpg-hardening/</guid>
       <description>&lt;p&gt;SHA-1 is &lt;a href=&#34;https://sha-mbles.github.io/&#34;&gt;completely&lt;/a&gt; &lt;a href=&#34;https://shattered.io/&#34;&gt;dead&lt;/a&gt;. And I noticed legacy GPG signed my PGP key with SHA-1.&lt;/p&gt;
 &lt;h2 id=&#34;improving-gpg-configuration&#34;&gt;Improving GPG Configuration&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;$ vim ~/.gnupg/gpg.conf
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ vim ~/.gnupg/gpg.conf
 # use SHA-512 when signing a key
 cert-digest-algo SHA512
 # override recipient key cipher preferences

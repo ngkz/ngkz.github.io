@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.86.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.88.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="SHA-1 is completely dead. And I noticed legacy GPG signed my PGP key with SHA-1.
@@ -370,7 +370,7 @@ Migrating signature digest to SHA-512">
             <div class="main-content-wrap">
               <p>SHA-1 is <a href="https://sha-mbles.github.io/">completely</a> <a href="https://shattered.io/">dead</a>. And I noticed legacy GPG signed my PGP key with SHA-1.</p>
 <h2 id="improving-gpg-configuration">Improving GPG Configuration</h2>
-<pre><code>$ vim ~/.gnupg/gpg.conf
+<pre tabindex="0"><code>$ vim ~/.gnupg/gpg.conf
 # use SHA-512 when signing a key
 cert-digest-algo SHA512
 # override recipient key cipher preferences
@@ -397,7 +397,7 @@ keyid-format none
 with-subkey-fingerprint
 </code></pre><h2 id="migrating-signature-digest-to-sha-512">Migrating signature digest to SHA-512</h2>
 <p>Renew the key to regenerate its signature with SHA-512 (an algorithm specified with cert-digest-algo).</p>
-<pre><code>$ gpg --edit-key &lt;SIGNATURE&gt;
+<pre tabindex="0"><code>$ gpg --edit-key &lt;SIGNATURE&gt;
 gpg&gt; list
 
 pub  rsa4096/06B8106665DD36F3
@@ -417,7 +417,7 @@ gpg&gt; key 1
 gpg&gt; expire
 2y
 </code></pre><h2 id="removing-sha-1-and-3des-from-cipherhash-preferences">Removing SHA-1 and 3DES from cipher/hash preferences</h2>
-<pre><code>gpg&gt; setpref SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB BZIP2 ZIP Uncompressed
+<pre tabindex="0"><code>gpg&gt; setpref SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB BZIP2 ZIP Uncompressed
 gpg&gt; save
 </code></pre><h2 id="updating-revocation-certificate">Updating revocation certificate</h2>
 <p>Generate SHA512-signed revocation ceriticate and store it in safe place.</p>
@@ -425,7 +425,7 @@ gpg&gt; save
 </code></pre></div><h2 id="offline-primary-private-key">Offline primary private key</h2>
 <h3 id="adding-a-subkey-for-signing">Adding a subkey for signing</h3>
 <p>By default, GnuPG uses the primary key for signing. You should create a subkey for signing because it is timesome restoring offline primary private key whenever signing.</p>
-<pre><code>$ gpg --edit-key &lt;SIGNATURE&gt;
+<pre tabindex="0"><code>$ gpg --edit-key &lt;SIGNATURE&gt;
 gpg&gt; addkey
 Please select what kind of key you want:
    (3) DSA (sign only)
@@ -466,7 +466,7 @@ gpg&gt; save
 (Warning: data in flash drives evaporates slowly)</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ cp -a ~/.gnupg &lt;BACKUP&gt;
 </code></pre></div><p>If you need the primary secret key, mount the stick and use <code>--homedir</code> option.</p>
-<pre><code>$ gpg --homedir=&lt;BACKUP&gt; &lt;OPERATION&gt;
+<pre tabindex="0"><code>$ gpg --homedir=&lt;BACKUP&gt; &lt;OPERATION&gt;
 </code></pre><h3 id="deleting-primary-secret-key">Deleting primary secret key</h3>
 <p>Verify backup of <code>~/.gnupg</code> before deleting the primary secret key!</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ gpg --output subkeys_privkey.gpg --export-secret-subkeys &lt;SIGNATURE&gt;

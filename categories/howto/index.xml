@@ -15,7 +15,7 @@
       <guid>https://ngkz.github.io/2020/01/gpg-hardening/</guid>
       <description>&lt;p&gt;SHA-1 is &lt;a href=&#34;https://sha-mbles.github.io/&#34;&gt;completely&lt;/a&gt; &lt;a href=&#34;https://shattered.io/&#34;&gt;dead&lt;/a&gt;. And I noticed legacy GPG signed my PGP key with SHA-1.&lt;/p&gt;
 &lt;h2 id=&#34;improving-gpg-configuration&#34;&gt;Improving GPG Configuration&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;$ vim ~/.gnupg/gpg.conf
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ vim ~/.gnupg/gpg.conf
 # use SHA-512 when signing a key
 cert-digest-algo SHA512
 # override recipient key cipher preferences
@@ -113,7 +113,7 @@ EndSection
       
       <guid>https://ngkz.github.io/2019/01/edid-repair/</guid>
       <description>&lt;p&gt;Acer H243HをDVIで接続すると認識しない。VGA接続とHDMI接続では正常に動作するが、DVIで接続するとsyslogに以下のエラーが出る。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Jan  5 23:48:32 haramaki kernel: [97894.621687] amdgpu 0000:01:00.0: DVI-D-1: EDID is invalid:
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Jan  5 23:48:32 haramaki kernel: [97894.621687] amdgpu 0000:01:00.0: DVI-D-1: EDID is invalid:
 Jan  5 23:48:32 haramaki kernel: [97894.621694]         [00] BAD  00 ff ff ff ff ff ff 00 ff ff ff ff ff ff ff ff
 Jan  5 23:48:32 haramaki kernel: [97894.621696]         [00] BAD  2b 13 01 03 80 35 1d 78 ea 60 85 a6 56 4a 9c 25
 Jan  5 23:48:32 haramaki kernel: [97894.621697]         [00] BAD  12 50 54 af cf 00 81 80 71 4f 95 00 95 0f a9 40

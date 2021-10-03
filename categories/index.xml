@@ -6,7 +6,16 @@
     <description>Recent content in Categories on Fierce Falcon Laboratory</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 25 Jan 2020 18:04:25 +0900</lastBuildDate><atom:link href="https://ngkz.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Oct 2021 15:43:00 +0900</lastBuildDate><atom:link href="https://ngkz.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>車</title>
+      <link>https://ngkz.github.io/categories/%E8%BB%8A/</link>
+      <pubDate>Sun, 03 Oct 2021 15:43:00 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/categories/%E8%BB%8A/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>F²LFS</title>
       <link>https://ngkz.github.io/categories/flfs/</link>
@@ -40,15 +49,6 @@
       <pubDate>Mon, 23 Sep 2019 07:30:10 +0900</pubDate>
       
       <guid>https://ngkz.github.io/categories/failure/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>車</title>
-      <link>https://ngkz.github.io/categories/%E8%BB%8A/</link>
-      <pubDate>Sun, 02 Jun 2019 23:03:00 +0900</pubDate>
-      
-      <guid>https://ngkz.github.io/categories/%E8%BB%8A/</guid>
       <description></description>
     </item>
     
