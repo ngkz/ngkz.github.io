@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.88.1 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.89.2 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="AVRでファンコントローラを作っていたら、いろいろなところで嵌って何時間も無駄にしたので、後学のために何があったかを書いておく。
@@ -13,7 +13,7 @@ GCC拡張インラインアセンブラ構文の嵌りどころ
 GCCの拡張インラインアセンブラ構文を使うときはマニュアルをよく読まないとこういう目にあう
 入力オペランドと出力オペランドは同じレジスタに割り当てられることがある
 同じレジスタに割り当てられるとまずい場合は出力オペランドの制約に&amp;をつける。付け忘れていたら最適化をかけたときに入力と出力が同じレジスタに割り当てられて嵌った。
-NG: asm volatile(&quot;...&quot; : [output] &quot;=r&quot; (...) : [input] &quot;r&quot; (...));
+NG: asm volatile(&quot;...&quot; : [output] &quot;=r&quot; (...) : [input] &quot;r&quot; (...)); 
 OK: asm volatile(&quot;...&quot; : [output] &quot;=&amp;r&quot; (...) : [input] &quot;r&quot; (...));
 入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる">
 
@@ -23,7 +23,7 @@ GCC拡張インラインアセンブラ構文の嵌りどころ
 GCCの拡張インラインアセンブラ構文を使うときはマニュアルをよく読まないとこういう目にあう
 入力オペランドと出力オペランドは同じレジスタに割り当てられることがある
 同じレジスタに割り当てられるとまずい場合は出力オペランドの制約に&amp;をつける。付け忘れていたら最適化をかけたときに入力と出力が同じレジスタに割り当てられて嵌った。
-NG: asm volatile(&quot;...&quot; : [output] &quot;=r&quot; (...) : [input] &quot;r&quot; (...));
+NG: asm volatile(&quot;...&quot; : [output] &quot;=r&quot; (...) : [input] &quot;r&quot; (...)); 
 OK: asm volatile(&quot;...&quot; : [output] &quot;=&amp;r&quot; (...) : [input] &quot;r&quot; (...));
 入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる">
 <meta property="og:type" content="article">
@@ -37,7 +37,7 @@ GCC拡張インラインアセンブラ構文の嵌りどころ
 GCCの拡張インラインアセンブラ構文を使うときはマニュアルをよく読まないとこういう目にあう
 入力オペランドと出力オペランドは同じレジスタに割り当てられることがある
 同じレジスタに割り当てられるとまずい場合は出力オペランドの制約に&amp;をつける。付け忘れていたら最適化をかけたときに入力と出力が同じレジスタに割り当てられて嵌った。
-NG: asm volatile(&quot;...&quot; : [output] &quot;=r&quot; (...) : [input] &quot;r&quot; (...));
+NG: asm volatile(&quot;...&quot; : [output] &quot;=r&quot; (...) : [input] &quot;r&quot; (...)); 
 OK: asm volatile(&quot;...&quot; : [output] &quot;=&amp;r&quot; (...) : [input] &quot;r&quot; (...));
 入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる">
 <meta name="twitter:description" content="AVRでファンコントローラを作っていたら、いろいろなところで嵌って何時間も無駄にしたので、後学のために何があったかを書いておく。
@@ -45,7 +45,7 @@ GCC拡張インラインアセンブラ構文の嵌りどころ
 GCCの拡張インラインアセンブラ構文を使うときはマニュアルをよく読まないとこういう目にあう
 入力オペランドと出力オペランドは同じレジスタに割り当てられることがある
 同じレジスタに割り当てられるとまずい場合は出力オペランドの制約に&amp;をつける。付け忘れていたら最適化をかけたときに入力と出力が同じレジスタに割り当てられて嵌った。
-NG: asm volatile(&quot;...&quot; : [output] &quot;=r&quot; (...) : [input] &quot;r&quot; (...));
+NG: asm volatile(&quot;...&quot; : [output] &quot;=r&quot; (...) : [input] &quot;r&quot; (...)); 
 OK: asm volatile(&quot;...&quot; : [output] &quot;=&amp;r&quot; (...) : [input] &quot;r&quot; (...));
 入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる">
 <meta property="og:locale" content="ja">
@@ -295,12 +295,12 @@ OK: asm volatile(&quot;...&quot; : [output] &quot;=&amp;r&quot; (...) : [input] 
 <p>GCCの拡張インラインアセンブラ構文を使うときはマニュアルをよく読まないとこういう目にあう</p>
 <h3 id="入力オペランドと出力オペランドは同じレジスタに割り当てられることがある">入力オペランドと出力オペランドは同じレジスタに割り当てられることがある</h3>
 <p>同じレジスタに割り当てられるとまずい場合は出力オペランドの制約に<code>&amp;</code>をつける。付け忘れていたら最適化をかけたときに入力と出力が同じレジスタに割り当てられて嵌った。</p>
-<p>NG: <code>asm volatile(&quot;...&quot; : [output] &quot;=r&quot; (...) : [input] &quot;r&quot; (...));</code><br>
+<p>NG: <code>asm volatile(&quot;...&quot; : [output] &quot;=r&quot; (...) : [input] &quot;r&quot; (...));</code> <br>
 OK: <code>asm volatile(&quot;...&quot; : [output] &quot;=&amp;r&quot; (...) : [input] &quot;r&quot; (...));</code></p>
 <h3 id="入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる">入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる</h3>
 <p>インラインアセンブラのコードが入力オペランドを割り当てたレジスタを破壊する場合は、同じレジスタを出力オペランドにも割り当てておかないと最適化で動作がおかしくなることがある。 (<a href="https://stackoverflow.com/questions/48381184/can-i-modify-input-operands-in-gcc-inline-assembly">https://stackoverflow.com/questions/48381184/can-i-modify-input-operands-in-gcc-inline-assembly</a>)</p>
 <p>インラインアセンブラを書いた関数がループ中にインライン展開されたときに、入力オペランドの初期化処理がループの外に移動されて、2回目以降に処理がおかしくなったことでこれに気づいた。</p>
-<p>NG: <code>asm volatile(&quot;(inputを破壊するコード)&quot; : : [input] &quot;r&quot; (...));</code><br>
+<p>NG: <code>asm volatile(&quot;(inputを破壊するコード)&quot; : : [input] &quot;r&quot; (...));</code> <br>
 OK:</p>
 <pre tabindex="0"><code>uint8_t dummy;
 asm volatile(&quot;...&quot; : &quot;=r&quot; (dummy) : [input] &quot;0&quot; (...)); //inputの制約の&quot;0&quot;は0番目の出力オペランド(&quot;=r&quot; (dummy))と同じレジスタを割り当てるという意味

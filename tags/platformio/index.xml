@@ -18,7 +18,7 @@
 &lt;p&gt;GCCの拡張インラインアセンブラ構文を使うときはマニュアルをよく読まないとこういう目にあう&lt;/p&gt;
 &lt;h3 id=&#34;入力オペランドと出力オペランドは同じレジスタに割り当てられることがある&#34;&gt;入力オペランドと出力オペランドは同じレジスタに割り当てられることがある&lt;/h3&gt;
 &lt;p&gt;同じレジスタに割り当てられるとまずい場合は出力オペランドの制約に&lt;code&gt;&amp;amp;&lt;/code&gt;をつける。付け忘れていたら最適化をかけたときに入力と出力が同じレジスタに割り当てられて嵌った。&lt;/p&gt;
-&lt;p&gt;NG: &lt;code&gt;asm volatile(&amp;quot;...&amp;quot; : [output] &amp;quot;=r&amp;quot; (...) : [input] &amp;quot;r&amp;quot; (...));&lt;/code&gt;&lt;br&gt;
+&lt;p&gt;NG: &lt;code&gt;asm volatile(&amp;quot;...&amp;quot; : [output] &amp;quot;=r&amp;quot; (...) : [input] &amp;quot;r&amp;quot; (...));&lt;/code&gt; &lt;br&gt;
 OK: &lt;code&gt;asm volatile(&amp;quot;...&amp;quot; : [output] &amp;quot;=&amp;amp;r&amp;quot; (...) : [input] &amp;quot;r&amp;quot; (...));&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる&#34;&gt;入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる&lt;/h3&gt;</description>
     </item>
