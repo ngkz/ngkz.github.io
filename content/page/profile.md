@@ -31,9 +31,6 @@ bitcoin
 [![donate bitcoin](https://img.shields.io/badge/donate-bitcoin-green.svg)](bitcoin:1FzRWZsT9sL6G5iaKpEHRuJmRsKniFNW6c)
 ![bitcoin address QR code](/bitcoin.png)
 
-- 場面緘黙症
-- 精神障害者保健福祉手帳 (3 級)
-
 ## 資格
 
 - 第一種運転免許 (準中型, 普通自動二輪小型 AT 限定)
@@ -47,9 +44,9 @@ bitcoin
 ## スキル
 
 プログラミング言語
-: C, Python, C++, Assembly(x86, x86-64, PIC, ARM, AVR, etc.), Rust, Go, JavaScript (ES2017+), Ruby, CoffeeScript, Shell script(POSIX, bash), Java, HTML, PHP, CSS, VBA
+: C, Python, C++, Assembly(x86, x86-64, PIC, ARM, AVR, etc.), Rust, JavaScript (ES2017+), CoffeeScript, HTML, PHP, CSS, VBA
 
-触ったことのあるフレームワーク
+webのなんか
 : Django, Flask, Express, Electron, nw.js, Vue.js
 
 インフラ
@@ -62,7 +59,7 @@ bitcoin
 : 電気工事, 電子工作, Verilog HDL, 日曜大工
 
 その他
-: OS開発, 組み込みプログラミング
+: PC互換機の低レベルな部分に関する知識, 組み込みプログラミング
 
 ## 主な経歴
 
@@ -76,18 +73,23 @@ bitcoin
 | 2014 |   8 | DEFCON 22 CTF に出場 (binja のメンバーとして)                                                  |
 | 2014 |   8 | HITCON CTF 2014 で優勝 (fuzzi3 のメンバーとして)                                               |
 | 2016 |   1 | SECCON 2015 全国大会 (Intercollege) 準優勝                                                     |
+
+<!--
 | 2016 |   3 | 小山工業高等専門学校 電気情報工学科卒業                                                        |
 | 2016 |  11 | 株式会社 渡辺製作所 入社                                                                       |
 | 2017 |   9 | 株式会社 渡辺製作所 退職                                                                       |
 | 2017 |  12 | 社会福祉法人自立奉仕会茨城福祉工場 入社                                                        |
+-->
 
+<!--
 ## 職歴
 
 | 期間             | 会社                               | 雇用形態 | 仕事内容                                                                                                    |
 | ---------------- | ---------------------------------- | -------- | ----------------------------------------------------------------------------------------------------------- |
 | 2016/06〜2016/07 | 株式会社 渡辺製作所                | -        | データ入力, 雑用                                                                                            |
 | 2016/11〜2017/09 |                                    | パート   |                                                                                                             |
-| 2017/10〜現在    | 社会福祉法人自立奉仕会茨城福祉工場 | -        | プログラミング, Linux サーバー構築, Nutanix クラスタ構築, クライアント PC のデプロイ,ネットワーク機器の設定 |
+| 2017/10〜現在    | 社会福祉法人自立奉仕会茨城福祉工場 | -        | プログラミング, 社内web app開発,  Linux サーバー構築, Nutanix クラスタ構築, クライアント PC のデプロイ,ネットワーク機器の設定 |
+-->
 
 ## CTF 戦績
 
