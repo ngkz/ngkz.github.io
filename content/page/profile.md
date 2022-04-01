@@ -31,6 +31,8 @@ bitcoin
 [![donate bitcoin](https://img.shields.io/badge/donate-bitcoin-green.svg)](bitcoin:1FzRWZsT9sL6G5iaKpEHRuJmRsKniFNW6c)
 ![bitcoin address QR code](/bitcoin.png)
 
+- 場面緘黙症
+
 ## 資格
 
 - 第一種運転免許 (準中型, 普通自動二輪小型 AT 限定)
