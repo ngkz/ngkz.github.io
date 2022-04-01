@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.92.2 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.96.0 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="AFWall&#43;を有効にしていると、Bluetoothテザリングで接続したクライアントが通信できなくなるのをなんとかする。
@@ -281,20 +281,20 @@
 ざっと見たかぎり、UID 9999は特定のシステムプロセスしか使用していないようなので問題はないだろう。</p>
 <p>心配な場合は、Bluetoothテザリングの開始・終了を検知してiptablesのルールを追加・削除するアプリを作れば解決できる。</p>
 <p>以下のコマンドで、<code>/data/local/afwall_bluetooth.sh</code> にカスタムスクリプトを作成する。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">host $ adb shell
-device $ su
-device # cat &lt;&lt;&#39;EOS&#39; &gt;/data/local/afwall_bluetooth.sh
-#!/system/bin/sh
-IPTABLES=/system/bin/iptables
-
-# 追加済みのルールは自動で削除されない上 、カスタムスクリプトはルールの適用中に複数回実行されるので、最初にこれから追加するルールを削除しておかないとルールがどんどん増殖していく。
-$IPTABLES -D OUTPUT -m owner --uid-owner 9999 -p udp --dport 53 -j ACCEPT
-# UID 9999から UDP/53への通信を許可
-$IPTABLES -I OUTPUT -m owner --uid-owner 9999 -p udp --dport 53 -j ACCEPT
-EOS
-device # chmod 700 /data/local/afwall_bluetooth.sh #root権限で実行されるので、絶対に他のユーザーが書き込めるパーミッションにしないこと
-#ファイアウォール停止時に残っていても実害はないので、停止スクリプトは作成しない。
-</code></pre></div><p>AFWall+のメニューで <code>カスタムスクリプト設定</code> を開き、「<strong>下記にカスタムスクリプトを記入してください。</strong>」 の入力欄を <code>/data/local/afwall_bluetooth.sh</code>に設定する。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plain" data-lang="plain"><span style="display:flex;"><span>host $ adb shell
+</span></span><span style="display:flex;"><span>device $ su
+</span></span><span style="display:flex;"><span>device # cat &lt;&lt;&#39;EOS&#39; &gt;/data/local/afwall_bluetooth.sh
+</span></span><span style="display:flex;"><span>#!/system/bin/sh
+</span></span><span style="display:flex;"><span>IPTABLES=/system/bin/iptables
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 追加済みのルールは自動で削除されない上 、カスタムスクリプトはルールの適用中に複数回実行されるので、最初にこれから追加するルールを削除しておかないとルールがどんどん増殖していく。
+</span></span><span style="display:flex;"><span>$IPTABLES -D OUTPUT -m owner --uid-owner 9999 -p udp --dport 53 -j ACCEPT
+</span></span><span style="display:flex;"><span># UID 9999から UDP/53への通信を許可
+</span></span><span style="display:flex;"><span>$IPTABLES -I OUTPUT -m owner --uid-owner 9999 -p udp --dport 53 -j ACCEPT
+</span></span><span style="display:flex;"><span>EOS
+</span></span><span style="display:flex;"><span>device # chmod 700 /data/local/afwall_bluetooth.sh #root権限で実行されるので、絶対に他のユーザーが書き込めるパーミッションにしないこと
+</span></span><span style="display:flex;"><span>#ファイアウォール停止時に残っていても実害はないので、停止スクリプトは作成しない。
+</span></span></code></pre></div><p>AFWall+のメニューで <code>カスタムスクリプト設定</code> を開き、「<strong>下記にカスタムスクリプトを記入してください。</strong>」 の入力欄を <code>/data/local/afwall_bluetooth.sh</code>に設定する。</p>
 <p>これでBluetoothテザリングで通信できるようになる。</p>
               
             </div>

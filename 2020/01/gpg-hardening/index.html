@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.92.2 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.96.0 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="SHA-1 is completely dead. And I noticed legacy GPG signed my PGP key with SHA-1.
@@ -421,8 +421,8 @@ gpg&gt; expire
 gpg&gt; save
 </code></pre><h2 id="updating-revocation-certificate">Updating revocation certificate</h2>
 <p>Generate SHA512-signed revocation ceriticate and store it in safe place.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ gpg -a --gen-revoke &lt;SIGNATURE&gt;
-</code></pre></div><h2 id="offline-primary-private-key">Offline primary private key</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ gpg -a --gen-revoke &lt;SIGNATURE&gt;
+</span></span></code></pre></div><h2 id="offline-primary-private-key">Offline primary private key</h2>
 <h3 id="adding-a-subkey-for-signing">Adding a subkey for signing</h3>
 <p>By default, GnuPG uses the primary key for signing. You should create a subkey for signing because it is timesome restoring offline primary private key whenever signing.</p>
 <pre tabindex="0"><code>$ gpg --edit-key &lt;SIGNATURE&gt;
@@ -464,28 +464,28 @@ gpg&gt; save
 </code></pre><h3 id="backing-up-primary-secret-key">Backing up primary secret key</h3>
 <p>Backup <code>~/.gnupg</code> to safe place like air-gapped computer or encrypted USB stick.
 (Warning: data in flash drives evaporates slowly)</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ cp -a ~/.gnupg &lt;BACKUP&gt;
-</code></pre></div><p>If you need the primary secret key, mount the stick and use <code>--homedir</code> option.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ cp -a ~/.gnupg &lt;BACKUP&gt;
+</span></span></code></pre></div><p>If you need the primary secret key, mount the stick and use <code>--homedir</code> option.</p>
 <pre tabindex="0"><code>$ gpg --homedir=&lt;BACKUP&gt; &lt;OPERATION&gt;
 </code></pre><h3 id="deleting-primary-secret-key">Deleting primary secret key</h3>
 <p>Verify backup of <code>~/.gnupg</code> before deleting the primary secret key!</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ gpg --output subkeys_privkey.gpg --export-secret-subkeys &lt;SIGNATURE&gt;
-$ gpg --delete-secret-key &lt;SIGNATURE&gt;
-$ gpg --import subkeys_privkey.gpg
-$ shred subkeys_privkey.gpg
-$ rm subkeys_privkey.gpg
-</code></pre></div><p>If the primary key is listed as <code>sec#</code>, the primary secret key is deleted successfully.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ gpg --list-secret-keys
-/home/&lt;REDACTED&gt;/.gnupg/pubring.kbx
-------------------------------------
-sec#  rsa4096 2016-12-31 <span style="color:#f92672">[</span>SC<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>有効期限: 2022-01-11<span style="color:#f92672">]</span>
-      BC6DCFE03513A9FA4F55D70206B8106665DD36F3
-uid           <span style="color:#f92672">[</span>  究極  <span style="color:#f92672">]</span> Kazutoshi Noguchi &lt;REDACTED&gt;
-ssb   rsa4096 2016-12-31 <span style="color:#f92672">[</span>E<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>有効期限: 2022-01-11<span style="color:#f92672">]</span>
-      685C0C2243FC78BB8D26932F99124A4267F56B75
-ssb   rsa4096 2020-01-12 <span style="color:#f92672">[</span>S<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>有効期限: 2022-01-11<span style="color:#f92672">]</span>
-      7081B0647E5CB6567F1836FAC2AC8CAE60CEDC4F
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ gpg --output subkeys_privkey.gpg --export-secret-subkeys &lt;SIGNATURE&gt;
+</span></span><span style="display:flex;"><span>$ gpg --delete-secret-key &lt;SIGNATURE&gt;
+</span></span><span style="display:flex;"><span>$ gpg --import subkeys_privkey.gpg
+</span></span><span style="display:flex;"><span>$ shred subkeys_privkey.gpg
+</span></span><span style="display:flex;"><span>$ rm subkeys_privkey.gpg
+</span></span></code></pre></div><p>If the primary key is listed as <code>sec#</code>, the primary secret key is deleted successfully.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ gpg --list-secret-keys
+</span></span><span style="display:flex;"><span>/home/&lt;REDACTED&gt;/.gnupg/pubring.kbx
+</span></span><span style="display:flex;"><span>------------------------------------
+</span></span><span style="display:flex;"><span>sec#  rsa4096 2016-12-31 <span style="color:#f92672">[</span>SC<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>有効期限: 2022-01-11<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      BC6DCFE03513A9FA4F55D70206B8106665DD36F3
+</span></span><span style="display:flex;"><span>uid           <span style="color:#f92672">[</span>  究極  <span style="color:#f92672">]</span> Kazutoshi Noguchi &lt;REDACTED&gt;
+</span></span><span style="display:flex;"><span>ssb   rsa4096 2016-12-31 <span style="color:#f92672">[</span>E<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>有効期限: 2022-01-11<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      685C0C2243FC78BB8D26932F99124A4267F56B75
+</span></span><span style="display:flex;"><span>ssb   rsa4096 2020-01-12 <span style="color:#f92672">[</span>S<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>有効期限: 2022-01-11<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      7081B0647E5CB6567F1836FAC2AC8CAE60CEDC4F
+</span></span></code></pre></div>
               
             </div>
           </div>

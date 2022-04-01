@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.92.2 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.96.0 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="I am writing a sphinx domain and directives for describing package and its build script.
@@ -266,84 +266,84 @@ It only parses and stores package information for now. It does not have a visual
             <div class="main-content-wrap">
               <p>I am writing a sphinx domain and directives for describing package and its build script.</p>
 <p>It only parses and stores package information for now. It does not have a visual representation yet.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">.. f2lfs:package:: foo 1.3.37
-   :license: WTFPL
-   :deps: - bar OR baz
-          - qux
-   :build-deps: - quux
-   :sources: - http: http://example.com/src1.tar.xz
-               gpgsig: http://example.com/src1.tar.xz.sig
-               gpgkey: src1-key.gpg
-             - http: http://example.com/src2.patch
-               sha256sum: DEADBEEFDEADBEEFDEADBEEFDEADBEEF
-             - git: git://example.com/src3.git
-               branch: branch_or_tag
-             - git: https://example.com/src4.git
-               commit: deadbeef
-   :bootstrap:
-
-.. f2lfs:buildstep::
-
-   $ foo block 1 command 1
-
-.. f2lfs:buildstep::
-
-   $ foo block 2 command 1
-   foo block 2 command 1 expected output
-   # foo block 2 command 2 line 1 \
-   &gt; foo block 2 command 2 line 2
-   foo block 2 command 2 expected output line 1
-   foo block 2 command 2 expected output line 2
-</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">packages <span style="color:#f92672">=</span> app<span style="color:#f92672">.</span>env<span style="color:#f92672">.</span>domains[<span style="color:#e6db74">&#39;f2lfs&#39;</span>]<span style="color:#f92672">.</span>data[<span style="color:#e6db74">&#39;packages&#39;</span>]
-
-foo <span style="color:#f92672">=</span> packages[<span style="color:#e6db74">&#39;foo&#39;</span>]
-<span style="color:#66d9ef">assert</span> foo<span style="color:#f92672">.</span>name <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;foo&#39;</span>
-<span style="color:#66d9ef">assert</span> foo<span style="color:#f92672">.</span>version <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;1.3.37&#39;</span>
-<span style="color:#66d9ef">assert</span> foo<span style="color:#f92672">.</span>license <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;WTFPL&#39;</span>
-<span style="color:#66d9ef">assert</span> foo<span style="color:#f92672">.</span>deps <span style="color:#f92672">==</span> [
-    (<span style="color:#e6db74">&#39;bar&#39;</span>, <span style="color:#e6db74">&#39;baz&#39;</span>),
-    <span style="color:#e6db74">&#39;qux&#39;</span>
-]
-<span style="color:#66d9ef">assert</span> foo<span style="color:#f92672">.</span>build_deps <span style="color:#f92672">==</span> [<span style="color:#e6db74">&#39;bar&#39;</span>]
-<span style="color:#66d9ef">assert</span> foo<span style="color:#f92672">.</span>sources <span style="color:#f92672">==</span> [
-    {
-        <span style="color:#e6db74">&#39;type&#39;</span>: <span style="color:#e6db74">&#39;http&#39;</span>,
-        <span style="color:#e6db74">&#39;url&#39;</span>: <span style="color:#e6db74">&#39;http://example.com/src1.tar.xz&#39;</span>,
-        <span style="color:#e6db74">&#39;gpgsig&#39;</span>: <span style="color:#e6db74">&#39;http://example.com/src1.tar.xz.sig&#39;</span>,
-        <span style="color:#e6db74">&#39;gpgkey&#39;</span>: <span style="color:#e6db74">&#39;src1-key.gpg&#39;</span>
-    },
-    {
-        <span style="color:#e6db74">&#39;type&#39;</span>: <span style="color:#e6db74">&#39;http&#39;</span>,
-        <span style="color:#e6db74">&#39;url&#39;</span>: <span style="color:#e6db74">&#39;http://example.com/src2.patch&#39;</span>,
-        <span style="color:#e6db74">&#39;sha256sum&#39;</span>: <span style="color:#e6db74">&#39;DEADBEEFDEADBEEFDEADBEEFDEADBEEF&#39;</span>
-    },
-    {
-        <span style="color:#e6db74">&#39;type&#39;</span>: <span style="color:#e6db74">&#39;git&#39;</span>,
-        <span style="color:#e6db74">&#39;url&#39;</span>: <span style="color:#e6db74">&#39;git://example.com/src3.git&#39;</span>,
-        <span style="color:#e6db74">&#39;branch&#39;</span>: <span style="color:#e6db74">&#39;branch_or_tag&#39;</span>
-    },
-    {
-        <span style="color:#e6db74">&#39;type&#39;</span>: <span style="color:#e6db74">&#39;git&#39;</span>,
-        <span style="color:#e6db74">&#39;url&#39;</span>: <span style="color:#e6db74">&#39;https://example.com/src4.git&#39;</span>,
-        <span style="color:#e6db74">&#39;commit&#39;</span>: <span style="color:#e6db74">&#39;deadbeef&#39;</span>
-    }
-]
-<span style="color:#66d9ef">assert</span> foo<span style="color:#f92672">.</span>bootstrap
-
-step1 <span style="color:#f92672">=</span> foo<span style="color:#f92672">.</span>build_steps[<span style="color:#ae81ff">0</span>]
-<span style="color:#66d9ef">assert</span> step1<span style="color:#f92672">.</span>command <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;foo block 1 command 1&#39;</span>
-<span style="color:#66d9ef">assert</span> step1<span style="color:#f92672">.</span>expected_output <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span>
-
-step2 <span style="color:#f92672">=</span> foo<span style="color:#f92672">.</span>build_steps[<span style="color:#ae81ff">1</span>]
-<span style="color:#66d9ef">assert</span> step2<span style="color:#f92672">.</span>command <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;foo block 2 command 1&#39;</span>
-<span style="color:#66d9ef">assert</span> step2<span style="color:#f92672">.</span>expected_output <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;foo block 2 command 1 expected output&#39;</span>
-
-step3 <span style="color:#f92672">=</span> foo<span style="color:#f92672">.</span>build_steps[<span style="color:#ae81ff">2</span>]
-<span style="color:#66d9ef">assert</span> step3<span style="color:#f92672">.</span>command <span style="color:#f92672">==</span> <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;&#39;&#39;foo block 2 command 2 line 1 \
-</span><span style="color:#e6db74">foo block 2 command 2 line 2&#39;&#39;&#39;</span>
-<span style="color:#66d9ef">assert</span> step3<span style="color:#f92672">.</span>expected_output <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;&#39;&#39;foo block 2 command 2 expected output line 1
-</span><span style="color:#e6db74">foo block 2 command 2 expected output line 2&#39;&#39;&#39;</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plain" data-lang="plain"><span style="display:flex;"><span>.. f2lfs:package:: foo 1.3.37
+</span></span><span style="display:flex;"><span>   :license: WTFPL
+</span></span><span style="display:flex;"><span>   :deps: - bar OR baz
+</span></span><span style="display:flex;"><span>          - qux
+</span></span><span style="display:flex;"><span>   :build-deps: - quux
+</span></span><span style="display:flex;"><span>   :sources: - http: http://example.com/src1.tar.xz
+</span></span><span style="display:flex;"><span>               gpgsig: http://example.com/src1.tar.xz.sig
+</span></span><span style="display:flex;"><span>               gpgkey: src1-key.gpg
+</span></span><span style="display:flex;"><span>             - http: http://example.com/src2.patch
+</span></span><span style="display:flex;"><span>               sha256sum: DEADBEEFDEADBEEFDEADBEEFDEADBEEF
+</span></span><span style="display:flex;"><span>             - git: git://example.com/src3.git
+</span></span><span style="display:flex;"><span>               branch: branch_or_tag
+</span></span><span style="display:flex;"><span>             - git: https://example.com/src4.git
+</span></span><span style="display:flex;"><span>               commit: deadbeef
+</span></span><span style="display:flex;"><span>   :bootstrap:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.. f2lfs:buildstep::
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   $ foo block 1 command 1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.. f2lfs:buildstep::
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   $ foo block 2 command 1
+</span></span><span style="display:flex;"><span>   foo block 2 command 1 expected output
+</span></span><span style="display:flex;"><span>   # foo block 2 command 2 line 1 \
+</span></span><span style="display:flex;"><span>   &gt; foo block 2 command 2 line 2
+</span></span><span style="display:flex;"><span>   foo block 2 command 2 expected output line 1
+</span></span><span style="display:flex;"><span>   foo block 2 command 2 expected output line 2
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>packages <span style="color:#f92672">=</span> app<span style="color:#f92672">.</span>env<span style="color:#f92672">.</span>domains[<span style="color:#e6db74">&#39;f2lfs&#39;</span>]<span style="color:#f92672">.</span>data[<span style="color:#e6db74">&#39;packages&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>foo <span style="color:#f92672">=</span> packages[<span style="color:#e6db74">&#39;foo&#39;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">assert</span> foo<span style="color:#f92672">.</span>name <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;foo&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">assert</span> foo<span style="color:#f92672">.</span>version <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;1.3.37&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">assert</span> foo<span style="color:#f92672">.</span>license <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;WTFPL&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">assert</span> foo<span style="color:#f92672">.</span>deps <span style="color:#f92672">==</span> [
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;bar&#39;</span>, <span style="color:#e6db74">&#39;baz&#39;</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;qux&#39;</span>
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">assert</span> foo<span style="color:#f92672">.</span>build_deps <span style="color:#f92672">==</span> [<span style="color:#e6db74">&#39;bar&#39;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">assert</span> foo<span style="color:#f92672">.</span>sources <span style="color:#f92672">==</span> [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;type&#39;</span>: <span style="color:#e6db74">&#39;http&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;url&#39;</span>: <span style="color:#e6db74">&#39;http://example.com/src1.tar.xz&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;gpgsig&#39;</span>: <span style="color:#e6db74">&#39;http://example.com/src1.tar.xz.sig&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;gpgkey&#39;</span>: <span style="color:#e6db74">&#39;src1-key.gpg&#39;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;type&#39;</span>: <span style="color:#e6db74">&#39;http&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;url&#39;</span>: <span style="color:#e6db74">&#39;http://example.com/src2.patch&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;sha256sum&#39;</span>: <span style="color:#e6db74">&#39;DEADBEEFDEADBEEFDEADBEEFDEADBEEF&#39;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;type&#39;</span>: <span style="color:#e6db74">&#39;git&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;url&#39;</span>: <span style="color:#e6db74">&#39;git://example.com/src3.git&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;branch&#39;</span>: <span style="color:#e6db74">&#39;branch_or_tag&#39;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;type&#39;</span>: <span style="color:#e6db74">&#39;git&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;url&#39;</span>: <span style="color:#e6db74">&#39;https://example.com/src4.git&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;commit&#39;</span>: <span style="color:#e6db74">&#39;deadbeef&#39;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">assert</span> foo<span style="color:#f92672">.</span>bootstrap
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>step1 <span style="color:#f92672">=</span> foo<span style="color:#f92672">.</span>build_steps[<span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">assert</span> step1<span style="color:#f92672">.</span>command <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;foo block 1 command 1&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">assert</span> step1<span style="color:#f92672">.</span>expected_output <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>step2 <span style="color:#f92672">=</span> foo<span style="color:#f92672">.</span>build_steps[<span style="color:#ae81ff">1</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">assert</span> step2<span style="color:#f92672">.</span>command <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;foo block 2 command 1&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">assert</span> step2<span style="color:#f92672">.</span>expected_output <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;foo block 2 command 1 expected output&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>step3 <span style="color:#f92672">=</span> foo<span style="color:#f92672">.</span>build_steps[<span style="color:#ae81ff">2</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">assert</span> step3<span style="color:#f92672">.</span>command <span style="color:#f92672">==</span> <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;&#39;&#39;foo block 2 command 2 line 1 \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">foo block 2 command 2 line 2&#39;&#39;&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">assert</span> step3<span style="color:#f92672">.</span>expected_output <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;&#39;&#39;foo block 2 command 2 expected output line 1
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">foo block 2 command 2 expected output line 2&#39;&#39;&#39;</span>
+</span></span></code></pre></div><ul>
 <li><a href="https://github.com/ngkz/my-lfs-setup/blob/42db78a5f5da596f3aedb9078380964789dc3a75/_ext/af2lfs.py">https://github.com/ngkz/my-lfs-setup/blob/42db78a5f5da596f3aedb9078380964789dc3a75/_ext/af2lfs.py</a></li>
 <li><a href="https://github.com/ngkz/my-lfs-setup/blob/42db78a5f5da596f3aedb9078380964789dc3a75/tests/test_af2lfs.py">https://github.com/ngkz/my-lfs-setup/blob/42db78a5f5da596f3aedb9078380964789dc3a75/tests/test_af2lfs.py</a></li>
 </ul>

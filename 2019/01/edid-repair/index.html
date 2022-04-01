@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.92.2 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.96.0 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="Acer H243HをDVIで接続すると認識しない。VGA接続とHDMI接続では正常に動作するが、DVIで接続するとsyslogに以下のエラーが出る。
@@ -319,97 +319,97 @@ i2c-2	i2c       	AMDGPU DM i2c hw bus 1          	I2C adapter
 i2c-0	i2c       	AMDGPU DM i2c hw bus 0          	I2C adapter
 </code></pre><p>出力からバス0,2,3がGPUのものであることが分かるが、どのポートのものであるかまでは分からないので総当たりでダンプする。
 rootで<code>i2cdump (バス番号) 0x50</code> を実行するとEDIDをダンプできる。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain"># echo Y | i2cdump 0 0x50
-No size specified (using byte-data access)
-WARNING! This program can confuse your I2C bus, cause data loss and worse!
-I will probe file /dev/i2c-0, address 0x50, mode byte
-Continue? [Y/n] 
-     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f    0123456789abcdef
-00: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
-10: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
-20: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
-30: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
-40: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
-50: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
-60: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
-70: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
-80: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
-90: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
-a0: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
-b0: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
-c0: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
-d0: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
-e0: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
-f0: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
-
-# echo Y | i2cdump 2 0x50
-No size specified (using byte-data access)
-WARNING! This program can confuse your I2C bus, cause data loss and worse!
-I will probe file /dev/i2c-2, address 0x50, mode byte
-Continue? [Y/n] 
-     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f    0123456789abcdef
-00: 00 ff ff ff ff ff ff 00 2a 59 00 28 00 00 00 00    ........*Y.(....
-10: 19 19 01 03 80 3e 22 78 ea 1e c5 ae 4f 34 b1 26    ?????&gt;&#34;x????O4?&amp;
-20: 0e 50 54 af cf 00 d1 00 d1 c0 b3 00 a9 c0 95 00    ?PT??.?.???.???.
-30: 81 81 81 00 71 40 04 74 00 30 f2 70 5a 80 30 20    ???.q@?t.0?pZ?0 
-40: 36 00 70 fe 31 00 00 1a 56 5e 00 a0 a0 a0 29 50    6.p?1..?V^.???)P
-50: 30 20 36 00 70 fe 31 00 00 1a 00 00 00 fd 00 1e    0 6.p?1..?...?.?
-60: a0 17 50 19 00 0a 20 20 20 20 20 20 00 00 00 fc    ??P?.?      ...?
-70: 00 55 48 44 20 48 44 4d 49 0a 20 20 20 20 01 63    .UHD HDMI?    ?c
-80: 02 03 43 f3 58 61 90 05 04 60 65 66 03 02 07 16    ??C?Xa???`ef????
-90: 01 1f 12 13 14 20 15 11 06 5d 5e 5f 62 23 09 07    ????? ???]^_b#??
-a0: 07 83 01 00 00 e3 05 03 01 e2 0f 71 6e 03 0c 00    ???..??????qn??.
-b0: 10 00 38 3d 20 00 80 01 02 03 04 67 d8 5d c4 01    ?.8= .?????g?]??
-c0: 78 c0 00 02 3a 80 18 71 38 2d 40 58 2c 45 00 13    x?.?:??q8-@X,E.?
-d0: 2b 21 00 00 1a 02 3a 80 d0 72 38 2d 40 30 20 45    +!..??:??r8-@0 E
-e0: 00 06 44 21 00 00 1a 01 1d 80 18 71 1c 16 20 58    .?D!..?????q?? X
-f0: 2c 25 00 06 44 21 00 00 9e 00 00 00 00 00 00 a0    ,%.?D!..?......?
-
-# echo Y | i2cdump 3 0x50
-No size specified (using byte-data access)
-WARNING! This program can confuse your I2C bus, cause data loss and worse!
-I will probe file /dev/i2c-3, address 0x50, mode byte
-Continue? [Y/n] 
-     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f    0123456789abcdef
-00:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
-10:  2b 13 01 03 80 35 1d 78 ea 60 85 a6 56 4a 9c 25   +....5.x.`..VJ.%
-20:  12 50 54 af cf 00 81 80 71 4f 95 00 95 0f a9 40   .PT.....qO.....@
-30:  b3 00 01 01 01 01 1a 36 80 a0 70 38 1f 40 30 20   .......6..p8.@0 
-40:  35 00 13 2a 21 00 00 1a 00 00 00 fc 00 48 32 34   5..*!........H24
-50:  33 48 0a 20 20 20 20 20 20 20 00 00 00 fd 00 38   3H.       .....8
-60:  4c 1f 53 12 00 0a 20 20 20 20 20 20 00 00 00 ff   L.S...      ....
-70:  00 4c 45 57 30 43 30 31 34 34 30 31 31 0a 00 33   .LEW0C0144011..3
-80:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
-90:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
-a0:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
-b0:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
-c0:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
-d0:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
-e0:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
-f0:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
-</code></pre></div><p>EDIDの内容から、このカードではバス番号2がHDMIのバスで、バス番号3がDVIポートのバスであることがわかる。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plain" data-lang="plain"><span style="display:flex;"><span># echo Y | i2cdump 0 0x50
+</span></span><span style="display:flex;"><span>No size specified (using byte-data access)
+</span></span><span style="display:flex;"><span>WARNING! This program can confuse your I2C bus, cause data loss and worse!
+</span></span><span style="display:flex;"><span>I will probe file /dev/i2c-0, address 0x50, mode byte
+</span></span><span style="display:flex;"><span>Continue? [Y/n] 
+</span></span><span style="display:flex;"><span>     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f    0123456789abcdef
+</span></span><span style="display:flex;"><span>00: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
+</span></span><span style="display:flex;"><span>10: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
+</span></span><span style="display:flex;"><span>20: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
+</span></span><span style="display:flex;"><span>30: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
+</span></span><span style="display:flex;"><span>40: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
+</span></span><span style="display:flex;"><span>50: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
+</span></span><span style="display:flex;"><span>60: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
+</span></span><span style="display:flex;"><span>70: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
+</span></span><span style="display:flex;"><span>80: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
+</span></span><span style="display:flex;"><span>90: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
+</span></span><span style="display:flex;"><span>a0: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
+</span></span><span style="display:flex;"><span>b0: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
+</span></span><span style="display:flex;"><span>c0: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
+</span></span><span style="display:flex;"><span>d0: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
+</span></span><span style="display:flex;"><span>e0: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
+</span></span><span style="display:flex;"><span>f0: XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX XX    XXXXXXXXXXXXXXXX
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># echo Y | i2cdump 2 0x50
+</span></span><span style="display:flex;"><span>No size specified (using byte-data access)
+</span></span><span style="display:flex;"><span>WARNING! This program can confuse your I2C bus, cause data loss and worse!
+</span></span><span style="display:flex;"><span>I will probe file /dev/i2c-2, address 0x50, mode byte
+</span></span><span style="display:flex;"><span>Continue? [Y/n] 
+</span></span><span style="display:flex;"><span>     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f    0123456789abcdef
+</span></span><span style="display:flex;"><span>00: 00 ff ff ff ff ff ff 00 2a 59 00 28 00 00 00 00    ........*Y.(....
+</span></span><span style="display:flex;"><span>10: 19 19 01 03 80 3e 22 78 ea 1e c5 ae 4f 34 b1 26    ?????&gt;&#34;x????O4?&amp;
+</span></span><span style="display:flex;"><span>20: 0e 50 54 af cf 00 d1 00 d1 c0 b3 00 a9 c0 95 00    ?PT??.?.???.???.
+</span></span><span style="display:flex;"><span>30: 81 81 81 00 71 40 04 74 00 30 f2 70 5a 80 30 20    ???.q@?t.0?pZ?0 
+</span></span><span style="display:flex;"><span>40: 36 00 70 fe 31 00 00 1a 56 5e 00 a0 a0 a0 29 50    6.p?1..?V^.???)P
+</span></span><span style="display:flex;"><span>50: 30 20 36 00 70 fe 31 00 00 1a 00 00 00 fd 00 1e    0 6.p?1..?...?.?
+</span></span><span style="display:flex;"><span>60: a0 17 50 19 00 0a 20 20 20 20 20 20 00 00 00 fc    ??P?.?      ...?
+</span></span><span style="display:flex;"><span>70: 00 55 48 44 20 48 44 4d 49 0a 20 20 20 20 01 63    .UHD HDMI?    ?c
+</span></span><span style="display:flex;"><span>80: 02 03 43 f3 58 61 90 05 04 60 65 66 03 02 07 16    ??C?Xa???`ef????
+</span></span><span style="display:flex;"><span>90: 01 1f 12 13 14 20 15 11 06 5d 5e 5f 62 23 09 07    ????? ???]^_b#??
+</span></span><span style="display:flex;"><span>a0: 07 83 01 00 00 e3 05 03 01 e2 0f 71 6e 03 0c 00    ???..??????qn??.
+</span></span><span style="display:flex;"><span>b0: 10 00 38 3d 20 00 80 01 02 03 04 67 d8 5d c4 01    ?.8= .?????g?]??
+</span></span><span style="display:flex;"><span>c0: 78 c0 00 02 3a 80 18 71 38 2d 40 58 2c 45 00 13    x?.?:??q8-@X,E.?
+</span></span><span style="display:flex;"><span>d0: 2b 21 00 00 1a 02 3a 80 d0 72 38 2d 40 30 20 45    +!..??:??r8-@0 E
+</span></span><span style="display:flex;"><span>e0: 00 06 44 21 00 00 1a 01 1d 80 18 71 1c 16 20 58    .?D!..?????q?? X
+</span></span><span style="display:flex;"><span>f0: 2c 25 00 06 44 21 00 00 9e 00 00 00 00 00 00 a0    ,%.?D!..?......?
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># echo Y | i2cdump 3 0x50
+</span></span><span style="display:flex;"><span>No size specified (using byte-data access)
+</span></span><span style="display:flex;"><span>WARNING! This program can confuse your I2C bus, cause data loss and worse!
+</span></span><span style="display:flex;"><span>I will probe file /dev/i2c-3, address 0x50, mode byte
+</span></span><span style="display:flex;"><span>Continue? [Y/n] 
+</span></span><span style="display:flex;"><span>     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f    0123456789abcdef
+</span></span><span style="display:flex;"><span>00:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
+</span></span><span style="display:flex;"><span>10:  2b 13 01 03 80 35 1d 78 ea 60 85 a6 56 4a 9c 25   +....5.x.`..VJ.%
+</span></span><span style="display:flex;"><span>20:  12 50 54 af cf 00 81 80 71 4f 95 00 95 0f a9 40   .PT.....qO.....@
+</span></span><span style="display:flex;"><span>30:  b3 00 01 01 01 01 1a 36 80 a0 70 38 1f 40 30 20   .......6..p8.@0 
+</span></span><span style="display:flex;"><span>40:  35 00 13 2a 21 00 00 1a 00 00 00 fc 00 48 32 34   5..*!........H24
+</span></span><span style="display:flex;"><span>50:  33 48 0a 20 20 20 20 20 20 20 00 00 00 fd 00 38   3H.       .....8
+</span></span><span style="display:flex;"><span>60:  4c 1f 53 12 00 0a 20 20 20 20 20 20 00 00 00 ff   L.S...      ....
+</span></span><span style="display:flex;"><span>70:  00 4c 45 57 30 43 30 31 34 34 30 31 31 0a 00 33   .LEW0C0144011..3
+</span></span><span style="display:flex;"><span>80:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
+</span></span><span style="display:flex;"><span>90:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
+</span></span><span style="display:flex;"><span>a0:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
+</span></span><span style="display:flex;"><span>b0:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
+</span></span><span style="display:flex;"><span>c0:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
+</span></span><span style="display:flex;"><span>d0:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
+</span></span><span style="display:flex;"><span>e0:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
+</span></span><span style="display:flex;"><span>f0:  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff   ................
+</span></span></code></pre></div><p>EDIDの内容から、このカードではバス番号2がHDMIのバスで、バス番号3がDVIポートのバスであることがわかる。</p>
 <h2 id="正常なedidを吸い出す">正常なEDIDを吸い出す</h2>
 <p>モニタを正常なポート(HDMI)で接続し、正常なEDIDを吸い出す</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain"># echo Y | i2cdump 2 0x50 &gt; edid-h243h-hdmi.txt
-$ vim edid-h243h-hdmi.txt
-(マクロで余計なデータを取り除いてhex dumpに変換)
-$ xxd -r -p &lt; edid-h243h-hdmi.txt &gt; edid-h243h-hdmi.bin
-</code></pre></div><h2 id="dviポートのedidの修復">DVIポートのEDIDの修復</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plain" data-lang="plain"><span style="display:flex;"><span># echo Y | i2cdump 2 0x50 &gt; edid-h243h-hdmi.txt
+</span></span><span style="display:flex;"><span>$ vim edid-h243h-hdmi.txt
+</span></span><span style="display:flex;"><span>(マクロで余計なデータを取り除いてhex dumpに変換)
+</span></span><span style="display:flex;"><span>$ xxd -r -p &lt; edid-h243h-hdmi.txt &gt; edid-h243h-hdmi.bin
+</span></span></code></pre></div><h2 id="dviポートのedidの修復">DVIポートのEDIDの修復</h2>
 <p>モニタをDVIで接続し、正常なEDIDを書き込む</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">$ cat &lt;&lt;&#39;EOS&#39; &gt;edidwrite.py
-#!/usr/bin/python3
-import sys
-import os
-
-with open(sys.argv[2], &#34;rb&#34;) as f:
-    edid = f.read()
-
-for i, byt in enumerate(edid):
-    os.system(&#34;echo Y | i2cset %d 0x50 0x%02x 0x%02x b&#34; % (int(sys.argv[1]), i, byt))
-    os.system(&#34;sleep 0.1&#34;)
-EOS
-$ sudo python3 edidwrite.py 3 edid-h243h-hdmi.bin
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plain" data-lang="plain"><span style="display:flex;"><span>$ cat &lt;&lt;&#39;EOS&#39; &gt;edidwrite.py
+</span></span><span style="display:flex;"><span>#!/usr/bin/python3
+</span></span><span style="display:flex;"><span>import sys
+</span></span><span style="display:flex;"><span>import os
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>with open(sys.argv[2], &#34;rb&#34;) as f:
+</span></span><span style="display:flex;"><span>    edid = f.read()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>for i, byt in enumerate(edid):
+</span></span><span style="display:flex;"><span>    os.system(&#34;echo Y | i2cset %d 0x50 0x%02x 0x%02x b&#34; % (int(sys.argv[1]), i, byt))
+</span></span><span style="display:flex;"><span>    os.system(&#34;sleep 0.1&#34;)
+</span></span><span style="display:flex;"><span>EOS
+</span></span><span style="display:flex;"><span>$ sudo python3 edidwrite.py 3 edid-h243h-hdmi.bin
+</span></span></code></pre></div>
 
  
   

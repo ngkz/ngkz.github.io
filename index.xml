@@ -273,16 +273,16 @@ OK: &lt;code&gt;asm volatile(&amp;quot;...&amp;quot; : [output] &amp;quot;=&amp;
       <guid>https://ngkz.github.io/2019/05/ubuntu-1904-reenable-touchpad-palm-detection/</guid>
       <description>&lt;p&gt;Ubuntu 19.04へアップグレードしたら、手のひら検知と入力中にタッチパッドを無効にする機能がオフになり、入力中にカーソルが勝手にあちこちに飛ぶようになってしまった。&lt;/p&gt;
 &lt;p&gt;以下の手順で設定して、Xサーバーを再起動(再ログイン)すると再有効化できる。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;sudo -e /etc/X11/xorg.conf.d/90-libinput.conf
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;Section &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;InputClass&amp;#34;&lt;/span&gt;
-    Identifier &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;libinput touchpad catchall&amp;#34;&lt;/span&gt;
-    MatchIsTouchpad &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;on&amp;#34;&lt;/span&gt;
-    MatchDevicePath &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/dev/input/event*&amp;#34;&lt;/span&gt;
-    Driver &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;libinput&amp;#34;&lt;/span&gt;
-    Option &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Tapping&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;True&amp;#34;&lt;/span&gt;
-    Option &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;DisableWhileTyping&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;True&amp;#34;&lt;/span&gt;
-EndSection
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo -e /etc/X11/xorg.conf.d/90-libinput.conf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Section &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;InputClass&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Identifier &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;libinput touchpad catchall&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    MatchIsTouchpad &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;on&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    MatchDevicePath &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/dev/input/event*&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Driver &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;libinput&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Option &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Tapping&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;True&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Option &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;DisableWhileTyping&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;True&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;EndSection
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -4301,7 +4301,7 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ngkz.github.io/page/profile/</guid>
-      <description>名前 野口和敏 メール nたoたgたuたcたhたiた.たkたaたzたuたtたoたsたiた+た7た4たcた7たeたvたLたxた@たgたmたaたiたlた.たcたoたmた ↑ たぬき PGP 公開鍵 BC6D CFE0 3513 A9FA 4F55 D702 06B8 1066 65DD 36F3 github ngkz twttter n_g_k_z bitcoin 1FzRWZsT9sL6G5iaKpEHRuJmRsKniFNW6c    資格  第一種運転免許 (準中型, 普通自動二輪小型 AT 限定) 第二種電気工事士 IT パスポート 基本情報技術者 応用情報技術者 情報処理安全確保支援士  第010448号     スキル  プログラミング言語 C, Python, C++, Assembly(x86, x86-64, PIC, ARM, AVR, etc.), Rust, JavaScript (ES2017+), CoffeeScript, HTML, PHP, CSS, VBA webのなんか Django, Flask, Express, Electron, nw.</description>
+      <description>名前 野口和敏 メール nたoたgたuたcたhたiた.たkたaたzたuたtたoたsたiた+た7た4たcた7たeたvたLたxた@たgたmたaたiたlた.たcたoたmた ↑ たぬき PGP 公開鍵 BC6D CFE0 3513 A9FA 4F55 D702 06B8 1066 65DD 36F3 github ngkz twttter n_g_k_z bitcoin 1FzRWZsT9sL6G5iaKpEHRuJmRsKniFNW6c     場面緘黙症  資格  第一種運転免許 (準中型, 普通自動二輪小型 AT 限定) 第二種電気工事士 IT パスポート 基本情報技術者 応用情報技術者 情報処理安全確保支援士  第010448号     スキル  プログラミング言語 C, Python, C++, Assembly(x86, x86-64, PIC, ARM, AVR, etc.), Rust, JavaScript (ES2017+), CoffeeScript, HTML, PHP, CSS, VBA webのなんか Django, Flask, Express, Electron, nw.</description>
     </item>
     
   </channel>

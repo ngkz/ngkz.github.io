@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.92.2 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.96.0 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="AVRでファンコントローラを作っていたら、いろいろなところで嵌って何時間も無駄にしたので、後学のために何があったかを書いておく。
@@ -303,38 +303,38 @@ OK: <code>asm volatile(&quot;...&quot; : [output] &quot;=&amp;r&quot; (...) : [i
 <p>NG: <code>asm volatile(&quot;(inputを破壊するコード)&quot; : : [input] &quot;r&quot; (...));</code> <br>
 OK:</p>
 <pre tabindex="0"><code>uint8_t dummy;
-asm volatile(&quot;...&quot; : &quot;=r&quot; (dummy) : [input] &quot;0&quot; (...)); //inputの制約の&quot;0&quot;は0番目の出力オペランド(&quot;=r&quot; (dummy))と同じレジスタを割り当てるという意味
+asm volatile(&#34;...&#34; : &#34;=r&#34; (dummy) : [input] &#34;0&#34; (...)); //inputの制約の&#34;0&#34;は0番目の出力オペランド(&#34;=r&#34; (dummy))と同じレジスタを割り当てるという意味
 </code></pre><h2 id="platformioの嵌りどころ">platformioの嵌りどころ</h2>
 <h3 id="attiny系のマイコンでpio-run--t-uploadeepするとプログラムが消去される">ATtiny系のマイコンで<code>pio run -t uploadeep</code>するとプログラムが消去される</h3>
 <p>platformioのATtiny系マイコンのボード定義にはバグがあり、ボード定義中の<code>&quot;extra_flags&quot;: &quot;-e&quot;</code>が原因で、avrdudeを実行するときに必ず<code>-e</code>(Perform a chip erase)オプションが渡されてしまい、EEPROMの書き込みとヒューズの設定を行うときにプログラムが消去されてしまう。</p>
 <p>バグトラッカーに報告があるがすぐには修正されなさそうな雰囲気なので、下の方法で回避している。</p>
 <ol>
 <li>プロジェクトのディレクトリにboardsディレクトリを作り、その中に<code>&quot;extra_flags&quot;: &quot;-e&quot;</code>を削除したボード定義を作る
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#f92672">(</span>ATtiny85の場合<span style="color:#f92672">)</span>
-PROJECT $ mkdir boards
-PROJECT $ cat <span style="color:#e6db74">&lt;&lt;&#39;EOS&#39; &gt;boards/hoge.json
-</span><span style="color:#e6db74">{
-</span><span style="color:#e6db74">  &#34;build&#34;: {
-</span><span style="color:#e6db74">    &#34;core&#34;: &#34;tiny&#34;,
-</span><span style="color:#e6db74">    &#34;extra_flags&#34;: &#34;-DARDUINO_AVR_ATTINYX5&#34;,
-</span><span style="color:#e6db74">    &#34;f_cpu&#34;: &#34;8000000L&#34;,
-</span><span style="color:#e6db74">    &#34;mcu&#34;: &#34;attiny85&#34;,
-</span><span style="color:#e6db74">    &#34;variant&#34;: &#34;tinyX5&#34;
-</span><span style="color:#e6db74">  },
-</span><span style="color:#e6db74">  &#34;frameworks&#34;: [
-</span><span style="color:#e6db74">    &#34;arduino&#34;
-</span><span style="color:#e6db74">  ],
-</span><span style="color:#e6db74">  &#34;name&#34;: &#34;HOGEHOGEHOGE&#34;,
-</span><span style="color:#e6db74">  &#34;upload&#34;: {
-</span><span style="color:#e6db74">    &#34;maximum_ram_size&#34;: 512,
-</span><span style="color:#e6db74">    &#34;maximum_size&#34;: 8192,
-</span><span style="color:#e6db74">    &#34;protocol&#34;: &#34;usbtiny&#34;
-</span><span style="color:#e6db74">  },
-</span><span style="color:#e6db74">  &#34;url&#34;: &#34;https://HOGEHOGE&#34;,
-</span><span style="color:#e6db74">  &#34;vendor&#34;: &#34;HOGEHOGEHOGE&#34;
-</span><span style="color:#e6db74">}
-</span><span style="color:#e6db74">EOS</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#f92672">(</span>ATtiny85の場合<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>PROJECT $ mkdir boards
+</span></span><span style="display:flex;"><span>PROJECT $ cat <span style="color:#e6db74">&lt;&lt;&#39;EOS&#39; &gt;boards/hoge.json
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">{
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;build&#34;: {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;core&#34;: &#34;tiny&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;extra_flags&#34;: &#34;-DARDUINO_AVR_ATTINYX5&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;f_cpu&#34;: &#34;8000000L&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;mcu&#34;: &#34;attiny85&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;variant&#34;: &#34;tinyX5&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  },
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;frameworks&#34;: [
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;arduino&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  ],
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;name&#34;: &#34;HOGEHOGEHOGE&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;upload&#34;: {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;maximum_ram_size&#34;: 512,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;maximum_size&#34;: 8192,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;protocol&#34;: &#34;usbtiny&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  },
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;url&#34;: &#34;https://HOGEHOGE&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;vendor&#34;: &#34;HOGEHOGEHOGE&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">}
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">EOS</span>
+</span></span></code></pre></div></li>
 <li>platformio.iniを変更
 <pre tabindex="0"><code>-[env:attiny85]
 +[env:hoge]
@@ -350,8 +350,8 @@ PROJECT $ cat <span style="color:#e6db74">&lt;&lt;&#39;EOS&#39; &gt;boards/hoge.
 +extra_scripts = extra_script.py
 </code></pre></li>
 <li>platformio.iniと同じディレクトリにextra_script.pyを作成し、プログラムの書き込み時だけChip Eraseオプションを渡すよう設定
-<pre tabindex="0"><code>Import('env')
-env.Replace(UPLOADCMD='$UPLOADER $UPLOADERFLAGS -e -U flash:w:$SOURCES:i')
+<pre tabindex="0"><code>Import(&#39;env&#39;)
+env.Replace(UPLOADCMD=&#39;$UPLOADER $UPLOADERFLAGS -e -U flash:w:$SOURCES:i&#39;)
 </code></pre></li>
 </ol>
               
