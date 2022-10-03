@@ -43,7 +43,7 @@ with-subkey-fingerprint
 Renew the key to regenerate its signature with SHA-512 (an algorithm specified with cert-digest-algo).
 
 ```
-$ gpg --edit-key <SIGNATURE>
+$ gpg --edit-key <KEY_ID>
 gpg> list
 
 pub  rsa4096/06B8106665DD36F3
@@ -74,7 +74,7 @@ gpg> save
 Generate SHA512-signed revocation ceriticate and store it in safe place.
 
 ```sh
-$ gpg -a --gen-revoke <SIGNATURE>
+$ gpg -a --gen-revoke <KEY_ID>
 ```
 
 ## Offline primary private key
@@ -82,7 +82,7 @@ $ gpg -a --gen-revoke <SIGNATURE>
 By default, GnuPG uses the primary key for signing. You should create a subkey for signing because it is timesome restoring offline primary private key whenever signing. 
 
 ```
-$ gpg --edit-key <SIGNATURE>
+$ gpg --edit-key <KEY_ID>
 gpg> addkey
 Please select what kind of key you want:
    (3) DSA (sign only)
@@ -121,33 +121,44 @@ gpg> save
 ```
 
 ### Backing up primary secret key
-Backup `~/.gnupg` to safe place like air-gapped computer or encrypted USB stick.
+Backup the secret key to safe place like air-gapped computer or encrypted USB stick.
 (Warning: data in flash drives evaporates slowly)
 
 ```sh
 $ cp -a ~/.gnupg <BACKUP>
 ```
 
-If you need the primary secret key, mount the stick and use `--homedir` option.
+If you need the primary secret key, mount the stick and use `--homedir` option:
 
-```
+```sh
 $ gpg --homedir=<BACKUP> <OPERATION>
 ```
 
-### Deleting primary secret key
-Verify backup of `~/.gnupg` before deleting the primary secret key!
+OR
 
 ```sh
-$ gpg --output subkeys_privkey.gpg --export-secret-subkeys <SIGNATURE>
-$ gpg --delete-secret-key <SIGNATURE>
-$ gpg --import subkeys_privkey.gpg
-$ shred subkeys_privkey.gpg
-$ rm subkeys_privkey.gpg
+$ gpg -o <BACKUP> --export-secret-keys <KEY_ID>
 ```
 
-If the primary key is listed as `sec#`, the primary secret key is deleted successfully.
+Temporarily import the key whenever you need it:
 
 ```sh
+$ gpg --import <BACKUP>
+$ ...
+$ gpg --detele-secret-keys <KEY_ID>\!
+```
+
+### Deleting primary secret key
+Verify backup of your key before deleting the primary secret key!  
+(Run a operation which needs the primary secret key)
+
+```sh
+$ gpg --delete-secret-keys <KEY_ID>\!
+```
+
+If the primary key is listed as `sec#`, the secret key is deleted successfully.
+
+```
 $ gpg --list-secret-keys
 /home/<REDACTED>/.gnupg/pubring.kbx
 ------------------------------------
