@@ -23,5 +23,7 @@ hugo
 echo -e "${BOLD_CYAN}Pushing site${NORMAL}"
 cd public
 git add --all .
-git commit -m "rebuild site"
+if ! git status | grep "nothing to commit" >/dev/null; then
+    git commit -m "rebuild site"
+fi
 git push origin master
