@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #TODO: upgrade git and use git-worktree.
 set -e
 shopt -s extglob
