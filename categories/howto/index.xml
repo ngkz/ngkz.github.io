@@ -161,8 +161,7 @@ Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30
       <guid>https://ngkz.github.io/2018/07/audit-cargo-crate/</guid>
       <description>cargo fetch1 でパッケージを取得すると、~/.cargo/registry/src/github.com-1ecc6299db9ec823/(パッケージ名)-(バージョン) にパッケージのソースコードが展開される。
 Cargo.lockにすべての依存クレートの名前とバージョンが記録されているので、これを見てコードに問題がないか調べることができる。
-  cargo buildはビルドスクリプトを実行してしまうのでダメ&amp;#160;&amp;#x21a9;&amp;#xfe0e;
-   </description>
+cargo buildはビルドスクリプトを実行してしまうのでダメ&amp;#160;&amp;#x21a9;&amp;#xfe0e;</description>
     </item>
     
     <item>

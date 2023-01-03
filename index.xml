@@ -49,6 +49,12 @@
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
+&lt;td&gt;2022-01-XX&lt;/td&gt;
+&lt;td&gt;?&lt;/td&gt;
+&lt;td&gt;アンダーコート施工&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
 &lt;td&gt;2022-02-13&lt;/td&gt;
 &lt;td&gt;?&lt;/td&gt;
 &lt;td&gt;タイヤローテーション&lt;/td&gt;
@@ -88,6 +94,12 @@
 &lt;td&gt;2022-12-11&lt;/td&gt;
 &lt;td&gt;23855&lt;/td&gt;
 &lt;td&gt;冬タイヤに交換&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2022-01-03&lt;/td&gt;
+&lt;td&gt;24799&lt;/td&gt;
+&lt;td&gt;オイル交換, アンダーコート補修&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -1649,31 +1661,31 @@ OK: &lt;code&gt;asm volatile(&amp;quot;...&amp;quot; : [output] &amp;quot;=&amp;
 &lt;li&gt;スキーの検定でコースが何箇所か閉鎖になっていたが、ほとんどのコースを滑ることができた。&lt;/li&gt;
 &lt;li&gt;景色はきれいでコースも楽しかった
 
-
- 
   
-  
-  
-  
+   
     
-  
+    
+    
     
       
     
+      
+        
+      
+    
   
-
-&lt;div class=&#34;figure center&#34; &gt;
-  
-    &lt;a class=&#34;fancybox&#34; href=&#34;https://ngkz.github.io/assets/diary-20190309/2019-03-09%2009.39.56.jpg&#34; title=&#34;景色&#34; data-fancybox-group=&#34;&#34;&gt;
-  
-    &lt;img class=&#34;fig-img&#34; src=&#34;https://ngkz.github.io/assets/diary-20190309/2019-03-09%2009.39.56-thumbnail.jpg&#34; style=&#34;width: 700px;height: 122px;&#34; alt=&#34;景色&#34;&gt;
-  
-    &lt;/a&gt;
-  
-   
-    &lt;span class=&#34;caption&#34;&gt;景色&lt;/span&gt;
-  
-&lt;/div&gt;
+  &lt;div class=&#34;figure center&#34; &gt;
+    
+      &lt;a class=&#34;fancybox&#34; href=&#34;https://ngkz.github.io/assets/diary-20190309/2019-03-09%2009.39.56.jpg&#34; title=&#34;景色&#34; data-fancybox-group=&#34;&#34;&gt;
+    
+      &lt;img class=&#34;fig-img&#34; src=&#34;https://ngkz.github.io/assets/diary-20190309/2019-03-09%2009.39.56-thumbnail.jpg&#34; style=&#34;width: 700px;height: 122px;&#34; alt=&#34;景色&#34;&gt;
+    
+      &lt;/a&gt;
+    
+     
+      &lt;span class=&#34;caption&#34;&gt;景色&lt;/span&gt;
+    
+  &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;昼食にケバブロールとプレーンポテトを食べた。
 &lt;ul&gt;
@@ -1688,31 +1700,31 @@ OK: &lt;code&gt;asm volatile(&amp;quot;...&amp;quot; : [output] &amp;quot;=&amp;
 &lt;li&gt;板やブーツについた雪を吹きとばすためのエアガンがあって便利だった&lt;/li&gt;
 &lt;li&gt;いつのまにか滑走面に深い傷がついていた
 
-
- 
   
-  
-  
-  
+   
     
-  
+    
+    
     
       
     
+      
+        
+      
+    
   
-
-&lt;div class=&#34;figure center&#34; &gt;
-  
-    &lt;a class=&#34;fancybox&#34; href=&#34;https://ngkz.github.io/assets/diary-20190309/2019-03-09%2015.13.54.jpg&#34; title=&#34;滑走面の傷&#34; data-fancybox-group=&#34;&#34;&gt;
-  
-    &lt;img class=&#34;fig-img&#34; src=&#34;https://ngkz.github.io/assets/diary-20190309/2019-03-09%2015.13.54.jpg&#34; style=&#34;width: 600px;height: 450px;&#34; alt=&#34;滑走面の傷&#34;&gt;
-  
-    &lt;/a&gt;
-  
-   
-    &lt;span class=&#34;caption&#34;&gt;滑走面の傷&lt;/span&gt;
-  
-&lt;/div&gt;
+  &lt;div class=&#34;figure center&#34; &gt;
+    
+      &lt;a class=&#34;fancybox&#34; href=&#34;https://ngkz.github.io/assets/diary-20190309/2019-03-09%2015.13.54.jpg&#34; title=&#34;滑走面の傷&#34; data-fancybox-group=&#34;&#34;&gt;
+    
+      &lt;img class=&#34;fig-img&#34; src=&#34;https://ngkz.github.io/assets/diary-20190309/2019-03-09%2015.13.54.jpg&#34; style=&#34;width: 600px;height: 450px;&#34; alt=&#34;滑走面の傷&#34;&gt;
+    
+      &lt;/a&gt;
+    
+     
+      &lt;span class=&#34;caption&#34;&gt;滑走面の傷&lt;/span&gt;
+    
+  &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;普段はスキーの後に寺の湯に入っているが、2週間前のスキーで硫黄泉に入ったし、明日行く予定の那須高原の泉質も硫黄泉のようなのでアルカリ泉のあかつきの湯に入った。&lt;/li&gt;
 &lt;li&gt;朝飯を作る時間がないので、スキー場の近くの駐車場に泊まって朝コンビニで飯買っていこうと思っていたが、駐車場は傾斜してるし那須高原の山中にはコンビニがないのであてがはずれた&lt;/li&gt;
@@ -3944,8 +3956,7 @@ Jan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30
       <guid>https://ngkz.github.io/2018/07/audit-cargo-crate/</guid>
       <description>cargo fetch1 でパッケージを取得すると、~/.cargo/registry/src/github.com-1ecc6299db9ec823/(パッケージ名)-(バージョン) にパッケージのソースコードが展開される。
 Cargo.lockにすべての依存クレートの名前とバージョンが記録されているので、これを見てコードに問題がないか調べることができる。
-  cargo buildはビルドスクリプトを実行してしまうのでダメ&amp;#160;&amp;#x21a9;&amp;#xfe0e;
-   </description>
+cargo buildはビルドスクリプトを実行してしまうのでダメ&amp;#160;&amp;#x21a9;&amp;#xfe0e;</description>
     </item>
     
     <item>
@@ -4331,7 +4342,7 @@ Cargo.lockにすべての依存クレートの名前とバージョンが記録�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ngkz.github.io/page/profile/</guid>
-      <description>名前 野口和敏 メール nたoたgたuたcたhたiた.たkたaたzたuたtたoたsたiた+た7た4たcた7たeたvたLたxた@たgたmたaたiたlた.たcたoたmた ↑ たぬき PGP 公開鍵 BC6D CFE0 3513 A9FA 4F55 D702 06B8 1066 65DD 36F3 github ngkz twttter n_g_k_z bitcoin 1FzRWZsT9sL6G5iaKpEHRuJmRsKniFNW6c     場面緘黙症  資格  第一種運転免許 (準中型, 普通自動二輪小型 AT 限定) 第二種電気工事士 IT パスポート 基本情報技術者 応用情報技術者 情報処理安全確保支援士  第010448号     スキル  プログラミング言語 C, Python, C++, Assembly(x86, x86-64, PIC, ARM, AVR, etc.), Rust, JavaScript (ES2017+), CoffeeScript, HTML, PHP, CSS, VBA webのなんか Django, Flask, Express, Electron, nw.</description>
+      <description>名前 野口和敏 メール nたoたgたuたcたhたiた.たkたaたzたuたtたoたsたiた+た7た4たcた7たeたvたLたxた@たgたmたaたiたlた.たcたoたmた ↑ たぬき PGP 公開鍵 BC6D CFE0 3513 A9FA 4F55 D702 06B8 1066 65DD 36F3 github ngkz twttter n_g_k_z bitcoin 1FzRWZsT9sL6G5iaKpEHRuJmRsKniFNW6c 場面緘黙症 資格 第一種運転免許 (準中型, 普通自動二輪小型 AT 限定) 第二種電気工事士 IT パスポート 基本情報技術者 応用情報技術者 情報処理安全確保支援士 第010448号 スキル プログラミング言語 C, Python, C++, Assembly(x86, x86-64, PIC, ARM, AVR, etc.), Rust, JavaScript (ES2017+), CoffeeScript, HTML, PHP, CSS, VBA webのなんか Django, Flask, Express, Electron, nw.js, Vue.js インフラ Linux, Windows Server, AppArmor, Docker, Apache, Nginx, Postfix, Node.</description>
     </item>
     
   </channel>
