@@ -26,12 +26,13 @@ github
 twttter
 : [n_g_k_z](https://twitter.com/n_g_k_z)
 
+discord
+: ngkz
+
 bitcoin
 : 1FzRWZsT9sL6G5iaKpEHRuJmRsKniFNW6c
 [![donate bitcoin](https://img.shields.io/badge/donate-bitcoin-green.svg)](bitcoin:1FzRWZsT9sL6G5iaKpEHRuJmRsKniFNW6c)
 ![bitcoin address QR code](/bitcoin.png)
-
-- 場面緘黙症
 
 ## 資格
 
@@ -58,7 +59,7 @@ webのなんか
 : Pwning, Reverse Engineering, Web hacking, Forensics
 
 ハードウェア
-: 電気工事, 電子工作, Verilog HDL, 日曜大工
+: 電気工事, 電子工作, Verilog HDL, DIY
 
 その他
 : PC互換機の低レベルな部分に関する知識, 組み込みプログラミング
