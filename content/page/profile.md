@@ -42,24 +42,23 @@ bitcoin
 - 基本情報技術者
 - 応用情報技術者
 - 情報処理安全確保支援士
-  {{<figure src="/assets/profile/riss-logo.png" title="第010448号" alt="情報処理安全確保支援士 ロゴマーク" width="94" height="107">}}
 
 ## スキル
 
 プログラミング言語
-: C, Python, C++, Assembly(x86, x86-64, PIC, ARM, AVR, etc.), Rust, JavaScript (ES2017+), CoffeeScript, HTML, PHP, CSS, VBA
+: C, Python, C++, Assembly(x86, x86-64, PIC, ARM, AVR, etc.), Rust, JavaScript (ES2017), CoffeeScript, PHP, VBA
 
 webのなんか
 : Django, Flask, Express, Electron, nw.js, Vue.js
 
 インフラ
-: Linux, Windows Server, AppArmor, Docker, Apache, Nginx, Postfix, Node.js, Ansible, Zabbix, Chef, SNMP, OpenSSH, OpenVPN, SoftEther, systemd, AIDE, Zabbix, Nutanix (CE, 商用版両方), Microsoft Deployment Toolkit
+: Linux, Windows Server, Docker, Apache, Nginx, Node.js, Ansible, Zabbix, Chef, SNMP, OpenSSH, OpenVPN, SoftEther, Nutanix (CE, 商用版両方), Microsoft Deployment Toolkit
 
 ハッキング
-: Pwning, Reverse Engineering, Web hacking, Forensics
+: Pwning, Reverse Engineering, Web, Forensics
 
 ハードウェア
-: 電気工事, 電子工作, Verilog HDL, DIY
+: 電気工事, 電子工作, Verilog HDL, 木工
 
 その他
 : PC互換機の低レベルな部分に関する知識, 組み込みプログラミング
@@ -76,9 +75,9 @@ webのなんか
 | 2014 |   8 | DEFCON 22 CTF に出場 (binja のメンバーとして)                                                  |
 | 2014 |   8 | HITCON CTF 2014 で優勝 (fuzzi3 のメンバーとして)                                               |
 | 2016 |   1 | SECCON 2015 全国大会 (Intercollege) 準優勝                                                     |
+| 2016 |   3 | 小山工業高等専門学校 電気情報工学科卒業                                                        |
 
 <!--
-| 2016 |   3 | 小山工業高等専門学校 電気情報工学科卒業                                                        |
 | 2016 |  11 | 株式会社 渡辺製作所 入社                                                                       |
 | 2017 |   9 | 株式会社 渡辺製作所 退職                                                                       |
 | 2017 |  12 | 社会福祉法人自立奉仕会茨城福祉工場 入社                                                        |
