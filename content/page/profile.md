@@ -29,9 +29,14 @@ twttter
 discord
 : ngkz
 
+YouTube
+: [F2L](https://www.youtube.com/channel/UC4OLPLysTbn11hmtf_ElZoA)
+
+<!-- Reddit -->
+<!-- : [ngkz0](https://www.reddit.com/user/ngkz0) -->
+
 bitcoin
-: 1FzRWZsT9sL6G5iaKpEHRuJmRsKniFNW6c
-[![donate bitcoin](https://img.shields.io/badge/donate-bitcoin-green.svg)](bitcoin:1FzRWZsT9sL6G5iaKpEHRuJmRsKniFNW6c)
+: [1FzRWZsT9sL6G5iaKpEHRuJmRsKniFNW6c](bitcoin:1FzRWZsT9sL6G5iaKpEHRuJmRsKniFNW6c)
 ![bitcoin address QR code](/bitcoin.png)
 
 ## 資格
