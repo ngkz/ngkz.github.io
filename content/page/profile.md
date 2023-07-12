@@ -29,9 +29,6 @@ twttter
 discord
 : ngkz
 
-YouTube
-: [F2L](https://www.youtube.com/channel/UC4OLPLysTbn11hmtf_ElZoA)
-
 <!-- Reddit -->
 <!-- : [ngkz0](https://www.reddit.com/user/ngkz0) -->
 
