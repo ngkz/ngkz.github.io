@@ -45,6 +45,9 @@ canonifyurls = true
   # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
   # googlePlus = "+ThibaudLepretre"
 
+[markup.goldmark.renderer]
+unsafe = true
+
 # Menu Configuration
 [[menu.main]]
   weight = 1
