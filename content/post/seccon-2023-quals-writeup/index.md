@@ -24,6 +24,8 @@ thumbnailImage: /2023/09/seccon-2023-quals-writeup/cert.jpg
 
 {{<image classes="center fancybox" src="result.jpg" title="Team Profile" thumbnail-width="814px">}}
 
+SECCON 2012・2013の優勝チームのメンバーとは思えない成績だな!
+
 7年のブランクで腕が完全に錆びついている上にゴタゴタしてて事前にほとんど練習できなかったにもかかわらず、無謀にもソロで突っこんだので振るわない成績で終わってしまいました。国内チームは国内順位10位以上で予選通過できますが、当然通過できませんでした。鍛えなおさないといけませんね。  
 特にCryptoは全くダメで、元々nolzeくん頼りで弱かったのに、さらに数学もRSAも完全に忘れてしまったのでwarmup問題すら解けませんでした。精進します…
 
