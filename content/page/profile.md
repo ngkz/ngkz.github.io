@@ -20,13 +20,13 @@ showPagination: false
 PGP 公開鍵
 : [BC6D CFE0 3513 A9FA 4F55 D702 06B8 1066 65DD 36F3](/gpg-public-key.asc)
 
-github
+GitHub
 : [ngkz](https://github.com/ngkz)
 
-twttter
+X
 : [n_g_k_z](https://twitter.com/n_g_k_z)
 
-discord
+Discord
 : ngkz
 
 <!-- Reddit -->
