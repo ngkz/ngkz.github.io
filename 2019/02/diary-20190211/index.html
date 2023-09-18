@@ -271,10 +271,10 @@ LFS BookとArch LinuxのPKGBUILDを参考にglibcをビルドしている。64bi
 
 <meta name="twitter:card" content="summary">
 
-  <meta name="twitter:site" content="@ngkz_f2l">
+  <meta name="twitter:site" content="@n_g_k_z">
 
 
-  <meta name="twitter:creator" content="@ngkz_f2l">
+  <meta name="twitter:creator" content="@n_g_k_z">
 
 
 
@@ -545,7 +545,154 @@ LFS BookとArch LinuxのPKGBUILDを参考にglibcをビルドしている。64bi
 </table>
 <h2 id="linux-from-scratch">Linux from Scratch</h2>
 <p>LFS BookとArch LinuxのPKGBUILDを参考にglibcをビルドしている。64bitライブラリのビルドはできたが、テストが通らない。</p>
-<!-- raw HTML omitted -->
+<details>
+<summary>メモ:</summary><div>
+```
+FAIL: c++-types-check
+FAIL: dlfcn/bug-atexit3
+FAIL: dlfcn/bug-dl-leaf
+FAIL: dlfcn/default
+FAIL: dlfcn/glrefmain
+FAIL: dlfcn/tstcxaatexit
+FAIL: dlfcn/tststatic2
+FAIL: dlfcn/tststatic5
+FAIL: elf/circleload1
+FAIL: elf/constload1
+FAIL: elf/dblload
+FAIL: elf/dblunload
+FAIL: elf/global
+FAIL: elf/ifuncmain1
+FAIL: elf/ifuncmain1pic
+FAIL: elf/ifuncmain1pie
+FAIL: elf/ifuncmain1vis
+FAIL: elf/ifuncmain1vispic
+FAIL: elf/ifuncmain1vispie
+FAIL: elf/ifuncmain3
+FAIL: elf/initfirst
+FAIL: elf/lateglobal
+FAIL: elf/loadtest
+FAIL: elf/neededtest4
+FAIL: elf/next
+FAIL: elf/nodelete2
+FAIL: elf/order
+FAIL: elf/order-cmp
+FAIL: elf/order2
+FAIL: elf/order2-cmp
+FAIL: elf/preloadtest
+FAIL: elf/reldep
+FAIL: elf/reldep2
+FAIL: elf/reldep3
+FAIL: elf/reldep5
+FAIL: elf/reldep6
+FAIL: elf/reldep7
+FAIL: elf/reldep8
+FAIL: elf/restest1
+FAIL: elf/tst-align
+FAIL: elf/tst-align2
+FAIL: elf/tst-array2
+FAIL: elf/tst-array2-cmp
+FAIL: elf/tst-array4
+FAIL: elf/tst-array4-cmp
+FAIL: elf/tst-array5
+FAIL: elf/tst-array5-cmp
+FAIL: elf/tst-audit1
+FAIL: elf/tst-audit10
+FAIL: elf/tst-audit12
+FAIL: elf/tst-audit2
+FAIL: elf/tst-audit3
+FAIL: elf/tst-audit4
+FAIL: elf/tst-audit5
+FAIL: elf/tst-audit6
+FAIL: elf/tst-audit7
+FAIL: elf/tst-audit8
+FAIL: elf/tst-audit9
+UNSUPPORTED: elf/tst-avx
+UNSUPPORTED: elf/tst-avx512
+FAIL: elf/tst-deep1
+FAIL: elf/tst-dlmopen1
+FAIL: elf/tst-dlopenrpath
+FAIL: elf/tst-execstack
+FAIL: elf/tst-execstack-needed
+FAIL: elf/tst-global1
+FAIL: elf/tst-gnu2-tls1
+FAIL: elf/tst-initorder
+FAIL: elf/tst-initorder-cmp
+FAIL: elf/tst-initorder2
+FAIL: elf/tst-initorder2-cmp
+FAIL: elf/tst-libc_dlvsym
+FAIL: elf/tst-libc_dlvsym-static
+FAIL: elf/tst-main1
+FAIL: elf/tst-nodelete-dlclose
+FAIL: elf/tst-pie1
+FAIL: elf/tst-quad1
+FAIL: elf/tst-quad2
+FAIL: elf/tst-tls-dlinfo
+FAIL: elf/tst-tls-manydynamic
+FAIL: elf/tst-tls10
+FAIL: elf/tst-tls11
+FAIL: elf/tst-tls12
+FAIL: elf/tst-tls14
+FAIL: elf/tst-tls17
+FAIL: elf/tst-tls18
+FAIL: elf/tst-tls19
+FAIL: elf/tst-tls3
+FAIL: elf/tst-tls4
+FAIL: elf/tst-tls5
+FAIL: elf/tst-tls6
+FAIL: elf/tst-tls7
+FAIL: elf/tst-tls8
+FAIL: elf/tst-unique3
+FAIL: elf/unload4
+FAIL: elf/unload6
+FAIL: elf/unload7
+FAIL: elf/unload8
+FAIL: inet/tst-idna_name_classify
+FAIL: math/test-double-libmvec-alias
+FAIL: math/test-double-libmvec-alias-avx
+UNSUPPORTED: math/test-double-libmvec-alias-avx-main
+FAIL: math/test-double-libmvec-alias-avx2
+UNSUPPORTED: math/test-double-libmvec-alias-avx2-main
+FAIL: math/test-double-libmvec-alias-avx512
+UNSUPPORTED: math/test-double-libmvec-alias-avx512-main
+UNSUPPORTED: math/test-double-libmvec-sincos-avx
+UNSUPPORTED: math/test-double-libmvec-sincos-avx2
+UNSUPPORTED: math/test-double-libmvec-sincos-avx512
+FAIL: math/test-float-libmvec-alias
+FAIL: math/test-float-libmvec-alias-avx
+UNSUPPORTED: math/test-float-libmvec-alias-avx-main
+FAIL: math/test-float-libmvec-alias-avx2
+UNSUPPORTED: math/test-float-libmvec-alias-avx2-main
+FAIL: math/test-float-libmvec-alias-avx512
+UNSUPPORTED: math/test-float-libmvec-alias-avx512-main
+UNSUPPORTED: math/test-float-libmvec-sincosf-avx
+UNSUPPORTED: math/test-float-libmvec-sincosf-avx2
+UNSUPPORTED: math/test-float-libmvec-sincosf-avx512
+UNSUPPORTED: misc/tst-pkey
+UNSUPPORTED: misc/tst-ttyname
+UNSUPPORTED: nptl/test-cond-printers
+UNSUPPORTED: nptl/test-condattr-printers
+UNSUPPORTED: nptl/test-mutex-printers
+UNSUPPORTED: nptl/test-mutexattr-printers
+UNSUPPORTED: nptl/test-rwlock-printers
+UNSUPPORTED: nptl/test-rwlockattr-printers
+FAIL: nptl/tst-atfork2
+FAIL: nptl/tst-execstack
+FAIL: nptl/tst-fini1
+FAIL: nptl/tst-tls3
+FAIL: nptl/tst-tls3-malloc
+FAIL: nptl/tst-tls6
+UNSUPPORTED: resolv/tst-resolv-ai_idn
+UNSUPPORTED: resolv/tst-resolv-ai_idn-latin1
+FAIL: stdlib/tst-putenv
+FAIL: stdlib/tst-tls-atexit
+FAIL: stdlib/tst-tls-atexit-nodelete
+Summary of test results:
+    114 FAIL
+   5721 PASS
+     24 UNSUPPORTED
+     19 XFAIL
+```
+</div></details>
 <h2 id="その他">その他</h2>
 <ul>
 <li>3時間+8時間半くらい寝たのにまだ徹夜の影響が残っている。なかなか起きられなかったし、今も軽い頭痛がする。
@@ -776,7 +923,7 @@ LFS BookとArch LinuxのPKGBUILDを参考にglibcをビルドしている。64bi
       <div id="about-card-job">
         <i class="fa fa-briefcase"></i>
         <br/>
-        System integrator, Programmer
+        IT/InfoSec Engineer
       </div>
     
     
