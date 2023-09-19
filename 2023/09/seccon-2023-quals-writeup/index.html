@@ -303,7 +303,7 @@
   </ul>
 </nav>
 <h2 id="7年ぶりにctf">7年ぶりにCTF</h2>
-<p><abbr title="場面緘黙症があり、書くのも苦手で、しかも面接と診察が一番苦手な場面なので、人生がうまくいかなくて… 全てに嫌気が差してSNSなどのアカウントから何から全部消して2年間インターネットから消えてたり、その後もInfoSecから距離を取ったりしていました。当時のCTFプレーヤーなら私の正体の察しがつくと思います (OSINT 100)。">事情</abbr>があってCTFからずっと離れていたのですが、最近心境の変化があり、久し振りに参戦しました。最後の参加が2016年なので、7年ぶりですね。<strong>7年!?</strong></p>
+<p><abbr title="場面緘黙症があり、書くのも苦手で、しかも面接と診察が一番苦手な場面なので、人生がうまくいかなくて… 全てに嫌気が差してSNSなどのアカウントから何から全部消して2年間インターネットから消えてたり、その後もInfoSecから距離を取ったりしていました。当時のCTFプレーヤーなら私の正体の察しがつくと思います (OSINT 100)。ご迷惑をおかけしてもうしわけありません…">事情</abbr>があってCTFからずっと離れていたのですが、最近心境の変化があり、久し振りに参戦しました。最後の参加が2016年なので、7年ぶりですね。<strong>7年!?</strong></p>
 
 
  
@@ -353,7 +353,7 @@
 </span></span></code></pre></div><p>問題がReturn Oriented Programmingで<code>system(&quot;/bin/sh&quot;)</code>しろと叫んでいますね。NX EnabledでStack Smashing Protctorなしです。<br>
 一見すると簡単なROP問で、<a href="https://www.youtube.com/live/jwM5OP81cl0?feature=shared&amp;t=3976">実際簡単なROP問です</a>。想定解ではROP gadgetすら不要です。</p>
 <p>しかし、なぜか書いたexploitが実環境で動かなくて、「warmup問がこんな難しいはずがない、絶対に何かがおかしい」と思いつつ環境に依存しない無駄に複雑なチェーンに書き直したりしてたら2時間近くも嵌まってしまいました。こんなの10分でできないといけないですよ、ヘタクソ!</p>
-<p>ところで、Flagが<code>SECCON{i_miss_you_libc_csu_init_:cry:}</code> だったのですが、これは2018年に現れた<code>return-to-csu</code>と呼ばれるROPの手法のことらしく、どうやら私が引退していた間に新しい攻撃法が現れ、そして対策されて消えていっていたみたいです。諸行無常。<del>この手法現役時代に使ったことあるような…</del></p>
+<p>ところで、Flagが<code>SECCON{i_miss_you_libc_csu_init_:cry:}</code> だったのですが、これは2018年に現れた<code>return-to-csu</code>と呼ばれるROPの手法のことらしく、どうやら私が引退していた間に新しい攻撃法が現れ、そして対策されて消えていっていたみたいです。諸行無常。<del>この手法昔使ったことあるような…</del></p>
 <p>exploit:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> pwn <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
 </span></span><span style="display:flex;"><span>
@@ -521,16 +521,18 @@ const signature = `${stringifyPart(header)}.${stringifyPart(payload)}`;
 <p>Blu-ray ディスクのメニュー画面って仮想マシンで実装されているんですね。</p>
 <p>仕様を調べたところ、どうやら <code>/BDMV/MovieObject.bdmv</code>にプログラムが入っているようなので、まずパーサーを書こうとしたものの、うまく動かないし時間がかかりすぎるので断念しました。</p>
 <p><code>BD_DEBUG_MASK=0x10000 BD_DEBUG_FILE=/tmp/bd-debug vlc ISO</code> のようにしてlibblurayのデバッグを有効にしたVLCで弄ってみると、どうやら選択肢が正解のときは <code>1→2→3→...</code>のように順番にチャプターが遷移し、不正解のときは離れたチャプター番号に飛ばされることが分かりました。<br>
-これで選択した文字が正解か不正解か<strong>決定後</strong>に分かるようになったものの、不正解の後にモッサリ遅いBDのメニューで確定している部分を入力しなおすと時間がかかりすぎます。どうにかして決定前に遷移先を特定したい!</p>
+これで選択した文字が正解か不正解か<strong>決定後</strong>に分かるようになったものの、不正解のたびにモッサリ遅いBDのメニューで確定している部分を入力しなおしていると時間がかかりすぎます。どうにかして決定前に遷移先を特定したい!</p>
 <p>libblurayのソースコードを調べると、<code>_user_input</code>でキー入力を受けとって選択したボタンのデータ <code>(BD_IG_BUTTON*)</code> を取得しており、そのデータの<code>-&gt;nav_cmds</code>に決定時に実行されるコードが記録されていることが分かります。</p>
 <p>あとはlibblurayをデバッグビルドし、</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nix" data-lang="nix"><span style="display:flex;"><span><span style="color:#66d9ef">with</span> <span style="color:#f92672">import</span> <span style="color:#e6db74">&lt;nixpkgs&gt;</span> {}; <span style="color:#66d9ef">let</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nix" data-lang="nix"><span style="display:flex;"><span><span style="color:#75715e"># default.nix</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> <span style="color:#f92672">import</span> <span style="color:#e6db74">&lt;nixpkgs&gt;</span> {}; <span style="color:#66d9ef">let</span>
 </span></span><span style="display:flex;"><span>  libbluray_ <span style="color:#f92672">=</span> enableDebugging libbluray;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">in</span>
 </span></span><span style="display:flex;"><span>  vlc<span style="color:#f92672">.</span>override {
 </span></span><span style="display:flex;"><span>    libbluray <span style="color:#f92672">=</span> libbluray_;
 </span></span><span style="display:flex;"><span>  }
-</span></span></code></pre></div><p>gdbをアタッチしてこんな感じで遷移命令をダンプ</p>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>nix-build
+</span></span></code></pre></div><p>gdbをアタッチして遷移命令をダンプ</p>
 <pre tabindex="0"><code class="language-gdb" data-lang="gdb">set follow-fork-mode parent
 set detach-on-fork on
 b *(_user_input+855)
@@ -540,7 +542,7 @@ p *(((BD_IG_BUTTON *)$rax)-&gt;nav_cmds+2)
 continue
 end
 </code></pre><p>これでボタンを選択した段階で正解・不正解が分かるようになったので、後はFlagを一文字づつ調べていくだけです。</p>
-<p>何で最初に動的解析せずにパーサーを書き始めて時間を無駄に浪費したんですかね。こういうのは、とても、良くない、ヘ タ ク ソ !!</p>
+<p>ところで、何で最初に動的解析せずにパーサーを書き始めて時間を無駄に浪費したんですかね。こういうのは、とても、良くない、ヘ タ ク ソ !!</p>
 <p>実はdiffで遷移先が特定できるらしいです。とくにソロプレイでは時間との戦いなので、こういう賢い解法をサッと思いつけるようになりたいですね (2回目)。
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">- Sickle: sys.audithookでpowが使われていそうなことがわかるので、pow関数をhookすると処理をエスパーできる<br>- Perfect Blu: vlcの出力を見るとチャプターでのオートマトンになってそう。(n).m2tsと(n+47).m2tsのdiffが1 bitしかなく、このアドレスが遷移先に該当している</p>&mdash; keymoon (@kymn_) <a href="https://twitter.com/kymn_/status/1703278268059979787?ref_src=twsrc%5Etfw">September 17, 2023</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -589,7 +591,7 @@ end
 </span></span><span style="display:flex;"><span>  <span style="color:#75715e">/* Stack Smashing Protectorあり */</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>Full RELRO, NX, Stack Smashing Protectorあり, No PIEで、先頭が<code>endbr64</code>の関数を2回、それぞれ32bitと64bitの引数2個渡して実行でき、スタックバッファオーバーフローもあるプログラムを攻略する問題です。</p>
+</span></span></code></pre></div><p>Full RELRO, NX, Stack Smashing Protectorあり, No PIEで、先頭が<code>endbr64</code>の関数を2回、それぞれ32bitと64bitの引数を2個渡して実行でき、スタックバッファオーバーフローもあるプログラムを攻略する問題です。</p>
 <p>関数の初期値は<code>err()</code>で、第二引数のアドレスの内容をリークできますが途中で<code>exit()</code>してしまいます。しかし、実行環境(Ubuntu 22.04)のlibcは<code>err()</code>の近くにそれの<code>exit()</code>しないバージョンの<code>warnx()</code>があるので、関数ポインタを途中まで書き換えることでGOTをリークしてlibcのアドレスを特定できます。</p>
 <p>しかし、第一引数が32bitなので、<code>0xffffffff</code>以降に配置されているlibc内の<code>/bin/sh\0</code>を使ってお手軽に<code>system(&quot;/bin/sh&quot;)</code>することができません。<br>
 <code>endbr64</code>がない関数の途中を呼ばすこともできないので、うまくlibcを悪用してシェル実行に持ち込む必要があります。</p>
