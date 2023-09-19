@@ -594,7 +594,7 @@ end
 <p>関数の初期値は<code>err()</code>で、第二引数のアドレスの内容をリークできますが途中で<code>exit()</code>してしまいます。しかし、実行環境(Ubuntu 22.04)のlibcは<code>err()</code>の近くにそれの<code>exit()</code>しないバージョンの<code>warnx()</code>があるので、関数ポインタを途中まで書き換えることでGOTをリークしてlibcのアドレスを特定できます。</p>
 <p>しかし、第一引数が32bitなので、<code>0xffffffff</code>以降に配置されているlibc内の<code>/bin/sh\0</code>を使ってお手軽に<code>system(&quot;/bin/sh&quot;)</code>できません。<br>
 <code>endbr64</code>がない関数の途中に飛ばすこともできないので、うまくlibcを悪用してシェル実行に持ち込む必要があります。</p>
-<p>自分は<code>signal()</code>が都合のよい引数を持っていて、SSPが<code>SIGABRT</code>で自殺することを利用して<code>signal(SIGABRT, main)</code>で<code>main</code>に戻して解きましたが、これは想定解ではなく、</p>
+<p>自分は<code>signal()</code>が都合のよい引数を持っていて、SSPが<code>SIGABRT</code>で自殺することを利用して<code>signal(SIGABRT, main)</code>で<code>main()</code>に戻して関数の実行回数を増やし、<code>gets()</code>で32bitの範囲に<code>&quot;/bin/sh&quot;</code>を作って<code>system(&quot;/bin/sh&quot;)</code>しましたが、これは想定解ではなく、</p>
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">pwn簡易writeup<br>rop-2.35: gadgetを使わないROP<br>blackout: string.gのinclude忘れで定義が壊れてコンパイル時にバグが埋め込まれる→memmemが32-bitのアドレスを返すので4GB allocすると壊れる<br>selfcet: arch_prctlでFSレジスタを書き換えてstack canaryを回避する</p>&mdash; pwnyaa (@pwnyaa) <a href="https://twitter.com/pwnyaa/status/1703283949328576549?ref_src=twsrc%5Etfw">September 17, 2023</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
