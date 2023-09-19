@@ -477,7 +477,7 @@ const signature = `${stringifyPart(header)}.${stringifyPart(payload)}`;
 </span></span><span style="display:flex;"><span>        print(f<span style="color:#f92672">.</span>read(<span style="color:#ae81ff">0x100</span>))
 </span></span></code></pre></div><p><code>flag.txt</code>をメモリにマップした後、ファイル名に<code>flag.txt</code>と<code>fd</code>が含まれない任意のファイルの先頭256バイトを何度でも読みだせるプログラムを攻略する問題です。</p>
 <p><code>/proc/self</code>を悪用してくださいと言わんばかりな感じですが、<code>/proc/self/fd</code>は塞がれており、<code>/proc/self/map_files</code>を使おうにも、先頭256バイトしか読まないので<code>/proc/self/maps</code>ではflagの位置を特定できません。</p>
-<p>結局 Pythonの<code>os.path.realpath()</code>に途中の要素がディレクトリでなくてもエラーにならないという仕様があることに気づき、<code>/proc/self/fd/1</code>へのシンボリックリンクの <code>/dev/stdout</code>を使って <code>/dev/stdout/../5</code> を読ませて解きました。</p>
+<p>結局 Pythonの<code>os.path.realpath()</code>に途中の要素がディレクトリでなくてもエラーにならないという仕様があることに気づき、<code>/proc/self/fd/1</code>へのシンボリックリンクの <code>/dev/stdout</code>を使って <code>/dev/stdout/../5</code> (→ <code>/proc/self/fd/1/../5</code> → <code>/proc/self/fd/5</code>) を読ませて解きました。</p>
 <p>実は<code>/proc/self/auxv</code>や<code>/proc/self/syscall</code>で取れるアドレスとflagの相対位置は常に一定なので、これでアドレスを特定して<code>map_files</code>で読むのが想定解らしいです。</p>
 <p>exploit:</p>
 <pre tabindex="0"><code>/dev/stdout/../5
