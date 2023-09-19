@@ -202,7 +202,7 @@ while True:
 
 `/proc/self`を悪用してくださいと言わんばかりな感じですが、`/proc/self/fd`は塞がれており、`/proc/self/map_files`を使おうにも、先頭256バイトしか読まないので`/proc/self/maps`ではflagの位置を特定できません。
 
-結局 Pythonの`os.path.realpath()`に途中の要素がディレクトリでなくてもエラーにならないという仕様があることに気づき、`/proc/self/fd/1`へのシンボリックリンクの `/dev/stdout`を使って `/dev/stdout/../5` を読ませて解きました。
+結局 Pythonの`os.path.realpath()`に途中の要素がディレクトリでなくてもエラーにならないという仕様があることに気づき、`/proc/self/fd/1`へのシンボリックリンクの `/dev/stdout`を使って `/dev/stdout/../5` (→ `/proc/self/fd/1/../5` → `/proc/self/fd/5`) を読ませて解きました。
 
 実は`/proc/self/auxv`や`/proc/self/syscall`で取れるアドレスとflagの相対位置は常に一定なので、これでアドレスを特定して`map_files`で読むのが想定解らしいです。
 
