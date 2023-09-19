@@ -350,7 +350,7 @@ Full RELRO, NX, Stack Smashing Protectorあり, No PIEで、先頭が`endbr64`�
 しかし、第一引数が32bitなので、`0xffffffff`以降に配置されているlibc内の`/bin/sh\0`を使ってお手軽に`system("/bin/sh")`できません。  
 `endbr64`がない関数の途中に飛ばすこともできないので、うまくlibcを悪用してシェル実行に持ち込む必要があります。
 
-自分は`signal()`が都合のよい引数を持っていて、SSPが`SIGABRT`で自殺することを利用して`signal(SIGABRT, main)`で`main`に戻して解きましたが、これは想定解ではなく、
+自分は`signal()`が都合のよい引数を持っていて、SSPが`SIGABRT`で自殺することを利用して`signal(SIGABRT, main)`で`main()`に戻して関数の実行回数を増やし、`gets()`で32bitの範囲に`"/bin/sh"`を作って`system("/bin/sh")`しましたが、これは想定解ではなく、
 
 {{<tweet user="pwnyaa" id="1703283949328576549">}}
 
