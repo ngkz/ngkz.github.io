@@ -56,7 +56,7 @@ void main() {
 
 ところで、Flagが`SECCON{i_miss_you_libc_csu_init_:cry:}` だったのですが、これは2018年に現れた`return-to-csu`と呼ばれるROPの手法のことらしく、どうやら私が引退していた間に新しい攻撃法が現れ、そして対策されて消えていっていたみたいです。諸行無常。~~この手法昔使ったことあるような…~~
 
-追記: 現役の頃から存在した手法でした https://inaz2.hatenablog.com/entry/2014/12/03/204939 通りで見たことがあるわけか
+追記: [昔から存在した手法でした](https://inaz2.hatenablog.com/entry/2014/12/03/204939)。どうりで見たことがあるわけか
 
 exploit:
 ```python
