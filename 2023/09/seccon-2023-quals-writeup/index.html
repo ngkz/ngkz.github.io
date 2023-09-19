@@ -320,18 +320,17 @@
 
 <div class="figure center" >
   
-    <a class="fancybox" href="result.jpg" title="Team Profile" data-fancybox-group="">
+    <a class="fancybox" href="result.jpg" title="SECCON 2012・2013の優勝チームのメンバーとは思えないしょうもない戦績" data-fancybox-group="">
   
-    <img class="fig-img" src="result.jpg" style="width: 814px;" alt="Team Profile">
+    <img class="fig-img" src="result.jpg" style="width: 814px;" alt="SECCON 2012・2013の優勝チームのメンバーとは思えないしょうもない戦績">
   
     </a>
   
    
-    <span class="caption">Team Profile</span>
+    <span class="caption">SECCON 2012・2013の優勝チームのメンバーとは思えないしょうもない戦績</span>
   
 </div>
 
-<p>SECCON 2012・2013の優勝チームのメンバーとは思えない成績だな!</p>
 <p>7年のブランクで腕が完全に錆びついている上にゴタゴタしてて事前にほとんど練習できなかったにもかかわらず、無謀にもソロで突っこんだので振るわない成績で終わってしまいました。国内チームは国内順位10位以上で予選通過できますが、当然通過できませんでした。鍛えなおさないといけませんね。<br>
 特にCryptoは全くダメで、元々nolzeくん頼りで弱かったのに、さらに数学もRSAも完全に忘れてしまったのでwarmup問題すら解けませんでした。精進します…</p>
 <h3 id="ctfって何すか-知らない人向け">CTFって何すか (知らない人向け)</h3>
@@ -591,11 +590,11 @@ end
 </span></span><span style="display:flex;"><span>  <span style="color:#75715e">/* Stack Smashing Protectorあり */</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>Full RELRO, NX, Stack Smashing Protectorあり, No PIEで、先頭が<code>endbr64</code>の関数を2回、それぞれ32bitと64bitの引数を2個渡して実行でき、スタックバッファオーバーフローもあるプログラムを攻略する問題です。</p>
+</span></span></code></pre></div><p>Full RELRO, NX, Stack Smashing Protectorあり, No PIEで、先頭が<code>endbr64</code>の関数を2回、それぞれ32bitと64bitの引数2個を渡して呼びだせ、スタックバッファオーバーフローもあるプログラムを攻略する問題です。</p>
 <p>関数の初期値は<code>err()</code>で、第二引数のアドレスの内容をリークできますが途中で<code>exit()</code>してしまいます。しかし、実行環境(Ubuntu 22.04)のlibcは<code>err()</code>の近くにそれの<code>exit()</code>しないバージョンの<code>warnx()</code>があるので、関数ポインタを途中まで書き換えることでGOTをリークしてlibcのアドレスを特定できます。</p>
-<p>しかし、第一引数が32bitなので、<code>0xffffffff</code>以降に配置されているlibc内の<code>/bin/sh\0</code>を使ってお手軽に<code>system(&quot;/bin/sh&quot;)</code>することができません。<br>
-<code>endbr64</code>がない関数の途中を呼ばすこともできないので、うまくlibcを悪用してシェル実行に持ち込む必要があります。</p>
-<p>自分は<code>signal()</code>が都合のよい引数を持っていて<code>__stack_chk_fail</code>が<code>SIGABRT</code>で自殺することを利用して<code>signal(SIGABRT, main)</code>で<code>main</code>に戻して解きましたが、これは想定解ではなく、</p>
+<p>しかし、第一引数が32bitなので、<code>0xffffffff</code>以降に配置されているlibc内の<code>/bin/sh\0</code>を使ってお手軽に<code>system(&quot;/bin/sh&quot;)</code>できません。<br>
+<code>endbr64</code>がない関数の途中に飛ばすこともできないので、うまくlibcを悪用してシェル実行に持ち込む必要があります。</p>
+<p>自分は<code>signal()</code>が都合のよい引数を持っていて、SSPが<code>SIGABRT</code>で自殺することを利用して<code>signal(SIGABRT, main)</code>で<code>main</code>に戻して解きましたが、これは想定解ではなく、</p>
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">pwn簡易writeup<br>rop-2.35: gadgetを使わないROP<br>blackout: string.gのinclude忘れで定義が壊れてコンパイル時にバグが埋め込まれる→memmemが32-bitのアドレスを返すので4GB allocすると壊れる<br>selfcet: arch_prctlでFSレジスタを書き換えてstack canaryを回避する</p>&mdash; pwnyaa (@pwnyaa) <a href="https://twitter.com/pwnyaa/status/1703283949328576549?ref_src=twsrc%5Etfw">September 17, 2023</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -736,7 +735,7 @@ end
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> subprocess<span style="color:#f92672">.</span>TimeoutExpired:
 </span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;timeout&#34;</span>)
 </span></span></code></pre></div><p>Rustのコードを渡すとコンパイルして成功なら<code>:)</code>、失敗なら<code>:(</code>を返してくれるサービスを攻略する問題です。入力したコードの後にFlagの入ったコメントが追記されるので、どうにかしてこれを盗みだします。</p>
-<p>Rustは <code>const _:() = assert!(...);</code> でコンパイル時assertができ、<code>include_bytes!()</code>でコンパイル時ファイル読み取り、さらに<code>file!()</code>でコンパイル中ソースファイルのパスを取得できるので、これらを組み合わせてFlagを1ビットづつ読み出します。よく考えたらASCIIなので7ビット目は0固定でよかったですね。</p>
+<p>Rustは <code>const _:() = assert!(...);</code> でコンパイル時assertができ、<code>include_bytes!()</code>でコンパイル時ファイル読み取り、さらに<code>file!()</code>でコンパイル中ソースファイルのパスを取得できるので、これらを組み合わせてFlagを1ビットづつ読み出します。よく考えたらASCIIなのでMSBは0固定でよかったですね。</p>
 <p>exploit:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> os
 </span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> pwn <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
