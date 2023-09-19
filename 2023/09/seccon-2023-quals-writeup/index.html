@@ -353,6 +353,7 @@
 一見すると簡単なROP問で、<a href="https://www.youtube.com/live/jwM5OP81cl0?feature=shared&amp;t=3976">実際簡単なROP問です</a>。想定解ではROP gadgetすら不要です。</p>
 <p>しかし、なぜか書いたexploitが実環境で動かなくて、「warmup問がこんな難しいはずがない、絶対に何かがおかしい」と思いつつ環境に依存しない無駄に複雑なチェーンに書き直したりしてたら2時間近くも嵌まってしまいました。こんなの10分でできないといけないですよ、ヘタクソ!</p>
 <p>ところで、Flagが<code>SECCON{i_miss_you_libc_csu_init_:cry:}</code> だったのですが、これは2018年に現れた<code>return-to-csu</code>と呼ばれるROPの手法のことらしく、どうやら私が引退していた間に新しい攻撃法が現れ、そして対策されて消えていっていたみたいです。諸行無常。<del>この手法昔使ったことあるような…</del></p>
+<p>追記: 現役の頃から存在した手法でした <a href="https://inaz2.hatenablog.com/entry/2014/12/03/204939">https://inaz2.hatenablog.com/entry/2014/12/03/204939</a> 通りで見たことがあるわけか</p>
 <p>exploit:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> pwn <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
 </span></span><span style="display:flex;"><span>
@@ -482,7 +483,7 @@ const signature = `${stringifyPart(header)}.${stringifyPart(payload)}`;
 <pre tabindex="0"><code>/dev/stdout/../5
 </code></pre><h3 id="jumpout-reversing">jumpout (reversing)</h3>
 <p>難読化されたflag判定プログラムを解析してFlagを逆算する問題です。</p>
-<p>デバッガで処理追っていくと、まずFlagの長さが29文字であることを確認し、次に<code>Flag xor 文字のインデックス xor 0x55 xor 謎のデータ</code>の結果が<code>謎のデータその2</code>と一致すると正解になることが分かります。Flagのかわりに<code>謎のデータその2</code>とxorすればFlagが逆算できますね。</p>
+<p>デバッガで処理を追っていくと、まずFlagの長さが29文字であることを確認し、次に<code>Flag xor 文字のインデックス xor 0x55 xor 謎のデータ</code>の結果が<code>謎のデータその2</code>と一致すると正解になることが分かります。Flagのかわりに<code>謎のデータその2</code>とxorすればFlagが逆算できますね。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>v1 <span style="color:#f92672">=</span> [
 </span></span><span style="display:flex;"><span><span style="color:#ae81ff">0xf6</span>,<span style="color:#ae81ff">0xf5</span>,<span style="color:#ae81ff">0x31</span>,<span style="color:#ae81ff">0xc8</span>,<span style="color:#ae81ff">0x81</span>,<span style="color:#ae81ff">0x15</span>,<span style="color:#ae81ff">0x14</span>,<span style="color:#ae81ff">0x68</span>,
 </span></span><span style="display:flex;"><span><span style="color:#ae81ff">0xf6</span>,<span style="color:#ae81ff">0x35</span>,<span style="color:#ae81ff">0xe5</span>,<span style="color:#ae81ff">0x3e</span>,<span style="color:#ae81ff">0x82</span>,<span style="color:#ae81ff">0x09</span>,<span style="color:#ae81ff">0xca</span>,<span style="color:#ae81ff">0xf1</span>,
