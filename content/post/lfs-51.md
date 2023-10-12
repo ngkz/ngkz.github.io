@@ -5,6 +5,7 @@ categories:
 - F²LFS
 tags:
 - LFS
+draft: true
 ---
 
 ## What happened after 50th LFS post

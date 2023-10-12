@@ -5,6 +5,7 @@ categories:
 - F²LFS
 tags:
 - LFS
+draft: yes
 ---
 
 I am writing a sphinx domain and directives for describing package and its build script.

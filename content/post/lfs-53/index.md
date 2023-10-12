@@ -6,6 +6,7 @@ categories:
 tags:
 - LFS
 thumbnailImage: /2020/01/lfs-53/screenshot.png
+draft: true
 ---
 
 I finished the sphinx domain.
