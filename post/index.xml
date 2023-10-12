@@ -168,25 +168,6 @@
     </item>
     
     <item>
-      <title>Linux from Scratch - Automation Part 3</title>
-      <link>https://ngkz.github.io/2020/01/lfs-53/</link>
-      <pubDate>Sat, 25 Jan 2020 18:04:25 +0900</pubDate>
-      
-      <guid>https://ngkz.github.io/2020/01/lfs-53/</guid>
-      <description>&lt;p&gt;I finished the sphinx domain.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Linux from Scratch - Automation Part 2</title>
-      <link>https://ngkz.github.io/2020/01/lfs-52/</link>
-      <pubDate>Tue, 14 Jan 2020 18:35:15 +0900</pubDate>
-      
-      <guid>https://ngkz.github.io/2020/01/lfs-52/</guid>
-      <description>&lt;p&gt;I am writing a sphinx domain and directives for describing package and its build script.&lt;/p&gt;
-&lt;p&gt;It only parses and stores package information for now. It does not have a visual representation yet.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>GnuPG Hardening</title>
       <link>https://ngkz.github.io/2020/01/gpg-hardening/</link>
       <pubDate>Sun, 12 Jan 2020 01:31:22 +0900</pubDate>
@@ -220,18 +201,6 @@ keyid-format none
 # use full fingerprint instead
 with-subkey-fingerprint
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;migrating-signature-digest-to-sha-512&#34;&gt;Migrating signature digest to SHA-512&lt;/h2&gt;</description>
-    </item>
-    
-    <item>
-      <title>Linux from Scratch - Automation Part 1</title>
-      <link>https://ngkz.github.io/2020/01/lfs-51/</link>
-      <pubDate>Thu, 02 Jan 2020 23:34:04 +0900</pubDate>
-      
-      <guid>https://ngkz.github.io/2020/01/lfs-51/</guid>
-      <description>&lt;h2 id=&#34;what-happened-after-50th-lfs-post&#34;&gt;What happened after 50th LFS post&lt;/h2&gt;
-&lt;p&gt;I can&amp;rsquo;t progress Linux from Scratch building from May to October, because I spent time on other projects.&lt;/p&gt;
-&lt;p&gt;I restarted building in October in parallel with other projects and almost done a basic system. In December, I started writing a literate programming style automated build system, but I can&amp;rsquo;t make much progress as I have been busy with work recently.&lt;/p&gt;
-&lt;h2 id=&#34;literate-distro-building&#34;&gt;Literate distro building&lt;/h2&gt;</description>
     </item>
     
     <item>

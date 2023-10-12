@@ -26,15 +26,6 @@
     </item>
     
     <item>
-      <title>LFS</title>
-      <link>https://ngkz.github.io/tags/lfs/</link>
-      <pubDate>Sat, 25 Jan 2020 18:04:25 +0900</pubDate>
-      
-      <guid>https://ngkz.github.io/tags/lfs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>GPG</title>
       <link>https://ngkz.github.io/tags/gpg/</link>
       <pubDate>Sun, 12 Jan 2020 01:31:22 +0900</pubDate>
@@ -76,6 +67,15 @@
       <pubDate>Sun, 02 Jun 2019 13:14:41 +0900</pubDate>
       
       <guid>https://ngkz.github.io/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LFS</title>
+      <link>https://ngkz.github.io/tags/lfs/</link>
+      <pubDate>Wed, 17 Apr 2019 23:59:59 +0900</pubDate>
+      
+      <guid>https://ngkz.github.io/tags/lfs/</guid>
       <description></description>
     </item>
     

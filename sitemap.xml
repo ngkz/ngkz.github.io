@@ -38,18 +38,6 @@
     <loc>https://ngkz.github.io/2021/10/maintenance-note-3bds331v/</loc>
     <lastmod>2021-10-03T15:43:00+09:00</lastmod>
   </url><url>
-    <loc>https://ngkz.github.io/categories/flfs/</loc>
-    <lastmod>2020-01-25T18:04:25+09:00</lastmod>
-  </url><url>
-    <loc>https://ngkz.github.io/tags/lfs/</loc>
-    <lastmod>2020-01-25T18:04:25+09:00</lastmod>
-  </url><url>
-    <loc>https://ngkz.github.io/2020/01/lfs-53/</loc>
-    <lastmod>2020-01-25T18:04:25+09:00</lastmod>
-  </url><url>
-    <loc>https://ngkz.github.io/2020/01/lfs-52/</loc>
-    <lastmod>2020-01-14T18:35:15+09:00</lastmod>
-  </url><url>
     <loc>https://ngkz.github.io/2020/01/gpg-hardening/</loc>
     <lastmod>2020-01-12T01:31:22+09:00</lastmod>
   </url><url>
@@ -58,9 +46,6 @@
   </url><url>
     <loc>https://ngkz.github.io/categories/howto/</loc>
     <lastmod>2020-01-12T01:31:22+09:00</lastmod>
-  </url><url>
-    <loc>https://ngkz.github.io/2020/01/lfs-51/</loc>
-    <lastmod>2020-01-02T23:34:04+09:00</lastmod>
   </url><url>
     <loc>https://ngkz.github.io/categories/homeserver/</loc>
     <lastmod>2019-11-04T00:31:35+09:00</lastmod>
@@ -109,6 +94,9 @@
   </url><url>
     <loc>https://ngkz.github.io/2019/04/diary-20190419/</loc>
     <lastmod>2019-04-19T23:59:59+09:00</lastmod>
+  </url><url>
+    <loc>https://ngkz.github.io/tags/lfs/</loc>
+    <lastmod>2019-04-17T23:59:59+09:00</lastmod>
   </url><url>
     <loc>https://ngkz.github.io/2019/04/diary-20190417/</loc>
     <lastmod>2019-04-17T23:59:59+09:00</lastmod>
