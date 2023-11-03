@@ -16,7 +16,7 @@ thumbnailImage: /2023/09/seccon-2023-quals-writeup/cert.jpg
 
 {{<image classes="center nocaption" src="cert.jpg" title="Certificate of Participation, Term: 1y1, 832pt, Rank 58/653" thumbnail-width="500px" thumbnail-height="500px">}}
 
-<!-- toc -->
+{{< toc >}}
 
 ## 7年ぶりにCTF
 

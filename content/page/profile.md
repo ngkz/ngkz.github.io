@@ -27,10 +27,10 @@ X
 : [n_g_k_z](https://twitter.com/n_g_k_z)
 
 Discord
-: ngkz
+: [ngkz](https://discord.com/users/529714068618215427)
 
-<!-- Reddit -->
-<!-- : [ngkz0](https://www.reddit.com/user/ngkz0) -->
+Reddit
+: [ngkz0](https://www.reddit.com/user/ngkz0)
 
 bitcoin
 : [1FzRWZsT9sL6G5iaKpEHRuJmRsKniFNW6c](bitcoin:1FzRWZsT9sL6G5iaKpEHRuJmRsKniFNW6c)
