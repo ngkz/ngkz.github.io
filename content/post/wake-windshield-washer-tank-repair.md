@@ -42,30 +42,30 @@ thumbnailImagePosition: left
    {{<image classes="fancybox center" src="/assets/wake-windshield-washer-tank-repair/2018-12-22 13.56.23.jpg" thumbnail-width="473px" thumbnail-height="355px" title="ナンバー裏のクリップ">}}
 6. バンパー上部のクリップ4個を取り外す。
    {{<image classes="fancybox center" src="/assets/wake-windshield-washer-tank-repair/2018-12-22 13.41.55.jpg" thumbnail-width="591px" thumbnail-height="443px" title="バンパー上部のクリップ">}}
-7. バンパーをずり下げてサイドパネルから外し、手前に引き抜く。
+7. バンパーをずり下げてフェンダーから外し、手前に引き抜く。
 8. フォグランプのコネクタを取り外す。近くにフォグランプの光軸調整ネジがあるので注意。
 
-### 運転席側サイドパネルの取り外し
-1. サイドパネル右の六角フランジタッピングねじとねじ側が出張ったフランジボルト2本を取り外す。
-   {{<image classes="fancybox center" src="/assets/wake-windshield-washer-tank-repair/2018-12-22 14.13.44.jpg" thumbnail-width="473px" thumbnail-height="630px" title="サイドパネル右のねじ">}}
-2. サイドパネル上部のねじ側が出張ったフランジボルトと、ヘッドライトとサイドパネルを接続するピンを取り外す。
-   {{<image classes="fancybox center" src="/assets/wake-windshield-washer-tank-repair/2018-12-22 14.16.23.jpg" thumbnail-width="473px" thumbnail-height="355px" title="サイドパネル上部のボルトとピン">}}
-3. サイドパネル下部のねじ側が出張っていないフランジボルトを取り外す。
-   {{<image classes="fancybox center" src="/assets/wake-windshield-washer-tank-repair/2018-12-22 14.20.02.jpg" thumbnail-width="300px" thumbnail-height="304px" title="サイドパネル下部のボルト">}}
-4. サイドパネル左下の運転席ドアのに隠れている丸いピンをドライバーでこじって外す。
-   {{<image classes="fancybox center" src="/assets/wake-windshield-washer-tank-repair/2018-12-22 14.27.50.jpg" thumbnail-width="591px" thumbnail-height="416px" title="サイドパネル左下のピン">}}
-5. サイドパネル左中央あたりの運転席ドアヒンジに隠れているピンを取り外す。
-   {{<image classes="fancybox center" src="/assets/wake-windshield-washer-tank-repair/2018-12-22 14.36.28.jpg" thumbnail-width="473px" thumbnail-height="350px" title="サイドパネル左のピン">}}
-6. サイドパネル左の運転席ドアに隠れているねじ側が出張っているフランジボルト2つを取り外す。
-   {{<image classes="fancybox center" src="/assets/wake-windshield-washer-tank-repair/2018-12-22 14.38.40.jpg" thumbnail-width="473px" thumbnail-height="374px" title="サイドパネル左のフランジボルト(下側)">}}
-7. サイドパネル左上の運転席ドアに隠れている丸いピンを外す。
-   {{<image classes="fancybox center" src="/assets/wake-windshield-washer-tank-repair/2018-12-22 14.58.21.jpg" thumbnail-width="296px" thumbnail-height="240px" title="サイドパネル左上のピン">}}
-7. ワイパーとサイドパネルの間にあるカバーを上に引き抜く。
-   {{<image classes="fancybox center" src="/assets/wake-windshield-washer-tank-repair/2018-12-22 14.53.54.jpg" thumbnail-width="590px" thumbnail-height="443px" title="ワイパーとサイドパネルの間にあるカバー">}}
+### 運転席側フロントフェンダーの取り外し
+1. フェンダー右の六角フランジタッピングねじとねじ側が出張ったフランジボルト2本を取り外す。
+   {{<image classes="fancybox center" src="/assets/wake-windshield-washer-tank-repair/2018-12-22 14.13.44.jpg" thumbnail-width="473px" thumbnail-height="630px" title="フェンダー右のねじ">}}
+2. フェンダー上部のねじ側が出張ったフランジボルトと、ヘッドライトとサイドパネルを接続するピンを取り外す。
+   {{<image classes="fancybox center" src="/assets/wake-windshield-washer-tank-repair/2018-12-22 14.16.23.jpg" thumbnail-width="473px" thumbnail-height="355px" title="フェンダー上部のボルトとピン">}}
+3. フェンダー下部のねじ側が出張っていないフランジボルトを取り外す。
+   {{<image classes="fancybox center" src="/assets/wake-windshield-washer-tank-repair/2018-12-22 14.20.02.jpg" thumbnail-width="300px" thumbnail-height="304px" title="フェンダー下部のボルト">}}
+4. フェンダー左下の運転席ドアのに隠れている丸いピンをドライバーでこじって外す。
+   {{<image classes="fancybox center" src="/assets/wake-windshield-washer-tank-repair/2018-12-22 14.27.50.jpg" thumbnail-width="591px" thumbnail-height="416px" title="フェンダー左下のピン">}}
+5. フェンダー左中央あたりの運転席ドアヒンジに隠れているピンを取り外す。
+   {{<image classes="fancybox center" src="/assets/wake-windshield-washer-tank-repair/2018-12-22 14.36.28.jpg" thumbnail-width="473px" thumbnail-height="350px" title="フェンダー左のピン">}}
+6. フェンダー左の運転席ドアに隠れているねじ側が出張っているフランジボルト2つを取り外す。
+   {{<image classes="fancybox center" src="/assets/wake-windshield-washer-tank-repair/2018-12-22 14.38.40.jpg" thumbnail-width="473px" thumbnail-height="374px" title="フェンダー左のフランジボルト(下側)">}}
+7. フェンダー左上の運転席ドアに隠れている丸いピンを外す。
+   {{<image classes="fancybox center" src="/assets/wake-windshield-washer-tank-repair/2018-12-22 14.58.21.jpg" thumbnail-width="296px" thumbnail-height="240px" title="フェンダー左上のピン">}}
+7. ワイパーとフェンダーの間にあるカバーを上に引き抜く。
+   {{<image classes="fancybox center" src="/assets/wake-windshield-washer-tank-repair/2018-12-22 14.53.54.jpg" thumbnail-width="590px" thumbnail-height="443px" title="ワイパーとフェンダーの間にあるカバー">}}
 8. パネルに隠れていたボルトを外す。  
    他の部分に使われているねじ側が出張ったフランジボルトと似ているが、このボルトだけ他と違い、ボルトとワッシャーが分離していて、ねじの先だけ径が少し細くなっている形状をしているので注意。
    {{<image classes="fancybox center" src="/assets/wake-windshield-washer-tank-repair/2018-12-22 14.57.11.jpg" thumbnail-width="296px" thumbnail-height="230px" title="パネルに隠れていたボルト">}}
-9. サイドパネルのAピラー付近を掴んでサイドパネルを手前に引き抜き、ヘッドライトをずらしてサイドパネルから外す。右サイドマーカーのコネクタも外す。
+9. フェンダーのAピラー付近を掴んでサイドパネルを手前に引き抜き、ヘッドライトをずらしてサイドパネルから外す。右サイドマーカーのコネクタも外す。
 
 やっとウィンドウウォッシャータンクが外せる状態になった。
 {{<image classes="fancybox center" src="/assets/wake-windshield-washer-tank-repair/2018-12-22 15.00.35.jpg" thumbnail-width="591px" thumbnail-height="443px" title="ウォッシャータンク">}}
@@ -75,7 +75,7 @@ thumbnailImagePosition: left
   {{<image classes="fancybox center" src="/assets/wake-windshield-washer-tank-repair/2018-12-22 15.09.11.jpg" thumbnail-width="591px" thumbnail-height="256px" title="ケーブルを外したウォッシャータンク">}}
 2. ウォッシャータンク上部のピンを外す
    {{<image classes="fancybox center" src="/assets/wake-windshield-washer-tank-repair/2018-12-22 14.23.26.jpg" thumbnail-width="473px" thumbnail-height="358px" title="ウインドウォッシャータンク上部のピン">}}
-3. (サイドパネル側から見て)ウォッシャータンク左下の銀色のボルトを外す
+3. (運転席側から見て)ウォッシャータンク左下の銀色のボルトを外す
    {{<image classes="fancybox center" src="/assets/wake-windshield-washer-tank-repair/2018-12-22 15.01.56.jpg" thumbnail-width="473px" thumbnail-height="383px" title="ウォッシャータンク左下のボルト">}}
 4. ウォッシャータンク右下の銀色のボルトを外す
    {{<image classes="fancybox center" src="/assets/wake-windshield-washer-tank-repair/2018-12-22 15.15.35.jpg" thumbnail-width="591px" thumbnail-height="352px" title="ウォッシャータンク右下のボルト">}}
