@@ -12,10 +12,10 @@
 # For developpers, if you modify this theme, put your images in `source/images` folder and
 # use grunt task `build` to synchronize assets
 
-baseurl = "https://ngkz.github.io/"
+baseurl = "https://f2l.cc/"
 languageCode = "ja"
 defaultContentLanguage = "ja"
-title = "Fierce Falcon Laboratory"
+title = "F²L"
 theme = "tranquilpeak"
 disqusShortname = "ngkz-log"
 #googleAnalytics = "UA-106134104-1"

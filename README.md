@@ -1,1 +1,1 @@
-[ngkz.github.io](https://ngkz.github.io)
+[f2l.cc](https://f2l.cc)
