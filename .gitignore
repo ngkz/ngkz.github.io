@@ -1,3 +1,2 @@
 /.hugo_build.lock
-/public
-/public.tar.xz
+/build
