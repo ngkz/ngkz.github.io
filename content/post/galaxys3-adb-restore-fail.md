@@ -11,7 +11,7 @@ tags:
 
 galaxy S3 リカバリモードの入り方:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QVa3yfxP0Zs" frameborder="0" allowfullscreen></iframe>
+{{< youtube QVa3yfxP0Zs >}}
 
 ## バックアップを展開
 
