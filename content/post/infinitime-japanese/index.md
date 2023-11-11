@@ -1,5 +1,5 @@
 ---
-title: "PineTimeを日本語化する回"
+title: "PineTimeを日本語対応にする回"
 date: 2023-11-10T22:46:29+09:00
 categories:
 - howto
@@ -23,7 +23,7 @@ PineTimeには、CPU内蔵の64KB RAMと512KB フラッシュROM、さらにス�
 ## じゃあ文字種を削って内蔵フラッシュに…入らない!
 [この記事](https://qiita.com/skyfish20ch/items/e5437221447b4307d299#%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%8C%96)のように内蔵フラッシュにフォントデータを入れようとしてみたが、バージョンアップで元々のフラッシュ使用量が当時より増えたので、フォントを追加すると容量オーバーするようになってしまっていた。
 
-内蔵フラッシュにフォントを入れるとフラッシュが溢れ、外部フラッシュに入れるとRAMが溢れる!
+内蔵フラッシュにフォントを入れるとROMが溢れ、外部フラッシュに入れるとRAMが溢れる!
 
 ## アプリを削って無理やり押し込む
 使わない内蔵アプリ4つ (2048, ポン, お絵描きアプリ, メトロノーム)を削除したらなんとか内蔵フラッシュに収まった。やったね!
@@ -185,6 +185,13 @@ PineTimeには、CPU内蔵の64KB RAMと512KB フラッシュROM、さらにス�
             {Symbols::none, Apps::None},
     ```
 
+## OTA インストール
+```shell
+InfiniTime/build $ nix shell nixpkgs#itd
+InfiniTime/build $ itd &
+InfiniTime/build $ itctl firmware upgrade --archive src/pinetime-mcuboot-app-dfu-*.zip --resources src/resources/infinitime-resources-*.zip
+```
+
 ## できあがり
 開発キットを持っていることを忘れていきなり実機にインストールしてしまったけど、無事うまく行った。
 
@@ -265,7 +272,7 @@ flake.nix:
 ```shell
 infinitime $ direnv allow . # OR nix develop
 infinitime $ mkdir build && cd build
-infinitime/build $ do_cmake ..
+infinitime/build $ do_cmake -DCMAKE_BUILD_TYPE=Release ..
 infinitime/build $ make -j$(nproc)
 ```
 
