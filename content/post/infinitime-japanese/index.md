@@ -8,7 +8,7 @@ tags:
 thumbnailImage: /2023/11/infinitime-japanese/after.jpg
 ---
 
-InfiniTime 1.13 on PineTime の通知に日本語が表示されないのが不便なのでどうにかします。
+InfiniTime ~~1.13~~ 1.14 on PineTime の通知に日本語が表示されないのが不便なのでどうにかします。
 
 <!--more-->
 
@@ -30,6 +30,8 @@ PineTimeには、CPU内蔵の64KB RAMと512KB フラッシュROM、さらにス�
 
 ![内蔵フラッシュの容量がギリギリの図](flash.png)
 
+2024-01-25 追記: InfiniTime 1.14でフラッシュの使用量が削減され、アプリを消さなくてもフォントが入るようになった
+
 ## 結局こうした
 1. Noto Sans JPのMediumを `src/displayapp/fonts/` へ投入
 2. 元々の英字フォントにNoto Sansのグリフを追加
@@ -49,6 +51,9 @@ PineTimeには、CPU内蔵の64KB RAMと512KB フラッシュROM、さらにス�
         "bpp": 1,
     ```
 3. いらないアプリを削除
+
+   2024-01-25 追記: 先述の通り1.14では不要。さらに、cmakeのオプション `-DENABLE_USERAPPS` でインストールするアプリをカスタマイズできるようになったので、削除する場合もパッチは不要になった
+
     ```patch
     diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
     index d903629b..8e6e3529 100644
@@ -186,6 +191,8 @@ PineTimeには、CPU内蔵の64KB RAMと512KB フラッシュROM、さらにス�
     ```
 
 ## OTA インストール
+2024-01-25 追記: [依存ライブラリにパッチを当てないと](https://gitea.elara.ws/Elara6331/itd/issues/66)itdが動かなくなってた
+
 ```shell
 InfiniTime/build $ nix shell nixpkgs#itd
 InfiniTime/build $ itd &
@@ -202,78 +209,19 @@ InfiniTime/build $ itctl firmware upgrade --archive src/pinetime-mcuboot-app-dfu
 ビルドしたバイナリを *[ここ](https://github.com/ngkz/InfiniTime-Japanese/releases)* に置いておきました。よかったら使ってください
 
 ### NixでInfiniTimeをビルドするには
-.envrc:
-```sh
-#!/usr/bin/env bash
-# ^ added for shellcheck and file-type detection
+https://github.com/ngkz/InfiniTime-Japanese/commit/12e17adc34e162c1b835e2a56f4798ccb8e653ca を当てて
 
-if [[ $(type -t use_flake) != function ]]; then
-  echo "ERROR: use_flake function missing."
-  echo "Please update direnv to v2.30.0 or later."
-  exit 1
-fi
-use flake
-```
-
-flake.nix:
-```nix
-{
-  description = "virtual environments";
-
-  inputs.devshell.url = "github:numtide/devshell";
-  inputs.flake-utils.url = "github:numtide/flake-utils";
-
-  inputs.flake-compat = {
-    url = "github:edolstra/flake-compat";
-    flake = false;
-  };
-
-  outputs = { self, flake-utils, devshell, nixpkgs, ... }:
-    flake-utils.lib.eachDefaultSystem (system: {
-      devShells.default = let
-        pkgs = import nixpkgs {
-          inherit system;
-
-          overlays = [ devshell.overlays.default ];
-          config.allowUnfree = true;
-        };
-      in pkgs.devshell.mkShell {
-        devshell.packages = with pkgs; [
-          cmake
-          gnumake
-          gcc-arm-embedded-10
-          nrf5-sdk
-          (python3.withPackages
-            (p: with p; [ cbor click intelhex cryptography pillow ]))
-          python3Packages.adafruit-nrfutil
-          nodePackages.lv_font_conv
-          lv_img_conv
-        ];
-
-        commands = [{
-          name = "do_cmake";
-          command = "cmake -DARM_NONE_EABI_TOOLCHAIN_PATH=$ARM_NONE_EABI_TOOLCHAIN_PATH -DNRF5_SDK_PATH=$NRF5_SDK_PATH -DBUILD_DFU=1 -DBUILD_RESOURCES=1 \"$@\"";
-        }];
-
-        env = [
-          {
-            name = "ARM_NONE_EABI_TOOLCHAIN_PATH";
-            value = "${pkgs.gcc-arm-embedded-10}";
-          }
-          {
-            name = "NRF5_SDK_PATH";
-            value = "${pkgs.nrf5-sdk}/share/nRF5_SDK";
-          }
-        ];
-      };
-    });
-```
-
+#### デバッグビルド
 ```shell
 infinitime $ direnv allow . # OR nix develop
 infinitime $ mkdir build && cd build
-infinitime/build $ do_cmake -DCMAKE_BUILD_TYPE=Release ..
+infinitime/build $ do_cmake -DBUILD_DFU=1 -DBUILD_RESOURCES=1 ..
 infinitime/build $ make -j$(nproc)
+```
+
+#### リリースビルド
+```shell
+infinitime $ nix build .?submodules=1#
 ```
 
 ## 参考
