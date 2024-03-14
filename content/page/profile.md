@@ -48,10 +48,10 @@ bitcoin
 ## スキル
 
 プログラミング言語
-: C, Python, C++, Assembly(x86, x86-64, PIC, ARM, AVR, etc.), Rust, JavaScript (ES2017), CoffeeScript, PHP, VBA
+: C, Python, C++, Assembly(x86, x86-64, PIC, ARM, AVR, etc.), Rust, JavaScript (ES2017), CoffeeScript, PHP, VBA, Shell (POSIX sh, bash, PowerShell)
 
-webのなんか
-: Django, Flask, Express, Electron, nw.js, Vue.js
+ウェブケー
+: Django, Flask, Express, Electron, nw.js, Vue.js, Vuetify
 
 インフラ
 : Linux(Red Hat, Debian系, Arch, NixOS), Windows Server, Docker, Apache, Nginx, Node.js, Ansible, Zabbix, Chef, SNMP, OpenSSH, OpenVPN, SoftEther, Nutanix (CE, 商用版両方), Microsoft Deployment Toolkit, Nix
@@ -63,7 +63,7 @@ webのなんか
 : 電気工事, 電子工作, Verilog HDL, 木工
 
 その他
-: PC互換機の低レベルな部分に関する知識, 組み込みプログラミング
+: 昔のPC互換機のハードウェアのなんやかんや, 組み込みプログラミング
 
 ## 主な経歴
 
