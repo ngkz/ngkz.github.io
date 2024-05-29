@@ -29,8 +29,8 @@ X
 Discord
 : [ngkz](https://discord.com/users/529714068618215427)
 
-Reddit
-: [ngkz0](https://www.reddit.com/user/ngkz0)
+Telegram
+: [n_g_k_z](https://t.me/n_g_k_z)
 
 bitcoin
 : [1FzRWZsT9sL6G5iaKpEHRuJmRsKniFNW6c](bitcoin:1FzRWZsT9sL6G5iaKpEHRuJmRsKniFNW6c)

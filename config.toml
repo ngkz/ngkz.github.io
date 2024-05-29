@@ -118,10 +118,10 @@ unsafe = true
 
 [[menu.links]]
   weight = 4
-  identifier = "reddit"
-  name = "Reddit"
-  pre = "<i class=\"sidebar-button-icon fab fa-lg fa-reddit\" aria-hidden=\"true\"></i>"
-  url = "https://reddit.com/user/ngkz0"
+  identifier = "telegram"
+  name = "Telegram"
+  pre = "<i class=\"sidebar-button-icon fab fa-lg fa-telegram\" aria-hidden=\"true\"></i>"
+  url = "https://t.me/n_g_k_z"
 
 [[menu.misc]]
   weight = 1
