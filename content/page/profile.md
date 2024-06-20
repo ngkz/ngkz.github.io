@@ -14,7 +14,7 @@ showPagination: false
 : 野口和敏
 
 メール
-: `nたoたgたuたcたhたiた.たkたaたzたuたtたoたsたiた@たgたmたaたiたlた.たcたoたmた`
+: `nたoたgたuたcたhたiた.たkたaたzたuたtたoたsたiた@たgたmたaたiたlた.たcたoたmた`  
 ↑ たぬき
 
 PGP 公開鍵
