@@ -23,7 +23,7 @@ PGP 公開鍵
 GitHub
 : [ngkz](https://github.com/ngkz)
 
-X
+Xitter
 : [n_g_k_z](https://twitter.com/n_g_k_z)
 
 Discord
