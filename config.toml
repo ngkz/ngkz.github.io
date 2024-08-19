@@ -105,7 +105,7 @@ unsafe = true
 [[menu.links]]
   weight = 2
   identifier = "twitter"
-  name = "X"
+  name = "Xitter"
   pre = "<i class=\"sidebar-button-icon fab fa-lg fa-twitter\" aria-hidden=\"true\"></i>"
   url = "https://twitter.com/n_g_k_z"
 
