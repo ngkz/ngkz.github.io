@@ -116,13 +116,6 @@ unsafe = true
   pre = "<i class=\"sidebar-button-icon fab fa-lg fa-discord\" aria-hidden=\"true\"></i>"
   url = "https://discord.com/users/529714068618215427"
 
-[[menu.links]]
-  weight = 4
-  identifier = "telegram"
-  name = "Telegram"
-  pre = "<i class=\"sidebar-button-icon fab fa-lg fa-telegram\" aria-hidden=\"true\"></i>"
-  url = "https://t.me/n_g_k_z"
-
 [[menu.misc]]
   weight = 1
   identifier = "rss"
