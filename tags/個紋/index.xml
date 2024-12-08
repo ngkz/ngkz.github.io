@@ -1,76 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>個紋 on Fierce Falcon Laboratory</title>
-    <link>https://ngkz.github.io/tags/%E5%80%8B%E7%B4%8B/</link>
-    <description>Recent content in 個紋 on Fierce Falcon Laboratory</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>個紋 on F²L</title>
+    <link>https://f2l.cc/tags/%E5%80%8B%E7%B4%8B/</link>
+    <description>Recent content in 個紋 on F²L</description>
+    <generator>Hugo</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 15 Mar 2019 23:59:59 +0900</lastBuildDate><atom:link href="https://ngkz.github.io/tags/%E5%80%8B%E7%B4%8B/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Mar 2019 23:59:59 +0900</lastBuildDate>
+    <atom:link href="https://f2l.cc/tags/%E5%80%8B%E7%B4%8B/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>日記 2019/03/15(金)</title>
-      <link>https://ngkz.github.io/2019/03/diary-20190315/</link>
+      <link>https://f2l.cc/2019/03/diary-20190315/</link>
       <pubDate>Fri, 15 Mar 2019 23:59:59 +0900</pubDate>
-      
-      <guid>https://ngkz.github.io/2019/03/diary-20190315/</guid>
-      <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;tzdataをパッケージ化してインストールした&lt;/li&gt;
-&lt;li&gt;タイムゾーンの設定をした&lt;/li&gt;
-&lt;li&gt;MarkdownでLFS Bookの中身を書き直すかわりに本家のBookをフォークしてそれにこっちの環境特有の変更を入れることにした。git-svnの使い方がまだよくわかっていないのでforkすらできていないが&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;THE プレワークアウトを筋トレ40分前に1スクープ摂取&lt;/li&gt;
-&lt;li&gt;HMBを夕, トレーニング40分前, 就寝前に1g摂取&lt;/li&gt;
-&lt;li&gt;前日の睡眠 7:32 (23:49→7:27)&lt;/li&gt;
-&lt;li&gt;カゼイン40g + 200mlの水にブレンディカフェラトリー濃厚抹茶とパラチニットスイート1本(1.2g)を入れて飲んだ。濃厚抹茶1本では味が薄すぎる感じ。カフェインが1本あたり20mg入ってるから就寝前に飲むカゼインに入れるには向いてないね&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;上半身プッシュ+腹筋&lt;/strong&gt;&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;種目&lt;/th&gt;
-&lt;th&gt;重量&amp;amp;目標回数&lt;/th&gt;
-&lt;th&gt;回数&lt;/th&gt;
-&lt;th&gt;備考&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;プッシュアップ&lt;/td&gt;
-&lt;td&gt;3セット 自重 10回以上 → 膝つき&lt;/td&gt;
-&lt;td&gt;↑10→2 9→6 7→4&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;ダンベルショルダープレス&lt;/td&gt;
-&lt;td&gt;2セット 25kg(10kg+シャフトx2) 12回以上 → ドロップ&lt;/td&gt;
-&lt;td&gt;↑13 12→10kgで15&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;ダンベルフレンチプレス&lt;/td&gt;
-&lt;td&gt;2セット 12.5kg(10kg+シャフト) 11回以上 → ドロップ&lt;/td&gt;
-&lt;td&gt;↑14 4→5kgで25&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;ダンベルフライ&lt;/td&gt;
-&lt;td&gt;2セット 20kg(7.5kg+シャフトx2) 15回以上 → ドロップ&lt;/td&gt;
-&lt;td&gt;↑16 10→12&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;ツイストクランチ&lt;/td&gt;
-&lt;td&gt;3セット 自重 5秒維持 23回以上&lt;/td&gt;
-&lt;td&gt;↓21 17 14&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;</description>
+      <guid>https://f2l.cc/2019/03/diary-20190315/</guid>
+      <description>&lt;h2 id=&#34;linux-from-scratch&#34;&gt;Linux from Scratch&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;tzdataをパッケージ化してインストールした&lt;/li&gt;&#xA;&lt;li&gt;タイムゾーンの設定をした&lt;/li&gt;&#xA;&lt;li&gt;MarkdownでLFS Bookの中身を書き直すかわりに本家のBookをフォークしてそれにこっちの環境特有の変更を入れることにした。git-svnの使い方がまだよくわかっていないのでforkすらできていないが&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;筋トレ&#34;&gt;筋トレ&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;THE プレワークアウトを筋トレ40分前に1スクープ摂取&lt;/li&gt;&#xA;&lt;li&gt;HMBを夕, トレーニング40分前, 就寝前に1g摂取&lt;/li&gt;&#xA;&lt;li&gt;前日の睡眠 7:32 (23:49→7:27)&lt;/li&gt;&#xA;&lt;li&gt;カゼイン40g + 200mlの水にブレンディカフェラトリー濃厚抹茶とパラチニットスイート1本(1.2g)を入れて飲んだ。濃厚抹茶1本では味が薄すぎる感じ。カフェインが1本あたり20mg入ってるから就寝前に飲むカゼインに入れるには向いてないね&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;上半身プッシュ+腹筋&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;table&gt;&#xA;&lt;thead&gt;&#xA;&lt;tr&gt;&#xA;&lt;th&gt;種目&lt;/th&gt;&#xA;&lt;th&gt;重量&amp;amp;目標回数&lt;/th&gt;&#xA;&lt;th&gt;回数&lt;/th&gt;&#xA;&lt;th&gt;備考&lt;/th&gt;&#xA;&lt;/tr&gt;&#xA;&lt;/thead&gt;&#xA;&lt;tbody&gt;&#xA;&lt;tr&gt;&#xA;&lt;td&gt;プッシュアップ&lt;/td&gt;&#xA;&lt;td&gt;3セット 自重 10回以上 → 膝つき&lt;/td&gt;&#xA;&lt;td&gt;↑10→2 9→6 7→4&lt;/td&gt;&#xA;&lt;td&gt;&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;tr&gt;&#xA;&lt;td&gt;ダンベルショルダープレス&lt;/td&gt;&#xA;&lt;td&gt;2セット 25kg(10kg+シャフトx2) 12回以上 → ドロップ&lt;/td&gt;&#xA;&lt;td&gt;↑13 12→10kgで15&lt;/td&gt;&#xA;&lt;td&gt;&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;tr&gt;&#xA;&lt;td&gt;ダンベルフレンチプレス&lt;/td&gt;&#xA;&lt;td&gt;2セット 12.5kg(10kg+シャフト) 11回以上 → ドロップ&lt;/td&gt;&#xA;&lt;td&gt;↑14 4→5kgで25&lt;/td&gt;&#xA;&lt;td&gt;&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;tr&gt;&#xA;&lt;td&gt;ダンベルフライ&lt;/td&gt;&#xA;&lt;td&gt;2セット 20kg(7.5kg+シャフトx2) 15回以上 → ドロップ&lt;/td&gt;&#xA;&lt;td&gt;↑16 10→12&lt;/td&gt;&#xA;&lt;td&gt;&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;tr&gt;&#xA;&lt;td&gt;ツイストクランチ&lt;/td&gt;&#xA;&lt;td&gt;3セット 自重 5秒維持 23回以上&lt;/td&gt;&#xA;&lt;td&gt;↓21 17 14&lt;/td&gt;&#xA;&lt;td&gt;&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;</description>
     </item>
-    
   </channel>
 </rss>

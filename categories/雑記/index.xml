@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>雑記 on Fierce Falcon Laboratory</title>
-    <link>https://ngkz.github.io/categories/%E9%9B%91%E8%A8%98/</link>
-    <description>Recent content in 雑記 on Fierce Falcon Laboratory</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>雑記 on F²L</title>
+    <link>https://f2l.cc/categories/%E9%9B%91%E8%A8%98/</link>
+    <description>Recent content in 雑記 on F²L</description>
+    <generator>Hugo</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 09 Dec 2018 12:09:05 +0900</lastBuildDate><atom:link href="https://ngkz.github.io/categories/%E9%9B%91%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Dec 2018 12:09:05 +0900</lastBuildDate>
+    <atom:link href="https://f2l.cc/categories/%E9%9B%91%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>28年前製造のガソリンストーブに火を入れてみた</title>
-      <link>https://ngkz.github.io/2018/12/coleman-508/</link>
+      <link>https://f2l.cc/2018/12/coleman-508/</link>
       <pubDate>Sun, 09 Dec 2018 12:09:05 +0900</pubDate>
-      
-      <guid>https://ngkz.github.io/2018/12/coleman-508/</guid>
+      <guid>https://f2l.cc/2018/12/coleman-508/</guid>
       <description>&lt;p&gt;父から1990年製造のColeman 508をもらったので、試しに使ってみた。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

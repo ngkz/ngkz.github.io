@@ -1,67 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>tkbctf on Fierce Falcon Laboratory</title>
-    <link>https://ngkz.github.io/tags/tkbctf/</link>
-    <description>Recent content in tkbctf on Fierce Falcon Laboratory</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Tkbctf on F²L</title>
+    <link>https://f2l.cc/tags/tkbctf/</link>
+    <description>Recent content in Tkbctf on F²L</description>
+    <generator>Hugo</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 29 Jan 2014 13:06:30 +0900</lastBuildDate><atom:link href="https://ngkz.github.io/tags/tkbctf/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Jan 2014 13:06:30 +0900</lastBuildDate>
+    <atom:link href="https://f2l.cc/tags/tkbctf/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>tkbctf1 writeup</title>
-      <link>https://ngkz.github.io/2014/01/tkbctf1-writeup/</link>
+      <link>https://f2l.cc/2014/01/tkbctf1-writeup/</link>
       <pubDate>Wed, 29 Jan 2014 13:06:30 +0900</pubDate>
-      
-      <guid>https://ngkz.github.io/2014/01/tkbctf1-writeup/</guid>
-      <description>&lt;p&gt;2013/5/4〜5/5の&lt;a href=&#34;http://tkbctf.info/tkbctf1&#34;&gt;tkbctf1&lt;/a&gt;に参加しました。&lt;/p&gt;
-
-
- 
-  
-  
-  
-  
-    
-  
-
-&lt;div class=&#34;figure &#34; &gt;
-  
-    &lt;a class=&#34;fancybox&#34; href=&#34;https://ngkz.github.io/assets/tkbctf1-writeup/fa296654d5c0a34f2c78631fe4577d70.png&#34; title=&#34;Scoreboard&#34; data-fancybox-group=&#34;&#34;&gt;
-  
-    &lt;img class=&#34;fig-img&#34; src=&#34;https://ngkz.github.io/assets/tkbctf1-writeup/fa296654d5c0a34f2c78631fe4577d70.png&#34;  alt=&#34;Scoreboard&#34;&gt;
-  
-    &lt;/a&gt;
-  
-   
-    &lt;span class=&#34;caption&#34;&gt;Scoreboard&lt;/span&gt;
-  
-&lt;/div&gt;
-
-
-
- 
-  
-  
-  
-  
-    
-  
-
-&lt;div class=&#34;figure &#34; &gt;
-  
-    &lt;a class=&#34;fancybox&#34; href=&#34;https://ngkz.github.io/assets/tkbctf1-writeup/6007d2ae22af0d2db3a312c9ba731253.png&#34; title=&#34;Challenges&#34; data-fancybox-group=&#34;&#34;&gt;
-  
-    &lt;img class=&#34;fig-img&#34; src=&#34;https://ngkz.github.io/assets/tkbctf1-writeup/6007d2ae22af0d2db3a312c9ba731253.png&#34;  alt=&#34;Challenges&#34;&gt;
-  
-    &lt;/a&gt;
-  
-   
-    &lt;span class=&#34;caption&#34;&gt;Challenges&lt;/span&gt;
-  
-&lt;/div&gt;
-
-&lt;p&gt;個人ランキングで1位でした。&lt;/p&gt;</description>
+      <guid>https://f2l.cc/2014/01/tkbctf1-writeup/</guid>
+      <description>&lt;p&gt;2013/5/4〜5/5の&lt;a href=&#34;http://tkbctf.info/tkbctf1&#34;&gt;tkbctf1&lt;/a&gt;に参加しました。&lt;/p&gt;&#xA;&#xA;&#xA; &#xA;  &#xA;  &#xA;  &#xA;  &#xA;    &#xA;  &#xA;&#xA;&lt;div class=&#34;figure &#34; &gt;&#xA;  &#xA;    &lt;a class=&#34;fancybox&#34; href=&#34;https://f2l.cc/assets/tkbctf1-writeup/fa296654d5c0a34f2c78631fe4577d70.png&#34; title=&#34;Scoreboard&#34; data-fancybox=&#34;&#34;&gt;&#xA;  &#xA;    &lt;img class=&#34;fig-img&#34; src=&#34;https://f2l.cc/assets/tkbctf1-writeup/fa296654d5c0a34f2c78631fe4577d70.png&#34;  alt=&#34;Scoreboard&#34;&gt;&#xA;  &#xA;    &lt;/a&gt;&#xA;  &#xA;   &#xA;    &lt;span class=&#34;caption&#34;&gt;Scoreboard&lt;/span&gt;&#xA;  &#xA;&lt;/div&gt;&#xA;&#xA;&#xA;&#xA; &#xA;  &#xA;  &#xA;  &#xA;  &#xA;    &#xA;  &#xA;&#xA;&lt;div class=&#34;figure &#34; &gt;&#xA;  &#xA;    &lt;a class=&#34;fancybox&#34; href=&#34;https://f2l.cc/assets/tkbctf1-writeup/6007d2ae22af0d2db3a312c9ba731253.png&#34; title=&#34;Challenges&#34; data-fancybox=&#34;&#34;&gt;&#xA;  &#xA;    &lt;img class=&#34;fig-img&#34; src=&#34;https://f2l.cc/assets/tkbctf1-writeup/6007d2ae22af0d2db3a312c9ba731253.png&#34;  alt=&#34;Challenges&#34;&gt;&#xA;  &#xA;    &lt;/a&gt;&#xA;  &#xA;   &#xA;    &lt;span class=&#34;caption&#34;&gt;Challenges&lt;/span&gt;&#xA;  &#xA;&lt;/div&gt;&#xA;&#xA;&lt;p&gt;個人ランキングで1位でした。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

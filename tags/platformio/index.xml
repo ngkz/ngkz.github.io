@@ -1,27 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>platformio on Fierce Falcon Laboratory</title>
-    <link>https://ngkz.github.io/tags/platformio/</link>
-    <description>Recent content in platformio on Fierce Falcon Laboratory</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Platformio on F²L</title>
+    <link>https://f2l.cc/tags/platformio/</link>
+    <description>Recent content in Platformio on F²L</description>
+    <generator>Hugo</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 23 Sep 2019 07:30:10 +0900</lastBuildDate><atom:link href="https://ngkz.github.io/tags/platformio/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Sep 2019 07:30:10 +0900</lastBuildDate>
+    <atom:link href="https://f2l.cc/tags/platformio/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GCCインラインアセンブラとplatformioの嵌りどころ</title>
-      <link>https://ngkz.github.io/2019/09/avr-development-fail/</link>
+      <link>https://f2l.cc/2019/09/avr-development-fail/</link>
       <pubDate>Mon, 23 Sep 2019 07:30:10 +0900</pubDate>
-      
-      <guid>https://ngkz.github.io/2019/09/avr-development-fail/</guid>
-      <description>&lt;p&gt;AVRでファンコントローラを作っていたら、いろいろなところで嵌って何時間も無駄にしたので、後学のために何があったかを書いておく。&lt;/p&gt;
-&lt;h2 id=&#34;gcc拡張インラインアセンブラ構文の嵌りどころ&#34;&gt;GCC拡張インラインアセンブラ構文の嵌りどころ&lt;/h2&gt;
-&lt;p&gt;GCCの拡張インラインアセンブラ構文を使うときはマニュアルをよく読まないとこういう目にあう&lt;/p&gt;
-&lt;h3 id=&#34;入力オペランドと出力オペランドは同じレジスタに割り当てられることがある&#34;&gt;入力オペランドと出力オペランドは同じレジスタに割り当てられることがある&lt;/h3&gt;
-&lt;p&gt;同じレジスタに割り当てられるとまずい場合は出力オペランドの制約に&lt;code&gt;&amp;amp;&lt;/code&gt;をつける。付け忘れていたら最適化をかけたときに入力と出力が同じレジスタに割り当てられて嵌った。&lt;/p&gt;
-&lt;p&gt;NG: &lt;code&gt;asm volatile(&amp;quot;...&amp;quot; : [output] &amp;quot;=r&amp;quot; (...) : [input] &amp;quot;r&amp;quot; (...));&lt;/code&gt; &lt;br&gt;
-OK: &lt;code&gt;asm volatile(&amp;quot;...&amp;quot; : [output] &amp;quot;=&amp;amp;r&amp;quot; (...) : [input] &amp;quot;r&amp;quot; (...));&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる&#34;&gt;入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる&lt;/h3&gt;</description>
+      <guid>https://f2l.cc/2019/09/avr-development-fail/</guid>
+      <description>&lt;p&gt;AVRでファンコントローラを作っていたら、いろいろなところで嵌って何時間も無駄にしたので、後学のために何があったかを書いておく。&lt;/p&gt;&#xA;&lt;h2 id=&#34;gcc拡張インラインアセンブラ構文の嵌りどころ&#34;&gt;GCC拡張インラインアセンブラ構文の嵌りどころ&lt;/h2&gt;&#xA;&lt;p&gt;GCCの拡張インラインアセンブラ構文を使うときはマニュアルをよく読まないとこういう目にあう&lt;/p&gt;&#xA;&lt;h3 id=&#34;入力オペランドと出力オペランドは同じレジスタに割り当てられることがある&#34;&gt;入力オペランドと出力オペランドは同じレジスタに割り当てられることがある&lt;/h3&gt;&#xA;&lt;p&gt;同じレジスタに割り当てられるとまずい場合は出力オペランドの制約に&lt;code&gt;&amp;amp;&lt;/code&gt;をつける。付け忘れていたら最適化をかけたときに入力と出力が同じレジスタに割り当てられて嵌った。&lt;/p&gt;&#xA;&lt;p&gt;NG: &lt;code&gt;asm volatile(&amp;quot;...&amp;quot; : [output] &amp;quot;=r&amp;quot; (...) : [input] &amp;quot;r&amp;quot; (...));&lt;/code&gt; &lt;br&gt;&#xA;OK: &lt;code&gt;asm volatile(&amp;quot;...&amp;quot; : [output] &amp;quot;=&amp;amp;r&amp;quot; (...) : [input] &amp;quot;r&amp;quot; (...));&lt;/code&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる&#34;&gt;入力オペランドを割り当てたレジスタが変更されないこと前提で最適化が行われる&lt;/h3&gt;</description>
     </item>
-    
   </channel>
 </rss>

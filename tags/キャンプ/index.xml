@@ -1,41 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>キャンプ on Fierce Falcon Laboratory</title>
-    <link>https://ngkz.github.io/tags/%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%97/</link>
-    <description>Recent content in キャンプ on Fierce Falcon Laboratory</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>キャンプ on F²L</title>
+    <link>https://f2l.cc/tags/%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%97/</link>
+    <description>Recent content in キャンプ on F²L</description>
+    <generator>Hugo</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 09 Jun 2019 17:34:45 +0900</lastBuildDate><atom:link href="https://ngkz.github.io/tags/%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%97/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Jun 2019 17:34:45 +0900</lastBuildDate>
+    <atom:link href="https://f2l.cc/tags/%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%97/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ステンレスカップにメモリをつけてみた</title>
-      <link>https://ngkz.github.io/2019/06/howto-etch-stainless-mug/</link>
+      <link>https://f2l.cc/2019/06/howto-etch-stainless-mug/</link>
       <pubDate>Sun, 09 Jun 2019 17:34:45 +0900</pubDate>
-      
-      <guid>https://ngkz.github.io/2019/06/howto-etch-stainless-mug/</guid>
-      <description>&lt;h2 id=&#34;一ヶ月半前くらいの話&#34;&gt;一ヶ月半前くらいの話&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgur.com/a/dCvS5&#34;&gt;酢と塩と9V電池でステンレス鍋に目盛りをつける方法&lt;/a&gt;を知ったので、計量カップを追い出して旅行の荷物を減らすためにステンレスマグを計量カップ化してみた。&lt;/p&gt;
-&lt;h2 id=&#34;どうやるの&#34;&gt;どうやるの&lt;/h2&gt;
-&lt;p&gt;上のリンクの内容を要約すると&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;印をつけたい部分の周辺をマスキング&lt;/li&gt;
-&lt;li&gt;酢と塩を混ぜて綿棒の先につける&lt;/li&gt;
-&lt;li&gt;綿棒を9V電池のマイナス、ステンレスマグを9V電池のプラスに接続&lt;/li&gt;
-&lt;li&gt;綿棒の先をエッチングしたい部分に押し付ける&lt;/li&gt;
-&lt;li&gt;シュワシュワという音がして数秒くらいで印が点く&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;自分の場合は酢にやさしい酢を使ったのと、印をつける面がヘアライン加工されていたせいか、9V電池では目盛りがつくのに時間がかかったので、電源電圧を12Vに上げて反応速度を上げた。&lt;/p&gt;
-&lt;h2 id=&#34;底で試す&#34;&gt;底で試す&lt;/h2&gt;</description>
+      <guid>https://f2l.cc/2019/06/howto-etch-stainless-mug/</guid>
+      <description>&lt;h2 id=&#34;一ヶ月半前くらいの話&#34;&gt;一ヶ月半前くらいの話&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://imgur.com/a/dCvS5&#34;&gt;酢と塩と9V電池でステンレス鍋に目盛りをつける方法&lt;/a&gt;を知ったので、計量カップを追い出して旅行の荷物を減らすためにステンレスマグを計量カップ化してみた。&lt;/p&gt;&#xA;&lt;h2 id=&#34;どうやるの&#34;&gt;どうやるの&lt;/h2&gt;&#xA;&lt;p&gt;上のリンクの内容を要約すると&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;印をつけたい部分の周辺をマスキング&lt;/li&gt;&#xA;&lt;li&gt;酢と塩を混ぜて綿棒の先につける&lt;/li&gt;&#xA;&lt;li&gt;綿棒を9V電池のマイナス、ステンレスマグを9V電池のプラスに接続&lt;/li&gt;&#xA;&lt;li&gt;綿棒の先をエッチングしたい部分に押し付ける&lt;/li&gt;&#xA;&lt;li&gt;シュワシュワという音がして数秒くらいで印が点く&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;自分の場合は酢にやさしい酢を使ったのと、印をつける面がヘアライン加工されていたせいか、9V電池では目盛りがつくのに時間がかかったので、電源電圧を12Vに上げて反応速度を上げた。&lt;/p&gt;&#xA;&lt;h2 id=&#34;底で試す&#34;&gt;底で試す&lt;/h2&gt;</description>
     </item>
-    
     <item>
       <title>28年前製造のガソリンストーブに火を入れてみた</title>
-      <link>https://ngkz.github.io/2018/12/coleman-508/</link>
+      <link>https://f2l.cc/2018/12/coleman-508/</link>
       <pubDate>Sun, 09 Dec 2018 12:09:05 +0900</pubDate>
-      
-      <guid>https://ngkz.github.io/2018/12/coleman-508/</guid>
+      <guid>https://f2l.cc/2018/12/coleman-508/</guid>
       <description>&lt;p&gt;父から1990年製造のColeman 508をもらったので、試しに使ってみた。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    
+    <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"https:\/\/f2l.cc\/",
+  "author": {
+    "@type": "Person",
+    "name": "Kazutoshi Noguchi",
+    
+    "image": "https://f2l.cc/insignia.png"
+    
+  },
+  "name":"F²L",
+  "description":"\u003cp\u003eInfiniTime \u003cdel\u003e1.13\u003c\/del\u003e 1.14 on PineTime の通知に日本語が表示されないのが不便なのでどうにかします。\u003c\/p\u003e",
+  "url":"https:\/\/f2l.cc\/2023\/11\/infinitime-japanese\/",
+  "keywords":"[]"
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.126.1 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Kazutoshi Noguchi">
+<meta name="keywords" content="">
+<meta name="description" content="InfiniTime 1.13 1.14 on PineTime の通知に日本語が表示されないのが不便なのでどうにかします。">
+
+
+<meta property="og:description" content="InfiniTime 1.13 1.14 on PineTime の通知に日本語が表示されないのが不便なのでどうにかします。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PineTimeを日本語対応にする回">
+<meta name="twitter:title" content="PineTimeを日本語対応にする回">
+<meta property="og:url" content="https://f2l.cc/2023/11/infinitime-japanese/">
+<meta property="twitter:url" content="https://f2l.cc/2023/11/infinitime-japanese/">
+<meta property="og:site_name" content="F²L">
+<meta property="og:description" content="InfiniTime 1.13 1.14 on PineTime の通知に日本語が表示されないのが不便なのでどうにかします。">
+<meta name="twitter:description" content="InfiniTime 1.13 1.14 on PineTime の通知に日本語が表示されないのが不便なのでどうにかします。">
+<meta property="og:locale" content="ja">
+
+  
+    <meta property="article:published_time" content="2023-11-10T22:46:29">
+  
+  
+    <meta property="article:modified_time" content="2023-11-10T22:46:29">
+  
+  
+  
+    
+      <meta property="article:section" content="howto">
+    
+  
+  
+    
+      <meta property="article:tag" content="PineTime">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+  <meta name="twitter:site" content="@n_g_k_z">
+
+
+  <meta name="twitter:creator" content="@n_g_k_z">
+
+
+
+
+
+
+  <meta property="og:image" content="https://f2l.cc/insignia.png">
+  <meta property="twitter:image" content="https://f2l.cc/insignia.png">
+
+
+
+
+
+  <meta property="og:image" content="https://f2l.cc/2023/11/infinitime-japanese/after.jpg">
+  <meta property="twitter:image" content="https://f2l.cc/2023/11/infinitime-japanese/after.jpg">
+
+
+    <title>PineTimeを日本語対応にする回</title>
+
+    <link rel="icon" href="https://f2l.cc/favicon.ico">
+    
+
+    
+
+    <link rel="canonical" href="https://f2l.cc/2023/11/infinitime-japanese/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://f2l.cc/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+  
+
+
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="1">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://f2l.cc/" aria-label="ホームページへ">F²L</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://f2l.cc/page/profile/" aria-label="リンクを開く: /page/profile/">
+    
+    
+    
+      
+        <img class="header-picture" src="https://f2l.cc/insignia.png" alt="プロフィール画像" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="1">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://f2l.cc/page/profile/" aria-label="著者についてもっと読む">
+          <img class="sidebar-profile-picture" src="https://f2l.cc/insignia.png" alt="プロフィール画像" />
+        </a>
+        <h4 class="sidebar-profile-name">Kazutoshi Noguchi</h4>
+        
+          <h5 class="sidebar-profile-bio">🐈🧑‍💻🚩🐧❄️⚡🚐🔧💅👘❤️💜💙🤐</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://f2l.cc/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">ホーム</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://f2l.cc/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">カテゴリー</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://f2l.cc/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">タグ</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://f2l.cc/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">アーカイブ</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://f2l.cc/page/profile/" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">プロフィール</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/ngkz" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://twitter.com/n_g_k_z" target="_blank" rel="noopener" title="Xitter">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-twitter" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Xitter</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://discord.com/users/529714068618215427" target="_blank" rel="noopener" title="Discord">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-discord" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Discord</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://f2l.cc/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="1"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      PineTimeを日本語対応にする回
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2023-11-10T22:46:29&#43;09:00">
+        
+  
+  
+  
+  
+    2023-11-10
+  
+
+      </time>
+    
+    
+  
+  
+    <span>カテゴリー</span>
+    
+      <a class="category-link" href="https://f2l.cc/categories/howto">howto</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <p>InfiniTime <del>1.13</del> 1.14 on PineTime の通知に日本語が表示されないのが不便なのでどうにかします。</p>
+<h2 id="フォントを外部フラッシュに入れ-ramが足りない">フォントを外部フラッシュに入れ… RAMが足りない!</h2>
+<p>PineTimeには、CPU内蔵の64KB RAMと512KB フラッシュROM、さらにストレージとして4MBのSPI外部フラッシュが搭載されている。512KBしかない内蔵フラッシュの空きには当然日本語の全文字のフォントデータが入らないので、できれば外部フラッシュに逃がしたい。</p>
+<p>まずは、<a href="https://github.com/InfiniTimeOrg/InfiniTime/blob/1.13.0/doc/ExternalResources.md">1.11でInfiniTimeが外部フラッシュへのリソースの格納に対応</a>したので、この方法で日本語フォントを追加しようとした。<br>
+英字+日本語のひらがな+カタカナ+記号+CJK統合漢字のフォントが4MBの外部フラッシュに余裕で収まるサイズ(約787K)に収まったので行けると思いきや、いざフォントを変更する段になって描画前にこの巨大フォントをたった64KBのRAMにロードしないといけないことに気づいた。</p>
+<p>漢字数を小学校レベルにまで削っても128KB近くになるので、どうにか直接アクセスできる内蔵フラッシュに押しこむしかない。</p>
+<h2 id="じゃあ文字種を削って内蔵フラッシュに入らない">じゃあ文字種を削って内蔵フラッシュに…入らない!</h2>
+<p><a href="https://qiita.com/skyfish20ch/items/e5437221447b4307d299#%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%8C%96">この記事</a>のように内蔵フラッシュにフォントデータを入れようとしてみたが、バージョンアップで元々のフラッシュ使用量が当時より増えたので、フォントを追加すると容量オーバーするようになってしまっていた。</p>
+<p>内蔵フラッシュにフォントを入れるとROMが溢れ、外部フラッシュに入れるとRAMが溢れる!</p>
+<h2 id="アプリを削って無理やり押し込む">アプリを削って無理やり押し込む</h2>
+<p>使わない内蔵アプリ4つ (2048, ポン, お絵描きアプリ, メトロノーム)を削除したらなんとか内蔵フラッシュに収まった。やったね!</p>
+<p><img src="flash.png" alt="内蔵フラッシュの容量がギリギリの図"></p>
+<p>2024-01-25 追記: InfiniTime 1.14でフラッシュの使用量が削減され、アプリを消さなくてもフォントが入るようになった</p>
+<h2 id="結局こうした">結局こうした</h2>
+<ol>
+<li>
+<p>Noto Sans JPのMediumを <code>src/displayapp/fonts/</code> へ投入</p>
+</li>
+<li>
+<p>元々の英字フォントにNoto Sansのグリフを追加</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-patch" data-lang="patch"><span style="display:flex;"><span><span style="color:#f92672">--- a/src/displayapp/fonts/fonts.json
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672"></span><span style="color:#a6e22e">+++ b/src/displayapp/fonts/fonts.json
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span><span style="color:#75715e">@@ -8,6 +8,10 @@
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        {
+</span></span><span style="display:flex;"><span>            &#34;file&#34;: &#34;FontAwesome5-Solid+Brands+Regular.woff&#34;,
+</span></span><span style="display:flex;"><span>            &#34;range&#34;: &#34;0xf294, 0xf242, 0xf54b, 0xf21e, 0xf1e6, 0xf017, 0xf129, 0xf03a, 0xf185, 0xf560, 0xf001, 0xf3fd, 0xf1fc, 0xf45d, 0xf59f, 0xf5a0, 0xf027, 0xf028, 0xf6a9, 0xf04b, 0xf04c, 0xf048, 0xf051, 0xf095, 0xf3dd, 0xf04d, 0xf2f2, 0xf024, 0xf252, 0xf569, 0xf06e, 0xf015, 0xf00c&#34;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">+         },
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+         {
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+            &#34;file&#34;: &#34;NotoSansJP-Medium.ttf&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+            &#34;symbols&#34;: &#34;一右雨円王音下火花貝学気九休玉金空月犬見五口校左三山子四糸字耳七車手十出女小上森人水正生青夕石赤千川先早草足村大男竹中虫町天田土二日入年白八百文木本名目立力林六引羽雲園遠何科夏家歌画回会海絵外角楽活間丸岩顔汽記帰弓牛魚京強教近兄形計元言原戸古午後語工公広交光考行高黄合谷国黒今才細作算止市矢姉思紙寺自時室社弱首秋週春書少場色食心新親図数西声星晴切雪船線前組走多太体台地池知茶昼長鳥朝直通弟店点電刀冬当東答頭同道読内南肉馬売買麦半番父風分聞米歩母方北毎妹万明鳴毛門夜野友用曜来里理話悪安暗医委意育員院飲運泳駅央横屋温化荷界開階寒感漢館岸起期客究急級宮球去橋業曲局銀区苦具君係軽血決研県庫湖向幸港号根祭皿仕死使始指歯詩次事持式実写者主守取酒受州拾終習集住重宿所暑助昭消商章勝乗植申身神真深進世整昔全相送想息速族他打対待代第題炭短談着注柱丁帳調追定庭笛鉄転都度投豆島湯登等動童農波配倍箱畑発反坂板皮悲美鼻筆氷表秒病品負部服福物平返勉放味命面問役薬由油有遊予羊洋葉陽様落流旅両緑礼列練路和愛案以衣位囲胃印英栄塩億加果貨課芽改械害街各覚完官管関観願希季紀喜旗器機議求泣救給挙漁共協鏡競極訓軍郡径型景芸欠結建健験固功好候航康告差菜最材昨札刷殺察参産散残士氏史司試児治辞失借種周祝順初松笑唱焼象照賞臣信成省清静席積折節説浅戦選然争倉巣束側続卒孫帯隊達単置仲貯兆腸低底停的典伝徒努灯堂働特得毒熱念敗梅博飯飛費必票標不夫付府副粉兵別辺変便包法望牧末満未脈民無約勇要養浴利陸良料量輪類令冷例歴連老労録ー圧移因永営衛易益液演応往桜恩可仮価河過賀快解格確額刊幹慣眼基寄規技義逆久旧居許境均禁句群経潔件券険検限現減故個護効厚耕鉱構興講混査再災妻採際在財罪雑酸賛支志枝師資飼示似識質舎謝授修述術準序招承証条状常情織職制性政勢精製税責績接設舌絶銭祖素総造像増則測属率損退貸態団断築張提程適敵統銅導徳独任燃能破犯判版比肥非備俵評貧布婦富武復複仏編弁保墓報豊防貿暴務夢迷綿輸余預容略留領異遺域宇映延沿我灰拡革閣割株干巻看簡危机揮貴疑吸供胸郷勤筋系敬警劇激穴絹権憲源厳己呼誤后孝皇紅降鋼刻穀骨困砂座済裁策冊蚕至私姿視詞誌磁射捨尺若樹収宗就衆従縦縮熟純処署諸除将傷障城蒸針仁垂推寸盛聖誠宣専泉洗染善奏窓創装層操蔵臓存尊宅担探誕段暖値宙忠著庁頂潮賃痛展討党糖届難乳認納脳派拝背肺俳班晩否批秘腹奮並陛閉片補暮宝訪亡忘棒枚幕密盟模訳郵優幼欲翌乱卵覧裏律臨朗論亜哀挨曖握扱宛嵐依威為畏尉萎偉椅彙違維慰緯壱逸芋咽姻淫陰隠韻唄鬱畝浦詠影鋭疫悦越謁閲炎怨宴援煙猿鉛縁艶汚凹押旺欧殴翁奥憶臆虞乙俺卸穏佳苛架華菓渦嫁暇禍靴寡箇稼蚊牙瓦雅餓介戒怪拐悔皆塊楷潰壊懐諧劾崖涯慨蓋該概骸垣柿核殻郭較隔獲嚇穫岳顎掛括喝渇葛滑褐轄且釜鎌あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわゐゑをんがぎぐげござじずぜぞだぢづでどばびぶべぼぱぴぷぺぽぁぃぅぇぉっゃゅょアイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヰヱヲンガギグゲゴザジズゼゾダヂズデドバビブベボパピプペポァィゥェォッャュョヴ、。ー～「」【】『』゛゜♪♭■□◆◇△▲▽▼◎○●◯‥…・∴∵※×〒！”＃＄％＆’（）＝~｜｀｛＋＊｝＜＞？＿－＾＠［；：］，．／＼ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ０１２３４５６７８９&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span>        }
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>    &#34;bpp&#34;: 1,
+</span></span></code></pre></div></li>
+<li>
+<p>いらないアプリを削除</p>
+<p>2024-01-25 追記: 先述の通り1.14では不要。さらに、cmakeのオプション <code>-DENABLE_USERAPPS</code> でインストールするアプリをカスタマイズできるようになったので、削除する場合もパッチは不要になった</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-patch" data-lang="patch"><span style="display:flex;"><span>diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+</span></span><span style="display:flex;"><span>index d903629b..8e6e3529 100644
+</span></span><span style="display:flex;"><span><span style="color:#f92672">--- a/src/CMakeLists.txt
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672"></span><span style="color:#a6e22e">+++ b/src/CMakeLists.txt
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span><span style="color:#75715e">@@ -375,8 +375,8 @@ list(APPEND SOURCE_FILES
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        displayapp/screens/Screen.cpp
+</span></span><span style="display:flex;"><span>        displayapp/screens/Clock.cpp
+</span></span><span style="display:flex;"><span>        displayapp/screens/Tile.cpp
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-        displayapp/screens/InfiniPaint.cpp
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-        displayapp/screens/Paddle.cpp
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672"></span><span style="color:#a6e22e">+        # displayapp/screens/InfiniPaint.cpp
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+        # displayapp/screens/Paddle.cpp
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span>        displayapp/screens/StopWatch.cpp
+</span></span><span style="display:flex;"><span>        displayapp/screens/BatteryIcon.cpp
+</span></span><span style="display:flex;"><span>        displayapp/screens/BleIcon.cpp
+</span></span><span style="display:flex;"><span><span style="color:#75715e">@@ -387,12 +387,12 @@ list(APPEND SOURCE_FILES
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        displayapp/screens/Music.cpp
+</span></span><span style="display:flex;"><span>        displayapp/screens/Weather.cpp
+</span></span><span style="display:flex;"><span>        displayapp/screens/Navigation.cpp
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-        displayapp/screens/Metronome.cpp
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672"></span><span style="color:#a6e22e">+        # displayapp/screens/Metronome.cpp
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span>        displayapp/screens/Motion.cpp
+</span></span><span style="display:flex;"><span>        displayapp/screens/FirmwareValidation.cpp
+</span></span><span style="display:flex;"><span>        displayapp/screens/ApplicationList.cpp
+</span></span><span style="display:flex;"><span>        displayapp/screens/Notifications.cpp
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-        displayapp/screens/Twos.cpp
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672"></span><span style="color:#a6e22e">+        # displayapp/screens/Twos.cpp
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span>        displayapp/screens/HeartRate.cpp
+</span></span><span style="display:flex;"><span>        displayapp/screens/Motion.cpp
+</span></span><span style="display:flex;"><span>        displayapp/screens/FlashLight.cpp
+</span></span><span style="display:flex;"><span>diff --git a/src/displayapp/Apps.h b/src/displayapp/Apps.h
+</span></span><span style="display:flex;"><span>index f253bc03..800e165b 100644
+</span></span><span style="display:flex;"><span><span style="color:#f92672">--- a/src/displayapp/Apps.h
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672"></span><span style="color:#a6e22e">+++ b/src/displayapp/Apps.h
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span><span style="color:#75715e">@@ -16,13 +16,13 @@ namespace Pinetime {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    FlashLight,
+</span></span><span style="display:flex;"><span>    BatteryInfo,
+</span></span><span style="display:flex;"><span>    Music,
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-      Paint,
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-      Paddle,
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-      Twos,
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672"></span><span style="color:#a6e22e">+      // Paint,
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+      // Paddle,
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+      // Twos,
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span>    HeartRate,
+</span></span><span style="display:flex;"><span>    Navigation,
+</span></span><span style="display:flex;"><span>    StopWatch,
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-      Metronome,
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672"></span><span style="color:#a6e22e">+      // Metronome,
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span>    Motion,
+</span></span><span style="display:flex;"><span>    Steps,
+</span></span><span style="display:flex;"><span>    PassKey,
+</span></span><span style="display:flex;"><span>diff --git a/src/displayapp/DisplayApp.cpp b/src/displayapp/DisplayApp.cpp
+</span></span><span style="display:flex;"><span>index a930fe96..d3eb4191 100644
+</span></span><span style="display:flex;"><span><span style="color:#f92672">--- a/src/displayapp/DisplayApp.cpp
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672"></span><span style="color:#a6e22e">+++ b/src/displayapp/DisplayApp.cpp
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span><span style="color:#75715e">@@ -14,16 +14,16 @@
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>#include &#34;displayapp/screens/Clock.h&#34;
+</span></span><span style="display:flex;"><span>#include &#34;displayapp/screens/FirmwareUpdate.h&#34;
+</span></span><span style="display:flex;"><span>#include &#34;displayapp/screens/FirmwareValidation.h&#34;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-#include &#34;displayapp/screens/InfiniPaint.h&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-#include &#34;displayapp/screens/Paddle.h&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672"></span><span style="color:#a6e22e">+// #include &#34;displayapp/screens/InfiniPaint.h&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+// #include &#34;displayapp/screens/Paddle.h&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span>#include &#34;displayapp/screens/StopWatch.h&#34;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-#include &#34;displayapp/screens/Metronome.h&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672"></span><span style="color:#a6e22e">+// #include &#34;displayapp/screens/Metronome.h&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span>#include &#34;displayapp/screens/Music.h&#34;
+</span></span><span style="display:flex;"><span>#include &#34;displayapp/screens/Navigation.h&#34;
+</span></span><span style="display:flex;"><span>#include &#34;displayapp/screens/Notifications.h&#34;
+</span></span><span style="display:flex;"><span>#include &#34;displayapp/screens/SystemInfo.h&#34;
+</span></span><span style="display:flex;"><span>#include &#34;displayapp/screens/Tile.h&#34;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-#include &#34;displayapp/screens/Twos.h&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672"></span><span style="color:#a6e22e">+// #include &#34;displayapp/screens/Twos.h&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span>#include &#34;displayapp/screens/FlashLight.h&#34;
+</span></span><span style="display:flex;"><span>#include &#34;displayapp/screens/BatteryInfo.h&#34;
+</span></span><span style="display:flex;"><span>#include &#34;displayapp/screens/Steps.h&#34;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">@@ -519,15 +519,15 @@ void DisplayApp::LoadScreen(Apps app, DisplayApp::FullRefreshDirections directio
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    case Apps::StopWatch:
+</span></span><span style="display:flex;"><span>    currentScreen = std::make_unique&lt;Screens::StopWatch&gt;(*systemTask);
+</span></span><span style="display:flex;"><span>    break;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-    case Apps::Twos:
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-      currentScreen = std::make_unique&lt;Screens::Twos&gt;();
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-      break;
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-    case Apps::Paint:
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-      currentScreen = std::make_unique&lt;Screens::InfiniPaint&gt;(lvgl, motorController);
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-      break;
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-    case Apps::Paddle:
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-      currentScreen = std::make_unique&lt;Screens::Paddle&gt;(lvgl);
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-      break;
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672"></span><span style="color:#a6e22e">+    // case Apps::Twos:
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+    //   currentScreen = std::make_unique&lt;Screens::Twos&gt;();
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+    //   break;
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+    // case Apps::Paint:
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+    //   currentScreen = std::make_unique&lt;Screens::InfiniPaint&gt;(lvgl, motorController);
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+    //   break;
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+    // case Apps::Paddle:
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+    //   currentScreen = std::make_unique&lt;Screens::Paddle&gt;(lvgl);
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+    //   break;
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span>    case Apps::Music:
+</span></span><span style="display:flex;"><span>    currentScreen = std::make_unique&lt;Screens::Music&gt;(systemTask-&gt;nimble().music());
+</span></span><span style="display:flex;"><span>    break;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">@@ -537,9 +537,9 @@ void DisplayApp::LoadScreen(Apps app, DisplayApp::FullRefreshDirections directio
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    case Apps::HeartRate:
+</span></span><span style="display:flex;"><span>    currentScreen = std::make_unique&lt;Screens::HeartRate&gt;(heartRateController, *systemTask);
+</span></span><span style="display:flex;"><span>    break;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-    case Apps::Metronome:
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-      currentScreen = std::make_unique&lt;Screens::Metronome&gt;(motorController, *systemTask);
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-      break;
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672"></span><span style="color:#a6e22e">+    // case Apps::Metronome:
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+    //   currentScreen = std::make_unique&lt;Screens::Metronome&gt;(motorController, *systemTask);
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+    //   break;
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span>    /* Weather debug app
+</span></span><span style="display:flex;"><span>    case Apps::Weather:
+</span></span><span style="display:flex;"><span>    currentScreen = std::make_unique&lt;Screens::Weather&gt;(this, systemTask-&gt;nimble().weather());
+</span></span><span style="display:flex;"><span>diff --git a/src/displayapp/screens/ApplicationList.h b/src/displayapp/screens/ApplicationList.h
+</span></span><span style="display:flex;"><span>index 7bdd1154..d3a36960 100644
+</span></span><span style="display:flex;"><span><span style="color:#f92672">--- a/src/displayapp/screens/ApplicationList.h
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672"></span><span style="color:#a6e22e">+++ b/src/displayapp/screens/ApplicationList.h
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span><span style="color:#75715e">@@ -47,10 +47,10 @@ namespace Pinetime {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        {Symbols::heartBeat, Apps::HeartRate},
+</span></span><span style="display:flex;"><span>        {Symbols::music, Apps::Music},
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-          {Symbols::paintbrush, Apps::Paint},
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-          {Symbols::paddle, Apps::Paddle},
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-          {&#34;2&#34;, Apps::Twos},
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672">-          {Symbols::drum, Apps::Metronome},
+</span></span></span><span style="display:flex;"><span><span style="color:#f92672"></span><span style="color:#a6e22e">+          // {Symbols::paintbrush, Apps::Paint},
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+          // {Symbols::paddle, Apps::Paddle},
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+          // {&#34;2&#34;, Apps::Twos},
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+          // {Symbols::drum, Apps::Metronome},
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span>        {Symbols::map, Apps::Navigation},
+</span></span><span style="display:flex;"><span>        {Symbols::none, Apps::None},
+</span></span></code></pre></div></li>
+</ol>
+<h2 id="ota-インストール">OTA インストール</h2>
+<p>2024-01-25 追記: <a href="https://gitea.elara.ws/Elara6331/itd/issues/66">依存ライブラリにパッチを当てないと</a>itdが動かなくなってた</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>InfiniTime/build $ nix shell nixpkgs#itd
+</span></span><span style="display:flex;"><span>InfiniTime/build $ itd &amp;
+</span></span><span style="display:flex;"><span>InfiniTime/build $ itctl firmware upgrade --archive src/pinetime-mcuboot-app-dfu-*.zip --resources src/resources/infinitime-resources-*.zip
+</span></span></code></pre></div><h2 id="できあがり">できあがり</h2>
+<p>開発キットを持っていることを忘れていきなり実機にインストールしてしまったけど、無事うまく行った。</p>
+
+
+ 
+  
+  
+  
+  
+    
+      
+    
+  
+    
+  
+    
+      
+    
+  
+
+<div class="figure center nocaption" >
+  
+    <a class="fancybox" href="after.jpg" title="日本語化後" data-fancybox="">
+  
+    <img class="fig-img" src="after.jpg" style="width: 400px;" alt="日本語化後">
+  
+    </a>
+  
+  
+</div>
+
+<h2 id="おまけ">おまけ</h2>
+<h3 id="バイナリ">バイナリ</h3>
+<p>ビルドしたバイナリを <em><a href="https://github.com/ngkz/InfiniTime-Japanese/releases">ここ</a></em> に置いておきました。よかったら使ってください</p>
+<h3 id="nixでinfinitimeをビルドするには">NixでInfiniTimeをビルドするには</h3>
+<p><a href="https://github.com/ngkz/InfiniTime-Japanese/commit/12e17adc34e162c1b835e2a56f4798ccb8e653ca">https://github.com/ngkz/InfiniTime-Japanese/commit/12e17adc34e162c1b835e2a56f4798ccb8e653ca</a> を当てて</p>
+<h4 id="デバッグビルド">デバッグビルド</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>infinitime $ direnv allow . <span style="color:#75715e"># OR nix develop</span>
+</span></span><span style="display:flex;"><span>infinitime $ mkdir build <span style="color:#f92672">&amp;&amp;</span> cd build
+</span></span><span style="display:flex;"><span>infinitime/build $ do_cmake -DBUILD_DFU<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> -DBUILD_RESOURCES<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> ..
+</span></span><span style="display:flex;"><span>infinitime/build $ make -j<span style="color:#66d9ef">$(</span>nproc<span style="color:#66d9ef">)</span>
+</span></span></code></pre></div><h4 id="リリースビルド">リリースビルド</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>infinitime $ nix build .?submodules<span style="color:#f92672">=</span>1#
+</span></span></code></pre></div><h2 id="参考">参考</h2>
+<ul>
+<li>
+<p><a href="https://qiita.com/skyfish20ch/items/e5437221447b4307d299#%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%8C%96">PineTimeをいじってみる#日本語化</a></p>
+<p>大変参考になりました。ありがとうございます。</p>
+</li>
+</ul>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">タグ</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://f2l.cc/tags/pinetime/">PineTime</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">次</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://f2l.cc/2023/09/seccon-2023-quals-writeup/" data-tooltip="SECCON 2023 Quals Writeup" aria-label="前: SECCON 2023 Quals Writeup">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">前</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="この記事を共有する">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://f2l.cc/2023/11/infinitime-japanese/" title="Facebookで共有" aria-label="Facebookで共有">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://f2l.cc/2023/11/infinitime-japanese/" title="Twitterで共有" aria-label="Twitterで共有">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.reddit.com/submit?url=https://f2l.cc/2023/11/infinitime-japanese/" title="Redditで共有" aria-label="Redditで共有">
+          <i class="fab fa-reddit" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://news.ycombinator.com/submitlink?u=https://f2l.cc/2023/11/infinitime-japanese/" title="Hacker Newsで共有" aria-label="Hacker Newsで共有">
+          <i class="fab fa-hacker-news" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="コメントを残す">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="トップに戻る">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+    <script type="text/javascript">
+      var disqus_config = function() {
+        this.page.url = 'https:\/\/f2l.cc\/2023\/11\/infinitime-japanese\/';
+        
+          this.page.identifier = '\/2023\/11\/infinitime-japanese\/'
+        
+      };
+      (function() {
+        
+        
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+          return;
+        }
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'ngkz-log';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">F²L</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://f2l.cc/" property="cc:attributionName" rel="cc:attributionURL">Kazutoshi Noguchi</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. Cover image by <a href="https://www.goodfreephotos.com/">Good Free Photos</a>.
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="1">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">次</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://f2l.cc/2023/09/seccon-2023-quals-writeup/" data-tooltip="SECCON 2023 Quals Writeup" aria-label="前: SECCON 2023 Quals Writeup">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">前</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="この記事を共有する">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://f2l.cc/2023/11/infinitime-japanese/" title="Facebookで共有" aria-label="Facebookで共有">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://f2l.cc/2023/11/infinitime-japanese/" title="Twitterで共有" aria-label="Twitterで共有">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.reddit.com/submit?url=https://f2l.cc/2023/11/infinitime-japanese/" title="Redditで共有" aria-label="Redditで共有">
+          <i class="fab fa-reddit" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://news.ycombinator.com/submitlink?u=https://f2l.cc/2023/11/infinitime-japanese/" title="Hacker Newsで共有" aria-label="Hacker Newsで共有">
+          <i class="fab fa-hacker-news" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="コメントを残す">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="トップに戻る">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="1">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ff2l.cc%2F2023%2F11%2Finfinitime-japanese%2F" aria-label="Facebookで共有">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Facebookで共有</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Ff2l.cc%2F2023%2F11%2Finfinitime-japanese%2F" aria-label="Twitterで共有">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>Twitterで共有</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.reddit.com/submit?url=https%3A%2F%2Ff2l.cc%2F2023%2F11%2Finfinitime-japanese%2F" aria-label="Redditで共有">
+          <i class="fab fa-reddit" aria-hidden="true"></i><span>Redditで共有</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://news.ycombinator.com/submitlink?u=https%3A%2F%2Ff2l.cc%2F2023%2F11%2Finfinitime-japanese%2F" aria-label="Hacker Newsで共有">
+          <i class="fab fa-hacker-news" aria-hidden="true"></i><span>Hacker Newsで共有</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://f2l.cc/insignia.png" alt="プロフィール画像" />
+    
+    <h4 id="about-card-name">Kazutoshi Noguchi</h4>
+    
+      <div id="about-card-bio">🐈🧑‍💻🚩🐧❄️⚡🚐🔧💅👘❤️💜💙🤐</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Infomation Security Engineer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        Japan
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://f2l.cc/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://f2l.cc/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+

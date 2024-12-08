@@ -1,68 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>homeserver on Fierce Falcon Laboratory</title>
-    <link>https://ngkz.github.io/categories/homeserver/</link>
-    <description>Recent content in homeserver on Fierce Falcon Laboratory</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Homeserver on F²L</title>
+    <link>https://f2l.cc/categories/homeserver/</link>
+    <description>Recent content in Homeserver on F²L</description>
+    <generator>Hugo</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 04 Nov 2019 00:31:35 +0900</lastBuildDate><atom:link href="https://ngkz.github.io/categories/homeserver/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Nov 2019 00:31:35 +0900</lastBuildDate>
+    <atom:link href="https://f2l.cc/categories/homeserver/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>サーバー構築ログ その2</title>
-      <link>https://ngkz.github.io/2019/11/homeserver-build-20191104/</link>
+      <link>https://f2l.cc/2019/11/homeserver-build-20191104/</link>
       <pubDate>Mon, 04 Nov 2019 00:31:35 +0900</pubDate>
-      
-      <guid>https://ngkz.github.io/2019/11/homeserver-build-20191104/</guid>
-      <description>&lt;h2 id=&#34;不良メモリのその後&#34;&gt;不良メモリのその後&lt;/h2&gt;
-&lt;p&gt;正常なメモリに交換したら安定動作するようになった。&lt;/p&gt;
-&lt;h2 id=&#34;nic&#34;&gt;NIC&lt;/h2&gt;
-&lt;p&gt;1ヶ月半以上かかってWYI350T4が届いたので取り付けてテストした。ちゃんと4ポート全部ほぼワイヤースピード出てていい感じ&lt;/p&gt;
-
-
- 
-  
-  
-  
-  
-    
-  
-    
-      
-    
-  
-
-&lt;div class=&#34;figure center&#34; &gt;
-  
-    &lt;a class=&#34;fancybox&#34; href=&#34;https://ngkz.github.io/assets/homeserver-build-20191104/DSC00960.JPG&#34; title=&#34;相手は安ハブ経由のカニ&#34; data-fancybox-group=&#34;&#34;&gt;
-  
-    &lt;img class=&#34;fig-img&#34; src=&#34;https://ngkz.github.io/assets/homeserver-build-20191104/DSC00960.JPG&#34; style=&#34;width: 512px;height: 384px;&#34; alt=&#34;相手は安ハブ経由のカニ&#34;&gt;
-  
-    &lt;/a&gt;
-  
-   
-    &lt;span class=&#34;caption&#34;&gt;相手は安ハブ経由のカニ&lt;/span&gt;
-  
-&lt;/div&gt;
-
-&lt;p&gt;LFSが出来たら続きをやります&lt;/p&gt;</description>
+      <guid>https://f2l.cc/2019/11/homeserver-build-20191104/</guid>
+      <description>&lt;h2 id=&#34;不良メモリのその後&#34;&gt;不良メモリのその後&lt;/h2&gt;&#xA;&lt;p&gt;正常なメモリに交換したら安定動作するようになった。&lt;/p&gt;&#xA;&lt;h2 id=&#34;nic&#34;&gt;NIC&lt;/h2&gt;&#xA;&lt;p&gt;1ヶ月半以上かかってWYI350T4が届いたので取り付けてテストした。ちゃんと4ポート全部ほぼワイヤースピード出てていい感じ&lt;/p&gt;&#xA;&#xA;&#xA; &#xA;  &#xA;  &#xA;  &#xA;  &#xA;    &#xA;  &#xA;    &#xA;      &#xA;    &#xA;  &#xA;&#xA;&lt;div class=&#34;figure center&#34; &gt;&#xA;  &#xA;    &lt;a class=&#34;fancybox&#34; href=&#34;https://f2l.cc/assets/homeserver-build-20191104/DSC00960.JPG&#34; title=&#34;相手は安ハブ経由のカニ&#34; data-fancybox=&#34;&#34;&gt;&#xA;  &#xA;    &lt;img class=&#34;fig-img&#34; src=&#34;https://f2l.cc/assets/homeserver-build-20191104/DSC00960.JPG&#34; style=&#34;width: 512px;height: 384px;&#34; alt=&#34;相手は安ハブ経由のカニ&#34;&gt;&#xA;  &#xA;    &lt;/a&gt;&#xA;  &#xA;   &#xA;    &lt;span class=&#34;caption&#34;&gt;相手は安ハブ経由のカニ&lt;/span&gt;&#xA;  &#xA;&lt;/div&gt;&#xA;&#xA;&lt;p&gt;LFSが出来たら続きをやります&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>サーバー構築ログ その1</title>
-      <link>https://ngkz.github.io/2019/09/homeserver-build-20190922/</link>
+      <link>https://f2l.cc/2019/09/homeserver-build-20190922/</link>
       <pubDate>Mon, 23 Sep 2019 08:28:38 +0900</pubDate>
-      
-      <guid>https://ngkz.github.io/2019/09/homeserver-build-20190922/</guid>
-      <description>&lt;p&gt;自宅サーバーを再開したくなった。まだOS(Linux from Scratch)が完成していないけど、10月に増税なのでとりあえず必要なパーツの調達と動作確認だけしておくことにした。&lt;/p&gt;
-&lt;h2 id=&#34;構成&#34;&gt;構成&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;エンコード支援機能がついてるIntel以外のCPU&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; で、3スロットPCIeがついていて(NIC用, 2.4G WLAN用, 5G WLAN用)、できるだけ省電力で安い構成にしたかった
-&lt;ul&gt;
-&lt;li&gt;11ac Wave2対応のAtherosのカードがまだ高価なので、結局WLAN AP化は中止した&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <guid>https://f2l.cc/2019/09/homeserver-build-20190922/</guid>
+      <description>&lt;p&gt;自宅サーバーを再開したくなった。まだOS(Linux from Scratch)が完成していないけど、10月に増税なのでとりあえず必要なパーツの調達と動作確認だけしておくことにした。&lt;/p&gt;&#xA;&lt;h2 id=&#34;構成&#34;&gt;構成&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;エンコード支援機能がついてるIntel以外のCPU&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; で、3スロットPCIeがついていて(NIC用, 2.4G WLAN用, 5G WLAN用)、できるだけ省電力で安い構成にしたかった&#xA;&lt;ul&gt;&#xA;&lt;li&gt;11ac Wave2対応のAtherosのカードがまだ高価なので、結局WLAN AP化は中止した&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
-    
   </channel>
 </rss>

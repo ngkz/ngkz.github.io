@@ -1,31 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>rust on Fierce Falcon Laboratory</title>
-    <link>https://ngkz.github.io/tags/rust/</link>
-    <description>Recent content in rust on Fierce Falcon Laboratory</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Rust on F²L</title>
+    <link>https://f2l.cc/tags/rust/</link>
+    <description>Recent content in Rust on F²L</description>
+    <generator>Hugo</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 01 Aug 2018 17:37:33 +0900</lastBuildDate><atom:link href="https://ngkz.github.io/tags/rust/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Aug 2018 17:37:33 +0900</lastBuildDate>
+    <atom:link href="https://f2l.cc/tags/rust/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>テストをrootとして動かす方法 (Rust)</title>
-      <link>https://ngkz.github.io/2018/08/cargo-run-test-with-sudo/</link>
+      <link>https://f2l.cc/2018/08/cargo-run-test-with-sudo/</link>
       <pubDate>Wed, 01 Aug 2018 17:37:33 +0900</pubDate>
-      
-      <guid>https://ngkz.github.io/2018/08/cargo-run-test-with-sudo/</guid>
+      <guid>https://f2l.cc/2018/08/cargo-run-test-with-sudo/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/rust-lang/cargo/issues/1924&#34;&gt;https://github.com/rust-lang/cargo/issues/1924&lt;/a&gt; によると、&lt;code&gt;cargo test --no-run --message-format=json | jq -r &amp;quot;select(.profile.test == true) | .filenames[]&amp;quot;&lt;/code&gt; でテストバイナリの一覧が取得できる。これをsudoで実行するスクリプトを作ればOK&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>依存しているパッケージ(crate)の中身を実行せずに調べる方法 (Rust)</title>
-      <link>https://ngkz.github.io/2018/07/audit-cargo-crate/</link>
+      <link>https://f2l.cc/2018/07/audit-cargo-crate/</link>
       <pubDate>Wed, 25 Jul 2018 22:24:30 +0900</pubDate>
-      
-      <guid>https://ngkz.github.io/2018/07/audit-cargo-crate/</guid>
-      <description>cargo fetch1 でパッケージを取得すると、~/.cargo/registry/src/github.com-1ecc6299db9ec823/(パッケージ名)-(バージョン) にパッケージのソースコードが展開される。
-Cargo.lockにすべての依存クレートの名前とバージョンが記録されているので、これを見てコードに問題がないか調べることができる。
-cargo buildはビルドスクリプトを実行してしまうのでダメ&amp;#160;&amp;#x21a9;&amp;#xfe0e;</description>
+      <guid>https://f2l.cc/2018/07/audit-cargo-crate/</guid>
+      <description>cargo fetch1 でパッケージを取得すると、~/.cargo/registry/src/github.com-1ecc6299db9ec823/(パッケージ名)-(バージョン) にパッケージのソースコードが展開される。&#xA;Cargo.lockにすべての依存クレートの名前とバージョンが記録されているので、これを見てコードに問題がないか調べることができる。&#xA;cargo buildはビルドスクリプトを実行してしまうのでダメ&amp;#160;&amp;#x21a9;&amp;#xfe0e;</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Archives on Fierce Falcon Laboratory</title>
-    <link>https://ngkz.github.io/archives/</link>
-    <description>Recent content in Archives on Fierce Falcon Laboratory</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language><atom:link href="https://ngkz.github.io/archives/index.xml" rel="self" type="application/rss+xml" />
+    <title>Archives on F²L</title>
+    <link>https://f2l.cc/archives/</link>
+    <description>Recent content in Archives on F²L</description>
+    <generator>Hugo</generator>
+    <language>ja</language>
+    <atom:link href="https://f2l.cc/archives/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
