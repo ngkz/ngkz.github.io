@@ -4,10 +4,13 @@
     
     <script type="application/ld+json">
 
-{  
-  "@context":"http://schema.org",
-  "@type":"Website",
-  "@id":"https:\/\/f2l.cc\/",
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "EDIDが壊れて認識しないモニターの修理",
+  
+  "datePublished": "2019-01-06T17:19:12+09:00",
+  "dateModified": "2019-01-06T17:19:12+09:00",
   "author": {
     "@type": "Person",
     "name": "Kazutoshi Noguchi",
@@ -15,10 +18,22 @@
     "image": "https://f2l.cc/insignia.png"
     
   },
-  "name":"F²L",
-  "description":"\u003cp\u003eAcer H243HをDVIで接続すると認識しない。VGA接続とHDMI接続では正常に動作するが、DVIで接続するとsyslogに以下のエラーが出る。\u003c\/p\u003e\n\u003cpre tabindex=\u00220\u0022\u003e\u003ccode\u003eJan  5 23:48:32 haramaki kernel: [97894.621687] amdgpu 0000:01:00.0: DVI-D-1: EDID is invalid:\nJan  5 23:48:32 haramaki kernel: [97894.621694]         [00] BAD  00 ff ff ff ff ff ff 00 ff ff ff ff ff ff ff ff\nJan  5 23:48:32 haramaki kernel: [97894.621696]         [00] BAD  2b 13 01 03 80 35 1d 78 ea 60 85 a6 56 4a 9c 25\nJan  5 23:48:32 haramaki kernel: [97894.621697]         [00] BAD  12 50 54 af cf 00 81 80 71 4f 95 00 95 0f a9 40\nJan  5 23:48:32 haramaki kernel: [97894.621698]         [00] BAD  b3 00 01 01 01 01 1a 36 80 a0 70 38 1f 40 30 20\nJan  5 23:48:32 haramaki kernel: [97894.621699]         [00] BAD  35 00 13 2a 21 00 00 1a 00 00 00 fc 00 48 32 34\nJan  5 23:48:32 haramaki kernel: [97894.621700]         [00] BAD  33 48 0a 20 20 20 20 20 20 20 00 00 00 fd 00 38\nJan  5 23:48:32 haramaki kernel: [97894.621701]         [00] BAD  4c 1f 53 12 00 0a 20 20 20 20 20 20 00 00 00 ff\nJan  5 23:48:32 haramaki kernel: [97894.621702]         [00] BAD  00 4c 45 57 30 43 30 31 34 34 30 31 31 0a 00 33\n\u003c\/code\u003e\u003c\/pre\u003e\u003cp\u003eどうやらEDIDが壊れているようだ。\u003c\/p\u003e",
-  "url":"https:\/\/f2l.cc\/2019\/01\/edid-repair\/",
-  "keywords":"[]"
+  "mainEntityOfPage": { 
+    "@type": "WebPage",
+    "@id": "https:\/\/f2l.cc\/2019\/01\/edid-repair\/" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "F²L",
+    
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://f2l.cc/insignia.png"
+    }
+    
+  },
+  "description": "Acer H243HをDVIで接続すると認識しない。VGA接続とHDMI接続では正常に動作するが、DVIで接続するとsyslogに以下のエラーが出る。\nJan 5 23:48:32 haramaki kernel: [97894.621687] amdgpu 0000:01:00.0: DVI-D-1: EDID is invalid: Jan 5 23:48:32 haramaki kernel: [97894.621694] [00] BAD 00 ff ff ff ff ff ff 00 ff ff ff ff ff ff ff ff Jan 5 23:48:32 haramaki kernel: [97894.621696] [00] BAD 2b 13 01 03 80 35 1d 78 ea 60 85 a6 56 4a 9c 25 Jan 5 23:48:32 haramaki kernel: [97894.621697] [00] BAD 12 50 54 af cf 00 81 80 71 4f 95 00 95 0f a9 40 Jan 5 23:48:32 haramaki kernel: [97894.621698] [00] BAD b3 00 01 01 01 01 1a 36 80 a0 70 38 1f 40 30 20 Jan 5 23:48:32 haramaki kernel: [97894.621699] [00] BAD 35 00 13 2a 21 00 00 1a 00 00 00 fc 00 48 32 34 Jan 5 23:48:32 haramaki kernel: [97894.621700] [00] BAD 33 48 0a 20 20 20 20 20 20 20 00 00 00 fd 00 38 Jan 5 23:48:32 haramaki kernel: [97894.621701] [00] BAD 4c 1f 53 12 00 0a 20 20 20 20 20 20 00 00 00 ff Jan 5 23:48:32 haramaki kernel: [97894.621702] [00] BAD 00 4c 45 57 30 43 30 31 34 34 30 31 31 0a 00 33 どうやらEDIDが壊れているようだ。",
+  "keywords": []
 }
 
 </script>

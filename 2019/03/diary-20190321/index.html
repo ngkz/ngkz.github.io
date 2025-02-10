@@ -4,10 +4,13 @@
     
     <script type="application/ld+json">
 
-{  
-  "@context":"http://schema.org",
-  "@type":"Website",
-  "@id":"https:\/\/f2l.cc\/",
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "日記 2019/03/21(木)",
+  
+  "datePublished": "2019-03-21T22:50:19+09:00",
+  "dateModified": "2019-03-21T22:50:19+09:00",
   "author": {
     "@type": "Person",
     "name": "Kazutoshi Noguchi",
@@ -15,10 +18,22 @@
     "image": "https://f2l.cc/insignia.png"
     
   },
-  "name":"F²L",
-  "description":"\u003ch2 id=\u0022linux-from-scratch\u0022\u003eLinux from Scratch\u003c\/h2\u003e\n\u003cul\u003e\n\u003cli\u003eBinutilsのインストールが完了した\n\u003cul\u003e\n\u003cli\u003eHardening フラグを削除してもテストが失敗するのは GCCをDefault PIEでコンパイルしていたのが原因だった。\u003c\/li\u003e\n\u003cli\u003eテストするときに、\u003ccode\u003eCFLAGS\u003c\/code\u003e, \u003ccode\u003eCXXFLAGS\u003c\/code\u003e, \u003ccode\u003eCPPFLAGS\u003c\/code\u003e, \u003ccode\u003eLDFLAGS\u003c\/code\u003eを取り除くだけでなく、\u003ccode\u003eCC\u003c\/code\u003eと\u003ccode\u003eCXX\u003c\/code\u003eに\u003ccode\u003e-fno-PIE -no-pie\u003c\/code\u003eを加えてPIEを無効にしたら全テストが通るようになった\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/li\u003e\n\u003cli\u003eGMPをインストールした\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003ch2 id=\u0022筋トレ\u0022\u003e筋トレ\u003c\/h2\u003e",
-  "url":"https:\/\/f2l.cc\/2019\/03\/diary-20190321\/",
-  "keywords":"[]"
+  "mainEntityOfPage": { 
+    "@type": "WebPage",
+    "@id": "https:\/\/f2l.cc\/2019\/03\/diary-20190321\/" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "F²L",
+    
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://f2l.cc/insignia.png"
+    }
+    
+  },
+  "description": "Linux from Scratch Binutilsのインストールが完了した Hardening フラグを削除してもテストが失敗するのは GCCをDefault PIEでコンパイルしていたのが原因だった。 テストするときに、CFLAGS, CXXFLAGS, CPPFLAGS, LDFLAGSを取り除くだけでなく、CCとCXXに-fno-PIE -no-pieを加えてPIEを無効にしたら全テストが通るようになった GMPをインストールした 筋トレ",
+  "keywords": []
 }
 
 </script>

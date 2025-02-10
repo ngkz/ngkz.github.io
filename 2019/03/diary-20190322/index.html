@@ -4,10 +4,13 @@
     
     <script type="application/ld+json">
 
-{  
-  "@context":"http://schema.org",
-  "@type":"Website",
-  "@id":"https:\/\/f2l.cc\/",
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "日記 2019/03/22(金)",
+  
+  "datePublished": "2019-03-22T17:11:56+09:00",
+  "dateModified": "2019-03-22T17:11:56+09:00",
   "author": {
     "@type": "Person",
     "name": "Kazutoshi Noguchi",
@@ -15,10 +18,22 @@
     "image": "https://f2l.cc/insignia.png"
     
   },
-  "name":"F²L",
-  "description":"\u003ch2 id=\u0022linux-from-scratch\u0022\u003eLinux from Scratch\u003c\/h2\u003e\n\u003cul\u003e\n\u003cli\u003e昨日ビルドしたbinutilsのバイナリがなぜか非PIEになっていた。 ログを採って調べてみたら、テスト前にHardeningフラグを取り除いてPIEを無効にしたときにMakefileのタイムスタンプが変わったのが原因で、バイナリがPIE無効で再リンクされてしまていたことが分かった。\u003cbr\u003e\n\u003ca href=\u0022https:\/\/github.com\/ngkz\/my-lfs-setup\/commit\/84551e209d17e9220912b057dc1c56d1814e353e\u0022\u003eMakefileに細工するときにタイムスタンプが変わらないようにしたら解決した\u003c\/a\u003e。\u003c\/li\u003e\n\u003cli\u003eMPFR,MPC,Shadowをインストールした。\u003c\/li\u003e\n\u003cli\u003eGCCをビルドしている途中\n\u003cul\u003e\n\u003cli\u003enobodyユーザーに切り替えるとなぜか モードが\u003ccode\u003e666\u003c\/code\u003eの\u003ccode\u003e\/dev\/tty\u003c\/code\u003eが読めなくなった。\u003ccode\u003e\/\u003c\/code\u003eの所有者が\u003ccode\u003e1000\u003c\/code\u003eでモードが\u003ccode\u003e700\u003c\/code\u003eになっていたのが原因だった。\u003c\/li\u003e\n\u003cli\u003eほぼ全てのテストが失敗するので原因を調べてみたら、\u003ccode\u003e\/dev\/pts\u003c\/code\u003eのマウントオプションが間違っていて\u003ccode\u003e\/dev\/pts\/ptmx\u003c\/code\u003eのモードが\u003ccode\u003e000\u003c\/code\u003eになっていたのが原因だった。マウントオプションに\u003ccode\u003enewinstance,ptmxmode=0666\u003c\/code\u003eを加えて解決。\u003c\/li\u003e\n\u003cli\u003e\u003ccode\u003e\/dev\/pts\/ptmx\u003c\/code\u003eを直したら大体のテストは通るようになったが、まだ何十ものテストが失敗している。テストに数時間かかるのでデバッグにかなり手間がかかりそう。\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003ch2 id=\u0022筋トレ\u0022\u003e筋トレ\u003c\/h2\u003e",
-  "url":"https:\/\/f2l.cc\/2019\/03\/diary-20190322\/",
-  "keywords":"[]"
+  "mainEntityOfPage": { 
+    "@type": "WebPage",
+    "@id": "https:\/\/f2l.cc\/2019\/03\/diary-20190322\/" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "F²L",
+    
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://f2l.cc/insignia.png"
+    }
+    
+  },
+  "description": "Linux from Scratch 昨日ビルドしたbinutilsのバイナリがなぜか非PIEになっていた。 ログを採って調べてみたら、テスト前にHardeningフラグを取り除いてPIEを無効にしたときにMakefileのタイムスタンプが変わったのが原因で、バイナリがPIE無効で再リンクされてしまていたことが分かった。\nMakefileに細工するときにタイムスタンプが変わらないようにしたら解決した。 MPFR,MPC,Shadowをインストールした。 GCCをビルドしている途中 nobodyユーザーに切り替えるとなぜか モードが666の/dev/ttyが読めなくなった。/の所有者が1000でモードが700になっていたのが原因だった。 ほぼ全てのテストが失敗するので原因を調べてみたら、/dev/ptsのマウントオプションが間違っていて/dev/pts/ptmxのモードが000になっていたのが原因だった。マウントオプションにnewinstance,ptmxmode=0666を加えて解決。 /dev/pts/ptmxを直したら大体のテストは通るようになったが、まだ何十ものテストが失敗している。テストに数時間かかるのでデバッグにかなり手間がかかりそう。 筋トレ",
+  "keywords": []
 }
 
 </script>

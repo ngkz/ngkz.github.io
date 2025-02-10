@@ -4,10 +4,13 @@
     
     <script type="application/ld+json">
 
-{  
-  "@context":"http://schema.org",
-  "@type":"Website",
-  "@id":"https:\/\/f2l.cc\/",
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "日記 2019/02/19(火)",
+  
+  "datePublished": "2019-02-19T22:40:35+09:00",
+  "dateModified": "2019-02-19T22:40:35+09:00",
   "author": {
     "@type": "Person",
     "name": "Kazutoshi Noguchi",
@@ -15,10 +18,22 @@
     "image": "https://f2l.cc/insignia.png"
     
   },
-  "name":"F²L",
-  "description":"\u003ch2 id=\u0022linux-from-scratch\u0022\u003eLinux from Scratch\u003c\/h2\u003e\n\u003cul\u003e\n\u003cli\u003e一時システムのGCC (Pass 2)のmultilibを間違えて無効にしていたので直して再ビルドした。ついでにPIE・Stack Smashing Protector・Build ID出力をデフォルトで有効にした。\n\u003cul\u003e\n\u003cli\u003e32bit glibcのビルドが通るようになった。\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/li\u003e\n\u003cli\u003eついでにBinutils (Pass 2)もRELROをデフォルトにし、不要なライブラリ検索パスも除去して再ビルドした。\u003c\/li\u003e\n\u003cli\u003e一時システムにホストの環境をマウントする処理と環境のアンマウント処理に不備があったので直した。\u003c\/li\u003e\n\u003cli\u003eデバッグ情報を分離するスクリプトを書いている。\u003c\/li\u003e\n\u003cli\u003eもうglibcをビルドしはじめてから12日もたっている。システムをmultiarch化しようとしたり\u003csup id=\u0022fnref:1\u0022\u003e\u003ca href=\u0022#fn:1\u0022 class=\u0022footnote-ref\u0022 role=\u0022doc-noteref\u0022\u003e1\u003c\/a\u003e\u003c\/sup\u003e、libcを強引にmultilib化したmusl libcに置き換えたとき\u003csup id=\u0022fnref:2\u0022\u003e\u003ca href=\u0022#fn:2\u0022 class=\u0022footnote-ref\u0022 role=\u0022doc-noteref\u0022\u003e2\u003c\/a\u003e\u003c\/sup\u003eは数日間苦戦したあと諦めることになったし、システムの基礎部分をいじるとかなり苦労する。\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003ch2 id=\u0022筋トレ\u0022\u003e筋トレ\u003c\/h2\u003e\n\u003cul\u003e\n\u003cli\u003eTHE プレワークアウトを筋トレ30分前に1スクープ摂取\u003c\/li\u003e\n\u003cli\u003eHMBを朝, トレーニング一時間前, 就寝前に1g摂取\u003c\/li\u003e\n\u003cli\u003e前日の睡眠 6:45 (0:29→7:19)\n\u003cul\u003e\n\u003cli\u003e短すぎる\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/li\u003e\n\u003cli\u003e食事前に筋トレ\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003cp\u003e\u003cstrong\u003e上半身プッシュ\u002b腹筋\u003c\/strong\u003e\u003c\/p\u003e\n\u003ctable\u003e\n  \u003cthead\u003e\n      \u003ctr\u003e\n          \u003cth\u003e種目\u003c\/th\u003e\n          \u003cth\u003e重量\u0026amp;目標回数\u003c\/th\u003e\n          \u003cth\u003e回数\u003c\/th\u003e\n          \u003cth\u003e備考\u003c\/th\u003e\n      \u003c\/tr\u003e\n  \u003c\/thead\u003e\n  \u003ctbody\u003e\n      \u003ctr\u003e\n          \u003ctd\u003eローテーターカフのウォームアップ\u003c\/td\u003e\n          \u003ctd\u003e\u003c\/td\u003e\n          \u003ctd\u003e\u003c\/td\u003e\n          \u003ctd\u003e\u003c\/td\u003e\n      \u003c\/tr\u003e\n      \u003ctr\u003e\n          \u003ctd\u003eプッシュアップ\u003c\/td\u003e\n          \u003ctd\u003e3セット 自重 10回以上 → 膝つき\u003c\/td\u003e\n          \u003ctd\u003e↑11→3 7.5→3 5.5→5\u003c\/td\u003e\n          \u003ctd\u003e肩甲骨を寄せるのを忘れたせいか大胸筋にあまり効いている感じがしない\u003c\/td\u003e\n      \u003c\/tr\u003e\n      \u003ctr\u003e\n          \u003ctd\u003eダンベルショルダープレス\u003c\/td\u003e\n          \u003ctd\u003e2セット 25kg(10kg\u002bシャフトx2) 16回以上 → ドロップ\u003c\/td\u003e\n          \u003ctd\u003e↓14 12→5kgx2で20→2.5kgx2で16\u003c\/td\u003e\n          \u003ctd\u003e直前にスキーのケバ取りをしたのが原因かも\u003c\/td\u003e\n      \u003c\/tr\u003e\n      \u003ctr\u003e\n          \u003ctd\u003eダンベルフレンチプレス\u003c\/td\u003e\n          \u003ctd\u003e2セット 12.5kg(10kg\u002bシャフト) 13回以上 → ドロップ\u003c\/td\u003e\n          \u003ctd\u003e↓10 9→7.5kg(2.5x2\u002bシャフト)で11\u003c\/td\u003e\n          \u003ctd\u003e\u003c\/td\u003e\n      \u003c\/tr\u003e\n      \u003ctr\u003e\n          \u003ctd\u003eダンベルフライ\u003c\/td\u003e\n          \u003ctd\u003e2セット 20kg(7.5kg\u002bシャフトx2) 19回以上 → ドロップ\u003c\/td\u003e\n          \u003ctd\u003e↓16 11→5kgx2で30\u003c\/td\u003e\n          \u003ctd\u003e\u003c\/td\u003e\n      \u003c\/tr\u003e\n      \u003ctr\u003e\n          \u003ctd\u003eツイストクランチ\u003c\/td\u003e\n          \u003ctd\u003e3セット 自重 5秒維持 16回以上 → 1秒維持 23回以上\u003c\/td\u003e\n          \u003ctd\u003e? → 30 29\u003c\/td\u003e\n          \u003ctd\u003e\u003c\/td\u003e\n      \u003c\/tr\u003e\n  \u003c\/tbody\u003e\n\u003c\/table\u003e\n\u003ch2 id=\u0022その他\u0022\u003eその他\u003c\/h2\u003e\n\u003cul\u003e\n\u003cli\u003eスキーのケバ取りを途中までやった。\n\u003cul\u003e\n\u003cli\u003e真鍮ブラシで擦っても落ちない傷があったし、滑走面に何箇所かへこみがあるのでシーズンが終わったらメンテナンスに出したほうがよさそう\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/li\u003e\n\u003c\/ul\u003e",
-  "url":"https:\/\/f2l.cc\/2019\/02\/diary-20190219\/",
-  "keywords":"[]"
+  "mainEntityOfPage": { 
+    "@type": "WebPage",
+    "@id": "https:\/\/f2l.cc\/2019\/02\/diary-20190219\/" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "F²L",
+    
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://f2l.cc/insignia.png"
+    }
+    
+  },
+  "description": "Linux from Scratch 一時システムのGCC (Pass 2)のmultilibを間違えて無効にしていたので直して再ビルドした。ついでにPIE・Stack Smashing Protector・Build ID出力をデフォルトで有効にした。 32bit glibcのビルドが通るようになった。 ついでにBinutils (Pass 2)もRELROをデフォルトにし、不要なライブラリ検索パスも除去して再ビルドした。 一時システムにホストの環境をマウントする処理と環境のアンマウント処理に不備があったので直した。 デバッグ情報を分離するスクリプトを書いている。 もうglibcをビルドしはじめてから12日もたっている。システムをmultiarch化しようとしたり1、libcを強引にmultilib化したmusl libcに置き換えたとき2は数日間苦戦したあと諦めることになったし、システムの基礎部分をいじるとかなり苦労する。 筋トレ THE プレワークアウトを筋トレ30分前に1スクープ摂取 HMBを朝, トレーニング一時間前, 就寝前に1g摂取 前日の睡眠 6:45 (0:29→7:19) 短すぎる 食事前に筋トレ 上半身プッシュ+腹筋\n種目 重量\u0026amp;目標回数 回数 備考 ローテーターカフのウォームアップ プッシュアップ 3セット 自重 10回以上 → 膝つき ↑11→3 7.5→3 5.5→5 肩甲骨を寄せるのを忘れたせいか大胸筋にあまり効いている感じがしない ダンベルショルダープレス 2セット 25kg(10kg+シャフトx2) 16回以上 → ドロップ ↓14 12→5kgx2で20→2.5kgx2で16 直前にスキーのケバ取りをしたのが原因かも ダンベルフレンチプレス 2セット 12.5kg(10kg+シャフト) 13回以上 → ドロップ ↓10 9→7.5kg(2.5x2+シャフト)で11 ダンベルフライ 2セット 20kg(7.5kg+シャフトx2) 19回以上 → ドロップ ↓16 11→5kgx2で30 ツイストクランチ 3セット 自重 5秒維持 16回以上 → 1秒維持 23回以上 ? → 30 29 その他 スキーのケバ取りを途中までやった。 真鍮ブラシで擦っても落ちない傷があったし、滑走面に何箇所かへこみがあるのでシーズンが終わったらメンテナンスに出したほうがよさそう ",
+  "keywords": []
 }
 
 </script>

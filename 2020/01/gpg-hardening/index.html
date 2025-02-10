@@ -4,10 +4,13 @@
     
     <script type="application/ld+json">
 
-{  
-  "@context":"http://schema.org",
-  "@type":"Website",
-  "@id":"https:\/\/f2l.cc\/",
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "GnuPG Hardening",
+  
+  "datePublished": "2020-01-12T01:31:22+09:00",
+  "dateModified": "2020-01-12T01:31:22+09:00",
   "author": {
     "@type": "Person",
     "name": "Kazutoshi Noguchi",
@@ -15,10 +18,22 @@
     "image": "https://f2l.cc/insignia.png"
     
   },
-  "name":"F²L",
-  "description":"\u003cp\u003eSHA-1 is \u003ca href=\u0022https:\/\/sha-mbles.github.io\/\u0022\u003ecompletely\u003c\/a\u003e \u003ca href=\u0022https:\/\/shattered.io\/\u0022\u003edead\u003c\/a\u003e. And I noticed legacy GPG signed my PGP key with SHA-1.\u003c\/p\u003e\n\u003ch2 id=\u0022improving-gpg-configuration\u0022\u003eImproving GPG Configuration\u003c\/h2\u003e\n\u003cpre tabindex=\u00220\u0022\u003e\u003ccode\u003e$ vim ~\/.gnupg\/gpg.conf\n# use SHA-512 when signing a key\ncert-digest-algo SHA512\n# override recipient key cipher preferences\n# remove 3DES and prefer AES256\npersonal-cipher-preferences AES256 AES192 AES CAST5\n# override recipient key digest preferences\n# remove SHA-1 and prefer SHA-512\npersonal-digest-preferences SHA512 SHA384 SHA256 SHA224\n# remove SHA-1 and 3DES from cipher preferences of newly created key\ndefault-preference-list SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB BZIP2 ZIP Uncompressed\n# reject SHA-1 signature\nweak-digest SHA1\n# never allow use 3DES\ndisable-cipher-algo 3DES\n# use AES256 when symmetric encryption\ns2k-cipher-algo AES256\n# use SHA-512 when symmetric encryption\ns2k-digest-algo SHA-512\n# mangle password many times as possible when symmetric encryption\ns2k-count 65011712\n# both short and long key IDs are insecure\nkeyid-format none\n# use full fingerprint instead\nwith-subkey-fingerprint\n\u003c\/code\u003e\u003c\/pre\u003e\u003ch2 id=\u0022migrating-signature-digest-to-sha-512\u0022\u003eMigrating signature digest to SHA-512\u003c\/h2\u003e",
-  "url":"https:\/\/f2l.cc\/2020\/01\/gpg-hardening\/",
-  "keywords":"[]"
+  "mainEntityOfPage": { 
+    "@type": "WebPage",
+    "@id": "https:\/\/f2l.cc\/2020\/01\/gpg-hardening\/" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "F²L",
+    
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://f2l.cc/insignia.png"
+    }
+    
+  },
+  "description": "SHA-1 is completely dead. And I noticed legacy GPG signed my PGP key with SHA-1.\nImproving GPG Configuration $ vim ~/.gnupg/gpg.conf # use SHA-512 when signing a key cert-digest-algo SHA512 # override recipient key cipher preferences # remove 3DES and prefer AES256 personal-cipher-preferences AES256 AES192 AES CAST5 # override recipient key digest preferences # remove SHA-1 and prefer SHA-512 personal-digest-preferences SHA512 SHA384 SHA256 SHA224 # remove SHA-1 and 3DES from cipher preferences of newly created key default-preference-list SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB BZIP2 ZIP Uncompressed # reject SHA-1 signature weak-digest SHA1 # never allow use 3DES disable-cipher-algo 3DES # use AES256 when symmetric encryption s2k-cipher-algo AES256 # use SHA-512 when symmetric encryption s2k-digest-algo SHA-512 # mangle password many times as possible when symmetric encryption s2k-count 65011712 # both short and long key IDs are insecure keyid-format none # use full fingerprint instead with-subkey-fingerprint Migrating signature digest to SHA-512",
+  "keywords": []
 }
 
 </script>

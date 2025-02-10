@@ -4,10 +4,13 @@
     
     <script type="application/ld+json">
 
-{  
-  "@context":"http://schema.org",
-  "@type":"Website",
-  "@id":"https:\/\/f2l.cc\/",
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "日記 2019/03/19(火)",
+  
+  "datePublished": "2019-03-19T23:59:59+09:00",
+  "dateModified": "2019-03-19T23:59:59+09:00",
   "author": {
     "@type": "Person",
     "name": "Kazutoshi Noguchi",
@@ -15,10 +18,22 @@
     "image": "https://f2l.cc/insignia.png"
     
   },
-  "name":"F²L",
-  "description":"\u003ch2 id=\u0022linux-from-scratch\u0022\u003eLinux from Scratch\u003c\/h2\u003e\n\u003cul\u003e\n\u003cli\u003elddが正常に動いていなかったのを直した\n\u003cul\u003e\n\u003cli\u003e\u003ccode\u003ertlddir\u003c\/code\u003eを\u003ccode\u003e\/usr\/lib\u003c\/code\u003eに設定したとき \u003ccode\u003eldd\u003c\/code\u003eが64bitダイナミックリンカのパスとして \u003ccode\u003e\/usr\/lib64\/ld-linux-x86_64.so.2\u003c\/code\u003e を使っていたのが原因だった。\n\u003cul\u003e\n\u003cli\u003e\u003ccode\u003e\/usr\/lib64\u003c\/code\u003eから\u003ccode\u003e\/usr\/lib\u003c\/code\u003eへのシンボリックリンクを貼って解決\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/li\u003e\n\u003cli\u003eライセンス違反を解決\n\u003cul\u003e\n\u003cli\u003e大部分がCC-BY-NC-SA 2.0のLFS Bookからの引用になったのに、リポジトリのライセンスが互換性のないGPLv3のままになっていた。\n\u003cul\u003e\n\u003cli\u003eライセンスをCC-BY-NC-SAに変更して解決\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/li\u003e\n\u003cli\u003eAdjusting the Toolchain\n\u003cul\u003e\n\u003cli\u003e\u003ccode\u003e\/usr\/lib32\u003c\/code\u003eに必要な32bitライブラリへのリンクを貼るのを忘れていたため、32bitでコンパイルできなかったのを直した\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003ch2 id=\u0022筋トレ\u0022\u003e筋トレ\u003c\/h2\u003e",
-  "url":"https:\/\/f2l.cc\/2019\/03\/diary-20190319\/",
-  "keywords":"[]"
+  "mainEntityOfPage": { 
+    "@type": "WebPage",
+    "@id": "https:\/\/f2l.cc\/2019\/03\/diary-20190319\/" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "F²L",
+    
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://f2l.cc/insignia.png"
+    }
+    
+  },
+  "description": "Linux from Scratch lddが正常に動いていなかったのを直した rtlddirを/usr/libに設定したとき lddが64bitダイナミックリンカのパスとして /usr/lib64/ld-linux-x86_64.so.2 を使っていたのが原因だった。 /usr/lib64から/usr/libへのシンボリックリンクを貼って解決 ライセンス違反を解決 大部分がCC-BY-NC-SA 2.0のLFS Bookからの引用になったのに、リポジトリのライセンスが互換性のないGPLv3のままになっていた。 ライセンスをCC-BY-NC-SAに変更して解決 Adjusting the Toolchain /usr/lib32に必要な32bitライブラリへのリンクを貼るのを忘れていたため、32bitでコンパイルできなかったのを直した 筋トレ",
+  "keywords": []
 }
 
 </script>

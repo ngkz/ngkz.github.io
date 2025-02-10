@@ -4,10 +4,13 @@
     
     <script type="application/ld+json">
 
-{  
-  "@context":"http://schema.org",
-  "@type":"Website",
-  "@id":"https:\/\/f2l.cc\/",
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "日記 2019/04/17(水)",
+  
+  "datePublished": "2019-04-17T23:59:59+09:00",
+  "dateModified": "2019-04-17T23:59:59+09:00",
   "author": {
     "@type": "Person",
     "name": "Kazutoshi Noguchi",
@@ -15,10 +18,22 @@
     "image": "https://f2l.cc/insignia.png"
     
   },
-  "name":"F²L",
-  "description":"\u003ch2 id=\u0022linux-from-scratch\u0022\u003eLinux from Scratch\u003c\/h2\u003e\n\u003cul\u003e\n\u003cli\u003ediffutils, gawk, findutils, groff\u003c\/li\u003e\n\u003cli\u003eGRUBのビルドに失敗した\n\u003cul\u003e\n\u003cli\u003ePIEが有効だとビルドに失敗するっぽい\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/li\u003e\n\u003cli\u003e一部のソフトウェアはCPPFLAGSに\u003ccode\u003e_FORTIFY_SOURCE\u003c\/code\u003eの定義があるとconfigureが失敗するので、configureにパッチを当てて対処していたが、ハックが4箇所くらいに増えたのでCFLAGSに\u003ccode\u003e_FORTIFY_SOURCE\u003c\/code\u003eの定義を移動してハックを削除した。\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003ch2 id=\u0022ubuntuのアップグレード\u0022\u003eUbuntuのアップグレード\u003c\/h2\u003e\n\u003cul\u003e\n\u003cli\u003eUbuntu 18.04へのアップグレードが途中で止まったのは、壊れたシンボリックリンクが\u003ccode\u003e\/etc\/ca-certificates\u003c\/code\u003eに残っていたせいでca-certificatesの設定が失敗した結果、それに依存するパッケージ全部の設定が連鎖的に失敗したのが原因だった。\u003c\/li\u003e\n\u003cli\u003e一応アップグレードは成功したが、あちこちの動作が怪しい\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003ch2 id=\u0022新しいキャンプ用食器\u0022\u003e新しいキャンプ用食器\u003c\/h2\u003e\n\u003cul\u003e\n\u003cli\u003e別のセリアに行って小さいコッヘルを探してみたが、Lサイズすら置いてなかった。\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003ch2 id=\u0022その他\u0022\u003eその他\u003c\/h2\u003e\n\u003cul\u003e\n\u003cli\u003e4K15.6インチの画面がどれくらい精細なのか気になったので電気屋に実物を見にいってみたが、4Kのラップトップが置いてなかった。\u003c\/li\u003e\n\u003c\/ul\u003e",
-  "url":"https:\/\/f2l.cc\/2019\/04\/diary-20190417\/",
-  "keywords":"[]"
+  "mainEntityOfPage": { 
+    "@type": "WebPage",
+    "@id": "https:\/\/f2l.cc\/2019\/04\/diary-20190417\/" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "F²L",
+    
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://f2l.cc/insignia.png"
+    }
+    
+  },
+  "description": "Linux from Scratch diffutils, gawk, findutils, groff GRUBのビルドに失敗した PIEが有効だとビルドに失敗するっぽい 一部のソフトウェアはCPPFLAGSに_FORTIFY_SOURCEの定義があるとconfigureが失敗するので、configureにパッチを当てて対処していたが、ハックが4箇所くらいに増えたのでCFLAGSに_FORTIFY_SOURCEの定義を移動してハックを削除した。 Ubuntuのアップグレード Ubuntu 18.04へのアップグレードが途中で止まったのは、壊れたシンボリックリンクが/etc/ca-certificatesに残っていたせいでca-certificatesの設定が失敗した結果、それに依存するパッケージ全部の設定が連鎖的に失敗したのが原因だった。 一応アップグレードは成功したが、あちこちの動作が怪しい 新しいキャンプ用食器 別のセリアに行って小さいコッヘルを探してみたが、Lサイズすら置いてなかった。 その他 4K15.6インチの画面がどれくらい精細なのか気になったので電気屋に実物を見にいってみたが、4Kのラップトップが置いてなかった。 ",
+  "keywords": []
 }
 
 </script>

@@ -4,10 +4,13 @@
     
     <script type="application/ld+json">
 
-{  
-  "@context":"http://schema.org",
-  "@type":"Website",
-  "@id":"https:\/\/f2l.cc\/",
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "内蔵HDDに入ってるWindows 10をUSB HDDから起動できるようにする方法",
+  
+  "datePublished": "2019-06-02T13:14:41+09:00",
+  "dateModified": "2019-06-02T13:14:41+09:00",
   "author": {
     "@type": "Person",
     "name": "Kazutoshi Noguchi",
@@ -15,10 +18,22 @@
     "image": "https://f2l.cc/insignia.png"
     
   },
-  "name":"F²L",
-  "description":"\u003cp\u003eWindowsが入った内蔵HDDをUSB経由で接続し、そこから起動しようとするとSTOPエラーで失敗するが、レジストリの\u003ccode\u003eHKEY_LOCAL_MACHINE\\SYSTEM\u003c\/code\u003eの\u003ccode\u003eHardwareConfig\u003c\/code\u003eキー中の\u003ccode\u003eBootDriverFlags\u003c\/code\u003eを\u003ccode\u003e0x14\u003c\/code\u003eに設定すると、USBストレージから起動できるようになる。\u003c\/p\u003e\n\u003cp\u003eただし、このHDDを使ってWindowsを起動すると、接続したマシンのUEFIのブートエントリにWindowsが登録されてしまう。\u003c\/p\u003e",
-  "url":"https:\/\/f2l.cc\/2019\/06\/howto-boot-preinstalled-windows-from-usb-hdd\/",
-  "keywords":"[]"
+  "mainEntityOfPage": { 
+    "@type": "WebPage",
+    "@id": "https:\/\/f2l.cc\/2019\/06\/howto-boot-preinstalled-windows-from-usb-hdd\/" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "F²L",
+    
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://f2l.cc/insignia.png"
+    }
+    
+  },
+  "description": "Windowsが入った内蔵HDDをUSB経由で接続し、そこから起動しようとするとSTOPエラーで失敗するが、レジストリのHKEY_LOCAL_MACHINE\\SYSTEMのHardwareConfigキー中のBootDriverFlagsを0x14に設定すると、USBストレージから起動できるようになる。\nただし、このHDDを使ってWindowsを起動すると、接続したマシンのUEFIのブートエントリにWindowsが登録されてしまう。",
+  "keywords": []
 }
 
 </script>

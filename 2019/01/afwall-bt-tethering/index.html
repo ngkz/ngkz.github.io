@@ -4,10 +4,13 @@
     
     <script type="application/ld+json">
 
-{  
-  "@context":"http://schema.org",
-  "@type":"Website",
-  "@id":"https:\/\/f2l.cc\/",
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "AFWall+ を有効にするとBluetoothテザリングで通信できなくなるのをなおす",
+  
+  "datePublished": "2019-01-13T20:20:09+09:00",
+  "dateModified": "2019-01-13T20:20:09+09:00",
   "author": {
     "@type": "Person",
     "name": "Kazutoshi Noguchi",
@@ -15,10 +18,22 @@
     "image": "https://f2l.cc/insignia.png"
     
   },
-  "name":"F²L",
-  "description":"\u003cp\u003eAFWall\u002bを有効にしていると、Bluetoothテザリングで接続したクライアントが通信できなくなるのをなんとかする。\u003c\/p\u003e\n\u003ch2 id=\u0022原因\u0022\u003e原因\u003c\/h2\u003e\n\u003cp\u003eログと検索エンジンで調べたところ、AFWall\u002bがBluetoothテザリングに対応していないため、クライアントにDHCPとDNS Proxyを提供しているdnsmasqからのDNS通信がブロックされてしまっていることが分かった。\u003c\/p\u003e\n\u003ch2 id=\u0022解決策1-dnsを手動設定する\u0022\u003e解決策1: DNSを手動設定する\u003c\/h2\u003e",
-  "url":"https:\/\/f2l.cc\/2019\/01\/afwall-bt-tethering\/",
-  "keywords":"[]"
+  "mainEntityOfPage": { 
+    "@type": "WebPage",
+    "@id": "https:\/\/f2l.cc\/2019\/01\/afwall-bt-tethering\/" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "F²L",
+    
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://f2l.cc/insignia.png"
+    }
+    
+  },
+  "description": "AFWall+を有効にしていると、Bluetoothテザリングで接続したクライアントが通信できなくなるのをなんとかする。\n原因 ログと検索エンジンで調べたところ、AFWall+がBluetoothテザリングに対応していないため、クライアントにDHCPとDNS Proxyを提供しているdnsmasqからのDNS通信がブロックされてしまっていることが分かった。\n解決策1: DNSを手動設定する",
+  "keywords": []
 }
 
 </script>

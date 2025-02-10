@@ -4,10 +4,13 @@
     
     <script type="application/ld+json">
 
-{  
-  "@context":"http://schema.org",
-  "@type":"Website",
-  "@id":"https:\/\/f2l.cc\/",
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "テストをrootとして動かす方法 (Rust)",
+  
+  "datePublished": "2018-08-01T17:37:33+09:00",
+  "dateModified": "2018-08-01T17:37:33+09:00",
   "author": {
     "@type": "Person",
     "name": "Kazutoshi Noguchi",
@@ -15,10 +18,22 @@
     "image": "https://f2l.cc/insignia.png"
     
   },
-  "name":"F²L",
-  "description":"\u003cp\u003e\u003ca href=\u0022https:\/\/github.com\/rust-lang\/cargo\/issues\/1924\u0022\u003ehttps:\/\/github.com\/rust-lang\/cargo\/issues\/1924\u003c\/a\u003e によると、\u003ccode\u003ecargo test --no-run --message-format=json | jq -r \u0026quot;select(.profile.test == true) | .filenames[]\u0026quot;\u003c\/code\u003e でテストバイナリの一覧が取得できる。これをsudoで実行するスクリプトを作ればOK\u003c\/p\u003e",
-  "url":"https:\/\/f2l.cc\/2018\/08\/cargo-run-test-with-sudo\/",
-  "keywords":"[]"
+  "mainEntityOfPage": { 
+    "@type": "WebPage",
+    "@id": "https:\/\/f2l.cc\/2018\/08\/cargo-run-test-with-sudo\/" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "F²L",
+    
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://f2l.cc/insignia.png"
+    }
+    
+  },
+  "description": "https://github.com/rust-lang/cargo/issues/1924 によると、cargo test --no-run --message-format=json | jq -r \u0026quot;select(.profile.test == true) | .filenames[]\u0026quot; でテストバイナリの一覧が取得できる。これをsudoで実行するスクリプトを作ればOK",
+  "keywords": []
 }
 
 </script>

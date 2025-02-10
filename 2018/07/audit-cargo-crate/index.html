@@ -4,10 +4,13 @@
     
     <script type="application/ld+json">
 
-{  
-  "@context":"http://schema.org",
-  "@type":"Website",
-  "@id":"https:\/\/f2l.cc\/",
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "依存しているパッケージ(crate)の中身を実行せずに調べる方法 (Rust)",
+  
+  "datePublished": "2018-07-25T22:24:30+09:00",
+  "dateModified": "2018-07-25T22:24:30+09:00",
   "author": {
     "@type": "Person",
     "name": "Kazutoshi Noguchi",
@@ -15,10 +18,22 @@
     "image": "https://f2l.cc/insignia.png"
     
   },
-  "name":"F²L",
-  "description":"\u003cp\u003e\u003ccode\u003ecargo fetch\u003c\/code\u003e\u003csup id=\u0022fnref:1\u0022\u003e\u003ca href=\u0022#fn:1\u0022 class=\u0022footnote-ref\u0022 role=\u0022doc-noteref\u0022\u003e1\u003c\/a\u003e\u003c\/sup\u003e でパッケージを取得すると、\u003ccode\u003e~\/.cargo\/registry\/src\/github.com-1ecc6299db9ec823\/(パッケージ名)-(バージョン)\u003c\/code\u003e\nにパッケージのソースコードが展開される。\u003c\/p\u003e\n\u003cp\u003eCargo.lockにすべての依存クレートの名前とバージョンが記録されているので、これを見てコードに問題がないか調べることができる。\u003c\/p\u003e\n\u003cdiv class=\u0022footnotes\u0022 role=\u0022doc-endnotes\u0022\u003e\n\u003chr\u003e\n\u003col\u003e\n\u003cli id=\u0022fn:1\u0022\u003e\n\u003cp\u003ecargo buildはビルドスクリプトを実行してしまうのでダメ\u0026#160;\u003ca href=\u0022#fnref:1\u0022 class=\u0022footnote-backref\u0022 role=\u0022doc-backlink\u0022\u003e\u0026#x21a9;\u0026#xfe0e;\u003c\/a\u003e\u003c\/p\u003e\n\u003c\/li\u003e\n\u003c\/ol\u003e\n\u003c\/div\u003e",
-  "url":"https:\/\/f2l.cc\/2018\/07\/audit-cargo-crate\/",
-  "keywords":"[]"
+  "mainEntityOfPage": { 
+    "@type": "WebPage",
+    "@id": "https:\/\/f2l.cc\/2018\/07\/audit-cargo-crate\/" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "F²L",
+    
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://f2l.cc/insignia.png"
+    }
+    
+  },
+  "description": "cargo fetch1 でパッケージを取得すると、~/.cargo/registry/src/github.com-1ecc6299db9ec823/(パッケージ名)-(バージョン) にパッケージのソースコードが展開される。\nCargo.lockにすべての依存クレートの名前とバージョンが記録されているので、これを見てコードに問題がないか調べることができる。\ncargo buildはビルドスクリプトを実行してしまうのでダメ\u0026#160;\u0026#x21a9;\u0026#xfe0e;",
+  "keywords": []
 }
 
 </script>
