@@ -22,10 +22,11 @@
 }
 
 </script>
+
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.126.1 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.136.5 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="動機
@@ -141,9 +142,6 @@ Spacemacs より軽い DOOM Emacs というのがあるらしい。これにし�
     
 
     
-  
-
-
     
   </head>
 
@@ -376,26 +374,26 @@ Spacemacs より軽い DOOM Emacs というのがあるらしい。これにし�
 <li>
 <p><code>.doom.d</code> ディレクトリ内の以下のファイルを編集する。</p>
 <table>
-<thead>
-<tr>
-<th>ファイル名</th>
-<th>役割</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>init.el</td>
-<td>DOOM のコアが初期化された後、モジュールがロードされる前に実行される。ここで使用するモジュールを指定する</td>
-</tr>
-<tr>
-<td>packages.el</td>
-<td>ここに追加でインストールするパッケージを書く</td>
-</tr>
-<tr>
-<td>config.el</td>
-<td>依存パッケージのロード後に実行される。ここにキーバインドやパッケージの設定を書く</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>ファイル名</th>
+          <th>役割</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>init.el</td>
+          <td>DOOM のコアが初期化された後、モジュールがロードされる前に実行される。ここで使用するモジュールを指定する</td>
+      </tr>
+      <tr>
+          <td>packages.el</td>
+          <td>ここに追加でインストールするパッケージを書く</td>
+      </tr>
+      <tr>
+          <td>config.el</td>
+          <td>依存パッケージのロード後に実行される。ここにキーバインドやパッケージの設定を書く</td>
+      </tr>
+  </tbody>
 </table>
 </li>
 <li>
@@ -418,46 +416,46 @@ Spacemacs より軽い DOOM Emacs というのがあるらしい。これにし�
 </span></span><span style="display:flex;"><span>      :nvi <span style="color:#e6db74">&#34;C-j&#34;</span> <span style="color:#a6e22e">#&#39;</span>evil-window-down)
 </span></span></code></pre></div><p>モードには以下の値が使える</p>
 <table>
-<thead>
-<tr>
-<th>文字</th>
-<th>対応するモード</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>n</td>
-<td>ノーマル</td>
-</tr>
-<tr>
-<td>v</td>
-<td>ビジュアル</td>
-</tr>
-<tr>
-<td>i</td>
-<td>インサート</td>
-</tr>
-<tr>
-<td>e</td>
-<td>emacs</td>
-</tr>
-<tr>
-<td>o</td>
-<td>オペレータ</td>
-</tr>
-<tr>
-<td>m</td>
-<td>モーション</td>
-</tr>
-<tr>
-<td>r</td>
-<td>replace</td>
-</tr>
-<tr>
-<td>g</td>
-<td>global</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>文字</th>
+          <th>対応するモード</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>n</td>
+          <td>ノーマル</td>
+      </tr>
+      <tr>
+          <td>v</td>
+          <td>ビジュアル</td>
+      </tr>
+      <tr>
+          <td>i</td>
+          <td>インサート</td>
+      </tr>
+      <tr>
+          <td>e</td>
+          <td>emacs</td>
+      </tr>
+      <tr>
+          <td>o</td>
+          <td>オペレータ</td>
+      </tr>
+      <tr>
+          <td>m</td>
+          <td>モーション</td>
+      </tr>
+      <tr>
+          <td>r</td>
+          <td>replace</td>
+      </tr>
+      <tr>
+          <td>g</td>
+          <td>global</td>
+      </tr>
+  </tbody>
 </table>
 <h4 id="vim-のmap-と同等のことをする">vim の:map と同等のことをする</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span>(map! :n <span style="color:#e6db74">&#34;C-;&#34;</span> (kbd <span style="color:#e6db74">&#34;itest&#34;</span>))

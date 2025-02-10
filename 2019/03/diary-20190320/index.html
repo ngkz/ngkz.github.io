@@ -16,16 +16,17 @@
     
   },
   "name":"F²L",
-  "description":"\u003ch2 id=\u0022linux-from-scratch\u0022\u003eLinux from Scratch\u003c\/h2\u003e\n\u003cul\u003e\n\u003cli\u003eZlib, File, Readline, M4, Bcをインストールした\u003c\/li\u003e\n\u003cli\u003ebinutilsをビルド中\n\u003cul\u003e\n\u003cli\u003eCPPFLAGSに\u003ccode\u003e-D_FORTIFY_SOURCE=2\u003c\/code\u003eが入っているとlimits.hの存在チェックが壊れてビルドできななかった\n\u003cul\u003e\n\u003cli\u003eCFLAGSとCXXFLAGSに\u003ccode\u003e_FORTIFY_SOURCE\u003c\/code\u003eの定義を移して解決\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/li\u003e\n\u003cli\u003eビルドが通るようになったがテストが通らない\u003c\/li\u003e\n\u003cli\u003eCFLAGS, CXXFLAGS, CPPFLAGS, LDFLAGSを削除したらgold以外のテストは通るようになったので、 Hardening フラグのどれかが原因っぽい\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003ch2 id=\u0022筋トレ\u0022\u003e筋トレ\u003c\/h2\u003e\n\u003cul\u003e\n\u003cli\u003eTHE プレワークアウトを筋トレ30分前に1スクープ摂取\u003c\/li\u003e\n\u003cli\u003eHMBを昼, トレーニング1時間前, 就寝前に1g摂取\u003c\/li\u003e\n\u003cli\u003e前日の睡眠 7:23 (23:37-7:11)\n\u003cul\u003e\n\u003cli\u003eあまりよく眠れなかった\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/li\u003e\n\u003cli\u003eDiscordのJMusicBotをいじってたら時間がなくなってしまった\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003cp\u003e\u003cstrong\u003e上半身プル\u003c\/strong\u003e\u003c\/p\u003e\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth\u003e種目\u003c\/th\u003e\n\u003cth\u003e重量\u0026amp;目標回数\u003c\/th\u003e\n\u003cth\u003e回数\u003c\/th\u003e\n\u003cth\u003e備考\u003c\/th\u003e\n\u003c\/tr\u003e\n\u003c\/thead\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd\u003eハーフデッドリフト\u003c\/td\u003e\n\u003ctd\u003e3セット 30kg(27.5kgx2\u002bシャフト) 21回以上\u003c\/td\u003e\n\u003ctd\u003e↓15 9 12\u003c\/td\u003e\n\u003ctd\u003e力を出しきれなかった\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eワンハンドローイング\u003c\/td\u003e\n\u003ctd\u003e左右2セット 12.5kg(10kg\u002bシャフト) 21回以上 →ドロップ\u003c\/td\u003e\n\u003ctd\u003e↓左15 右16 左17→5kgで12 右16→5kgで20\u003c\/td\u003e\n\u003ctd\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eダンベルシュラッグ\u003c\/td\u003e\n\u003ctd\u003e2セット 30kg(27.5kg\u002bシャフトx2) 23回以上 →ドロップ\u003c\/td\u003e\n\u003ctd\u003e↓18 19\u003c\/td\u003e\n\u003ctd\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eダンベルカール\u003c\/td\u003e\n\u003ctd\u003e3セット 10kg(7.5kg\u002bシャフト) 11回以上 →ドロップ\u003c\/td\u003e\n\u003ctd\u003e\u003c\/td\u003e\n\u003ctd\u003e時間切れ\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e変形バックエクステンション\u003c\/td\u003e\n\u003ctd\u003e2セット 自重\u002b5kg 16回以上 →ドロップ\u003c\/td\u003e\n\u003ctd\u003e\u003c\/td\u003e\n\u003ctd\u003e\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003c\/tbody\u003e\n\u003c\/table\u003e",
+  "description":"\u003ch2 id=\u0022linux-from-scratch\u0022\u003eLinux from Scratch\u003c\/h2\u003e\n\u003cul\u003e\n\u003cli\u003eZlib, File, Readline, M4, Bcをインストールした\u003c\/li\u003e\n\u003cli\u003ebinutilsをビルド中\n\u003cul\u003e\n\u003cli\u003eCPPFLAGSに\u003ccode\u003e-D_FORTIFY_SOURCE=2\u003c\/code\u003eが入っているとlimits.hの存在チェックが壊れてビルドできななかった\n\u003cul\u003e\n\u003cli\u003eCFLAGSとCXXFLAGSに\u003ccode\u003e_FORTIFY_SOURCE\u003c\/code\u003eの定義を移して解決\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/li\u003e\n\u003cli\u003eビルドが通るようになったがテストが通らない\u003c\/li\u003e\n\u003cli\u003eCFLAGS, CXXFLAGS, CPPFLAGS, LDFLAGSを削除したらgold以外のテストは通るようになったので、 Hardening フラグのどれかが原因っぽい\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003ch2 id=\u0022筋トレ\u0022\u003e筋トレ\u003c\/h2\u003e\n\u003cul\u003e\n\u003cli\u003eTHE プレワークアウトを筋トレ30分前に1スクープ摂取\u003c\/li\u003e\n\u003cli\u003eHMBを昼, トレーニング1時間前, 就寝前に1g摂取\u003c\/li\u003e\n\u003cli\u003e前日の睡眠 7:23 (23:37-7:11)\n\u003cul\u003e\n\u003cli\u003eあまりよく眠れなかった\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/li\u003e\n\u003cli\u003eDiscordのJMusicBotをいじってたら時間がなくなってしまった\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003cp\u003e\u003cstrong\u003e上半身プル\u003c\/strong\u003e\u003c\/p\u003e\n\u003ctable\u003e\n  \u003cthead\u003e\n      \u003ctr\u003e\n          \u003cth\u003e種目\u003c\/th\u003e\n          \u003cth\u003e重量\u0026amp;目標回数\u003c\/th\u003e\n          \u003cth\u003e回数\u003c\/th\u003e\n          \u003cth\u003e備考\u003c\/th\u003e\n      \u003c\/tr\u003e\n  \u003c\/thead\u003e\n  \u003ctbody\u003e\n      \u003ctr\u003e\n          \u003ctd\u003eハーフデッドリフト\u003c\/td\u003e\n          \u003ctd\u003e3セット 30kg(27.5kgx2\u002bシャフト) 21回以上\u003c\/td\u003e\n          \u003ctd\u003e↓15 9 12\u003c\/td\u003e\n          \u003ctd\u003e力を出しきれなかった\u003c\/td\u003e\n      \u003c\/tr\u003e\n      \u003ctr\u003e\n          \u003ctd\u003eワンハンドローイング\u003c\/td\u003e\n          \u003ctd\u003e左右2セット 12.5kg(10kg\u002bシャフト) 21回以上 →ドロップ\u003c\/td\u003e\n          \u003ctd\u003e↓左15 右16 左17→5kgで12 右16→5kgで20\u003c\/td\u003e\n          \u003ctd\u003e\u003c\/td\u003e\n      \u003c\/tr\u003e\n      \u003ctr\u003e\n          \u003ctd\u003eダンベルシュラッグ\u003c\/td\u003e\n          \u003ctd\u003e2セット 30kg(27.5kg\u002bシャフトx2) 23回以上 →ドロップ\u003c\/td\u003e\n          \u003ctd\u003e↓18 19\u003c\/td\u003e\n          \u003ctd\u003e\u003c\/td\u003e\n      \u003c\/tr\u003e\n      \u003ctr\u003e\n          \u003ctd\u003eダンベルカール\u003c\/td\u003e\n          \u003ctd\u003e3セット 10kg(7.5kg\u002bシャフト) 11回以上 →ドロップ\u003c\/td\u003e\n          \u003ctd\u003e\u003c\/td\u003e\n          \u003ctd\u003e時間切れ\u003c\/td\u003e\n      \u003c\/tr\u003e\n      \u003ctr\u003e\n          \u003ctd\u003e変形バックエクステンション\u003c\/td\u003e\n          \u003ctd\u003e2セット 自重\u002b5kg 16回以上 →ドロップ\u003c\/td\u003e\n          \u003ctd\u003e\u003c\/td\u003e\n          \u003ctd\u003e\u003c\/td\u003e\n      \u003c\/tr\u003e\n  \u003c\/tbody\u003e\n\u003c\/table\u003e",
   "url":"https:\/\/f2l.cc\/2019\/03\/diary-20190320\/",
   "keywords":"[]"
 }
 
 </script>
+
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.126.1 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.136.5 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Kazutoshi Noguchi">
 <meta name="keywords" content="">
 <meta name="description" content="Linux from Scratch
@@ -56,46 +57,46 @@ DiscordのJMusicBotをいじってたら時間がなくなってしまった
 
 上半身プル
 
-
-
-種目
-重量&amp;目標回数
-回数
-備考
-
-
-
-
-ハーフデッドリフト
-3セット 30kg(27.5kgx2&#43;シャフト) 21回以上
-↓15 9 12
-力を出しきれなかった
-
-
-ワンハンドローイング
-左右2セット 12.5kg(10kg&#43;シャフト) 21回以上 →ドロップ
-↓左15 右16 左17→5kgで12 右16→5kgで20
-
-
-
-ダンベルシュラッグ
-2セット 30kg(27.5kg&#43;シャフトx2) 23回以上 →ドロップ
-↓18 19
-
-
-
-ダンベルカール
-3セット 10kg(7.5kg&#43;シャフト) 11回以上 →ドロップ
-
-時間切れ
-
-
-変形バックエクステンション
-2セット 自重&#43;5kg 16回以上 →ドロップ
-
-
-
-
+  
+      
+          種目
+          重量&amp;目標回数
+          回数
+          備考
+      
+  
+  
+      
+          ハーフデッドリフト
+          3セット 30kg(27.5kgx2&#43;シャフト) 21回以上
+          ↓15 9 12
+          力を出しきれなかった
+      
+      
+          ワンハンドローイング
+          左右2セット 12.5kg(10kg&#43;シャフト) 21回以上 →ドロップ
+          ↓左15 右16 左17→5kgで12 右16→5kgで20
+          
+      
+      
+          ダンベルシュラッグ
+          2セット 30kg(27.5kg&#43;シャフトx2) 23回以上 →ドロップ
+          ↓18 19
+          
+      
+      
+          ダンベルカール
+          3セット 10kg(7.5kg&#43;シャフト) 11回以上 →ドロップ
+          
+          時間切れ
+      
+      
+          変形バックエクステンション
+          2セット 自重&#43;5kg 16回以上 →ドロップ
+          
+          
+      
+  
 ">
 
 
@@ -127,46 +128,46 @@ DiscordのJMusicBotをいじってたら時間がなくなってしまった
 
 上半身プル
 
-
-
-種目
-重量&amp;目標回数
-回数
-備考
-
-
-
-
-ハーフデッドリフト
-3セット 30kg(27.5kgx2&#43;シャフト) 21回以上
-↓15 9 12
-力を出しきれなかった
-
-
-ワンハンドローイング
-左右2セット 12.5kg(10kg&#43;シャフト) 21回以上 →ドロップ
-↓左15 右16 左17→5kgで12 右16→5kgで20
-
-
-
-ダンベルシュラッグ
-2セット 30kg(27.5kg&#43;シャフトx2) 23回以上 →ドロップ
-↓18 19
-
-
-
-ダンベルカール
-3セット 10kg(7.5kg&#43;シャフト) 11回以上 →ドロップ
-
-時間切れ
-
-
-変形バックエクステンション
-2セット 自重&#43;5kg 16回以上 →ドロップ
-
-
-
-
+  
+      
+          種目
+          重量&amp;目標回数
+          回数
+          備考
+      
+  
+  
+      
+          ハーフデッドリフト
+          3セット 30kg(27.5kgx2&#43;シャフト) 21回以上
+          ↓15 9 12
+          力を出しきれなかった
+      
+      
+          ワンハンドローイング
+          左右2セット 12.5kg(10kg&#43;シャフト) 21回以上 →ドロップ
+          ↓左15 右16 左17→5kgで12 右16→5kgで20
+          
+      
+      
+          ダンベルシュラッグ
+          2セット 30kg(27.5kg&#43;シャフトx2) 23回以上 →ドロップ
+          ↓18 19
+          
+      
+      
+          ダンベルカール
+          3セット 10kg(7.5kg&#43;シャフト) 11回以上 →ドロップ
+          
+          時間切れ
+      
+      
+          変形バックエクステンション
+          2セット 自重&#43;5kg 16回以上 →ドロップ
+          
+          
+      
+  
 ">
 <meta property="og:type" content="article">
 <meta property="og:title" content="日記 2019/03/20(水)">
@@ -202,46 +203,46 @@ DiscordのJMusicBotをいじってたら時間がなくなってしまった
 
 上半身プル
 
-
-
-種目
-重量&amp;目標回数
-回数
-備考
-
-
-
-
-ハーフデッドリフト
-3セット 30kg(27.5kgx2&#43;シャフト) 21回以上
-↓15 9 12
-力を出しきれなかった
-
-
-ワンハンドローイング
-左右2セット 12.5kg(10kg&#43;シャフト) 21回以上 →ドロップ
-↓左15 右16 左17→5kgで12 右16→5kgで20
-
-
-
-ダンベルシュラッグ
-2セット 30kg(27.5kg&#43;シャフトx2) 23回以上 →ドロップ
-↓18 19
-
-
-
-ダンベルカール
-3セット 10kg(7.5kg&#43;シャフト) 11回以上 →ドロップ
-
-時間切れ
-
-
-変形バックエクステンション
-2セット 自重&#43;5kg 16回以上 →ドロップ
-
-
-
-
+  
+      
+          種目
+          重量&amp;目標回数
+          回数
+          備考
+      
+  
+  
+      
+          ハーフデッドリフト
+          3セット 30kg(27.5kgx2&#43;シャフト) 21回以上
+          ↓15 9 12
+          力を出しきれなかった
+      
+      
+          ワンハンドローイング
+          左右2セット 12.5kg(10kg&#43;シャフト) 21回以上 →ドロップ
+          ↓左15 右16 左17→5kgで12 右16→5kgで20
+          
+      
+      
+          ダンベルシュラッグ
+          2セット 30kg(27.5kg&#43;シャフトx2) 23回以上 →ドロップ
+          ↓18 19
+          
+      
+      
+          ダンベルカール
+          3セット 10kg(7.5kg&#43;シャフト) 11回以上 →ドロップ
+          
+          時間切れ
+      
+      
+          変形バックエクステンション
+          2セット 自重&#43;5kg 16回以上 →ドロップ
+          
+          
+      
+  
 ">
 <meta name="twitter:description" content="Linux from Scratch
 
@@ -271,46 +272,46 @@ DiscordのJMusicBotをいじってたら時間がなくなってしまった
 
 上半身プル
 
-
-
-種目
-重量&amp;目標回数
-回数
-備考
-
-
-
-
-ハーフデッドリフト
-3セット 30kg(27.5kgx2&#43;シャフト) 21回以上
-↓15 9 12
-力を出しきれなかった
-
-
-ワンハンドローイング
-左右2セット 12.5kg(10kg&#43;シャフト) 21回以上 →ドロップ
-↓左15 右16 左17→5kgで12 右16→5kgで20
-
-
-
-ダンベルシュラッグ
-2セット 30kg(27.5kg&#43;シャフトx2) 23回以上 →ドロップ
-↓18 19
-
-
-
-ダンベルカール
-3セット 10kg(7.5kg&#43;シャフト) 11回以上 →ドロップ
-
-時間切れ
-
-
-変形バックエクステンション
-2セット 自重&#43;5kg 16回以上 →ドロップ
-
-
-
-
+  
+      
+          種目
+          重量&amp;目標回数
+          回数
+          備考
+      
+  
+  
+      
+          ハーフデッドリフト
+          3セット 30kg(27.5kgx2&#43;シャフト) 21回以上
+          ↓15 9 12
+          力を出しきれなかった
+      
+      
+          ワンハンドローイング
+          左右2セット 12.5kg(10kg&#43;シャフト) 21回以上 →ドロップ
+          ↓左15 右16 左17→5kgで12 右16→5kgで20
+          
+      
+      
+          ダンベルシュラッグ
+          2セット 30kg(27.5kg&#43;シャフトx2) 23回以上 →ドロップ
+          ↓18 19
+          
+      
+      
+          ダンベルカール
+          3セット 10kg(7.5kg&#43;シャフト) 11回以上 →ドロップ
+          
+          時間切れ
+      
+      
+          変形バックエクステンション
+          2セット 自重&#43;5kg 16回以上 →ドロップ
+          
+          
+      
+  
 ">
 <meta property="og:locale" content="ja">
 
@@ -375,9 +376,6 @@ DiscordのJMusicBotをいじってたら時間がなくなってしまった
     
 
     
-  
-
-
     
   </head>
 
@@ -593,46 +591,46 @@ DiscordのJMusicBotをいじってたら時間がなくなってしまった
 </ul>
 <p><strong>上半身プル</strong></p>
 <table>
-<thead>
-<tr>
-<th>種目</th>
-<th>重量&amp;目標回数</th>
-<th>回数</th>
-<th>備考</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ハーフデッドリフト</td>
-<td>3セット 30kg(27.5kgx2+シャフト) 21回以上</td>
-<td>↓15 9 12</td>
-<td>力を出しきれなかった</td>
-</tr>
-<tr>
-<td>ワンハンドローイング</td>
-<td>左右2セット 12.5kg(10kg+シャフト) 21回以上 →ドロップ</td>
-<td>↓左15 右16 左17→5kgで12 右16→5kgで20</td>
-<td></td>
-</tr>
-<tr>
-<td>ダンベルシュラッグ</td>
-<td>2セット 30kg(27.5kg+シャフトx2) 23回以上 →ドロップ</td>
-<td>↓18 19</td>
-<td></td>
-</tr>
-<tr>
-<td>ダンベルカール</td>
-<td>3セット 10kg(7.5kg+シャフト) 11回以上 →ドロップ</td>
-<td></td>
-<td>時間切れ</td>
-</tr>
-<tr>
-<td>変形バックエクステンション</td>
-<td>2セット 自重+5kg 16回以上 →ドロップ</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>種目</th>
+          <th>重量&amp;目標回数</th>
+          <th>回数</th>
+          <th>備考</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>ハーフデッドリフト</td>
+          <td>3セット 30kg(27.5kgx2+シャフト) 21回以上</td>
+          <td>↓15 9 12</td>
+          <td>力を出しきれなかった</td>
+      </tr>
+      <tr>
+          <td>ワンハンドローイング</td>
+          <td>左右2セット 12.5kg(10kg+シャフト) 21回以上 →ドロップ</td>
+          <td>↓左15 右16 左17→5kgで12 右16→5kgで20</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>ダンベルシュラッグ</td>
+          <td>2セット 30kg(27.5kg+シャフトx2) 23回以上 →ドロップ</td>
+          <td>↓18 19</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>ダンベルカール</td>
+          <td>3セット 10kg(7.5kg+シャフト) 11回以上 →ドロップ</td>
+          <td></td>
+          <td>時間切れ</td>
+      </tr>
+      <tr>
+          <td>変形バックエクステンション</td>
+          <td>2セット 自重+5kg 16回以上 →ドロップ</td>
+          <td></td>
+          <td></td>
+      </tr>
+  </tbody>
 </table>
 <h2 id="その他">その他</h2>
 <ul>
