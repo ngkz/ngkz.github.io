@@ -40,24 +40,6 @@ canonifyurls = true
     ordered = false
     startLevel = 2
 
-# ------
-# Author
-# ------
-[author]
-  name = "Kazutoshi Noguchi"
-  bio = "🐈🧑‍💻🚩🐧❄️⚡🚐🔧💅👘❤️💜💙🤐"
-  job = "Infomation Security Engineer"
-  location = "Japan"
-  # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
-  # gravatarEmail = "thibaud.lepretre@gmail.com"
-  # Your profile picture
-  # Overwritten by your gravatar image if `author.gravatarEmail` is filled
-  picture = "/insignia.png"
-  # Your Twitter username without the @. E.g : thibaudlepretre
-  twitter = "n_g_k_z"
-  # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
-  # googlePlus = "+ThibaudLepretre"
-
 [markup.goldmark.renderer]
 unsafe = true
 
@@ -216,6 +198,22 @@ unsafe = true
   # Customize like of athor avatar in sidebar
   [params.sidebar.profile]
     url = "/page/profile/"
+
+  # Author
+  [params.author]
+    name = "Kazutoshi Noguchi"
+    bio = "🐈🧑‍💻🚩🐧❄️⚡🚐🔧💅👘❤️💜💙🤐"
+    job = "Infomation Security Engineer"
+    location = "Japan"
+    # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
+    # gravatarEmail = "thibaud.lepretre@gmail.com"
+    # Your profile picture
+    # Overwritten by your gravatar image if `author.gravatarEmail` is filled
+    picture = "/insignia.png"
+    # Your Twitter username without the @. E.g : thibaudlepretre
+    twitter = "n_g_k_z"
+    # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
+    # googlePlus = "+ThibaudLepretre"
 
   # ------------------
   # External resources
