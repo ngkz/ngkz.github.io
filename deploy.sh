@@ -32,3 +32,4 @@ git push origin master
 
 cd ..
 git worktree remove public
+rm -rf public
