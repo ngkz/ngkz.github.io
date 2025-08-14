@@ -80,6 +80,8 @@ bitcoin
 | 2016 |  3 | 小山工業高等専門学校 電気情報工学科卒業                                                        |
 | 2023 | 12 | SECCON CTF 2023 Finals で優勝 (:(の ~~金魚の糞~~ メンバーとして)                               |
 | 2024 |  8 | DEFCON CTF 32 Fnals で準優勝 (Blue Waterの 手伝いで)                                           |
+| 2025 |  8 | DEFCON 33 Cloud Village CTF で優勝 (Ieraeの手伝いで)                                           |
+| 2025 |  8 | DEFCON 33 CTF で準優勝 (Blue Waterのメンバーとして)                                            |
 
 <!--
 | 2016 |  11 | 株式会社 渡辺製作所 入社                                                                       |
@@ -102,6 +104,8 @@ bitcoin
 
 | <span style="white-space: nowrap">開催日</span> | <span style="white-space: nowrap">順位</span> | <span style="white-space: nowrap">順位(国内)</span> | <span style="white-space: nowrap">イベント</span>                                                              | <span style="white-space: nowrap">チーム</span> |
 |-------------------------------------------------|----------------------------------------------:|----------------------------------------------------:|----------------------------------------------------------------------------------------------------------------|-------------------------------------------------|
+| 2025-08-09                                      |                                             2 |                                                   - | DEFCON 33 CTF                                                                                                  | Blue Water                                      |
+| 2025-08-09                                      |                                             1 |                                                   1 | DEFCON 33 Cloud village CTF                                                                                    | Ierae                                           |
 | 2024-11-24                                      |                                             2 |                                                   1 | SECCON CTF 13 Quals                                                                                            | ierae                                           |
 | 2024-08-10                                      |                                             2 |                                                   1 | DEFCON CTF 32 Finals                                                                                           | Blue Water                                      |
 | 2024-05-04                                      |                                            11 |                                                   1 | DEFCON CTF 32 Qualifier                                                                                        | undef1ned                                       |
