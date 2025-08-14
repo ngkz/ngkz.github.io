@@ -29,6 +29,9 @@ Xitter
 Discord
 : [ngkz](https://discord.com/users/529714068618215427)
 
+Instagram
+: [n_g_k_z](https://instagram.com/n_g_k_z)
+
 bitcoin
 : [1FzRWZsT9sL6G5iaKpEHRuJmRsKniFNW6c](bitcoin:1FzRWZsT9sL6G5iaKpEHRuJmRsKniFNW6c)
 ![bitcoin address QR code](/bitcoin.png)
