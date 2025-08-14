@@ -15,7 +15,7 @@ showPagination: false
 
 メール
 : `kたnた@たfた2たlた.たcたc`  
-↑ たぬき s/た//g
+↑ たぬき s/た//g PGP/MIME対応
 
 PGP 公開鍵
 : [BC6D CFE0 3513 A9FA 4F55 D702 06B8 1066 65DD 36F3](/gpg-public-key.asc)
