@@ -19,8 +19,10 @@ title = "F²L"
 theme = "tranquilpeak"
 disqusShortname = "ngkz-log"
 #googleAnalytics = "UA-106134104-1"
-paginate = 7
 canonifyurls = true
+
+[pagination]
+  pagerSize = 7
 
 [permalinks]
   post = "/:year/:month/:filename/"
