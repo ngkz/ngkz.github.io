@@ -11,6 +11,7 @@ else
 fi
 
 echo -e "${BOLD_CYAN}Cleaning public directory${NORMAL}"
+rm -rf public
 git worktree add public master
 cd public
 # Delete all files except .git
