@@ -191,12 +191,12 @@ PineTimeには、CPU内蔵の64KB RAMと512KB フラッシュROM、さらにス�
     ```
 
 ## OTA インストール
-2024-01-25 追記: [依存ライブラリにパッチを当てないと](https://gitea.elara.ws/Elara6331/itd/issues/66)itdが動かなくなってた
+2026-06-15 追記: 方法を変更
 
 ```shell
-InfiniTime/build $ nix shell nixpkgs#itd
-InfiniTime/build $ itd &
-InfiniTime/build $ itctl firmware upgrade --archive src/pinetime-mcuboot-app-dfu-*.zip --resources src/resources/infinitime-resources-*.zip
+InfiniTime$ nix-build
+InfiniTime$ sudo bootloader/ota-dfu-python/dfu.py -a (デバイスのMAC) --legacy -z result/pinetime-mcuboot-app-dfu-1.16.0.zip
+InfiniTime$ sudo tools/resources.py update (デバイスのMAC) result/infinitime-resources-1.16.0.zip
 ```
 
 ## できあがり
