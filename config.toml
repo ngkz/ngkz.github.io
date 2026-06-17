@@ -210,7 +210,7 @@ unsafe = true
     # gravatarEmail = "thibaud.lepretre@gmail.com"
     # Your profile picture
     # Overwritten by your gravatar image if `author.gravatarEmail` is filled
-    picture = "/insignia.png"
+    picture = "/pfp.jpg"
     # Your Twitter username without the @. E.g : thibaudlepretre
     twitter = "n_g_k_z"
     # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
