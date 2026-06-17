@@ -3,7 +3,6 @@ title: "Profile"
 keywords:
   - tech
   - CTF
-comments: true
 showDate: false
 showSocial: false
 showTags: false
@@ -104,6 +103,8 @@ bitcoin
 
 | <span style="white-space: nowrap">開催日</span> | <span style="white-space: nowrap">順位</span> | <span style="white-space: nowrap">順位(国内)</span> | <span style="white-space: nowrap">イベント</span>                                                              | <span style="white-space: nowrap">チーム</span> |
 |-------------------------------------------------|----------------------------------------------:|----------------------------------------------------:|----------------------------------------------------------------------------------------------------------------|-------------------------------------------------|
+| 2026-06-24                                      |                                             2 |                                                   - | DEF CON CTF Qualifier 2026                                                                                     | Blue Water                                      |
+| 2026-03-28                                      |                                             6 |                                                   2 | Codegate CTF 2026 Preliminary                                                                                  | GMO Ierae                                       |
 | 2025-08-09                                      |                                             2 |                                                   - | DEFCON 33 CTF                                                                                                  | Blue Water                                      |
 | 2025-08-09                                      |                                             1 |                                                   1 | DEFCON 33 Cloud village CTF                                                                                    | Ierae                                           |
 | 2024-11-24                                      |                                             2 |                                                   1 | SECCON CTF 13 Quals                                                                                            | ierae                                           |
