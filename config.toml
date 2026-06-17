@@ -17,7 +17,6 @@ languageCode = "ja"
 defaultContentLanguage = "ja"
 title = "F²L"
 theme = "tranquilpeak"
-disqusShortname = "ngkz-log"
 #googleAnalytics = "UA-106134104-1"
 canonifyurls = true
 
@@ -292,7 +291,7 @@ unsafe = true
   # --------------
   [params.comment]
     [params.comment.disqus]
-      enable = true
+      enable = false
       shortname = "hugo-tranquilpeak-theme"
     [params.comment.gitalk]
       enable = false
