@@ -25,7 +25,7 @@ canonifyurls = true
   pagerSize = 7
 
 [permalinks]
-  post = "/:year/:month/:filename/"
+  post = "/:year/:month/:contentbasename/"
 
 [taxonomies]
   tag = "tags"
